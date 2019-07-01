@@ -1,1 +1,165 @@
+/* © IGOR KOWALCZYK 2019. All rights reserved. */
 
+/* FONTS */
+
+/* INCONSOLATA */
+
+/* INCONSOLATA REGULAR */
+
+@font-face {
+font-family: 'Inconsolata-Regular';
+src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Regular.otf);
+}
+
+/* /INCONSOLATA REGULAR */
+
+/* INCONSOLATA BOLD */
+
+@font-face {
+font-family: 'Inconsolata-Bold';
+src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Bold.otf);
+}
+
+/* /INCONSOLATA BOLD */
+
+/* /INCONSOLATA */
+
+/* ROBOTO */
+
+/* ROBOTO BOlD */
+
+@font-face {
+font-family: 'Roboto-Bold';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Bold.otf);
+}
+
+/* /ROBOTO-BOlD */
+
+/* ROBOTO-CONDENSED */
+
+@font-face {
+font-family: 'Roboto-Condensed';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Condensed.otf);
+}
+
+/* /ROBOTO-CONDENSED */
+
+/* ROBOTO-MEDIUM */
+
+@font-face {
+font-family: 'Roboto-Medium';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Medium.otf);
+}
+
+/* /ROBOTO-MEDIUM */
+
+/* ROBOTO-REGULAR */
+
+@font-face {
+font-family: 'Roboto-Regular';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Regular.otf);
+}
+
+/* /ROBOTO-REGULAR */
+
+/* ROBOTO-LIGHT */
+
+@font-face {
+font-family: 'Roboto-Light';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Light.otf);
+}
+
+/* /ROBOTO-LIGHT */
+
+/* ROBOTO-LIGHT */
+
+@font-face {
+font-family: 'Roboto-Thin';
+src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Thin.otf);
+}
+
+/* /ROBOTO-LIGHT */
+
+/* /ROBOTO */
+
+/* /FONTS */
+
+/* BODY */
+
+html {
+font-family: 'Roboto-Thin';
+height: 100%;
+background-color: #fff;
+}
+
+body {
+min-height: 100%;
+color: #000;
+margin: 0; padding: 1px;
+text-align: center;
+background-color: #EDF0F5;
+background-repeat: no-repeat;
+background-position: 1% 50%, 50% 50%;
+background-size: cover;
+background-size: contain, cover;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+align-items: center;
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+animation:fadeIn 1s ease-in;
+-moz-user-select: none;
+user-select: none;
+}
+
+@keyframes fadeIn {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+
+.vcard {
+margin: 2em auto;
+}
+
+h1 {
+font-size: 8vw;
+font-weight: 600;
+margin: 0 0 0 0;
+padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+p {
+font-size: 8vw !important;
+}
+}
+
+p {
+font-size: 4vw;
+}
+
+.fa-github {
+font-size: 50px;
+}
+a {
+color: #000;
+transition: 500ms;
+}
+a:hover {
+color: #00a3a3 !important;
+transition: 500ms;
+}
+
+
+/* /BODY */
