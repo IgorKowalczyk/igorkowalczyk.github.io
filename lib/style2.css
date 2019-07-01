@@ -1,0 +1,46 @@
+.fa-heart {
+font-size: 40vw;
+color: #ff5656;
+transition: 500ms;
+-webkit-animation: pulsing 2s infinite;
+animation: pulsing 2s infinite;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+@-webkit-keyframes pulsing {
+0% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5)
+}
+50% {
+-webkit-transform: scale(1.0, 1.0);
+transform: scale(1.0, 1.0);
+}
+100% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5);
+}
+}
+
+@keyframes pulsing {
+0% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5)
+}
+50% {
+-webkit-transform: scale(1.0, 1.0);
+transform: scale(1.0, 1.0);
+}
+100% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5);
+}
+}
+
+body, html {
+overflow: hidden;
+text-align: center !important;
+background-color: #EDF0F5;
+}
