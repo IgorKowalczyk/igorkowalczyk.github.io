@@ -20,30 +20,36 @@ flex-direction: column;
 @-webkit-keyframes pulsing {
 0% {
 -webkit-transform: scale(0.5, 0.5);
-transform: scale(0.5, 0.5)
+transform: scale(0.5, 0.5);
+color: #ff5656;
 }
 50% {
 -webkit-transform: scale(1.0, 1.0);
 transform: scale(1.0, 1.0);
+color: lime;
 }
 100% {
 -webkit-transform: scale(0.5, 0.5);
 transform: scale(0.5, 0.5);
+color: #ff5656;
 }
 }
 
 @keyframes pulsing {
 0% {
 -webkit-transform: scale(0.5, 0.5);
-transform: scale(0.5, 0.5)
+transform: scale(0.5, 0.5);
+color: #ff5656;
 }
 50% {
 -webkit-transform: scale(1.0, 1.0);
 transform: scale(1.0, 1.0);
+color: lime;
 }
 100% {
 -webkit-transform: scale(0.5, 0.5);
 transform: scale(0.5, 0.5);
+color: #ff5656;
 }
 }
 
