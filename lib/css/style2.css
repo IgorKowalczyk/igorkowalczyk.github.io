@@ -1,3 +1,7 @@
+/* © IGOR KOWALCZYK 2019. All rights reserved. */
+
+/* HEART */
+
 .fa-heart {
 font-size: 40vw;
 color: #ff5656;
@@ -8,6 +12,10 @@ display: flex;
 align-items: center;
 flex-direction: column;
 }
+
+/* /HEART */
+
+/* ANIMATIONS */
 
 @-webkit-keyframes pulsing {
 0% {
@@ -39,8 +47,14 @@ transform: scale(0.5, 0.5);
 }
 }
 
+/* /ANIMATIONS */
+
+/* BODY & HTML */
+
 body, html {
 overflow: hidden;
 text-align: center !important;
 background-color: #EDF0F5;
 }
+
+/* /BODY & HTML */
