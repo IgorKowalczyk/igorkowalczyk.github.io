@@ -8,7 +8,7 @@
 
 @font-face {
 font-family: 'Inconsolata-Regular';
-src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Regular.otf);
+src:url(https://aurolia-css.github.io/lib/fonts/inconsolata/Inconsolata-Regular.otf);
 }
 
 /* /INCONSOLATA REGULAR */
@@ -17,7 +17,7 @@ src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Regular.
 
 @font-face {
 font-family: 'Inconsolata-Bold';
-src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Bold.otf);
+src:url(https://aurolia-css.io/lib/fonts/inconsolata/Inconsolata-Bold.otf);
 }
 
 /* /INCONSOLATA BOLD */
@@ -30,7 +30,7 @@ src:url(https://majo-search.github.io/lib/fonts/inconsolata/Inconsolata-Bold.otf
 
 @font-face {
 font-family: 'Roboto-Bold';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Bold.otf);
+src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Bold.otf);
 }
 
 /* /ROBOTO-BOlD */
@@ -39,7 +39,7 @@ src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Bold.otf);
 
 @font-face {
 font-family: 'Roboto-Condensed';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Condensed.otf);
+src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Condensed.otf);
 }
 
 /* /ROBOTO-CONDENSED */
@@ -48,7 +48,7 @@ src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Condensed.otf);
 
 @font-face {
 font-family: 'Roboto-Medium';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Medium.otf);
+src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Medium.otf);
 }
 
 /* /ROBOTO-MEDIUM */
@@ -57,7 +57,7 @@ src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Medium.otf);
 
 @font-face {
 font-family: 'Roboto-Regular';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Regular.otf);
+src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Regular.otf);
 }
 
 /* /ROBOTO-REGULAR */
@@ -66,7 +66,7 @@ src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Regular.otf);
 
 @font-face {
 font-family: 'Roboto-Light';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Light.otf);
+src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Light.otf);
 }
 
 /* /ROBOTO-LIGHT */
@@ -75,7 +75,7 @@ src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Light.otf);
 
 @font-face {
 font-family: 'Roboto-Thin';
-src:url(https://majo-search.github.io/lib/fonts/roboto/Roboto-Thin.otf);
+src:url(https://aurolia-css.github.io/lib/fonts/roboto/Roboto-Thin.otf);
 }
 
 /* /ROBOTO-LIGHT */
