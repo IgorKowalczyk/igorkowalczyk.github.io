@@ -1,0 +1,139 @@
+<!-- // (c) IGOR KOWALCZYK 2019. All rights reserved. \\ -->
+<!-- META -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#00ff00"/>
+<title id="title"></title>
+<!--/META -->
+<!-- FAVICON -->	
+<link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/49127376?s=460&v=4">
+<!-- /FAVICON -->
+<!-- STYLE -->
+<!-- ICONS -->
+<link rel="stylesheet" href="https://aurolia-css.github.io/lib/fontawesome/css/all.css">
+<!-- /ICONS -->
+<!-- JQUERY -->
+<script src="https://aurolia-css.github.io/download/jquery.min.js"></script>
+<script src="https://aurolia-css.github.io/download/jquery-ui.min.js"></script>
+<!-- /JQUERY -->
+
+<!-- CSS & JS -->
+<script src="https://aurolia-css.github.io/download/aurolia.js" defer></script>
+<link rel="stylesheet" href="https://aurolia-css.github.io/download/aurolia.css">
+<!-- /CSS & JS -->
+<style>
+body {
+text-align: center;
+font-size: 5vw;
+world-break: break-all;
+color: #000;
+background: lightblue url("https://zapodaj.net/images/4a82d429f2c80.jpg") no-repeat fixed center;
+user-select: none;
+overflow-x: hidden;
+}
+
+@media screen and (max-width: 340px) {
+body {
+font-size: 8vw;
+}
+}
+
+@-webkit-keyframes heartbeat {
+0% {
+-webkit-transform:scale(2)
+}
+50% {
+-webkit-transform:scale(1)
+}
+100% {
+-webkit-transform:scale(1)
+}
+}
+
+@-moz-keyframes heartbeat {
+0% {
+-moz-transform:scale(2)
+}
+50% {
+-moz-transform:scale(1)
+}
+100% {
+-moz-transform:scale(1)
+}
+}
+
+@-o-keyframes heartbeat {
+0% {
+-o-transform:scale(2)
+}
+50% {
+-o-transform:scale(1)
+}
+100% {
+-o-transform:scale(1)
+}
+}
+
+@keyframes heartbeat {
+0% {
+transform:scale(1)
+}
+50% {
+transform:scale(1.2)
+}
+100% {
+transform:scale(1)
+}
+}
+
+.heartbeat {
+-webkit-animation: heartbeat 2s infinite;
+animation: heartbeat 2s infinite
+}
+</style>
+<!-- /STYLE -->
+<!-- BODY -->
+<br><br>
+<p id="body" class="heartbeat shadow-2dp"></p><br>
+<p class="shadow-2dp">Tyle zostało do końca roku szkolnego 2K19/2K20</p><br>
+<script>
+/* BODY */
+var countDownDate = new Date("JUN 26, 2020 08:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("title").innerHTML = days + "d " + hours + "h "
++ minutes + "m " + seconds + "s ";
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("title").innerHTML = "EXPIRED";
+}
+}, 1000);
+
+/* /TITLE */
+
+/* BODY */
+var countDownDate = new Date("JUN 26, 2020 08:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("body").innerHTML = days + "d " + hours + "h "
++ minutes + "m " + seconds + "s ";
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("body").innerHTML = "Rok szkolny zakończył się :) ŚWIĘTUJEMY!!!";
+}
+}, 1000);
+</script>
+<!-- /BODY -->
