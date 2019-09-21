@@ -211,21 +211,21 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://i.ibb.co/cc5gg3W/project1.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/aurolia.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-2 {
 grid-area: two;
-background-image: url('https://i.ibb.co/hZGQf1W/project2.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/color-picker.png');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-3 {
 grid-area: three;
-background-image: url('https://i.ibb.co/xsn94Lr/project4.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/portfolio.png');
 background-repeat: no-repeat;
 background-size: cover;
 }
