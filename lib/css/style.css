@@ -211,7 +211,7 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/aurolia.png);
+background-image: url('https://igorkowalczyk.github.io/lib/pics/aurolia.png');
 background-repeat: no-repeat;
 background-size: cover;
 }
