@@ -106,7 +106,6 @@ display: grid;
 align-content: center;
 background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 background: url('https://i.ibb.co/XCd18Rr/cover2.jpg');
-
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -190,6 +189,10 @@ box-shadow: var(--shadow);
 align-content: end;
 transition: var(--transition);
 -webkit-transition: var(--transition);
+}
+
+.work-card:hover {
+transform: scale(1.02, 1.02) !important;
 }
 
 .work-grid :hover {
