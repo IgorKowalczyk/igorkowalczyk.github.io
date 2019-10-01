@@ -10,3 +10,31 @@ Temat: Tworzenie programów w języku Scratch.
 Lekcja
 
 Temat: Wykorzystanie komputera do ćwiczeń.
+
+
+<br>
+<nav>
+<a href="#!" class="breadcrumb site text-grey-50">First</a>
+<a href="#!" class="breadcrumb breadcrumb-active site text-grey-50">Second</a>
+<a href="#!" class="breadcrumb site text-grey-50">Third</a>
+  </nav>
+  
+  .breadcrumb {
+text-decoration: none !important;
+border-radius: 5px;
+padding: 10px;
+cursor: poiner;
+font-size: 18px;
+margin: 20px;
+box-shadow: 0 0px 10px 0 rgba(119,119,119,0.5);
+}
+
+.breadcrumb:not(:last-child):after {
+  transform: rotate(45deg);
+  content: "";
+  display: inline-block;
+  padding: 5px;
+  margin-left: 20px;
+    transform: rotate(225deg);
+  box-shadow: 5px -5px 0 0 #fff inset;
+}
