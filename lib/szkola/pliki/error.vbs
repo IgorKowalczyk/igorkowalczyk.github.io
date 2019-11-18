@@ -1,11 +1,11 @@
 Do
-odp = MsgBox("B³¹d B³êdu nie ma takiego b³êdu. Usun¹æ Windowsa?", 16+vbYesNo, "Fatalny b³¹d")
+odp = MsgBox("BÅ‚Ä…d BÅ‚Ä™du nie ma takiego bÅ‚Ä™du. UsunÄ…Ä‡ Windowsa?", 16+vbYesNo, "Fatalny bÅ‚Ä…d")
 if odp =x then
-msgbox"B³¹d B³êdu nie ma takiego b³êdu. Usun¹æ Windowsa?", 16+vbYesNo, "Fatalny b³¹d"
+msgbox"BÅ‚Ä…d BÅ‚Ä™du nie ma takiego bÅ‚Ä™du. UsunÄ…Ä‡ Windowsa?", 16+vbYesNo, "Fatalny bÅ‚Ä…d"
 else
 Do
-msgbox"Trwa usuwanie systemu operacyjnego. Proszê czekaæ.", 16+vb, "Usuwanie plików..."
+msgbox"Trwa usuwanie systemu operacyjnego. ProszÄ™ czekaÄ‡.", 16+vb, "Usuwanie plikÃ³w..."
 Loop
 end if
-'Ten program to tylko ¿art, nie wykonuje ¿adnych szkód na maszynie, ma po prostu ¿artowaæ z urzytkownika. SKRRAT
+'Ten program to tylko Å¼art, nie wykonuje Å¼adnych szkÃ³d na maszynie, ma po prostu Å¼artowaÄ‡ z urzytkownika. SKRRAT
 Loop
