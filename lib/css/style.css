@@ -42,7 +42,7 @@ src:url(https://igorkowalczyk.github.io/fest/lib/fonts/roboto/Roboto-Thin.otf);
 header {
 min-height: 80px;
 position: fixed;
-z-index: 99999;
+z-index: 10000;
 box-shadow: 0 0px 10px 0 rgba(119,119,119,0.5);
 width: 100%;
 background: var(--light);
@@ -64,11 +64,15 @@ color: var(--dark);
 font-size: 16px;
 margin-left: 2em;
 transition: 500ms;
+padding-bottom: 30px;
+padding-top: 30px;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 header a:hover {
-color: #00a3a3;
 transition: 500ms;
+background-color: #f2f2f2;
 }
 
 header ul {
@@ -305,7 +309,7 @@ background: #fff;
 position: fixed;
 left: 0;
 top: 0;
-z-index: 10000;
+z-index: 99999;
 perspective: 1600px;
 perspective-origin: 20% 50%;
 transition: 0.5s all;
