@@ -1,5 +1,10 @@
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
+* {
+scrollbar-color: #353535 transparent;
+scrollbar-width: thin;
+}
+
 :root {
 --primary: #ddd;
 --dark: #0f0f0f;
