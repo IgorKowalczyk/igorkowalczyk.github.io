@@ -1,4 +1,4 @@
-/* (c) IGOR KOWALCZYK 2019. All rights reserved. */
+/* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
 --primary: #ddd;
@@ -36,7 +36,7 @@ opacity:1;
 
 @font-face {
 font-family: 'Roboto-Thin';
-src:url(https://aurolia-css.github.io/lib/fonts/roboto/Roboto-Thin.otf);
+src:url(https://igorkowalczyk.github.io/fest/lib/fonts/roboto/Roboto-Thin.otf);
 }
 
 header {
@@ -211,7 +211,7 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/aurolia.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.png');
 background-repeat: no-repeat;
 background-size: cover;
 }
