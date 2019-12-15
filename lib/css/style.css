@@ -41,7 +41,7 @@ opacity:1;
 
 @font-face {
 font-family: 'Roboto-Thin';
-src:url(https://igorkowalczyk.github.io/fest/lib/fonts/roboto/Roboto-Thin.otf);
+src: url(https://igorkowalczyk.github.io/fest/lib/fonts/roboto/Roboto-Thin.otf);
 }
 
 header {
@@ -134,7 +134,6 @@ margin-left: auto;
 
 .hero-title {
 font-size: 54px;
-
 margin-bottom: 0.3em;
 }
 
@@ -142,28 +141,23 @@ margin-bottom: 0.3em;
 font-size: 30px;
 }
 
-.social-media {
-font-size: 20px;
-transition: 500ms !important;
-}
-
-.social-media i {
+.social-media svg {
 align-self: end;
 margin: 0.5em;
-transition: 500ms !important;
 }
 
 .social-media a {
 color: var(--grey);
-transition: 500ms !important;
-transform: scale(1, 1);
 text-decoration: none;
 }
 
-.social-media a :hover {
-color: var(--aqua);
+.icon:hover {
 transform: scale(1.3, 1.3);
-transition: 500ms !important;
+fill: #00a3a3;
+}
+
+.icon {
+transition: 500ms all;
 }
 
 .work-section {
