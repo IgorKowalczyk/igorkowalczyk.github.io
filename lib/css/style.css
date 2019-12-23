@@ -351,7 +351,7 @@ transition: var(--transition);
 -webkit-transition: var(--transition);
 }
 
-.work-card:hover, work-card-2:hover {
+.work-card:hover, .work-card-2:hover {
 transform: scale(1.02, 1.02) !important;
 }
 
