@@ -259,19 +259,30 @@ visibility: hidden;
 }
 
 .hero-section {
-display: grid;
+display: flex;
 align-items: center;
 justify-content: center;
-width: 100%;
-background-image: url(https://igorkowalczyk.github.io/lib/pics/background.jpg);
-min-height: 100vw;
+background-repeat: no-repeat;
+text-align: center;
 background-attachment: fixed;
 background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+background-image: url(https://igorkowalczyk.github.io/lib/pics/background.jpg);
+width: 100%;
+height: 100vh;
 color: var(--light);
-text-align: center;
-margin: 0 0;
+background-size: cover;
+}
+
+@media screen and (max-width: 370px) {
+.hero-title {
+font-size: 30px !important;
+}
+.hero-title2 {
+font-size: 20px !important;
+}
+.section-title {
+font-size: 30px !important;
+}
 }
 
 .hero-grid {
@@ -285,10 +296,12 @@ margin-left: auto;
 .hero-title {
 font-size: 54px;
 margin-bottom: 0.3em;
+transition: 500ms all;
 }
 
 .hero-title2 {
 font-size: 30px;
+transition: 500ms all;
 }
 
 .social-media svg {
