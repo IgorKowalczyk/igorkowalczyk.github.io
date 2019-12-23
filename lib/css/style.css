@@ -355,13 +355,6 @@ transition: var(--transition);
 transform: scale(1.02, 1.02) !important;
 }
 
-.work-grid:hover {
-transform: scale(1.02, 1.02) !important;
-transition-delay: 0s !important;
-box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.16);
-cursor: pointer;
-}
-
 .section-title {
 padding: 0 1em;
 max-width: 1224px;
