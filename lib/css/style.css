@@ -273,7 +273,7 @@ color: var(--light);
 background-size: cover;
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 500px) {
 .hero-title {
 font-size: 30px !important;
 }
