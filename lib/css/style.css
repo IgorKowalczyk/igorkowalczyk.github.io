@@ -193,17 +193,13 @@ list-style: none;
 stroke: #ccc;
 }
 
-a {
-color: #000;
-}
-
 a:hover {
 color: #00a3a3;
 }
 
 a {
 position: relative;
-color: #000  !important;
+color: #000 !important;
 }
 
 main a {
