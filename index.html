@@ -15,23 +15,15 @@
 <body ondragstart="return false" ondrag="return false">
 <script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
 <main>
-<header>
-<div class="header-grid">
-<div class="header-logo">
-Igor Kowalczyk
-</div>
-<nav class="main-nav" role="navigation">
-<ul>
-<li>
-<a target="blank" href="https://github.com/igorkowalczyk">Github</a>
-</li>
-<li>
-<a href="https://igorkowalczyk.github.io/blog">Blog</a>
-</li>
+<nav class="nav" role="navigation">
+<a href="/"><span class="logo">Igor Kowalczyk</span></a>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://github.com/igorkowalczyk" target="blank">Github</a></li>
 </ul>
 </nav>
-</div>
-</header>
 <main>
 <section class="hero-section">
 <div class="hero-grid">
@@ -39,11 +31,11 @@ Igor Kowalczyk
 <p class="hero-title">Igor Kowalczyk</p>
 <p class="hero-title2">Front-End Developer</p>
 <div class="social-media">
-<a target="blank" href="https://github.com/igorkowalczyk">
+<a target="blank" href="https://github.com/igorkowalczyk" class="icon-a">
 <svg class="icon" height="20" fill="#fff" stroke="none" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
 </svg>
 </a>
-<a target="blank" href="mailto:xxmajonezx@gmail.com">
+<a target="blank" href="mailto:xxmajonezx@gmail.com" class="icon-a">
 <svg class="icon" viewBox="30 31.5 452 452" height="20" fill="#fff" stroke="#fff"><path fill-rule="evenodd" d="M 441,81 A 40,40 0 0 1 481,121 L 481,395 A 40,40 0 0 1 441,435 L 71,435 A 40,40 0 0 1 31,395 L 31,121 A 40,40 0 0 1 71,81 Z M 63,121 A 8,8 0 0 1 71,113 L 441,113 A 8,8 0 0 1 449,121 L 449,131 C 448,150 438,166 417,188 L 288,291 C258,311 254,311 224,291 L 95,188 C 74,166 64,150 63,131 Z M 63,202 C 66,205 75,214 80,218 L 208,320 C 245,344 265,344 304,320 L 432,218 C 437,214 446,205 449,202 L 449,394 A 8,8 0 0 1 441,402 L 71,402 A 8,8 0 0 1 63,394 Z"></path>
 </svg>
 </a>
@@ -70,8 +62,22 @@ Igor Kowalczyk
 </div>
 </div>
 </section>
+<div class="work-grid">
+<div class="card-4 work-card" onclick="link4()">
+<h6 class="card-subhead">Font-End</h6>
+<p class="card-header">Blog</p>
+</div>
+<div class="card-5 work-card" onclick="link5()">
+<h6 class="card-subhead">Animation</h6>
+<p class="card-header">Day Cycle</p>
+</div>
+<div class="card-6 work-card" onclick="link6()">
+<h6 class="card-subhead">Graphics</h6>
+<p class="card-header">TXT for Minecraft</p>
+</div>
+</div>
 <footer>
-<p>(C) COPYRIGHT <noscript>Please enable JS</noscript><script>
+<p>(C) COPYRIGHT <noscript>2019</noscript><script>
 document.write(new Date().getFullYear());</script> IGOR KOWALCZYK
 </footer>
 </main>
