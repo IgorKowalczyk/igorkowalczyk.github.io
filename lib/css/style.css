@@ -260,16 +260,18 @@ visibility: hidden;
 
 .hero-section {
 display: grid;
-align-content: center;
-background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-background: url('https://igorkowalczyk.github.io/lib/pics/background.jpg');
-background-repeat: no-repeat;
+align-items: center;
+justify-content: center;
+width: 100%;
+background-image: url(https://igorkowalczyk.github.io/lib/pics/background.jpg);
+min-height: 100vw;
+background-attachment: fixed;
 background-position: center;
+background-repeat: no-repeat;
 background-size: cover;
 color: var(--light);
 text-align: center;
 margin: 0 0;
-min-height: 616px;
 }
 
 .hero-grid {
