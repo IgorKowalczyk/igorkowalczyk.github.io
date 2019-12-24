@@ -53,11 +53,7 @@ transition: 500ms all;
 z-index: 9999;
 }
 
-.nav:not(.nav-scroled):hover {
-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-}
-
-.nav.nav-scrolled {
+.nav:not(.nav-scroled):hover, .nav.nav-scrolled {
 box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -114,8 +110,7 @@ transition: background .2s ease-out;
 width: 18px;
 }
 
-.nav .menu-icon .navicon:before,
-.nav .menu-icon .navicon:after {
+.nav .menu-icon .navicon:before, .nav .menu-icon .navicon:after {
 background: #333;
 content: '';
 display: block;
