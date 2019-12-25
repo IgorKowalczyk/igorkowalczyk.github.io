@@ -23,6 +23,9 @@
 --scrollbar-hover: #4a4a4a;
 --scrollbar-active: #383838;
 --title: #000;
+--preloader: #fff;
+--spinner: #00a3a3;
+--spinner-border: #f3f3f3;
 }
 
 [data-theme="dark"] {
@@ -48,6 +51,9 @@
 --scrollbar-hover: #363636;
 --scrollbar-active: #454545;
 --title: #fff;
+--preloader: #222;
+--spinner: #888;
+--spinner-border: #333;
 }
 
 * {
@@ -528,11 +534,11 @@ background-color: var(--scrollbar-active);
 .preloader {
 height: 100%;
 width: 100%;
-background: #fff;
+background: var(--preloader);
 position: fixed;
 left: 0;
 top: 0;
-z-index: 99999;
+z-index: 10000;
 perspective: 1600px;
 perspective-origin: 20% 50%;
 transition: 0.5s all;
@@ -542,8 +548,8 @@ opacity: 1;
 .spinner {
 width: 80px;
 height: 80px;
-border: 2px solid #f3f3f3;
-border-top: 3px solid #00a3a3;
+border: 2px solid var(--spinner-border);
+border-top: 3px solid var(--spinner);
 border-radius: 100%;
 position: absolute;
 top: 0;
