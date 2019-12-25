@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://igorkowalczyk.github.io/lib/css/style.css">
 <!-- /STYLES -->
 <!-- BODY -->
+</head>
 <body ondragstart="return false" ondrag="return false">
 <script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
 <main>
@@ -24,7 +25,6 @@
 <li><a href="https://github.com/igorkowalczyk" target="blank">Github</a></li>
 </ul>
 </nav>
-<main>
 <section class="hero-section">
 <div class="hero-grid">
 <div class="hero-content">
@@ -77,10 +77,17 @@
 </div>
 </div>
 <footer>
+<li><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Dark/Light Mode</div></li>
 <p>(C) COPYRIGHT <noscript>2019</noscript><script>
-document.write(new Date().getFullYear());</script> IGOR KOWALCZYK
+document.write(new Date().getFullYear());</script> IGOR KOWALCZYK</p>
 </footer>
 </main>
 <script src="https://igorkowalczyk.github.io/lib/js/index.js"></script>
 </body>
+</html>
 <!-- /BODY -->
