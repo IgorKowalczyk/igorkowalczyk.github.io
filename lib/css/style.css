@@ -147,13 +147,17 @@ color: var(--link) !important;
 background-color: var(--f4f4f4);
 }
 
-.nav .logo {
+.nav .logo a {
 display: block;
 float: left;
 line-height: 40px;
 font-size: 20px;
 padding: 10px 20px;
 text-decoration: none;
+}
+
+.nav .logo a:before {
+visibility: hidden;
 }
 
 .nav .menu {
