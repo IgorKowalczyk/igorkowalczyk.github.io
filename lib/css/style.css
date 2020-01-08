@@ -150,7 +150,7 @@ background-color: var(--f4f4f4);
 .nav .logo a {
 display: block;
 float: left;
-line-height: 40px;
+padding: 20px 20px;
 font-size: 20px;
 padding: 10px 20px;
 text-decoration: none;
