@@ -82,7 +82,7 @@ z-index: 999999;
 * {
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
-transition: width 500ms linear, color 500ms linear 500ms, background-color 500ms linear, background 500ms linear;
+transition: width 500ms linear, color 500ms linear 500ms, background-color 500ms linear, background 500ms linear, opacity 500ms;
 }
 
 body {
@@ -93,7 +93,6 @@ margin: 0 0;
 user-select: none;
 -webkit-animation: fade 500ms ease-in;
 animation: fade 500ms ease-in;
-transition: opacity 500ms;
 line-height: 1.4;
 background: var(--white);
 font-family: 'Roboto-Thin';
