@@ -449,42 +449,42 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-2 {
 grid-area: two;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/color-picker.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/color-picker.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-3 {
 grid-area: three;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/portfolio.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/portfolio.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-4 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/blog.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/blog.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-5 {
 grid-area: two;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/day-cycle.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/day-cycle.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-6 {
 grid-area: three;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/txt.png');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/txt.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
