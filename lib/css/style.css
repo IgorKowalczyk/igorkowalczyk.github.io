@@ -437,6 +437,10 @@ transition: var(--transition);
 
 .work-card:hover, .work-card-2:hover {
 transform: scale(1.02, 1.02) !important;
+filter: gray;
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-o-filter: grayscale(100%);
 }
 
 .section-title {
@@ -675,5 +679,3 @@ border-radius: 34px;
 .slider.round:before, .slider-switch.round:before {
 border-radius: 50%;
 }
-
-/* /BODY */
