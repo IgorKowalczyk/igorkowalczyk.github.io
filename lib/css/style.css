@@ -453,7 +453,7 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/blog.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -474,7 +474,7 @@ background-size: cover;
 
 .card-4 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/blog.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
