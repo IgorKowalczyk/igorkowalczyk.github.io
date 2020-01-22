@@ -474,21 +474,21 @@ background-size: cover;
 
 .card-4 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/day-cycle.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-5 {
 grid-area: two;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/day-cycle.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/txt.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-6 {
 grid-area: three;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/txt.jpg');
+background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
