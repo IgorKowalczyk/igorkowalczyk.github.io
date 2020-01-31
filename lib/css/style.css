@@ -155,8 +155,8 @@ padding: 10px 20px;
 text-decoration: none;
 }
 
-.nav .logo a:before {
-visibility: hidden;
+.nav .logo a:hover {
+background-size: 0%;
 }
 
 .nav .menu {
@@ -265,15 +265,6 @@ list-style: none;
 stroke: #ccc;
 }
 
-a:hover {
-color: #00a3a3;
-}
-
-a {
-position: relative;
-color: var(--link) !important;
-}
-
 main a {
 color: var(--link) !important;
 transition: 500ms;
@@ -285,25 +276,19 @@ fill: var(--00a3a3);
 transition: 500ms;
 }
 
-a:before {
-content: "";
-position: absolute;
-width: 100%;
-height: 2px;
-bottom: 0;
-left: 0;
-background-color: var(--00a3a3);
-visibility: hidden;
--webkit-transform: scaleX(0);
-transform: scaleX(0);
--webkit-transition: all 0.3s ease-in-out 0s;
-transition: all 0.3s ease-in-out 0s;
+a {
+position: relative;
+color: var(--link) !important;
+text-decoration: none;
+background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
+background-position: 50% 100%;
+background-repeat: no-repeat;
+background-size: 0% 2px;
+transition: inherit, background-size 300ms;
 }
 
-a:hover:before {
-visibility: visible;
--webkit-transform: scaleX(1);
-transform: scaleX(1);
+a:hover {
+background-size: 100% 2px;
 }
 
 nav a:hover {
@@ -319,13 +304,13 @@ fill: var(--00a3a3);
 transition: 500ms all;
 }
 
-.icon-a:hover:before {
-visibility: hidden;
+.icon-a:hover {
+background-size: 0%;
 }
 
 @media screen and (max-width: 590px) {
-a:hover:before {
-visibility: hidden;
+a:hover {
+background-size: 0%;
 }
 }
 
@@ -348,9 +333,11 @@ background-size: cover;
 .hero-title {
 font-size: 30px !important;
 }
+
 .hero-title2 {
 font-size: 20px !important;
 }
+
 .section-title {
 font-size: 30px !important;
 }
@@ -541,7 +528,6 @@ grid-template-areas:
 "three three three . .";
 }
 }
-
 
 ::-webkit-scrollbar {
 width: 6px;
