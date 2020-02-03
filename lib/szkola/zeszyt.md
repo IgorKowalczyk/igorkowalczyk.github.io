@@ -16,8 +16,8 @@
 ## Przypomnienie wiadomości (EXEL)
 
 ### Na diagramie słupkowym przedstawiono średnie ceny rowerów w kilku krajach. 
-Długość słupków powinna być wprost proporcjonalna do odpowiadaj acych im cen rowerów.
-Uzupełnij brakujące elementy diagramu.
+### Długość słupków powinna być wprost proporcjonalna do odpowiadaj acych im cen rowerów.
+### Uzupełnij brakujące elementy diagramu.
 
 # Lekcja
 
