@@ -13,7 +13,7 @@
 
 <h2>Przypomnienie wiadomości (EXEL)</h2>
 
-<h2>Na diagramie słupkowym przedstawiono średnie ceny rowerów w kilku krajach. 
+<h3>Na diagramie słupkowym przedstawiono średnie ceny rowerów w kilku krajach. 
 Długość słupków powinna być wprost proporcjonalna do odpowiadaj acych im cen rowerów.
 Uzupełnij brakujące elementy diagramu.</h3>
 
