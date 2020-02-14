@@ -162,7 +162,7 @@ background-size: 0%;
 .nav .menu {
 clear: both;
 max-height: 0;
-transition: 500ms background-color, 500ms background, 200ms max-height, 1s color;
+transition: 500ms background-color, 500ms background, 400ms max-height, 1s color;
 }
 
 .nav .menu-icon {
