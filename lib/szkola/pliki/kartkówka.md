@@ -1,0 +1,5 @@
+14) Fidel Castro
+15) Jednym ze skutków integracji państw europejskich po 2 Wojnie światowej wyło powstanie wspólnoty Węgla i Stali i także plan Marshalla który miał pomagać innym państwom. Potem wspólnota Węgla i stali przekształciła się w Unię Europejską.
+16) Utworzono z Niemiec 2 państwa niemieckie - RFN i NRD. NRD należało do ZSRS, panował tam ustrój komunistyczny a w RFN panował ustrój demokratyczny.
+17) W stanach zjednoczonych walczono o zniesienie segregacji rasowej. Działał tam min. Martin Luther King który promował użycie taktyki 'Sit in' która polegała na zajmowaniu miejsc przeznaczonych tylko i wyłącznie dla białych. Został on zamordowany przez białego rasistę. Po wielu trudach zniesiono segregację rasową.
+18) Sobór Watykański 2 został zwołany aby przyciągnąć ludzi z powrotem do kościoła. Podczas niego przeprowadzono wiele ważnych zmian - kapłan odprawia nabożeństw przodem do wiernych, msze odprawiane są w narodowych językach, podjęto dialog z innymi religiami.
