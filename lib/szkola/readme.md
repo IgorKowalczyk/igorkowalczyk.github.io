@@ -1,0 +1,1 @@
+## Note: You can delete the folder. It is not used in website, its only files bin.
