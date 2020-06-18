@@ -344,7 +344,11 @@ font-size: 30px !important;
 }
 
 .section-title {
-font-size: 40px;
+padding: 0 1em;
+max-width: 1224px;
+margin: auto auto;
+color: var(--title);
+font-size: 50px;
 }
 
 .hero-grid {
