@@ -544,11 +544,11 @@ transform: translate(50px, 0px);
 
 .svg-4 {
 grid-area: four;
--moz-transform: scale(1.1) rotate(180deg) translate(-50px, 50px);
--webkit-transform: scale(1.1) rotate(180deg) translate(-50px, 50px);
--o-transform: scale(1.1) rotate(180deg) translate(-50px, 50px);
--ms-transform: scale(1.1) rotate(180deg) translate(-50px, 50px);
-transform: scale(1.1) rotate(180deg) translate(-50px, 50px);
+-moz-transform: scale(1.1) translate(-300px,50px);
+-webkit-transform: scale(1.1) translate(-300px,50px);
+-o-transform: scale(1.1) translate(-300px,50px);
+-ms-transform: scale(1.1) translate(-300px,50px);
+transform: translate(-300px,50px);
 }
 
 .svg-5 {
@@ -562,11 +562,11 @@ transform: scale(1.1) translate(-50px, 50px);
 
 .svg-6 {
 grid-area: six;
--moz-transform: scale(1.1) rotate(180deg) translate(-50px, 1px);
--webkit-transform: scale(1.1) rotate(180deg) translate(-50px, 1px);
--o-transform: scale(1.1) rotate(180deg) translate(-50px, 1px);
--ms-transform: scale(1.1) rotate(180deg) translate(-50px, 1px);
-transform: scale(1.1) rotate(180deg) translate(-50px, 1px);
+-moz-transform: scale(1.1) translate(300px,1px);
+-webkit-transform: scale(1.1) translate(300px,1px);
+-o-transform: scale(1.1) translate(300px,1px);
+-ms-transform: scale(1.1) translate(300px,1px);
+transform: scale(1.1) translate(300px,1px);
 }
 
 .card-image img {
