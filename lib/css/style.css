@@ -518,11 +518,11 @@ background: linear-gradient(to bottom, #000, rgba(0, 0, 0, .5))!important
 .svg-card {
 display: grid;
 z-index: -50;
+opacity: 0.3;
 }
 
 .svg-1 {
 grid-area: one;
-opacity: 0.5;
 }
 
 .svg-2 {
