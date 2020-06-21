@@ -522,6 +522,7 @@ z-index: -50;
 
 .svg-1 {
 grid-area: one;
+opacity: 0.5;
 }
 
 .svg-2 {
