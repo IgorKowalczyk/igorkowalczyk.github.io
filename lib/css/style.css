@@ -523,6 +523,11 @@ opacity: 0.3;
 
 .svg-1 {
 grid-area: one;
+-moz-transform: scale(0.9);
+-webkit-transform: scale(0.9);
+-o-transform: scale(0.9);
+-ms-transform: scale(0.9);
+transform: scale(0.9);
 }
 
 .svg-2 {
