@@ -561,6 +561,11 @@ grid-area: five;
 transform: translate(300px,50px);
 }
 
+.code-svg {
+background: #131417;
+border-radius: 10px;
+}
+
 .svg-6 {
 grid-area: six;
 -moz-transform: translate(-300px,1px);
