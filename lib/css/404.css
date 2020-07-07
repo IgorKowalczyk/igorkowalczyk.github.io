@@ -12,6 +12,8 @@
 --scrollbar: #fff;
 --scrollbar-hover: #4a4a4a;
 --scrollbar-active: #383838;
+--button: rgba(227, 227, 227, 0.8);
+--button-hover: rgba(227, 227, 227, 0.5);
 }
 
 [data-theme=dark] {
@@ -26,6 +28,8 @@
 --scrollbar-thumb: #2b2b2b;
 --scrollbar-hover: #363636;
 --scrollbar-active: #454545;
+--button: #404040;
+--buton-hover: #4a4a4a;
 }
 
 * {
@@ -151,16 +155,16 @@ word-break: keep-all;
 justify-self: left;
 font-size: 14px;
 font-weight: 200;
-color: #fff !important;
-background: rgba(227, 227, 227, 0.1);
+color: var(--text);
+background: var(--button);
 text-decoration: none;
 border-radius: 4px;
 transition: all 0.5s;
 }
 
 .button:hover {
-background: rgba(227, 227, 227, 0.2);
-color: #fff;
+background: var(--button-hover);
+color: var(--text);
 }
 
 .preloader {
