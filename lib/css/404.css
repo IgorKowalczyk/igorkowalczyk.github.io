@@ -37,6 +37,7 @@ font: inherit;
 vertical-align: baseline;
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
+transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
 }
 
 html {
@@ -53,11 +54,22 @@ body {
 font-family: Roboto-Thin;
 font-size: 16px;
 background-color: var(--background);
-color: #fff;
+color: var(--text);
 line-height: 1;
 min-height: 100%;
 word-break: break-all;
 position: relative;
+-webkit-animation: fade 0.5s ease-in;
+animation: fade 0.5s ease-in;
+}
+
+@keyframes fade {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 
 footer {
@@ -67,6 +79,7 @@ bottom: 0;
 left: 0;
 right: 0;
 }
+
 .no-js {
 background: #f44336;
 font-family: Roboto-Thin;
