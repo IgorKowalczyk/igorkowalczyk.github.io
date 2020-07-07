@@ -61,6 +61,7 @@ word-break: break-all;
 position: relative;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
+margin-bottom: 20px;
 }
 
 @keyframes fade {
