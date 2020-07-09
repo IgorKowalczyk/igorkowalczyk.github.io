@@ -82,7 +82,6 @@ z-index: 999999;
 * {
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
-transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
 }
 
 body {
@@ -91,9 +90,10 @@ overflow-x: hidden;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
 line-height: 1.4;
-background: var(--white);
+background-color: var(--white);
 font-family: Roboto-Thin;
 -webkit-font-smoothing: antialiased;
+transition: 500ms background-color;
 }
 
 @keyframes fade {
@@ -279,7 +279,7 @@ background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
 background-position: 50% 100%;
 background-repeat: no-repeat;
 background-size: 0 2px;
-transition: inherit, background-size 0.3s;
+transition: 500ms, background-size 0.3s;
 }
 
 a:hover {
@@ -296,7 +296,7 @@ fill: var(--00a3a3);
 }
 
 .icon-a svg {
-transition: .5s all;
+transition: 500ms all;
 }
 
 .icon-a:hover {
@@ -322,6 +322,7 @@ width: 100%;
 height: 100vh;
 color: var(--light);
 background-size: cover;
+transition: 500ms all;
 }
 
 @media screen and (max-width: 500px) {
@@ -342,6 +343,7 @@ max-width: 1224px;
 margin: auto auto;
 color: var(--title);
 font-size: 50px;
+transition: 500ms all;
 }
 
 .hero-grid {
@@ -355,13 +357,13 @@ margin-left: auto;
 .hero-title {
 font-size: 54px;
 margin-bottom: .3em;
-transition: 0.5s all;
+transition: 500ms all;
 color: #fff;
 }
 
 .hero-title2 {
 font-size: 30px;
-transition: 0.5s all;
+transition: 500ms all;
 color: #fff;
 }
 
@@ -396,6 +398,7 @@ text-align: center;
 color: var(--dark);
 font-size: 12px;
 margin: 2em;
+transition: 500ms all;
 }
 
 .wrapper {
