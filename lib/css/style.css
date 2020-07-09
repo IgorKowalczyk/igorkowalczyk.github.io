@@ -107,7 +107,7 @@ opacity: 1;
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(./fonts/roboto-thin.otf);
+src: url(/fonts/roboto-thin.otf);
 }
 
 .nav {
@@ -317,7 +317,7 @@ background-repeat: no-repeat;
 text-align: center;
 background-attachment: fixed;
 background-position: center;
-background-image: url(https://igorkowalczyk.github.io/lib/pics/background.jpg);
+background-image: url(/lib/pics/background.jpg);
 width: 100%;
 height: 100vh;
 color: var(--light);
