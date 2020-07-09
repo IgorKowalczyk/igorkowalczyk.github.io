@@ -107,7 +107,7 @@ opacity: 1;
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(/fonts/roboto-thin.otf);
+src: url(/lib/fonts/roboto-thin.otf);
 }
 
 .nav {
