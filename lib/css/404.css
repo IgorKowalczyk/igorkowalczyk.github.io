@@ -99,6 +99,7 @@ opacity: 1;
 footer {
 text-align: center;
 flex-shrink: 0;
+transition: 500ms all;
 }
 
 .no-js {
@@ -251,7 +252,6 @@ width: 60px;
 li, ul {
 list-style: none;
 padding: 0;
-transition: 500ms all;
 }
 
 .switch input, .theme-switch input {
