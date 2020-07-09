@@ -93,7 +93,7 @@ line-height: 1.4;
 background-color: var(--white);
 font-family: Roboto-Thin;
 -webkit-font-smoothing: antialiased;
-transition: 500ms background-color;
+transition: 500ms all;
 }
 
 @keyframes fade {
