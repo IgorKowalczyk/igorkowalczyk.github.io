@@ -107,7 +107,7 @@ opacity: 1;
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf);
+src: url(./lib/fonts/roboto-thin.otf);
 }
 
 .nav {
@@ -253,6 +253,7 @@ transition: 0.5s all;
 
 li, ul {
 list-style: none;
+padding: 0;
 }
 
 .menu-icon svg {

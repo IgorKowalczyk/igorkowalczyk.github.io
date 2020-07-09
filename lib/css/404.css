@@ -34,7 +34,7 @@
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf);
+src: url(./fonts/roboto-thin.otf);
 }
 
 * {
@@ -140,7 +140,6 @@ align-items: center;
 display: flex;
 }
 
-
 .message h1 {
 font-size: 144px;
 font-weight: 100;
@@ -243,6 +242,11 @@ display: inline-block;
 height: 34px;
 position: relative;
 width: 60px;
+}
+
+li, ul {
+list-style: none;
+padding: 0;
 }
 
 .switch input, .theme-switch input {
