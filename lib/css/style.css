@@ -390,7 +390,16 @@ max-width: 1224px;
 margin-right: auto;
 margin-left: auto;
 padding: 0 1em;
-grid-template-areas: "one one one . ." ". . two two two" "three three three . ." ". . four four four" "five five five . ." ". . six six six";
+grid-template-areas: "one one one . ."
+". . two two two"
+"three three three . ."
+". . four four four"
+"five five five . ."
+". . six six six"
+"seven seven seven . ."
+". . eight eight eight"
+"nine nine nine . ."
+". . ten ten ten";
 }
 
 footer {
@@ -408,7 +417,7 @@ margin-bottom: 40px;
 
 @media screen and (max-width: 799px) {
 .work-grid {
-grid-template-areas: "one" "two" "three" "four" "five" "six";
+grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
 align-items: center;
 justify-content: center;
 }
@@ -474,6 +483,22 @@ grid-area: five;
 
 .card-6 {
 grid-area: six;
+}
+
+.card-7 {
+grid-area: seven;
+}
+
+.card-8 {
+grid-area: eight;
+}
+
+.card-9 {
+grid-area: nine;
+}
+
+.card-10 {
+grid-area: ten;
 }
 
 .card {
@@ -570,11 +595,47 @@ border-radius: 10px;
 
 .svg-6 {
 grid-area: six;
--moz-transform: translate(-300px, 1px);
--webkit-transform: translate(-300px, 1px);
--o-transform: translate(-300px, 1px);
--ms-transform: translate(-300px, 1px);
-transform: translate(-300px, 1px);
+-moz-transform: translate(300px, 50px);
+-webkit-transform: translate(300px, 50px);
+-o-transform: translate(300px, 50px);
+-ms-transform: translate(300px, 50px);
+transform: translate(300px, 50px);
+}
+
+.svg-7 {
+grid-area: seven;
+-moz-transform: translate(300px, 50px);
+-webkit-transform: translate(300px, 50px);
+-o-transform: translate(300px, 50px);
+-ms-transform: translate(300px, 50px);
+transform: translate(300px, 50px);
+}
+
+.svg-8 {
+grid-area: eight;
+-moz-transform: translate(50px, 0px);
+-webkit-transform: translate(50px, 0px);
+-o-transform: translate(50px, 0px);
+-ms-transform: translate(50px, 0px);
+transform: translate(50px, 0px);
+}
+
+.svg-9 {
+grid-area: nine;
+-moz-transform: translate(300px, 50px);
+-webkit-transform: translate(300px, 50px);
+-o-transform: translate(300px, 50px);
+-ms-transform: translate(300px, 50px);
+transform: translate(300px, 50px);
+}
+
+.svg-10 {
+grid-area: ten;
+-moz-transform: translate(50px, 0px);
+-webkit-transform: translate(50px, 0px);
+-o-transform: translate(50px, 0px);
+-ms-transform: translate(50px, 0px);
+transform: translate(50px, 0px);
 }
 
 .card-image img {
