@@ -1,20 +1,24 @@
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{site.baseurl}}/lib/css/style.min.css">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% if site.title %}<title>{{ site.title }}</title>{% endif $}
 <meta name="theme-color" content="#fff">
 <meta name="description" content="{{site.description}}">
-<meta name="google-site-verification" content="-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY">
-<title>Igor Kowalczyk (MAJO)</title>
-<link rel="shortcut icon" href="https://igorkowalczyk.github.io/lib/favicon/favicon.jpg">
-<link rel="apple-touch-icon" sizes="180x180" href="https://igorkowalczyk.github.io/lib/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://igorkowalczyk.github.io/lib/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://igorkowalczyk.github.io/lib/favicon/favicon-16x16.png">
-<link rel="manifest" href="https://igorkowalczyk.github.io/lib/favicon/site.webmanifest">
-<link rel="mask-icon" href="https://igorkowalczyk.github.io/lib/favicon/safari-pinned-tab.svg" color="#fff">
+<link rel="shortcut icon" href="{{site.url}}/lib/favicon/favicon.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/lib/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/lib/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{site.url}}/lib/favicon/favicon-16x16.png">
+<link rel="manifest" href="{{site.url}}.io/lib/favicon/site.webmanifest">
+<link rel="mask-icon" href="{{site.url}}/lib/favicon/safari-pinned-tab.svg" color="#fff">
 <meta name="msapplication-TileColor" content="#fff">
-<meta name="msapplication-TileImage" content="https://igorkowalczyk.github.io/lib/favicon/mstile-144x144.png">
-<meta name="msapplication-config" content="https://igorkowalczyk.github.io/lib/favicon/browserconfig.xml">
+<meta name="msapplication-TileImage" content="{{site.url}}/lib/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="{{site.url}}/lib/favicon/browserconfig.xml">
+{% if jekyll.environment == 'production' and site.verification %}
+<meta name="google-site-verification" content="{{ site.verification }}">
+{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
-<link rel="stylesheet" href="./lib/css/style.min.css">
+{% feed_meta %}
 {% if jekyll.environment == 'production' and site.tracking_id %}{% include analytics.html %}{% endif %}
 </head>
