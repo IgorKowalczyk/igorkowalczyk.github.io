@@ -12,6 +12,8 @@ email: xxmajonezxx@gmail.com
 
 # Link to blog - if you don't have - leave blank
 blog: /blog
+# Title of the blog (displays in nav) eg. Blog
+blog-title: Blog
 
 # Description (head)
 description: Igor Kowalczyk personal website.

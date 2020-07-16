@@ -2,7 +2,6 @@
 layout: index
 ---
 
-<!-- (c) IGOR KOWALCZYK. All rights reserved. -->
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
@@ -16,7 +15,7 @@ layout: index
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
 {% if site.blog %}
-<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">Blog</a></li>
+<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">{{ site.blog-title }}</a></li>
 {% endif %}
 {% if site.github_username %}
 <li><a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener">Github</a></li>
@@ -230,7 +229,7 @@ layout: index
 </label>
 </div><div class="option-description">Light/Dark Mode</div></li>
 </ul>
-<p>(c) <noscript>{{ site.first-launch }}</noscript><span class="date"></span>{{ site.name | upcase }}</p><p>This site uses cookies.</p>
+<p>(c) <noscript>{{ site.first-launch }}</noscript><span class="date"></span> {{ site.name | upcase }}</p><p>This site uses cookies.</p>
 </footer>
 </main>
 <script src="./lib/js/index.min.js"></script>
