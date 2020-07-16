@@ -1,0 +1,43 @@
+# Main page title
+title: Igor Kowalczyk (MAJO)
+
+# For main page
+name: "Igor Kowalczyk"
+
+# Your job
+work: "Front-End Developer"
+
+# Contact E-Mail (Public!)
+email: xxmajonezxx@gmail.com
+
+# Link to blog - if you don't have - leave blank
+blog: /blog
+
+# Description (head)
+description: Igor Kowalczyk personal website.
+
+# Base url (Not link! Only dir eg. /blog | /portfolio
+baseurl: ""
+# Base url (Not link! Only dir eg. /blog | /portfolio
+main: "/"
+
+# Link to the page (or subpage)
+url: "https://igorkowalczyk.github.io/"
+
+# Github username (no link) - if you don't have - leave blank
+github_username:  igorkowalczyk
+
+# First Launch of the site (displays in footer)
+first-launch: "2019"
+
+timezone: "Europe/Warsaw"
+markdown: kramdown
+
+theme: minima
+
+exclude:
+ - Gemfile
+ - Gemfile.lock
+
+# Tracking id - if you don't have - leave blank
+tracking_id: UA-153609882-1
