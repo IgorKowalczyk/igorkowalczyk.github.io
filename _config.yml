@@ -8,32 +8,34 @@ name: "Igor Kowalczyk"
 work: "Front-End Developer"
 
 # Contact E-Mail (Public!)
-email: "xxmajonezxx@gmail.com"
+email: xxmajonezxx@gmail.com
 
 # Link to blog - if you don't have - leave blank
-blog: "/blog"
+blog: /blog
 # Title of the blog (displays in nav) eg. Blog
-blog-title: "Blog"
+blog-title: Blog
 
 # Description (head)
-description: "Igor Kowalczyk personal website."
+description: Igor Kowalczyk personal website.
 
 # Base url (Not link! Only dir eg. /blog | /portfolio
-baseurl: "/"
+baseurl: ""
+# Base url (Not link! Only dir eg. /blog | /portfolio
+main: "/"
 
 # Link to the page (or subpage)
 url: "https://igorkowalczyk.github.io/"
 
 # Github username (no link) - if you don't have - leave blank
-github_username:  "igorkowalczyk"
+github_username:  igorkowalczyk
 
 # First Launch of the site (displays in footer)
 first-launch: "2019"
 
 timezone: "Europe/Warsaw"
-markdown: "kramdown"
+markdown: kramdown
 
-theme: "minima"
+theme: minima
 
 exclude:
  - Gemfile
