@@ -1,6 +1,6 @@
 id: "9"
 title: "Only MarkDown"
-technology: "Node.js"
+technology: "MarkDown"
 description: "A guide how to use markdown"
 url: "/only-md"
 git: "only-md"
