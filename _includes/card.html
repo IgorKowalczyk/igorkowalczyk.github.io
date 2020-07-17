@@ -8,12 +8,14 @@
 <p class="card-bio">{{ card.description }}</p>
 </div>
 <div class="card-footer">
+<p class="card-link">
 {% if card.url %}
-<p class="card-link"><a class="link" href="{{ card.url }}">Visit website</a>
+<a class="link" href="{{ card.url }}">Visit website</a>
 {% endif %}
 {% if card.git and site.github_username %}
-<a class="link" target="_blank" rel="noopener" href="https://github.com/{{ site.github_username }}/{{ card.git }}">Check Code</a></p>
+<a class="link" target="_blank" rel="noopener" href="https://github.com/{{ site.github_username }}/{{ card.git }}">Check Code</a>
 {% endif %}
+</p>
 </div>
 </div>
 <div class="svg-card svg-{{card.id}}">
