@@ -4,6 +4,9 @@ title: Igor Kowalczyk (MAJO)
 # For main page
 name: "Igor Kowalczyk"
 
+# Work section title
+section: Portfolio
+
 # Your job
 work: "Front-End Developer"
 
@@ -24,7 +27,7 @@ baseurl: ""
 main: "/"
 
 # Link to the page (or subpage)
-url: "https://igorkowalczyk.github.io/"
+url: "https://igorkowalczyk.github.io"
 
 # Github username (no link) - if you don't have - leave blank
 github_username:  igorkowalczyk

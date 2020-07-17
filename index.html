@@ -10,7 +10,7 @@ layout: index
 <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
 <main>
 <nav class="nav" role="navigation">
-<span class="logo"><a href="/" rel="noopener" aria-label="Open home page">{{ site.name }}</a></span>
+<span class="logo"><a href="{{ site.url }}" rel="noopener" aria-label="Open home page">{{ site.name }}</a></span>
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
@@ -45,182 +45,13 @@ layout: index
 </section>
 <section class="work-section">
 <div class="section-title">
-<p>Portfolio</p>
+{% if site.section %}
+<p>{{ site.section }}</p>
+{% endif %}
 </div>
 <section class="wrapper">
 <div class="work-grid">
 {% include cards.html %}
-<!--
-<div class="card card-1" data-effect="color">
-<div  class="card-image">
-<img src="./lib/pics/blog.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Blog</h3>
-<p class="card-tech">Front-End & Ruby</p>
-<p class="card-bio">Blog written in Jekyll with power of JavaScript</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./blog">Visit website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/blog">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-1">
-<img src="./lib/svg/lines-2.svg" alt="Lines"/>
-</div>
-
-<div class="card card-2" data-effect="color">
-<div class="card-image">
-<img src="./lib/pics/color-picker.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Color Picker</h3>
-<p class="card-tech">Front-End</p>
-<p class="card-bio">A advanced web color picker written in JavaScript</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./color-picker">Visit website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/color-picker">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-2">
-<img src="./lib/svg/dots.svg" alt="Dots"/>
-</div>
-
-<div class="card card-3" data-effect="color">
-<div class="card-image">
-<img src="./lib/pics/portfolio.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Portfolio</h3>
-<p class="card-tech">Front-End</p>
-<p class="card-bio">Static portfolio written in HTML, CSS and power of JS</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/igorkowalczyk.github.io">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-3">
-<img src="./lib/svg/lines.svg" alt="Lines"/>
-</div>
-
-<div class="card card-4" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/day-cycle.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Day Cycle</h3>
-<p class="card-tech">Front-End</p>
-<p class="card-bio">Day cycle animation written in CSS and SVG</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./daycycle">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/daycycle">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-4">
-<img src="./lib/svg/dots.svg" alt="Dots"/>
-</div>
-
-<div class="card card-5" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/txt.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">TXT</h3>
-<p class="card-tech">Graphics</p>
-<p class="card-bio">A texturepack for Minecraft</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./txt">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/txt">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-5">
-<img src="./lib/svg/code.svg" class="code-svg" alt="Code"/>
-</div>
-
-<div class="card card-6" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/countdown.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Countdown.js</h3>
-<p class="card-tech">JavaScript</p>
-<p class="card-bio">A simple and easy-to-use JS countdown script</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./countdown.js">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/countdown.js">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-6">
-<img src="./lib/svg/dots.svg" alt="Dots"/>
-</div>
-
-<div class="card card-7" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/search-protector.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Search Protector</h3>
-<p class="card-tech">JavaScript</p>
-<p class="card-bio">Search-Protector prevents pages from modifying search result links</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./search-protector">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/search-protector">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-7">
-<img src="./lib/svg/code.svg" class="code-svg" alt="Code"/>
-</div>
-
-<div class="card card-8" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/majo.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Majo.exe</h3>
-<p class="card-tech">Node.js</p>
-<p class="card-bio">An advanced Discord bot</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./majobot">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/majobot">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-8">
-<img src="./lib/svg/lines.svg" alt="Lines"/>
-</div>
-
-<div class="card card-9" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/only-md.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Only MarkDown</h3>
-<p class="card-tech">MarkDown</p>
-<p class="card-bio">A guide how to use markdown</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./only-md">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/only-md">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-9">
-<img src="./lib/svg/dots.svg" alt="Dots"/>
-</div>
-
-<div class="card card-10" data-effect="blur">
-<div  class="card-image">
-<img src="./lib/pics/fest.jpg" alt="Background">
-</div>
-<div class="card-body">
-<h3 class="card-name">Fest.css (Archived)</h3>
-<p class="card-tech">Framework</p>
-<p class="card-bio">Web framework build in CSS and JavaScript</p>
-</div>
-<div class="card-footer">
-<p class="card-link"><a class="link" href="./fest">Check website</a><a class="link" target="_blank" rel="noopener" href="https://github.com/igorkowalczyk/fest">Check Code</a></p>
-</div>
-</div>
-<div class="svg-card svg-10">
-<img src="./lib/svg/lines.svg" alt="Lines"/>
-</div>
--->
 </div>
 </section>
 <footer>
