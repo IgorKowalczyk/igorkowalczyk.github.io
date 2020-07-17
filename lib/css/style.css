@@ -384,9 +384,6 @@ margin-bottom: 6em;
 
 .work-grid {
 display: grid;
-grid-auto-rows: minmax(340px, auto);
-row-gap: 6em;
-max-width: 1224px;
 margin-right: auto;
 margin-left: auto;
 padding: 0 1em;
