@@ -1,7 +1,7 @@
 # Main page title
 title: "Igor Kowalczyk (MAJO)"
 
-# For main page
+# Your name (or nickname/company name)
 name: "Igor Kowalczyk"
 
 # Work section title
@@ -18,7 +18,7 @@ blog: "/blog"
 # Title of the blog (displays in nav) eg. Blog
 blog-title: "Blog"
 
-# Description (head)
+# Description
 description: "Igor Kowalczyk personal website."
 
 # Base url (Not link! Only dir eg. /blog | /portfolio
@@ -35,11 +35,14 @@ github_username:  "igorkowalczyk"
 # First Launch of the site (displays in footer)
 first-launch: "2019"
 
+# Timezone
 timezone: "Europe/Warsaw"
-markdown: kramdown
 
+# Markdown and Default theme
+markdown: kramdown
 theme: minima
 
+# Exclude files
 exclude:
  - Gemfile
  - Gemfile.lock
@@ -47,4 +50,5 @@ exclude:
 # Tracking id - if you don't have - leave blank
 tracking_id: "UA-153609882-1"
 
+# Verification ID - if you don't have - leave blank
 verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
