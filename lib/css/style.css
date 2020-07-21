@@ -84,7 +84,7 @@ z-index: 999999;
 
 @font-face {
 font-family: Roboto-Thin;
-src: url('{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
+src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
 * {
