@@ -1,3 +1,6 @@
+---
+layout: null
+---
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
@@ -107,7 +110,7 @@ opacity: 1;
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(/lib/fonts/roboto-thin.otf);
+src: url('{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
 .nav {
