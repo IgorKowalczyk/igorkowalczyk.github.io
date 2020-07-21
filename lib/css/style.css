@@ -82,6 +82,11 @@ bottom: 0;
 z-index: 999999;
 }
 
+@font-face {
+font-family: Roboto-Thin;
+src: url('{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
+}
+
 * {
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
@@ -106,11 +111,6 @@ opacity: 0;
 100% {
 opacity: 1;
 }
-}
-
-@font-face {
-font-family: Roboto-Thin;
-src: url('{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
 .nav {
