@@ -1,6 +1,9 @@
+---
+layout: null
+---
 User-agent: *
 Allow: .js
 Allow: .css
 Allow: /lib/
 Disallow:
-Sitemap: https://igorkowalczyk.github.io/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
