@@ -14,12 +14,8 @@ layout: index
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
-{% if site.blog %}
-<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">{{ site.blog-title }}</a></li>
-{% endif %}
-{% if site.github_username %}
-<li><a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener">Github</a></li>
-{% endif %}
+{% if site.blog %}<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">{{ site.blog-title }}</a></li>{% endif %}
+{% if site.github_username %}<li><a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener">Github</a></li>{% endif %}
 </ul>
 </nav>
 <section class="hero-section">
@@ -66,6 +62,6 @@ layout: index
 <p>(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}</p><p>This site uses cookies.</p>
 </footer>
 </main>
-<script src="./lib/js/index.min.js"></script>
+<script src="{{ site.baseurl }}/lib/js/index.min.js"></script>
 </body>
 </html>

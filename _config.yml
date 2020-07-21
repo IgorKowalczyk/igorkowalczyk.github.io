@@ -21,10 +21,8 @@ blog-title: "Blog"
 # Description
 description: "Igor Kowalczyk personal website."
 
-# Base url (Not link! Only dir eg. /blog | /portfolio
+# Base url (Not link! Only dir eg. /blog | /portfolio, if you host in the main site - leave blank)
 baseurl: ""
-# Base url (Not link! Only dir eg. /blog | /portfolio
-main: "/"
 
 # Link to the page (or subpage)
 url: "https://igorkowalczyk.github.io"
