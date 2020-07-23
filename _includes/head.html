@@ -1,8 +1,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{site.description}}">
-{% if site.title %}<title>{{ site.title }}</title>{% endif %}
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+{% endif %}
+{% if site.title %}<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}</title>{% endif %}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#fff">
 <link rel="shortcut icon" href="{{ site.baseurl }}/lib/favicon/favicon.jpg">
