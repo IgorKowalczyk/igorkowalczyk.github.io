@@ -21,7 +21,11 @@
 <meta name="msapplication-TileImage" content="{{ site.baseurl }}/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="{{ site.baseurl }}/lib/favicon/browserconfig.xml">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+{% if page.layout == '404' %}
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/css/404.min.css">
+{% else %}
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/css/style.min.css">
+{% endif %}
 {% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
 {% if page.block %}
 <meta name="robots" content="noindex, nofollow">
