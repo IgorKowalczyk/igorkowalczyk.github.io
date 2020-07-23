@@ -1,22 +1,6 @@
 ---
 layout: index
 ---
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-<body ondragstart="return false" ondrag="return false">
-<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
-<noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
-<main>
-<nav class="nav" role="navigation">
-<span class="logo"><a href="{{ site.url }}" rel="noopener" aria-label="Open home page">{{ site.name }}</a></span>
-<input class="menu-btn" type="checkbox" id="menu-btn" />
-<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-<ul class="menu">
-{% if site.blog %}<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">{{ site.blog-title }}</a></li>{% endif %}
-{% if site.github_username %}<li><a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener">Github</a></li>{% endif %}
-</ul>
-</nav>
 <section class="hero-section">
 <div class="hero-grid">
 <div class="hero-content">
@@ -49,18 +33,3 @@ layout: index
 {% include cards.html %}
 </div>
 </section>
-<footer>
-<ul>
-<li><div class="theme-switch-container">
-<label class="theme-switch" for="checkbox">
-<input type="checkbox" id="checkbox"/>
-<div class="slider round"></div>
-</label>
-</div><div class="option-description">Light/Dark Mode</div></li>
-</ul>
-<p>(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}</p><p>This site uses cookies.</p>
-</footer>
-</main>
-<script src="{{ site.baseurl }}/lib/js/index.min.js"></script>
-</body>
-</html>
