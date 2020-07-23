@@ -15,7 +15,13 @@
 <meta name="msapplication-TileColor" content="#fff">
 <meta name="msapplication-TileImage" content="{{ site.baseurl }}/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="{{ site.baseurl }}/lib/favicon/browserconfig.xml">
-{% if jekyll.environment == 'production' and site.verification %}<meta name="google-site-verification" content="{{ site.verification }}">{% endif %}
+{% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
+{% if page.block %}
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+{% else %}
+{% if site.verification and jekyll.environment == 'production' %}<meta name="google-site-verification" content="{{ site.verification }}">{% endif %}
+{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 {% feed_meta %}
 {% if jekyll.environment == 'production' and site.tracking_id %}{% include analytics.html %}{% endif %}
