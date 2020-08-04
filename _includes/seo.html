@@ -14,6 +14,6 @@
 {% if page.description %}
 <meta name="twitter:description" content="{{ page.description }}">
 {% else %}
-<meta name="twitter:description" content="{{ page.content | xml_escape | truncate: 200 }}">
+<meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' }}{{ site.baseurl }}">
