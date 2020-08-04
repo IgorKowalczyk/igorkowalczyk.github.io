@@ -1,0 +1,15 @@
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if page.image %}<meta property="og:image" content="{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}" />{% else if site.image %}<meta property="og:image" content="{{ site.url }}lib/pics/thumbs/{{ site.image }}" />{% endif %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+{% if page.description %}
+<meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+<meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+{% endif %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
