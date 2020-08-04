@@ -7,8 +7,8 @@
 {% if page.image %}<meta property="og:image" content="{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}" />{% endif %}
 {% if page.image %<meta name="twitter:image" content="{{ site.cdn }}/lib/pics/thumbs/{{ page.image }}">{% else %}<meta name="twitter:image" content="{{ site.baseurl }}/lib/favicon/favicon.jpg">{% endif %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="{{ site.twitter }}">
-<meta name="twitter:creator" content="{{ site.twitter }}">
+{% if site.twitter %}<meta name="twitter:site" content="{{ site.twitter }}">{% endif %}
+{% if site.twitter %}<meta name="twitter:creator" content="{{ site.twitter }}">{% endif %}
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
 {% if page.description %}
