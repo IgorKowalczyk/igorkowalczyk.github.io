@@ -24,6 +24,9 @@ description: "Igor Kowalczyk personal website."
 # Base url (Not link! Only dir eg. /blog | /portfolio, if you host in the main site - leave blank)
 baseurl: ""
 
+# Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
+mobile: "false"
+
 # Link to the page (or subpage)
 url: "https://igorkowalczyk.github.io"
 

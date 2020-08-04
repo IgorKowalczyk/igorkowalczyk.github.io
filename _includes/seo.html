@@ -1,3 +1,14 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' }}">
+{% if site.mobile != "false" %}
+<meta name="copyright" content="(c) Copyright Igor Kowalczyk {{ site.first-lauch }} to Present">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="375">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+<meta http-equiv="cleartype" content="on">
+{% endif %}
+<meta name="theme-color" content="#fff">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
@@ -16,4 +27,3 @@
 {% else %}
 <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
-<link rel="canonical" href="{{ page.url | replace:'index.html','' }}{{ site.baseurl }}">
