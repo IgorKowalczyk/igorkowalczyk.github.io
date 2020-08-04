@@ -36,14 +36,18 @@ first-launch: "2019"
 # Timezone
 timezone: "Europe/Warsaw"
 
+# Encoding (default: utf-8)
+encoding: utf-8
+
 # Markdown and Default theme
 markdown: kramdown
 theme: minima
 
-# Exclude files
+# Exlude files/folder (see "/lib/szkola/readme.md")
 exclude:
  - Gemfile
  - Gemfile.lock
+ - lib/szkola
 
 # Tracking id - if you don't have - leave blank
 tracking_id: "UA-153609882-1"
