@@ -2,11 +2,11 @@
 layout: "null"
 ---
 {% if site.block %}
-User-agent: GoogleBot
+User-agent: *
 Disallow: *
 Allow:
 {% else %}
-User-agent: GoogleBot
+User-agent: *
 Disallow:
 Allow: *
 {% endif %}
