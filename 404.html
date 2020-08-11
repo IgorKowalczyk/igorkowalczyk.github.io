@@ -3,6 +3,7 @@ layout: "404"
 title: "404"
 description: "There's nothing here"
 ---
+{% comment %}
 <div class="easteregg">
 <div class="letter">
 <div class="shadow"></div>
@@ -46,6 +47,7 @@ description: "There's nothing here"
 </button>
 </div>
 </div>
+{% endcomment %}
 <div class="message">
 <h1>404</h1>
 <h2>There's nothing here.</h2>
@@ -53,4 +55,6 @@ description: "There's nothing here"
 <p><a class="button" href="{{ site.baseurl }}/?ref=404">Home page</a></p>
 {% if site.email %}<p><a class="button" href="mailto:{{ site.email }}">Report Bug</a></p>{% endif %}
 </div>
+{% comment %}
 </div>
+{% endcomment %}

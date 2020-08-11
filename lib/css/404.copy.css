@@ -4,6 +4,12 @@ layout: "null"
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
+--svg: #646B8C;
+--game-paddle: #404660;
+--game-ball: #00a3a3;
+--controls-text: #000;
+--controls-icon: #fff;
+--shadow: #E1E6F9;
 --text: #000;
 --background: #fff;
 --preloader: #fff;
@@ -20,6 +26,12 @@ layout: "null"
 }
 
 [data-theme=dark] {
+--svg: #fff;
+--game-paddle: #f4f4f4;
+--game-ball: #fff;
+--controls-text: #fff;
+--controls-icon: #000;
+--shadow: #000;
 --text: #fff;
 --background: #222;
 --preloader: #222;
@@ -40,7 +52,7 @@ font-family: Roboto-Thin;
 src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
-* {
+*, *:before, *:after {
 margin: 0;
 padding: 0;
 border: 0;
@@ -49,6 +61,8 @@ font: inherit;
 vertical-align: baseline;
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
+box-sizing: inherit;
+outline: none;
 }
 
 ::-webkit-scrollbar {
@@ -88,6 +102,12 @@ flex-direction: column;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
 transition: 500ms all;
+min-height: 100vh;
+display: -webkit-box;
+-webkit-box-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+align-items: center;
 }
 
 @keyframes fade {
@@ -185,6 +205,7 @@ font-weight: 200;
 color: var(--text);
 background: var(--button);
 text-decoration: none;
+cursor: pointer;
 border-radius: 4px;
 transition: 500ms all;
 }
@@ -314,4 +335,222 @@ border-radius: 34px;
 
 .slider-switch.round:before, .slider.round:before {
 border-radius: 50%;
+}
+
+.easteregg .letter {
+position: absolute;
+left: 0;
+right: 0;
+  display: flex;
+  justify-content: center;
+transition: 300ms all;
+}
+
+.easteregg .letter .body .game {
+width: 360px;
+height: 260px;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+background: var(--background);
+position: absolute;
+transition: 300ms all;
+border-radius: 5px;
+box-shadow: inset 0 0 0 1px var(--paper-border);
+}
+
+.easteregg .letter .body .game .headline {
+position: absolute;
+left: 0;
+right: 0;
+top: -32px;
+display: -webkit-box;
+display: flex;
+-webkit-box-pack: justify;
+justify-content: space-between;
+-webkit-box-align: center;
+align-items: center;
+}
+
+.shadow {
+background: var(--shadow);
+opacity: 0;
+transition: 300ms all;
+pointer-events: none;
+visibility: hidden;
+z-index: 100;
+width: 100%;
+height: 100%;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+position: fixed;
+}
+
+.easteregg.show-game .shadow {
+opacity: 1;
+pointer-events: all;
+visibility: visible;
+}
+
+.show-game {
+margin-left: auto;
+margin-right: auto;
+}
+
+.cta .button {
+background: transparent;
+padding: 10px;
+position: fixed;
+right: 0;
+bottom: 0;
+}
+
+.cta .button svg {
+fill: var(--text);
+transition: 300ms all;
+}
+
+.cta .button:hover svg {
+opacity: 0.8;
+}
+
+.easteregg .letter .body .game .headline span {
+color: var(--headline-color);
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+}
+
+.easteregg .letter .body .game .headline .close {
+cursor: pointer;
+}
+
+.easteregg .letter .body .game .headline .close svg {
+width: 20px;
+height: 20px;
+display: block;
+fill: var(--svg);
+padding: 2px;
+}
+
+.easteregg .letter .body .game .paddle, .easteregg .letter .body .game .ball {
+top: 0;
+position: absolute;
+-webkit-transition: opacity .3s;
+transition: opacity .3s;
+-webkit-transform: translate(var(--x, 0), var(--y, 0));
+transform: translate(var(--x, 0), var(--y, 0));
+}
+
+.easteregg .letter .body .game .paddle {
+width: 6px;
+height: 48px;
+border-radius: 3px;
+--y: 106px;
+background: var(--game-paddle);
+}
+
+.easteregg .letter .body .game .paddle.one {
+left: 0;
+}
+
+.easteregg .letter .body .game .paddle.two {
+right: 0;
+}
+
+.easteregg .letter .body .game .ball {
+background: var(--game-ball);
+border-radius: 50%;
+width: 16px;
+height: 16px;
+left: 0;
+}
+
+.easteregg .letter .body .game .controls {
+bottom: -80px;
+left: 0;
+right: 0;
+position: absolute;
+}
+
+.easteregg .letter .body .game .controls span {
+display: block;
+text-align: center;
+margin-bottom: 12px;
+font-size: 14px;
+font-weight: 500;
+color: var(--controls-text);
+}
+
+.easteregg .letter .body .game .controls div {
+display: -webkit-box;
+display: flex;
+-webkit-box-pack: center;
+justify-content: center;
+}
+
+.easteregg .letter .body .game .controls div button {
+width: 64px;
+padding: 8px 0;
+margin: 0;
+background-color: var(--game-ball);
+}
+
+.easteregg .letter .body .game .controls div button:not(:last-child) {
+margin-right: 16px;
+}
+
+.easteregg .letter .body .game .controls div button svg {
+width: 20px;
+height: 20px;
+display: block;
+margin: 0 auto;
+fill: var(--controls-icon);
+}
+
+.easteregg .letter .body .game .start {
+position: absolute;
+text-align: center;
+white-space: nowrap;
+left: 50%;
+top: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+-webkit-transition: opacity .3s;
+transition: opacity .3s;
+}
+
+.easteregg .letter .body .game .start small {
+margin: 4px 0 0 0;
+display: block;
+font-style: italic;
+font-size: 12px;
+color: var(--svg);
+}
+
+.easteregg .letter .body .game:not(.idle) .start {
+opacity: 0;
+pointer-events: none;
+}
+
+.easteregg .letter .body .game:not(.init) .ball {
+opacity: 0;
+}
+
+.easteregg:not(.show-game) .letter .body .game {
+opacity: 0;
+pointer-events: none;
+}
+
+.easteregg .letter .body {
+opacity: 1;
+transition: 300ms all;
+z-index: 2115;
+}
+
+.easteregg.hide-game .letter .body {
+opacity: 1;
 }
