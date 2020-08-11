@@ -320,7 +320,8 @@ background-repeat: no-repeat;
 text-align: center;
 background-attachment: fixed;
 background-position: center;
-background-image: url(/lib/pics/background.jpg);
+/* background-image: url(/lib/pics/background.jpg); */
+background-image: radial-gradient(circle, rgba(15, 14, 22, 0.2) 74%, rgba(0, 0, -1, 0.2) 100%), url(/lib/pics/background.jpg);
 width: 100%;
 height: 100vh;
 color: var(--light);
