@@ -1,1 +1,1 @@
-## Note: You can delete the folder. It is not used in website, its only files bin.
+## Note: You can delete the folder. It is not used in website, its only files bin. (Remove aslo line `- lib/szkola` in `_config.yml`)
