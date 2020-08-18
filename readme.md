@@ -22,4 +22,4 @@ When submitting a pull request:
 - Open a pull request on GitHub and describe the feature or fix.
 
 # License
-This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/igorkowalczyk.github.io/license.txt) file for details
+This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/license.txt) file for details
