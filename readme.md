@@ -7,7 +7,7 @@ Portfolio and files bin written on Jekyll
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://discord.gg/f4KtqNB)
 
 # Issues
-If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues)
+If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/color-picker/issues)
 
 # Development
 To set up your environment to develop this site, run `bundle install`.
@@ -22,4 +22,4 @@ When submitting a pull request:
 - Open a pull request on GitHub and describe the feature or fix.
 
 # License
-This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/igorkowalczyk.github.io/license.txt) file for details
+This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/color-picker/license.txt) file for details
