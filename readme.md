@@ -7,19 +7,19 @@ Portfolio and files bin written on Jekyll
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://discord.gg/f4KtqNB)
 
 # Issues
-If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues)
+If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/igorkwalczyk.github.io/issues)
 
 # Development
-To set up your environment to develop this site, run `bundle install`.
+To set up your environment to develop this page, run `bundle install`.
 
-To test the site, run `bundle exec rake preview` and open your browser at http://localhost:4000/dir/. This starts a Jekyll server using content in the `dir/` directory. As modifications are made to the site and test site, it will regenerate and you should see the changes in the browser after a refresh.
+To test site, run `bundle exec jekyll serve` and open your browser at http://localhost:4000. This starts a Jekyll server using your config and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
 
 # Pull Requests
 When submitting a pull request:
 
 - Clone the repo.
 - Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature).
-- Open a pull request on GitHub and describe the feature or fix.
+- Open a [pull request](https://github.com/igorkowalczyk/igorkwalczyk.github.io/pulls) on [GitHub](https://github.com) and describe the feature or fix.
 
 # License
-This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/license.txt) file for details
+This project is licensed under the Mozilla Public License. See the [LICENSE](https://github.com/igorkowalczyk/igorkwalczyk.github.io/blob/master/license.md) file for details
