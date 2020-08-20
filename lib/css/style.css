@@ -431,6 +431,7 @@ margin-bottom: 40px;
 grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
 align-items: center;
 justify-content: center;
+grid-gap: 6rem;
 }
 .card {
 box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
