@@ -1,0 +1,43 @@
+<div class="bg-contact">
+<div class="container-contact">
+<div class="wrap-contact">
+<div class="contact-pic">
+<img src="{{ site.from.img }}" alt="image">
+</div>
+<form class="contact-form" action="{{ site.form.action }}" method="post">
+<span class="contact-form-title">Contact</span>
+<fieldset>
+<div class="wrap-input">
+<label for="name">Name
+<div class="nameerror error">Please enter a name!</div>
+<input class="contact-input-name" type="text" name="name" placeholder="John Doe" title="This field is required" maxlenght="50">
+</label>
+</div>
+</fieldset>
+<fieldset>
+<div class="wrap-input">
+<label for="email">E-Mail
+<div class="emailerror error">Please enter a vaild email!</div>
+<input class="contact-input-email" type="text" name="email" placeholder="john@doe.com" title="This field is required" maxlenght="50" spellcheck="false">
+</label>
+</div>
+</fieldset>
+<fieldset>
+<div class="wrap-input">
+<label for="message">Message
+<div class="messageerror error">Please enter a message!</div>
+<textarea class="contact-input-message" name="message" placeholder="Your message" title="This field is required" maxlenght="150" autocomplete="off" spellcheck="true"></textarea>
+</label>
+</div>
+</fieldset>
+<div class="container-contact-form-btn">
+<button class="contact-form-btn">Send</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="contact-sendfailed message">The message couldn't be sent, please try again later.</div>
+<div class="contact-sendsucceeded message">Thank you, your message has been sent!</div>
+
+<script src="{{ site.url }}{{ site.baseurl }}/lib/js/form.js"></script>

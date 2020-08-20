@@ -55,6 +55,12 @@ exclude:
  - Gemfile.lock
  - lib/szkola
 
+# Contact form
+form:
+ enabled: "true"
+ action: "https://formspree.io/mlepknva"
+ img: "/lib/pics/special/email.svg"
+
 # Tracking id - if you don't have - leave blank
 tracking_id: "UA-174454816-1"
 
