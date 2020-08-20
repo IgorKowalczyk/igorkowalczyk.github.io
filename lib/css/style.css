@@ -24,7 +24,7 @@ layout: "null"
 --border: #212121;
 --button: rgba(227, 227, 227, 0.8);
 --button-hover: rgba(227, 227, 227, 0.5);
---button-text: #fff;
+--button-text: #000;
 --error: #c80000;
 --scrollbar-thumb: #888;
 --scrollbar: #fff;
