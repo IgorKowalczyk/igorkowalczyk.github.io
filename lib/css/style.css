@@ -1026,6 +1026,7 @@ grid-template-areas:
 "name name"
 "message message"
 ". button";
+width: 100%;
 }
 input, textarea {
 width: 100%;
