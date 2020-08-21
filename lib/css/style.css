@@ -34,7 +34,7 @@ layout: "null"
 --preloader: #fff;
 --spinner: #00a3a3;
 --spinner-border: #f3f3f3;
---wrap-contact-background: rgb(35, 35, 35);
+--wrap-contact-background: #fff;
 }
 
 [data-theme=dark] {
