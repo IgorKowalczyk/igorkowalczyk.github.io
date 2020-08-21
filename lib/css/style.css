@@ -918,7 +918,7 @@ margin-bottom: 10px;
 
 input {
 border: 1px solid var(--border);
-border-radius: 3px;
+border-radius: 5px;
 padding: 10px;
 margin: 10px 0 5px 0;
 width: auto;
@@ -1026,6 +1026,9 @@ grid-template-areas:
 "name name"
 "message message"
 ". button";
+}
+input, textarea {
+width: 100%;
 }
 .contact-pic {
 display: none;
