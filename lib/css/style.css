@@ -1024,7 +1024,7 @@ width: 55%;
 grid-template-areas:
 "email email"
 "name name"
-"textarea textarea"
+"message message"
 ". button";
 }
 .contact-pic {
