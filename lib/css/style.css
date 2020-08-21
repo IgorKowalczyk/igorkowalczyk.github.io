@@ -803,22 +803,6 @@ background-color: var(--scrollbar-hover);
 background-color: var(--scrollbar-active);
 }
 
-input {
-outline: none;
-border: none;
-}
-
-textarea {
-outline: none;
-border: none;
-}
-
-button {
-outline: none;
-border: none;
-cursor: pointer;
-}
-
 .bg-contact {
 width: 100%;
 display: -webkit-box;
@@ -918,6 +902,7 @@ transition: 500ms, 0ms resize;
 min-height: 60px;
 max-height: 300px;
 border-radius: 3px;
+outline: none;
 }
 
 label {
@@ -932,12 +917,12 @@ margin-bottom: 10px;
 }
 
 input {
-display: block;
 border: 1px solid var(--border);
 border-radius: 3px;
 padding: 10px;
 margin: 10px 0 5px 0;
-width: 100%;
+width: auto;
+outline: none;
 }
 
 fieldset {
@@ -999,6 +984,9 @@ text-decoration: none;
 border-radius: 4px;
 text-align: center;
 transition: 500ms all;
+outline: none;
+border: none;
+cursor: pointer;
 }
 
 .contact-form-btn:hover {
