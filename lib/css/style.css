@@ -842,6 +842,11 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 padding-top: 0;
+padding-top: 20px;
+padding-bottom: 20px;
+background: var(--wrap-contact-background);
+box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
+padding: 50px;
 }
 
 .contact-title {
@@ -867,7 +872,8 @@ max-width: 100%;
 }
 
 .contact-form {
-width: 390px;
+width: auto;
+padding-left: 30px;
 }
 
 .contact-form-title {
@@ -958,7 +964,6 @@ padding-top: 20px;
 }
 
 .contact-form-btn {
-width: 100%;
 line-height: 20px;
 padding: 12px 24px 12px 24px;
 font-weight: 700;
@@ -1011,8 +1016,6 @@ justify-content: center;
 margin: 50px;
 padding-top: 20px;
 padding-bottom: 20px;
-background: var(--wrap-contact-background);
-box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
 }
 }
 
