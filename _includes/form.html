@@ -4,11 +4,13 @@
 <p>Contact</p>
 </div>
 <div class="wrap-contact">
+{% if site.form.img and site.form.img-enabled == "true" %}
 <div class="contact-pic">
 <img src="{{ site.form.img }}" alt="image">
 </div>
+{% endif %}
 <form class="contact-form" action="{{ site.form.action }}" method="post">
-<fieldset>
+<fieldset class="field-name">
 <div class="wrap-input">
 <label for="name">Name
 <div class="nameerror error">Please enter a name!</div>
@@ -16,7 +18,7 @@
 </label>
 </div>
 </fieldset>
-<fieldset>
+<fieldset class="field-email">
 <div class="wrap-input">
 <label for="email">E-Mail
 <div class="emailerror error">Please enter a vaild email!</div>
@@ -24,7 +26,7 @@
 </label>
 </div>
 </fieldset>
-<fieldset>
+<fieldset class="field-message">
 <div class="wrap-input">
 <label for="message">Message
 <div class="messageerror error">Please enter a message!</div>
@@ -32,7 +34,7 @@
 </label>
 </div>
 </fieldset>
-<div class="container-contact-form-btn">
+<div class="container-contact-form-btn submit">
 <button class="contact-form-btn"><svg aria-hidden="true" role="img" class="button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path></svg> Send</button>
 </div>
 <div class="contact-sendfailed message">The message couldn't be sent, please try again later.</div>
