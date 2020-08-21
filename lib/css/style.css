@@ -1020,6 +1020,13 @@ width: 55%;
 }
 
 @media (max-width: 780px) {
+.contact-form {
+grid-template-areas:
+"email email"
+"name name"
+"textarea textarea"
+". button";
+}
 .contact-pic {
 display: none;
 }
