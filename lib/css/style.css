@@ -966,8 +966,9 @@ color: var(--error);
 
 .error {
 color: var(--error);
-opacity: 0;
 visibility: hidden;
+opacity: 0;
+pointer-events: none;
 transition: 500ms all;
 }
 
