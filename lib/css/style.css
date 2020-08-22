@@ -947,6 +947,10 @@ transition: .5s all;
 grid-area: error / error;
 }
 
+.no-margin {
+margin-bottom: 0 !important;
+}
+
 .show-message {
 visibility: visible !important;
 opacity: 1 !important;
@@ -982,7 +986,6 @@ display: -ms-flexbox;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-padding-top: 20px;
 }
 
 .contact-form-btn {
