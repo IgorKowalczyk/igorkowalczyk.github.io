@@ -942,7 +942,7 @@ opacity: 0;
 pointer-events: none;
 border-radius: 5px;
 padding: 10px;
-margin-top: 2rem;
+max-height: 0;
 transition: .5s all;
 grid-area: error / error;
 }
@@ -952,6 +952,7 @@ visibility: visible !important;
 opacity: 1 !important;
 pointer-events: all !important;
 transition: 500ms;
+max-height: unset;
 }
 
 .contact-sendfailed {
