@@ -863,6 +863,7 @@ grid-template-areas:
 "title title"
 "email name"
 "message message"
+"error error"
 ". button";
 gap: 10px;
 }
@@ -936,11 +937,21 @@ max-width: 100%;
 }
 
 .message {
-display: none;
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
 border-radius: 5px;
 padding: 10px;
 margin-top: 2rem;
 transition: .5s all;
+grid-area: error / error;
+}
+
+.show-message {
+visibility: visible;
+opacity: 1;
+pointer-events: all;
+transition: 500ms;
 }
 
 .contact-sendfailed {
@@ -1028,6 +1039,7 @@ grid-template-areas:
 "email email"
 "name name"
 "message message"
+"error error"
 ". button";
 width: 100%;
 }
