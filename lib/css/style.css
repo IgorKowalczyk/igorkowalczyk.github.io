@@ -860,6 +860,7 @@ width: auto;
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-areas:
+"title title"
 "email name"
 "message message"
 ". button";
@@ -889,6 +890,7 @@ color: var(--333);
 line-height: 1.2;
 text-align: left;
 padding-bottom: 36px;
+grid-area: title / title;
 }
 
 textarea {
@@ -1022,6 +1024,7 @@ width: 55%;
 @media (max-width: 780px) {
 .contact-form {
 grid-template-areas:
+"title title"
 "email email"
 "name name"
 "message message"
