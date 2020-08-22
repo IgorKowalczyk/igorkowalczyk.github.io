@@ -948,9 +948,9 @@ grid-area: error / error;
 }
 
 .show-message {
-visibility: visible;
-opacity: 1;
-pointer-events: all;
+visibility: visible !important;
+opacity: 1 !important;
+pointer-events: all !important;
 transition: 500ms;
 }
 
