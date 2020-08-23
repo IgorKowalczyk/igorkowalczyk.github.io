@@ -35,6 +35,7 @@ layout: "null"
 --spinner: #00a3a3;
 --spinner-border: #f3f3f3;
 --wrap-contact-background: #fff;
+--placeholder: #333;
 }
 
 [data-theme=dark] {
@@ -69,11 +70,12 @@ layout: "null"
 --spinner: #888;
 --spinner-border: #333;
 --wrap-contact-background: rgb(35, 35, 35);
+--placeholder: #333;
 }
 
 .no-js {
 background: #f44336;
-font-family: Roboto-Thin;
+font-family: 'Roboto-Thin';
 color: #fff;
 text-align: center;
 display: -ms-flexbox;
@@ -95,7 +97,7 @@ z-index: 999999;
 }
 
 @font-face {
-font-family: Roboto-Thin;
+font-family: 'Roboto-Thin';
 src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
@@ -111,7 +113,7 @@ overflow-x: hidden;
 animation: fade 0.5s ease-in;
 line-height: 1.4;
 background-color: var(--white);
-font-family: Roboto-Thin;
+font-family: 'Roboto-Thin';
 -webkit-font-smoothing: antialiased;
 transition: 500ms all;
 }
@@ -831,6 +833,7 @@ padding-bottom: 20px;
 background: var(--wrap-contact-background);
 box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
 padding: 50px;
+transition: 500ms all;
 }
 
 .contact-title {
@@ -892,6 +895,7 @@ line-height: 1.2;
 text-align: left;
 padding-bottom: 36px;
 grid-area: title / title;
+transition: 500ms all;
 }
 
 textarea {
@@ -910,6 +914,8 @@ outline: none;
 
 label {
 color: var(--333);
+transition: 500ms all;
+
 }
 
 .wrap-input {
@@ -926,6 +932,67 @@ padding: 10px;
 margin: 10px 0 5px 0;
 width: auto;
 outline: none;
+transition: 500ms all;
+}
+
+::-webkit-input-placeholder {
+color: var(--placeholder);
+-webkit-transition: 300ms all;
+transition: 300ms all;
+-moz-user-select: none;
+user-select: none;
+font-family: 'Roboto-Thin';
+}
+
+:-moz-placeholder {
+color: var(--placeholder);
+-moz-transition: 300ms all;
+transition: 300ms all;
+-moz-user-select: none;
+user-select: none;
+font-family: 'Roboto-Thin';
+}
+
+::-moz-placeholder {
+color: var(--placeholder);
+-moz-transition: 300ms all;
+transition: 300ms all;
+-moz-user-select: none;
+user-select: none;
+font-family: 'Roboto-Thin';
+}
+
+:-ms-input-placeholder {
+color: var(--placeholder);
+-ms-transition: 300ms all;
+transition: 300ms all;
+-moz-user-select: none;
+user-select: none;
+}
+
+:focus::-webkit-input-placeholder {
+opacity: 0;
+-webkit-transition: 300ms all;
+transition: 300ms all;
+}
+
+:focus:-moz-placeholder {
+opacity: 0;
+-moz-transition: 300ms all;
+transition: 300ms all;
+}
+
+:focus::-moz-placeholder {
+opacity: 0;
+-moz-transition: 300ms all;
+transition: 300ms all;
+}
+
+:focus:-ms-input-placeholder {
+opacity: 0;
+-ms-transition: 300ms all;
+transition: 300ms all;
+font-family: 'Roboto-Thin';
 }
 
 fieldset {
@@ -965,8 +1032,8 @@ color: var(--error);
 }
 
 .contact-sendsucceeded {
-border: 2px solid var(--error);
-color: var(--error);
+border: 2px solid var(--333);
+color: var(--333);
 }
 
 .error {
