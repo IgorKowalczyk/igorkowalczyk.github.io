@@ -893,7 +893,6 @@ font-size: 24px;
 color: var(--333);
 line-height: 1.2;
 text-align: left;
-padding-bottom: 36px;
 grid-area: title / title;
 transition: 500ms all;
 }
