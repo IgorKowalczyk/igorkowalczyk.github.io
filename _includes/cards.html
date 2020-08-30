@@ -12,12 +12,13 @@
 {% assign url = card.url %}
 {% assign git = card.git %}
 {% assign background = card.background %}
+{% assign background_data = card.background_data %}
 {% assign background-alt = card.background-alt %}
 {% assign second-background = card.second-background %}
 {% assign second-background-alt = card.second-background-alt %}
 {% assign effect = card.effect %}
 
-{% include card.html id=id title=title technology=technology description=description url=url git=git background=background background-alt=background-alt second-background=second-background second-background-alt=second-background-alt effect=effect %}
+{% include card.html id=id title=title technology=technology description=description url=url git=git background=background background_data=background_data background-alt=background-alt second-background=second-background second-background-alt=second-background-alt effect=effect %}
 {% endfor %}
 {% endif %}
 {% else %}
