@@ -805,6 +805,18 @@ background-color: var(--scrollbar-hover);
 background-color: var(--scrollbar-active);
 }
 
+img {
+max-width: 100%;
+height: auto;
+display: block;
+transition: 600ms all;
+filter: none;
+}
+
+.lazy {
+filter: blur(3px);
+}
+
 .bg-contact {
 width: 100%;
 display: -webkit-box;
