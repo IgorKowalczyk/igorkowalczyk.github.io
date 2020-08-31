@@ -1,6 +1,6 @@
 <div class="card card-{{ card.id }}" data-effect="{{ card.effect }}">
 <div  class="card-image">
-<img src="{% if card.background_data %}{{ card.background_data }}{% else %}{{ card.background }}{% endif%}" {% if card.background_data %}class="lazy" data-src="{{ card.background }}"{% endif %} alt="{{ card.background-alt }}">
+<img {% if card.background_data %}class="lazy" data-src="{{ card.background }}"{% endif %} alt="{{ card.background-alt }}">
 </div>
 <div class="card-body">
 <h3 class="card-name">{{ card.title }}</h3>
