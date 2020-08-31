@@ -394,6 +394,18 @@ color: var(--grey);
 text-decoration: none;
 }
 
+img {
+max-width: 100%;
+height: auto;
+display: block;
+transition: 500ms all;
+filter: none;
+}
+
+.lazy {
+filter: blur(10px);
+}
+
 .work-section {
 margin-top: 6em;
 margin-bottom: 6em;
@@ -803,18 +815,6 @@ background-color: var(--scrollbar-hover);
 
 ::-webkit-scrollbar-thumb:active {
 background-color: var(--scrollbar-active);
-}
-
-img {
-max-width: 100%;
-height: auto;
-display: block;
-transition: 600ms all;
-filter: none;
-}
-
-.lazy {
-filter: blur(3px);
 }
 
 .bg-contact {
