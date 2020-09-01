@@ -922,6 +922,7 @@ min-height: 60px;
 max-height: 300px;
 border-radius: 3px;
 outline: none;
+padding: 10px;
 }
 
 label {
