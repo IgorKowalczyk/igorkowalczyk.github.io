@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: "none"
 permalink: .well-known/brave-payments-verification.txt
 ---
 This is a Brave Rewards publisher verification file.
