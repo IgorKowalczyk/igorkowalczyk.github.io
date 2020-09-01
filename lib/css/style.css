@@ -403,7 +403,7 @@ filter: none;
 }
 
 .lazy {
-filter: blur(3px) brightness(20%);
+filter: blur(3px) brightness(20%) !important;
 }
 
 .work-section {
