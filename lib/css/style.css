@@ -404,6 +404,7 @@ filter: none;
 
 .lazy {
 filter: blur(3px) brightness(20%) !important;
+transition-delay: 500ms;
 }
 
 .work-section {
