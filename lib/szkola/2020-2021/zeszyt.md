@@ -27,3 +27,5 @@ Międzynarodowa organizacja normalizacyjna ISO opracowała model łączenia tkz.
 | Warstwa Sieciowa | | |
 | Warstwa Łącza Danych | | |
 | Warstwa Fizyczna | | |
+
+Dane wytworzone przez użytkownika utrzymoją w warstwie użytkownika odpowiedni format, następnie są przesyłane do warstwy transportu następnie otrzymóją odpowiedni port zezwalający na połączenie sesji. Np. Dla strony internetowej będzie to port `80`. Dane zostają podzielone na segmenty i wysłane do następnej warstwy. W warstwie internetu są tworzone pakiety do których danych nadaje się adresy komputera i odbiorcy - odpowiada za to protokół IP. Tak przygotowana informacja jest przekazywana do warstwy interfejsu sieciowego. W tej warstwie dane są dzielone na ramki i przygotowywane do transportu. Określa się fizyczny adres karty sieciowej (MAC) oraz koduje się dane do postaci Bitowej (W postaci `0` i `1`) Cały opisany proces enkapsulacją. Na komputerze docelowym informacja jest rozkodowywana i przechodzi poszczególne warstwy w odwrotnej kolejności. Taki proces nazywa się dekapsulacją.
