@@ -9,3 +9,7 @@
 | 5. Potknięcie się | Patrzenie pod nogi |
 | 6. Uderzenie o wyposażenie biurka | Uważanie aby o nic nie uderzyć |
 | 7. Pożar | Posiadanie gaśnicy w pobliżu |
+
+
+### Lekcja 
+> #### Temat: Podstawy komunikacjii w sieci
