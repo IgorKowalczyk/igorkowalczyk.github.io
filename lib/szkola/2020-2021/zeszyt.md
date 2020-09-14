@@ -12,4 +12,6 @@
 
 
 ### Lekcja 
-> #### Temat: Podstawy komunikacjii w sieci
+> #### Temat: Podstawy komunikacji w sieci
+
+Wszystko co wiąże się z transmisją danych w siecii komputerowej wymaga wstępnego stworzenia schematów i wypracowania standardów komunikacjii oraz przesyłania oraz przesyłania prezentacjii danych w sieci. Jednymi z pierwszych standardów porządkujących ruch w sieci są modele komunikacji sieciowej OSI/ISO oraz TCP/IP dzięki tym model można np. otwierać stronę internetową w różnych systemach operacyjnych i na dowolnym urządzeniu. 
