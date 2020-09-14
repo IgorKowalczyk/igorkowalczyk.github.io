@@ -15,3 +15,5 @@
 > #### Temat: Podstawy komunikacji w sieci
 
 Wszystko co wiąże się z transmisją danych w siecii komputerowej wymaga wstępnego stworzenia schematów i wypracowania standardów komunikacjii oraz przesyłania oraz przesyłania prezentacjii danych w sieci. Jednymi z pierwszych standardów porządkujących ruch w sieci są modele komunikacji sieciowej OSI/ISO oraz TCP/IP dzięki tym model można np. otwierać stronę internetową w różnych systemach operacyjnych i na dowolnym urządzeniu. 
+
+Międzynarodowa organizacja normalizacyjna ISO opracowała model łączenia tkz. systemów otwartych OSI złożony z 7 warstw. Każda warstwa opisuje oddzielny etap komunikacjii między 2 komputeramii w sieci. Warstywy wymieniają się jednostkami danych i tworzą narastające zbiory zwane segmętami, ramkami lub pakietami danych. Każda z poszczególnych warstw definiuje również konkretne zadania związane z komunikacją sieciową realizowane przez protokoły i urządzenia sieciowe pracujące na poziomie danej warstwy.
