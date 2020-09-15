@@ -29,3 +29,11 @@ Międzynarodowa organizacja normalizacyjna ISO opracowała model łączenia tkz.
 | Warstwa Fizyczna | | |
 
 Dane wytworzone przez użytkownika utrzymoją w warstwie użytkownika odpowiedni format, następnie są przesyłane do warstwy transportu następnie otrzymóją odpowiedni port zezwalający na połączenie sesji. Np. Dla strony internetowej będzie to port `80`. Dane zostają podzielone na segmenty i wysłane do następnej warstwy. W warstwie internetu są tworzone pakiety do których danych nadaje się adresy komputera i odbiorcy - odpowiada za to protokół IP. Tak przygotowana informacja jest przekazywana do warstwy interfejsu sieciowego. W tej warstwie dane są dzielone na ramki i przygotowywane do transportu. Określa się fizyczny adres karty sieciowej (MAC) oraz koduje się dane do postaci Bitowej (W postaci `0` i `1`) Cały opisany proces enkapsulacją. Na komputerze docelowym informacja jest rozkodowywana i przechodzi poszczególne warstwy w odwrotnej kolejności. Taki proces nazywa się dekapsulacją.
+
+### Lekcja
+> #### Protokoły komunikacjii sieciowej
+
+Protokół komunikacji sieciowej to zbiór regół i procedur które sa stozowane w ramach okreslonego systemu sieciowego przez urzadzenia sieciowe i aplikacje. - `http` to podstawowy protokół wykozystywany do transportu i prezentacji danych w postaci strony internetowej. Obecnie protokół pozwala zarówno na przesyłanie stron w postaci plików jak i umożliwia strumieniowa transmisje danych. Aplikacja obsłógującą ten protokól jest każda przeglądarka internetowa.
+- `https` to protokół umożliwiający przesyłanie szyfrowanych plików stron internetowych. Do szyfrowania używa się protokołu `SSL`.
+- `FTP` to protokół umożliwiający przesyłanie plików pozwala, na pobieranie i wgrywanie plików między użytkownikiem a serwerem oraz na publikowanie plików stron internetowych.
+- Protokół oferujący szyfrowanie danych to `SFTP`
