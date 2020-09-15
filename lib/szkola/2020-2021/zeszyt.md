@@ -37,3 +37,12 @@ Protokół komunikacji sieciowej to zbiór regół i procedur które sa stozowan
 - `https` to protokół umożliwiający przesyłanie szyfrowanych plików stron internetowych. Do szyfrowania używa się protokołu `SSL`.
 - `FTP` to protokół umożliwiający przesyłanie plików pozwala, na pobieranie i wgrywanie plików między użytkownikiem a serwerem oraz na publikowanie plików stron internetowych.
 - Protokół oferujący szyfrowanie danych to `SFTP`
+- `DNS` To protokół pozwalający na nadawanie użytkownikom internetu alfanumerycznych adresów logicznych. Protokół tłumaczy je na odpowiadajacy im adres IP. Dzięki temu użytkownik łatwo zapamięta adres strony nie przejmując się zapisem adresu IP pod którym strona się znajduje.
+
+Nowoczesne technologie oparte na sieci komputerowej które łączą różne urządzenia po to aby swobodnie gromadzić, wymieniać i przetwarzać między sobą dane. Tworzą zintegrowane środowiska zwane "IoT" (Internet of Things). Podstawowym celem IoT jest stworzenie "inteligentnych" przestrzeni takich jak domy, miasta, systemy alarmowe i ostrzegawcze. Chmura obliczeniowa to zasób sieciowy np. przestrzeń na dysku która może zostać udostępniona użytkownikom w celu wykorzystania.
+
+#### Technologie webowe :heart:
+
+`.html` (Hyper Text Markup Language) - to język wykożystywany do tworzenia dokumentów tekstowych interpretowanych przez przeglądarkę.` Obecnie wszystkie technologie webowe :heart: dzieli się na obszary działania:
+- Front-End :heart: - Technologie wykożystujące kod "jawny" wykonywany po stronie przeglądarki np. `.html`, `.css` i `.js`..
+- - Back-End :worry: - Technologie wykożystujące kod "ukryty" wykonywany po stronie serwera.
