@@ -14,9 +14,9 @@
 ### Lekcja 
 > #### Temat: Podstawy komunikacji w sieci
 
-Wszystko co wiąże się z transmisją danych w siecii komputerowej wymaga wstępnego stworzenia schematów i wypracowania standardów komunikacjii oraz przesyłania oraz przesyłania prezentacjii danych w sieci. Jednymi z pierwszych standardów porządkujących ruch w sieci są modele komunikacji sieciowej OSI/ISO oraz TCP/IP dzięki tym model można np. otwierać stronę internetową w różnych systemach operacyjnych i na dowolnym urządzeniu. 
+Wszystko co wiąże się z transmisją danych w sieci komputerowej wymaga wstępnego stworzenia schematów i wypracowania standardów komunikacjii oraz przesyłania oraz przesyłania prezentacji danych w sieci. Jednymi z pierwszych standardów porządkujących ruch w sieci są modele komunikacji sieciowej OSI/ISO oraz TCP/IP dzięki tym model można np. otwierać stronę internetową w różnych systemach operacyjnych i na dowolnym urządzeniu. 
 
-Międzynarodowa organizacja normalizacyjna ISO opracowała model łączenia tkz. systemów otwartych OSI złożony z 7 warstw. Każda warstwa opisuje oddzielny etap komunikacjii między 2 komputeramii w sieci. Warstywy wymieniają się jednostkami danych i tworzą narastające zbiory zwane segmętami, ramkami lub pakietami danych. Każda z poszczególnych warstw definiuje również konkretne zadania związane z komunikacją sieciową realizowane przez protokoły i urządzenia sieciowe pracujące na poziomie danej warstwy.
+Międzynarodowa organizacja komunikacji ISO opracowała model łączenia tkz. systemów otwartych OSI złożony z 7 warstw. Każda warstwa opisuje oddzielny etap komunikacji między 2 komputerami w sieci. Warstywy wymieniają się jednostkami danych i tworzą narastające zbiory zwane segmentami, ramkami lub pakietami danych. Każda z poszczególnych warstw definiuje również konkretne zadania związane z komunikacją sieciową realizowane przez protokoły i urządzenia sieciowe pracujące na poziomie danej warstwy.
 
 | Model ISO/OSI | Model TCP/IP | Protokoły sieciowe
 | :- | :- | :- |
@@ -28,7 +28,7 @@ Międzynarodowa organizacja normalizacyjna ISO opracowała model łączenia tkz.
 | Warstwa Łącza Danych | | |
 | Warstwa Fizyczna | | |
 
-Dane wytworzone przez użytkownika utrzymoją w warstwie użytkownika odpowiedni format, następnie są przesyłane do warstwy transportu następnie otrzymóją odpowiedni port zezwalający na połączenie sesji. Np. Dla strony internetowej będzie to port `80`. Dane zostają podzielone na segmenty i wysłane do następnej warstwy. W warstwie internetu są tworzone pakiety do których danych nadaje się adresy komputera i odbiorcy - odpowiada za to protokół IP. Tak przygotowana informacja jest przekazywana do warstwy interfejsu sieciowego. W tej warstwie dane są dzielone na ramki i przygotowywane do transportu. Określa się fizyczny adres karty sieciowej (MAC) oraz koduje się dane do postaci Bitowej (W postaci `0` i `1`) Cały opisany proces enkapsulacją. Na komputerze docelowym informacja jest rozkodowywana i przechodzi poszczególne warstwy w odwrotnej kolejności. Taki proces nazywa się dekapsulacją.
+Dane wytworzone przez użytkownika utrzymują w warstwie użytkownika odpowiedni format, następnie są przesyłane do warstwy transportu następnie otrzymóją odpowiedni port zezwalający na połączenie sesji. Np. Dla strony internetowej będzie to port `80`. Dane zostają podzielone na segmenty i wysłane do następnej warstwy. W warstwie internetu są tworzone pakiety do których danych nadaje się adresy komputera i odbiorcy - odpowiada za to protokół IP. Tak przygotowana informacja jest przekazywana do warstwy interfejsu sieciowego. W tej warstwie dane są dzielone na ramki i przygotowywane do transportu. Określa się fizyczny adres karty sieciowej (MAC) oraz koduje się dane do postaci Bitowej (W postaci `0` i `1`) Cały opisany proces enkapsulacją. Na komputerze docelowym informacja jest rozkodowywana i przechodzi poszczególne warstwy w odwrotnej kolejności. Taki proces nazywa się dekapsulacją.
 
 ### Lekcja
 > #### Protokoły komunikacjii sieciowej
