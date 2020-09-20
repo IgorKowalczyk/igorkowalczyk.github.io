@@ -1,3 +1,8 @@
+# Tworzenie stron i aplikacji internetowych
+
+### Lekcja
+> #### Temat: Bezpieczeństwo i higiena pracy na stanowisku komputerowym
+
 ### Zagrożenia w zawodzie programisty
 
 | Zagrożenie | Sposoby Zabezpieczenia |
