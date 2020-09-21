@@ -50,3 +50,7 @@ Nowoczesne technologie oparte na sieci komputerowej które łączą różne urz�
 '.html' (Hyper Text Markup Language) - to język wykorzystywany do tworzenia dokumentów tekstowych interpretowanych przez przeglądarkę.' Obecnie wszystkie technologie webowe :heart: dzieli się na obszary działania:
 - Front-End :heart: - Technologie wykorzystujące kod "jawny" wykonywany po stronie przeglądarki np. '.html', '.css' i '.js'..
 - Back-End :worry: - Technologie wykorzystujące kod "ukryty" wykonywany po stronie serwera.
+
+
+### Lekcja
+> #### Struktura dokumentów `HTML`
