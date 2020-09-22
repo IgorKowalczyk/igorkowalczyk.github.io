@@ -54,3 +54,6 @@ Nowoczesne technologie oparte na sieci komputerowej które łączą różne urz�
 
 ### Lekcja
 > #### Struktura dokumentów `HTML`
+
+### Lekcja
+> #### Temat: Podstawowe znaczniki i atrybuty w języku `HTML` - Formatowanie tekstu
