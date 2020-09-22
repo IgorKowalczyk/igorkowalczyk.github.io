@@ -1,2 +1,2 @@
 ### Lekcja
-> #### Temat:-
+> #### Temat: Instrukcja `switch case default`
