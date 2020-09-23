@@ -58,7 +58,8 @@ exclude:
 # Contact form
 form:
  enabled: "true"
- action: "https://api-igorkowalczyk-portfolio.herokuapp.com"
+ # action: "https://api-igorkowalczyk-portfolio.herokuapp.com"
+ action: "https://formspree.io/mlepknva"
  img: "/lib/pics/special/email.svg"
  img-enabled: "false"
 
