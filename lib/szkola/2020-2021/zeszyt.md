@@ -57,3 +57,6 @@ Nowoczesne technologie oparte na sieci komputerowej które łączą różne urz�
 
 ### Lekcja
 > #### Temat: Podstawowe znaczniki i atrybuty w języku `HTML` - Formatowanie tekstu
+
+### Lekcja
+> #### Akapity i nagłówki tekstu
