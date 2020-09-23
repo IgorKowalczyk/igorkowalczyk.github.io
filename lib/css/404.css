@@ -48,8 +48,10 @@ layout: "null"
 }
 
 @font-face {
-font-family: Roboto-Thin;
-src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
+font-family: "Roboto-Thin";
+font-style: normal;
+font-weight: 100;
+src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf");
 }
 
 *, *:before, *:after {
