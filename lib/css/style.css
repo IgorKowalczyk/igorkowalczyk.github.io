@@ -75,7 +75,7 @@ layout: "null"
 
 .no-js {
 background: #f44336;
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 color: #fff;
 text-align: center;
 display: -ms-flexbox;
@@ -97,8 +97,10 @@ z-index: 999999;
 }
 
 @font-face {
-font-family: 'Roboto-Thin';
-src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
+font-family: "Roboto-Thin";
+font-style: normal;
+font-weight: 100;
+src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf");
 }
 
 * {
@@ -113,7 +115,7 @@ overflow-x: hidden;
 animation: fade 0.5s ease-in;
 line-height: 1.4;
 background-color: var(--white);
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 -webkit-font-smoothing: antialiased;
 transition: 500ms all;
 }
@@ -199,7 +201,7 @@ width: 18px;
 
 .nav .menu-icon .navicon:after, .nav .menu-icon .navicon:before {
 background-color: var(--333);
-content: '';
+content: "";
 display: block;
 height: 100%;
 position: absolute;
@@ -954,7 +956,7 @@ color: var(--placeholder);
 transition: 300ms all;
 -moz-user-select: none;
 user-select: none;
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 }
 
 :-moz-placeholder {
@@ -963,7 +965,7 @@ color: var(--placeholder);
 transition: 300ms all;
 -moz-user-select: none;
 user-select: none;
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 }
 
 ::-moz-placeholder {
@@ -972,7 +974,7 @@ color: var(--placeholder);
 transition: 300ms all;
 -moz-user-select: none;
 user-select: none;
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 }
 
 :-ms-input-placeholder {
@@ -1005,7 +1007,7 @@ transition: 300ms all;
 opacity: 0;
 -ms-transition: 300ms all;
 transition: 300ms all;
-font-family: 'Roboto-Thin';
+font-family: "Roboto-Thin";
 }
 
 fieldset {
