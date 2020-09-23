@@ -22,6 +22,6 @@ layout: "404"
 <p>(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}</p><p>This site uses cookies.</p>
 </footer>
 </main>
-<script src="{{ site.baseurl }}/lib/js/404.min.js"></script>
+<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/404.min.js"></script>
 </body>
 </html>
