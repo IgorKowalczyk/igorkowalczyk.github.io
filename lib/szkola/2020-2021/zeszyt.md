@@ -54,12 +54,147 @@ Nowoczesne technologie oparte na sieci komputerowej które łączą różne urz�
 
 ### Lekcja
 > #### Struktura dokumentów `HTML`
-
+ 
+ ```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+...
+</head>
+<body>
+...
+</body>
+</html>
+```
 ### Lekcja
 > #### Temat: Podstawowe znaczniki i atrybuty w języku `HTML` - Formatowanie tekstu
 
+#### HTML
+```html
+<p class="b">Pogrubiony</p>
+<p class="i">Pochylony</p> 
+<p class="u">Podkreślony</p>
+<p class="s">Przekreślony</p>
+<p>Index <sub>Dolny</sub></p>
+<p>Index <sup>Górny</sup></p>
+ ```
+ #### CSS
+ ```css
+ /* Pogrubienie */
+.b {
+font-weight: bold;
+}
+
+/* Pochylenie */
+.i {
+font-style: italic;
+}
+
+/* Podkreślenie */
+.u {
+text-decoration: underline;
+}
+
+/* Przekreślenie */
+.s {
+text-decoration: line-through;
+}
+ ```
+#### HTML
+ ```html
+  <div class="div"> 
+   <ol class="i div"> 
+    <li>Punkt 1</li> 
+    <ul class="lower-latin"> 
+     <li>Punkt 1.1</li> 
+     <li>Punkt 1.2</li> 
+     <li>Punkt 1.3</li> 
+     <ol class="lower-roman"> 
+      <li>Punkt 1.3.1</li> 
+      <li>Punkt 1.3.2</li> 
+     </ol> 
+    </ul> 
+    <li>Punkt 2</li> 
+    <li>Punkt 3</li> 
+    <ol class="lower-latin"> 
+     <li>Punkt 3.1</li> 
+     <ol class="lower-roman"> 
+      <li>Punkt 3.1</li> 
+      <ol class="decimal"> 
+       <li>Punkt 3.1</li> 
+      </ol> 
+     </ol> 
+    </ol> 
+   </ol> 
+  </div> 
+  <div class="def"> 
+   <p>Testowa definicja</p> 
+   <p class="opi">Opis definicji</p> 
+  </div> 
+  <ol> 
+   <li class="upper-roman">Logika</li> 
+   <ul> 
+    <li class="circle">Teoria Modeli</li> 
+   </ul> 
+   <ul> 
+    <li class="circle">Teoria Dowodu</li> 
+   </ul> 
+   <li class="upper-roman">Algebra</li> 
+   <ul> 
+    <li class="square">Teoria Liczb</li> 
+   </ul> 
+   <div class="def"> 
+    <p>Co to jest liczba pierwsza?</p> 
+    <p class="opi">... Definicja ...</p> 
+   </div> 
+   <li class="square">Teoria ciał i wielomianów</li> 
+   <ul> 
+    <li class="square">Teria Grup</li> 
+   </ul> 
+   <li class="upper-roman">Analiza</li> 
+   <ul> 
+    <li class="lower-roman">Teoria Funkcji rzeczywistych</li> 
+    <li class="lower-roman">Teoria miary i całkowania</li> 
+    <li class="lower-roman">ównania różniczkowe zwyczajne</li> 
+    <li class="lower-roman">Analiza funkcjonalna</li> 
+   </ul> 
+   <li class="upper-roman">Geometria</li> 
+   <li class="square">Geometria płaszczyzny i przestrzeni</li> 
+   <ul> 
+    <li class="upper-roman">Statystyka</li>
+   </ul> 
+  </ol>  
+```
+
 ### Lekcja
 > #### Akapity i nagłówki tekstu
+ 
+#### HTML
+```html
+<p>Jest to poprawnie sformatowany <span class="b">bardzo ważny tekst</span></p>
+<p>Jest to poprawnie sformatowany <span class="i">wyróżniony tekst</span></p>
+<p>Jest to poprawnie sformatowany <sub>Index Dolny</sub></p>
+<p>Jest to poprawnie sformatowany <sup>Index Górny</sup></p>
+<p>Jest to poprawnie sformatowany <span class="s">tekst przekreślony</span></p>
+<p>Jest to poprawnie sformatowana <span class="i">część definicji</span></p>
+<p>Jest to poprawnie sformatowany <span class="b">tekst pogrubiony</span></p>
+<p>Jest to poprawnie sformatowany <span class="s">tekst podkreślony</span></p>
+<p>Jest to poprawnie sformatowany <span class="i">tekst pochylony</span></p>
+```
 
 ### Lekcja
 > #### Odsyłacze
+
+#### HTML
+```html
+<a href="https://igorkowalczyk.github.io">Test Link</a>
+<a href="mailto:this.email@does.not.exsist">Test Mail</a>
+<a href="C:\path\to\file">Path To File</a>
+```
+
+#### MarkDown
+```
+[Test Link](https://igorkowalczyk.github.io)
+[Test Mail](mailto:this.email@does.not.exsist)
+[Path To File](C:\path\to\file)
+```
