@@ -198,3 +198,13 @@ text-decoration: line-through;
 [Test Mail](mailto:this.email@does.not.exsist)
 [Path To File](C:\path\to\file)
 ```
+
+### Kotwice Tekstu
+<a href="#end" id="top">Koniec</a><br>
+
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, [...]</p>
+
+...
+
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, [...]</p>
+<a href="#top" id="end">Początek</a>
