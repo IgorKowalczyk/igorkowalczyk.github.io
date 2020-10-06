@@ -4,7 +4,7 @@ Portfolio and files bin written on Jekyll
 [![Jekyll](https://github.com/igorkowalczyk/igorkowalczyk.github.io/workflows/Jekyll/badge.svg)](https://igorkowalczyk.github.io)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://igorkowalczyk.github.io/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://discord.gg/f4KtqNB)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://igorkowalczyk.github.io/majobot/server)
 
 # Issues
 If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/igorkwalczyk.github.io/issues)
