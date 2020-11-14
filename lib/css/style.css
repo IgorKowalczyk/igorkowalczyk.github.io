@@ -117,6 +117,7 @@ line-height: 1.4;
 background-color: var(--white);
 font-family: "Roboto-Thin";
 -webkit-font-smoothing: antialiased;
+scroll-behavior: smooth;
 transition: 500ms all;
 }
 
