@@ -13,6 +13,9 @@ work: "Front-End Developer"
 # Contact E-Mail (Public!)
 email: "xxmajonezxx@gmail.com"
 
+# Section E-Mail (Public!)
+section-email: "#contact" # Anchor to contact form
+
 # Your wattpad account (no link) - if you don't have - leave blank
 wattpad: "majonezexe"
 
