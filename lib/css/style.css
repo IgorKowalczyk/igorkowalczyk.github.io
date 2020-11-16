@@ -4,6 +4,7 @@ layout: "null"
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
+--text: #000;
 --primary: #ddd;
 --white: #fff;
 --dark: #0f0f0f;
@@ -39,6 +40,7 @@ layout: "null"
 }
 
 [data-theme=dark] {
+--text: #fff;
 --primary: #ddd;
 --white: #222;
 --dark: #fff;
@@ -106,6 +108,7 @@ src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf");
 * {
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
+scroll-behavior: smooth;
 }
 
 body {
@@ -117,8 +120,9 @@ line-height: 1.4;
 background-color: var(--white);
 font-family: "Roboto-Thin";
 -webkit-font-smoothing: antialiased;
-scroll-behavior: smooth;
 transition: 500ms all;
+text-align: center;
+color: var(--text);
 }
 
 @keyframes fade {
