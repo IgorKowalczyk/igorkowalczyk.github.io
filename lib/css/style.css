@@ -313,6 +313,7 @@ color: var(--link) !important;
 .icon-a:hover svg {
 transform: scale(1.3, 1.3);
 fill: var(--00a3a3);
+stroke: var(--00a3a3);
 }
 
 .icon-a svg {
