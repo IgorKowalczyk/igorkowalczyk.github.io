@@ -1,5 +1,6 @@
 ---
 layout: "default"
+block: "true"
 ---
 
 # Site Info
