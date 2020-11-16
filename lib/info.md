@@ -24,10 +24,10 @@ layout: "default"
 
 ### Pages
 {% for page in site.pages %}
-- {{ page.path }}
+- [{{ page.path }}]({{ page.path }})
 {% endfor %}
 
 ## Static Pages
 {% for file in site.static_files %}
-- {{ file.path }}
+- [{{ file.path }}]({{ file.path }})
 {% endfor %}
