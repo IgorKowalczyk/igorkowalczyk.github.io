@@ -20,7 +20,7 @@ section-email: "#contact" # Anchor to contact form
 wattpad: "majonezexe"
 
 # Your Facebook account (with tag, no link) - if you don't have - leave blank
-# facebook:
+facebook: test
 
 # Your Discord account or server (With tag, link) - if you don't have - leave blank
 discord: "https://discord.gg/bVNNHuQ"
