@@ -10,26 +10,26 @@ section: "Portfolio"
 # Your job
 work: "Front-End Developer"
 
-# Contact E-Mail (Public!)
-email: "xxmajonezxx@gmail.com"
-
 # Section E-Mail (Public!)
 section-email: "#contact" # Anchor to contact form
 
+# Contact E-Mail (Public!)
+email: "xxmajonezxx@gmail.com"
 # Your wattpad account (no link) - if you don't have - leave blank
 wattpad: "majonezexe"
-
 # Your Facebook account (with tag, no link) - if you don't have - leave blank
 facebook: test
-
+# Your Instagram account (no link) - if you don't have - leave blank
+instagram: majonezexe
 # Your Discord account or server (With tag, link) - if you don't have - leave blank
 discord: "https://discord.gg/bVNNHuQ"
-
 # Github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
-
 # Twitter username (no link) - if you don't have - leave blank
 twitter: "@majonezexe"
+# Social Media config:
+social-media:
+ enabled: "true"
 
 # Link to blog - if you don't have - leave blank
 blog: "/blog"
