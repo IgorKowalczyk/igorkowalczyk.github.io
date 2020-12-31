@@ -30,6 +30,10 @@ twitter: "@majonezexe"
 # Social Media config:
 social-media:
  enabled: "true"
+ 
+# SVG Cards is bugged on mobile devices (do not set this option to "true")
+cards:
+ enabled: "false"
 
 # Link to blog - if you don't have - leave blank
 blog: "/blog"
