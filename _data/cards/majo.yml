@@ -1,5 +1,6 @@
 id: "8"
 title: "Majo.exe"
+archived: "false"
 technology: "Node.js"
 description: "An advanced Discord bot"
 url: "/majobot"
