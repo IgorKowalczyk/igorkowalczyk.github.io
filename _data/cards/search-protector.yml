@@ -1,5 +1,6 @@
 id: "7"
 title: "Search Protector"
+archived: "false"
 technology: "JavaScript"
 description: "Search-Protector prevents pages from modifying search result links"
 url: "/search-protector"
