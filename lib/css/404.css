@@ -3,6 +3,9 @@ layout: "null"
 ---
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
+
+/* (c) IGOR KOWALCZYK. All rights reserved. */
+
 :root {
 --svg: #646B8C;
 --game-paddle: #404660;
@@ -51,7 +54,7 @@ layout: "null"
 font-family: "Roboto-Thin";
 font-style: normal;
 font-weight: 100;
-src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf");
+src: url("https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf");
 }
 
 *, *:before, *:after {
@@ -87,8 +90,13 @@ background-color: var(--scrollbar-hover);
 background-color: var(--scrollbar-active);
 }
 
-html, body {
+html {
 height: 100%;
+box-sizing: border-box;
+}
+
+main, body {
+position: relative;
 }
 
 body {
@@ -99,17 +107,9 @@ background-color: var(--background);
 color: var(--text);
 line-height: 1;
 word-break: break-all;
-display: flex;
-flex-direction: column;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
 transition: 500ms all;
-min-height: 100vh;
-display: -webkit-box;
--webkit-box-pack: center;
-justify-content: center;
--webkit-box-align: center;
-align-items: center;
 }
 
 @keyframes fade {
@@ -119,12 +119,6 @@ opacity: 0;
 100% {
 opacity: 1;
 }
-}
-
-footer {
-text-align: center;
-flex-shrink: 0;
-transition: 500ms all;
 }
 
 .no-js {
@@ -162,9 +156,8 @@ width: 100%;
 }
 
 main {
-flex: 1 0 auto;
 align-items: center;
-display: flex;
+height: 100vw;
 }
 
 .message h1 {
@@ -355,6 +348,7 @@ bottom: 0;
 top: 0;
 background: var(--background);
 position: relative;
+margin-top: 50px;
 transition: 300ms all;
 border-radius: 5px;
 box-shadow: inset 0 0 0 1px var(--paper-border);
@@ -405,6 +399,7 @@ background: transparent;
 padding: 10px;
 position: fixed;
 right: 0;
+z-index: 999;
 bottom: 0;
 }
 
@@ -560,4 +555,13 @@ z-index: 2115;
 
 .easteregg.hide-game .letter .body {
 opacity: 1;
+}
+
+footer {
+position: absolute !important;
+bottom: 0;
+left: 0;
+right: 0;
+transition: 500ms all;
+text-align: center;
 }
