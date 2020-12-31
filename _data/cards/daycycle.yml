@@ -1,5 +1,6 @@
 id: "4"
 title: "Day Cycle"
+archived: "false"
 technology: "Front-End"
 description: "Day cycle animation written in CSS and SVG"
 url: "/daycycle"
