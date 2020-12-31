@@ -1,5 +1,6 @@
 id: "1"
 title: "Blog"
+archived: "false"
 technology: "Front-End & Ruby"
 description: "Blog written in Jekyll with power of JavaScript"
 url: "/blog"
