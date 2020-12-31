@@ -1,5 +1,6 @@
 id: "2"
 title: "Color Picker"
+archived: "false"
 technology: "Front-End"
 description: "A advanced web color picker written in JavaScript"
 url: "/color-picker"
