@@ -94,6 +94,7 @@ box-sizing: border-box;
 
 main, body {
 position: relative;
+height: 100%;
 }
 
 body {
@@ -154,7 +155,6 @@ width: 100%;
 
 main {
 align-items: center;
-height: 100vw;
 }
 
 .message h1 {
