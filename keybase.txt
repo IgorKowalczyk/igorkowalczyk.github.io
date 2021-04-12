@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/igorkowalczyk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://igorkowalczyk.github.io
+  * I am igorkowalczyk (https://keybase.io/igorkowalczyk) on keybase.
+  * I have a public key with fingerprint 3ED8 9851 8B6F C5BD 386C  FCE3 154D F1E9 DBC2 A078
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01010622793fd7ce95a782021cf270ca980c1626efe1f1fa2c10392c19f473a1fe640a",
+      "fingerprint": "3ed898518b6fc5bd386cfce3154df1e9dbc2a078",
+      "host": "keybase.io",
+      "key_id": "154df1e9dbc2a078",
+      "kid": "01010622793fd7ce95a782021cf270ca980c1626efe1f1fa2c10392c19f473a1fe640a",
+      "uid": "7bd2d829db57e609482d9c241f275119",
+      "username": "igorkowalczyk"
+    },
+    "service": {
+      "hostname": "igorkowalczyk.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1618225494,
+  "expire_in": 157680000,
+  "prev": "a2376f123d7209b1fc84d8e21e6d96347f05728eac2e5c6f5735a4ed7756b15e",
+  "seqno": 3,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUm1sFEUYvrMc1SKkIBRMpNXVYGhr3Zn9Pg0mKpC0tQpIj1Ka6+7O7N3mjtvt
+7l4/PMof29TztIJVWk1DCA3RWmIIRspXbVNztUjqJ1YDWmMQCmhbj+ifFtDZKv/4
+6Uwyk3nneZ73ed+8exZneXK8K57LXL0wfKDRe/aq4ql11sYTlGKgJsqfoCJ4/sJR
+hG0nGNER5adoQDYPoSAxGhJULHGyIEIaAlWDAq3KkkirgIc81jDQgCZDFdCMRE5J
+YwVGBhrmWVqmiilNj4WwZVp6zCGyDEaiJHJAVHhN5RTEiLyqqZgBHIs0gCWkqFCm
+BZEQw4btMog5RbZxiW6QGHkE5+3dAf8/+47PywkKgkiEJA8nYJ6WWBEiSYUsIGoc
+AJILtLEVk3digtZDhhUxGuSo+lJThGoupshXva5it7tuOXeClYR0JxxX/q3PtAzH
+UI0oAYUdx7T9rojTZLqsBqwE/9MLKnoMkb4SRj22bN2IUX5AkKqjuwkAD0QIOVZi
+iyncaOoWDuoughN4kSYr7CbC9URThozAawAySIC0pABNFVkkYggwjySeYQWN5gQo
+YlmFmFN5jRMYTmYxEgSOVwCHKbfEuphB+RniUw4RSVsPxWQnbmGqOSfp/WiBx5vj
+WZ330IJ1P3RtShnpATF64+LtWfTd5Q6iJ+ee3NuRrT8u+ntTeYbD5dG4PMUumhl/
+e7rSPlO0NLud+cvTe19p/7n407mBt9KzIxOdVaOnIn2B9uVtYXry9KUnls5VrB94
+qvVI3aXrx1+uKigfm0mmWpUGOrco0+/rSWnDA+2DjXUfXz/2U3ww8SzrrZnNB6e3
+L2sJr77/SOBifsGhDx5f3DX98OdfDdYwXU0zS7JrA52Hiw/qe33bfvvT+2vy5Ox3
+nbD3BXOu4nf+lbGadV+s33+raLz1tXTH9yefOb6520HWN2vMyuqu/Kx4GwLj+woS
+3dsndxyrD4wtWXUz/Qg9t3lVoa+i9Ci1e3TN2tZ7hwZ23Tg8sqXsbNVGX3Ko73II
+JU+945MTl1eCK/YyMa8aJF7V7r7Wk4afZJ85MLK1PatsV2/zoZJPp85j3/7Co+ep
+HSe+XTi5pSWxfOfNvuro1ET37uGVK1J/lH759YXnNxx8f7DsTfPavv6fb0182IFT
+D3Kvt41ueGzojXOPespbMt6NV8y8d3tqjc/46cx7lQsLt42d2PvLkx0vPvAP
+=nPK9
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/igorkowalczyk
+
+==================================================================
