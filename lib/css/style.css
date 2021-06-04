@@ -19,8 +19,7 @@ layout: "null"
  --color-888: #888;
  --switch-slider: #888;
  --f4f4f4: #f4f4f4;
- --00a3a3: #00a3a3;
- --333: #333;
+ --darkgrey: #333;
  --border: #212121;
  --button: rgba(227, 227, 227, 0.8);
  --button-hover: rgba(227, 227, 227, 0.5);
@@ -55,8 +54,7 @@ layout: "null"
  --color-888: #000;
  --switch-slider: #fff;
  --f4f4f4: #4a4a4a;
- --00a3a3: #fff;
- --333: #fff;
+ --darkgrey: #fff;
  --border: #fff;
  --button: #404040;
  --button-hover: #4a4a4a;
@@ -197,7 +195,7 @@ body {
 }
 
 .nav .menu-icon .navicon {
- background-color: var(--333);
+ background-color: var(--darkgrey);
  display: block;
  height: 2px;
  position: relative;
@@ -207,7 +205,7 @@ body {
 
 .nav .menu-icon .navicon:after,
 .nav .menu-icon .navicon:before {
- background-color: var(--333);
+ background-color: var(--darkgrey);
  content: "";
  display: block;
  height: 100%;
@@ -297,8 +295,8 @@ h3 a:hover,
 header h1:hover,
 main a:hover,
 main a:hover svg {
- color: var(--00a3a3) !important;
- fill: var(--00a3a3);
+ color: var(--aqua) !important;
+ fill: var(--aqua);
  transition: 0.5s;
 }
 
@@ -306,7 +304,7 @@ a {
  position: relative;
  color: var(--link) !important;
  text-decoration: none;
- background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
+ background-image: linear-gradient(var(--aqua), var(--aqua));
  background-position: 50% 100%;
  background-repeat: no-repeat;
  background-size: 0 2px;
@@ -323,8 +321,8 @@ nav a:hover {
 
 .icon-a:hover svg {
  transform: scale(1.3, 1.3);
- fill: var(--00a3a3);
- stroke: var(--00a3a3);
+ fill: var(--aqua);
+ stroke: var(--aqua);
 }
 
 .icon-a svg {
@@ -924,7 +922,7 @@ footer {
 .contact-form-title {
  display: block;
  font-size: 24px;
- color: var(--333);
+ color: var(--darkgrey);
  line-height: 1.2;
  text-align: left;
  grid-area: title / title;
@@ -947,7 +945,7 @@ textarea {
 }
 
 label {
- color: var(--333);
+ color: var(--darkgrey);
  transition: 500ms all;
 }
 
@@ -1065,8 +1063,8 @@ fieldset {
 }
 
 .contact-sendsucceeded {
- border: 2px solid var(--333);
- color: var(--333);
+ border: 2px solid var(--darkgrey);
+ color: var(--darkgrey);
 }
 
 .error {
