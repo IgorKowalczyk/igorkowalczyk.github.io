@@ -71,19 +71,6 @@ exclude:
  - Gemfile.lock
  - lib/szkola
 
-# Jekyll plugins
-plugins:
- - jekyll-minifier
-
-assets:
- external:
-  uglifier:
-   harmony: true
-
-jekyll-minifier:
- exclude: "sitemap.xml"
- compress_json: false
-
 # Contact form
 form:
  enabled: "true"
