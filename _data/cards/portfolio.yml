@@ -1,8 +1,8 @@
-id: "3"
+id: "2"
 title: "Portfolio"
-technology: "Front-End"
+technology: "Jekyll & CSS"
 archived: "false"
-description: "Portfolio written in Jekyll (Ruby), CSS and power of JS"
+description: "Portfolio written in Jekyll (Ruby) and CSS
 git: "igorkowalczyk.github.io"
 background: "/lib/pics/portfolio.jpg"
 background_data: "/lib/pics/portfolio-data.jpg"
