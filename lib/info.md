@@ -25,10 +25,10 @@ block: "true"
 
 ### Pages
 {% for page in site.pages %}
-- [{{ page.path }}]({{ page.path }})
+- [{{ site.url || site.host }}{{ page.path }}]({{ page.path }})
 {% endfor %}
 
 ## Static Pages
 {% for file in site.static_files %}
-- [{{ file.path }}]({{ file.path }})
+- [{{ site.url || site.host }}{{ file.path }}]({{ file.path }})
 {% endfor %}

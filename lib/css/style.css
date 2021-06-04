@@ -76,7 +76,7 @@ layout: "null"
 
 .no-js {
  background: #f44336;
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
  color: #fff;
  text-align: center;
  display: -ms-flexbox;
@@ -95,13 +95,6 @@ layout: "null"
  right: 0;
  bottom: 0;
  z-index: 999999;
-}
-
-@font-face {
- font-family: "Roboto-Thin";
- font-style: normal;
- font-weight: 100;
- src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.ttf");
 }
 
 @font-face {
@@ -402,7 +395,6 @@ nav a:hover {
  font-size: 54px;
  margin-bottom: 0.3em;
  transition: 500ms all;
- font-family: "Poppins";
  color: #fff;
 }
 
@@ -982,7 +974,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
 }
 
 :-moz-placeholder {
@@ -991,7 +983,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
 }
 
 ::-moz-placeholder {
@@ -1000,7 +992,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
 }
 
 :-ms-input-placeholder {
@@ -1033,7 +1025,7 @@ input {
  opacity: 0;
  -ms-transition: 300ms all;
  transition: 300ms all;
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
 }
 
 fieldset {

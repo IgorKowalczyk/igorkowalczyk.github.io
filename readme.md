@@ -6,11 +6,19 @@ My portfolio written on Jekyll and CSS
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://igorkowalczyk.github.io/majobot/server)
 
+### Features
+ - ⚙️ Fully customizable
+ - 🌆 Light/Dark theme
+ - 📝 Build-in contact form
+ - 🔍 SEO
+ - 📚 Projects cards
+ - 💯 Social media support
+
 ### Development
 1. Fill `_config.yml` with your values
     * For form link go to [Formspree](https://formspree.io) create new site and get your endpoint link
     * For site verification token go to [Google Search Console](https://search.google.com/search-console) and get your `html tag` key.
-2. Add your projects to `_data/cards`
+2. Add your projects with `.yml` extension to `_data/cards` (Max `10` cards!)
      * Project file syntax:
 ```
 id: "card id (unique, the position on the site)"
