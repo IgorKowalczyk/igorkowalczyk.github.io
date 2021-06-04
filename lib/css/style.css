@@ -115,7 +115,7 @@ body {
  animation: fade 0.5s ease-in;
  line-height: 1.4;
  background-color: var(--white);
- font-family: "Roboto-Thin";
+ font-family: "Poppins";
  -webkit-font-smoothing: antialiased;
  transition: 500ms all;
  text-align: center;
