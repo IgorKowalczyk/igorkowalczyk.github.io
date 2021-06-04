@@ -48,7 +48,7 @@ layout: "null"
  --grey: rgb(233, 233, 233);
  --shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
  --box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.08);
- --aqua: #00a3a3;
+ --aqua: #fff;
  --transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
  --gradient: linear-gradient(73deg, rgba(75, 45, 176, 1), hsl(257, 53%, 56%));
  --color-888: #000;
@@ -348,12 +348,7 @@ nav a:hover {
  background-attachment: fixed;
  background-position: center;
  /* background-image: url(/lib/pics/background.jpg); */
- background-image: radial-gradient(
-   circle,
-   rgba(15, 14, 22, 0.2) 74%,
-   rgba(0, 0, -1, 0.2) 100%
-  ),
-  url(/lib/pics/background.jpg);
+ background-image: radial-gradient(circle, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0.43) 67%), url(/lib/pics/background.jpg);
  width: 100%;
  height: 100vh;
  color: var(--light);

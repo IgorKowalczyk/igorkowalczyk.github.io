@@ -24,13 +24,13 @@ instagram: majonezexe
 # Your Discord account or server (With tag, link) - if you don't have - leave blank
 discord: "https://discord.gg/bVNNHuQ"
 # Github username (no link) - if you don't have - leave blank
-github_username:  "igorkowalczyk"
+github_username: "igorkowalczyk"
 # Twitter username (no link) - if you don't have - leave blank
 twitter: "@majonezexe"
 # Social Media config:
 social-media:
  enabled: "true"
- 
+
 # SVG Cards is bugged on mobile devices (do not set this option to "true")
 cards:
  enabled: "false"
@@ -71,6 +71,14 @@ exclude:
  - Gemfile.lock
  - lib/szkola
 
+# Jekyll plugins
+plugins:
+ - jekyll-minifier
+
+jekyll-minifier:
+ exclude: "sitemap.xml"
+ compress_json: false
+ 
 # Contact form
 form:
  enabled: "true"
