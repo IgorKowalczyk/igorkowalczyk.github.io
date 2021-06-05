@@ -1112,6 +1112,10 @@ fieldset {
  vertical-align: -0.125em;
 }
 
+.section-button {
+ fill: var(--text) !important;
+}
+
 @media (max-width: 1200px) {
  .contact-pic {
   width: 33.5%;
