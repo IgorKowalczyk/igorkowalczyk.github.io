@@ -2,6 +2,6 @@
  "trailingComma": "es5",
  "tabWidth": 1,
  "semi": false,
- "printWidth": 200,
+ "printWidth": 2000,
  "singleQuote": false
 }

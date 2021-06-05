@@ -13,16 +13,8 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}" />
 <meta property="og:url" content="{{ site.url || site.host }}{{ page.url | remove: ".html" }}">
 <meta property="og:site_name" content="{{ site.name }}" />
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description || "No Description" }}{% endif %}"> {% if page.image %}<meta
- property="og:image"
- content="{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}"
-/>{% endif %} {% if page.image %<meta name="twitter:image" content="{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}" />{% else %}<meta
- name="twitter:image"
- content="{{ site.url || site.host }}{{ site.baseurl }}/lib/favicon/favicon.jpg"
-/>{% endif %}
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description || "No Description" }}{% endif %}"> {% if page.image %}<meta property="og:image" content="{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}" />{% endif %} {% if page.image %<meta name="twitter:image" content="{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}" />{% else %}<meta name="twitter:image" content="{{ site.url || site.host }}{{ site.baseurl }}/lib/favicon/favicon.jpg" />{% endif %}
 <meta name="twitter:card" content="summary" />
-{% if site.twitter %}<meta name="twitter:site" content="{{ site.twitter }}" />{% endif %} {% if site.twitter %}<meta name="twitter:creator" content="{{ site.twitter }}" />{% endif %} <meta
-name="twitter:url" content="{{ site.url || site.host }}{{ page.url | remove: ".html" }}">
+{% if site.twitter %}<meta name="twitter:site" content="{{ site.twitter }}" />{% endif %} {% if site.twitter %}<meta name="twitter:creator" content="{{ site.twitter }}" />{% endif %} <meta name="twitter:url" content="{{ site.url || site.host }}{{ page.url | remove: ".html" }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}" />
-{% if page.description %} <meta name="twitter:description" content="{{ page.description || "No Description" }}"> {% else %} <meta name="twitter:description" content="{{ site.description || "No
-Description" }}"> {% endif %}
+{% if page.description %} <meta name="twitter:description" content="{{ page.description || "No Description" }}"> {% else %} <meta name="twitter:description" content="{{ site.description || "No Description" }}"> {% endif %}
