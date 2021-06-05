@@ -1,12 +1,13 @@
 ---
 layout: 'default'
 block: 'true'
+permalink: 'page-info'
 ---
 
 # Site Info
 
 - Path: {{ page.path }}
-- Url: {{ page.url }}
+- URL: {{ page.url }}
 
 ### Time
 
@@ -18,24 +19,16 @@ block: 'true'
 - String: {{ site.time | date_to_string }}
 - ISO 8601: {{ site.time | date_to_xmlschema }}
 
-#### Page Time
-
-- Time: {{ page.time }}
-- Long Format: {{ page.time | date_to_long_string }}
-- RFC-822: {{ page.time | date_to_rfc822 }}
-- String: {{ page.time | date_to_string }}
-- ISO 8601: {{ page.time | date_to_xmlschema }}
-
 ### Pages
 
 {% for page in site.pages %}
 
-- [{{ site.url || site.host }}{{ page.path }}]({{ page.path }})
+- [{{ site.url || site.host }}/{{ page.path }}]({{ site.url || site.host }}/{{ page.path }})
   {% endfor %}
 
 ## Static Pages
 
 {% for file in site.static_files %}
 
-- [{{ site.url || site.host }}{{ file.path }}]({{ file.path }})
+- [{{ site.url || site.host }}{{ file.path }}]({{ site.url || site.host }}{{ file.path }})
   {% endfor %}

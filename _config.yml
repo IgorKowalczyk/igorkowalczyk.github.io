@@ -31,7 +31,7 @@ twitter: "@majonezexe"
 social-media:
  enabled: "true"
 
-# SVG Cards is bugged on mobile devices (do not set this option to "true")
+# SVG Cards are bugged on mobile devices (for better do not set this option to "true")
 cards:
  enabled: "false"
 
