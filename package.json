@@ -1,0 +1,24 @@
+{
+ "name": "igorkowalczyk-portfolio",
+ "version": "0.0.3",
+ "description": "My personal portfolio",
+ "scripts": {
+  "dev": "jekyll serve --livereload",
+  "format": "prettier --write . --ignore-unknown",
+  "format:check": "prettier --check .",
+  "serve": "bundle exec jekyll serve"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
+ },
+ "author": "Igor Kowalczyk",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
+ },
+ "homepage": "https://igorkowalczyk.github.io",
+ "devDependencies": {
+  "prettier": "^2.0.5"
+ }
+}

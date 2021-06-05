@@ -1,5 +1,5 @@
 ---
-layout: "null"
+layout: 'null'
 ---
 
 :root {
@@ -37,7 +37,7 @@ layout: "null"
  --placeholder: #333;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
  --text: #fff;
  --primary: #ddd;
  --white: #222;
@@ -74,7 +74,7 @@ layout: "null"
 
 .no-js {
  background: #f44336;
- font-family: "Poppins";
+ font-family: 'Poppins';
  color: #fff;
  text-align: center;
  display: -ms-flexbox;
@@ -96,10 +96,10 @@ layout: "null"
 }
 
 @font-face {
- font-family: "Poppins";
+ font-family: 'Poppins';
  font-style: normal;
  font-weight: 200;
- src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf");
+ src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf');
 }
 
 * {
@@ -115,7 +115,7 @@ body {
  animation: fade 0.5s ease-in;
  line-height: 1.4;
  background-color: var(--white);
- font-family: "Poppins";
+ font-family: 'Poppins';
  -webkit-font-smoothing: antialiased;
  transition: 500ms all;
  text-align: center;
@@ -206,7 +206,7 @@ body {
 .nav .menu-icon .navicon:after,
 .nav .menu-icon .navicon:before {
  background-color: var(--darkgrey);
- content: "";
+ content: '';
  display: block;
  height: 100%;
  position: absolute;
@@ -348,7 +348,12 @@ nav a:hover {
  background-attachment: fixed;
  background-position: center;
  /* background-image: url(/lib/pics/background.jpg); */
- background-image: radial-gradient(circle, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0.43) 67%), url(/lib/pics/background.jpg);
+ background-image: radial-gradient(
+   circle,
+   rgba(0, 0, 0, 0.57) 0%,
+   rgba(0, 0, 0, 0.43) 67%
+  ),
+  url(/lib/pics/background.jpg);
  width: 100%;
  height: 100vh;
  color: var(--light);
@@ -431,16 +436,16 @@ img {
  margin-left: auto;
  padding: 0 1em;
  grid-template-areas:
-  "one one one . ."
-  ". . two two two"
-  "three three three . ."
-  ". . four four four"
-  "five five five . ."
-  ". . six six six"
-  "seven seven seven . ."
-  ". . eight eight eight"
-  "nine nine nine . ."
-  ". . ten ten ten";
+  'one one one . .'
+  '. . two two two'
+  'three three three . .'
+  '. . four four four'
+  'five five five . .'
+  '. . six six six'
+  'seven seven seven . .'
+  '. . eight eight eight'
+  'nine nine nine . .'
+  '. . ten ten ten';
 }
 
 footer {
@@ -458,7 +463,7 @@ footer {
 
 @media screen and (max-width: 799px) {
  .work-grid {
-  grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
+  grid-template-areas: 'one' 'two' 'three' 'four' 'five' 'six' 'seven' 'eight' 'nine' 'ten';
   align-items: center;
   justify-content: center;
   grid-gap: 6rem;
@@ -484,19 +489,19 @@ footer {
   transform: translateY(0);
   opacity: 1;
  }
- .card[data-effect="blur"]:hover .card-image img {
+ .card[data-effect='blur']:hover .card-image img {
   -webkit-filter: blur(50%);
   filter: blur(50%);
   filter: brightness(20%);
  }
- .card[data-effect="blur"] .card-image img {
+ .card[data-effect='blur'] .card-image img {
   -webkit-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
  }
- .card[data-effect="color"] {
+ .card[data-effect='color'] {
   box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
  }
- .card[data-effect="color"] .card-image img {
+ .card[data-effect='color'] .card-image img {
   filter: brightness(20%);
   -webkit-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
@@ -754,7 +759,7 @@ footer {
  transform: translateY(60%);
  padding: 20px 0;
  grid-template-columns: repeat(2, 1fr);
- grid-template-areas: "link category";
+ grid-template-areas: 'link category';
  opacity: 0;
  -webkit-transition: all 0.5s ease;
  transition: all 0.5s ease;
@@ -790,22 +795,22 @@ footer {
  color: #fff !important;
 }
 
-.card[data-effect="blur"]:hover .card-image img {
+.card[data-effect='blur']:hover .card-image img {
  -webkit-filter: blur(50%);
  filter: blur(50%);
  filter: brightness(20%);
 }
 
-.card[data-effect="blur"] .card-image img {
+.card[data-effect='blur'] .card-image img {
  -webkit-transform: scale(1.3, 1.3);
  transform: scale(1.3, 1.3);
 }
 
-.card[data-effect="color"]:hover {
+.card[data-effect='color']:hover {
  box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
 }
 
-.card[data-effect="color"]:hover .card-image img {
+.card[data-effect='color']:hover .card-image img {
  opacity: 0.8;
  filter: brightness(20%) !important;
  -webkit-transform: scale(1.3, 1.3);
@@ -890,11 +895,11 @@ footer {
  display: grid;
  grid-template-columns: 1fr 1fr;
  grid-template-areas:
-  "title title"
-  "email name"
-  "message message"
-  "error error"
-  ". button";
+  'title title'
+  'email name'
+  'message message'
+  'error error'
+  '. button';
  gap: 10px;
 }
 
@@ -967,7 +972,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Poppins";
+ font-family: 'Poppins';
 }
 
 :-moz-placeholder {
@@ -976,7 +981,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Poppins";
+ font-family: 'Poppins';
 }
 
 ::-moz-placeholder {
@@ -985,7 +990,7 @@ input {
  transition: 300ms all;
  -moz-user-select: none;
  user-select: none;
- font-family: "Poppins";
+ font-family: 'Poppins';
 }
 
 :-ms-input-placeholder {
@@ -1018,7 +1023,7 @@ input {
  opacity: 0;
  -ms-transition: 300ms all;
  transition: 300ms all;
- font-family: "Poppins";
+ font-family: 'Poppins';
 }
 
 fieldset {
@@ -1137,12 +1142,12 @@ fieldset {
 @media (max-width: 780px) {
  .contact-form {
   grid-template-areas:
-   "title title"
-   "email email"
-   "name name"
-   "message message"
-   "error error"
-   ". button";
+   'title title'
+   'email email'
+   'name name'
+   'message message'
+   'error error'
+   '. button';
   width: 100%;
  }
  input,
@@ -1251,7 +1256,7 @@ fieldset {
 .slider-switch:before {
  background-color: var(--switch-slider);
  bottom: 4px;
- content: "";
+ content: '';
  height: 26px;
  left: 4px;
  position: absolute;
@@ -1262,7 +1267,7 @@ fieldset {
 .slider:before {
  background-color: var(--color-888);
  bottom: 4px;
- content: "";
+ content: '';
  height: 26px;
  left: 4px;
  position: absolute;

@@ -1,13 +1,13 @@
-id: "1"
-title: "Majo.exe"
-archived: "false"
-technology: "Node.js & Express.js"
-description: "An advanced Discord bot"
-url: "https://majoexe.herokuapp.com"
-git: "majobot"
-background: "/lib/pics/majo.jpg"
-background_data: "/lib/pics/majo-data.jpg"
-background-alt: "Background"
-second-background: "/lib/svg/lines.svg"
-second-background-alt: "Lines"
-effect: "blur"
+id: '1'
+title: 'Majo.exe'
+archived: 'false'
+technology: 'Node.js & Express.js'
+description: 'An advanced Discord bot'
+url: 'https://majoexe.herokuapp.com'
+git: 'majobot'
+background: '/lib/pics/majo.jpg'
+background_data: '/lib/pics/majo-data.jpg'
+background-alt: 'Background'
+second-background: '/lib/svg/lines.svg'
+second-background-alt: 'Lines'
+effect: 'blur'

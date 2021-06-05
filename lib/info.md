@@ -1,6 +1,6 @@
 ---
-layout: "default"
-block: "true"
+layout: 'default'
+block: 'true'
 ---
 
 # Site Info
@@ -9,7 +9,9 @@ block: "true"
 - Url: {{ page.url }}
 
 ### Time
+
 #### Site Time
+
 - Time: {{ site.time }}
 - Long Format: {{ site.time | date_to_long_string }}
 - RFC-822: {{ site.time | date_to_rfc822 }}
@@ -17,6 +19,7 @@ block: "true"
 - ISO 8601: {{ site.time | date_to_xmlschema }}
 
 #### Page Time
+
 - Time: {{ page.time }}
 - Long Format: {{ page.time | date_to_long_string }}
 - RFC-822: {{ page.time | date_to_rfc822 }}
@@ -24,11 +27,15 @@ block: "true"
 - ISO 8601: {{ page.time | date_to_xmlschema }}
 
 ### Pages
+
 {% for page in site.pages %}
+
 - [{{ site.url || site.host }}{{ page.path }}]({{ page.path }})
-{% endfor %}
+  {% endfor %}
 
 ## Static Pages
+
 {% for file in site.static_files %}
+
 - [{{ site.url || site.host }}{{ file.path }}]({{ file.path }})
-{% endfor %}
+  {% endfor %}

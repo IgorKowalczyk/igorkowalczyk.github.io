@@ -1,62 +1,62 @@
 # Main page title
-title: "Igor Kowalczyk (MAJO)"
+title: 'Igor Kowalczyk (MAJO)'
 
 # Your name (or nickname/company name)
-name: "Igor Kowalczyk"
+name: 'Igor Kowalczyk'
 
 # Work section title
-section: "Portfolio"
+section: 'Portfolio'
 
 # Your job
-work: "Front-End Developer"
+work: 'Front-End Developer'
 
 # Section E-Mail (Public!)
-section-email: "#contact" # Anchor to contact form
+section-email: '#contact' # Anchor to contact form
 
 # Contact E-Mail (Public!)
-email: "xxmajonezxx@gmail.com"
+email: 'xxmajonezxx@gmail.com'
 # Your wattpad account (no link) - if you don't have - leave blank
-wattpad: "majonezexe"
+wattpad: 'majonezexe'
 # Your Facebook account (with tag, no link) - if you don't have - leave blank
 # facebook: your-name.0000 (or your-name)
 # Your Instagram account (no link) - if you don't have - leave blank
 instagram: majonezexe
 # Your Discord account or server (With tag, link) - if you don't have - leave blank
-discord: "https://discord.gg/bVNNHuQ"
+discord: 'https://discord.gg/bVNNHuQ'
 # Github username (no link) - if you don't have - leave blank
-github_username: "igorkowalczyk"
+github_username: 'igorkowalczyk'
 # Twitter username (no link) - if you don't have - leave blank
-twitter: "@majonezexe"
+twitter: '@majonezexe'
 # Social Media config:
 social-media:
- enabled: "true"
+ enabled: 'true'
 
 # SVG Cards is bugged on mobile devices (do not set this option to "true")
 cards:
- enabled: "false"
+ enabled: 'false'
 
 # Link to blog - if you don't have - leave blank
-blog: "/blog"
+blog: '/blog'
 # Title of the blog (displays in nav) eg. Blog
-blog-title: "Blog"
+blog-title: 'Blog'
 
 # Description
-description: "Igor Kowalczyk personal website."
+description: 'Igor Kowalczyk personal website.'
 
 # Base url (Not link! Only dir eg. /blog | /portfolio, if you host in the main site - leave blank)
-baseurl: ""
+baseurl: ''
 
 # Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
-mobile: "false"
+mobile: 'false'
 
 # Link to the page (or subpage)
-url: "https://igorkowalczyk.github.io"
+url: 'https://igorkowalczyk.github.io'
 
 # First Launch of the site (displays in footer)
-first-launch: "2019"
+first-launch: '2019'
 
 # Timezone
-timezone: "Europe/Warsaw"
+timezone: 'Europe/Warsaw'
 
 # Encoding (default: utf-8)
 encoding: utf-8
@@ -73,14 +73,14 @@ exclude:
 
 # Contact form
 form:
- enabled: "true"
+ enabled: 'true'
  # action: "https://api-igorkowalczyk-portfolio.herokuapp.com"
- action: "https://formspree.io/mlepknva"
- img: "/lib/pics/special/email.svg"
- img-enabled: "false"
+ action: 'https://formspree.io/mlepknva'
+ img: '/lib/pics/special/email.svg'
+ img-enabled: 'false'
 
 # Tracking id - if you don't have - leave blank
-tracking_id: "UA-174454816-1"
+tracking_id: 'UA-174454816-1'
 
 # Verification ID - if you don't have - leave blank
-verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
+verification: '-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY'

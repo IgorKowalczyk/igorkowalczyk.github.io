@@ -1,0 +1,6 @@
+node_modules
+_site
+*min.css
+*min.js
+*md
+*webmanifest

@@ -1,9 +1,30 @@
 <nav class="nav" role="navigation">
-<span class="logo"><a href="{{ site.url || site.host }}" rel="noopener" aria-label="Open home page">{{ site.name }}</a></span>
-<input class="menu-btn" type="checkbox" id="menu-btn" />
-<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-<ul class="menu">
-{% if site.blog %}<li><a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog">{{ site.blog-title }}</a></li>{% endif %}
-{% if site.github_username %}<li><a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener">Github</a></li>{% endif %}
-</ul>
+ <span class="logo"
+  ><a
+   href="{{ site.url || site.host }}"
+   rel="noopener"
+   aria-label="Open home page"
+   >{{ site.name }}</a
+  ></span
+ >
+ <input class="menu-btn" type="checkbox" id="menu-btn" />
+ <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+ <ul class="menu">
+  {% if site.blog %}
+  <li>
+   <a href="{{ site.blog }}" rel="noopener" aria-label="Open Blog"
+    >{{ site.blog-title }}</a
+   >
+  </li>
+  {% endif %} {% if site.github_username %}
+  <li>
+   <a
+    target="_blank"
+    href="https://github.com/{{ site.github_username }}"
+    rel="noopener"
+    >Github</a
+   >
+  </li>
+  {% endif %}
+ </ul>
 </nav>

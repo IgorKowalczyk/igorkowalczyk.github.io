@@ -1,4 +1,6 @@
 _site
 .jekyll-metadata
+.jekyll-cache
 .DS_Store
 Thumbs.db
+node_modules

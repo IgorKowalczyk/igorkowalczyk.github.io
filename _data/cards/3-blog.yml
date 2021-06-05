@@ -1,13 +1,13 @@
-id: "3"
-title: "Blog"
-archived: "false"
-technology: "Jekyll"
-description: "Blog written on Jekyll & CSS"
-url: "/blog"
-git: "blog"
-background: "/lib/pics/blog.jpg"
-background_data: "/lib/pics/blog-data.jpg"
-background-alt: "Background"
-second-background: "/lib/svg/lines-2.svg"
-second-background-alt: "Lines"
-effect: "color"
+id: '3'
+title: 'Blog'
+archived: 'false'
+technology: 'Jekyll'
+description: 'Blog written on Jekyll & CSS'
+url: '/blog'
+git: 'blog'
+background: '/lib/pics/blog.jpg'
+background_data: '/lib/pics/blog-data.jpg'
+background-alt: 'Background'
+second-background: '/lib/svg/lines-2.svg'
+second-background-alt: 'Lines'
+effect: 'color'

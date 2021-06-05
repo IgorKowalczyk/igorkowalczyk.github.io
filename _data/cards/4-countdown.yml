@@ -1,13 +1,13 @@
-id: "4"
-title: "Countdown.js"
-archived: "false"
-technology: "JavaScript"
-description: "A simple and easy-to-use Javascript countdown script"
-url: "/countdown.js"
-git: "coutndown.js"
-background: "/lib/pics/countdown.jpg"
-background_data: "/lib/pics/countdown-data.jpg"
-background-alt: "Background"
-second-background: "/lib/svg/dots.svg"
-second-background-alt: "Dots"
-effect: "blur"
+id: '4'
+title: 'Countdown.js'
+archived: 'false'
+technology: 'JavaScript'
+description: 'A simple and easy-to-use Javascript countdown script'
+url: '/countdown.js'
+git: 'coutndown.js'
+background: '/lib/pics/countdown.jpg'
+background_data: '/lib/pics/countdown-data.jpg'
+background-alt: 'Background'
+second-background: '/lib/svg/dots.svg'
+second-background-alt: 'Dots'
+effect: 'blur'
