@@ -1,5 +1,5 @@
 ---
-layout: 'null'
+layout: "null"
 ---
 
 :root {
@@ -24,7 +24,7 @@ layout: 'null'
  --button-hover: rgba(227, 227, 227, 0.5);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
  --svg: #fff;
  --game-paddle: #f4f4f4;
  --game-ball: #fff;
@@ -47,10 +47,10 @@ layout: 'null'
 }
 
 @font-face {
- font-family: 'Poppins';
+ font-family: "Poppins";
  font-style: normal;
  font-weight: 200;
- src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf');
+ src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf");
 }
 
 *,
@@ -101,7 +101,7 @@ body {
 
 body {
  -webkit-font-smoothing: antialiased;
- font-family: 'Poppins';
+ font-family: "Poppins";
  font-size: 16px;
  background-color: var(--background);
  color: var(--text);
@@ -123,7 +123,7 @@ body {
 
 .no-js {
  background: #f44336;
- font-family: 'Poppins';
+ font-family: "Poppins";
  color: #fff;
  text-align: center;
  display: -ms-flexbox;
@@ -300,7 +300,7 @@ ul {
 .slider-switch:before {
  background-color: var(--switch-slider);
  bottom: 4px;
- content: '';
+ content: "";
  height: 26px;
  left: 4px;
  position: absolute;
@@ -311,7 +311,7 @@ ul {
 .slider:before {
  background-color: var(--color-888);
  bottom: 4px;
- content: '';
+ content: "";
  height: 26px;
  left: 4px;
  position: absolute;

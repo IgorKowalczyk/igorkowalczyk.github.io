@@ -1,14 +1,14 @@
-id: '6'
-title: 'Search Protector'
-archived: 'false'
-technology: 'JavaScript'
-description: 'Search-Protector is browser extension that prevents pages from modifying search result links (Eg. Google)'
-url: '/search-protector'
-git: 'search-protector'
-background: '/lib/pics/search-protector.jpg'
-background_data: '/lib/pics/search-protector-data.jpg'
-background-alt: 'Background'
-second-background: '/lib/svg/code.svg'
-second-background-alt: 'Code'
-second-background-class: 'code-svg'
-effect: 'blur'
+id: "6"
+title: "Search Protector"
+archived: "false"
+technology: "JavaScript"
+description: "Search-Protector is browser extension that prevents pages from modifying search result links (Eg. Google)"
+url: "/search-protector"
+git: "search-protector"
+background: "/lib/pics/search-protector.jpg"
+background_data: "/lib/pics/search-protector-data.jpg"
+background-alt: "Background"
+second-background: "/lib/svg/code.svg"
+second-background-alt: "Code"
+second-background-class: "code-svg"
+effect: "blur"

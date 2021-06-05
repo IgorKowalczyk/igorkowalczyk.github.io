@@ -1,13 +1,13 @@
-id: '5'
-title: 'Color Picker'
-archived: 'false'
-technology: 'Javascript'
-description: 'A simple color picker written in JavaScript'
-url: '/color-picker'
-git: 'color-picker'
-background: '/lib/pics/color-picker.jpg'
-background_data: '/lib/pics/color-picker-data.jpg'
-background-alt: 'Background'
-second-background: '/lib/svg/dots.svg'
-second-background-alt: 'Dots'
-effect: 'color'
+id: "5"
+title: "Color Picker"
+archived: "false"
+technology: "Javascript"
+description: "A simple color picker written in JavaScript"
+url: "/color-picker"
+git: "color-picker"
+background: "/lib/pics/color-picker.jpg"
+background_data: "/lib/pics/color-picker-data.jpg"
+background-alt: "Background"
+second-background: "/lib/svg/dots.svg"
+second-background-alt: "Dots"
+effect: "color"

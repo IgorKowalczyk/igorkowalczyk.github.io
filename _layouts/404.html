@@ -1,5 +1,5 @@
 ---
-layout: '404'
+layout: "404"
 ---
 
 <!-- (c) IGOR KOWALCZYK. All rights reserved. -->
@@ -8,22 +8,18 @@ layout: '404'
  {% include head.html %}
  <body ondragstart="return false" ondrag="return false">
   <script type="text/javascript">
-   var preload = document.createElement('div')
-   preload.className = 'preloader'
+   var preload = document.createElement("div")
+   preload.className = "preloader"
    preload.innerHTML = '</div><div class="spinner"></div>'
    document.body.appendChild(preload)
-   window.addEventListener('load', function () {
-    preload.className += ' fade'
+   window.addEventListener("load", function () {
+    preload.className += " fade"
     setTimeout(function () {
-     preload.style.display = 'none'
+     preload.style.display = "none"
     }, 500)
    })
   </script>
-  <noscript
-   ><div class="no-js">
-    To view the page please enable javascript in your browser.
-   </div></noscript
-  >
+  <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
   <main>
    {{ content }}
    <footer>
@@ -38,10 +34,7 @@ layout: '404'
       <div class="option-description">Light/Dark Mode</div>
      </li>
     </ul>
-    <p>
-     (c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript
-     >{% endif %}<span class="date"></span> {{ site.name | upcase }}
-    </p>
+    <p>(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}</p>
     <p>This site uses cookies.</p>
    </footer>
   </main>

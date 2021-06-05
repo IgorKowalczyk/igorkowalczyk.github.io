@@ -1,20 +1,6 @@
 <div class="card card-{{ card.id }}" data-effect="{{ card.effect }}">
  <div class="card-image">
-  <img
-   {%
-   if
-   card.background_data
-   %}src="{{ card.background_data }}"
-   class="lazy"
-   data-src="{{ card.background }}"
-   {%
-   else
-   %}src="{{ card.background }}"
-   {%
-   endif
-   %}
-   alt="{{ card.background-alt }}"
-  />
+  <img {% if card.background_data %}src="{{ card.background_data }}" class="lazy" data-src="{{ card.background }}" {% else %}src="{{ card.background }}" {% endif %} alt="{{ card.background-alt }}" />
  </div>
  <div class="card-body">
   <h3 class="card-name">{{ card.title }}</h3>
@@ -26,29 +12,13 @@
    {% if card.url %}
    <a class="link" href="{{ card.url }}">Visit website</a>
    {% endif %} {% if card.git and site.github_username %}
-   <a
-    class="link"
-    target="_blank"
-    rel="noopener"
-    href="https://github.com/{{ site.github_username }}/{{ card.git }}"
-    >Check Code</a
-   >
+   <a class="link" target="_blank" rel="noopener" href="https://github.com/{{ site.github_username }}/{{ card.git }}">Check Code</a>
    {% endif %}
   </p>
  </div>
 </div>
 {% if site.cards.enabled == "true" %}
 <div class="svg-card svg-{{card.id}}">
- <img
-  src="{{ card.second-background }}"
-  alt="{{ card.second-background-alt }}"
-  {%
-  if
-  card.second-background-class
-  %}class="{{ card.second-background-class }}"
-  {%
-  endif
-  %}
- />
+ <img src="{{ card.second-background }}" alt="{{ card.second-background-alt }}" {% if card.second-background-class %}class="{{ card.second-background-class }}" {% endif %} />
 </div>
 {% endif %}

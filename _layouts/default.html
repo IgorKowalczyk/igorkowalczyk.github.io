@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: "default"
 ---
 
 <!DOCTYPE html>
@@ -7,22 +7,18 @@ layout: 'default'
  {% include head.html %}
  <body ondragstart="return false" ondrag="return false">
   <script type="text/javascript">
-   var preload = document.createElement('div')
-   preload.className = 'preloader'
+   var preload = document.createElement("div")
+   preload.className = "preloader"
    preload.innerHTML = '</div><div class="spinner"></div>'
    document.body.appendChild(preload)
-   window.addEventListener('load', function () {
-    preload.className += ' fade'
+   window.addEventListener("load", function () {
+    preload.className += " fade"
     setTimeout(function () {
-     preload.style.display = 'none'
+     preload.style.display = "none"
     }, 500)
    })
   </script>
-  <noscript
-   ><div class="no-js">
-    To view the page please enable javascript in your browser.
-   </div></noscript
-  >
+  <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
   <main>
    {% include nav.html %} {{ content }}
    <footer>
@@ -37,10 +33,7 @@ layout: 'default'
       <div class="option-description">Light/Dark Mode</div>
      </li>
     </ul>
-    <p>
-     (c) <noscript>{{ site.first-launch }}</noscript
-     ><span class="date"></span> {{ site.name | upcase }}
-    </p>
+    <p>(c) <noscript>{{ site.first-launch }}</noscript><span class="date"></span> {{ site.name | upcase }}</p>
     <p>This site uses cookies.</p>
    </footer>
   </main>

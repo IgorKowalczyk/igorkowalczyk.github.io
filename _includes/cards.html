@@ -1,16 +1,8 @@
-{% if site.data.cards %} {% assign cards = site.data.cards %} {% if cards !=
-null %} {% assign cards = site.data.cards %} {% for cardData in cards %} {%
-assign card = cardData[1] %} {% assign id = card.id %} {% assign title =
-card.title %} {% assign technology = card.technology %} {% assign description =
-card.description %} {% assign url = card.url %} {% assign git = card.git %} {%
-assign background = card.background %} {% assign background_data =
-card.background_data %} {% assign background-alt = card.background-alt %} {%
-assign second-background = card.second-background %} {% assign
-second-background-alt = card.second-background-alt %} {% assign effect =
-card.effect %} {% include card.html id=id title=title technology=technology
-description=description url=url git=git background=background
-background_data=background_data background-alt=background-alt
-second-background=second-background second-background-alt=second-background-alt
-effect=effect %} {% endfor %} {% endif %} {% else %}
+{% if site.data.cards %} {% assign cards = site.data.cards %} {% if cards != null %} {% assign cards = site.data.cards %} {% for cardData in cards %} {% assign card = cardData[1] %} {% assign id =
+card.id %} {% assign title = card.title %} {% assign technology = card.technology %} {% assign description = card.description %} {% assign url = card.url %} {% assign git = card.git %} {% assign
+background = card.background %} {% assign background_data = card.background_data %} {% assign background-alt = card.background-alt %} {% assign second-background = card.second-background %} {% assign
+second-background-alt = card.second-background-alt %} {% assign effect = card.effect %} {% include card.html id=id title=title technology=technology description=description url=url git=git
+background=background background_data=background_data background-alt=background-alt second-background=second-background second-background-alt=second-background-alt effect=effect %} {% endfor %} {%
+endif %} {% else %}
 <h1>No Projects for display!</h1>
 {% endif %}
