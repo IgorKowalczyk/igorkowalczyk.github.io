@@ -65,11 +65,10 @@ encoding: utf-8
 markdown: kramdown
 theme: minima
 
-# Exlude files/folder (see "/lib/szkola/readme.md")
+# Exlude files/folder
 exclude:
  - Gemfile
  - Gemfile.lock
- - lib/szkola
 
 # Contact form
 form:
