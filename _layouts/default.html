@@ -7,16 +7,16 @@ layout: "default"
  {% include head.html %}
  <body ondragstart="return false" ondrag="return false">
   <script type="text/javascript">
-   var preload = document.createElement("div")
-   preload.className = "preloader"
-   preload.innerHTML = '</div><div class="spinner"></div>'
-   document.body.appendChild(preload)
+   var preload = document.createElement("div");
+   preload.className = "preloader";
+   preload.innerHTML = '</div><div class="spinner"></div>';
+   document.body.appendChild(preload);
    window.addEventListener("load", function () {
-    preload.className += " fade"
+    preload.className += " fade";
     setTimeout(function () {
-     preload.style.display = "none"
-    }, 500)
-   })
+     preload.style.display = "none";
+    }, 500);
+   });
   </script>
   <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
   <main>
