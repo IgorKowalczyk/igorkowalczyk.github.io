@@ -1,11 +1,19 @@
 <script type="text/javascript">
-(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-;c.parentNode.insertBefore(a,c)
-})(window,document,"galite","script","{{ site.url || site.host }}{{ site.baseurl }}/lib/js/analytics.min.js");
- 
-galite('create', '{{ site.tracking_id }}', 'auto');
-galite('send', 'pageview');
-</script> 
+ (function (e, t, n, i, s, a, c) {
+  e[n] =
+   e[n] ||
+   function () {
+    (e[n].q = e[n].q || []).push(arguments);
+   };
+  a = t.createElement(i);
+  c = t.getElementsByTagName(i)[0];
+  a.async = true;
+  a.src = s;
+  c.parentNode.insertBefore(a, c);
+ })(window, document, "galite", "script", "{{ site.url || site.host }}{{ site.baseurl }}/lib/js/analytics.min.js");
+
+ galite("create", "{{ site.tracking_id }}", "auto");
+ galite("send", "pageview");
+</script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "700a05bf50c246d1b896a15f94a09416"}'></script>

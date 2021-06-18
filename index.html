@@ -10,12 +10,11 @@ layout: "default"
    {% endif %} {% if site.work %}
    <p class="hero-title2">{{ site.work }}</p>
    {% if site.section %}
-   <div class="buttons" style="margin-bottom: 30px;">
+   <div class="buttons" style="margin-bottom: 30px">
     <a href="#{{ site.section }}" class="link-button no-fade">Projects</a>
     <a class="link-button link-button-disabled">Resume</a>
    </div>
-   {% endif %}
-   {% endif %} {% if site.social-media.enabled == "true" %}
+   {% endif %} {% endif %} {% if site.social-media.enabled == "true" %}
    <div class="social-media">{% include social-media.html %} {% endif %}</div>
   </div>
  </div>
