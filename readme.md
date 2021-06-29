@@ -42,12 +42,12 @@ effect: "color"
 If you have any issues with the project or you found a bug please create [new issue here](https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues)
 
 
-# Pull Requests
+### Pull Requests
 When submitting a pull request:
 
 - Clone the repo.
 - Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature).
 - Open a [pull request](https://github.com/igorkowalczyk/igorkwalczyk.github.io/pulls) on [GitHub](https://github.com) and describe the feature or fix.
 
-# License
+### License
 This project is licensed under the MIT. See the [LICENSE](https://github.com/igorkowalczyk/igorkwalczyk.github.io/blob/master/license.md) file for details
