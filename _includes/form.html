@@ -16,7 +16,7 @@
       <label for="name"
        >Name
        <div class="nameerror error">Please enter a name!</div>
-       <input class="contact-input-name contact-input" type="text" name="name" placeholder="John Doe" title="This field is required" maxlenght="50" />
+       <input class="contact-input-name contact-input" type="text" id="name" name="name" placeholder="John Doe" title="This field is required" maxlenght="50" />
       </label>
      </div>
     </fieldset>
@@ -25,7 +25,7 @@
       <label for="email"
        >E-Mail
        <div class="emailerror error">Please enter a vaild email!</div>
-       <input class="contact-input-email contact-input" type="text" name="email" placeholder="john@doe.com" title="This field is required" maxlenght="50" spellcheck="false" />
+       <input class="contact-input-email contact-input" type="text" id="email" name="email" placeholder="john@doe.com" title="This field is required" maxlenght="50" spellcheck="false" />
       </label>
      </div>
     </fieldset>
@@ -34,7 +34,7 @@
       <label for="message"
        >Message
        <div class="messageerror error">Please enter a message!</div>
-       <textarea class="contact-input-message no-margin contact-input" name="message" placeholder="Your message" title="This field is required" maxlenght="150" autocomplete="off" spellcheck="true"></textarea>
+       <textarea class="contact-input-message no-margin contact-input" id="message" name="message" placeholder="Your message" title="This field is required" maxlenght="150" autocomplete="off" spellcheck="true"></textarea>
       </label>
      </div>
     </fieldset>
@@ -52,4 +52,23 @@
   </div>
  </div>
 </div>
-<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
+<!-- <script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script> -->
+<script type="text/javascript">
+ window.onload = () => {
+  document.querySelector("form").addEventListener("submit", (e) => {
+   e.preventDefault();
+   name = document.getElementById("name");
+   (email = document.getElementById("email")), (msg = document.getElementById("message"));
+   fetch("https://api.igorkowalczyk.repl.co/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+     type: "contact",
+     username: name.value,
+     email: email.value,
+     msg: msg.value,
+    }),
+   }).then((res) => res.ok);
+  });
+ };
+</script>
