@@ -19,10 +19,6 @@
   "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
  },
  "homepage": "https://igorkowalczyk.github.io",
- "dependencies": {
-  "express": "^4.17.1",
-  "nodemailer": "^6.6.2"
- },
  "devDependencies": {
   "prettier": "^2.3.2"
  }

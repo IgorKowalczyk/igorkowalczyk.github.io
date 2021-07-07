@@ -52,23 +52,4 @@
   </div>
  </div>
 </div>
-<!-- <script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script> -->
-<script type="text/javascript">
- window.onload = () => {
-  document.querySelector("form").addEventListener("submit", (e) => {
-   e.preventDefault();
-   name = document.getElementById("name");
-   (email = document.getElementById("email")), (msg = document.getElementById("message"));
-   fetch("https://api.igorkowalczyk.repl.co/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-     type: "contact",
-     username: name.value,
-     email: email.value,
-     msg: msg.value,
-    }),
-   }).then((res) => res.ok);
-  });
- };
-</script>
+<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
