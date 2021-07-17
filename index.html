@@ -22,14 +22,11 @@ layout: "default"
 <section class="work-section">
  <div class="section-title">
   {% if site.section %}
-   <p style="margin-bottom: 5px" id="{{ site.section }}">{{ site.section }}</p>
-   {% if site.github_username %}
-    {% if site.data.cards %}
-     <br />
-     <span style="font-size: 18px">✨ Note: Hover card to see more! ✨</span>
-    {% endif %}
-   {% endif %}
-  {% endif %}
+  <p style="margin-bottom: 5px" id="{{ site.section }}">{{ site.section }}</p>
+  {% if site.github_username %} {% if site.data.cards %}
+  <br />
+  <span style="font-size: 18px">✨ Note: Hover card to see more! ✨</span>
+  {% endif %} {% endif %} {% endif %}
  </div>
  <section class="wrapper">
   {% if site.data.cards %}
@@ -42,7 +39,6 @@ layout: "default"
     Want more projects?
    </button>
   </a>
-  {% endif %}
-  {% if site.form.enabled == "true" %} {% include form.html %} {% endif %}
+  {% endif %} {% if site.form.enabled == "true" %} {% include form.html %} {% endif %}
  </section>
 </section>
