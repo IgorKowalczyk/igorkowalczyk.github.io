@@ -206,9 +206,9 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   background-size: 0 !important;
-   &:hover {
-    background-size: 0;
-   }
+  &:hover {
+   background-size: 0;
+  }
  }
  .menu {
   clear: both;
@@ -1269,24 +1269,42 @@ fieldset {
 }
 
 .nav {
-	color: #fff !important;
-	transition: 500ms all;
-	* {
-		color: #fff !important;
-		transition: 500ms all;
-	}
-	ul {
-		color: #fff !important;
-		transition: 500ms all;
-	}
+ color: #fff !important;
+ transition: 500ms all;
+ * {
+  color: #fff !important;
+  transition: 500ms all;
+ }
+ ul {
+  color: #fff !important;
+  transition: 500ms all;
+ }
 }
 .nav.nav-scrolled {
-	.logo {
-		color: #000 !important;
-	}
-	ul {
-		a {
-			color: #000 !important;
-		}
-	}
+ .logo {
+  color: #000 !important;
+ }
+ ul {
+  a {
+   color: #000 !important;
+  }
+ }
+}
+@media screen and (max-width: 590px) {
+ .nav {
+  background-color: #fff !important;
+  color: #000 !important;
+  ul {
+   li {
+    a {
+     background-color: #fff !important;
+     color: #000 !important;
+    }
+   }
+  }
+ }
+ .logo {
+  background-color: #fff !important;
+  color: #000 !important;
+ }
 }
