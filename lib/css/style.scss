@@ -149,7 +149,6 @@ body {
  color: var(--text);
 }
 .nav {
- background-color: var(--white);
  position: fixed;
  width: 100%;
  top: 0;
@@ -165,7 +164,6 @@ body {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: var(--white);
  }
  li {
   a {
@@ -173,7 +171,6 @@ body {
    font-size: 20px;
    padding: 20px 20px;
    text-decoration: none;
-   color: var(--link) !important;
    &:hover {
     background-color: var(--f4f4f4);
    }
@@ -207,17 +204,15 @@ body {
   }
  }
  .logo {
-  a {
-   display: block;
-   float: left;
-   padding: 20px 20px !important;
-   font-size: 20px;
-   padding: 10px 20px;
-   text-decoration: none;
+  display: block;
+  float: left;
+  padding: 20px 20px !important;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
    &:hover {
     background-size: 0;
    }
-  }
  }
  .menu {
   clear: both;
@@ -263,6 +258,7 @@ body {
 }
 .nav.nav-scrolled {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+ background: #fff;
 }
 [hidden] {
  display: none;
@@ -1274,4 +1270,27 @@ fieldset {
   padding-top: 20px;
   padding-bottom: 20px;
  }
+}
+
+.nav {
+	color: #fff !important;
+	transition: 500ms all;
+	* {
+		color: #fff !important;
+		transition: 500ms all;
+	}
+	ul {
+		color: #fff !important;
+		transition: 500ms all;
+	}
+}
+.nav.nav-scrolled {
+	.logo {
+		color: #000 !important;
+	}
+	ul {
+		a {
+			color: #000 !important;
+		}
+	}
 }
