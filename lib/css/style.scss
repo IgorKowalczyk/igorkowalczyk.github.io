@@ -58,7 +58,7 @@ layout: "null"
  --switch-slider: #888;
  --f4f4f4: #f4f4f4;
  --darkgrey: #222;
- --border: #212121;
+ --border: 33, 33, 33 ,0.5;
  --button: rgba(227, 227, 227, 0.8);
  --button-hover: rgba(227, 227, 227, 0.5);
  --button-text: #000;
@@ -67,6 +67,7 @@ layout: "null"
  --scrollbar: #fff;
  --scrollbar-hover: #4a4a4a;
  --scrollbar-active: #383838;
+ --input: #fff;
  --title: #000;
  --preloader: #fff;
  --spinner: #00a3a3;
@@ -92,7 +93,7 @@ layout: "null"
  --switch-slider: #fff;
  --f4f4f4: #4a4a4a;
  --darkgrey: #fff;
- --border: #fff;
+ --border: 255, 255, 255, 0.4;
  --button: #404040;
  --button-hover: #4a4a4a;
  --button-text: #fff;
@@ -101,6 +102,7 @@ layout: "null"
  --scrollbar-thumb: #2b2b2b;
  --scrollbar-hover: #363636;
  --scrollbar-active: #454545;
+ --input: #2b2b2b;
  --title: #fff;
  --preloader: #222;
  --spinner: #888;
@@ -363,6 +365,19 @@ nav {
  color: var(--title);
  font-size: 50px;
  transition: 500ms all;
+}
+.section-title-text {
+ background-image: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
+ background-size: 200%;
+ background-repeat: repeat;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ transition: 1s ease all;
+ margin-bottom: 0;
+ padding-bottom: 0;
+ &:hover {
+  background-position: 100% 0;
+ }
 }
 .hero-grid {
  display: grid;
@@ -804,10 +819,11 @@ footer {
  transition: 500ms all;
 }
 textarea {
- border: 1px solid var(--border);
+ border: 1px solid rgba(var(--border));
  resize: vertical !important;
  width: 100%;
  height: 200px;
+ background: var(--input);
  resize: none;
  margin: 10px 0px;
  transition: 500ms, 0ms resize;
@@ -828,10 +844,11 @@ label {
  margin-bottom: 10px;
 }
 input {
- border: 1px solid var(--border);
+ border: 1px solid rgba(var(--border));
  border-radius: 5px;
  padding: 10px;
  margin: 10px 0 5px 0;
+ background: var(--input);
  width: auto;
  outline: none;
  transition: 500ms all;
