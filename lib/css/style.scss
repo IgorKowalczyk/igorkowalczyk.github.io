@@ -386,11 +386,12 @@ nav {
 }
 @keyframes show {
  0% {
-   opacity: 0;
+  opacity: 0;
  }
  100% {
-   opacity: 1;
- }}
+  opacity: 1;
+ }
+}
 .hero-title {
  font-size: 50px;
  margin-bottom: 0;
@@ -404,7 +405,7 @@ nav {
    height: 3px;
    border-radius: 2px;
    animation: show 450ms forwards;
-   background: linear-gradient(to right,#6845AA,#1EAE98);
+   background: linear-gradient(to right, #6845aa, #1eae98);
    content: "";
    position: absolute;
    left: 50%;
