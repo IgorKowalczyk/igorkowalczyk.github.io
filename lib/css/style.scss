@@ -1282,29 +1282,29 @@ fieldset {
 }
 .nav.nav-scrolled {
  .logo {
-  color: #000 !important;
+  color: var(--text) !important;
  }
  ul {
   a {
-   color: #000 !important;
+   color: var(--text) !important;
   }
  }
 }
 @media screen and (max-width: 590px) {
  .nav {
-  background-color: #fff !important;
+  background: var(--white) !important;
   color: #000 !important;
   ul {
    li {
     a {
-     background-color: #fff !important;
+     background: var(--white) !important;
      color: #000 !important;
     }
    }
   }
  }
  .logo {
-  background-color: #fff !important;
+  background: var(--white) !important;
   color: #000 !important;
  }
 }
