@@ -610,11 +610,11 @@ footer {
 }
 .svg-6 {
  grid-area: six;
- -moz-transform: translate(300px, 50px);
- -webkit-transform: translate(300px, 50px);
- -o-transform: translate(300px, 50px);
- -ms-transform: translate(300px, 50px);
- transform: translate(300px, 50px);
+ -moz-transform: translate(-300px, 50px);
+ -webkit-transform: translate(-300px, 50px);
+ -o-transform: translate(-300px, 50px);
+ -ms-transform: translate(-300px, 50px);
+ transform: translate(-300px, 50px);
 }
 .svg-7 {
  grid-area: seven;
@@ -1200,6 +1200,11 @@ fieldset {
   }
  }
 }
+@media screen and (max-width: 802px) {
+ .svg-card {
+  display: none;
+ }
+}
 @media screen and (max-width: 500px) {
  .hero-title {
   font-size: 30px !important;
@@ -1361,6 +1366,5 @@ fieldset {
  }
  .logo {
   background: var(--white) !important;
-  color: #000 !important;
  }
 }
