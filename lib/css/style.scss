@@ -1274,6 +1274,9 @@ fieldset {
  &:hover {
   background: var(--white) !important;
   color: var(--text) !important;
+  * {
+   color: var(--text) !important;
+  }
  }
  * {
   color: #fff !important;
