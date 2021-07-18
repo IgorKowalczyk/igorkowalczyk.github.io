@@ -440,7 +440,7 @@ img {
  filter: none;
 }
 .lazy {
- filter: blur(3px) brightness(20%) !important;
+ filter: blur(2px) brightness(20%) !important;
  transition-delay: 500ms;
 }
 .work-section {
@@ -549,7 +549,7 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
-  filter: brightness(20%) !important;
+  filter: brightness(30%);
   object-fit: cover;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -743,7 +743,7 @@ footer {
   .card-image {
    img {
     opacity: 0.8;
-    filter: brightness(20%) !important;
+    filter: brightness(30%) !important;
     -webkit-transform: scale(1.3, 1.3);
     transform: scale(1.3, 1.3);
    }
