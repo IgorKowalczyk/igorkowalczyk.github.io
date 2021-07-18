@@ -58,7 +58,7 @@ layout: "null"
  --switch-slider: #888;
  --f4f4f4: #f4f4f4;
  --darkgrey: #222;
- --border: 33, 33, 33 ,0.5;
+ --border: 33, 33, 33, 0.5;
  --button: rgba(227, 227, 227, 0.8);
  --button-hover: rgba(227, 227, 227, 0.5);
  --button-text: #000;
@@ -93,7 +93,7 @@ layout: "null"
  --switch-slider: #fff;
  --f4f4f4: #4a4a4a;
  --darkgrey: #fff;
- --border: 255, 255, 255, 0.4;
+ --border: 255, 255, 255, 0.1;
  --button: #404040;
  --button-hover: #4a4a4a;
  --button-text: #fff;
@@ -373,8 +373,6 @@ nav {
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
  transition: 1s ease all;
- margin-bottom: 0;
- padding-bottom: 0;
  &:hover {
   background-position: 100% 0;
  }
@@ -824,6 +822,7 @@ textarea {
  width: 100%;
  height: 200px;
  background: var(--input);
+ color: var(--text);
  resize: none;
  margin: 10px 0px;
  transition: 500ms, 0ms resize;
@@ -847,6 +846,7 @@ input {
  border: 1px solid rgba(var(--border));
  border-radius: 5px;
  padding: 10px;
+ color: var(--text);
  margin: 10px 0 5px 0;
  background: var(--input);
  width: auto;
