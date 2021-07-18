@@ -384,12 +384,36 @@ nav {
  margin-right: auto;
  margin-left: auto;
 }
+@keyframes show {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }}
 .hero-title {
  font-size: 50px;
  margin-bottom: 0;
- transition: 500ms all;
+ transition: 450ms all;
  color: #fff;
  font-family: "Poppins";
+ &:hover {
+  &:after {
+   width: 35%;
+   height: 3px;
+   border-radius: 2px;
+   animation: show 450ms forwards;
+   background: linear-gradient(to right,#6845AA,#1EAE98);
+   content: "";
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-right: -50%;
+   transition: 500ms all;
+   bottom: 0;
+   animation-direction: alternate;
+  }
+ }
 }
 .hero-title2 {
  font-size: 30px;
@@ -701,7 +725,7 @@ footer {
    img {
     -webkit-filter: blur(50%);
     filter: blur(50%);
-    filter: brightness(20%);
+    filter: brightness(30%);
    }
   }
  }
@@ -979,23 +1003,25 @@ fieldset {
 }
 .contact-form-btn {
  line-height: 20px;
- padding: 12px 24px 12px 24px;
- font-weight: 700;
  display: inline-block;
  word-break: keep-all;
- font-size: 14px;
- font-weight: 200;
- color: var(--button-text);
- background: var(--button);
+ color: #fff;
  text-decoration: none;
- border-radius: 4px;
+ border-radius: 5px;
  text-align: center;
  transition: 500ms all;
  outline: none;
  border: none;
  cursor: pointer;
+ padding: 1em 2em;
+ font-size: 0.9em;
+ background-size: 400%;
+ background-image: linear-gradient(to right, #6845aa 50%, #1eae98);
+ background-position: 50% 50%;
+ font-family: Poppins;
+ font-weight: 700;
  &:hover {
-  background-color: var(--button-hover);
+  background-position: right;
  }
 }
 .button-svg {
@@ -1007,7 +1033,6 @@ fieldset {
 }
 .link-button {
  padding: 10px 25px;
- background: #4f545c;
  font-family: "Poppins";
  border: none;
  border-radius: 3px;
@@ -1017,24 +1042,22 @@ fieldset {
  cursor: pointer;
  font-size: 15px;
  margin: 20px;
- background-size: 0;
  margin-top: 20px;
  margin-left: 10px;
  margin-right: 10px;
+ background-image: linear-gradient(to right, #6845aa 50%, #1eae98);
+ background-position: 50% 50%;
+ background-size: 400%;
+ color: #fff !important;
  &:hover {
-  background: #474c53;
   color: #fff !important;
+  background-position: right !important;
+  background-size: 400% !important;
  }
 }
 .link-button-disabled {
  cursor: not-allowed;
- opacity: 0.9;
- background: #4f545c;
- &:hover {
-  cursor: not-allowed;
-  opacity: 0.9;
-  background: #4f545c;
- }
+ opacity: 0.6;
 }
 .section-button {
  fill: var(--text) !important;
@@ -1219,7 +1242,7 @@ fieldset {
     img {
      -webkit-filter: blur(50%);
      filter: blur(50%);
-     filter: brightness(20%);
+     filter: brightness(30%);
     }
    }
   }
@@ -1234,7 +1257,7 @@ fieldset {
   box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
   .card-image {
    img {
-    filter: brightness(20%);
+    filter: brightness(30%);
     -webkit-transform: scale(1.3, 1.3);
     transform: scale(1.3, 1.3);
    }
