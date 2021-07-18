@@ -1285,6 +1285,10 @@ fieldset {
  }
 }
 .nav.nav-scrolled {
+ &:hover {
+  background: var(--white) !important;
+  color: var(--text) !important;
+ }
  .logo {
   color: var(--text) !important;
  }
