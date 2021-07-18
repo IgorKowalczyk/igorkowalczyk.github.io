@@ -31,13 +31,13 @@ twitter: "@majonezexe"
 social-media:
  enabled: "true"
 
-# SVG Cards are bugged on mobile devices (for better do not set this option to "true")
+# SVG Cards background are bugged on mobile devices! (Recomended option: false)
 cards:
- enabled: "false"
+ enabled: "true"
 
-# Link to blog - if you don't have - leave blank
+# Extra link on navigation
 blog: "/blog"
-# Title of the blog (displays in nav) eg. Blog
+# Title of the extra link
 blog-title: "Blog"
 
 # Description
