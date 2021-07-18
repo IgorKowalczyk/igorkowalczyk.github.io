@@ -1271,6 +1271,10 @@ fieldset {
 .nav {
  color: #fff !important;
  transition: 500ms all;
+ &:hover {
+  background: var(--white) !important;
+  color: var(--text) !important;
+ }
  * {
   color: #fff !important;
   transition: 500ms all;
