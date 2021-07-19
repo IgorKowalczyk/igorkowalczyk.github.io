@@ -85,7 +85,7 @@ form:
  img: "/lib/pics/special/email.svg" # Form additional image
  img-enabled: "false" # Display form additional image (boolean)
 
-# Google Tracking ID 
+# Google Tracking ID
 tracking_id: "UA-123456789-1"
 
 # Google Site Verification ID
