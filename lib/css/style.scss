@@ -74,6 +74,7 @@ layout: "null"
  --spinner-border: #f3f3f3;
  --wrap-contact-background: #fff;
  --placeholder: #333;
+ --gradient: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
 }
 [data-theme="dark"] {
  --text: #fff;
@@ -109,6 +110,7 @@ layout: "null"
  --spinner-border: #333;
  --wrap-contact-background: rgb(35, 35, 35);
  --placeholder: #fff;
+ --gradient: linear-gradient(45deg, #f8f8f8 25%, #c9c5d2 50%, #1eae98 75%, #e9f2f0)
 }
 .no-js {
  background: #f44336;
@@ -367,7 +369,7 @@ nav {
  transition: 500ms all;
 }
 .section-title-text {
- background-image: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
+ background-image: var(--gradient);
  background-size: 200%;
  background-repeat: repeat;
  -webkit-background-clip: text;
