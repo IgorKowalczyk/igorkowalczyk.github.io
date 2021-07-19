@@ -27,11 +27,11 @@ discord: "https://discord.gg/bVNNHuQ"
 github_username: "igorkowalczyk"
 # Twitter username (no link) - if you don't have - leave blank
 twitter: "@majonezexe"
-# Social Media config:
+# Social Media \
 social-media:
  enabled: "true"
 
-# SVG Cards background are bugged on mobile devices! (Recomended option: false)
+# Display svg decorations
 cards:
  enabled: "true"
 
