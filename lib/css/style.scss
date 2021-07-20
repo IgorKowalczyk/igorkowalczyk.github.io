@@ -401,23 +401,6 @@ nav {
  position: relative;
  color: #fff;
  font-family: "Poppins";
- &:hover {
-  &:after {
-   width: 35%;
-   height: 3px;
-   border-radius: 2px;
-   animation: show 450ms forwards;
-   background: linear-gradient(to right, #6845aa, #1eae98);
-   content: "";
-   position: absolute;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   margin-right: -50%;
-   transition: 500ms all;
-   bottom: 0;
-   animation-direction: alternate;
-  }
- }
 }
 .hero-title2 {
  font-size: 30px;
