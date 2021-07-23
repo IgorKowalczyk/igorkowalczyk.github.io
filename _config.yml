@@ -82,7 +82,7 @@ form:
  enabled: "true" # Boolean
  action: "https://getform.io/f/f823ef85-b161-4cc1-9d60-ef2fb18b9276" # Form action, must support xhr requests
  img: "/lib/pics/special/email.svg" # Form additional image
- img-enabled: "true" # Display form additional image (boolean)
+ img-enabled: "false" # Display form additional image (boolean)
 
 # Google Tracking ID
 tracking_id: "UA-174454816-1"
