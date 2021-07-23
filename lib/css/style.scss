@@ -1173,9 +1173,6 @@ fieldset {
     padding: 20px 30px;
    }
   }
-  .wakatime {
-   width: 90%;
-  }
   .menu {
    clear: none;
    float: right;
@@ -1184,6 +1181,12 @@ fieldset {
   .menu-icon {
    display: none;
   }
+ }
+}
+
+@media screen and (max-width: 888px) {
+ .wakatime {
+  width: 90%;
  }
 }
 @media screen and (max-width: 590px) {
