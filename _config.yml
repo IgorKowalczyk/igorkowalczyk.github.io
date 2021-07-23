@@ -92,5 +92,6 @@ verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
 
 # Coding stats
 wakatime:
- enabled: "true" #Boolean
+ enabled: "true" # Boolean
+ started: "2021" # Year when wakatime started moritoring your code activity
  embed: "https://wakatime.com/share/@Majonezexe/6649e5e0-8191-4da7-b51c-8ef035b7e069.svg" # Coding stats embed image in .svg format

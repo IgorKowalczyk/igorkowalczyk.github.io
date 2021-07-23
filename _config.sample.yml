@@ -93,5 +93,6 @@ verification: "-qwertyuiopasdfghjklzxcvbnm"
 
 # Coding stats
 wakatime:
- enabled: "true" #Boolean
+ enabled: "true" # Boolean
+ started: "2137" # Year when wakatime started moritoring your code activity
  embed: "https://wakatime.com/share/@example/6dbf5beb-695a-40b1-9251-618ad59bca36.svg" # Coding stats embed image in .svg format

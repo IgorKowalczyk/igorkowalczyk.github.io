@@ -40,8 +40,10 @@ layout: "default"
   </a>
   {% if site.wakatime.enabled == "true" %}
   <div class="section-title">
-   <p class="section-title-text" id="code">Coding stats</p>
+   <p class="section-title-text" style="margin-bottom: 0; padding-bottom: 0" id="code">Coding stats</p>
   </div>
+  <p style="margin-top: 0;">{% site.wakatime.started %} - Current</p>
+  <!-- Yea, To current date because 2021 - 2021 looks weird rn XD -->
   <figure class="wakatime">
    <embed src="{{ site.wakatime.embed }}" />
   </figure>
