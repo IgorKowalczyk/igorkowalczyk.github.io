@@ -148,7 +148,7 @@ body {
  background-color: var(--white);
  font-family: "Poppins";
  -webkit-font-smoothing: antialiased;
- transition: 500ms all;
+ transition: 350ms all;
  text-align: center;
  color: var(--text);
 }
@@ -321,7 +321,7 @@ a {
  background-position: 50% 100%;
  background-repeat: no-repeat;
  background-size: 0 2px;
- transition: 500ms, background-size 0.3s;
+ transition: 350ms, background-size 0.3s;
  &:hover {
   background-size: 100% 2px;
  }
@@ -343,7 +343,7 @@ nav {
   background-size: 0;
  }
  svg {
-  transition: 500ms all;
+  transition: 350ms all;
  }
 }
 .hero-section {
@@ -359,14 +359,14 @@ nav {
  height: 100vh;
  color: var(--light);
  background-size: cover;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .section-title {
  padding: 0 1em;
  margin: auto auto;
  color: var(--title);
  font-size: 50px;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .section-title-text {
  background-image: var(--gradient);
@@ -404,7 +404,7 @@ nav {
 }
 .hero-title2 {
  font-size: 30px;
- transition: 500ms all;
+ transition: 350ms all;
  color: #fff;
  margin-top: 10px;
 }
@@ -422,13 +422,13 @@ img {
  max-width: 100%;
  height: auto;
  display: block;
- transition: 500ms all;
+ transition: 350ms all;
  filter: none;
 }
 .lazy {
  filter: blur(2px) brightness(30%) !important;
- transition-delay: 500ms;
- transition: 500ms all;
+ transition-delay: 350ms;
+ transition: 350ms all;
 }
 .work-section {
  margin-top: 6em;
@@ -446,7 +446,7 @@ footer {
  color: var(--dark);
  font-size: 12px;
  margin: 2em;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .wrapper {
  margin-top: 40px;
@@ -505,7 +505,7 @@ footer {
    img {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
-    transition: 500ms all;
+    transition: 350ms all;
    }
   }
   .card-bio {
@@ -537,7 +537,7 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
-  transition: 500ms all;
+  transition: 350ms all;
   filter: brightness(30%);
   object-fit: cover;
   -webkit-transition: all 0.5s ease;
@@ -782,14 +782,14 @@ footer {
  background: var(--wrap-contact-background);
  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
  padding: 50px;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .contact-title {
  padding: 0 1em;
  margin: 0;
  color: var(--title);
  font-size: 50px;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .contact-pic {
  width: 310px;
@@ -828,7 +828,7 @@ footer {
  line-height: 1.2;
  text-align: left;
  grid-area: title / title;
- transition: 500ms all;
+ transition: 350ms all;
 }
 textarea {
  border: 1px solid RGBA(var(--border));
@@ -839,7 +839,7 @@ textarea {
  color: var(--text);
  resize: none;
  margin: 10px 0px;
- transition: 500ms, 0ms resize;
+ transition: 350ms, 0ms resize;
  min-height: 60px;
  max-height: 300px;
  border-radius: 3px;
@@ -848,7 +848,7 @@ textarea {
 }
 label {
  color: var(--darkgrey);
- transition: 500ms all;
+ transition: 350ms all;
 }
 .wrap-input {
  position: relative;
@@ -865,7 +865,7 @@ input {
  background: var(--input);
  width: auto;
  outline: none;
- transition: 500ms all;
+ transition: 350ms all;
  &:checked {
   + {
    .slider {
@@ -963,7 +963,7 @@ fieldset {
  visibility: visible !important;
  opacity: 1 !important;
  pointer-events: all !important;
- transition: 500ms;
+ transition: 350ms;
  max-height: unset;
 }
 .contact-sendfailed {
@@ -979,7 +979,7 @@ fieldset {
  visibility: hidden;
  opacity: 0;
  pointer-events: none;
- transition: 500ms all;
+ transition: 350ms all;
 }
 .container-contact-form-btn {
  width: 100%;
@@ -999,7 +999,7 @@ fieldset {
  text-decoration: none;
  border-radius: 5px;
  text-align: center;
- transition: 500ms all;
+ transition: 350ms all;
  outline: none;
  border: none;
  cursor: pointer;
@@ -1033,7 +1033,7 @@ fieldset {
  border-radius: 3px;
  font-weight: 400;
  color: #fff !important;
- transition: 500ms all;
+ transition: 350ms all;
  cursor: pointer;
  font-size: 15px;
  margin: 20px;
@@ -1310,7 +1310,7 @@ fieldset {
 
 .nav {
  color: #fff !important;
- transition: 500ms all;
+ transition: 350ms all;
  &:hover {
   background: var(--white) !important;
   color: var(--text) !important;
@@ -1320,11 +1320,11 @@ fieldset {
  }
  * {
   color: #fff !important;
-  transition: 500ms all;
+  transition: 350ms all;
  }
  ul {
   color: #fff !important;
-  transition: 500ms all;
+  transition: 350ms all;
  }
 }
 .nav.nav-scrolled {
