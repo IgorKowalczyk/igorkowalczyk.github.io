@@ -1054,6 +1054,10 @@ fieldset {
  cursor: not-allowed;
  opacity: 0.6;
 }
+.disabled {
+ opacity: 0.5;
+ cursor: not-allowed;
+}
 .section-button {
  fill: var(--text) !important;
 }
