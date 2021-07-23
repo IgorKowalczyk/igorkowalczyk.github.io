@@ -90,3 +90,8 @@ tracking_id: "UA-123456789-1"
 
 # Google Site Verification ID
 verification: "-qwertyuiopasdfghjklzxcvbnm"
+
+# Coding stats
+wakatime:
+ enabled: "true" #Boolean
+ embed: "https://wakatime.com/share/@example/6dbf5beb-695a-40b1-9251-618ad59bca36.svg" # Coding stats embed image in .svg format

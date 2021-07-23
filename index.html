@@ -38,6 +38,13 @@ layout: "default"
     Want more projects?
    </button>
   </a>
-  {% endif %} {% if site.form.enabled == "true" %} {% include form.html %} {% endif %}
+  {% if site.wakatime.enabled == "true"}
+  <div class="section-title">
+   <p class="section-title-text" id="code">Coding stats</p>
+  </div>
+  <figure class="wakatime">
+   <embed src="{{ site.wakatime.embed }}" />
+  </figure>
+  {% endif %} {% endif %} {% if site.form.enabled == "true" %} {% include form.html %} {% endif %}
  </section>
 </section>
