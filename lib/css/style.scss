@@ -1050,7 +1050,8 @@ fieldset {
   background-size: 400% !important;
  }
 }
-.link-button-disabled, .disabled {
+.link-button-disabled,
+.disabled {
  cursor: not-allowed;
  opacity: 0.5;
 }
