@@ -17,7 +17,7 @@
        >Name
        <div class="nameerror error">Please enter a name!</div>
        {% if site.form.disabled == "true" %}
-       <input class="contact-input-name contact-input disabled" disabled="true" type="text" id="name" name="name" placeholder="John Doe" title="This field is required" maxlenght="50" />
+       <input class="contact-input-name contact-input disabled" disabled="true" type="text" id="name" name="name" placeholder="John Doe" title="Form is now disabled. Sorry" maxlenght="50" />
        {% else %}
        <input class="contact-input-name contact-input" type="text" id="name" name="name" placeholder="John Doe" title="This field is required" maxlenght="50" />
        {% endif %}
@@ -30,7 +30,7 @@
        >E-Mail
        <div class="emailerror error">Please enter a vaild email!</div>
        {% if site.form.disabled == "true" %}
-       <input class="contact-input-email contact-input disabled" disabled="true" type="text" id="email" name="email" placeholder="john@doe.com" title="This field is required" maxlenght="50" spellcheck="false" />
+       <input class="contact-input-email contact-input disabled" disabled="true" type="text" id="email" name="email" placeholder="john@doe.com" title="Form is now disabled. Sorry" maxlenght="50" spellcheck="false" />
        {% else %}
        <input class="contact-input-email contact-input" type="text" id="email" name="email" placeholder="john@doe.com" title="This field is required" maxlenght="50" spellcheck="false" />
        {% endif %}
@@ -43,7 +43,7 @@
        >Message
        <div class="messageerror error">Please enter a message!</div>
        {% if site.form.disabled == "true" %}
-       <textarea class="contact-input-message no-margin contact-input disabled" disabled="true" id="message" name="message" placeholder="Your message" title="This field is required" maxlenght="150" autocomplete="off" spellcheck="true" disabled="true"></textarea>
+       <textarea class="contact-input-message no-margin contact-input disabled" disabled="true" id="message" name="message" placeholder="Your message" title="Form is now disabled. Sorry" maxlenght="150" autocomplete="off" spellcheck="true" disabled="true"></textarea>
        {% else %}
        <textarea class="contact-input-message no-margin contact-input" id="message" name="message" placeholder="Your message" title="This field is required" maxlenght="150" autocomplete="off" spellcheck="true"></textarea>
        {% endif %}
