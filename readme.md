@@ -6,6 +6,9 @@ My portfolio written on Jekyll and SCSS
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://majoexe.herokuapp.com/server)
 
+### Image
+[![Portfolio](https://raw.githubusercontent.com/IgorKowalczyk/igorkowalczyk.github.io/master/lib/pics/readme/portfolio.png)](https://igorkowalczyk.github.io)
+
 ### Features
  - ⚙️ Fully customizable
  - 🌆 Light/Dark theme
