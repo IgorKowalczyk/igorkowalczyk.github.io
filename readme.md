@@ -4,7 +4,7 @@ My portfolio written on Jekyll and SCSS
 [![Jekyll](https://img.shields.io/github/workflow/status/igorkowalczyk/igorkowalczyk.github.io/Jekyll?style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://majoexe.herokuapp.com/server)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://redirect-majoexe.herokuapp.com/majo-v12)
 
 ### Image
 [![Portfolio](https://raw.githubusercontent.com/IgorKowalczyk/igorkowalczyk.github.io/master/lib/pics/readme/portfolio.png)](https://igorkowalczyk.github.io)
