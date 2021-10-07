@@ -25,8 +25,8 @@
  <link rel="stylesheet" href="{{ site.url || site.host }}{{ site.baseurl }}/lib/css/style.css" />
  {% endif %} {% if page.redirect %}
  <meta http-equiv="refresh" content="0; url='{{ page.redirect }}'" />
- {% endif %} {% if page.arc %}
- <script async src="https://arc.io/widget.min.js#{{ page.arc }}"></script>
+ {% endif %} {% if site.arc %}
+ <script async src="https://arc.io/widget.min.js#{{ site.arc }}"></script>
  {% endif %} {% if page.block %}
  <meta name="robots" content="noindex, nofollow" />
  <meta name="googlebot" content="noindex, nofollow" />
