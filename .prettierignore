@@ -4,3 +4,4 @@ _site
 *min.js
 *md
 *webmanifest
+/lib/arc-sw.js
