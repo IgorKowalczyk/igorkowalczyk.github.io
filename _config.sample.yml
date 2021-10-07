@@ -28,6 +28,9 @@ email: "example@email.com"
 # Your Wattpad account name
 wattpad: "example"
 
+# Arc.io key
+arc: "arc-widget-key"
+
 # Your Facebook account (with tag if you have)
 facebook: igor-kowalczyk.0000
 # facebook: 51144145433434332
