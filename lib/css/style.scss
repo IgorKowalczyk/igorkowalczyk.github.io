@@ -1382,5 +1382,14 @@ fieldset {
 }
 
 .background-header-padding-bottom {
- padding-bottom: 50px; 
+ padding-bottom: 50px;
+}
+
+@media screen and (max-width: 590px) {
+ .background-header-padding-top {
+  padding-top: 0px;
+ }
+ .background-header-padding-bottom {
+  padding-bottom: 0px;
+ }
 }
