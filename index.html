@@ -22,7 +22,7 @@ layout: "default"
 <section class="work-section">
  <div class="section-title">
   {% if site.section %}
-  <p class="section-title-text" style="margin-bottom: 0; padding-bottom: 0" id="{{ site.section }}">{{ site.section }}</p>
+  <p class="background-header skew-right" style="margin-bottom: 0; padding-bottom: 0" id="{{ site.section }}">{{ site.section }}</p>
   {% if site.github_username %} {% if site.data.cards %}
   <span style="font-size: 18px">✨ Note: Hover card to see more! ✨</span>
   {% endif %} {% endif %} {% endif %}
@@ -40,7 +40,7 @@ layout: "default"
   </a>
   {% if site.wakatime.enabled == "true" %}
   <div class="section-title">
-   <p class="section-title-text" style="margin-bottom: 0; padding-bottom: 0" id="code">Coding stats</p>
+   <p class="background-header skew-left" id="code">Coding stats</p>
   </div>
   <p style="margin-top: 0">{{ site.wakatime.started }} - Current</p>
   <!-- Yea, To current date because 2021 - 2021 looks weird rn XD -->
