@@ -86,8 +86,7 @@ form:
  disabled: "true" # Disable the contact form inputs but don't hide the whole form. Enable this for eg. maintenance. (boolean)
  hide_html_form: "true" # Hide HTML form from page
  action: "https://getform.io/f/f823ef85-b161-4cc1-9d60-ef2fb18b9276" # Form action, must support xhr requests (url)
- banner: "https://discord.c99.nl/widget/theme-5/544164729354977282.png" # Form banner (url)
- banner_dark: "https://discord.c99.nl/widget/theme-4/544164729354977282.png" # Additional functionality, replace default banner on dark theme (url)
+ banner: "https://discord.c99.nl/widget/theme-4/544164729354977282.png" # Form banner (url)
  display_banner: "true" # Display form banner (boolean)
 
 # Google Tracking ID

@@ -6,8 +6,7 @@
   <div class="wrap-contact">
    {% if site.form.banner and site.form.display_banner == "true" %}
    <style>
-    :root { {% if site.form.banner %} --banner: {{ site.form.banner }} {% endif %} }
-    [data-theme="dark"] { {% if site.form.banner %} {% if site.form.banner-dark %} --banner: {{ site.form.banner.dark }} {% else %} {{ site.form.banner }} {% endif %}{% endif %} }
+    .wrap-contact { background-color: #232323 !important; }
    </style>
    <img src="{{ site.form.banner }}" alt="Form banner" />
    {% endif %}
