@@ -75,7 +75,6 @@ layout: "null"
  --wrap-contact-background: #fff;
  --placeholder: #333;
  --gradient: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
- {% if site.form.banner %} --banner: {{ site.form.banner }} {% endif %}
 }
 [data-theme="dark"] {
  --text: #fff;
@@ -112,7 +111,6 @@ layout: "null"
  --wrap-contact-background: rgb(35, 35, 35);
  --placeholder: #fff;
  --gradient: linear-gradient(45deg, #f8f8f8 25%, #c9c5d2 50%, #1eae98 75%, #e9f2f0);
- {% if site.form.banner %} {% if site.form.banner-dark %} --banner: {{ site.form.banner.dark }} {% else %} {{ site.form.banner }} {% endif %}{% endif %}
 }
 .no-js {
  background: #f44336;
