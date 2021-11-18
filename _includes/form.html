@@ -5,11 +5,6 @@
   </div>
   <div class="wrap-contact">
    {% if site.form.hide_html_form == "true" %}
-   {% if site.form.img and site.form.img-enabled == "true" %}
-   <div class="contact-pic">
-    <img src="{{ site.form.img }}" alt="image" />
-   </div>
-   {% endif %}
    {% if site.form.banner and site.form.display_banner == "true" %}
    <img src="{{ site.form.banner }}" alt="Form banner"/>
    {% endif %}

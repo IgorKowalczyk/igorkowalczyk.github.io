@@ -87,8 +87,6 @@ form:
  disabled: "true" # Disable the contact form inputs but don't hide the whole form. Enable this for eg. maintenance. (boolean)
  hide_html_form: "true" # Hide HTML form from page
  action: "https://example.com/form/post" # Form action, must support xhr requests (url)
- img: "/lib/pics/special/email.svg" # Icon image (url/path)
- img-enabled: "true" # Display form icon (boolean)
  banner: "https://example.com/banner.png" # Form banner (url)
  display_banner: "false" # Display form banner (boolean)
 

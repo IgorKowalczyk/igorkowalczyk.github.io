@@ -780,17 +780,6 @@ footer {
  font-size: 50px;
  transition: 350ms all;
 }
-.contact-pic {
- width: 310px;
- padding-top: 55px;
- transition: 200ms all;
- &:hover {
-  transform: scale(1.1);
- }
- img {
-  max-width: 100%;
- }
-}
 .contact-form {
  width: auto;
  display: grid;
@@ -1261,17 +1250,11 @@ fieldset {
  }
 }
 @media (max-width: 1200px) {
- .contact-pic {
-  width: 33.5%;
- }
  .contact-form {
   width: 44%;
  }
 }
 @media (max-width: 992px) {
- .contact-pic {
-  width: 35%;
- }
  .contact-form {
   width: 55%;
  }
@@ -1286,9 +1269,6 @@ fieldset {
  }
  textarea {
   width: 100%;
- }
- .contact-pic {
-  display: none;
  }
  .container-contact {
   width: 100%;
