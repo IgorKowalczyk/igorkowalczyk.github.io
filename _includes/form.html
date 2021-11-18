@@ -8,7 +8,7 @@
    <style>
     .wrap-contact { background-color: #2b2b2b !important; }
    </style>
-   <img src="{{ site.form.banner }}" alt="Form banner" />
+   {% if site.form.banner_url %}<a href="{{ site.form.banner_url }}" class="icon-a"> {% endif %}<img src="{{ site.form.banner }}" alt="Form banner" />{% if site.form.banner_url %}</a>{% endif %}
    {% endif %}
    {% if site.form.hide_html_form == "false" %}
    <form class="contact-form" action="{{ site.form.action }}" method="post" enctype="multipart/form-data">
