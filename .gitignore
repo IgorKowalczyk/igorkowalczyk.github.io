@@ -1,6 +1,11 @@
 _site
 .jekyll-metadata
 .jekyll-cache
+*.gem
+.bundle
+.sass-cache
+Gemfile.lock
+**/.ruby-version
 .DS_Store
 Thumbs.db
 node_modules

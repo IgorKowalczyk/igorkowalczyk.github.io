@@ -25,30 +25,29 @@ url: "https://igorkowalczyk.github.io"
 # Contact E-Mail
 email: "xxmajonezxx@gmail.com"
 
-# Your Wattpad account name
-wattpad: "majonezexe"
-
 # Arc.io key
 arc: "S9mepABR"
 
-# Your Facebook account (with tag if you have)
-# facebook: igor-kowalczyk.0000 / 51144145433434332
-
-# Your Instagram account name
-instagram: majonezexe
-
-# Your Discord account or server (link)
-discord: "https://discord.gg/bVNNHuQ"
-
-# Github username
-github_username: "igorkowalczyk"
-
-# Twitter username
-twitter: "@majonezexe"
-
-# Social Media section (boolean)
 social-media:
  enabled: "true"
+ twitter: "@majonezexe"
+ github_username: "igorkowalczyk"
+ discord: "https://discord.gg/bVNNHuQ"
+ instagram: majonezexe
+ wattpad: "majonezexe"
+ # facebook: igor-kowalczyk.0000 / 51144145433434332
+
+ projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 9
+  exclude:
+   archived: false
+   forks: true
+   projects:
+   # - repo-name
 
 # Display svg decorations (boolean)
 cards:
@@ -56,6 +55,7 @@ cards:
 
 # Extra link on navigation
 blog: "/blog"
+
 # Title of the extra link
 blog-title: "Blog"
 
@@ -102,3 +102,6 @@ wakatime:
  started: "2021" # Year when wakatime started moritoring your code activity
  link: "https://wakatime.com/@Majonezexe" # Your wakatime profile link
  embed: "https://wakatime.com/share/@Majonezexe/6649e5e0-8191-4da7-b51c-8ef035b7e069.svg" # Coding stats embed image in .svg format
+
+ plugins:
+  - jekyll-github-metadata
