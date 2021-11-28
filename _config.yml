@@ -7,8 +7,8 @@ name: "Igor Kowalczyk"
 # Main section title
 section: "Portfolio"
 
- plugins:
-  - "jekyll-github-metadata"
+plugins:
+ - "jekyll-github-metadata"
 
 # Github repository
 repository: igorkowalczyk/igorkowalczyk.github.io
