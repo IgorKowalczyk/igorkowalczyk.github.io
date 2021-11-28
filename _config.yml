@@ -7,6 +7,12 @@ name: "Igor Kowalczyk"
 # Main section title
 section: "Portfolio"
 
+ plugins:
+  - "jekyll-github-metadata"
+
+# Github repository
+repository: igorkowalczyk/igorkowalczyk.github.io
+
 # Your job
 work: "Front-End Developer"
 
@@ -99,6 +105,3 @@ wakatime:
  started: "2021" # Year when wakatime started moritoring your code activity
  link: "https://wakatime.com/@Majonezexe" # Your wakatime profile link
  embed: "https://wakatime.com/share/@Majonezexe/6649e5e0-8191-4da7-b51c-8ef035b7e069.svg" # Coding stats embed image in .svg format
-
- plugins:
-  - jekyll-github-metadata
