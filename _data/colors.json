@@ -1175,6 +1175,10 @@
   "color": "#c22d40",
   "url": "https://github.com/trending?l=Scala"
  },
+ "SCSS": {
+  "color": "#c6538c",
+  "url": "https://github.com/trending?l=Scala"
+ },
  "Scheme": {
   "color": "#1e4aec",
   "url": "https://github.com/trending?l=Scheme"
