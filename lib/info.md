@@ -8,6 +8,8 @@ permalink: 'page-info'
 
 - Path: {{ page.path }}
 - URL: {{ page.url }}
+- Site URL: {{ site.url}}
+- Site Host: {{ site.host }}
 
 ### Time
 
@@ -23,12 +25,12 @@ permalink: 'page-info'
 
 {% for page in site.pages %}
 
-- [{{ site.url || site.host }}/{{ page.path }}]({{ site.url || site.host }}/{{ page.path }})
+- [{{ site.url }}/{{ page.path }}]({{ site.url }}/{{ page.path }})
   {% endfor %}
 
 ## Static Pages
 
 {% for file in site.static_files %}
 
-- [{{ site.url || site.host }}{{ file.path }}]({{ site.url || site.host }}{{ file.path }})
+- [{{ site.url }}{{ file.path }}]({{ site.url }}{{ file.path }})
   {% endfor %}
