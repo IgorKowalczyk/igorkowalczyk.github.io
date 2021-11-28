@@ -45,6 +45,7 @@ layout: "null"
  --primary: #ddd;
  --white: #fff;
  --dark: #0f0f0f;
+ --icon: #586069;
  --link: #000;
  --dark2: #141516;
  --light: #fff;
@@ -82,6 +83,7 @@ layout: "null"
  --white: #222;
  --dark: #fff;
  --link: #fff;
+ --icon: #fff;
  --dark2: #141516;
  --light: #000;
  --grey: rgb(233, 233, 233);
@@ -1372,4 +1374,101 @@ fieldset {
  .background-header-padding-bottom {
   padding-bottom: 0px;
  }
+}
+
+.github-repo-card {
+ text-align: left !important;
+ border-radius: 5px !important;
+ padding: 16px !important;
+ margin-bottom: 16px;
+ background: var(--button);
+ width: 30%;
+ margin: 10px auto;
+}
+
+@media screen and (max-width: 1400px) {
+ .github-repo-card {
+  width: 60%;
+ }
+}
+
+@media screen and (max-width: 800px) {
+ .github-repo-card {
+  width: 80%;
+ }
+}
+
+.github-repo-card img {
+ height: 0;
+}
+
+.github-repo-card a {
+ text-decoration: none;
+}
+
+.github-repo-card .d-flex {
+ display: flex;
+ margin-bottom: 4px;
+ align-items: flex-start;
+ justify-content: space-between;
+}
+
+.github-repo-card h1 {
+ font-size: 18px;
+ line-height: 1.25;
+ margin-top: 4px;
+ margin-bottom: 4px;
+}
+
+.github-repo-card h1 .gh-icon {
+ font-size: 25px;
+}
+
+.github-repo-card h1 span {
+ font-weight: 400;
+}
+
+.github-repo-card .github-repo-text {
+ font-size: 14px;
+ line-height: 21px;
+ display: flex;
+ white-space: normal;
+ margin-bottom: 8px;
+}
+
+.github-repo-card .stats-icons {
+ font-size: 12px;
+}
+
+.github-repo-card .stats-icons a {
+ display: inline-block;
+ color: var(--icon);
+ margin-right: 24px;
+}
+
+.github-repo-card .gh-icon {
+ margin-right: 4px;
+ display: inline-block;
+ fill: var(--icon);
+ height: 16px;
+ vertical-align: middle;
+ position: relative;
+}
+
+.repo-language-color {
+ filter: brightness(125%);
+ border-radius: 50%;
+ display: inline-block;
+ height: 12px;
+ position: relative;
+ top: 2px;
+ width: 12px;
+}
+
+.cards {
+ display: flex;
+ flex-wrap: wrap;
+ padding-top: 50px;
+ max-width: 80%;
+ margin: 0 auto;
 }

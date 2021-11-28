@@ -30,6 +30,7 @@ layout: "default"
  <section class="wrapper">
   {% if site.data.cards %}
   <div class="work-grid">{% include cards.html %}</div>
+  <div class="cards">{% include projects.html %}</div>
   <a target="_blank" href="https://github.com/{{ site.social-media.github_username }}" rel="noopener" style="background-size: 0">
    <button class="contact-form-btn" style="margin-top: 50px">
     <svg alt="Github logo" class="button-svg github-svg-section" height="20" width="20" fill="#fff" stroke="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
@@ -38,10 +39,6 @@ layout: "default"
     Want more projects?
    </button>
   </a>
-
-  {% include projects.html %}
-  
-  
   {% if site.wakatime.enabled == "true" %}
   <div class="section-title">
    <p class="background-header" id="code">Coding stats</p>

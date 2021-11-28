@@ -50,7 +50,7 @@ social-media:
    archived: true
    forks: true
    projects:
-    - fest
+    - "fest"
 
 # Display svg decorations (boolean)
 cards:
