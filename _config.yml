@@ -38,16 +38,13 @@ social-media:
  # facebook: igor-kowalczyk.0000 / 51144145433434332
 
  projects:
-  sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
+  sort_by: stars # pushed / stars
+  limit: 4
   exclude:
-   archived: false
+   archived: true
    forks: true
    projects:
-   # - repo-name
+    - fest
 
 # Display svg decorations (boolean)
 cards:

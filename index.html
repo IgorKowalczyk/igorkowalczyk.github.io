@@ -39,7 +39,10 @@ layout: "default"
    </button>
   </a>
 
-  {% include projects.html %} {% if site.wakatime.enabled == "true" %}
+  {% include projects.html %}
+  
+  
+  {% if site.wakatime.enabled == "true" %}
   <div class="section-title">
    <p class="background-header" id="code">Coding stats</p>
   </div>

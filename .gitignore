@@ -4,7 +4,6 @@ _site
 *.gem
 .bundle
 .sass-cache
-Gemfile.lock
 **/.ruby-version
 .DS_Store
 Thumbs.db
