@@ -30,6 +30,9 @@ layout: "default"
  <section class="wrapper">
   {% if site.data.cards %}
   <div class="work-grid">{% include cards.html %}</div>
+  <div class="section-title">
+   <p class="background-header background-header-padding-top" style="transform: rotate(4deg)" id="code">Want even more?</p>
+  </div>
   <div class="cards">{% include projects.html %}</div>
   <a target="_blank" href="https://github.com/{{ site.social-media.github_username }}" rel="noopener" style="background-size: 0">
    <button class="contact-form-btn" style="margin-top: 50px">
@@ -57,10 +60,6 @@ layout: "default"
     View more stats!
    </button>
   </a>
-  <div class="section-title">
-   <p class="background-header background-header-padding-top" style="transform: rotate(4deg)" id="code">Want even more?</p>
-  </div>
-
   {% endif %} {% endif %} {% if site.form.enabled == "true" %} {% include form.html %} {% endif %}
  </section>
 </section>
