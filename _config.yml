@@ -82,6 +82,7 @@ theme: minima
 exclude:
  - Gemfile
  - Gemfile.lock
+ - [vendor]
 
 # Contact form
 form:
