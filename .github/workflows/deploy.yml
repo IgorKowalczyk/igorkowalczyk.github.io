@@ -1,17 +1,17 @@
 name: Jekyll Deploy
 
 on:
- push:
-  branches: [master]
  schedule:
   - cron: "0 * * * *"
+ push:
+  branches: [master]
 
 jobs:
-  build:
+ build:
   name: ✨ Jekyll build
   runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+  steps:
+   - uses: actions/checkout@v2
+   - uses: helaili/jekyll-action@v2
+     with:
+      token: ${{ secrets.GITHUB_TOKEN }}
