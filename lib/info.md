@@ -1,7 +1,7 @@
 ---
 layout: 'default'
 block: 'true'
-permalink: 'page-info'
+permalink: 'info'
 ---
 
 # Site Info
