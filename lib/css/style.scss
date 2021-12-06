@@ -1347,7 +1347,6 @@ fieldset {
  background: #2b2b2b;
  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
 }
-
 .background-header {
  margin-bottom: 0;
  padding-bottom: 0;
@@ -1360,24 +1359,12 @@ fieldset {
  background-size: 200%;
  background-position: 100% 0;
 }
-
 .background-header-padding-top {
  padding-top: 50px;
 }
-
 .background-header-padding-bottom {
  padding-bottom: 50px;
 }
-
-@media screen and (max-width: 590px) {
- .background-header-padding-top {
-  padding-top: 0px;
- }
- .background-header-padding-bottom {
-  padding-bottom: 0px;
- }
-}
-
 .github-repo-card {
  text-align: left !important;
  border-radius: 5px !important;
@@ -1386,77 +1373,54 @@ fieldset {
  background: var(--gh-card);
  width: 30%;
  margin: 10px auto;
-}
-
-@media screen and (max-width: 1400px) {
- .github-repo-card {
-  width: 60%;
+ img {
+  height: 0;
+ }
+ a {
+  text-decoration: none;
+ }
+ .d-flex {
+  display: flex;
+  margin-bottom: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+ }
+ h1 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  .gh-icon {
+   font-size: 25px;
+  }
+  span {
+   font-weight: 400;
+  }
+ }
+ .github-repo-text {
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  white-space: normal;
+  margin-bottom: 8px;
+ }
+ .stats-icons {
+  font-size: 12px;
+  a {
+   display: inline-block;
+   color: var(--icon);
+   margin-right: 24px;
+  }
+ }
+ .gh-icon {
+  margin-right: 4px;
+  display: inline-block;
+  fill: var(--icon);
+  height: 16px;
+  vertical-align: middle;
+  position: relative;
  }
 }
-
-@media screen and (max-width: 800px) {
- .github-repo-card {
-  width: 80%;
- }
-}
-
-.github-repo-card img {
- height: 0;
-}
-
-.github-repo-card a {
- text-decoration: none;
-}
-
-.github-repo-card .d-flex {
- display: flex;
- margin-bottom: 4px;
- align-items: flex-start;
- justify-content: space-between;
-}
-
-.github-repo-card h1 {
- font-size: 18px;
- line-height: 1.25;
- margin-top: 4px;
- margin-bottom: 4px;
-}
-
-.github-repo-card h1 .gh-icon {
- font-size: 25px;
-}
-
-.github-repo-card h1 span {
- font-weight: 400;
-}
-
-.github-repo-card .github-repo-text {
- font-size: 14px;
- line-height: 21px;
- display: flex;
- white-space: normal;
- margin-bottom: 8px;
-}
-
-.github-repo-card .stats-icons {
- font-size: 12px;
-}
-
-.github-repo-card .stats-icons a {
- display: inline-block;
- color: var(--icon);
- margin-right: 24px;
-}
-
-.github-repo-card .gh-icon {
- margin-right: 4px;
- display: inline-block;
- fill: var(--icon);
- height: 16px;
- vertical-align: middle;
- position: relative;
-}
-
 .repo-language-color {
  filter: brightness(125%);
  border-radius: 50%;
@@ -1466,7 +1430,6 @@ fieldset {
  top: 2px;
  width: 12px;
 }
-
 .cards {
  display: flex;
  flex-wrap: wrap;
@@ -1474,7 +1437,40 @@ fieldset {
  max-width: 80%;
  margin: 0 auto;
 }
-
+.scroll-section {
+ position: absolute;
+ bottom: 0;
+ margin-bottom: 15px;
+ &:hover {
+  background-size: 0%;
+  svg {
+   fill: #fff !important;
+   color: #fff !important;
+  }
+ }
+ &:svg {
+  fill: #fff !important;
+  color: #fff !important;
+ }
+}
+@media screen and (max-width: 590px) {
+ .background-header-padding-top {
+  padding-top: 0px;
+ }
+ .background-header-padding-bottom {
+  padding-bottom: 0px;
+ }
+}
+@media screen and (max-width: 1400px) {
+ .github-repo-card {
+  width: 60%;
+ }
+}
+@media screen and (max-width: 800px) {
+ .github-repo-card {
+  width: 80%;
+ }
+}
 @media (max-width: 780px) {
  .even-more {
   margin-top: -20rem;

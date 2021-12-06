@@ -18,6 +18,13 @@ layout: "default"
    <div class="social-media">{% include social-media.html %} {% endif %}</div>
   </div>
  </div>
+ {% if site.section %}
+ <a class="scroll-section" href="#{{ site.section }}"
+  ><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 0 24 24" width="34px" fill="#fff">
+   <path d="M0 0h24v24H0z" fill="none" />
+   <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" /></svg
+ ></a>
+ {% endif %}
 </section>
 <section class="work-section">
  <div class="section-title">
