@@ -6,8 +6,10 @@ layout: "null"
  font-family: "Poppins";
  font-style: normal;
  font-weight: 200;
+ font-display: block;
  src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf");
 }
+
 @keyframes fade {
  0% {
   opacity: 0;
