@@ -60,6 +60,7 @@ layout: "null"
  --f4f4f4: #f4f4f4;
  --darkgrey: #222;
  --border: 33, 33, 33, 0.5;
+ --gh-card: rgba(227, 227, 227, 0.8);
  --button: rgba(227, 227, 227, 0.8);
  --button-hover: rgba(227, 227, 227, 0.5);
  --button-text: #000;
@@ -97,6 +98,7 @@ layout: "null"
  --f4f4f4: #4a4a4a;
  --darkgrey: #fff;
  --border: 255, 255, 255, 0.1;
+ --gh-card: #2b2b2b;
  --button: #404040;
  --button-hover: #4a4a4a;
  --button-text: #fff;
@@ -1381,7 +1383,7 @@ fieldset {
  border-radius: 5px !important;
  padding: 16px !important;
  margin-bottom: 16px;
- background: var(--button);
+ background: var(--gh-card);
  width: 30%;
  margin: 10px auto;
 }
