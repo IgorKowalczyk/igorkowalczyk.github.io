@@ -78,11 +78,7 @@ encoding: utf-8
 markdown: kramdown
 theme: minima
 
-# Exlude files/folder
-exclude:
- - Gemfile
- - Gemfile.lock
- - [vendor]
+exclude: [vendor]
 
 # Contact form
 form:
