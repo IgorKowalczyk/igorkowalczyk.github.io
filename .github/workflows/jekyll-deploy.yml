@@ -15,5 +15,5 @@ jobs:
    - uses: actions/checkout@v2
    - uses: helaili/jekyll-action@v2
      with:
-      token: ${{ secrets.JEKYLL_WORKFLOW_TOKEN }}
+      token: ${{ secrets.JEKYLL_WORKFLOW_TOKEN_2 }}
       target_branch: "gh-pages"
