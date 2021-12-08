@@ -13,7 +13,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v2
-   - uses: helaili/jekyll-action@v2
+   - uses: IgorKowalczykBot/jekyll-action@master
      with:
       token: ${{ secrets.JEKYLL_WORKFLOW_TOKEN_2 }}
       target_branch: "gh-pages"
