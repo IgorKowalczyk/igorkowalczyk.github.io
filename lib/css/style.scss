@@ -499,24 +499,24 @@ footer {
   box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-  .card-image {
-   img {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    transition: 350ms all;
-   }
-  }
-  .card-bio {
-   -webkit-transform: translateY(0);
-   transform: translateY(0);
-   opacity: 1;
-  }
-  .card-footer {
-   -webkit-transform: translateY(0);
-   transform: translateY(0);
-   opacity: 1;
-  }
  }
+}
+.card-image {
+ img {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 350ms all;
+ }
+}
+.card-bio {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+.card-footer {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
 }
 .card-image {
  position: absolute;
