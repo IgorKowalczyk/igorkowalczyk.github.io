@@ -501,47 +501,6 @@ footer {
   transform: scale(1.1, 1.1);
  }
 }
-.card-image {
- img {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  transition: 350ms all;
- }
-}
-.card-bio {
- -webkit-transform: translateY(0);
- transform: translateY(0);
- opacity: 1;
-}
-.card-footer {
- -webkit-transform: translateY(0);
- transform: translateY(0);
- opacity: 1;
-}
-.card-image {
- position: absolute;
- top: 0;
- left: 0;
- z-index: -1;
- overflow: hidden;
- display: block;
- width: 100%;
- height: 100%;
- pointer-events: none;
- background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.5)) !important;
- img {
-  -webkit-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 350ms all;
-  filter: brightness(30%);
-  object-fit: cover;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
- }
-}
 .svg-card {
  display: grid;
  z-index: -50;
@@ -735,6 +694,47 @@ footer {
     transform: scale(1.3, 1.3);
    }
   }
+ }
+}
+.card-image {
+ img {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 350ms all;
+ }
+}
+.card-bio {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+.card-footer {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+.card-image {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ overflow: hidden;
+ display: block;
+ width: 100%;
+ height: 100%;
+ pointer-events: none;
+ background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.5)) !important;
+ img {
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 350ms all;
+  filter: brightness(30%);
+  object-fit: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
  }
 }
 ::-webkit-scrollbar {
