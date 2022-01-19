@@ -30,12 +30,12 @@ layout: "default"
         <div class="slider round"></div>
        </label>
       </div>
-      <div class="option-description">Light/Dark Mode</div>
+      <div class="option-description">Dark/Light Mode</div>
      </li>
     </ul>
     <p>
      (c)
-     <noscript>{{ site.first-launch }}</noscript><span class="date"></span>
+     <noscript>{{ site.first-launch }}</noscript><span class="date">{{ 'now' | date: "%Y" }}</span>
      {{ site.name | upcase }}
     </p>
     <p>This site uses cookies.</p>
