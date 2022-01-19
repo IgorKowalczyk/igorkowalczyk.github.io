@@ -53,8 +53,7 @@ layout: "default"
   <div class="section-title">
    <p class="background-header" id="code">Coding stats</p>
   </div>
-  <p style="margin-top: 0">{{ site.wakatime.started }} - Current</p>
-  <!-- Yea, To current date because 2021 - 2021 looks weird rn XD -->
+  <p style="margin-top: 0">{{ site.wakatime.started }} - {{ 'now' | date: "%Y" }}</p>
   <figure class="wakatime">
    <embed src="{{ site.wakatime.embed }}" />
   </figure>
