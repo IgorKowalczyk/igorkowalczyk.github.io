@@ -46,6 +46,7 @@ layout: "null"
  --text: #000;
  --primary: #ddd;
  --white: #fff;
+ --nav-rgba: 255, 255, 255, 0.9;
  --dark: #0f0f0f;
  --icon: #586069;
  --link: #000;
@@ -80,10 +81,12 @@ layout: "null"
  --placeholder: #333;
  --gradient: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
 }
+
 [data-theme="dark"] {
  --text: #fff;
  --primary: #ddd;
  --white: #222;
+ --nav-rgba: 34, 34, 34, 0.9;
  --dark: #fff;
  --link: #fff;
  --icon: #fff;
@@ -264,7 +267,7 @@ body {
 }
 .nav.nav-scrolled {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
- background: var(--white);
+ background: rgba(--var(nav-rgba));
 }
 [hidden] {
  display: none;
