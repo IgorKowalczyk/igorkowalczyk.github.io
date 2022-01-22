@@ -12,7 +12,7 @@ layout: "default"
    {% if site.section %}
    <div class="buttons" style="margin-bottom: 30px">
     <a href="#{{ site.section }}" class="link-button no-fade">Projects</a>
-    <a class="link-button link-button-disabled" aria-label="Soon" title="Soon!">Resume</a>
+    <a class="link-button link-button-disabled" aria-label="Soon" title="Soon!">Résumé</a>
    </div>
    {% endif %} {% endif %} {% if site.social-media.enabled == "true" %}
    <div class="social-media">{% include social-media.html %} {% endif %}</div>
@@ -31,7 +31,7 @@ layout: "default"
   {% if site.section %}
   <p class="background-header header-section" id="{{ site.section }}">{{ site.section }}</p>
   {% if site.social-media.github_username %} {% if site.data.cards %}
-  <span style="font-size: 18px">✨ Note: Hover card to see more! ✨</span>
+  <span style="font-size: 18px">✨ Note: Click buttons to see more! ✨</span>
   {% endif %} {% endif %} {% endif %}
  </div>
  <section class="wrapper">
@@ -53,8 +53,7 @@ layout: "default"
   <div class="section-title">
    <p class="background-header" id="code">Coding stats</p>
   </div>
-  <p style="margin-top: 0">{{ site.wakatime.started }} - Current</p>
-  <!-- Yea, To current date because 2021 - 2021 looks weird rn XD -->
+  <p style="margin-top: 0">{{ site.wakatime.started }} - {{ 'now' | date: "%Y" }}</p>
   <figure class="wakatime">
    <embed src="{{ site.wakatime.embed }}" />
   </figure>

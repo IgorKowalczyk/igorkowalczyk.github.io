@@ -46,6 +46,7 @@ layout: "null"
  --text: #000;
  --primary: #ddd;
  --white: #fff;
+ --nav-rgba: 255, 255, 255, 0.9;
  --dark: #0f0f0f;
  --icon: #586069;
  --link: #000;
@@ -80,10 +81,12 @@ layout: "null"
  --placeholder: #333;
  --gradient: linear-gradient(45deg, #23314c 25%, #6845aa 50%, #23314c 75%, #6845aa);
 }
+
 [data-theme="dark"] {
  --text: #fff;
  --primary: #ddd;
  --white: #222;
+ --nav-rgba: 34, 34, 34, 0.9;
  --dark: #fff;
  --link: #fff;
  --icon: #fff;
@@ -264,7 +267,7 @@ body {
 }
 .nav.nav-scrolled {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
- background: var(--white);
+ background: rgba(var(--nav-rgba));
 }
 [hidden] {
  display: none;
@@ -496,47 +499,6 @@ footer {
   box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-  .card-image {
-   img {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    transition: 350ms all;
-   }
-  }
-  .card-bio {
-   -webkit-transform: translateY(0);
-   transform: translateY(0);
-   opacity: 1;
-  }
-  .card-footer {
-   -webkit-transform: translateY(0);
-   transform: translateY(0);
-   opacity: 1;
-  }
- }
-}
-.card-image {
- position: absolute;
- top: 0;
- left: 0;
- z-index: -1;
- overflow: hidden;
- display: block;
- width: 100%;
- height: 100%;
- pointer-events: none;
- background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.5)) !important;
- img {
-  -webkit-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 350ms all;
-  filter: brightness(30%);
-  object-fit: cover;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
  }
 }
 .svg-card {
@@ -732,6 +694,47 @@ footer {
     transform: scale(1.3, 1.3);
    }
   }
+ }
+}
+.card-image {
+ img {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 350ms all;
+ }
+}
+.card-bio {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+.card-footer {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+.card-image {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ overflow: hidden;
+ display: block;
+ width: 100%;
+ height: 100%;
+ pointer-events: none;
+ background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.5)) !important;
+ img {
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 350ms all;
+  filter: brightness(30%);
+  object-fit: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
  }
 }
 ::-webkit-scrollbar {
@@ -1371,6 +1374,7 @@ fieldset {
  border-radius: 5px !important;
  padding: 16px !important;
  margin-bottom: 16px;
+ box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
  background: var(--gh-card);
  width: 30%;
  margin: 10px auto;

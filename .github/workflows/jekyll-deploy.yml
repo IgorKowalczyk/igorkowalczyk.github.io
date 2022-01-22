@@ -16,4 +16,4 @@ jobs:
    - uses: IgorKowalczykBot/jekyll-action@master
      with:
       token: ${{ secrets.JEKYLL_WORKFLOW_TOKEN_2 }}
-      target_branch: "gh-pages"
+      target_branch: "build"
