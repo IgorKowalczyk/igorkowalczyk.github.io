@@ -7,7 +7,7 @@ layout: "null"
  font-style: normal;
  font-weight: 200;
  font-display: block;
- src: url("{{ site.url}}{{ site.baseurl }}/lib/fonts/Poppins-ExtraLight.ttf");
+ src: url("{{ site.url}}{{ site.baseurl }}/src/fonts/Poppins-ExtraLight.ttf");
 }
 
 @keyframes fade {
@@ -363,7 +363,7 @@ nav {
  text-align: center;
  background-attachment: fixed;
  background-position: center;
- background-image: radial-gradient(circle, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0.43) 67%), url(/lib/pics/background.jpg);
+ background-image: radial-gradient(circle, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0.43) 67%), url(/src/pics/background.jpg);
  width: 100%;
  height: 100vh;
  color: var(--light);

@@ -11,7 +11,7 @@
 
 ---
 
-[![Portfolio](https://raw.githubusercontent.com/IgorKowalczyk/igorkowalczyk.github.io/master/lib/pics/readme/portfolio.png)](https://igorkowalczyk.github.io)
+[![Portfolio](https://raw.githubusercontent.com/IgorKowalczyk/igorkowalczyk.github.io/master/src/pics/readme/portfolio.png)](https://igorkowalczyk.github.io)
 
 ### 🚀 Features
  - ⚙️ Fully customizable
@@ -34,10 +34,10 @@ technology: "What technology or language did you use"
 description: "Short description"
 url: "url to the project site (if exists)"
 git: "name of the project repo (if exists)"
-background: "Card background (from /lib/pics)"
-background_data: "Card background data (from /lib/pics)"
+background: "Card background (from /src/pics)"
+background_data: "Card background data (from /src/pics)"
 background-alt: "Card background alt"
-second-background: "Secount background (from /lib/svg/)"
+second-background: "Secount background (from /src/svg/)"
 second-background-alt: "Secound background alt"
 effect: "color"
 ```
