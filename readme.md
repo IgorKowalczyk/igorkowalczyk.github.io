@@ -6,7 +6,7 @@
 [![Jekyll](https://img.shields.io/github/deployments/igorkowalczyk/igorkowalczyk.github.io/github-pages?label=Deploy&style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square&label=License)](https://igorkowalczyk.github.io/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Version)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=fff&label=Discord)](https://majobot.igorkowalczyk.repl.co/server)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=fff&label=Discord)](https://igorkowalczyk.github.io/r/discord-server)
 <br><br><br>
 
 ---
