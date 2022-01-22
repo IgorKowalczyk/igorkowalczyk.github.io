@@ -9,6 +9,7 @@ section: "Portfolio"
 
 plugins:
  - "jekyll-github-metadata"
+ - jekyll-redirect-from
 
 # Github repository
 repository: igorkowalczyk/igorkowalczyk.github.io

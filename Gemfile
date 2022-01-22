@@ -4,6 +4,7 @@ source "http://rubygems.org"
 ruby RUBY_VERSION
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-github-metadata"
+gem "jekyll-redirect-from"
 gem "jekyll"
 gem "minima"
 
