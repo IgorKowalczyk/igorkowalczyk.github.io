@@ -1,6 +1,12 @@
 const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
-localStorage.setItem("theme", "dark"); // Default theme
-const currenttheme = localStorage.getItem("theme");
+//localStorage.setItem("theme", "dark"); // Default theme
+//const currenttheme = localStorage.getItem("theme");
+if(localStorage.getItem("theme")) {
+currenttheme = localStorage.getItem("theme");
+} else {
+currenttheme = "dark";
+}
+
 if (currenttheme) {
  document.documentElement.setAttribute("data-theme", currenttheme);
  if (currenttheme === "dark") {
