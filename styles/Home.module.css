@@ -22,4 +22,12 @@
  box-decoration-break: clone;
  font-size: 3rem;
  font-weight: 600;
+ margin: 0;
+}
+
+.mainTitle {
+ border: 1px solid rgb(255 255 255 / 15%);
+ padding: 30px;
+ border-radius: 10px;
+ background: -webkit-linear-gradient(-70deg, #a2facf09 0%, #64acff0d 100%);
 }
