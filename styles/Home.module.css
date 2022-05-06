@@ -11,10 +11,6 @@
  justify-content: center;
  align-items: center;
  padding: 10%;
- background-image: url("/svg/background-circle.svg");
- background-repeat: no-repeat;
- background-position: center center;
- background-size: contain;
 }
 
 .title {
