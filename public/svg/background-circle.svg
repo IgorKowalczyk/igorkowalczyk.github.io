@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1394px" height="1394px" viewBox="0 0 1394 1394" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <linearGradient x1="19.2472317%" y1="12.9703592%" x2="98.4657532%" y2="41.6914392%" id="linearGradient-1">
-            <stop stop-color="#1F2E3A" offset="0%"></stop>
-            <stop stop-color="#192534" stop-opacity="0.332427536" offset="100%"></stop>
-        </linearGradient>
-        <circle id="path-2" cx="696" cy="696" r="696"></circle>
-    </defs>
-    <g id="landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Landing" transform="translate(-23.000000, -186.000000)">
-            <g id="background-circle" transform="translate(24.000000, 187.000000)">
-                <g id="Oval" fill-rule="nonzero">
-                    <use stroke="#212F3C" xlink:href="#path-2"></use>
-                    <use stroke="url(#linearGradient-1)" xlink:href="#path-2"></use>
-                </g>
-                <circle id="Oval" stroke="#293542" fill-rule="nonzero" cx="694" cy="700" r="500"></circle>
-                <g id="dots" transform="translate(5.000000, 119.000000)">
-                    <circle id="Oval" fill="#F35353" cx="209" cy="75" r="4"></circle>
-                    <circle id="Oval" fill="#F1F2F3" cx="1118" cy="325" r="4"></circle>
-                    <circle id="Oval" fill="#F1F2F3" cx="1326" cy="865" r="4"></circle>
-                    <circle id="Oval" fill="#F1F2F3" cx="218" cy="415" r="4"></circle>
-                    <circle id="Oval" fill="#01E6CE" cx="1086" cy="4" r="4"></circle>
-                    <circle id="Oval" fill="#F35353" opacity="0.300000012" cx="1374" cy="444" r="4"></circle>
-                    <circle id="Oval" fill="#01E6CE" opacity="0.200000003" cx="4" cy="462" r="4"></circle>
-                    <circle id="Oval" fill="#F35353" opacity="0.771512681" cx="240" cy="802" r="4"></circle>
-                    <circle id="Oval" fill="#27A196" opacity="0.771512681" cx="1177" cy="692" r="3"></circle>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg version="1.1" viewBox="0 0 1394 1394" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="b" x1="19.247%" x2="98.466%" y1="12.97%" y2="41.691%">
+<stop stop-color="#1F2E3A" offset="0"/>
+<stop stop-color="#192534" stop-opacity=".33243" offset="1"/>
+</linearGradient>
+<circle id="a" cx="696" cy="696" r="696"/>
+</defs>
+<g fill="none" fill-rule="evenodd">
+<g transform="translate(-23 -186)">
+<g transform="translate(24 187)">
+<g id="Oval" fill-rule="nonzero">
+<use stroke="#212F3C" xlink:href="#a"/>
+<use stroke="url(#b)" xlink:href="#a"/>
+</g>
+<circle id="Oval" cx="694" cy="700" r="500" fill-rule="nonzero" stroke="#293542"/>
+<g transform="translate(5 119)">
+<circle id="Oval" cx="209" cy="75" r="4" fill="#F35353"/>
+<circle id="Oval" cx="1118" cy="325" r="4" fill="#F1F2F3"/>
+<circle id="Oval" cx="1326" cy="865" r="4" fill="#F1F2F3"/>
+<circle id="Oval" cx="218" cy="415" r="4" fill="#F1F2F3"/>
+<circle id="Oval" cx="1086" cy="4" r="4" fill="#01E6CE"/>
+<circle id="Oval" cx="1374" cy="444" r="4" fill="#F35353" opacity=".3"/>
+<circle id="Oval" cx="4" cy="462" r="4" fill="#01E6CE" opacity=".2"/>
+<circle id="c" cx="240" cy="802" r="4" fill="#F35353" opacity=".77151"/>
+<circle cx="1177" cy="692" r="3" fill="#27A196" opacity=".77151"/>
+</g>
+</g>
+</g>
+</g>
 </svg>
