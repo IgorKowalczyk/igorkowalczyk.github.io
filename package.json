@@ -5,7 +5,6 @@
  "scripts": {
   "dev": "jekyll serve --livereload",
   "build": "bundle exec jekyll serve",
-  "api": "node api/api.js",
   "format": "prettier --write . --ignore-unknown",
   "format:check": "prettier --check ."
  },

@@ -2,45 +2,7 @@
 layout: "null"
 ---
 
-@font-face {
- font-family: "Poppins";
- font-style: normal;
- font-weight: 200;
- font-display: block;
- src: url("{{ site.url}}{{ site.baseurl }}/src/fonts/Poppins-ExtraLight.ttf");
-}
-
-@keyframes fade {
- 0% {
-  opacity: 0;
- }
- 100% {
-  opacity: 1;
- }
-}
-@keyframes spin {
- from {
-  transform: rotate(0);
- }
- to {
-  transform: rotate(360deg);
- }
-}
-@keyframes ico {
- from {
-  transform: rotateY(0);
- }
- to {
-  transform: rotateY(360deg);
- }
-}
-
-:target::before {
- content: "";
- display: block;
- height: 120px;
- margin: -120px 0 0;
-}
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 :root {
  --text: #000;
@@ -121,6 +83,39 @@ layout: "null"
  --placeholder: #fff;
  --gradient: linear-gradient(45deg, #f8f8f8 25%, #c9c5d2 50%, #1eae98 75%, #e9f2f0);
 }
+
+@keyframes fade {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+@keyframes spin {
+ from {
+  transform: rotate(0);
+ }
+ to {
+  transform: rotate(360deg);
+ }
+}
+@keyframes ico {
+ from {
+  transform: rotateY(0);
+ }
+ to {
+  transform: rotateY(360deg);
+ }
+}
+
+:target::before {
+ content: "";
+ display: block;
+ height: 120px;
+ margin: -120px 0 0;
+}
+
 .no-js {
  background: #f44336;
  font-family: "Poppins";
