@@ -1,5 +1,6 @@
 {
  "name": "igorkowalczyk-portfolio",
+ "description": "My portfolio built on Next.js",
  "version": "2.0.1",
  "private": true,
  "scripts": {
@@ -19,5 +20,15 @@
   "eslint": "8.14.0",
   "eslint-config-next": "12.1.6",
   "prettier": "^2.6.2"
- }
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
+ },
+ "author": "Igor Kowalczyk",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
+ },
+ "homepage": "https://igorkowalczyk.github.io"
 }
