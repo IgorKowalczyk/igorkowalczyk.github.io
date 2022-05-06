@@ -1,7 +1,18 @@
+import { Helmet } from "react-helmet";
 import "../styles/globals.css";
+import main_package from "../package.json";
 
-function MyApp({ Component, pageProps }) {
- return <Component {...pageProps} />;
+function app({ Component, pageProps }) {
+ return (
+  <>
+   <Helmet>
+    <title>Igor Kowalczyk - Soon!</title>
+    <meta name="description" content={main_package.description} />
+    <link rel="icon" href="/favicon.ico" />
+   </Helmet>
+   <Component {...pageProps} />
+  </>
+ );
 }
 
-export default MyApp;
+export default app;
