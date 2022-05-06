@@ -1,20 +1,23 @@
 {
-  "name": "igorkowalczyk-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
-  },
-  "devDependencies": {
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.6"
-  }
+ "name": "igorkowalczyk-portfolio",
+ "version": "2.0.1",
+ "private": true,
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "format": "prettier --write . --ignore-unknown",
+  "format:check": "prettier --check ."
+ },
+ "dependencies": {
+  "next": "12.1.6",
+  "react": "18.1.0",
+  "react-dom": "18.1.0"
+ },
+ "devDependencies": {
+  "eslint": "8.14.0",
+  "eslint-config-next": "12.1.6",
+  "prettier": "^2.6.2"
+ }
 }
