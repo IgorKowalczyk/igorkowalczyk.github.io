@@ -5,7 +5,7 @@ export default function main() {
   <div className={styles.container}>
    <main className={styles.main}>
     <div className={styles.mainTitle}>
-    <h1 className={styles.title}>Igor Kowalczyk - Soon!</h1>
+     <h1 className={styles.title}>Igor Kowalczyk - Soon!</h1>
     </div>
    </main>
   </div>
