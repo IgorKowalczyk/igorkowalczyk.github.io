@@ -1,3 +1,7 @@
 {
- "extends": "next/core-web-vitals"
+ "extends": "next",
+ "rules": {
+  "react/prop-types": 0,
+  "react/no-unescaped-entities": 0
+ }
 }
