@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet";
 import "../styles/globals.css";
 import main_package from "../package.json";
-import { pageView } from "../lib/analytics";
+import { UseAnalytics } from "../lib/analytics";
+import React, { useState, useEffect } from "react";
 
 function app({ Component, pageProps }) {
- pageView();
+ UseAnalytics();
  return (
   <>
    <Helmet>

@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 
 export function middleware(NextRequest, NextFetchEvent) {
  const ContentSecurityPolicy = `
-    default-src 'self' *.googletagmanager.com;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.googletagmanager.com arc.io static.arc.io;
+    default-src 'self' *.googletagmanager.com *.arc.io;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
