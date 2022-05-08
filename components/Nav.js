@@ -25,7 +25,7 @@ export default function Nav() {
   <div className="font-poppins fixed mt-0 top-0 w-full z-[100] backdrop-blur-[8px] mx-0 shadow-2xl">
    <nav className="border-b-[1px] border-white/[15%] bg-white dark:bg-[#08152b] dark:bg-opacity-70 flex items-center justify-between w-full relative mx-auto pt-4 pb-4">
     <NextLink href="/">
-     <a href="/">
+     <a>
       <h1 className=" mx-8 text-white font-bold font-poppins text-lg">Igor Kowalczyk</h1>
      </a>
     </NextLink>
