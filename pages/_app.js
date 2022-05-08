@@ -1,23 +1,16 @@
-import { Helmet } from "react-helmet";
-import "../styles/globals.css";
-import main_package from "../package.json";
-import { UseAnalytics } from "../lib/analytics";
-import React, { useState, useEffect } from "react";
+import { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
+import { SessionProvider } from "next-auth/react";
+import "@styles/globals.css";
+import { UseAnalytics } from "@lib/analytics";
 
-function app({ Component, pageProps }) {
+export default function App({ Component, pageProps } = AppProps) {
  UseAnalytics();
  return (
-  <>
-   <Helmet>
-    <title>Igor Kowalczyk - Soon!</title>
-    <meta name="description" content={main_package.description} />
-    <meta name="theme-color" content="#5865F2" />
-    <meta name="msapplication-TileColor" content="#5865F2" />
-    <link rel="icon" href="/favicon.ico" />
-   </Helmet>
-   <Component {...pageProps} />
-  </>
+  <SessionProvider session={pageProps.session}>
+   <ThemeProvider attribute="class">
+    <Component {...pageProps} />
+   </ThemeProvider>
+  </SessionProvider>
  );
 }
-
-export default app;

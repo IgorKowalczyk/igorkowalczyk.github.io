@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +12,35 @@ body {
  -moz-osx-font-smoothing: grayscale;
 }
 
+@supports not (backdrop-filter: none) {
+ nav {
+  backdrop-filter: none;
+  @apply bg-opacity-100;
+ }
+}
+
 * {
  box-sizing: border-box;
+ scrollbar-color: #08152b transparent;
+ scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+ width: 10px;
+}
+
+::-webkit-scrollbar-track {
+ background: #040d21;
+}
+
+::-webkit-scrollbar-thumb {
+ background: #1f2532;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background: #292f3d;
+}
+
+::-webkit-scrollbar-thumb:active {
+ background: #343b4a;
 }
