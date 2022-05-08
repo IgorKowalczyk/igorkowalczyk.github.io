@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
+module.exports = {
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
  poweredByHeader: false,
@@ -14,4 +14,7 @@ const nextConfig = {
  },
 };
 
-module.exports = nextConfig;
+module.exports = require('@next/bundle-analyzer')({
+ enabled: process.env.ANALYZE === 'true',
+ reactStrictMode: true,
+})
