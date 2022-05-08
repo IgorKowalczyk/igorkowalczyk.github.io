@@ -10,7 +10,7 @@ function NavItem({ href, text, target }) {
  const isActive = router.asPath.slice(0, -1) === href.slice(0, -1);
  return (
   <NextLink href={href}>
-   <a target={target} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-all")}>
+   <a target={target} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
     <span>{text}</span>
    </a>
   </NextLink>
@@ -22,33 +22,33 @@ export default function Nav() {
  const { resolvedTheme, setTheme } = useTheme();
  useEffect(() => setMounted(true), []);
  return (
-  <div className="font-poppins fixed mt-0 top-0 w-full z-[100] backdrop-blur-[8px] mx-0 shadow-2xl">
-   <nav className="border-b-[1px] border-white/[15%] bg-white dark:bg-[#08152b] dark:bg-opacity-70 flex items-center justify-between w-full relative mx-auto pt-4 pb-4">
+  <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow-2xl backdrop-blur-[8px]">
+   <nav className="relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white pt-4 pb-4 dark:bg-[#08152b] dark:bg-opacity-70">
     <NextLink href="/">
      <a>
-      <h1 className=" mx-8 text-white font-bold font-poppins text-lg">Igor Kowalczyk</h1>
+      <h1 className=" mx-8 font-poppins text-lg font-bold text-white">Igor Kowalczyk</h1>
      </a>
     </NextLink>
 
     <div className="mr-auto">
      {config.nav.left.map((item) => {
-      return <NavItem href={item.href} text={item.title} key={item.href}/>;
+      return <NavItem href={item.href} text={item.title} key={item.href} />;
      })}
     </div>
     <div className="ml-auto">
      {config.nav.right.map((item) => {
       return (
        <NextLink href={item.href} key={item.key}>
-        <a href={item.href} target={item.target || "_self"} className="font-normal text-gray-600 dark:text-gray-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
+        <a href={item.href} target={item.target || "_self"} className="hidden rounded-lg p-1 font-normal text-gray-600 transition-all hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block">
          {item.title}
         </a>
        </NextLink>
       );
      })}
     </div>
-    <button aria-label="Toggle Dark Mode" type="button" className="mx-8 w-9 h-9 bg-gray-200 rounded-lg dark:bg-white/10 flex items-center justify-center ring-gray-300  transition-all" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+    <button aria-label="Toggle Dark Mode" type="button" className="mx-8 flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-300 transition-all  dark:bg-white/10" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
      {mounted && (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-gray-800 dark:text-gray-200">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5 text-gray-800 dark:text-gray-200">
        {resolvedTheme === "dark" ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />}
       </svg>
      )}

@@ -11,7 +11,7 @@ export default function LinkButton({ href, text, theme }) {
  };
  return (
   <Link href={href}>
-   <a className={themes[theme] + " mt-5 transition ease-in-out duration-200 p-2 rounded-[5px] border-[1px] font-poppins font-semibold text-center flex items-center justify-center"}>{text}</a>
+   <a className={themes[theme] + " mt-5 flex items-center justify-center rounded-[5px] border-[1px] p-2 text-center font-poppins font-semibold transition duration-200 ease-in-out"}>{text}</a>
   </Link>
  );
 }

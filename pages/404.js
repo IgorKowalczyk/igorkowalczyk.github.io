@@ -4,12 +4,12 @@ import Container from "@components/Container";
 export default function not_found() {
  return (
   <Container>
-   <main className="flex-1 flex flex-col bg-[#040d21] justify-center items-center min-h-screen">
-    <div className="p-[30px] rounded-[10px] border-[1px] border-white/[15%] bg-gradient-to-r from-[#a2facf09] to-[#64acff0d]">
-     <h1 className="font-poppins bg-clip-text mt-0 mx-0 text-[2.2rem] bg-gradient-to-r from-[#ff7170] to-[#ffe57f] box-decoration-clone font-semibold text-fill-transparent">
-      404 <span className="opacity-70 font-normal">-</span> Page not found
+   <main className="flex min-h-screen flex-1 flex-col items-center justify-center bg-[#040d21]">
+    <div className="rounded-[10px] border-[1px] border-white/[15%] bg-gradient-to-r from-[#a2facf09] to-[#64acff0d] p-[30px]">
+     <h1 className="mx-0 mt-0 bg-gradient-to-r from-[#ff7170] to-[#ffe57f] box-decoration-clone bg-clip-text font-poppins text-[2.2rem] font-semibold text-fill-transparent">
+      404 <span className="font-normal opacity-70">-</span> Page not found
      </h1>
-     <p className="font-poppins text-center text-slate-400 mt-2">We're sorry — we can't find the page you're looking for.</p>
+     <p className="mt-2 text-center font-poppins text-slate-400">We're sorry — we can't find the page you're looking for.</p>
      <LinkButton href="/" text="Go back to the homepage" />
     </div>
    </main>
