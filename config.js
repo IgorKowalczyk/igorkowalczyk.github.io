@@ -13,8 +13,8 @@ export const config = {
     title: "Home",
    },
    {
-    href: "/test_page/",
-    title: "Test",
+    href: "/github/",
+    title: "Repositories",
    },
   ],
   right: [
