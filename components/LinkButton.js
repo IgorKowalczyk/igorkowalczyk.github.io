@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
 
 export default function LinkButton({ href, text, theme }) {
  const themes = {
@@ -15,15 +14,3 @@ export default function LinkButton({ href, text, theme }) {
   </Link>
  );
 }
-
-LinkButton.propTypes = {
- href: PropTypes.string,
- text: PropTypes.string,
- theme: PropTypes.oneOf(["default", "info", "success", "warning", "danger"]),
-};
-
-LinkButton.defaultProps = {
- href: "/",
- text: "Button",
- theme: "default",
-};

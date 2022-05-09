@@ -1,4 +1,3 @@
-import LinkButton from "@components/LinkButton";
 import Container from "@components/Container";
 
 export default function test_page() {
