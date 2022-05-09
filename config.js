@@ -3,6 +3,7 @@ export const config = {
  author: "Igor Kowalczyk",
  description: "My portfolio built on Next.js",
  url: "https://igorkowalczyk.vercel.app",
+ theme_color: "#5686f5",
  type: "website",
  image: "/favicons/android-chrome-384x384.png",
  nav: {

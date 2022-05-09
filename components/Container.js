@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Nav from "@components/Nav";
 import Arc from "@components/Arc";
@@ -10,6 +11,17 @@ export default function Container(props) {
  const meta = {
   ...config,
   ...customMeta,
+ };
+
+ const postVariants = {
+  initial: { scale: 0.96, y: 15, opacity: 0 },
+  enter: { scale: 1, y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
+  exit: {
+   scale: 0.6,
+   y: 100,
+   opacity: 0,
+   transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] },
+  },
  };
 
  return (
@@ -38,15 +50,17 @@ export default function Container(props) {
     <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000" />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
-    <meta name="theme-color" content="#5865F2" />
-    <meta name="msapplication-TileColor" content="#5865F2" />
+    <meta name="theme-color" content={meta.theme_color} />
+    <meta name="msapplication-TileColor" content={meta.theme_color} />
     {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
     {meta.date && <meta property="article:published_time" content={meta.date} />}
     <Arc />
    </Head>
    <Nav />
    <main id="skip" className="mt-24 flex flex-col justify-center bg-white px-8 dark:bg-[#040d21]">
-    {children}
+    <motion.div initial="initial" animate="enter" exit="exit" variants={postVariants}>
+     {children}
+    </motion.div>
    </main>
   </>
  );
