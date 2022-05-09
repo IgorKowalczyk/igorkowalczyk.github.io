@@ -1,0 +1,57 @@
+#nprogress {
+ pointer-events: none;
+}
+
+#nprogress .spinner {
+ display: block;
+ position: fixed;
+ z-index: 1031;
+ padding: 10px;
+ background-color: rgb(255 255 255 / 0.1);
+ border-radius: 0.5rem;
+ backdrop-filter: blur(10px);
+ bottom: 15px;
+ right: 15px;
+ animation: fade 200ms linear;
+}
+
+#nprogress .spinner-icon {
+ width: 24px;
+ height: 24px;
+ box-sizing: border-box;
+ border: solid 3px transparent;
+ border-top-color: #fff;
+ border-left-color: #fff;
+ border-radius: 50%;
+ -webkit-animation: nprogress-spinner 400ms linear infinite;
+ animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+ overflow: hidden;
+ position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+ position: absolute;
+}
+
+@keyframes nprogress-spinner {
+ 0% {
+  transform: rotate(0deg);
+ }
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes fade {
+ 0% {
+ opacity: 0;
+ }
+ 100% {
+  opacity: 100;
+ }
+}
+
