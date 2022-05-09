@@ -4,7 +4,7 @@ export const config = {
  description: "My portfolio built on Next.js",
  url: "https://igorkowalczyk.vercel.app",
  type: "website",
-
+ image: "/favicons/android-chrome-384x384.png",
  nav: {
   left: [
    {
