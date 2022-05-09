@@ -4,8 +4,8 @@ import Container from "@components/Container";
 export default function not_found() {
  return (
   <Container>
-   <main className="-mt-24 flex min-h-screen flex-1 flex-col items-center justify-center bg-[#040d21]">
-    <div className="rounded-[10px] border-[1px] border-white/[15%] bg-gradient-to-r from-[#a2facf09] to-[#64acff0d] p-[30px]">
+   <main className="-mt-24 flex min-h-screen flex-1 flex-col items-center justify-center bg-white dark:bg-[#040d21]">
+    <div className="rounded-[10px] border-[1px] border-black/[30%] bg-gradient-to-r p-[30px] shadow-2xl dark:border-white/[15%] dark:from-[#a2facf09] dark:to-[#64acff0d]">
      <h1 className="mx-0 mt-0 bg-gradient-to-r from-[#ff7170] to-[#ffe57f] box-decoration-clone bg-clip-text font-poppins text-[2.2rem] font-semibold text-fill-transparent">
       404 <span className="font-normal opacity-70">-</span> Page not found
      </h1>

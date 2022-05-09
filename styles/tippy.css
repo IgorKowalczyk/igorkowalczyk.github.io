@@ -1,8 +1,8 @@
-.tippy-box[data-theme~='translucent'] {
- @apply bg-white/10;
+.tippy-box[data-theme~="translucent"] {
+ @apply bg-black/50 dark:bg-white/10;
  backdrop-filter: blur(5px);
- }
- 
- .tippy-box[data-theme~='translucent'] > .tippy-arrow::before {
-  border: none;
+}
+
+.tippy-box[data-theme~="translucent"] > .tippy-arrow::before {
+ border: none;
 }

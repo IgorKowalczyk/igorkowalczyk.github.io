@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 export default function LinkButton({ href, text, theme }) {
  const themes = {
-  default: "border-white/[15%] bg-white/[5%] hover:bg-white/[10%] text-white",
-  info: "border-sky-300 bg-sky-100/[10%] hover:bg-sky-100/[20%] text-white",
-  success: "border-green-400 bg-green-400/[10%] hover:bg-green-400/[20%] text-white",
-  warning: "border-yellow-200 bg-yellow-200/[10%] hover:bg-yellow-200/[20%] text-white",
-  danger: "border-rose-400 bg-rose-400/[10%] hover:bg-rose-400/[20%] text-white",
+  default: "border-black/[20%] dark:border-white/[15%] dark:bg-white/[5%] dark:hover:bg-white/[10%] text-black/[70%] dark:text-white",
+  info: "border-sky-500 bg-sky-500/[10%] dark:border-sky-300 dark:bg-sky-100/[10%] dark:hover:bg-sky-100/[20%] text-black/[70%] dark:text-white",
+  success: "border-green-400 bg-green-400/[10%] dark:border-green-400 dark:bg-green-400/[10%] dark:hover:bg-green-400/[20%] text-black/[70%] dark:text-white",
+  warning: "border-yellow-300 bg-yellow-300/[20%] dark:border-yellow-200 dark:bg-yellow-200/[10%] dark:hover:bg-yellow-200/[20%] text-black/[70%] dark:text-white",
+  danger: "border-rose-400 bg-rose-400/[20%] dark:border-rose-400 dark:bg-rose-400/[10%] dark:hover:bg-rose-400/[20%] text-black/[70%] dark:text-white",
  };
  return (
   <Link href={href}>

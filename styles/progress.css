@@ -3,11 +3,11 @@
 }
 
 #nprogress .spinner {
+ @apply bg-black/[20%] dark:bg-white/[10%];
  display: block;
  position: fixed;
  z-index: 1031;
  padding: 10px;
- background-color: rgb(255 255 255 / 0.1);
  border-radius: 0.5rem;
  backdrop-filter: blur(10px);
  bottom: 15px;
