@@ -35,7 +35,7 @@ export default function Nav() {
 
     <div className="mr-auto">
      {config.nav.left.map((item) => {
-      return <NavItem href={item.href} text={item.title} />;
+      return <NavItem href={item.href} text={item.title} key={item.href} />;
      })}
     </div>
     <div className="ml-auto">
