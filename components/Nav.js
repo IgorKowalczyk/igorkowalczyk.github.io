@@ -13,7 +13,7 @@ function NavItem({ href, text, target }) {
  const isActive = router.asPath.slice(0, -1) === href.slice(0, -1);
  return (
   <NextLink href={href} key={href}>
-   <a target={target} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
+   <a target={target} key={href} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
     <span>{text}</span>
    </a>
   </NextLink>
@@ -26,22 +26,22 @@ export default function Nav() {
  useEffect(() => setMounted(true), []);
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow backdrop-blur-[8px] dark:shadow-2xl">
-   <nav className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 dark:bg-[#08152b] dark:bg-opacity-70">
-    <NextLink href="/">
+   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 dark:bg-[#08152b] dark:bg-opacity-70">
+    <NextLink href="/" key="main_page">
      <a>
       <h1 className=" mx-8 font-poppins text-lg font-bold text-black dark:text-white">Igor Kowalczyk</h1>
      </a>
     </NextLink>
 
     <div className="mr-auto">
-     {config.nav.left.map((item) => {
-      return <NavItem href={item.href} text={item.title} key={item.href} />;
+     {config.nav.left.map((item, index) => {
+      return <NavItem href={item.href} text={item.title} key={index} />;
      })}
     </div>
     <div className="ml-auto">
-     {config.nav.right.map((item) => {
+     {config.nav.right.map((item, index) => {
       return (
-       <NextLink href={item.href} key={item.key}>
+       <NextLink href={item.href} key={index}>
         <a href={item.href} target={item.target || "_self"} className="hidden rounded-lg p-1 font-normal text-gray-600 transition-all hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block">
          {item.title}
         </a>
