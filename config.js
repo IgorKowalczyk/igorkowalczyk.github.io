@@ -5,7 +5,12 @@ export const config = {
  url: "https://igorkowalczyk.vercel.app",
  theme_color: "#5686f5",
  type: "website",
- image: "/favicons/android-chrome-384x384.png",
+ social: {
+  image: "/favicons/android-chrome-384x384.png",
+  github: {
+   username: "igorkowalczyk",
+  },
+ },
  nav: {
   left: [
    {

@@ -16,7 +16,7 @@ export default function App({ Component, pageProps } = AppProps) {
  UseAnalytics();
  return (
   <ThemeProvider attribute="class" themes={["light", "dark"]}>
-   <AnimatePresence exitBeforeEnter>
+   <AnimatePresence exitBeforeEnter reducedMotion="user">
     <Component {...pageProps} />
    </AnimatePresence>
   </ThemeProvider>

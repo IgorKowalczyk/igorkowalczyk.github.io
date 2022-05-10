@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export function middleware(NextRequest, NextFetchEvent) {
  const ContentSecurityPolicy = `
     default-src 'self' *.googletagmanager.com *.arc.io;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com unpkg.com;
     child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io;
     style-src 'self' 'unsafe-inline' *.googleapis.com *.arc.io *.cloudflare.com;
     img-src * blob: data:;

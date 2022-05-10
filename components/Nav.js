@@ -12,7 +12,7 @@ function NavItem({ href, text, target }) {
  const router = useRouter();
  const isActive = router.asPath.slice(0, -1) === href.slice(0, -1);
  return (
-  <NextLink href={href}>
+  <NextLink href={href} key={href}>
    <a target={target} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
     <span>{text}</span>
    </a>
@@ -35,7 +35,7 @@ export default function Nav() {
 
     <div className="mr-auto">
      {config.nav.left.map((item) => {
-      return <NavItem href={item.href} text={item.title} key={item.href} />;
+      return <NavItem href={item.href} text={item.title} />;
      })}
     </div>
     <div className="ml-auto">
