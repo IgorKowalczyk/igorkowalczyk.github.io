@@ -7,7 +7,8 @@ module.exports = {
     poppins: ["Poppins", "sans-serif"],
    },
    boxShadow: {
-    hover: "0 2px 30px -4px rgba(0, 134, 245, 1)",
+    hoverDark: "0 2px 30px -4px rgba(0, 134, 245, 1)",
+    hoverLight: "0 2px 30px -4px rgba(113, 42, 246, 1)",
    },
   },
  },
