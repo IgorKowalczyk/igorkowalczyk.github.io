@@ -25,12 +25,11 @@ export default function Container(props) {
    y: 15,
    opacity: 0,
    transition: {
-    duration: 0.4,
+    duration: 0.3,
    },
   },
   transition: {
-   duration: 0.4,
-   ease: "easeOut",
+   duration: 0.3
   },
  };
 
