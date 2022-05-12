@@ -1,6 +1,11 @@
 export const config = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
+ header: {
+  title: "Igor Kowalczyk",
+  subtitle: "Full-stack developer",
+  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems. ",
+ },
  description: "My portfolio built on Next.js",
  url: "https://igorkowalczyk.vercel.app",
  theme_color: "#5686f5",

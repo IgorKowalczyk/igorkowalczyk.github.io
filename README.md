@@ -12,30 +12,32 @@
 
 ---
 
-
 ## 🖥️ Hosting
+
 1. Clone [this repository](https://github.com/igorkowalczyk/igorkowalczyk.github.io) `git clone https://github.com/IgorKowalczyk/igorkowalczyk.github.io.git`
 2. Run `npm i` to install all dependencies,
 3. Fill `config.js` with your values
 4. Create new file named `.env` Remember - the file is super secret, better to not share it.
 5. In `.env` file set this values:
-    * `GITHUB_ACCESS_TOKEN` - Your GitHub access token with public repositories permission
+   - `GITHUB_ACCESS_TOKEN` - Your GitHub access token with public repositories permission
 6. In `.env` file set this **optional** values:
-    * `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io](https://arc.io) website token
-    * `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics](https://analytics.google.com) website ID
+   - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io](https://arc.io) website token
+   - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics](https://analytics.google.com) website ID
 7. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
-  > If you want to build and host the project you can use `npm run deploy`
+   > If you want to build and host the project you can use `npm run deploy`
 
 ## ⁉️ Issues
+
 If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues)
 
 ## 📥 Pull Requests
+
 When submitting a pull request:
+
 - Clone the repo.
 - Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature).
 - Open a [pull request](https://github.com/igorkowalczyk/igorkowalczyk.github.io/pulls) on [GitHub](https://github.com) and describe the feature or fix.
 
 ## 📋 License
+
 This project is licensed under the MIT. See the [LICENSE](https://github.com/igorkowalczyk/igorkowalczyk.github.io/blob/master/license.md) file for details
-
-
