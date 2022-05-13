@@ -8,10 +8,10 @@ import { setContext } from "@apollo/client/link/context";
 export default function main({ public_repos_data, private_repos_data }) {
  return (
   <Container>
-   <div className="mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center bg-white dark:bg-[#040d21] md:w-[90%] xl:w-4/5">
+   <div className="mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center md:w-[90%] xl:w-4/5 duration-300">
     <div className="md:grid-cols-0 grid lg:grid-cols-5">
      <div className="md:col-span-3">
-      <h1 className="dark:color-black mx-0 mt-0 mb-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[49px] font-semibold tracking-[-0.03em] text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{config.header.title}</h1>
+      <h1 className="dark:color-black mx-0 mt-0 mb-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[49px] font-semibold tracking-[-0.03em] text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px] duration-300">{config.header.title}</h1>
       <h3 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{config.header.subtitle}</h3>
       <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{config.header.description}</p>
       <div className="mt-4 block md:flex">

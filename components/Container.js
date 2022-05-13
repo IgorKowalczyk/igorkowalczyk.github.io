@@ -66,7 +66,7 @@ export default function Container(props) {
     <Arc />
    </Head>
    <Nav />
-   <main id="skip" className="mt-24 flex flex-col justify-center bg-white px-8 dark:bg-[#040d21]">
+   <main id="skip" className="mt-24 flex flex-col justify-center  px-8">
     <motion.div {...variants}>{children}</motion.div>
    </main>
    <Footer />
