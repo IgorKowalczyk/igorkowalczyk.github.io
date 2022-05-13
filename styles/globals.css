@@ -44,3 +44,18 @@ body {
 ::-webkit-scrollbar-thumb:active {
  background: #343b4a;
 }
+
+.anim-arrow {
+ stroke-dashoffset: 10;
+ stroke-dasharray: 10;
+}
+
+.anim-arrow-hover {
+ stroke-dashoffset: 20;
+ stroke-dasharray: 0;
+}
+
+svg.anim-arrow-hover > path {
+ stroke-dashoffset: 20;
+ stroke-dasharray: 0;
+}

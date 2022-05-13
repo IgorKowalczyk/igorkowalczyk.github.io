@@ -21,6 +21,10 @@ module.exports = {
      "50%, 100%": { opacity: 0 },
     },
    },
+   screens: {
+    smallDesktop: "1013px",
+    bigPhone: "767px",
+   },
   },
  },
  plugins: [require("tailwindcss-text-fill")],
