@@ -3,7 +3,7 @@ import Link from "next/link";
 export const config = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
- discord: "https://discord.gg/uxtSMtd2xZ",
+ description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems. ",
  header: {
   title: "Igor Kowalczyk",
   subtitle: "Full-stack developer",
@@ -32,7 +32,6 @@ export const config = {
    ],
   },
  },
- description: "My portfolio built on Next.js",
  url: "https://igorkowalczyk.vercel.app",
  theme_color: "#5686f5",
  type: "website",
