@@ -12,6 +12,15 @@ module.exports = {
     codeDark: "0 10px 70px -4px rgba(0, 134, 245, 0.2)",
     codeLight: "0 10px 70px -4px rgba(51, 111, 239, 0.3)",
    },
+   animation: {
+    cursor: "cursor .75s infinite",
+   },
+   keyframes: {
+    cursor: {
+     "0%, 45%": { opacity: 1 },
+     "50%, 100%": { opacity: 0 },
+    },
+   },
   },
  },
  plugins: [require("tailwindcss-text-fill")],

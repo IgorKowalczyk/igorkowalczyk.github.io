@@ -1,10 +1,11 @@
 import Container from "@components/Container";
-import { config } from "@/config";
-import Image from "next/image";
-import LinkButton from "@components/LinkButton";
 import Link from "next/link";
+import { config } from "@/config";
+import { ConvertBytes } from "@lib/convertBytes";
+import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
-export default function main() {
+export default function main({ public_repos_data, private_repos_data }) {
  return (
   <Container>
    <div className="mx-auto -mt-24 flex min-h-screen w-4/5 flex-1 flex-col justify-center bg-white dark:bg-[#040d21]">
@@ -28,14 +29,36 @@ export default function main() {
      <div className="col-span-2 flex items-center">
       <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
        <div>
-        <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/igorkowalczyk</span>{" "}
+        <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
-         <span className="font-semibold text-slate-700 dark:text-slate-300">$</span> <span>list github</span>
+         <span className="font-semibold text-slate-700 dark:text-slate-300">$</span>{" "}
+         <span>
+          list github --user=
+          <Link href={`https://github.com/${config.social.github.username}`}>
+           <a target="_blank">"{config.social.github.username}"</a>
+          </Link>
+         </span>
         </span>
         <br />
         <span className="leading-6">
-         + 17 Open Source Repositories on Github (total size: 50gb)
-         <br />- 1 Closed Source Repository on Github (total size: 500mb)
+         + {public_repos_data.totalCount} Open Source Repositories on Github (total size: {ConvertBytes(public_repos_data.totalDiskUsage * 1000)})
+         <br />- {private_repos_data.totalCount} Closed Source Repository on Github (total size: {ConvertBytes(private_repos_data.totalDiskUsage * 1000)})
+        </span>
+       </div>
+       {config.header.code.lines.map((line, index) => (
+        <div key={index}>
+         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{line.user}</span>{" "}
+         <span className="italic">
+          <span className="font-semibold text-slate-700 dark:text-slate-300">$</span> <span>{line.command}</span>
+         </span>
+         <br />
+         <span className="leading-6">{line.response}</span>
+        </div>
+       ))}
+       <div>
+        <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
+        <span className="italic">
+         <span className="relative font-semibold text-slate-700 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] dark:text-slate-300">$</span>
         </span>
        </div>
       </div>
@@ -44,6 +67,73 @@ export default function main() {
    </div>
   </Container>
  );
+}
+
+export async function getStaticProps() {
+ const httpLink = createHttpLink({
+  uri: "https://api.github.com/graphql",
+ });
+
+ const authLink = setContext((_, { headers }) => {
+  return {
+   headers: {
+    ...headers,
+    authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+   },
+  };
+ });
+
+ const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+ });
+
+ const public_repos = await client.query({
+  query: gql`
+   {
+     user(login: \"${config.social.github.username}\") {
+      repositories(
+        isFork: false
+        isLocked: false
+        privacy: PUBLIC
+        orderBy: {field: STARGAZERS, direction: DESC}
+        ownerAffiliations: OWNER
+      ) {
+        totalCount
+        totalDiskUsage
+      }
+     }
+   }
+   `,
+ });
+
+ const private_repos = await client.query({
+  query: gql`
+    {
+      user(login: \"${config.social.github.username}\") {
+       repositories(
+         isFork: false
+         isLocked: false
+         privacy: PRIVATE
+         orderBy: {field: STARGAZERS, direction: DESC}
+         ownerAffiliations: OWNER
+       ) {
+         totalCount
+         totalDiskUsage
+       }
+      }
+    }
+    `,
+ });
+
+ const public_repos_data = public_repos.data.user.repositories;
+ const private_repos_data = private_repos.data.user.repositories;
+ return {
+  props: {
+   public_repos_data,
+   private_repos_data,
+  },
+ };
 }
 
 /*
