@@ -26,10 +26,10 @@ export default function Nav() {
  useEffect(() => setMounted(true), []);
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow backdrop-blur-[8px] dark:shadow-2xl">
-   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 duration-300 pt-4 pb-4 dark:bg-[#08152b] dark:bg-opacity-70">
+   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 dark:bg-[#08152b] dark:bg-opacity-70">
     <NextLink href="/" key="main_page">
      <a>
-      <h1 className=" mx-8 font-poppins text-lg font-bold text-black dark:text-white duration-300">Igor Kowalczyk</h1>
+      <h1 className=" mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white">Igor Kowalczyk</h1>
      </a>
     </NextLink>
 

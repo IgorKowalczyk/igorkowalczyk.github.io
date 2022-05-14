@@ -61,16 +61,18 @@ body {
  position: relative;
 }
 
-.animatedLink:hover::after, .animatedLink:active::after {
+.animatedLink:hover::after,
+.animatedLink:active::after {
  transform: scaleX(1);
 }
 
-.animatedLink::after, .animatedLink::before {
- transition: transform .3s ease;
+.animatedLink::after,
+.animatedLink::before {
+ transition: transform 0.3s ease;
 }
 
-
-.animatedLink::after, .animatedLink::before {
+.animatedLink::after,
+.animatedLink::before {
  position: absolute;
  bottom: -0.15em;
  left: 0;
@@ -84,6 +86,6 @@ body {
 }
 
 .animatedLink::before {
- opacity: .2;
+ opacity: 0.2;
  transform: scaleX(1);
 }

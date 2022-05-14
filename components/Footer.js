@@ -3,7 +3,7 @@ import NextLink from "next/link";
 export default function Footer() {
  return (
   <footer className="mx-auto mb-8 mt-10 flex w-full max-w-2xl flex-col justify-center">
-   <hr className="border-1 mb-8 w-full border-gray-200 dark:border-gray-800 duration-200" />
+   <hr className="border-1 mb-8 w-full border-gray-200 duration-200 dark:border-gray-800" />
    <div className="flex flex-col items-center justify-center">
     <NextLink href="/">
      <a>
