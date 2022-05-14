@@ -89,3 +89,11 @@ body {
  opacity: 0.2;
  transform: scaleX(1);
 }
+
+img.twemoji {
+ height: 1em;
+ position: relative;
+ vertical-align: middle;
+ top: -0.1rem;
+ display: inline-block;
+}

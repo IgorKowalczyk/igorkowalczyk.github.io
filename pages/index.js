@@ -27,11 +27,11 @@ export default function main({ public_repos_data, private_repos_data }) {
       </div>
      </div>
      <div className="hidden items-center md:col-span-3 md:mt-8 md:flex lg:col-span-2 smallDesktop:col-span-2">
-      <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
+      <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight transition-colors dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark	">
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
-         <span className="font-semibold text-slate-700 dark:text-slate-300">$</span>{" "}
+         <span className="font-semibold text-slate-700 duration-200 dark:text-slate-300">$</span>{" "}
          <span>
           list github --user=
           <Link href={`https://github.com/${config.social.github.username}`}>
@@ -49,7 +49,7 @@ export default function main({ public_repos_data, private_repos_data }) {
         <div key={index}>
          <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{line.user}</span>{" "}
          <span className="italic">
-          <span className="font-semibold text-slate-700 dark:text-slate-300">$</span> <span>{line.command}</span>
+          <span className="font-semibold text-slate-700 duration-200 dark:text-slate-300">$</span> <span>{line.command}</span>
          </span>
          <br />
          <span className="leading-6">{line.response}</span>
@@ -58,7 +58,7 @@ export default function main({ public_repos_data, private_repos_data }) {
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
-         <span className="relative font-semibold text-slate-700 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] dark:text-slate-300">$</span>
+         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] dark:text-slate-300">$</span>
         </span>
        </div>
       </div>
@@ -135,20 +135,3 @@ export async function getStaticProps() {
   },
  };
 }
-
-/*
-
-  <Container>
-   <div className="-mt-24 flex min-h-screen flex-1 flex-col items-center justify-center bg-white dark:bg-[#040d21]">
-    <div className="rounded-[10px] border-[1px] border-black/[15%] bg-gradient-to-r p-[30px] dark:border-white/[15%] dark:from-[#a2facf09] dark:to-[#64acff0d]">
-     <h1 className="dark:color-black mx-0 mt-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text font-poppins text-[3rem] font-semibold text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">Igor Kowalczyk - Soon!</h1>
-    </div>
-   </div>
-  </Container>
-
-
-*/
-
-/*
-<Image src="/favicons/android-chrome-384x384.png" width={384} height={384} className="rounded-full"/>
-*/
