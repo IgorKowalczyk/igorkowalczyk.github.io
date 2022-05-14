@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/shift-away.css";
+import MobileNav from "@components/MobileNav";
 
 function NavItem({ href, text, target }) {
  const router = useRouter();
@@ -29,10 +30,10 @@ export default function Nav() {
    <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 dark:bg-[#08152b] dark:bg-opacity-70">
     <NextLink href="/" key="main_page">
      <a>
-      <h1 className=" mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white">Igor Kowalczyk</h1>
+      <h1 className=" mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white z-[1001]">Igor Kowalczyk</h1>
      </a>
     </NextLink>
-
+    <MobileNav />
     <div className="mr-auto">
      {config.nav.left.map((item, index) => {
       return <NavItem href={item.href} text={item.title} key={index} />;
