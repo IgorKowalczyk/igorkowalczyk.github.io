@@ -46,17 +46,44 @@ body {
  background: #343b4a;
 }
 
-.anim-arrow {
- stroke-dashoffset: 10;
+.arrow .arrowSymbol path:last-child {
  stroke-dasharray: 10;
+ stroke-dashoffset: 10;
+ transition: stroke-dashoffset 200ms;
 }
 
-.anim-arrow-hover {
+.arrow:hover .arrowSymbol path:last-child {
  stroke-dashoffset: 20;
- stroke-dasharray: 0;
 }
 
-svg.anim-arrow-hover > path {
- stroke-dashoffset: 20;
- stroke-dasharray: 0;
+.animatedLink {
+ display: inline-block;
+ position: relative;
+}
+
+.animatedLink:hover::after, .animatedLink:active::after {
+ transform: scaleX(1);
+}
+
+.animatedLink::after, .animatedLink::before {
+ transition: transform .3s ease;
+}
+
+
+.animatedLink::after, .animatedLink::before {
+ position: absolute;
+ bottom: -0.15em;
+ left: 0;
+ width: calc(100% - 1em);
+ height: 2px;
+ pointer-events: none;
+ content: "";
+ background-color: currentColor;
+ transform: scaleX(0);
+ transform-origin: 0 0;
+}
+
+.animatedLink::before {
+ opacity: .2;
+ transform: scaleX(1);
 }
