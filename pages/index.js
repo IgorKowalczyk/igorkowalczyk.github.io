@@ -41,8 +41,8 @@ export default function main({ public_repos_data, private_repos_data }) {
         </span>
         <br />
         <span className="leading-6">
-         + {public_repos_data.totalCount} Open Source Repositories on Github (total size: {ConvertBytes(public_repos_data.totalDiskUsage * 1000)})
-         <br />- {private_repos_data.totalCount} Closed Source Repository on Github (total size: {ConvertBytes(private_repos_data.totalDiskUsage * 1000)})
+         + <span className="font-semibold">{public_repos_data.totalCount} Open Source</span> {public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(public_repos_data.totalDiskUsage * 1000)})
+         <br />- <span className="font-semibold">{private_repos_data.totalCount} Closed Source</span> {private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(private_repos_data.totalDiskUsage * 1000)})
         </span>
        </div>
        {config.header.code.lines.map((line, index) => (
