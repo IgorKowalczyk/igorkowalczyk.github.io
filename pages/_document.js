@@ -1,11 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document(props) {
+export default function Document({props}) {
  return (
   <Html lang="en">
    <Head></Head>
    <body className="bg-white dark:bg-[#040d21]">
-    <Main />
+    <Main {...props} />
     <NextScript />
    </body>
   </Html>
