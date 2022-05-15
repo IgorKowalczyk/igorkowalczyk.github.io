@@ -5,45 +5,33 @@
 
 html,
 body {
- padding: 0;
- margin: 0;
- scroll-behavior: smooth;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- transition: 300ms background-color;
-}
-
-@supports not (backdrop-filter: none) {
- nav {
-  backdrop-filter: none;
-  @apply bg-opacity-100;
- }
+ @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300;
 }
 
 * {
- box-sizing: border-box;
+ @apply box-border;
  scrollbar-color: #08152b transparent;
  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
- width: 10px;
+ @apply w-[10px];
 }
 
 ::-webkit-scrollbar-track {
- background: #040d21;
+ @apply bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- background: #1f2532;
+ @apply bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
- background: #292f3d;
+ @apply bg-[#292f3d];
 }
 
 ::-webkit-scrollbar-thumb:active {
- background: #343b4a;
+ @apply bg-[#343b4a];
 }
 
 .arrow .arrowSymbol path:last-child {
@@ -57,89 +45,40 @@ body {
 }
 
 .animatedLink {
- display: inline-block;
- position: relative;
+ @apply relative inline-block;
 }
 
 .animatedLink:hover::after,
 .animatedLink:active::after {
- transform: scaleX(1);
+ @apply scale-x-100;
 }
 
 .animatedLink::after,
 .animatedLink::before {
- transition: transform 0.3s ease;
+ @apply transition-[transform] duration-300 ease-in;
 }
 
 .animatedLink::after,
 .animatedLink::before {
- position: absolute;
- bottom: -0.15em;
- left: 0;
- width: calc(100% - 1em);
- height: 2px;
- pointer-events: none;
- content: "";
- background-color: currentColor;
- transform: scaleX(0);
- transform-origin: 0 0;
+ @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current content-[""];
 }
 
 .animatedLink::before {
- opacity: 0.2;
- transform: scaleX(1);
+ @apply scale-x-100 opacity-20;
 }
 
 img.twemoji {
- height: 1em;
- position: relative;
- vertical-align: middle;
- top: -0.1rem;
- display: inline-block;
-}
-
-.burger {
- border: 0;
- background: transparent;
- width: 40px;
- height: 40px;
- position: relative;
-}
-
-.burger svg {
- transform: translate(-50%, -50%) scale(1);
- top: 50%;
- left: 50%;
- opacity: 1;
+ @apply relative top-[-0.1rem] inline-block h-[1em] align-middle;
 }
 
 .burger svg[data-hide="true"] {
- opacity: 0;
- transform: translate(-50%, -50%) scale(0);
-}
-
-.menu {
- width: 277px;
- height: 100vh;
- opacity: 0;
- left: 0;
- top: 0;
-}
-
-.menu p {
- transform: translateX(-16px);
- opacity: 0;
- transition: opacity 300ms ease, transform 300ms ease, width 300ms ease, border-color 300ms ease;
- width: 0px;
- white-space: nowrap;
+ @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
 }
 
 .menuRendered {
- opacity: 1;
+ @apply opacity-100;
 }
 
 .menuRendered p {
- @apply w-full border-gray-200 dark:border-gray-600;
- transform: translateX(0);
- opacity: 1;
+ @apply w-full translate-x-0 border-gray-200 opacity-100 dark:border-gray-600;
 }

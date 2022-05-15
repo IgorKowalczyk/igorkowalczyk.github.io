@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
  darkMode: "class",
  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -14,11 +16,16 @@ module.exports = {
    },
    animation: {
     cursor: "cursor .75s infinite",
+    fade: "fade 1s",
    },
    keyframes: {
     cursor: {
      "0%, 45%": { opacity: 1 },
      "50%, 100%": { opacity: 0 },
+    },
+    fade: {
+     "0%": { opacity: 0 },
+     "100%": { opacity: 1 },
     },
    },
    screens: {
@@ -27,5 +34,20 @@ module.exports = {
    },
   },
  },
- plugins: [require("tailwindcss-text-fill")],
+ plugins: [
+  require("tailwindcss-text-fill"),
+  plugin(function ({ addVariant, e, postcss }) {
+   addVariant("firefox", ({ container, separator }) => {
+    const isFirefox = postcss.atRule({
+     name: "-moz-document",
+     params: "url-prefix()",
+    });
+    isFirefox.append(container.nodes);
+    container.append(isFirefox);
+    isFirefox.walkRules((rule) => {
+     rule.selector = `.${e(`firefox${separator}${rule.selector.slice(1)}`)}`;
+    });
+   });
+  }),
+ ],
 };

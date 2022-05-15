@@ -1,6 +1,5 @@
 import AppProps from "next/app";
 import nProgress from "nprogress";
-import Twemoji from "react-twemoji";
 import { ThemeProvider } from "next-themes";
 import { UseAnalytics } from "@lib/analytics";
 import { Router } from "next/router";
@@ -16,12 +15,10 @@ Router.events.on("routeChangeComplete", nProgress.done);
 export default function App({ Component, pageProps, router } = AppProps) {
  UseAnalytics();
  return (
-  <Twemoji options={{ className: "twemoji" }}>
-   <ThemeProvider attribute="class" themes={["light", "dark"]}>
-    <AnimatePresence exitBeforeEnter>
-     <Component {...pageProps} key={router.asPath} />
-    </AnimatePresence>
-   </ThemeProvider>
-  </Twemoji>
+  <ThemeProvider attribute="class" themes={["light", "dark"]}>
+   <AnimatePresence exitBeforeEnter>
+    <Component {...pageProps} key={router.asPath} />
+   </AnimatePresence>
+  </ThemeProvider>
  );
 }

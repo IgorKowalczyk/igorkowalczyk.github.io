@@ -5,6 +5,7 @@ import Head from "next/head";
 import Nav from "@components/Nav";
 import Arc from "@components/Arc";
 import Footer from "components/Footer";
+import Twemoji from "react-twemoji";
 
 export default function Container(props) {
  const { children, ...customMeta } = props;
@@ -67,7 +68,9 @@ export default function Container(props) {
    </Head>
    <Nav />
    <main id="skip" className="mt-24 flex flex-col justify-center  px-8">
-    <motion.div {...variants}>{children}</motion.div>
+    <Twemoji options={{ className: "twemoji" }}>
+     <motion.div {...variants}>{children}</motion.div>
+    </Twemoji>
    </main>
    <Footer />
   </>
