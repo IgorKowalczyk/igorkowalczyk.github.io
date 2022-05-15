@@ -69,7 +69,7 @@ export default function main({ public_repos_data, private_repos_data }) {
  );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
  const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
  });
