@@ -55,7 +55,7 @@ body {
 
 .animatedLink::after,
 .animatedLink::before {
- @apply transition-[transform] duration-300 ease-in;
+ @apply transition-[transform] duration-200 ease-in;
 }
 
 .animatedLink::after,
