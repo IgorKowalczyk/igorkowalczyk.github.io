@@ -99,7 +99,6 @@ img.twemoji {
 }
 
 .burger {
- transition: opacity 300ms ease;
  border: 0;
  background: transparent;
  width: 40px;
@@ -112,7 +111,6 @@ img.twemoji {
  top: 50%;
  left: 50%;
  opacity: 1;
- transition: opacity 300ms ease, transform 300ms ease;
 }
 
 .burger svg[data-hide="true"] {
@@ -123,13 +121,12 @@ img.twemoji {
 .menu {
  width: 277px;
  height: 100vh;
- z-index: 1000;
  opacity: 0;
  left: 0;
  top: 0;
 }
 
-.menu li {
+.menu p {
  transform: translateX(-16px);
  opacity: 0;
  transition: opacity 300ms ease, transform 300ms ease, width 300ms ease, border-color 300ms ease;
@@ -141,7 +138,7 @@ img.twemoji {
  opacity: 1;
 }
 
-.menuRendered li {
+.menuRendered p {
  @apply w-full border-gray-200 dark:border-gray-600;
  transform: translateX(0);
  opacity: 1;

@@ -26,11 +26,12 @@ export default function Nav() {
  const { resolvedTheme, setTheme } = useTheme();
  useEffect(() => setMounted(true), []);
  return (
-  <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow backdrop-blur-[8px] dark:shadow-2xl">
-   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 dark:bg-[#08152b] dark:bg-opacity-70">
+  <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow  dark:shadow-2xl">
+   <nav key="nav" className="dark:bg-opacity-70% h-[73px] relative mx-auto flex w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 dark:bg-[#08152b] dark:bg-opacity-70">
+   <div className="fixed inset-0 backdrop-blur-[9px] w-full h-[inherit] z-[-1]"></div>
     <NextLink href="/" key="main_page">
      <a>
-      <h1 className=" mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white z-[1001]">Igor Kowalczyk</h1>
+      <h1 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white">Igor Kowalczyk</h1>
      </a>
     </NextLink>
     <MobileNav />
