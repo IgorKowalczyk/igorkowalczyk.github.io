@@ -1,4 +1,3 @@
-import AppProps from "next/app";
 import nProgress from "nprogress";
 import { ThemeProvider } from "next-themes";
 import { UseAnalytics } from "@lib/analytics";
@@ -12,7 +11,7 @@ Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
 
-export default function App({ Component, pageProps, router } = AppProps) {
+export default function App({ Component, pageProps, router }) {
  UseAnalytics();
  return (
   <ThemeProvider attribute="class" themes={["light", "dark"]}>
