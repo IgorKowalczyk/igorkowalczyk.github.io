@@ -90,7 +90,7 @@ export default function gitub_repos({ repositories }) {
  );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
  const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
  });
