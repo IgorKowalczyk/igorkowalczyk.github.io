@@ -31,7 +31,7 @@ export default function MobileMenu() {
     </svg>
    </button>
    {isMenuMounted && (
-    <div className={cn(isMenuRendered && "menuRendered", "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-[9px] duration-200 md:hidden ")}>
+    <div className={cn(isMenuRendered && "menuRendered", "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-[9px] motion-reduce:transition-none duration-200 md:hidden ")}>
      <div className="h-full border-r-[1px] border-black/[10%] bg-white bg-opacity-70 px-3.5 shadow motion-reduce:transition-none duration-200 firefox:bg-opacity-100 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:shadow-2xl dark:firefox:bg-opacity-100">
       <div>
        {menuItems.array.map((item, index) => {
