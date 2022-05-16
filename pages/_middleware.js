@@ -20,5 +20,6 @@ export function middleware() {
  response.headers.set("X-Content-Type-Options", "nosniff");
  response.headers.set("X-DNS-Prefetch-Control", "on");
  response.headers.set("X-XSS-Protection", "1; mode=block");
+ response.headers.set("Accept-Encoding:", "gzip");
  return response;
 }
