@@ -5,6 +5,7 @@ module.exports = {
  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
  poweredByHeader: false,
  trailingSlash: true,
+ compress: true,
  swcMinify: true,
  images: {
   domains: [
