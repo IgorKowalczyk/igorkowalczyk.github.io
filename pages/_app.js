@@ -2,7 +2,7 @@ import nProgress from "nprogress";
 import { ThemeProvider } from "next-themes";
 import { UseAnalytics } from "@lib/analytics";
 import { Router } from "next/router";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, MotionConfig } from "framer-motion";
 import "@styles/progress.css";
 import "@styles/globals.css";
 import "@styles/tippy.css";
@@ -15,9 +15,11 @@ export default function App({ Component, pageProps, router }) {
  UseAnalytics();
  return (
   <ThemeProvider attribute="class" themes={["light", "dark"]}>
-   <AnimatePresence exitBeforeEnter>
-    <Component {...pageProps} key={router.asPath} />
-   </AnimatePresence>
+   <MotionConfig reducedMotion="user">
+    <AnimatePresence exitBeforeEnter>
+     <Component {...pageProps} key={router.asPath} />
+    </AnimatePresence>
+   </MotionConfig>
   </ThemeProvider>
  );
 }
