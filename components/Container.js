@@ -64,6 +64,7 @@ export default function Container(props) {
     <meta name="msapplication-TileColor" content={meta.theme_color} />
     {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
     {meta.date && <meta property="article:published_time" content={meta.date} />}
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <Arc />
    </Head>
    <Nav />
