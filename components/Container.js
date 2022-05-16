@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
 import Nav from "@components/Nav";
 import Arc from "@components/Arc";
@@ -9,14 +9,14 @@ import Twemoji from "react-twemoji";
 
 export default function Container(props) {
  const { children, ...customMeta } = props;
- const router = useRouter();
+  const router = useRouter();
  const meta = {
   ...config,
   ...customMeta,
  };
-
- const variants = {
-  initial: { scale: 0.96, y: 15, opacity: 0 },
+ let variants;
+ const reduceMotion = useReducedMotion();
+ variants = reduceMotion ? { initial: { scale: 0.96, y: 15, opacity: 0 },
   animate: {
    y: 0,
    scale: 1,
@@ -31,8 +31,8 @@ export default function Container(props) {
   },
   transition: {
    duration: 0.3,
-  },
- };
+  } }
+ : { x: "0%" }
 
  return (
   <>
