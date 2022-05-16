@@ -8,7 +8,7 @@ import { setContext } from "@apollo/client/link/context";
 export default function main({ public_repos_data, private_repos_data }) {
  return (
   <Container>
-        <div className="will-change-contents absolute left-0 -top-1/2 bottom-0 right-0 pointer-events-none z-[-1] blur-[160px] dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,#040d21_67.5deg,#040d21_198.75deg,#040d21_251.25deg,#0086F517_301.88deg,#040d21_1turn)] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,#fff_67.5deg,#fff_198.75deg,#fff_251.25deg,#336FEF2B_301.88deg,#fff_1turn)]"></div>
+   <div className="will-change-contents absolute left-0 -top-1/2 bottom-0 right-0 pointer-events-none z-[-1] blur-[160px] dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,#040d21_67.5deg,#040d21_198.75deg,#040d21_251.25deg,#0086F517_301.88deg,#040d21_1turn)] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,#fff_67.5deg,#fff_198.75deg,#fff_251.25deg,#336FEF2B_301.88deg,#fff_1turn)]"></div>
    <div className="mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 md:w-[90%] xl:w-4/5">
     <div className="md:grid-cols-0 grid lg:grid-cols-5">
      <div className="md:col-span-3">
@@ -16,7 +16,7 @@ export default function main({ public_repos_data, private_repos_data }) {
       <h3 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{config.header.subtitle}</h3>
       <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{config.header.description}</p>
       <div className="mt-4 flex justify-center md:block">
-       <NextLink href="#about"> 
+       <NextLink href="/#about"> 
         <a className="arrow animatedLink group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold" href="#about">
          More about me
          <svg xmlns="http://www.w3.org/2000/svg" className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px]" width="16" height="16" viewBox="0 0 16 16" fill="none">
