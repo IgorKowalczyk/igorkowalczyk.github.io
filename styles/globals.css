@@ -35,6 +35,7 @@ body {
 }
 
 .arrow .arrowSymbol path:last-child {
+ @apply motion-reduce:transition-none;
  stroke-dasharray: 10;
  stroke-dashoffset: 10;
  transition: stroke-dashoffset 200ms;
