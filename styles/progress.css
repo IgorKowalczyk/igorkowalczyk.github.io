@@ -3,7 +3,7 @@
 }
 
 #nprogress .spinner {
- @apply motion-reduce:transition-none fixed bottom-4 right-4 z-[9999] block motion-reduce:animate-none animate-[fade_200ms_linear] rounded-lg bg-black/[40%] p-[10px] backdrop-blur-[5px] firefox:bg-gray-800 dark:bg-white/10 firefox:dark:bg-slate-800;
+ @apply motion-reduce:transition-none fixed bottom-4 right-4 z-[9999] block animate-[fade_200ms_linear] motion-reduce:animate-none rounded-lg bg-black/[40%] p-[10px] backdrop-blur-[5px] firefox:bg-gray-800 dark:bg-white/10 firefox:dark:bg-slate-800;
 }
 
 #nprogress .spinner-icon {
