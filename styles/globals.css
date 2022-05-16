@@ -42,6 +42,7 @@ body {
 }
 
 .arrow:hover .arrowSymbol path:last-child {
+ @apply motion-reduce:transition-none;
  stroke-dashoffset: 20;
 }
 
