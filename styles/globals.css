@@ -5,7 +5,7 @@
 
 html,
 body {
- @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300;
+ @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] motion-reduce:transition-none duration-300;
 }
 
 * {
@@ -55,7 +55,7 @@ body {
 
 .animatedLink::after,
 .animatedLink::before {
- @apply transition-[transform] duration-200 ease-in;
+ @apply transition-[transform] motion-reduce:transition-none duration-200 ease-in;
 }
 
 .animatedLink::after,
