@@ -14,7 +14,7 @@ function NavItem({ href, text, target }) {
  const isActive = router.asPath.slice(0, -1) === href.slice(0, -1);
  return (
   <NextLink href={href} key={href}>
-   <a target={target} key={href} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
+   <a target={target} key={href} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all motion-reduce:transition-none duration-200 hover:bg-gray-200 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
     <span>{text}</span>
    </a>
   </NextLink>
@@ -27,11 +27,11 @@ export default function Nav() {
  useEffect(() => setMounted(true), []);
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow  dark:shadow-2xl">
-   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 motion-reduce:transition-none duration-300 firefox:bg-opacity-100 dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full backdrop-blur-[9px]"></div>
     <NextLink href="/" key="main_page">
      <a>
-      <h1 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black duration-300 dark:text-white">Igor Kowalczyk</h1>
+      <h1 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black motion-reduce:transition-none duration-300 dark:text-white">Igor Kowalczyk</h1>
      </a>
     </NextLink>
     <MobileNav />
