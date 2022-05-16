@@ -69,7 +69,7 @@ export default function Container(props) {
    <Nav />
    <main id="skip" className="mt-24 flex flex-col justify-center  px-8">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div {{useReducedMotion ? variants : 0 }}>{children}</motion.div>
+     <motion.div initial="initial" animate="enter" exit="exit" variants={variants}  >{children}</motion.div>
     </Twemoji>
    </main>
    <Footer />
