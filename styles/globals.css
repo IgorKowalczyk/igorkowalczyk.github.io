@@ -52,17 +52,12 @@ body {
 
 .animatedLink:hover::after,
 .animatedLink:active::after {
- @apply scale-x-100;
+ @apply scale-x-100 motion-reduce:transition-none;
 }
 
 .animatedLink::after,
 .animatedLink::before {
- @apply transition-[transform] motion-reduce:transition-none duration-200 ease-in;
-}
-
-.animatedLink::after,
-.animatedLink::before {
- @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current content-[""];
+ @apply transition-[transform] motion-reduce:transition-none duration-200 ease-in pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current content-[""];
 }
 
 .animatedLink::before {
