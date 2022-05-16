@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
 import Nav from "@components/Nav";
 import Arc from "@components/Arc";
@@ -9,7 +9,8 @@ import Twemoji from "react-twemoji";
 
 export default function Container(props) {
  const { children, ...customMeta } = props;
-  const router = useRouter();
+ const shouldReduceMotion = useReducedMotion()
+ const router = useRouter();
  const meta = {
   ...config,
   ...customMeta,
@@ -68,7 +69,7 @@ export default function Container(props) {
    <Nav />
    <main id="skip" className="mt-24 flex flex-col justify-center  px-8">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div {...variants}>{children}</motion.div>
+     <motion.div {{useReducedMotion ? ...variants : 0 }}>{children}</motion.div>
     </Twemoji>
    </main>
    <Footer />
