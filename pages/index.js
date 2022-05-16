@@ -16,7 +16,7 @@ export default function main({ public_repos_data, private_repos_data }) {
       <h3 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{config.header.subtitle}</h3>
       <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{config.header.description}</p>
       <div className="mt-4 flex justify-center md:block">
-       <NextLink href="#about" as="#about" key="about"> 
+       <NextLink href="#about"> 
         <a className="arrow animatedLink group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold" href="#about">
          More about me
          <svg xmlns="http://www.w3.org/2000/svg" className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px]" width="16" height="16" viewBox="0 0 16 16" fill="none">
