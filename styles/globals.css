@@ -5,7 +5,7 @@
 
 html,
 body {
- @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] motion-reduce:transition-none duration-300;
+ @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
 }
 
 * {
@@ -57,7 +57,7 @@ body {
 
 .animatedLink::after,
 .animatedLink::before {
- @apply transition-[transform] motion-reduce:transition-none duration-200 ease-in pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current content-[""];
+ @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
 }
 
 .animatedLink::before {

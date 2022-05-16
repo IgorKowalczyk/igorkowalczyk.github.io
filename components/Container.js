@@ -9,7 +9,7 @@ import Twemoji from "react-twemoji";
 
 export default function Container(props) {
  const { children, ...customMeta } = props;
- const shouldReduceMotion = useReducedMotion()
+ const reduceMotion = useReducedMotion();
  const router = useRouter();
  const meta = {
   ...config,
@@ -17,22 +17,27 @@ export default function Container(props) {
  };
 
  const variants = {
+  initial: {
+   scale:  reduceMotion ? 1 : 0.96,
+   y: reduceMotion ? 0 : 15,
+   opacity: 0
+  },
   animate: {
    y: 0,
    scale: 1,
    opacity: 1,
   },
   exit: {
-   y: 15,
+   y: reduceMotion ? 0 : 15,
    opacity: 0,
    transition: {
-    duration: 0.3,
+    duration: reduceMotion ? 0 : 0.3,
    },
   },
   transition: {
-   duration: 0.3,
-  }
- }
+   duration: reduceMotion ? 0 : 0.3,
+  },
+ };
 
  return (
   <>
@@ -70,7 +75,7 @@ export default function Container(props) {
    <Nav />
    <main id="skip" className="mt-24 flex flex-col justify-center  px-8">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div initial="initial" animate="enter" exit="exit" variants={{ variants: shouldReduceMotion ? 0 : variants }}>{children}</motion.div>
+     <motion.div {...variants}>{children}</motion.div>
     </Twemoji>
    </main>
    <Footer />
