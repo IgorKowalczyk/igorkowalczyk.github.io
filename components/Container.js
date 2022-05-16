@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Nav from "@components/Nav";
 import Arc from "@components/Arc";
@@ -14,9 +14,8 @@ export default function Container(props) {
   ...config,
   ...customMeta,
  };
- let variants;
- const reduceMotion = useReducedMotion();
- variants = reduceMotion ? { initial: { scale: 0.96, y: 15, opacity: 0 },
+
+ const variants = {
   animate: {
    y: 0,
    scale: 1,
@@ -31,8 +30,8 @@ export default function Container(props) {
   },
   transition: {
    duration: 0.3,
-  } }
- : { x: "0%" }
+  }
+ }
 
  return (
   <>
