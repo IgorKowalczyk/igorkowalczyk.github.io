@@ -37,7 +37,7 @@ export default function Nav() {
     <MobileNav />
     <div className="mr-auto">
      {config.nav.left.map((item, index) => {
-      return <NavItem href={item.href} text={item.title} key={index} />;
+      return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
     </div>
     <div className="ml-auto">
