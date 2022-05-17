@@ -13,4 +13,23 @@ module.exports = {
    "pbs.twimg.com", // Twitter Profile Picture
   ],
  },
+ async redirects() {
+  return [
+   {
+    source: "/discord",
+    destination: "https://discord.gg/uxtSMtd2xZ",
+    permanent: true,
+   },
+   {
+    source: "/blog",
+    destination: "https://igorkowalczyk.github.io/blog/",
+    permanent: true,
+   },
+   {
+    source: "/arc-sw.js",
+    destination: "https://arc.io/arc-sw.js",
+    permanent: true,
+   },
+  ];
+ },
 };

@@ -52,17 +52,13 @@ export const config = {
     title: "Repositories",
    },
    {
-    href: "/code-share/",
-    title: "Code Share",
-   },
-   {
     href: "/blog/",
     title: "Blog",
    },
   ],
   right: [
    {
-    href: "https://discord.gg/uxtSMtd2xZ",
+    href: "/discord/",
     title: "Discord",
     target: "_blank",
    },

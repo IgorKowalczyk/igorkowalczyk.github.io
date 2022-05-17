@@ -1,10 +1,4 @@
 {
- "routes": [
-  {
-   "src": "/arc-sw.js",
-   "dest": "https://arc.io/arc-sw.js"
-  }
- ],
  "github": {
   "silent": true
  }
