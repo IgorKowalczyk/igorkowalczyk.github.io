@@ -58,8 +58,8 @@ export default function gitub_repos({ repositories }) {
        <div className="mt-2 flex gap-1">
         <NextLink key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`}>
          <a target="_blank">
-          <span className="rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-           <span className="relative top-px inline-block h-[12px] w-[12px] rounded-full" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "rgba(255, 255, 255, 0.5)" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
+          <span className="flex content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
+           <span className="mr-1 block h-[12px] w-[12px] rounded-full" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "rgba(255, 255, 255, 0.5)" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
           </span>
          </a>
         </NextLink>
