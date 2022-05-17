@@ -1,12 +1,17 @@
 import Container from "@components/Container";
 import NextLink from "next/link";
 import { config } from "@/config";
+import { Helmet } from "react-helmet";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 export default function main({ public_repos_data, private_repos_data }) {
  return (
+   <>
+   <Helmet>
+   <title>{config.title} - Portfolio</title>
+   </Helmet>
   <Container>
    <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
    <div className="mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
@@ -70,6 +75,7 @@ export default function main({ public_repos_data, private_repos_data }) {
     <h1 className="dark:color-black mx-0 mt-0 mb-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[20px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[20px] lg:text-[40px] xl:text-[55px]">Soon!</h1>
    </div>
   </Container>
+  </>
  );
 }
 
