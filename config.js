@@ -54,6 +54,7 @@ export const config = {
    {
     href: "/blog/",
     title: "Blog",
+    target: "_blank",
    },
   ],
   right: [
