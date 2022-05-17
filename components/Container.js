@@ -18,9 +18,9 @@ export default function Container(props) {
 
  const variants = {
   initial: {
-   scale:  reduceMotion ? 1 : 0.96,
+   scale: reduceMotion ? 1 : 0.96,
    y: reduceMotion ? 0 : 15,
-   opacity: 0
+   opacity: 0,
   },
   animate: {
    y: 0,
