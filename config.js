@@ -51,6 +51,14 @@ export const config = {
     href: "/github/",
     title: "Repositories",
    },
+   {
+    href: "/code-share/",
+    title: "Code Share",
+   },
+   {
+    href: "/blog/",
+    title: "Blog",
+   },
   ],
   right: [
    {
