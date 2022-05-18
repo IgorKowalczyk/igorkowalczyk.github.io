@@ -6,7 +6,6 @@ module.exports = {
  poweredByHeader: false,
  trailingSlash: true,
  compress: true,
- swcMinify: true,
  images: {
   domains: [
    "i.scdn.co", // Spotify Album Art
