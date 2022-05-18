@@ -1,17 +1,12 @@
 import Container from "@components/Container";
 import NextLink from "next/link";
 import { config } from "@/config";
-import { Helmet } from "react-helmet";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 export default function gitub_repos({ repositories }) {
  return (
-  <>
-   <Helmet>
-    <title>{config.title} - Github Repositories</title>
-   </Helmet>
-   <Container>
+   <Container title={`${config.title} - Github Repositories`}>
     <h1 className="my-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
      {config.author} Repositories ({repositories.length})
     </h1>
@@ -93,7 +88,6 @@ export default function gitub_repos({ repositories }) {
       ))}
     </div>
    </Container>
-  </>
  );
 }
 
@@ -165,6 +159,7 @@ export async function getStaticProps() {
  });
 
  const { user } = data;
+ console.log(user)
  const repositories = user.repositories.edges.map((edge) => edge.node);
  return {
   props: {
