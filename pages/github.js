@@ -48,8 +48,8 @@ export default function gitub_repos({ repositories }) {
         </span>
        </div>
        <p className="text-left">
-        {repo.description.substring(0, 120)}
-        {repo.description.length > 120 ? "..." : ""}
+        {repo.description.substring(0, 90)}
+        {repo.description.length > 90 ? "..." : ""}
        </p>
        <div className="text-left">
         {repo.repositoryTopics.edges.map((topic) => (
