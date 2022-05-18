@@ -18,7 +18,7 @@ export default function gitub_repos({ repositories }) {
    <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
     {repositories &&
      repositories.map((repo) => (
-      <div key={repo.id} className="rounded-[10px] border-[1px] border-black/[15%] bg-gradient-to-r p-5 duration-200 hover:scale-105 hover:drop-shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:from-[#a2facf09] dark:to-[#64acff0d]">
+      <div key={repo.id} className="rounded-[10px] border-[1px] border-black/[15%] bg-gradient-to-r p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:from-[#a2facf09] dark:to-[#64acff0d]">
        <div className="text-left">
         <NextLink href={repo.url} key={repo.id}>
          <a className="break-all text-left font-poppins font-semibold" target="_blank">
