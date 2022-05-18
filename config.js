@@ -3,11 +3,11 @@ import Link from "next/link";
 export const config = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
- description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems. ",
+ description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
  header: {
   title: "Igor Kowalczyk",
   subtitle: "Full-stack developer",
-  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems. ",
+  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems.",
   code: {
    default: {
     user: "igorkowalczyk",
