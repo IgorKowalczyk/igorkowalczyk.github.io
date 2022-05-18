@@ -70,6 +70,7 @@ export default function Container(props) {
     {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
     {meta.date && <meta property="article:published_time" content={meta.date} />}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://twemoji.maxcdn.com" />
     <Arc />
    </Head>
    <Nav />
