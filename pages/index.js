@@ -71,33 +71,33 @@ export default function main({ repositories, user }) {
     <hr className="border-1 m-[0_auto] mb-8 border-gray-200 duration-300 motion-reduce:transition-none dark:border-gray-800" />
     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 text-center font-poppins text-black/70 dark:text-white/70 md:gap-x-10 lg:grid-cols-3">
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-     <NextLink href={`https://github.com/${config.social.github.username}`}>
-      <a target="_blank" className="text-center inline-block">
-      <svg fill="currentColor" className="inline mr-1 h-[24px] w-[24px] fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]">
-       <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
-      </svg>{" "}
-      { user.user_starred_repos} Stars
-      </a>
+      <NextLink href={`https://github.com/${config.social.github.username}`}>
+       <a target="_blank" className="inline-block text-center">
+        <svg fill="currentColor" className="mr-1 inline h-[24px] w-[24px] fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]">
+         <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
+        </svg>{" "}
+        {user.user_starred_repos} Stars
+       </a>
       </NextLink>
      </p>
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-     <NextLink href={`https://github.com/${config.social.github.username}`}>
-     <a target="_blank" className="text-center inline-block">
-      <svg xmlns="http://www.w3.org/2000/svg" className="inline mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" viewBox="0 0 16 16">
-       <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
-      </svg>{" "}
-      { user.user_starred_repos} Forks
-      </a>
+      <NextLink href={`https://github.com/${config.social.github.username}`}>
+       <a target="_blank" className="inline-block text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" viewBox="0 0 16 16">
+         <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+        </svg>{" "}
+        {user.user_starred_repos} Forks
+       </a>
       </NextLink>
      </p>
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-     <NextLink href={`https://github.com/${config.social.github.username}`}>
-     <a target="_blank" className="text-center inline-block">
-      <svg height="16" viewBox="0 0 16 16" width="16" className="inline mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]">
-       <path fillRule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path>
-      </svg>{" "}
-      { user.user_followers } Followers
-      </a>
+      <NextLink href={`https://github.com/${config.social.github.username}`}>
+       <a target="_blank" className="inline-block text-center">
+        <svg height="16" viewBox="0 0 16 16" width="16" className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]">
+         <path fillRule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path>
+        </svg>{" "}
+        {user.user_followers} Followers
+       </a>
       </NextLink>
      </p>
     </div>
@@ -295,8 +295,8 @@ export async function getStaticProps() {
    },
    user: {
     user_followers,
-    user_starred_repos
-   }
+    user_starred_repos,
+   },
   },
  };
 }
