@@ -183,9 +183,9 @@ export default function main({ repositories, user }) {
         </div>
        ))}
      </div>
-     <div class="pointer-events-visible absolute inset-x-0 bottom-0 flex bg-gradient-to-t from-white pt-32 pb-8 transition-colors duration-200 motion-reduce:transition-none dark:from-[#040d21]">
+     <div className="pointer-events-visible absolute inset-x-0 bottom-0 flex bg-gradient-to-t from-white pt-32 pb-8 transition-colors duration-200 motion-reduce:transition-none dark:from-[#040d21]">
       <NextLink href="/github">
-       <div class="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
+       <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
         <a className="arrow animatedLink group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold duration-200 motion-reduce:transition-none" href="/github">
          See more repos
          <svg xmlns="http://www.w3.org/2000/svg" className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
