@@ -28,7 +28,7 @@ export default function main({ repositories, user }) {
        </NextLink>
       </div>
      </div>
-     <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-8 md:flex lg:col-span-2 smallDesktop:col-span-2">
+     <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:flex lg:col-span-2 smallDesktop:col-span-2">
       <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark	">
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
