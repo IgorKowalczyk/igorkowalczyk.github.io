@@ -29,7 +29,7 @@ export default function main({ repositories, user }) {
       </div>
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:flex lg:col-span-2 smallDesktop:col-span-2">
-      <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark	">
+      <div className="block w-full rounded-md border-[1px] border-[#3391fc]/[40%] p-4 font-poppins text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-white/[5%] dark:bg-[#08152b] dark:shadow-codeDark	">
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
