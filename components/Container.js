@@ -74,7 +74,7 @@ export default function Container(props) {
     <Arc />
    </Head>
    <Nav />
-   <main id="skip" className="mt-24 flex flex-col justify-center px-8">
+   <main id="skip" className="mt-24 flex flex-col justify-center antialiased">
     <Twemoji options={{ className: "twemoji" }}>
      <motion.div {...variants}>{children}</motion.div>
     </Twemoji>
