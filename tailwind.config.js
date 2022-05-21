@@ -13,8 +13,8 @@ module.exports = {
     hoverLight: "0 2px 30px -4px rgba(51, 111, 239, 1)",
     codeDark: "0 30px 100px -4px rgba(0, 134, 245, 0.1)",
     codeLight: "0 30px 100px -4px rgba(51, 111, 239, 0.3)",
-    fadeSectionLight: "0px -150px 50px -55px rgb(255, 255, 255) inset",
-    fadeSectionDark: "0px -150px 50px -55px rgb(4, 13, 33) inset",
+    fadeSectionLight: "0 -10rem 6rem -2rem rgb(255, 255, 255) inset",
+    fadeSectionDark: "0 -10rem 6rem -2rem rgb(4, 13, 33) inset",
    },
    animation: {
     cursor: "cursor .75s infinite",
