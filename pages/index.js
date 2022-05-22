@@ -4,8 +4,8 @@ import { config } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import Image from "next/image";
 
-// todo: fix "See more repos" button
 export default function main({ repositories, user }) {
  return (
   <Container title={`${config.title} - Portfolio`}>

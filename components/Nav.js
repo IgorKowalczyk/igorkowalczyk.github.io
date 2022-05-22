@@ -11,7 +11,7 @@ import MobileNav from "@components/MobileNav";
 
 function NavItem({ href, text, target }) {
  const router = useRouter();
- const isActive = router.asPath.slice(0, -1) === href.slice(0, -1);
+ const isActive = router.asPath.split("#")[0] === href.split("#")[0];
  return (
   <NextLink href={href} key={href}>
    <a target={target} key={href} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 motion-reduce:transition-none dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
