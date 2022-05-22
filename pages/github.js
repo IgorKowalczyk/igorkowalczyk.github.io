@@ -1,9 +1,10 @@
 import NextLink from "next/link";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-const Container = dynamic(() => import("@components/Container"));
+//const Container = dynamic(() => import("@components/Container"));
+import Container  from "@components/Container";
 
 export default function gitub_repos({ repositories }) {
  return (
