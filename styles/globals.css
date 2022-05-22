@@ -27,19 +27,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
- @apply bg-[#040d21];
+ @apply dark:bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- @apply bg-[#1f2532];
+ @apply dark:bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
- @apply bg-[#292f3d];
+ @apply dark:bg-[#292f3d];
 }
 
 ::-webkit-scrollbar-thumb:active {
- @apply bg-[#343b4a];
+ @apply dark:bg-[#343b4a];
 }
 
 .arrow .arrowSymbol path:last-child {
