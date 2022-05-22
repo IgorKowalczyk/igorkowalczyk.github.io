@@ -1,12 +1,12 @@
 import NextLink from "next/link";
-//import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-//const Container = dynamic(() => import("@components/Container"));
+const Container = dynamic(() => import("@components/Container"));
+//import Container from "@components/Container";
 
-import Container from "@components/Container";
 export default function main({ repositories, user }) {
  return (
   <Container title={`${config.title} - Portfolio`}>
@@ -185,8 +185,8 @@ export default function main({ repositories, user }) {
        ))}
      </div>
      <div className="pointer-events-visible absolute inset-x-0 bottom-0 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
-     <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
-      <NextLink href="/github">
+      <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
+       <NextLink href="/github">
         <a className="arrow animatedLink group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold duration-200 motion-reduce:transition-none">
          See more repositories
          <svg xmlns="http://www.w3.org/2000/svg" className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -194,7 +194,7 @@ export default function main({ repositories, user }) {
           <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
          </svg>
         </a>
-      </NextLink>
+       </NextLink>
       </div>
      </div>
     </div>

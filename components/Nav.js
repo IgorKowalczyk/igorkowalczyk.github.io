@@ -1,13 +1,13 @@
 import classNames from "classnames";
 import NextLink from "next/link";
-//import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import Tippy from "@tippyjs/react";
 import { config } from "@/config";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-// const MobileNav = dynamic(() => import('@components/MobileNav'))
-import MobileNav from "@components/MobileNav";
+const MobileNav = dynamic(() => import("@components/MobileNav"), { ssr: false });
+//import MobileNav from "@components/MobileNav";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/shift-away.css";
 

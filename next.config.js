@@ -2,7 +2,7 @@
 
 module.exports = {
  reactStrictMode: true,
- pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
+ pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
  trailingSlash: true,
  compress: true,

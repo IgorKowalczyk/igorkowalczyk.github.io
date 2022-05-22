@@ -1,9 +1,9 @@
-//import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import { config } from "@/config";
-//const LinkButton = dynamic(() => import("@components/LinkButton"));
-//const Container = dynamic(() => import("@components/Container"));
-import LinkButton from "@components/LinkButton";
-import Container from "@components/Container";
+const LinkButton = dynamic(() => import("@components/LinkButton"));
+const Container = dynamic(() => import("@components/Container"));
+//import LinkButton from "@components/LinkButton";
+//import Container from "@components/Container";
 
 export default function not_found() {
  return (
