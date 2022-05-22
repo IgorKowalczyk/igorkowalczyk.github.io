@@ -1,11 +1,9 @@
 import NextLink from "next/link";
-import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-const Container = dynamic(() => import("@components/Container"));
-//import Container from "@components/Container";
+import Container from "@components/Container";
 
 export default function main({ repositories, user }) {
  return (
