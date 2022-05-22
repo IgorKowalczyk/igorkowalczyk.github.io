@@ -33,7 +33,7 @@ export const config = {
   },
  },
  url: "https://igorkowalczyk.vercel.app",
- theme_color: "#5686f5",
+ theme_color: "#040d21",
  type: "website",
  social: {
   image: "/banner.png",
