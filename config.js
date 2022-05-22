@@ -36,7 +36,7 @@ export const config = {
  theme_color: "#5686f5",
  type: "website",
  social: {
-  image: "/favicons/android-chrome-384x384.png",
+  image: "/banner.png",
   github: {
    username: "igorkowalczyk",
   },
