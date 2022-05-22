@@ -19,12 +19,12 @@ export default function gitub_repos({ repositories }) {
          <a className="break-all text-left font-poppins font-semibold" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
            <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-          </svg>{" "}
+          </svg>{" "}s
           {repo.owner.login}/{repo.name}
          </a>
         </NextLink>
         {"  "}
-        <span className="inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[50%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">
+        <span className="inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[55%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">
          {repo.isArchived ? (
           <>
            <svg xmlns="http://www.w3.org/2000/svg" className=" inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
