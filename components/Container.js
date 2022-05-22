@@ -3,11 +3,8 @@ import { config } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
-import dynamic from "next/dynamic";
-const Nav = dynamic(() => import("@components/Nav"), { ssr: false });
-const Footer = dynamic(() => import("@components/Footer"), { ssr: false });
-//import Nav from "@components/Nav";
-//import Footer from "@components/Footer";
+import Nav from "@components/Nav";
+import Footer from "@components/Footer";
 
 export default function Container(props) {
  const { children, ...customMeta } = props;

@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import dynamic from "next/dynamic";
-const Arc = dynamic(() => import("@components/Arc"));
+import Arc from "@components/Arc";
 
 export default function Document({ props }) {
  return (
