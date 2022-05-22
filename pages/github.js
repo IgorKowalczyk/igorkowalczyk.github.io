@@ -1,10 +1,8 @@
 import NextLink from "next/link";
+import Container from "@components/Container";
 import { config } from "@/config";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import dynamic from "next/dynamic";
-const Container = dynamic(() => import("@components/Container"));
-
 export default function gitub_repos({ repositories }) {
  return (
   <Container title={`${config.title} - Github Repositories`}>
@@ -20,8 +18,8 @@ export default function gitub_repos({ repositories }) {
          <a className="break-all text-left font-poppins font-semibold" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
            <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-          </svg>{" "}s
-          {repo.owner.login}/{repo.name}
+          </svg>{" "}
+          s{repo.owner.login}/{repo.name}
          </a>
         </NextLink>
         {"  "}
