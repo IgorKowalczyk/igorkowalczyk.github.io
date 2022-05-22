@@ -307,13 +307,13 @@ export async function getServerSideProps() {
   }
 `,
  });
- const public_repos_data = public_repos.data.user.repositories;
- const private_repos_data = private_repos.data.user.repositories;
- const most_popular_repos_data = most_popular_repos.data.user.topRepositories.edges.map((edge) => edge.node);
- const user_followers = most_popular_repos.data.user.followers.totalCount;
- const user_starred_repos = most_popular_repos.data.user.starredRepositories.totalCount;
- const user_stars = public_repos.data.user.repositories.edges.map((edge) => edge.node.stargazerCount).reduce((a, b) => a + b, 0);
- const user_forks = public_repos.data.user.repositories.edges.map((edge) => edge.node.forkCount).reduce((a, b) => a + b, 0);
+ const public_repos_data = await public_repos.data.user.repositories;
+ const private_repos_data = await private_repos.data.user.repositories;
+ const most_popular_repos_data = await most_popular_repos.data.user.topRepositories.edges.map((edge) => edge.node);
+ const user_followers = await most_popular_repos.data.user.followers.totalCount;
+ const user_starred_repos = await most_popular_repos.data.user.starredRepositories.totalCount;
+ const user_stars = await public_repos.data.user.repositories.edges.map((edge) => edge.node.stargazerCount).reduce((a, b) => a + b, 0);
+ const user_forks = await public_repos.data.user.repositories.edges.map((edge) => edge.node.forkCount).reduce((a, b) => a + b, 0);
  return {
   props: {
    repositories: {
