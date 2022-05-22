@@ -1,6 +1,7 @@
-import LinkButton from "@components/LinkButton";
-import Container from "@components/Container";
 import { config } from "@/config";
+import dynamic from "next/dynamic";
+const LinkButton = dynamic(() => import('@components/LinkButton'))
+const Container = dynamic(() => import('@components/Container'))
 
 export default function not_found() {
  return (

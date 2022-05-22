@@ -1,13 +1,14 @@
 import classNames from "classnames";
 import NextLink from "next/link";
+import dynamic from "next/dynamic";
+import Tippy from "@tippyjs/react";
 import { config } from "@/config";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import Tippy from "@tippyjs/react";
+const MobileNav = dynamic(() => import('@components/MobileNav'))
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/shift-away.css";
-import MobileNav from "@components/MobileNav";
 
 function NavItem({ href, text, target }) {
  const router = useRouter();

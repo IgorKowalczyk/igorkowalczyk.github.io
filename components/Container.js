@@ -2,10 +2,11 @@ import { useRouter } from "next/router";
 import { config } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
-import Nav from "@components/Nav";
-import Arc from "@components/Arc";
-import Footer from "components/Footer";
+import dynamic from "next/dynamic";
 import Twemoji from "react-twemoji";
+const Nav = dynamic(() => import('@components/Nav'))
+const Arc = dynamic(() => import('@components/Arc'))
+const Footer = dynamic(() => import('@components/Footer'))
 
 export default function Container(props) {
  const { children, ...customMeta } = props;
