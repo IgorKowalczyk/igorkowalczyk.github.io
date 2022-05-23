@@ -93,7 +93,7 @@ export default function Nav() {
      <div className="px-1 py-1">
       <Menu.Item>
        {({ active }) => (
-        <a target="_blank" href={`https://github.com/${config.social.github.username}`} className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
+        <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}`} className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
          See the code
        </a>
        )}
