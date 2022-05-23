@@ -74,7 +74,7 @@ export default function Nav() {
     leaveTo="transform opacity-0 scale-95"
    >
    <Menu.Items className="border-[1px] dark:border-white/[15%] border-black/[10%] backdrop-blur-[9px] absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md dark:bg-opacity-70 bg-opacity-70 bg-white shadow-lg dark:bg-[#08152b] firefox:bg-opacity-100 dark:firefox:bg-opacity-100">
-    <div className="px-1 py-1 ">
+    <div className="px-1 py-1">
      <Menu.Item>
       {({ active }) => (
        <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
@@ -90,7 +90,7 @@ export default function Nav() {
       )}
      </Menu.Item>
      </div>
-     <div>
+     <div className="px-1 py-1">
       <Menu.Item>
        {({ active }) => (
         <a className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
