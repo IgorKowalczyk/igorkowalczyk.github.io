@@ -60,7 +60,10 @@ export default function Nav() {
  <div className="w-56 text-right">
   <Menu as="div" className="relative inline-block text-left">
    <div>
-    <Menu.Button className="py-[5px] px-4 inline-flex w-full justify-center rounded-lg bg-transparent transition-all duration-300 motion-reduce:transition-none dark:bg-white/10">Options</Menu.Button>
+    <Menu.Button className="py-[5px] px-4 inline-flex w-full justify-center rounded-lg bg-transparent transition-all duration-300 motion-reduce:transition-none dark:bg-white/10">
+     Options
+    <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+    </Menu.Button>
    </div>
         <Transition
           as={Fragment}
