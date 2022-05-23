@@ -66,7 +66,7 @@ export default function Nav() {
    <Transition
     show={open}
     as={Fragment}
-    enter="transition ease-out duration-300"
+    enter="transition ease-out duration-200"
     enterFrom="transform opacity-0 scale-95"
     enterTo="transform opacity-100 scale-100"
     leave="transition ease-in duration-100"
