@@ -77,7 +77,7 @@ export default function Nav() {
     <div className="px-1 py-1 ">
      <Menu.Item>
       {({ active }) => (
-       <button className={`${active ? 'bg-violet-500' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-white duration-300`}>
+       <button className={`${active ? 'bg-violet-500' : ''} dark:bg-white/10 bg-black/10 group flex w-full items-center rounded-md px-2 py-2 text-sm text-white dark:text-black duration-300 motion-reduce:transition-none`}>
        {active ? (
                       <EditActiveIcon
                         className="mr-2 h-5 w-5"
