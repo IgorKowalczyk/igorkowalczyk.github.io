@@ -23,10 +23,9 @@ export default function Nav() {
  const [mounted, setMounted] = useState(false);
  const { resolvedTheme, setTheme } = useTheme();
  useEffect(() => setMounted(true), []);
- 
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow dark:shadow-2xl">
-   <nav key="nav" className="dark:bg-opacity-70 relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+   <nav key="nav" className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full backdrop-blur-[9px]"></div>
     <NextLink href="/" key="main_page">
      <a>
@@ -50,16 +49,12 @@ export default function Nav() {
       );
      })}
     </div>
-
-
-
-
  <div className="text-right">
   <Menu as="div" className="relative inline-block text-left">
    {({ open }) => (
     <>
     <div>
-    <Menu.Button className={`${open ? "shadow-hoverLight border-[#3391fc] dark:border-[#5686f5] dark:shadow-hoverDark" : "" } inline-flex w-full justify-center mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark`}>
+    <Menu.Button className={`${open ? "shadow-hoverLight border-[#3391fc] dark:border-[#5686f5] dark:shadow-hoverDark" : "" } mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark`}>
      <svg xmlns="http://www.w3.org/2000/svg" className={`${open ? "transform rotate-90 motion-reduce:rotate-0" : ""} h-5 w-5 text-gray-800 dark:text-gray-200 duration-300 motion-reduce:transition-none`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
     </Menu.Button>
    </div>
@@ -92,9 +87,9 @@ export default function Nav() {
      </div>
      <div className="px-1 py-1">
       <Menu.Item>
-       {({ active }) => (
-        <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
-         Source code <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+      {({ active }) => (
+        <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={classNames(active ? "dark:bg-white/10 bg-black/10" : "", "group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none")}>
+        Source code <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
        </a>
        )}
       </Menu.Item>
@@ -102,7 +97,7 @@ export default function Nav() {
    </Menu.Items>
    </Transition>
    </>
-   )}
+        )}
   </Menu>
  </div>
    </nav>
