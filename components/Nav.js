@@ -29,7 +29,7 @@ export default function Nav() {
  
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow dark:shadow-2xl">
-   <nav key="nav" className="dark:bg-opacity-70% relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+   <nav key="nav" className="dark:bg-opacity-70 relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full backdrop-blur-[9px]"></div>
     <NextLink href="/" key="main_page">
      <a>
@@ -73,7 +73,7 @@ export default function Nav() {
     leaveFrom="transform opacity-100 scale-100"
     leaveTo="transform opacity-0 scale-95"
    >
-   <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md dark:bg-opacity-70 bg-opacity-70 bg-white dark:bg-black shadow-lg">
+   <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md dark:bg-opacity-70 bg-opacity-70 bg-white shadow-lg dark:bg-[#08152b] firefox:bg-opacity-100 dark:firefox:bg-opacity-100">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
