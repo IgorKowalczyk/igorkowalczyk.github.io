@@ -58,6 +58,7 @@ export default function Nav() {
   <Menu as="div" className="relative inline-block text-left">
    {({ open }) => (
     <>
+    <div>
     <Menu.Button className="inline-flex w-full justify-center mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark">
      <svg xmlns="http://www.w3.org/2000/svg" className={`${open ? "transform rotate-90" : ""} h-5 w-5 text-gray-800 dark:text-gray-200 duration-300`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
     </Menu.Button>
@@ -88,6 +89,7 @@ export default function Nav() {
        </button>
       )}
      </Menu.Item>
+     </div>
      </>
     )}
    </Menu.Items>
