@@ -5,7 +5,7 @@ import { config } from "@/config";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, Listbox, Transition } from '@headlessui/react'
 import MobileNav from "@components/MobileNav";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/shift-away.css";
@@ -79,13 +79,6 @@ export default function Nav() {
       {({ active }) => (
        <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-300 motion-reduce:transition-none`}>
         Theme
-        <button aria-label="Toggle Dark Mode" type="button" className="flex h-9 w-9 items-center justify-center" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
-         {mounted && (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5 text-gray-800 dark:text-gray-200">
-           {resolvedTheme === "dark" ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />}
-          </svg>
-         )}
-        </button>
        </button>
       )}
      </Menu.Item>
@@ -106,224 +99,12 @@ export default function Nav() {
  );
 }
 
-function EditInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-    </svg>
-  )
-}
-
-function EditActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-    </svg>
-  )
-}
-
-function DuplicateInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 4H12V12H4V4Z"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-      <path
-        d="M8 8H16V16H8V8Z"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-    </svg>
-  )
-}
-
-function DuplicateActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 4H12V12H4V4Z"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-      <path
-        d="M8 8H16V16H8V8Z"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-    </svg>
-  )
-}
-
-function ArchiveInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
-    </svg>
-  )
-}
-
-function ArchiveActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
-    </svg>
-  )
-}
-
-function MoveInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M10 4H16V10" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M16 4L8 12" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M8 6H4V16H14V12" stroke="#A78BFA" strokeWidth="2" />
-    </svg>
-  )
-}
-
-function MoveActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M10 4H16V10" stroke="#C4B5FD" strokeWidth="2" />
-      <path d="M16 4L8 12" stroke="#C4B5FD" strokeWidth="2" />
-      <path d="M8 6H4V16H14V12" stroke="#C4B5FD" strokeWidth="2" />
-    </svg>
-  )
-}
-
-function DeleteInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#A78BFA" strokeWidth="2" />
-    </svg>
-  )
-}
-
-function DeleteActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="#8B5CF6"
-        stroke="#C4B5FD"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#C4B5FD" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#C4B5FD" strokeWidth="2" />
-    </svg>
-  )
-}
+/*
+        <button aria-label="Toggle Dark Mode" type="button" className="flex h-9 w-9 items-center justify-center" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+         {mounted && (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5 text-gray-800 dark:text-gray-200">
+           {resolvedTheme === "dark" ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />}
+          </svg>
+         )}
+        </button>
+*/
