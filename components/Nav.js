@@ -91,8 +91,12 @@ export default function Nav() {
      </Menu.Item>
      </div>
      <div>
-      <Menu.Item disabled>
-       <span className="opacity-75">See the code</span>
+      <Menu.Item>
+       {({ active }) => (
+        <a className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
+         See the code
+       </a>
+       )}
       </Menu.Item>
      </div>
    </Menu.Items>
