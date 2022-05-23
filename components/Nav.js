@@ -90,10 +90,10 @@ export default function Nav() {
       )}
      </Menu.Item>
      </div>
-     </>
-    )}
    </Menu.Items>
    </Transition>
+   </>
+   )}
   </Menu>
  </div>
    </nav>
