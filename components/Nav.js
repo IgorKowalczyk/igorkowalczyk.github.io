@@ -88,8 +88,8 @@ export default function Nav() {
        </button>
       )}
      </Menu.Item>
-     </div>
      )}
+     </div>
    </Menu.Items>
    </Transition>
   </Menu>
