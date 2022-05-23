@@ -92,13 +92,13 @@ export default function Nav() {
      </div>
      <div className="px-1 py-1">
       <Menu.Item>
-       {({ active }) => (
         <NextLink href={`https://github.com/${config.social.github.username}`}>
+       {({ active }) => (
         <a target="_blank" className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
          See the code
        </a>
+              )}
        </NextLink>
-       )}
       </Menu.Item>
      </div>
    </Menu.Items>
