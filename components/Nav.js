@@ -77,14 +77,14 @@ export default function Nav() {
     <div className="px-1 py-1 ">
      <Menu.Item>
       {({ active }) => (
-       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-300 motion-reduce:transition-none`}>
+       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
         Theme
        </button>
       )}
      </Menu.Item>
      <Menu.Item>
       {({ active }) => (
-       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-300 motion-reduce:transition-none`}>
+       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
         Animations
        </button>
       )}
