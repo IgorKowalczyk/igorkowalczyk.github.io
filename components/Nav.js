@@ -89,6 +89,9 @@ export default function Nav() {
        </button>
       )}
      </Menu.Item>
+     <Menu.Item disabled>
+      <span className="opacity-75">See the code</span>
+     </Menu.Item>
      </div>
    </Menu.Items>
    </Transition>
