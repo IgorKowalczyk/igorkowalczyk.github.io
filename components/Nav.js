@@ -57,7 +57,7 @@ export default function Nav() {
 
 
 
- <div className="w-56 text-right">
+ <div className="text-right">
   <Menu as="div" className="relative inline-block text-left">
    <div>
     <Menu.Button className="inline-flex w-full justify-center mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark">
