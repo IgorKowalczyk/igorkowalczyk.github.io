@@ -14,7 +14,7 @@ Router.events.on("routeChangeComplete", nProgress.done);
 export default function App({ Component, pageProps, router }) {
  UseAnalytics();
  return (
-  <ThemeProvider attribute="class" themes={["light", "dark"]}>
+  <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
    <MotionConfig reducedMotion="user">
     <AnimatePresence exitBeforeEnter>
      <Component {...pageProps} key={router.route} />

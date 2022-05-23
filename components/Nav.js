@@ -62,7 +62,7 @@ export default function Nav() {
          </Menu.Button>
         </div>
         <Transition show={open} as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-         <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 shadow-lg backdrop-blur-[9px] firefox:bg-opacity-100 dark:divide-white/10 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+         <Menu.Items className="absolute right-0 mt-2 w-64 origin-top-right divide-y divide-gray-100 rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 shadow-lg backdrop-blur-[9px] firefox:bg-opacity-100 dark:divide-white/10 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
           <div className="px-1 py-1">
            <Menu.Item>
             {({ active }) => (
@@ -98,6 +98,14 @@ export default function Nav() {
                   </Listbox.Button>
                   <Transition as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
                    <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white py-1 text-base shadow-2xl backdrop-blur-[9px] dark:border-white/[15%] dark:bg-[#08152b] sm:text-sm">
+                    <Listbox.Option key="system" className="relative cursor-pointer select-none  py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"system"}>
+                     <span className="flex truncate">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      System
+                     </span>
+                    </Listbox.Option>
                     <Listbox.Option key="dark" className="relative cursor-pointer select-none py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"dark"}>
                      <span className="flex truncate">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className=" mx-2 h-5 w-5 text-gray-800 duration-200 dark:text-gray-200">
@@ -123,12 +131,18 @@ export default function Nav() {
              </button>
             )}
            </Menu.Item>
-           <Menu.Item>{({ active }) => <button className={`${active ? "bg-black/10 dark:bg-white/10" : ""} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white`}>Animations</button>}</Menu.Item>
+           <Menu.Item>
+            {({ active }) => (
+             <button className={`${active ? "bg-black/10 dark:bg-white/10" : ""} group flex w-full items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white`}>
+              Animations
+             </button>
+            )}
+           </Menu.Item>
           </div>
           <div className="px-1 py-1">
            <Menu.Item>
             {({ active }) => (
-             <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={classNames(active ? "bg-black/10 dark:bg-white/10" : "", "group flex w-full items-center rounded-md px-2 py-2 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white")}>
+             <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={classNames(active ? "bg-black/10 dark:bg-white/10" : "", "group flex w-full items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white")}>
               Source code{" "}
               <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -157,3 +171,58 @@ export default function Nav() {
          )}
         </button>
 */
+
+/*
+              <div className="ml-auto w-32">
+               <Listbox value={mounted} onChange={(t) => null}>
+                {({ open }) => (
+                 <div className="relative">
+                  <Listbox.Button className={`${open ? "text-gray-800 dark:text-gray-200" : ""}text-gray-700 relative w-full cursor-pointer rounded-lg border-[1px] border-black/[10%] py-2 pl-2 pr-10 text-left duration-200 hover:border-black/30 hover:text-gray-800 motion-reduce:transition-none  dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200 sm:text-sm`}>
+                   <span className="flex truncate">
+                    {resolvedTheme === "dark" ? (
+                     <>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Enabled
+                     </>
+                    ) : (
+                     <>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      Disabled
+                     </>
+                    )}
+                   </span>
+                   <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                    </svg>
+                   </span>
+                  </Listbox.Button>
+                  <Transition as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                   <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white py-1 text-base shadow-2xl backdrop-blur-[9px] dark:border-white/[15%] dark:bg-[#08152b] sm:text-sm">
+                    <Listbox.Option key="enabled" className="relative cursor-pointer select-none py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"enabled"}>
+                     <span className="flex truncate">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mx-2 h-5 w-5 text-gray-800 duration-200 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Enabled
+                     </span>
+                    </Listbox.Option>
+                    <Listbox.Option key="disabled" className="relative cursor-pointer select-none  py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"disabled"}>
+                     <span className="flex truncate">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      Disabled
+                     </span>
+                    </Listbox.Option>
+                   </Listbox.Options>
+                  </Transition>
+                 </div>
+                )}
+               </Listbox>
+              </div>
+              */
