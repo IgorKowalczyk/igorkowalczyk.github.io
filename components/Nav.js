@@ -4,7 +4,7 @@ import { config } from "@/config";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import { Menu, Listbox, Transition } from '@headlessui/react'
+import { Menu, Listbox, Transition } from "@headlessui/react";
 import MobileNav from "@components/MobileNav";
 
 function NavItem({ href, text, target }) {
@@ -49,57 +49,42 @@ export default function Nav() {
       );
      })}
     </div>
- <div className="text-right">
-  <Menu as="div" className="relative inline-block text-left">
-   {({ open }) => (
-    <>
-    <div>
-    <Menu.Button className={`${open ? "shadow-hoverLight border-[#3391fc] dark:border-[#5686f5] dark:shadow-hoverDark" : "" } mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark`}>
-     <svg xmlns="http://www.w3.org/2000/svg" className={`${open ? "transform rotate-90 motion-reduce:rotate-0" : ""} h-5 w-5 text-gray-800 dark:text-gray-200 duration-300 motion-reduce:transition-none`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-    </Menu.Button>
-   </div>
-   <Transition
-    show={open}
-    as={Fragment}
-    enter="transition ease-out duration-200 motion-reduce:transition-none"
-    enterFrom="transform opacity-0 scale-95"
-    enterTo="transform opacity-100 scale-100"
-    leave="transition ease-in duration-100 motion-reduce:transition-none"
-    leaveFrom="transform opacity-100 scale-100"
-    leaveTo="transform opacity-0 scale-95"
-   >
-   <Menu.Items className="border-[1px] dark:border-white/[15%] border-black/[10%] backdrop-blur-[9px] absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 dark:divide-white/10 rounded-md dark:bg-opacity-70 bg-opacity-70 bg-white shadow-lg dark:bg-[#08152b] firefox:bg-opacity-100 dark:firefox:bg-opacity-100">
-    <div className="px-1 py-1">
-     <Menu.Item>
-      {({ active }) => (
-       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
-        Theme
-       </button>
+    <div className="text-right">
+     <Menu as="div" className="relative inline-block text-left">
+      {({ open }) => (
+       <>
+        <div>
+         <Menu.Button className={`${open ? "border-[#3391fc] shadow-hoverLight dark:border-[#5686f5] dark:shadow-hoverDark" : ""} mx-8 flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark`}>
+          <svg xmlns="http://www.w3.org/2000/svg" className={`${open ? "rotate-90 transform motion-reduce:rotate-0" : ""} h-5 w-5 text-gray-800 duration-300 motion-reduce:transition-none dark:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+           <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+           <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+         </Menu.Button>
+        </div>
+        <Transition show={open} as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+         <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 shadow-lg backdrop-blur-[9px] firefox:bg-opacity-100 dark:divide-white/10 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+          <div className="px-1 py-1">
+           <Menu.Item>{({ active }) => <button className={`${active ? "bg-black/10 dark:bg-white/10" : ""} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white`}>Theme</button>}</Menu.Item>
+           <Menu.Item>{({ active }) => <button className={`${active ? "bg-black/10 dark:bg-white/10" : ""} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white`}>Animations</button>}</Menu.Item>
+          </div>
+          <div className="px-1 py-1">
+           <Menu.Item>
+            {({ active }) => (
+             <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={classNames(active ? "bg-black/10 dark:bg-white/10" : "", "group flex w-full items-center rounded-md px-2 py-2 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white")}>
+              Source code{" "}
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+             </a>
+            )}
+           </Menu.Item>
+          </div>
+         </Menu.Items>
+        </Transition>
+       </>
       )}
-     </Menu.Item>
-     <Menu.Item>
-      {({ active }) => (
-       <button className={`${active ? 'dark:bg-white/10 bg-black/10' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none`}>
-        Animations
-       </button>
-      )}
-     </Menu.Item>
-     </div>
-     <div className="px-1 py-1">
-      <Menu.Item>
-      {({ active }) => (
-        <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className={classNames(active ? "dark:bg-white/10 bg-black/10" : "", "group flex w-full items-center rounded-md px-2 py-2 text-sm text-black dark:text-white duration-200 motion-reduce:transition-none")}>
-        Source code <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-       </a>
-       )}
-      </Menu.Item>
-     </div>
-   </Menu.Items>
-   </Transition>
-   </>
-        )}
-  </Menu>
- </div>
+     </Menu>
+    </div>
    </nav>
   </div>
  );
