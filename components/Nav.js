@@ -58,12 +58,10 @@ export default function Nav() {
 
 
  <div className="w-56 text-right">
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            Options
-          </Menu.Button>
-        </div>
+  <Menu as="div" className="relative inline-block text-left">
+   <div>
+    <Menu.Button className="inline-flex w-full justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] hover:shadow-hoverLight motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5] dark:hover:shadow-hoverDark">Options</Menu.Button>
+   </div>
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"
