@@ -60,7 +60,7 @@ export default function Nav() {
  <div className="w-56 text-right">
   <Menu as="div" className="relative inline-block text-left">
    <div>
-    <Menu.Button className="pt-[5px] px-4 inline-flex w-full justify-center rounded-lg bg-transparent transition-all duration-300 motion-reduce:transition-none dark:bg-white/10">Options</Menu.Button>
+    <Menu.Button className="py-[5px] px-4 inline-flex w-full justify-center rounded-lg bg-transparent transition-all duration-300 motion-reduce:transition-none dark:bg-white/10">Options</Menu.Button>
    </div>
         <Transition
           as={Fragment}
