@@ -39,6 +39,7 @@ export const config = {
   image: "/banner.png",
   github: {
    username: "igorkowalczyk",
+   repo: "igorkowalczyk.github.io",
   },
  },
  nav: {
