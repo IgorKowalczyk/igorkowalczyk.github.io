@@ -327,5 +327,6 @@ export async function getStaticProps() {
     user_forks,
    },
   },
+  revalidate: 60,
  };
 }
