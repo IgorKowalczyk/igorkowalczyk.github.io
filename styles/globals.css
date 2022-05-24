@@ -8,6 +8,10 @@ body {
  @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
 }
 
+html {
+@apply !pr-0 !overflow-auto
+}
+
 * {
  @apply box-border;
  scrollbar-color: #08152b transparent;
@@ -27,19 +31,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
- @apply dark:bg-[#040d21];
+ @apply dark:bg-[#040d21] bg-gray-50;
 }
 
 ::-webkit-scrollbar-thumb {
- @apply dark:bg-[#1f2532];
+ @apply dark:bg-[#1f2532] bg-gray-300;
 }
 
 ::-webkit-scrollbar-thumb:hover {
- @apply dark:bg-[#292f3d];
+ @apply dark:bg-[#292f3d] bg-gray-400;
 }
 
 ::-webkit-scrollbar-thumb:active {
- @apply dark:bg-[#343b4a];
+ @apply dark:bg-[#343b4a] bg-gray-500;
 }
 
 .arrow .arrowSymbol path:last-child {
