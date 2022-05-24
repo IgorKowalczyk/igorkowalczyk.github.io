@@ -70,8 +70,8 @@ export default function Nav() {
               Theme
               <div className="ml-auto w-32">
                <Listbox value={mounted} onChange={(t) => setTheme(t)}>
-                {({ open }) => (
                  <div className="relative">
+                                 {({ open }) => (
                   <Listbox.Button className={`${open ? "text-gray-800 dark:text-gray-200" : ""}text-gray-700 relative w-full cursor-pointer rounded-lg border-[1px] border-black/[10%] py-2 pl-2 pr-10 text-left duration-200 hover:border-black/30 hover:text-gray-800 motion-reduce:transition-none  dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200 sm:text-sm`}>
                    <span className="flex truncate">
                     {resolvedTheme === "dark" ? (
@@ -124,8 +124,8 @@ export default function Nav() {
                     </Listbox.Option>
                    </Listbox.Options>
                   </Transition>
+                  )}
                  </div>
-                )}
                </Listbox>
               </div>
              </button>
