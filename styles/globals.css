@@ -9,7 +9,7 @@ body {
 }
 
 html {
-@apply !pr-0 !overflow-auto
+ @apply !overflow-auto !pr-0;
 }
 
 * {
@@ -31,19 +31,19 @@ html {
 }
 
 ::-webkit-scrollbar-track {
- @apply dark:bg-[#040d21] bg-gray-50;
+ @apply bg-gray-50 dark:bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- @apply dark:bg-[#1f2532] bg-gray-300;
+ @apply bg-gray-300 dark:bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
- @apply dark:bg-[#292f3d] bg-gray-400;
+ @apply bg-gray-400 dark:bg-[#292f3d];
 }
 
 ::-webkit-scrollbar-thumb:active {
- @apply dark:bg-[#343b4a] bg-gray-500;
+ @apply bg-gray-500 dark:bg-[#343b4a];
 }
 
 .arrow .arrowSymbol path:last-child {
