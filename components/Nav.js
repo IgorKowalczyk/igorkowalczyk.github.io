@@ -20,7 +20,7 @@ function NavItem({ href, text, target }) {
  );
 }
 
-export default function Nav() {
+export function Nav() {
  let [isOpen, setIsOpen] = useState(false);
  const [mounted, setMounted] = useState(false);
  const { resolvedTheme, setTheme } = useTheme();
