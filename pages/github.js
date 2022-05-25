@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { config } from "@/config";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import Container from "@components/Container";
+import { Container } from "@components/Container";
 
 export default function gitub_repos({ repositories }) {
  return (
