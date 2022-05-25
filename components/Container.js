@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
+import { Nav } from "@components/Nav";
+import { Footer } from "@components/Footer";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
-import Nav from "@components/Nav";
-import Footer from "@components/Footer";
 
 export function Container(props) {
  const { children, ...customMeta } = props;
