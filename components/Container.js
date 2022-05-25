@@ -6,7 +6,7 @@ import Twemoji from "react-twemoji";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
 
-export default function Container(props) {
+export function Container(props) {
  const { children, ...customMeta } = props;
  const reduceMotion = useReducedMotion();
  const router = useRouter();
