@@ -5,7 +5,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { Dialog, Listbox, Transition } from "@headlessui/react";
-import MobileNav from "@components/MobileNav";
+import { MobileNav } from "@components/MobileNav";
 import { animate } from "framer-motion";
 
 function NavItem({ href, text, target }) {
