@@ -1,19 +1,18 @@
-import classNames from "classnames";
-import NextLink from "next/link";
 import { config } from "@/config";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { Dialog, Listbox, Transition } from "@headlessui/react";
-import { MobileNav } from "@components/MobileNav";
 import { animate } from "framer-motion";
+import MobileNav from "@components/MobileNav";
+import NextLink from "next/link";
 
 function NavItem({ href, text, target }) {
  const router = useRouter();
  const isActive = router.asPath.split("#")[0] === href.split("#")[0];
  return (
   <NextLink href={href} key={href}>
-   <a target={target} key={href} className={classNames(isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400", "hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 motion-reduce:transition-none dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block")}>
+   <a target={target} key={href} className={`${isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400"} hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 motion-reduce:transition-none dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block`}>
     <span>{text}</span>
    </a>
   </NextLink>
