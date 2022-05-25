@@ -1,6 +1,6 @@
 import { config } from "@/config";
+import { Container } from "@components/Container";
 import LinkButton from "@components/LinkButton";
-import Container from "@components/Container";
 
 export default function server_error() {
  return (
