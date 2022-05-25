@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 
-export default function Footer() {
+export function Footer() {
  return (
   <footer className="mx-auto mb-8 mt-10 flex w-full max-w-2xl flex-col justify-center px-8 motion-reduce:transition-none">
    <hr className="border-1 mb-8 w-full border-gray-200 duration-300 motion-reduce:transition-none dark:border-gray-800" />
