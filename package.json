@@ -15,7 +15,8 @@
  },
  "dependencies": {
   "@apollo/client": "^3.6.2",
-  "@headlessui/react": "^1.6.2",
+  "@headlessui/react": "^1.6.3",
+  "@headlessui/tailwindcss": "^0.1.0",
   "@next/bundle-analyzer": "^12.1.6",
   "@tippyjs/react": "^4.2.6",
   "framer-motion": "^6.3.3",

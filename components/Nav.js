@@ -1,9 +1,9 @@
 import { config } from "@/config";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
-import { Dialog, Listbox, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import { MobileNav } from "@components/MobileNav";
+import { ThemeSwitch } from "./ThemeSwitch";
 import NextLink from "next/link";
 
 function NavItem({ href, text, target }) {
@@ -20,9 +20,6 @@ function NavItem({ href, text, target }) {
 
 export function Nav() {
  let [isOpen, setIsOpen] = useState(false);
- const [mounted, setMounted] = useState(false);
- const { resolvedTheme, setTheme } = useTheme();
- useEffect(() => setMounted(true), []);
 
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow dark:shadow-2xl">
@@ -51,7 +48,7 @@ export function Nav() {
      })}
     </div>
     <div className="text-right">
-     <button type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "border-[#3391fc] dark:border-[#5686f5]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-transparent transition-all duration-300 hover:border-[#3391fc] motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5]`}>
+     <button type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "border-[#3391fc] dark:border-[#5686f5]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent transition-all duration-300 hover:border-[#3391fc] motion-reduce:transition-none dark:bg-white/10 bg-gray-200 dark:hover:border-[#5686f5]`}>
       <svg xmlns="http://www.w3.org/2000/svg" className={`${isOpen ? "rotate-90" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform motion-reduce:transition-none dark:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -60,15 +57,14 @@ export function Nav() {
     </div>
    </nav>
 
-   <Transition appear show={isOpen} as={Fragment}>
+   <Transition.Root appear show={isOpen} as={Fragment}>
     <Dialog as="div" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
      <Transition.Child as={Fragment} enter="ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
       <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-[4px] firefox:bg-opacity-50" />
      </Transition.Child>
-
      <div className="fixed inset-0 overflow-y-auto">
       <div className="flex min-h-full items-center justify-center p-4 text-center font-poppins">
-       <Transition.Child as={Fragment} enter="ease-out duration-200 motion-reduce:transition-none" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200 motion-reduce:transition-none" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
+       <Transition.Child as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
         <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-2xl border-[1px] border-black/[15%] bg-white p-6 text-left align-middle shadow-xl transition-all dark:border-white/[15%] dark:bg-[#121e32]">
          <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
           Settings
@@ -80,64 +76,7 @@ export function Nav() {
           <button className="group flex w-full cursor-auto select-text items-center py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
            Theme
            <div className="ml-auto w-32">
-            <Listbox value={mounted} onChange={(t) => setTheme(t)}>
-             {({ open }) => (
-              <div className="relative">
-               <Listbox.Button className={`${open ? "text-gray-800 dark:text-gray-200" : ""} relative w-full cursor-pointer rounded-lg border-[1px] border-black/[10%] py-2 pl-2 pr-10 text-left text-gray-700 duration-200 hover:border-black/30 hover:text-gray-800 motion-reduce:transition-none  dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200 sm:text-sm`}>
-                <span className="flex truncate">
-                 {resolvedTheme === "dark" ? (
-                  <>
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="mr-1 h-5 w-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                   </svg>
-                   <span>Dark</span>
-                  </>
-                 ) : (
-                  <>
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="mr-1 h-5 w-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                   </svg>
-                   <span>Light</span>
-                  </>
-                 )}
-                </span>
-                <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 opacity-70">
-                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
-                 </svg>
-                </span>
-               </Listbox.Button>
-               <Transition as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-                <Listbox.Options className="absolute z-[100] mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 py-1 text-base shadow-2xl backdrop-blur-[9px] firefox:bg-opacity-100 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-[85%] dark:firefox:bg-opacity-100 sm:text-sm">
-                 <Listbox.Option key="system" className="relative cursor-pointer select-none  py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"system"}>
-                  <span className="flex truncate">
-                   <svg xmlns="http://www.w3.org/2000/svg" className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                   </svg>
-                   System
-                  </span>
-                 </Listbox.Option>
-                 <Listbox.Option key="dark" className="relative cursor-pointer select-none py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"dark"}>
-                  <span className="flex truncate">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className=" mx-2 h-5 w-5 text-gray-800 duration-200 dark:text-gray-200">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                   </svg>
-                   Dark
-                  </span>
-                 </Listbox.Option>
-                 <Listbox.Option key="light" className="relative cursor-pointer select-none  py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"light"}>
-                  <span className="flex truncate">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                   </svg>
-                   Light
-                  </span>
-                 </Listbox.Option>
-                </Listbox.Options>
-               </Transition>
-              </div>
-             )}
-            </Listbox>
+            <ThemeSwitch />
            </div>
           </button>
          </div>
@@ -157,7 +96,7 @@ export function Nav() {
       </div>
      </div>
     </Dialog>
-   </Transition>
+   </Transition.Root>
   </div>
  );
 }
