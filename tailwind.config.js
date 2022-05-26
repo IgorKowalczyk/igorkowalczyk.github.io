@@ -51,5 +51,6 @@ module.exports = {
     });
    });
   }),
+  require('@headlessui/tailwindcss')
  ],
 };
