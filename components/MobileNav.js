@@ -3,7 +3,7 @@ import useDelayedRender from "use-delayed-render";
 import { useState } from "react";
 import { config } from "@/config";
 
-export default function MobileMenu() {
+export function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
  const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(isMenuOpen, {
   enterDelay: 20,
