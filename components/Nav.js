@@ -20,10 +20,6 @@ function NavItem({ href, text, target }) {
 
 export function Nav() {
  const [isOpen, setIsOpen] = useState(false);
- const [isThemeSwitchMouted, setThemeSwitchMouted] = useState(false);
- useEffect(() => setThemeSwitchMouted(true), []);
- if (!isThemeSwitchMouted) return "Loading....";
-
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow dark:shadow-2xl">
    <nav key="nav" className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
@@ -79,7 +75,7 @@ export function Nav() {
           <button className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
            Theme
            <div className="ml-auto w-32">
-            <ThemeSwitch show={isThemeSwitchMouted} />
+            <ThemeSwitch />
            </div>
           </button>
          </div>
