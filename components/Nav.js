@@ -1,11 +1,10 @@
 import { config } from "@/config";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Transition, Listbox } from "@headlessui/react";
 import { MobileNav } from "@components/MobileNav";
 import { ThemeSwitch } from "./ThemeSwitch";
 import NextLink from "next/link";
-import { motion } from "framer-motion";
 
 function NavItem({ href, text, target }) {
  const router = useRouter();
@@ -21,6 +20,10 @@ function NavItem({ href, text, target }) {
 
 export function Nav() {
  const [isOpen, setIsOpen] = useState(false);
+ const [isThemeSwitchMouted, setThemeSwitchMouted] = useState(false);
+ useEffect(() => setThemeSwitchMouted(true), []);
+ if (!isThemeSwitchMouted) return "Loading....";
+
  return (
   <div className="fixed top-0 z-[100] mx-0 mt-0 w-full font-poppins shadow dark:shadow-2xl">
    <nav key="nav" className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
@@ -48,7 +51,7 @@ export function Nav() {
      })}
     </div>
     <div className="text-right">
-     <button type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "border-[#3391fc] dark:border-[#5686f5]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent transition-all duration-300 hover:border-[#3391fc] motion-reduce:transition-none dark:bg-white/10 bg-gray-200 dark:hover:border-[#5686f5]`}>
+     <button type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "border-[#3391fc] dark:border-[#5686f5]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-gray-200 transition-all duration-300 hover:border-[#3391fc] motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5]`}>
       <svg xmlns="http://www.w3.org/2000/svg" className={`${isOpen ? "rotate-90" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform motion-reduce:transition-none dark:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -73,10 +76,10 @@ export function Nav() {
           <p className="text-sm text-gray-500 dark:text-slate-300">Here you can change settings such as theme and motion reduce. Your settings will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/20 dark:divide-white/20">
-          <button className="group flex w-full cursor-auto select-text items-center py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
+          <button className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
            Theme
            <div className="ml-auto w-32">
-            <ThemeSwitch />
+            <ThemeSwitch show={isThemeSwitchMouted} />
            </div>
           </button>
          </div>
@@ -100,16 +103,6 @@ export function Nav() {
   </div>
  );
 }
-
-/*
-        <button aria-label="Toggle Dark Mode" type="button" className="flex h-9 w-9 items-center justify-center" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
-         {mounted && (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5 text-gray-800 dark:text-gray-200">
-           {resolvedTheme === "dark" ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />}
-          </svg>
-         )}
-        </button>
-*/
 
 /*
               <div className="ml-auto w-32">
