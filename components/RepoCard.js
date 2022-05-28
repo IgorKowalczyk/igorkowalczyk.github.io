@@ -52,7 +52,7 @@ export function RepoCard(repo) {
     <NextLink key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`}>
      <a target="_blank">
       <span className="flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <span className="mr-1 block h-[12px] w-[12px] rounded-full" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "rgba(255, 255, 255, 0.5)" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
+       <span className="mr-1 block h-[12px] w-[12px] rounded-full dark:bg-white bg-gray-400" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
       </span>
      </a>
     </NextLink>
