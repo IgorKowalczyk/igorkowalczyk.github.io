@@ -11,7 +11,7 @@ export default function gitub_repos({ repositories }) {
    <h1 className="my-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
     {config.author} Repositories ({repositories.length})
    </h1>
-   <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories && repositories.map((repo) => <RepoCard {...repo} />)}</div>
+   <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories && repositories.map((repo) => <RepoCard key={repo.id} {...repo} />)}</div>
   </Container>
  );
 }
