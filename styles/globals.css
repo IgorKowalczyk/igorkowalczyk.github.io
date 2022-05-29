@@ -84,10 +84,6 @@ img.twemoji {
  @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
 }
 
-.menuRendered {
- @apply opacity-100;
-}
-
-.menuRendered p {
+.rendered p {
  @apply w-full translate-x-0 border-gray-200 opacity-100 dark:border-gray-600;
 }

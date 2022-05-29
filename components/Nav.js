@@ -47,8 +47,8 @@ export function Nav() {
      })}
     </div>
     <div className="text-right">
-     <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "border-[#3391fc] dark:border-[#5686f5]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg border-2 border-transparent bg-gray-200 transition-all duration-300 hover:border-[#3391fc] motion-reduce:transition-none dark:bg-white/10 dark:hover:border-[#5686f5]`}>
-      <svg xmlns="http://www.w3.org/2000/svg" className={`${isOpen ? "rotate-90" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform motion-reduce:transition-none dark:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+     <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "bg-blue-200 dark:bg-white/[15%]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/10 dark:hover:bg-white/[15%]`}>
+      <svg xmlns="http://www.w3.org/2000/svg" className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:text-blue-800 dark:group-hover:text-white group-hover:transform motion-reduce:transition-none dark:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
