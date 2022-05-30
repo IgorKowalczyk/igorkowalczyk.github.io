@@ -30,6 +30,7 @@
   "react-dom": "18.1.0",
   "react-ga4": "^1.4.1",
   "react-twemoji": "^0.5.0",
+  "react-use": "^17.4.0",
   "tailwind-gradient-mask-image": "^1.0.0",
   "tailwindcss-text-fill": "^0.2.0",
   "use-delayed-render": "^0.0.7"

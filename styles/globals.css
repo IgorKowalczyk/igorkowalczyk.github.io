@@ -88,6 +88,19 @@ img.twemoji {
  @apply w-full translate-x-0 border-gray-200 opacity-100 dark:border-gray-600;
 }
 
-.card-rotate {
- transform: perspective(1000px) rotateX(2deg) rotateY(-10deg) rotateZ(2deg);
+@media (min-width: 768px) {
+ .card-rotate {
+  transition: transform 0.2s;
+  transform: perspective(1000px) rotateX(2deg) rotateY(-10deg) rotateZ(2deg);
+ }
+
+ .card-rotate:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ }
+}
+
+@media (max-width: 1024px) {
+ .card-rotate {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ }
 }

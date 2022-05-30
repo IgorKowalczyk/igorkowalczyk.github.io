@@ -5,7 +5,7 @@ import { Fragment } from "react";
 export function ThemeSwitch(props) {
  const { resolvedTheme, setTheme } = useTheme();
  return (
-  <Listbox name="Theme switch" value={resolvedTheme} onChange={(t) => setTheme(t)} {...props}>
+  <Listbox name="Theme switch" value={resolvedTheme} unmount={true} onChange={(t) => setTheme(t)} {...props}>
    {({ open }) => (
     <div className="relative">
      <Listbox.Button className="relative w-full cursor-pointer rounded-lg border-[1px] border-black/[10%] text-left text-gray-700 duration-200 hover:border-black/30 hover:text-gray-800 motion-reduce:transition-none  dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200 sm:text-sm">

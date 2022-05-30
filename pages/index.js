@@ -24,7 +24,7 @@ export default function Main({ repositories, user }) {
    <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
     <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
      <div className="md:col-span-3">
-      <h1 className="dark:color-black mx-0 mt-0 mb-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[49px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{config.header.title}</h1>
+      <h1 className="dark:color-black mx-0 mt-0 mb-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{config.header.title}</h1>
       <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{config.header.subtitle}</h2>
       <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{config.header.description}</p>
       <div className="mt-4 flex justify-center md:block">
@@ -40,7 +40,7 @@ export default function Main({ repositories, user }) {
       </div>
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-      <div className="card-rotate motion-reduce:transition-nonedark:bg-[#08152b] block w-full rounded-md p-4 font-poppins text-sm shadow-codeLight transition-colors dark:border-[1px] dark:border-white/[15%] dark:shadow-codeDark	">
+      <div className="before:blur-[1px] before:absolute before:inset-0 before:dark:z-[-1] before:dark:bg-6-1/2 before:dark:bg-center before:dark:bg-repeat-space before:opacity-10 before:gradient-mask-t-0 dark:before:opacity-5 dark:before:bg-grid-[#fff] card-rotate motion-reduce:transition-none dark:bg-[#08152b] block w-full rounded-md p-4 font-poppins text-sm shadow-codeLight transition-colors dark:border-[1px] dark:border-white/[15%] dark:shadow-codeDark">
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">

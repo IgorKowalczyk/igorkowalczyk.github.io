@@ -52,13 +52,13 @@ export const config = {
     href: "/github/",
     title: "Repositories",
    },
+  ],
+  right: [
    {
     href: "/blog/",
     title: "Blog",
     target: "_blank",
    },
-  ],
-  right: [
    {
     href: "/discord/",
     title: "Discord",

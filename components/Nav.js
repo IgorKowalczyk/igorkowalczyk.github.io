@@ -12,7 +12,7 @@ function NavItem({ href, text, target }) {
  return (
   <NextLink href={href} key={href}>
    <a target={target} key={href} className={`${isActive ? "font-semibold text-gray-800 dark:text-gray-200" : "font-normal text-gray-600 dark:text-gray-400"} hidden rounded-lg p-1 transition-all duration-200 hover:bg-gray-200 motion-reduce:transition-none dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block`}>
-    <span>{text}</span>
+    <span className={`${isActive ? "border-b-2 border-black dark:border-white" : ""} duration-100`}>{text}</span>
    </a>
   </NextLink>
  );
@@ -32,53 +32,56 @@ export function Nav() {
      </a>
     </NextLink>
     <MobileNav />
-    <Popover className="relative">
+    <div className="mr-auto flex">
+     {config.nav.left.map((item, index) => {
+      return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
+     })}
+     <Popover className="relative">
       <>
        <Popover.Button onMouseEnter={() => setIsPopoverShowing(true)} onMouseLeave={() => setIsPopoverShowing(false)} onClick={() => null} className={`${isPopoverShowing ? "bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} group hidden rounded-lg p-1 font-poppins text-gray-600 outline-none transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:flex md:items-center`}>
         <span>My work</span>
-        <svg xmlns="http://www.w3.org/2000/svg" className={`${isPopoverShowing ? "-rotate-90" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:-rotate-90`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <svg xmlns="http://www.w3.org/2000/svg" className={`${isPopoverShowing ? "-rotate-90 text-gray-800 dark:text-gray-200" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:-rotate-90`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
        </Popover.Button>
-       <Transition show={isPopoverShowing} onMouseEnter={() => setIsPopoverShowing(true)} onMouseLeave={() => setTimeout(() => { setIsPopoverShowing(false) }, 200)} as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0 translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease-in duration-200" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 translate-y-1">
-        <Popover.Panel className=" absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 ">
+       <Transition unmount={false} onMouseEnter={() => setIsPopoverShowing(true)} onMouseLeave={() => setIsPopoverShowing(false)} show={isPopoverShowing} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-200 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+        <Popover.Panel focus={true} unmount={false} static className="absolute left-1/2 z-10 pt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 ">
          <div className="overflow-hidden rounded-lg border-[1px] border-black/[10%] shadow-lg  dark:border-white/[15%]">
           <div className="relative bg-white p-7 dark:bg-[#08152b]">
-           <a key="solutions" href="/github" className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out dark:hover:bg-white/5 hover:bg-blue-50/80">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
-             <svg fill="currentColor" className="inline h-[24px] w-[24px] fill-black duration-200 motion-reduce:transition-none dark:fill-white/[70%]">
-              <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
-             </svg>
-            </div>
-            <div className="ml-4">
-             <p className="text-sm font-medium text-gray-900 dark:text-white">My projects</p>
-             <p className="text-sm text-gray-500 dark:text-gray-400">Web development, Discord Bots, and more</p>
-            </div>
-           </a>
-          </div>
-          <div className="bg-white px-5 py-4 dark:bg-[#08152b]">
-           <a href="https://github.com/igorkowalczyk" className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none dark:hover:bg-white/5 ">
-            <span className="flex items-center">
-             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12">
-              <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] duration-200 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+           <NextLink href="/github" key="github">
+            <a onClick={() => setIsPopoverShowing(false)} key="solutions" href="/github" className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
+              <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+               <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
              </div>
-             <span className="text-sm font-medium text-gray-900 dark:text-white">Github Profile</span>
-            </span>
-
-            <span className="block text-sm text-gray-500 dark:text-gray-400">See all of my work</span>
-           </a>
+             <div className="ml-4">
+              <p className="text-sm font-medium text-gray-900 dark:text-white">My projects</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Web development, Discord Bots, and more</p>
+             </div>
+            </a>
+           </NextLink>
+          </div>
+          <div className="border-t-[1px] border-black/10 dark:border-white/10 bg-white px-5 py-4 dark:bg-[#08152b]">
+           <NextLink href={`https://github.com/${config.social.github.username}`} key="github_external">
+            <a target="_blank" className="group flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none dark:hover:bg-white/5 ">
+             <span className="flex items-center">
+              <div className="flex shrink-0 items-center justify-center rounded-lg h-6 w-6">
+               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+               </svg>
+              </div>
+              <span className="text-sm font-medium text-gray-900 dark:text-white">Github Profile</span>
+             </span>
+             <span className="block text-sm text-gray-500 dark:text-gray-400">See all of my work</span>
+            </a>
+           </NextLink>
           </div>
          </div>
         </Popover.Panel>
        </Transition>
       </>
-    </Popover>
-    <div className="mr-auto">
-     {config.nav.left.map((item, index) => {
-      return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
-     })}
+     </Popover>
     </div>
     <div className="ml-auto">
      {config.nav.right.map((item, index) => {
@@ -91,7 +94,7 @@ export function Nav() {
       );
      })}
     </div>
-    
+
     <div className="text-right">
      <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "bg-blue-200 dark:bg-white/[15%]" : ""} group ml-4 mr-[1.4rem] flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/10 dark:hover:bg-white/[15%]`}>
       <svg xmlns="http://www.w3.org/2000/svg" className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:text-gray-200 dark:group-hover:text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
