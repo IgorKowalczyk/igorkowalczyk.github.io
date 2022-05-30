@@ -48,10 +48,6 @@ export const config = {
     href: "/",
     title: "Home",
    },
-   {
-    href: "/github/",
-    title: "Repositories",
-   },
   ],
   right: [
    {
