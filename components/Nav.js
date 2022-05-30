@@ -49,7 +49,7 @@ export function Nav() {
          <div className="overflow-hidden rounded-lg border-[1px] border-black/[10%] shadow-lg  dark:border-white/[15%]">
           <div className="relative bg-white p-7 dark:bg-[#08152b]">
            <NextLink href="/github" key="github">
-            <a onClick={() => setIsPopoverShowing(false)} key="solutions" href="/github" className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+            <a onClick={() => setIsPopoverShowing(false)} key="solutions" className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
               <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
