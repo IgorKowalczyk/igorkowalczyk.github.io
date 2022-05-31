@@ -63,12 +63,15 @@ html {
 }
 
 .animatedLink::after,
-.animatedLink::before, .pseudo-border::after, .pseudo-border::before {
+.animatedLink::before,
+.pseudo-border::after,
+.pseudo-border::before {
  @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
 }
 
-.pseudo-border::after, .pseudo-border::before {
- @apply left-[12px] w-[calc(100%_-_1.9em)] bottom-[8px] h-[1.3px]
+.pseudo-border::after,
+.pseudo-border::before {
+ @apply left-[12px] bottom-[8px] h-[1.3px] w-[calc(100%_-_1.9em)];
 }
 
 .animatedLink::before {
@@ -76,7 +79,11 @@ html {
 }
 
 .animatedLink:hover::after,
-.animatedLink:active::after, .pseudo-border:hover::after, .pseudo-border:hover::before, .pseudo-border-active::after, .pseudo-border-active::before {
+.animatedLink:active::after,
+.pseudo-border:hover::after,
+.pseudo-border:hover::before,
+.pseudo-border-active::after,
+.pseudo-border-active::before {
  @apply scale-x-100 motion-reduce:transition-none;
 }
 
