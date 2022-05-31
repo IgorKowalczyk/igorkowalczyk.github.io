@@ -40,7 +40,7 @@ export default function Main({ repositories, user }) {
       </div>
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-      <div className="before:blur-[1px] before:absolute before:inset-0 before:dark:z-[-1] before:dark:bg-6-1/2 before:dark:bg-center before:dark:bg-repeat-space before:opacity-10 before:gradient-mask-t-0 dark:before:opacity-5 dark:before:bg-grid-[#fff] card-rotate motion-reduce:transition-none dark:bg-[#08152b] block w-full rounded-md p-4 font-poppins text-sm shadow-codeLight transition-colors dark:border-[1px] dark:border-white/[15%] dark:shadow-codeDark">
+      <div className="card-rotate block w-full rounded-md p-4 font-poppins text-sm shadow-codeLight transition-colors before:absolute before:inset-0 before:opacity-10 before:blur-[1px] before:gradient-mask-t-0 motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark before:dark:z-[-1] before:dark:bg-6-1/2 before:dark:bg-center before:dark:bg-repeat-space dark:before:opacity-5 dark:before:bg-grid-[#fff]">
        <div>
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
