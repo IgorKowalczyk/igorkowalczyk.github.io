@@ -5,7 +5,7 @@ import { Router } from "next/router";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import "@styles/globals.css";
 import "@styles/progress.css";
-import "@styles/tippy.css";
+// import "@styles/tippy.css";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);

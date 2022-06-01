@@ -5,7 +5,7 @@
 
 html,
 body {
- @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
+ @apply m-0 scroll-smooth p-0 font-poppins antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
 }
 
 html {
@@ -58,32 +58,32 @@ html {
  stroke-dashoffset: 20;
 }
 
-.animatedLink {
+.link {
  @apply relative inline-block;
 }
 
-.animatedLink::after,
-.animatedLink::before,
-.pseudo-border::after,
-.pseudo-border::before {
+.link::after,
+.link::before,
+.nav-border::after,
+.nav-border::before {
  @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
 }
 
-.pseudo-border::after,
-.pseudo-border::before {
+.nav-border::after,
+.nav-border::before {
  @apply left-[12px] bottom-[8px] h-[1.3px] w-[calc(100%_-_1.9em)];
 }
 
-.animatedLink::before {
+.link::before {
  @apply scale-x-100 opacity-20;
 }
 
-.animatedLink:hover::after,
-.animatedLink:active::after,
-.pseudo-border:hover::after,
-.pseudo-border:hover::before,
-.pseudo-border-active::after,
-.pseudo-border-active::before {
+.link:hover::after,
+.link:active::after,
+.nav-border:hover::after,
+.nav-border:hover::before,
+.nav-border.active::after,
+.nav-border.active::before {
  @apply scale-x-100 motion-reduce:transition-none;
 }
 
@@ -93,10 +93,6 @@ img.twemoji {
 
 .burger svg[data-hide="true"] {
  @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
-}
-
-.rendered p {
- @apply w-full translate-x-0 border-gray-200 opacity-100 dark:border-gray-600;
 }
 
 @media (min-width: 768px) {
