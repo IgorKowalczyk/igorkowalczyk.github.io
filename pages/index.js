@@ -40,8 +40,13 @@ export default function Main({ repositories, user }) {
       </div>
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-      <div className="block w-full rounded-md p-4 font-poppins text-sm shadow-codeLight transition-colors before:absolute before:inset-0 before:opacity-10 before:blur-[1px] before:gradient-mask-t-0 motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark before:dark:z-[-1] before:dark:bg-6-1/2 before:dark:bg-center before:dark:bg-repeat-space dark:before:opacity-5 dark:before:bg-grid-[#fff]">
-       <div>
+      <div className="border border-b-black/15 block w-full rounded-md font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
+       <div className="w-fill flex h-8 gap-[6px] border-b border-b-dark/5 dark:border-b-white/10 bg-white/[0.05%] p-2">
+        <div className="cursor-no-drop h-3.5 w-3.5 rounded-full bg-[#fb5f57]"></div>
+        <div className="cursor-no-drop h-3.5 w-3.5 rounded-full bg-[#fdbf2d]"></div>
+        <div className="cursor-no-drop h-3.5 w-3.5 rounded-full bg-[#27cb3f]"></div>
+       </div>
+       <div className="p-4">
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
         <span className="italic">
          <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span>{" "}
@@ -57,22 +62,22 @@ export default function Main({ repositories, user }) {
          + <span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})
          <br />- <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
         </span>
-       </div>
-       {config.header.code.lines.map((line, index) => (
-        <div key={index}>
-         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{line.user}</span>{" "}
+        {config.header.code.lines.map((line, index) => (
+         <div key={index}>
+          <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{line.user}</span>{" "}
+          <span className="italic">
+           <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
+          </span>
+          <br />
+          <span className="leading-6">{line.response}</span>
+         </div>
+        ))}
+        <div>
+         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
          <span className="italic">
-          <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
+          <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
          </span>
-         <br />
-         <span className="leading-6">{line.response}</span>
         </div>
-       ))}
-       <div>
-        <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
-        <span className="italic">
-         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
-        </span>
        </div>
       </div>
      </div>
