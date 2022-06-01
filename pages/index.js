@@ -18,7 +18,7 @@ export default function Main({ repositories, user }) {
 
  return (
   <Container title={`${config.title} - Full-stack developer`}>
-   <Transition show={isMouted} enter="duration-200 ease-out" enterFrom="opacity-0" enterTo="opacity-100 duration-200" leave="transition duration-500 ease-out" leaveFrom="opacity-100" leaveTo="opacity-0">
+   <Transition show={isMouted} enter="z-[-1] duration-200 ease-out" enterFrom="opacity-0" enterTo="opacity-100" leave="duration-200 ease-out" leaveFrom="opacity-100" leaveTo="opacity-0 duration-200 z-[-1]">
     <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] duration-200 will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
    </Transition>
    <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
