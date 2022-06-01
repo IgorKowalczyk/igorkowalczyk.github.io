@@ -1,4 +1,4 @@
-export function Squares(props) {
+export default function Squares(props) {
  return (
   <svg {...props} width="404" height="404" fill="none" viewBox="0 0 404 404" role="img">
    <defs>

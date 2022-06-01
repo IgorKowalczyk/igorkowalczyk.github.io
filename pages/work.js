@@ -1,10 +1,11 @@
-import NextLink from "next/link";
+import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { Container } from "@components/Container";
 import { RepoCard } from "@components/RepoCard";
-import { Squares } from "@components/decorations/Squares";
+const Squares = dynamic(() => import("@components/decorations/Squares"));
+
 export default function gitub_repos({ repositories }) {
  return (
   <Container title={`${config.title} - Github Repositories`}>

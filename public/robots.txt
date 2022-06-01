@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://igorkowalczyk.vercel.app/sitemap.xml
