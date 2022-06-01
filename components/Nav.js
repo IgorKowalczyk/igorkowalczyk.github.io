@@ -1,10 +1,10 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 import NextLink from "next/link";
 import { config } from "@/config";
 import { useRouter } from "next/router";
-const MobileNav = dynamic(() => import("@components/MobileNav"))
-const Settings = dynamic(() => import("@components/Settings"))
-const Popover = dynamic(() => import("@components/NavPopover"))
+const MobileNav = dynamic(() => import("@components/MobileNav"));
+const Settings = dynamic(() => import("@components/Settings"));
+const Popover = dynamic(() => import("@components/NavPopover"));
 
 function NavItem({ href, text, target }) {
  const router = useRouter();
@@ -33,7 +33,7 @@ export function Nav() {
      {config.nav.left.map((item, index) => {
       return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
-     <Popover className="relative"/>
+     <Popover className="relative" />
     </div>
     <div className="ml-auto">
      {config.nav.right.map((item, index) => {
@@ -46,7 +46,7 @@ export function Nav() {
       );
      })}
     </div>
-     <Settings className="text-right"/>
+    <Settings className="text-right" />
    </nav>
   </div>
  );

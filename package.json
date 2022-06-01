@@ -6,6 +6,7 @@
  "scripts": {
   "dev": "next dev",
   "build": "next build",
+  "postbuild": "node ./lib/scripts/generate-sitemap.mjs",
   "start": "next start",
   "deploy": "next build && next start",
   "analyze": "ANALYZE=true next build",
@@ -42,7 +43,8 @@
   "postcss": "^8.4.13",
   "prettier": "^2.6.2",
   "prettier-plugin-tailwindcss": "^0.1.10",
-  "tailwindcss": "^3.0.24"
+  "tailwindcss": "^3.0.24",
+  "globby": "^13.1.1"
  },
  "repository": {
   "type": "git",
