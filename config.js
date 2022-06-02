@@ -17,7 +17,7 @@ export const config = {
      command: "contact --discord",
      user: "igorkowalczyk",
      response: (
-      <p>
+      <>
        + <span className="font-semibold">User:</span>{" "}
        <Link href="https://discord.com/users/544164729354977282">
         <a target="_blank">Majonez.exe#2495</a>
@@ -26,7 +26,7 @@ export const config = {
        <Link href="https://discord.gg/uxtSMtd2xZ">
         <a target="_blank">https://discord.gg/uxtSMtd2xZ</a>
        </Link>
-      </p>
+      </>
      ),
     },
    ],
