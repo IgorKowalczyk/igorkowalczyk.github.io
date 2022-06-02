@@ -16,9 +16,9 @@ export default function NavPopover(props) {
      <Transition enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-200 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
       <Popover.Panel unmount={false} className="absolute left-1/2 z-10 w-screen max-w-sm -translate-x-1/2 transform px-4 pt-3 sm:px-0 ">
        <div className="overflow-hidden rounded-lg border-[1px] border-black/[10%] shadow-lg  dark:border-white/[15%]">
-        <div className="relative bg-white p-7 dark:bg-[#08152b]">
+        <div className="relative bg-white p-3 dark:bg-[#08152b]">
          <NextLink href={`https://github.com/${config.social.github.username}`} key="github">
-          <a onClick={() => close()} key="solutions" className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+          <a onClick={() => close()} key="solutions" className="flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
             <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
              <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -31,7 +31,7 @@ export default function NavPopover(props) {
           </a>
          </NextLink>
          <NextLink href="/blog" key="blog">
-          <a onClick={() => close()} key="blog_navbar" className="-m-3 mt-4 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+          <a onClick={() => close()} key="blog_navbar" className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
             <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
              <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -44,7 +44,7 @@ export default function NavPopover(props) {
           </a>
          </NextLink>
          <NextLink href="/contact" key="contact_navbar">
-          <a onClick={() => close()} key="contact" className="-m-3 mt-4 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+          <a onClick={() => close()} key="contact" className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
             <svg xmlns="http://www.w3.org/2000/svg" className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -59,7 +59,7 @@ export default function NavPopover(props) {
         </div>
         <div className="border-t-[1px] border-black/10 bg-white px-5 py-4 dark:border-white/10 dark:bg-[#08152b]">
          <NextLink href={`https://github.com/${config.social.github.username}`} key="github_external">
-          <a onClick={() => close()} target="_blank" className="group flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none dark:hover:bg-white/5 ">
+          <a onClick={() => close()} target="_blank" className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none dark:hover:bg-white/5 ">
            <span className="flex items-center">
             <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
