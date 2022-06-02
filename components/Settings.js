@@ -31,12 +31,12 @@ export default function Settings(props) {
           <p className="text-sm text-gray-500 dark:text-slate-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/20 dark:divide-white/20">
-          <button className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
+          <div className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
            Theme
            <div className="ml-auto w-32">
             <ThemeSwitch />
            </div>
-          </button>
+          </div>
          </div>
          <div className="mt-4 flex">
           <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className="full group flex items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
