@@ -28,7 +28,7 @@ export default function Settings(props) {
           Settings
          </Dialog.Title>
          <div className="mt-2">
-          <p className="text-sm text-gray-500 dark:text-slate-300">Here you can change settings such as theme and motion reduce. Your settings will be saved automatically.</p>
+          <p className="text-sm text-gray-500 dark:text-slate-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/20 dark:divide-white/20">
           <button className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
