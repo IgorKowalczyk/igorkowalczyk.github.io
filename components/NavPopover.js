@@ -7,7 +7,7 @@ export default function NavPopover(props) {
   <Popover {...props}>
    {({ open, close }) => (
     <>
-     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-poppins text-gray-600 outline-none transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
+     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-poppins text-gray-600  transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
       <span>More</span>
       <svg xmlns="http://www.w3.org/2000/svg" className={`${open ? "-rotate-90 text-gray-800 dark:text-gray-200" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:-rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -59,7 +59,7 @@ export default function NavPopover(props) {
         </div>
         <div className="border-t-[1px] border-black/10 bg-white px-5 py-4 dark:border-white/10 dark:bg-[#08152b]">
          <NextLink href={`https://github.com/${config.social.github.username}`} key="github_external">
-          <a onClick={() => close()} target="_blank" className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none dark:hover:bg-white/5 ">
+          <a onClick={() => close()} target="_blank" className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 focus: dark:hover:bg-white/5 ">
            <span className="flex items-center">
             <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

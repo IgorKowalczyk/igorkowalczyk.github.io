@@ -50,7 +50,7 @@ export function RepoCard(repo) {
    )}
    <div className="hide-scrollbar mt-2 flex gap-1 overflow-hidden overflow-x-auto">
     <NextLink key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`}>
-     <a target="_blank">
+     <a target="_blank" aria-label={`${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"} search`}>
       <span className="flex w-max content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
        <span className="mr-1 block h-[12px] w-[12px] rounded-full bg-gray-400 dark:bg-white" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
       </span>

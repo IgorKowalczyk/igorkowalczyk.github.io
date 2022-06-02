@@ -25,7 +25,7 @@ export function Nav() {
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full backdrop-blur-[9px]"></div>
     <NextLink href="/" key="main_page">
      <a>
-      <h1 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black duration-300 motion-reduce:transition-none dark:text-white">Igor Kowalczyk</h1>
+      <h3 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black duration-300 motion-reduce:transition-none dark:text-white">Igor Kowalczyk</h3>
      </a>
     </NextLink>
     <MobileNav />
