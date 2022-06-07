@@ -1,32 +1,23 @@
 import NextLink from "next/link";
-
+import { SparklesIcon, StarIcon, ArchiveIcon, FolderIcon } from "@heroicons/react/outline";
 export function RepoCard(repo) {
  return (
   <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
    <div className="text-left">
     <NextLink href={repo.url} key={repo.id}>
      <a className="break-all text-left font-poppins font-semibold" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-       <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-      </svg>{" "}
-      {repo.owner.login}/{repo.name}
+      <FolderIcon className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" /> {repo.owner.login}/{repo.name}
      </a>
     </NextLink>
     {"  "}
     <span className="inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[55%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">
      {repo.isArchived ? (
       <>
-       <svg xmlns="http://www.w3.org/2000/svg" className=" inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-       </svg>{" "}
-       Archived
+       <ArchiveIcon className="inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" /> Archived
       </>
      ) : (
       <>
-       <svg xmlns="http://www.w3.org/2000/svg" className="inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-       </svg>{" "}
-       Active
+       <SparklesIcon className="inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" /> Active
       </>
      )}
     </span>
@@ -59,10 +50,7 @@ export function RepoCard(repo) {
     <NextLink key="repo_stars" href={`${repo.url}/stargazers`}>
      <a target="_blank">
       <span className="flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-5 w-5 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-       </svg>{" "}
-       {repo.stargazerCount} Stars
+       <StarIcon className="mr-1 h-5 w-5 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" /> {repo.stargazerCount} Stars
       </span>
      </a>
     </NextLink>

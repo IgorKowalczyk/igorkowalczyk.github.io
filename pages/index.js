@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import Tippy from "@tippyjs/react";
 import { config } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
@@ -7,6 +8,8 @@ import { Container } from "@components/Container";
 import { Transition } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { RepoCard } from "@components/RepoCard";
+import { UsersIcon } from "@heroicons/react/outline";
+import { Dots1, Dots2 } from "@components/decorations/Dots";
 
 export default function Main({ repositories, user }) {
  const [isMouted, setMouted] = useState(false);
@@ -72,19 +75,19 @@ export default function Main({ repositories, user }) {
           <span className="leading-6">{line.response}</span>
          </div>
         ))}
-        <div>
+
          <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
          <span className="italic">
           <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
          </span>
-        </div>
+
        </div>
       </div>
      </div>
     </div>
    </div>
    <div>
-    <hr className="border-1 m-[0_auto] mb-8 border-gray-200 px-8 duration-300 motion-reduce:transition-none dark:border-gray-800" />
+    <hr className="m-[0_auto] mb-8 border-[1px] border-gray-200 px-8 duration-300 motion-reduce:transition-none dark:border-gray-800" />
     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
      <p className="font-semibold duration-200 motion-reduce:transition-none">
       <NextLink href={`https://github.com/${config.social.github.username}`}>
@@ -119,18 +122,45 @@ export default function Main({ repositories, user }) {
      <p className="font-semibold duration-200 motion-reduce:transition-none">
       <NextLink href={`https://github.com/${config.social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-        <svg height="16" viewBox="0 0 16 16" width="16" className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white">
-         <path fillRule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path>
-        </svg>{" "}
-        {user.user_followers} Github Followers
+        <UsersIcon className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" /> {user.user_followers} Github Followers
        </a>
       </NextLink>
      </p>
     </div>
    </div>
-   <div className="relative mx-auto scroll-mt-20 text-center" id={"about"}>
+   <div className="relative mx-auto mb-7 scroll-mt-20 text-center" id={"about"}>
     <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
-    <p className="font-poppins text-2xl font-semibold">Soon! Work in progress...</p>
+    <div className="flex justify-center ">
+     <div className="m-[0_auto] flex w-[90%] max-w-4xl flex-col-reverse items-center justify-center sm:flex-row">
+      <div className="sm:max-w-48 relative m-[0_auto] w-full px-8 pt-5 drop-shadow-2xl sm:m-0 sm:w-max sm:px-0">
+       <div className="m-[0_auto] items-center motion-reduce:transition-none md:m-0 md:flex">
+        <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
+         <div className="w-fill border-b-dark/5 flex h-8 gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
+          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
+          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
+          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
+         </div>
+         <div className="p-4 text-left">
+
+           <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
+           <span className="italic">
+            <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span>{" "}
+           </span>
+           <span>EEEE?</span>
+
+           <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
+           <span className="italic">
+            <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
+           </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div className="flex flex-col pl-8">
+       <p className="text-gray-600 dark:text-gray-400"></p>
+      </div>
+     </div>
+    </div>
    </div>
    <div className="relative mx-auto scroll-mt-20 before:absolute before:inset-0 before:z-[-1] before:bg-6-1/2 before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-5 dark:before:bg-grid-[#fff]" id={"repositories"}>
     <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
@@ -149,6 +179,57 @@ export default function Main({ repositories, user }) {
        </NextLink>
       </div>
      </div>
+    </div>
+   </div>
+   <div className="relative mx-auto mb-7 scroll-mt-20 text-center" id={"contact"}>
+    <h3 className="dark:color-black mx-6 mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
+    <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
+    <div className="relative m-[0_auto] my-4 w-9/12 max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
+     <form className="z-10 flex w-full flex-col items-center justify-center p-4">
+      <div className="z-10 block w-full items-center justify-center gap-1.5 text-left md:flex">
+       <label htmlFor="contact_name" className="z-10 w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+        Name
+        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
+         <span aria-hidden={true} className="cursor-help text-red-500">
+          *
+         </span>
+        </Tippy>
+        <input id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
+       </label>
+       <label htmlFor="contact_email" className="z-10 w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+        Email
+        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
+         <span aria-hidden={true} className="cursor-help text-red-500">
+          *
+         </span>
+        </Tippy>
+        <input id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="john@doe.com" />
+       </label>
+      </div>
+      <div className="z-10 mt-2 flex w-full items-center justify-center gap-1.5">
+       <label htmlFor="contact_message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+        Message
+        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
+         <span aria-hidden={true} className="cursor-help text-red-500">
+          *
+         </span>
+        </Tippy>
+        <textarea id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="Hello there!" />
+       </label>
+      </div>
+      <button type="button" className="group mt-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>
+       Send{" "}
+       <svg xmlns="http://www.w3.org/2000/svg" className="mt-[2px] h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+       </svg>
+      </button>
+     </form>
+      <span class="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+       <Dots1 />
+      </span>
+      <span class="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+       <Dots2 />
+      </span>
     </div>
    </div>
   </Container>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
 import { useState } from "react";
 import { config } from "@/config";
+import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,14 +23,8 @@ export default function MobileNav() {
      isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
     }}
    >
-    <svg data-hide={isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" width="20" height="20" viewBox="0 0 20 20" fill="none">
-     <path d="M2.5 7.5H17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-     <path d="M2.5 12.5H17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-    <svg data-hide={!isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" shapeRendering="geometricPrecision">
-     <path d="M18 6L6 18" />
-     <path d="M6 6l12 12" />
-    </svg>
+    <MenuAlt2Icon data-hide={isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+    <XIcon data-hide={!isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
    </button>
    {isMounted && (
     <div className={`${isRendered ? "rendered opacity-100" : ""} absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-[9px] duration-200 motion-reduce:transition-none md:hidden`}>
