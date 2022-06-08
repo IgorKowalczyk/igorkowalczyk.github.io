@@ -46,6 +46,10 @@ html {
  @apply bg-gray-500 dark:bg-[#343b4a];
 }
 
+::selection {
+@apply bg-black/10 dark:bg-white/10
+}
+
 .arrow .arrowSymbol path:last-child {
  @apply motion-reduce:transition-none motion-reduce:!duration-[0ms];
  stroke-dasharray: 10;
