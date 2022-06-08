@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import Tippy from "@tippyjs/react";
+import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
@@ -9,7 +9,8 @@ import { Transition } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { RepoCard } from "@components/RepoCard";
 import { UsersIcon } from "@heroicons/react/outline";
-import { Dots1, Dots2 } from "@components/decorations/Dots";
+const Dots = dynamic(() => import("@components/decorations/Dots"));
+const Tippy = dynamic(() => import("@tippyjs/react"));
 
 export default function Main({ repositories, user }) {
  const [isMouted, setMouted] = useState(false);
@@ -191,11 +192,11 @@ export default function Main({ repositories, user }) {
        </svg>
       </button>
      </form>
-     <span class="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
-      <Dots1 />
+     <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+      <Dots h="107" w="134" />
      </span>
-     <span class="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
-      <Dots2 />
+     <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+     <Dots h="70" w="134" />
      </span>
     </div>
    </div>
