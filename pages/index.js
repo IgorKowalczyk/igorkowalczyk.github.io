@@ -75,12 +75,10 @@ export default function Main({ repositories, user }) {
           <span className="leading-6">{line.response}</span>
          </div>
         ))}
-
-         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
-         <span className="italic">
-          <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
-         </span>
-
+        <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
+        <span className="italic">
+         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
+        </span>
        </div>
       </div>
      </div>
@@ -130,7 +128,6 @@ export default function Main({ repositories, user }) {
    </div>
    <div className="relative mx-auto mb-7 scroll-mt-20 text-center" id={"about"}>
     <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
-
    </div>
    <div className="relative mx-auto scroll-mt-20 before:absolute before:inset-0 before:z-[-1] before:bg-6-1/2 before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-5 dark:before:bg-grid-[#fff]" id={"repositories"}>
     <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
@@ -194,12 +191,12 @@ export default function Main({ repositories, user }) {
        </svg>
       </button>
      </form>
-      <span class="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
-       <Dots1 />
-      </span>
-      <span class="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
-       <Dots2 />
-      </span>
+     <span class="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+      <Dots1 />
+     </span>
+     <span class="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+      <Dots2 />
+     </span>
     </div>
    </div>
   </Container>
