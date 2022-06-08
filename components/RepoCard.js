@@ -31,7 +31,7 @@ export function RepoCard(repo) {
      {repo.repositoryTopics.edges.map((topic) => (
       <NextLink key={topic.node.topic.name} href={`https://github.com/topics/${topic.node.topic.name}`}>
        <a target="_blank">
-        <span className="mr-[10px] mt-1 inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">{topic.node.topic.name}</span>
+        <span className="mr-[10px] mt-1 inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">#{topic.node.topic.name}</span>
        </a>
       </NextLink>
      ))}

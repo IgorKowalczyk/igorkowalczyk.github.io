@@ -153,9 +153,9 @@ export default function Main({ repositories, user }) {
     <h3 className="dark:color-black mx-6 mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
     <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
     <div className="relative m-[0_auto] my-4 w-9/12 max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
-     <form className="z-10 flex w-full flex-col items-center justify-center p-4">
-      <div className="z-10 block w-full items-center justify-center gap-1.5 text-left md:flex">
-       <label htmlFor="contact_name" className="z-10 w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+     <form className="flex w-full flex-col items-center justify-center p-4">
+      <div className="block w-full items-center justify-center gap-1.5 text-left md:flex">
+       <label htmlFor="contact_name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
         Name
         <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
          <span aria-hidden={true} className="cursor-help text-red-500">
@@ -164,7 +164,7 @@ export default function Main({ repositories, user }) {
         </Tippy>
         <input id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
        </label>
-       <label htmlFor="contact_email" className="z-10 w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+       <label htmlFor="contact_email" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
         Email
         <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
          <span aria-hidden={true} className="cursor-help text-red-500">
@@ -174,7 +174,7 @@ export default function Main({ repositories, user }) {
         <input id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="john@doe.com" />
        </label>
       </div>
-      <div className="z-10 mt-2 flex w-full items-center justify-center gap-1.5">
+      <div className="\mt-2 flex w-full items-center justify-center gap-1.5">
        <label htmlFor="contact_message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
         Message
         <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
