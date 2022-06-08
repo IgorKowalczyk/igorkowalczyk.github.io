@@ -47,7 +47,7 @@ html {
 }
 
 ::selection {
-@apply bg-black/10 dark:bg-white/10
+ @apply bg-black/10 dark:bg-white/10;
 }
 
 .arrow .arrowSymbol path:last-child {

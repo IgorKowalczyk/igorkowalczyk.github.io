@@ -196,7 +196,7 @@ export default function Main({ repositories, user }) {
       <Dots h="107" w="134" />
      </span>
      <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
-     <Dots h="70" w="134" />
+      <Dots h="70" w="134" />
      </span>
     </div>
    </div>

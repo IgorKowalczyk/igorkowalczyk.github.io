@@ -1,4 +1,4 @@
-export default function Squares({h, w}) {
+export default function Squares({ h, w }) {
  return (
   <svg width={w} height={h} fill="none" viewBox={`0 0 ${w} ${h}`} role="img">
    <defs>
