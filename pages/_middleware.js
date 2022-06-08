@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware() {
- const ContentSecurityPolicy = `
+ const csp = `
     default-src 'self' *.googletagmanager.com *.arc.io;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
     child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io;
@@ -12,7 +12,7 @@ export function middleware() {
     font-src 'self' *.googleapis.com *.gstatic.com *.arc.io;
   `;
  const response = NextResponse.next();
- response.headers.set("Content-Security-Policy", ContentSecurityPolicy.replace(/\n/g, ""));
+ response.headers.set("Content-Security-Policy", csp.replace(/\n/g, ""));
  response.headers.set("Referrer-Policy", "no-referrer");
  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
  response.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { config } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
-import { Nav } from "@components/Nav";
-import { Footer } from "@components/Footer";
+import { Nav } from "@components/elements/Nav";
+import { Footer } from "@components/elements/Footer";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
 

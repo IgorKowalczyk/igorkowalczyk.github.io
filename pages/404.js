@@ -1,6 +1,6 @@
 import { config } from "@/config";
-import { Container } from "@components/Container";
-import { LinkButton } from "@components/LinkButton";
+import { Container } from "@components/elements/Container";
+import { LinkButton } from "@components/elements/LinkButton";
 
 export default function not_found() {
  return (

@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import NextLink from "next/link";
 import { config } from "@/config";
 import { useRouter } from "next/router";
-const MobileNav = dynamic(() => import("@components/MobileNav"));
-const Settings = dynamic(() => import("@components/Settings"));
-const Popover = dynamic(() => import("@components/NavPopover"));
+const MobileNav = dynamic(() => import("@components/elements/MobileNav"));
+const Settings = dynamic(() => import("@components/elements/Settings"));
+const Popover = dynamic(() => import("@components/elements/NavPopover"));
 
 function NavItem({ href, text, target }) {
  const router = useRouter();

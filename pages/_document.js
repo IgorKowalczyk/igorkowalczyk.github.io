@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Arc } from "@components/Arc";
+import { Arc } from "@components/scripts/Arc";
 
 export default function Document({ props }) {
  return (
