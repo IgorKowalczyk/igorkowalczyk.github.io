@@ -1,14 +1,14 @@
 import NextLink from "next/link";
 import { config } from "@/config";
 import { Transition, Popover } from "@headlessui/react";
-import { CodeIcon, CollectionIcon, MailOpenIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import { CodeIcon, CollectionIcon, MailOpenIcon, ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/outline";
 
 export default function NavPopover(props) {
  return (
   <Popover {...props}>
    {({ open, close }) => (
     <>
-     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-poppins text-gray-600  transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
+     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative outline-none hidden rounded-lg p-1 font-poppins text-gray-600  transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
       <span>More</span>
       <ChevronRightIcon className={`${open ? "rotate-90 text-gray-800 dark:text-gray-200" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200`} />
      </Popover.Button>
@@ -54,12 +54,10 @@ export default function NavPopover(props) {
          <NextLink href={`https://github.com/${config.social.github.username}`} key="github_external">
           <a onClick={() => close()} target="_blank" className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 dark:hover:bg-white/5 ">
            <span className="flex items-center">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-             </svg>
-            </div>
             <span className="text-sm font-medium text-gray-900 dark:text-white">Github Profile</span>
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
+             <ExternalLinkIcon className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none"/>
+            </div>
            </span>
            <span className="block text-sm text-gray-500 dark:text-gray-400">See all of my work</span>
           </a>
