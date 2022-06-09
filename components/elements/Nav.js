@@ -35,7 +35,7 @@ export function Nav() {
      })}
      <Popover className="relative" />
     </div>
-    <div className="ml-auto">
+    <div className="ml-auto flex gap-1">
      {config.nav.right.map((item, index) => {
       return (
        <NextLink href={item.href} key={index}>
@@ -45,8 +45,8 @@ export function Nav() {
        </NextLink>
       );
      })}
+     <Settings className="text-right" />
     </div>
-    <Settings className="text-right" />
    </nav>
   </div>
  );

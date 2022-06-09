@@ -66,4 +66,60 @@ export const config = {
    },
   ],
  },
+ footer: {
+  title: `© ${new Date().getFullYear()} Igor Kowalczyk`,
+  links: {
+   left: [
+    {
+     href: "/",
+     title: "Home",
+     target: "_self",
+    },
+    {
+     href: "/about",
+     title: "About",
+     target: "_self",
+    },
+    {
+     href: "/work",
+     title: "Projects",
+     target: "_self",
+    },
+   ],
+   center: [
+    {
+     href: "/blog",
+     title: "Blog",
+     target: "_blank",
+    },
+    {
+     href: "/discord",
+     title: "Discord",
+     target: "_blank",
+    },
+    {
+     href: "/github",
+     title: "GitHub",
+     target: "_blank",
+    },
+   ],
+   right: [
+    {
+     href: "/#contact",
+     title: "Contact",
+     target: "_self",
+    },
+    {
+     href: "https://twitter.com/@majonezexe",
+     title: "Twitter",
+     target: "_blank",
+    },
+    {
+     href: "https://stackoverflow.com/users/11860129/majonez-exe",
+     title: "StackOverflow",
+     target: "_blank",
+    },
+   ],
+  },
+ },
 };

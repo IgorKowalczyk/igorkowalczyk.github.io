@@ -121,7 +121,7 @@ export default function Main({ repositories, user }) {
      <p className="font-semibold duration-200 motion-reduce:transition-none">
       <NextLink href={`https://github.com/${config.social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-        <UsersIcon className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" /> {user.user_followers} Github Followers
+        <UsersIcon className="mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_followers} Github Followers
        </a>
       </NextLink>
      </p>
