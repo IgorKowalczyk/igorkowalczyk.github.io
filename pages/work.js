@@ -21,7 +21,6 @@ export default function gitub_repos({ repositories }) {
     <div className="!m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
      <GitHubCalendar
       username="igorkowalczyk"
-      showWeekdayLabels="true"
       theme={{
        level0: "rgba(var(--calendar-default))",
        level1: "#9be9a8",
