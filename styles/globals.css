@@ -3,6 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html.light {
+ --calendar-default: 235, 237, 240, 255;
+}
+html.dark {
+ --calendar-default: 41, 49, 66, 1;
+}
+
+.react-activity-calendar {
+@apply py-4 px-9 duration-200 motion-reduce:transition-none
+}
+
+rect {
+@apply duration-200 motion-reduce:transition-none
+}
+
 html,
 body {
  @apply m-0 scroll-smooth p-0 font-poppins antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
