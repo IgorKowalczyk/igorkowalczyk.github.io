@@ -4,8 +4,8 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from "@apollo/client/link/context";
 import { Container } from "@components/elements/Container";
 import { RepoCard } from "@components/elements/RepoCard";
-import GitHubCalendar from 'react-github-calendar';
-import ReactTooltip from 'react-tooltip';
+import GitHubCalendar from "react-github-calendar";
+import ReactTooltip from "react-tooltip";
 const Squares = dynamic(() => import("@components/decorations/Squares"));
 
 export default function gitub_repos({ repositories }) {
@@ -18,18 +18,22 @@ export default function gitub_repos({ repositories }) {
     {config.author} Repositories ({repositories.length})
    </h1>
    <div className="mx-8">
-   <div className="duration-200 motion-reduce:transition-none !m-[0_auto] hidden md:block !my-9 w-fit font-poppins rounded-[10px] border-[1px] border-black/[15%] bg-white dark:border-white/[15%] dark:bg-[#08152b] mx-8 p-4">
-   <GitHubCalendar username="igorkowalczyk" showWeekdayLabels="true" theme={{
-    level0: 'rgba(var(--calendar-default))',
-    level1: '#9be9a8',
-    level2: '#40c463',
-    level3: '#30a14e',
-    level4: '#216e39'
-  }}>
-    <ReactTooltip html delayShow={50} delayHide={50} resizeHide={true} effect="float" backgroundColor="rgba(0, 0, 0)"/>
-   </GitHubCalendar>
+    <div className="!m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
+     <GitHubCalendar
+      username="igorkowalczyk"
+      showWeekdayLabels="true"
+      theme={{
+       level0: "rgba(var(--calendar-default))",
+       level1: "#9be9a8",
+       level2: "#40c463",
+       level3: "#30a14e",
+       level4: "#216e39",
+      }}
+     >
+      <ReactTooltip html delayShow={50} delayHide={50} resizeHide={true} effect="float" backgroundColor="rgba(0, 0, 0)" />
+     </GitHubCalendar>
     </div>
-    </div>
+   </div>
    <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
     {repositories && repositories.map((repo) => <RepoCard key={repo.id} {...repo} />)}
     <div className="fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">

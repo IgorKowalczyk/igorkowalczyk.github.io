@@ -11,11 +11,11 @@ html.dark {
 }
 
 .react-activity-calendar {
-@apply py-4 px-9 duration-200 motion-reduce:transition-none
+ @apply py-4 px-9 duration-200 motion-reduce:transition-none;
 }
 
 rect {
-@apply duration-200 motion-reduce:transition-none
+ @apply duration-200 motion-reduce:transition-none;
 }
 
 html,
