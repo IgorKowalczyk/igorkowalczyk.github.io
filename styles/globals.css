@@ -6,6 +6,7 @@
 html.light {
  --calendar-default: 235, 237, 240, 255;
 }
+
 html.dark {
  --calendar-default: 41, 49, 66, 0.8;
 }
