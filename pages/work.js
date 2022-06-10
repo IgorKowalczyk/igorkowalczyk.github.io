@@ -30,7 +30,7 @@ export default function gitub_repos({ repositories }) {
        level4: "#216e39",
       }}
      >
-      <ReactTooltip html delayShow={50} delayHide={50} resizeHide={true} effect="float" backgroundColor="rgba(0, 0, 0)" />
+      <ReactTooltip html delayShow={100} delayHide={100} resizeHide={true} effect="float" backgroundColor="rgba(0, 0, 0)" />
      </GitHubCalendar>
     </div>
    </div>
