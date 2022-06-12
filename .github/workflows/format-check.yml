@@ -8,6 +8,9 @@ on:
 
 jobs:
  install:
+  matrix:
+   language: ["javascript"]
+   name: "Prettier"
   name: Install
   runs-on: ubuntu-latest
   steps:
