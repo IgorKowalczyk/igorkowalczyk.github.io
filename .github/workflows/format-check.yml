@@ -18,4 +18,4 @@ jobs:
   name: Format
   runs-on: ubuntu-latest
   steps:
-   - run: "cd ${{ github.workspace }} && npm run format"
+   - run: "cd ../ && npm run format"
