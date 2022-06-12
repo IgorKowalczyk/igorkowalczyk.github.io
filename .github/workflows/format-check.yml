@@ -7,18 +7,19 @@ on:
   branches: [master]
 
 jobs:
- install:
-  matrix:
-   language: ["javascript"]
-   name: "Prettier"
-  name: Install
-  runs-on: ubuntu-latest
-  steps:
-   - uses: actions/checkout@v1
-   - uses: actions/setup-node@v1
-   - run: npm i prettier@2.6.2 --no-package-lock --legacy-peer-deps
  check:
-  name: Format
-  runs-on: ubuntu-latest
-  steps:
-   - run: "cd ../ && npm run format"
+  strategy:
+   fail-fast: false
+   matrix:
+    language: ["javascript"]
+steps:
+ - name: 🧱 Checkout repository
+   uses: actions/checkout@v2
+
+ - name: 🚀 Install dependencies
+   run: npm i prettier@2.6.2 --no-package-lock --legacy-peer-deps
+   with:
+    languages: ${{ matrix.language }}
+
+ - name: 🚀 Check formatting
+   run: "npm run format"
