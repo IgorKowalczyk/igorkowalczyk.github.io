@@ -1,8 +1,4 @@
 node_modules
-_site
-*min.css
-*min.scss
-*min.js
-*md
-*webmanifest
-/src/arc-sw.js
+.next
+.vercel
+out

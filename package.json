@@ -1,12 +1,53 @@
 {
  "name": "igorkowalczyk-portfolio",
- "version": "1.0.5",
- "description": "My personal portfolio",
+ "description": "My portfolio built on Next.js",
+ "version": "2.0.1",
+ "private": true,
  "scripts": {
-  "dev": "jekyll serve --livereload",
-  "build": "bundle exec jekyll serve",
+  "start": "next start",
+  "dev": "next dev",
+  "build": "next build",
+  "postbuild": "node ./lib/scripts/generate-sitemap.mjs",
+  "deploy": "next build && next start",
+  "export": "next export",
   "format": "prettier --write . --ignore-unknown",
-  "format:check": "prettier --check ."
+  "format:check": "prettier --check .",
+  "analyze": "ANALYZE=true next build",
+  "lint": "next lint"
+ },
+ "dependencies": {
+  "@apollo/client": "^3.6.2",
+  "@headlessui/react": "^1.6.4",
+  "@headlessui/tailwindcss": "^0.1.0",
+  "@heroicons/react": "^1.0.6",
+  "@next/bundle-analyzer": "^12.1.6",
+  "@tippyjs/react": "^4.2.6",
+  "framer-motion": "^6.3.4",
+  "graphql": "^16.5.0",
+  "mini-svg-data-uri": "^1.4.4",
+  "next": "12.1.6",
+  "next-sitemap": "^2.5.20",
+  "next-themes": "^0.2.0",
+  "nprogress": "^0.2.0",
+  "react": "^18.1.0",
+  "react-dom": "18.1.0",
+  "react-ga4": "^1.4.1",
+  "react-github-calendar": "^3.3.1",
+  "react-tooltip": "^4.2.21",
+  "react-twemoji": "^0.5.0",
+  "tailwind-gradient-mask-image": "^1.0.0",
+  "tailwindcss-text-fill": "^0.2.0",
+  "use-delayed-render": "^0.0.7"
+ },
+ "devDependencies": {
+  "autoprefixer": "^10.4.7",
+  "eslint": "8.14.0",
+  "eslint-config-next": "12.1.6",
+  "globby": "^13.1.1",
+  "postcss": "^8.4.13",
+  "prettier": "^2.6.2",
+  "prettier-plugin-tailwindcss": "^0.1.10",
+  "tailwindcss": "^3.0.24"
  },
  "repository": {
   "type": "git",
@@ -17,8 +58,5 @@
  "bugs": {
   "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
  },
- "homepage": "https://igorkowalczyk.github.io",
- "devDependencies": {
-  "prettier": "^2.5.1"
- }
+ "homepage": "https://igorkowalczyk.vercel.app"
 }

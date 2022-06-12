@@ -1,0 +1,7 @@
+.tippy-box[data-theme~="translucent"] {
+ @apply bg-black bg-opacity-50 backdrop-blur-[5px] firefox:bg-gray-800 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-white dark:bg-opacity-[10%] dark:firefox:bg-slate-800 dark:firefox:bg-opacity-100;
+}
+
+.tippy-box[data-theme~="translucent"] > .tippy-arrow::before {
+ border: none;
+}

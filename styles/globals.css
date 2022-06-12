@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.light {
+ --calendar-default: 235, 237, 240, 255;
+}
+
+html.dark {
+ --calendar-default: 41, 49, 66, 0.8;
+}
+
+.react-activity-calendar {
+ @apply py-4 px-9 duration-200 motion-reduce:transition-none;
+}
+
+rect {
+ @apply duration-200 motion-reduce:transition-none;
+}
+
+html,
+body {
+ @apply m-0 scroll-smooth p-0 font-poppins antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
+}
+
+html {
+ @apply !overflow-auto !pr-0;
+}
+
+* {
+ @apply box-border;
+ scrollbar-color: #08152b transparent;
+ scrollbar-width: thin;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+ @apply hidden;
+}
+
+.hide-scrollbar {
+ scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+ @apply w-[10px];
+}
+
+::-webkit-scrollbar-track {
+ @apply bg-gray-50 dark:bg-[#040d21];
+}
+
+::-webkit-scrollbar-thumb {
+ @apply bg-gray-300 dark:bg-[#1f2532];
+}
+
+::-webkit-scrollbar-thumb:hover {
+ @apply bg-gray-400 dark:bg-[#292f3d];
+}
+
+::-webkit-scrollbar-thumb:active {
+ @apply bg-gray-500 dark:bg-[#343b4a];
+}
+
+::selection {
+ @apply bg-black/10 dark:bg-white/10;
+}
+
+.arrow .arrowSymbol path:last-child {
+ @apply motion-reduce:transition-none motion-reduce:!duration-[0ms];
+ stroke-dasharray: 10;
+ stroke-dashoffset: 10;
+ transition: stroke-dashoffset 200ms;
+}
+
+.arrow:hover .arrowSymbol path:last-child {
+ @apply motion-reduce:transition-none;
+ stroke-dashoffset: 20;
+}
+
+.link {
+ @apply relative inline-block;
+}
+
+.link::after,
+.link::before,
+.nav-border::after,
+.nav-border::before {
+ @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
+}
+
+.nav-border::after,
+.nav-border::before {
+ @apply left-[12px] bottom-[8px] h-[1.3px] w-[calc(100%_-_1.9em)];
+}
+
+.link::before {
+ @apply scale-x-100 opacity-20;
+}
+
+.link:hover::after,
+.link:active::after,
+.nav-border:hover::after,
+.nav-border:hover::before,
+.nav-border.active::after,
+.nav-border.active::before {
+ @apply scale-x-100 motion-reduce:transition-none;
+}
+
+img.twemoji {
+ @apply relative top-[-0.1rem] inline-block h-[1em] w-[1em] align-middle;
+}
+
+.burger svg[data-hide="true"] {
+ @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
+}
+
+@media (min-width: 768px) {
+ .card-rotate {
+  transition: transform 0.2s;
+  transform: perspective(1000px) rotateX(2deg) rotateY(-10deg) rotateZ(2deg);
+ }
+
+ .card-rotate:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ }
+}
+
+@media (max-width: 1024px) {
+ .card-rotate {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ }
+}
