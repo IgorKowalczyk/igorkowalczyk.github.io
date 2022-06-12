@@ -22,7 +22,7 @@
   "@heroicons/react": "^1.0.6",
   "@next/bundle-analyzer": "^12.1.6",
   "@tippyjs/react": "^4.2.6",
-  "framer-motion": "^6.3.4",
+  "framer-motion": "^6.3.11",
   "graphql": "^16.5.0",
   "mini-svg-data-uri": "^1.4.4",
   "next": "12.1.6",
