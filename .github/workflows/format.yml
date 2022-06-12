@@ -16,7 +16,7 @@ jobs:
       node-version: "16.x"
    - name: 🧱 Prettier format
      run: |
-      npm i prettier@2.6.2
+      npm i prettier@2.6.2 --no-package-lock --no-save --legacy-peer-deps
       npm run format
    - name: 🧱 Formatting check
      run: npm run format:check
