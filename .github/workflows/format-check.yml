@@ -14,9 +14,8 @@ jobs:
    - uses: actions/checkout@v1
    - uses: actions/setup-node@v1
    - run: npm i prettier@2.6.2 --no-package-lock --no-save --legacy-peer-deps
- format:
+ check:
   name: Format
-  needs: [install]
   runs-on: ubuntu-latest
   steps:
-   - run: "cd $GITHUB_WORKSPACE && npm run format"
+   - run: "cd ${{ github.workspace }} && npm run format"
