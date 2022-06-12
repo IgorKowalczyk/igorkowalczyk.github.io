@@ -7,10 +7,15 @@ on:
   branches: [master]
 
 jobs:
- format:
-  name: ✨ Prettier
+ install:
+  name: Install
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v1
+   - uses: actions/setup-node@v1
    - run: npm i prettier@2.6.2 --no-package-lock --no-save --legacy-peer-deps
+ format:
+  name: Format
+  runs-on: ubuntu-latest
+  steps:
    - run: npm run format:check
