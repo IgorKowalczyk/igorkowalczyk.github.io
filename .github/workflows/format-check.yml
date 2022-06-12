@@ -12,5 +12,5 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v1
-   - run: npm i prettier
+   - run: npm i prettier@2.6.2
    - run: npm run format:check
