@@ -19,4 +19,4 @@ jobs:
   needs: [install]
   runs-on: ubuntu-latest
   steps:
-   - run: npm run format:check
+   - run: "cd $GITHUB_WORKSPACE && npm run format"
