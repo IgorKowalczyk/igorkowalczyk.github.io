@@ -153,7 +153,7 @@ export default function Main({ repositories, user }) {
     <h3 className="dark:color-black mx-6 mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
     <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
     <div className="relative m-[0_auto] my-4 w-9/12 max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
-     <Contact/>
+     <Contact />
      <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="107" w="134" />
      </span>
