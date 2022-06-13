@@ -9,8 +9,8 @@ import { Transition } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { RepoCard } from "@components/elements/RepoCard";
 import { UsersIcon } from "@heroicons/react/outline";
+import { Contact } from "@components/elements/Contact";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
-const Tippy = dynamic(() => import("@tippyjs/react"));
 
 export default function Main({ repositories, user }) {
  const [isMouted, setMouted] = useState(false);
@@ -153,45 +153,7 @@ export default function Main({ repositories, user }) {
     <h3 className="dark:color-black mx-6 mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
     <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
     <div className="relative m-[0_auto] my-4 w-9/12 max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
-     <form className="flex w-full flex-col items-center justify-center p-4">
-      <div className="block w-full items-center justify-center gap-1.5 text-left md:flex">
-       <label htmlFor="contact_name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
-        Name
-        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
-         <span aria-hidden={true} className="cursor-help text-red-500">
-          *
-         </span>
-        </Tippy>
-        <input id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
-       </label>
-       <label htmlFor="contact_email" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
-        Email
-        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
-         <span aria-hidden={true} className="cursor-help text-red-500">
-          *
-         </span>
-        </Tippy>
-        <input id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="john@doe.com" />
-       </label>
-      </div>
-      <div className="\mt-2 flex w-full items-center justify-center gap-1.5">
-       <label htmlFor="contact_message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
-        Message
-        <Tippy content="Required" theme="translucent" placement="right" className="-ml-1">
-         <span aria-hidden={true} className="cursor-help text-red-500">
-          *
-         </span>
-        </Tippy>
-        <textarea id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="Hello there!" />
-       </label>
-      </div>
-      <button type="button" className="group mt-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>
-       Send{" "}
-       <svg xmlns="http://www.w3.org/2000/svg" className="mt-[2px] ml-2 h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-       </svg>
-      </button>
-     </form>
+     <Contact/>
      <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="107" w="134" />
      </span>

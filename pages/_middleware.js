@@ -2,14 +2,14 @@ import { NextResponse } from "next/server";
 
 export function middleware() {
  const csp = `
-    default-src 'self' *.googletagmanager.com *.arc.io;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
-    child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io;
+    default-src 'self' *.googletagmanager.com *.arc.io ;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com ;
+    child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io ;
     style-src 'self' 'unsafe-inline' *.googleapis.com *.arc.io *.cloudflare.com;
     img-src * blob: data:;
     media-src 'none';
     connect-src *;
-    font-src 'self' *.googleapis.com *.gstatic.com *.arc.io;
+    font-src 'self' *.googleapis.com *.gstatic.com *.arc.io ;
   `;
  const response = NextResponse.next();
  response.headers.set("Content-Security-Policy", csp.replace(/\n/g, ""));

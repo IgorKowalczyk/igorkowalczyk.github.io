@@ -33,6 +33,7 @@
   "react-dom": "18.1.0",
   "react-ga4": "^1.4.1",
   "react-github-calendar": "^3.3.1",
+  "react-recaptcha": "^2.3.10",
   "react-tooltip": "^4.2.21",
   "react-twemoji": "^0.5.0",
   "tailwind-gradient-mask-image": "^1.0.0",
