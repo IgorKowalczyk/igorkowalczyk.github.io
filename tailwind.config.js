@@ -42,19 +42,6 @@ module.exports = {
   },
  },
  plugins: [
-  plugin(function ({ addVariant, e, postcss }) {
-   addVariant("firefox", ({ container, separator }) => {
-    const isFirefox = postcss.atRule({
-     name: "-moz-document",
-     params: "url-prefix()",
-    });
-    isFirefox.append(container.nodes);
-    container.append(isFirefox);
-    isFirefox.walkRules((rule) => {
-     rule.selector = `.${e(`firefox${separator}${rule.selector.slice(1)}`)}`;
-    });
-   });
-  }),
   plugin(function ({ matchUtilities }) {
    matchUtilities({
     "bg-grid": (value) => ({
@@ -65,5 +52,6 @@ module.exports = {
   require("tailwindcss-text-fill"),
   require("tailwind-gradient-mask-image"),
   require("@headlessui/tailwindcss"),
+  require("@igorkowalczyk/is-firefox")
  ],
 };
