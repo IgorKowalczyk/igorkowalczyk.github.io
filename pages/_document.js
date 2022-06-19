@@ -19,7 +19,7 @@ export default function Document({ props }) {
     <link rel="preconnect" href="https://twemoji.maxcdn.com" />
     <Arc />
    </Head>
-   <body className="bg-white dark:bg-[#040d21]">
+   <body className="bg-main-white dark:bg-main-dark">
     <Main {...props} />
     <NextScript />
    </body>

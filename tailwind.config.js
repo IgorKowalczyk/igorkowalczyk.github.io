@@ -9,6 +9,10 @@ module.exports = {
    fontFamily: {
     poppins: ["Poppins", "sans-serif"],
    },
+   backgroundImage: {
+    'main-dark': 'linear-gradient(180deg, rgb(4, 13, 33) 84%, rgb(13, 25, 48) 100%)',
+    'main-white': 'linear-gradient(180deg, rgb(255 255 255) 84%, rgb(204, 218, 237) 100%)'
+   },
    backgroundSize: {
     6: "24px",
     "6-1/2": "22px",
