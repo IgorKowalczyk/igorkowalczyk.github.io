@@ -101,8 +101,7 @@ export default function Main({ repositories, user }) {
      <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
       <NextLink href={`https://github.com/${config.social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-        <StarIcon className="mr-1 inline h-[22px] w-[22px] stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white"/>{" "}
-        {user.user_starred_repos} Starred repos
+        <StarIcon className="mr-1 inline h-[22px] w-[22px] stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_starred_repos} Starred repos
        </a>
       </NextLink>
      </p>
