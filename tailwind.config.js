@@ -56,6 +56,6 @@ module.exports = {
   require("tailwindcss-text-fill"),
   require("tailwind-gradient-mask-image"),
   require("@headlessui/tailwindcss"),
-  require("../is-firefox"),
+  require("@igorkowalczyk/is-browser"),
  ],
 };
