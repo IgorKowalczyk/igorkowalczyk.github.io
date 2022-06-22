@@ -17,7 +17,7 @@ export function Footer() {
      <a>React.js v{version}</a>
     </NextLink>
    </span>
-   <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
+   <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-2 sm:grid-cols-3">
     <div className="flex flex-col space-y-4">
      {config.footer.links.left.map((item, index) => (
       <NextLink href={item.href} key={index}>

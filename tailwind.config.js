@@ -14,7 +14,7 @@ module.exports = {
    },
    backgroundImage: {
     "main-dark": "linear-gradient(180deg, rgb(4, 13, 33) 84%, rgb(13, 25, 48) 100%)",
-    "main-white": "linear-gradient(180deg, rgb(255 255 255) 84%, rgb(204, 218, 237) 100%)",
+    "main-white": "linear-gradient(180deg, rgb(255 255 255) 84%, rgb(233, 243, 255) 100%)", 
    },
    backgroundSize: {
     6: "24px",
@@ -59,6 +59,6 @@ module.exports = {
   require("tailwindcss-text-fill"),
   require("tailwind-gradient-mask-image"),
   require("@headlessui/tailwindcss"),
-  require("@igorkowalczyk/is-firefox"),
+  require("../is-firefox"),
  ],
 };
