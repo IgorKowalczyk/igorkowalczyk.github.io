@@ -23,8 +23,8 @@ export function RepoCard(repo) {
     </span>
    </div>
    <p className="text-left">
-    {repo.description.substring(0, 90)}
-    {repo.description.length > 90 ? "..." : ""}
+    {repo.description ? repo.description.substring(0, 90) : "No description"}
+    {repo.description && repo.description.length > 90 ? "..." : ""}
    </p>
    {repo.repositoryTopics ? (
     <div className="text-left">
