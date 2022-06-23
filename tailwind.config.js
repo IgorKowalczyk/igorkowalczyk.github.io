@@ -21,7 +21,7 @@ module.exports = {
     hoverDark: "0 2px 30px -4px rgba(0, 134, 245, 1)",
     hoverLight: "0 2px 30px -4px rgba(51, 111, 239, 1)",
     codeDark: "0 30px 100px -4px rgba(0, 134, 245, 0.1)",
-    codeLight: "0 30px 100px -4px rgba(51, 111, 239, 0.3)",
+    codeLight: "0 30px 100px -4px rgba(51, 111, 239, 0.2)",
     fadeSectionLight: "0 -10rem 6rem -2rem rgb(255, 255, 255) inset",
     fadeSectionDark: "0 -10rem 6rem -2rem rgb(4, 13, 33) inset",
    },

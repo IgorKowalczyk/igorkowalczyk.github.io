@@ -8,7 +8,7 @@ export default function NavPopover(props) {
   <Popover {...props}>
    {({ open, close }) => (
     <>
-     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-poppins text-gray-600 outline-none  transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
+     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-poppins text-gray-600 transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
       <span>More</span>
       <ChevronRightIcon className={`${open ? "rotate-90 text-gray-800 dark:text-gray-200" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200`} />
      </Popover.Button>
