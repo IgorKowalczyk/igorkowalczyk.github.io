@@ -33,4 +33,10 @@ module.exports = {
    },
   ];
  },
+webpack: function (config, options) {
+ console.log(config)
+  config.experiments = {
+  };
+  return config;
+}
 };
