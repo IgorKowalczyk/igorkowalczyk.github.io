@@ -41,6 +41,10 @@
   "use-delayed-render": "^0.0.7"
  },
  "devDependencies": {
+  "@babel/core": "^7.18.5",
+  "@babel/plugin-transform-runtime": "^7.18.5",
+  "@babel/preset-env": "^7.18.2",
+  "@babel/preset-react": "^7.17.12",
   "autoprefixer": "^10.4.7",
   "babel-core": "^6.26.3",
   "babel-loader": "^8.2.5",

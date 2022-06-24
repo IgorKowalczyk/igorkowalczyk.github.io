@@ -11,7 +11,7 @@ module.exports = {
  trailingSlash: true,
  compress: true,
  optimizeCss: true,
- swcMinify: true,
+ swcMinify: false,
  images: {
   domains: [
    "i.scdn.co", // Spotify Album Art
@@ -38,9 +38,8 @@ module.exports = {
    },
   ];
  },
- webpack: (config, { isServer, dev, buildId, config: { distDir } }) => {
+ webpack: (config, { isServer, dev, config: { distDir } }) => {
   if (!isServer && !dev) {
-   console.log(config);
    config.plugins.push(
     new CompressionPlugin(),
     new LodashModuleReplacementPlugin(),
