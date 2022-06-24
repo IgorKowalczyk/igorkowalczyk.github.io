@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const CompressionPlugin = require("compression-webpack-plugin");
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const webpack = require('webpack')
+const webpack = require("webpack");
 
 module.exports = {
  reactStrictMode: true,
@@ -38,19 +38,19 @@ module.exports = {
    },
   ];
  },
- webpack: (config, {isServer, dev, buildId, config: {distDir}}) => {
+ webpack: (config, { isServer, dev, buildId, config: { distDir } }) => {
   if (!isServer && !dev) {
-    console.log(config)
-    config.plugins.push(
-      new CompressionPlugin(),
-      new LodashModuleReplacementPlugin(),
-      new webpack.DefinePlugin({
-        'process.env.ASSET_PATH': JSON.stringify('./public/'),
-        'process.env.VERSION': JSON.stringify(process.env.npm_package_version),
-     }),
-    ),
-    config.optimization.minimizer = [new TerserPlugin()]
+   console.log(config);
+   config.plugins.push(
+    new CompressionPlugin(),
+    new LodashModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+     "process.env.ASSET_PATH": JSON.stringify("./public/"),
+     "process.env.VERSION": JSON.stringify(process.env.npm_package_version),
+    })
+   ),
+    (config.optimization.minimizer = [new TerserPlugin()]);
   }
   return config;
-}
+ },
 };
