@@ -6,7 +6,6 @@ import { Container } from "@components/elements/Container";
 import { RepoCard } from "@components/elements/RepoCard";
 import GitHubCalendar from "react-github-calendar";
 const Squares = dynamic(() => import("@components/decorations/Squares"));
-//import ReactTooltip from "react-tooltip";
 
 export default function gitub_repos({ repositories }) {
  return (
@@ -29,7 +28,6 @@ export default function gitub_repos({ repositories }) {
        level4: "#216e39",
       }}
      >
-      {/*<ReactTooltip html delayShow={100} delayHide={100} resizeHide={true} effect="float" backgroundColor="rgba(0, 0, 0)" />*/}{" "}
      </GitHubCalendar>
     </div>
    </div>

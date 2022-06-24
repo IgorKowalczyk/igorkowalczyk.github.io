@@ -293,36 +293,3 @@ export async function getStaticProps() {
   revalidate: 60,
  };
 }
-
-/* 
-    <div className="flex justify-center ">
-     <div className="m-[0_auto] flex w-[90%] max-w-4xl flex-col-reverse items-center justify-center sm:flex-row">
-      <div className="sm:max-w-48 relative m-[0_auto] w-full px-8 pt-5 drop-shadow-2xl sm:m-0 sm:w-max sm:px-0">
-       <div className="m-[0_auto] items-center motion-reduce:transition-none md:m-0 md:flex">
-        <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
-         <div className="w-fill border-b-dark/5 flex h-8 gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
-         </div>
-         <div className="p-4 text-left">
-           <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
-           <span className="italic">
-            <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span>{" "}
-           </span>
-           <span>soon</span>
-           <br/>
-           <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
-           <span className="italic">
-            <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300">$</span>
-           </span>
-         </div>
-        </div>
-       </div>
-      </div>
-      <div className="flex flex-col pl-8">
-       <p className="text-gray-600 dark:text-gray-400"></p>
-      </div>
-     </div>
-    </div>
-    */
