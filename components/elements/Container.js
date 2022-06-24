@@ -30,11 +30,11 @@ export function Container(props) {
    y: reduceMotion ? 0 : 15,
    opacity: 0,
    transition: {
-    duration: reduceMotion ? 0 : 0.3,
+    duration: reduceMotion ? 0 : 0.2,
    },
   },
   transition: {
-   duration: reduceMotion ? 0 : 0.3,
+   duration: reduceMotion ? 0 : 0.2,
   },
  };
 
