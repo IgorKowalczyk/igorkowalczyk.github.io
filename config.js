@@ -49,8 +49,8 @@ export const config = {
     title: "Home",
    },
    {
-    href: "/work/",
-    title: "Projects",
+    href: "/repositories/",
+    title: "Repositories",
    },
   ],
   right: [

@@ -133,7 +133,7 @@ export default function Main({ repositories, user }) {
      <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 px-8 pb-4 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories.most_popular_repos_data && repositories.most_popular_repos_data.map((repo) => <RepoCard key={repo.id} {...repo} />)}</div>
      <div className="pointer-events-visible absolute inset-x-0 bottom-0 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
       <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
-       <NextLink href="/work">
+       <NextLink href="/repositories">
         <a className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold duration-200 motion-reduce:transition-none">
          See more repositories
          <svg xmlns="http://www.w3.org/2000/svg" className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">

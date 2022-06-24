@@ -22,6 +22,7 @@
   "@igorkowalczyk/is-browser": "^1.0.1",
   "@next/bundle-analyzer": "^12.1.6",
   "@tippyjs/react": "^4.2.6",
+  "ajv": "^8.11.0",
   "compression-webpack-plugin": "^10.0.0",
   "framer-motion": "^6.3.13",
   "graphql": "^16.5.0",
@@ -53,6 +54,7 @@
   "prettier": "^2.7.1",
   "prettier-plugin-tailwindcss": "^0.1.11",
   "tailwindcss": "^3.1.4",
+  "terser-webpack-plugin": "^5.3.3",
   "webpack": "^5.73.0"
  },
  "repository": {
