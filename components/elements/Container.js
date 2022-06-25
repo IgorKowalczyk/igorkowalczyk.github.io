@@ -62,7 +62,7 @@ export function Container(props) {
    <Nav />
    <main className="mt-24 flex flex-col justify-center antialiased">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div {...variants}>{children}</motion.div>
+     <motion.div {...variants} style={{ willChange: "transform"}}>{children}</motion.div>
     </Twemoji>
    </main>
    <Footer />
