@@ -8,7 +8,7 @@ import { Container } from "@components/elements/Container";
 import { Transition } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { RepoCard } from "@components/elements/RepoCard";
-import { UsersIcon, StarIcon } from "@heroicons/react/outline";
+import { UsersIcon, StarIcon, AtSymbolIcon } from "@heroicons/react/outline";
 import { Contact } from "@components/elements/Contact";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 
@@ -146,17 +146,36 @@ export default function Main({ repositories, user }) {
      </div>
     </div>
    </div>
-   <div className="relative mx-auto mb-7 scroll-mt-20 text-center" id={"contact"}>
-    <h3 className="dark:color-black mx-6 mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
-    <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
-    <div className="relative m-[0_auto] my-4 w-9/12 max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
-     <Contact />
+
+   <div className="h-full scroll-mt-20 px-6 py-36 pt-24 lg:px-36">
+    <div id={"contact"}>
+     <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text font-poppins text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
+     <p className="py-1 text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
+    </div>
+    <div className="relative">
      <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="107" w="134" />
      </span>
      <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="70" w="134" />
      </span>
+     <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none dark:divide-none md:grid-cols-2 md:divide-gray-200 md:dark:divide-white/20">
+      <div className="relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b]">
+       <Contact />
+      </div>
+      <div>
+       <div className="space-y-4 p-4">
+        <p className="text-xl font-semibold">Or contact me with...</p>
+        {config.contact.links.map((element, index) => (
+         <NextLink href={element.href} key={index}>
+          <a className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+           {element.icon} {element.title}
+          </a>
+         </NextLink>
+        ))}
+       </div>
+      </div>
+     </div>
     </div>
    </div>
   </Container>

@@ -29,7 +29,7 @@ export function Contact(props) {
  };
 
  return (
-  <form {...props} onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center p-4">
+  <form {...props} onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
    <div className="z-[2] block w-full items-center justify-center gap-1.5 text-left md:flex">
     <label htmlFor="contact_name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
      Name

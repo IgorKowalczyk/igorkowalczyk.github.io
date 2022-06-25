@@ -27,6 +27,16 @@ module.exports = {
     permanent: true,
    },
    {
+    source: "/twitter",
+    destination: "https://twitter.com/majonezexe",
+    permanent: true,
+   },
+   {
+    source: "/instagram",
+    destination: "https://www.instagram.com/majonezexe/",
+    permanent: true,
+   },
+   {
     source: "/blog",
     destination: "https://igorkowalczyk.github.io/blog/",
     permanent: true,
