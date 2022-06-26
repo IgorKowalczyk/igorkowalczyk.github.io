@@ -8,7 +8,7 @@ import { Container } from "@components/elements/Container";
 import { Transition } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { RepoCard } from "@components/elements/RepoCard";
-import { UsersIcon, StarIcon, AtSymbolIcon } from "@heroicons/react/outline";
+import { UsersIcon, StarIcon } from "@heroicons/react/outline";
 import { Contact } from "@components/elements/Contact";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 
