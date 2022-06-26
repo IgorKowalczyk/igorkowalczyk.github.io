@@ -14,8 +14,6 @@ module.exports = {
  swcMinify: false,
  images: {
   domains: [
-   "i.scdn.co", // Spotify Album Art
-   "pbs.twimg.com", // Twitter Profile Picture
    "github.githubassets.com", // GitHub assets
   ],
  },

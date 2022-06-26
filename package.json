@@ -20,13 +20,10 @@
   "@headlessui/tailwindcss": "^0.1.0",
   "@heroicons/react": "^1.0.6",
   "@igorkowalczyk/is-browser": "^1.0.1",
-  "@next/bundle-analyzer": "^12.1.6",
   "@tippyjs/react": "^4.2.6",
-  "ajv": "^8.11.0",
   "compression-webpack-plugin": "^10.0.0",
   "framer-motion": "^6.3.13",
   "graphql": "^16.5.0",
-  "lodash": "^4.17.21",
   "mini-svg-data-uri": "^1.4.4",
   "next": "12.1.6",
   "next-themes": "^0.2.0",
@@ -41,15 +38,7 @@
   "use-delayed-render": "^0.0.7"
  },
  "devDependencies": {
-  "@babel/core": "^7.18.5",
-  "@babel/plugin-transform-runtime": "^7.18.5",
-  "@babel/preset-env": "^7.18.2",
-  "@babel/preset-react": "^7.17.12",
   "autoprefixer": "^10.4.7",
-  "babel-core": "^6.26.3",
-  "babel-loader": "^8.2.5",
-  "babel-plugin-lodash": "^3.3.4",
-  "babel-preset-env": "^1.7.0",
   "eslint": "8.18.0",
   "eslint-config-next": "12.1.6",
   "globby": "^13.1.2",
@@ -59,7 +48,10 @@
   "prettier-plugin-tailwindcss": "^0.1.11",
   "tailwindcss": "^3.1.4",
   "terser-webpack-plugin": "^5.3.3",
-  "webpack": "^5.73.0"
+  "webpack": "^5.73.0",
+  "@next/bundle-analyzer": "^12.1.6",
+  "lodash": "^4.17.21",
+  "ajv": "^8.11.0"
  },
  "repository": {
   "type": "git",

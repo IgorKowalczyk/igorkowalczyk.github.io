@@ -18,7 +18,7 @@ export function Container(props) {
  const variants = {
   initial: {
    scale: reduceMotion ? 1 : 0.96,
-   y: reduceMotion ? 0 : 15,
+   y: reduceMotion ? 0 : 0,
    opacity: 0,
   },
   animate: {
@@ -27,7 +27,7 @@ export function Container(props) {
    opacity: 1,
   },
   exit: {
-   y: reduceMotion ? 0 : 15,
+   y: reduceMotion ? 0 : 0,
    opacity: 0,
    transition: {
     duration: reduceMotion ? 0 : 0.2,
@@ -62,7 +62,7 @@ export function Container(props) {
    <Nav />
    <main className="mt-24 flex flex-col justify-center antialiased">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div {...variants} style={{ willChange: "transform"}}>{children}</motion.div>
+     <motion.div {...variants}>{children}</motion.div>
     </Twemoji>
    </main>
    <Footer />
