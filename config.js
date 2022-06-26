@@ -4,6 +4,9 @@ export const config = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
+ feautures: {
+  smoothTransition: false,
+ },
  header: {
   title: "Igor Kowalczyk",
   subtitle: "Full-stack developer",

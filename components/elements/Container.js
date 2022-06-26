@@ -62,7 +62,7 @@ export function Container(props) {
    <Nav />
    <main className="mt-24 flex flex-col justify-center antialiased">
     <Twemoji options={{ className: "twemoji" }}>
-     <motion.div {...variants}>{children}</motion.div>
+     { config.feautures.smoothTransition ? <motion.div {...variants}>{children}</motion.div> : children }
     </Twemoji>
    </main>
    <Footer />
