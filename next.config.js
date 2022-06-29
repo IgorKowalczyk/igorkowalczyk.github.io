@@ -51,6 +51,14 @@ module.exports = {
    },
   ];
  },
+ async headers() {
+  return [
+   {
+    source: "/(.*)",
+    headers: securityHeaders,
+   },
+  ];
+ },
  webpack: (config, { isServer, dev, config: { distDir } }) => {
   if (!isServer && !dev) {
    config.plugins.push(
@@ -66,3 +74,45 @@ module.exports = {
   return config;
  },
 };
+
+const ContentSecurityPolicy = `
+default-src 'self' *.googletagmanager.com *.arc.io;
+script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
+child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io;
+style-src 'self' 'unsafe-inline' *.googleapis.com *.arc.io *.cloudflare.com;
+img-src * blob: data:;
+media-src 'none';
+connect-src *;
+font-src 'self' *.googleapis.com *.gstatic.com *.arc.io;
+`;
+
+const securityHeaders = [
+ {
+  key: "Content-Security-Policy",
+  value: ContentSecurityPolicy.replace(/\n/g, ""),
+ },
+ {
+  key: "Referrer-Policy",
+  value: "no-referrer",
+ },
+ {
+  key: "X-Content-Type-Options",
+  value: "nosniff",
+ },
+ {
+  key: "X-DNS-Prefetch-Control",
+  value: "on",
+ },
+ {
+  key: "Strict-Transport-Security",
+  value: "max-age=31536000; includeSubDomains; preload",
+ },
+ {
+  key: "X-XSS-Protection",
+  value: "1; mode=block",
+ },
+ {
+  key: "Permissions-Policy",
+  value: "camera=(), microphone=(), geolocation=()",
+ },
+];
