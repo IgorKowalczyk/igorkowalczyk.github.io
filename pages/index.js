@@ -45,10 +45,13 @@ export default function Main({ repositories, user }) {
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
       <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
-       <div className="w-fill border-b-dark/5 flex h-8 gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
+       <div className="relative w-fill items-center border-b-dark/5 flex h-8 gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
+        <div className="absolute top-0 bottom-0 w-full flex items-center justify-center">
+          <span className="opacity-50">Console </span>
+        </div>
        </div>
        <div className="p-4">
         <span className="font-semibold leading-6 text-[#ea4aaa]">→</span> <span className="font-semibold text-[#66e777]">~/{config.header.code.default.user}</span>{" "}
