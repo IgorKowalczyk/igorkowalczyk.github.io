@@ -3,6 +3,7 @@
  "short_name": "Igor Kowalczyk",
  "description": "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
  "start_url": ".",
+ "display_override": ["window-control-overlay", "minimal-ui"],
  "display": "minimal-ui",
  "background_color": "#040d21",
  "theme_color": "#061228",
