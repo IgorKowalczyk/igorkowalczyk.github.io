@@ -26,24 +26,24 @@
    "purpose": "maskable"
   }
  ],
-  "shortcuts": [
-    {
-      "name": "See all repositories",
-      "short_name": "Repositories",
-      "description": "View all my repositories",
-      "url": "/repositories?source=pwa",
-    },
-    {
-      "name": "Contact me",
-      "short_name": "Contact me",
-      "description": "Contact me",
-      "url": "/contact?source=pwa",
-    }
-       {
-      "name": "Discord",
-      "short_name": "Discord",
-      "description": "Contact me on my Discord server",
-      "url": "/discord?source=pwa",
-    }
-  ]
+ "shortcuts": [
+  {
+   "name": "See all repositories",
+   "short_name": "Repositories",
+   "description": "View all my repositories",
+   "url": "/repositories?source=pwa"
+  },
+  {
+   "name": "Contact me",
+   "short_name": "Contact me",
+   "description": "Contact me",
+   "url": "/contact?source=pwa"
+  }
+  {
+   "name": "Discord",
+   "short_name": "Discord",
+   "description": "Contact me on my Discord server",
+   "url": "/discord?source=pwa"
+  }
+ ]
 }
