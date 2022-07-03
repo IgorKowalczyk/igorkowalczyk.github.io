@@ -45,42 +45,71 @@ export default function Main({ repositories, user }) {
      </div>
      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
       <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b] dark:shadow-codeDark">
-       <div className="relative w-fill items-center border-b-dark/5 flex h-8 gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
+       <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
-        <div className="absolute top-0 bottom-0 w-full flex items-center justify-center">
-          <span className="opacity-50" aria-hidden="true">Console</span>
+        <div className="absolute top-0 bottom-0 flex w-full items-center justify-center">
+         <span className="opacity-50" aria-hidden="true">
+          Console
+         </span>
         </div>
        </div>
        <div className="p-4">
-        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">→</span> <span className="font-semibold text-[#66e777]" aria-hidden="true">~/{config.header.code.default.user}</span>{" "}
+        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+         →
+        </span>{" "}
+        <span className="font-semibold text-[#66e777]" aria-hidden="true">
+         ~/{config.header.code.default.user}
+        </span>{" "}
         <span className="italic">
-         <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">$</span>{" "}
+         <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+          $
+         </span>{" "}
          <span aria-label={`list github account ${config.social.github.username}`}>
           list github --user=
           <NextLink href={`https://github.com/${config.social.github.username}`}>
-           <a target="_blank" aria-label={`See ${config.social.github.user} github`}>"{config.social.github.username}"</a>
+           <a target="_blank" aria-label={`See ${config.social.github.user} github`}>
+            "{config.social.github.username}"
+           </a>
           </NextLink>
          </span>
         </span>
         <br />
         <span className="leading-6">
-        <div><span aria-hidden="true"> + </span><span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})</div>
-        <div><span aria-hidden="true"> - </span><span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})</div>
+         <div>
+          <span aria-hidden="true"> + </span>
+          <span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})
+         </div>
+         <div>
+          <span aria-hidden="true"> - </span>
+          <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
+         </div>
         </span>
         {config.header.code.lines.map((line, index) => (
          <div key={index}>
-          <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">→</span> <span className="font-semibold text-[#66e777]"  aria-hidden="true">~/{line.user}</span>{" "}
+          <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+           →
+          </span>{" "}
+          <span className="font-semibold text-[#66e777]" aria-hidden="true">
+           ~/{line.user}
+          </span>{" "}
           <span className="italic">
            <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
           </span>
           <div className="leading-6">{line.response}</div>
          </div>
         ))}
-        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">→</span> <span className="font-semibold text-[#66e777]"  aria-hidden="true">~/{config.header.code.default.user}</span>{" "}
+        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+         →
+        </span>{" "}
+        <span className="font-semibold text-[#66e777]" aria-hidden="true">
+         ~/{config.header.code.default.user}
+        </span>{" "}
         <span className="italic">
-         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300"  aria-hidden="true">$</span>
+         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+          $
+         </span>
         </span>
        </div>
       </div>

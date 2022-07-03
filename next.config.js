@@ -1,15 +1,21 @@
 /** @type {import('next').NextConfig} */
+const withPWA = require("next-pwa");
 const CompressionPlugin = require("compression-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
+
 //const withBundleAnalyzer = require("@next/bundle-analyzer")({
 // enabled: process.env.ANALYZE === "true",
 //});
 
 //module.exports = withBundleAnalyzer({});
 
-module.exports = {
+module.exports = withPWA({
+ pwa: {
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+ },
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
@@ -73,7 +79,7 @@ module.exports = {
   }
   return config;
  },
-};
+});
 
 const ContentSecurityPolicy = `
 default-src 'self' *.googletagmanager.com *.arc.io;
