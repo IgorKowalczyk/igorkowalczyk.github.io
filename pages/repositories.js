@@ -21,7 +21,7 @@ export default function gitub_repos({ repositories }) {
      <GitHubCalendar
       username={config.social.github.username}
       theme={{
-       level0: "rgba(var(--calendar-default))",
+       level0: "var(--calendar-default)",
        level1: "#9be9a8",
        level2: "#40c463",
        level3: "#30a14e",

@@ -4,12 +4,24 @@
 @tailwind utilities;
 
 html.light {
- --calendar-default: 235, 237, 240, 255;
+ --calendar-default: rgba(235, 237, 240, 1);
+
 }
 
 html.dark {
- --calendar-default: 41, 49, 66, 0.8;
+ --calendar-default: rgba(41, 49, 66, 0.8);
+ --calendar-loader: ;
 }
+
+html.light .react-activity-calendar {
+ --react-activity-calendar-loading-active: rgba(0, 0, 0, 0.35) !important;
+}
+
+
+html.dark .react-activity-calendar {
+ --react-activity-calendar-loading-active: rgba(255, 255, 255, 0.2) !important;
+}
+
 
 .react-activity-calendar {
  @apply py-4 px-9 duration-200 motion-reduce:transition-none;
