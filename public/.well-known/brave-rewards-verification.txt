@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: igorkowalczyk.vercel.app
+Token: eadae8d7fe9b950164fda1a729005397da7cc14486713278c8507d52bf7ba259
