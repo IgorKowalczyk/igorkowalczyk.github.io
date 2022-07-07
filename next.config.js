@@ -13,7 +13,7 @@ const webpack = require("webpack");
 
 module.exports = withPWA({
  pwa: {
-  dest: "public",
+  dest: "public/pwa",
   disable: process.env.NODE_ENV === "development",
  },
  reactStrictMode: true,
