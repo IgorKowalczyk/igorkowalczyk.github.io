@@ -22,7 +22,7 @@
   "@igorkowalczyk/is-browser": "^1.0.1",
   "@tippyjs/react": "^4.2.6",
   "compression-webpack-plugin": "^10.0.0",
-  "framer-motion": "^6.3.16",
+  "framer-motion": "^6.4.2",
   "graphql": "^16.5.0",
   "mini-svg-data-uri": "^1.4.4",
   "next": "12.2.0",
