@@ -15,10 +15,10 @@ export default function Document({ props }) {
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous"/>
-    <link rel="preconnect" href="https://twemoji.maxcdn.com" crossOrigin="anonymous"/>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
-    <link rel="dns-prefetch" href="https://twemoji.maxcdn.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://twemoji.maxcdn.com" crossOrigin="anonymous" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+    <link rel="dns-prefetch" href="https://twemoji.maxcdn.com" />
     <Arc />
    </Head>
    <body className="bg-main-white dark:bg-main-dark">
