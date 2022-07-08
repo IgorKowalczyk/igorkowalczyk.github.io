@@ -1,7 +1,7 @@
 import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
 import { useState } from "react";
-import { config } from "@/config";
+import { nav } from "@/config";
 import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline";
 
 export default function MobileNav() {
@@ -11,7 +11,7 @@ export default function MobileNav() {
   exitDelay: 500,
  });
 
- const menuItems = [...config.nav.left, ...config.nav.right];
+ const menuItems = [...nav.left, ...nav.right];
 
  return (
   <>

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { config } from "@/config";
+import { meta as head_meta, feautures, social } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
 import { Nav } from "@components/elements/Nav";
 import { Footer } from "@components/elements/Footer";
@@ -11,7 +11,7 @@ export function Container(props) {
  const reduceMotion = useReducedMotion();
  const router = useRouter();
  const meta = {
-  ...config,
+  ...head_meta,
   ...customMeta,
  };
 
@@ -49,11 +49,11 @@ export function Container(props) {
     <meta property="og:site_name" content={meta.author} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:title" content={meta.title} />
-    <meta property="og:image" content={meta.social.image} />
+    <meta property="og:image" content={social.image} />
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
-    <meta name="twitter:image" content={meta.social.image} />
-    <meta name="copyright" content={`Copyright ${config.author} ${new Date().getFullYear()}`}></meta>
+    <meta name="twitter:image" content={social.image} />
+    <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
     <meta name="theme-color" content={meta.theme_color} />
     <meta name="msapplication-TileColor" content={meta.theme_color} />
     {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
@@ -61,7 +61,7 @@ export function Container(props) {
    </Head>
    <Nav />
    <main className="mt-24 flex flex-col justify-center antialiased">
-    <Twemoji options={{ className: "twemoji" }}>{config.feautures.smoothTransition ? <motion.div {...variants}>{children}</motion.div> : children}</Twemoji>
+    <Twemoji options={{ className: "twemoji" }}>{feautures.smoothTransition ? <motion.div {...variants}>{children}</motion.div> : children}</Twemoji>
    </main>
    <Footer />
   </>

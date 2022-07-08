@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { config } from "@/config";
+import { meta, social } from "@/config";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { Container } from "@components/elements/Container";
@@ -9,17 +9,17 @@ const Squares = dynamic(() => import("@components/decorations/Squares"));
 
 export default function gitub_repos({ repositories }) {
  return (
-  <Container title={`${config.title} - Github Repositories`}>
+  <Container title={`${meta.title} - Github Repositories`}>
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
    <h1 className="my-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
-    {config.author} Repositories ({repositories.length})
+    {meta.author} Repositories ({repositories.length})
    </h1>
    <div className="mx-8">
     <div className="!m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
      <GitHubCalendar
-      username={config.social.github.username}
+      username={social.github.username}
       theme={{
        level0: "var(--calendar-default)",
        level1: "#9be9a8",
@@ -62,7 +62,7 @@ export async function getStaticProps() {
  const { data } = await client.query({
   query: gql`
   {
-    user(login: \"${config.social.github.username}\") {
+    user(login: \"${social.github.username}\") {
       repositories(
         first: 50
         isFork: false

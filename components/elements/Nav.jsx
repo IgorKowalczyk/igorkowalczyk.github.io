@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import NextLink from "next/link";
-import { config } from "@/config";
+import { nav, meta } from "@/config";
 import { useRouter } from "next/router";
 const MobileNav = dynamic(() => import("@components/elements/MobileNav"));
 const Settings = dynamic(() => import("@components/elements/Settings"));
@@ -26,20 +26,20 @@ export function Nav() {
     <NextLink href="/" key="main_page">
      <a>
       <h3 className=" z-[1001] mx-8 font-poppins text-lg font-bold text-black duration-300 motion-reduce:transition-none dark:text-white">
-       {config.title}
+       {meta.title}
        <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
       </h3>
      </a>
     </NextLink>
     <MobileNav />
     <div className="mr-auto flex gap-1">
-     {config.nav.left.map((item, index) => {
+     {nav.left.map((item, index) => {
       return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
      <Popover className="relative" />
     </div>
     <div className="ml-auto flex gap-1">
-     {config.nav.right.map((item, index) => {
+     {nav.right.map((item, index) => {
       return (
        <NextLink href={item.href} key={index}>
         <a href={item.href} target={item.target || "_self"} className="hidden rounded-lg p-1 font-normal text-gray-600 transition-all hover:bg-gray-200 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block">

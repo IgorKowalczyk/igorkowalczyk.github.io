@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { config } from "@/config";
+import { social } from "@/config";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { CogIcon, ExternalLinkIcon } from "@heroicons/react/outline";
@@ -36,7 +36,7 @@ export default function Settings(props) {
           </div>
          </div>
          <div className="mt-4 flex">
-          <a target="_blank" rel="noreferrer" href={`https://github.com/${config.social.github.username}/${config.social.github.repo}`} className="full group flex items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
+          <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github.username}/${social.github.repo}`} className="full group flex items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
            Source code <ExternalLinkIcon className="ml-2 h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
           </a>
           <button type="button" className="group mt-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>

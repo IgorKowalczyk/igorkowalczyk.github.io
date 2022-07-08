@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import dynamic from "next/dynamic";
-import { config } from "@/config";
+import { meta, header, contact, social } from "@/config";
+
 import { ConvertBytes } from "@lib/convertBytes";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
@@ -21,16 +22,16 @@ export default function Main({ repositories, user }) {
  });
 
  return (
-  <Container title={`${config.title} - Full-stack developer`}>
+  <Container title={`${meta.title} - Full-stack developer`}>
    <Transition show={isMouted} enter="duration-200 ease-out" enterFrom="opacity-0" enterTo="opacity-100" leave="duration-200 ease-out" leaveFrom="opacity-100" leaveTo="opacity-0 duration-200">
     <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] duration-200 will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
    </Transition>
    <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
     <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
      <div className="md:col-span-3">
-      <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{config.header.title}</h1>
-      <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{config.header.subtitle}</h2>
-      <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{config.header.description}</p>
+      <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
+      <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
+      <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
       <div className="mt-4 flex justify-center md:block">
        <NextLink href="/#about">
         <a className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold" href="#about">
@@ -60,17 +61,17 @@ export default function Main({ repositories, user }) {
          →
         </span>{" "}
         <span className="font-semibold text-[#66e777]" aria-hidden="true">
-         ~/{config.header.code.default.user}
+         ~/{header.code.default.user}
         </span>{" "}
         <span className="italic">
          <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
           $
          </span>{" "}
-         <span aria-label={`list github account ${config.social.github.username}`}>
+         <span aria-label={`list github account ${social.github.username}`}>
           list github --user=
-          <NextLink href={`https://github.com/${config.social.github.username}`}>
-           <a target="_blank" aria-label={`See ${config.social.github.user} github`}>
-            "{config.social.github.username}"
+          <NextLink href={`https://github.com/${social.github.username}`}>
+           <a target="_blank" aria-label={`See ${social.github.user} github`}>
+            "{social.github.username}"
            </a>
           </NextLink>
          </span>
@@ -86,7 +87,7 @@ export default function Main({ repositories, user }) {
           <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
          </div>
         </span>
-        {config.header.code.lines.map((line, index) => (
+        {header.code.lines.map((line, index) => (
          <div key={index}>
           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
            →
@@ -104,7 +105,7 @@ export default function Main({ repositories, user }) {
          →
         </span>{" "}
         <span className="font-semibold text-[#66e777]" aria-hidden="true">
-         ~/{config.header.code.default.user}
+         ~/{header.code.default.user}
         </span>{" "}
         <span className="italic">
          <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
@@ -120,7 +121,7 @@ export default function Main({ repositories, user }) {
     <hr className="m-[0_auto] mb-8 border-[1px] border-gray-200 px-8 duration-300 motion-reduce:transition-none dark:border-gray-800" />
     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-      <NextLink href={`https://github.com/${config.social.github.username}`}>
+      <NextLink href={`https://github.com/${social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
         <svg fill="currentColor" className="mr-1 inline h-[24px] w-[24px] fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white">
          <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
@@ -130,14 +131,14 @@ export default function Main({ repositories, user }) {
       </NextLink>
      </p>
      <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
-      <NextLink href={`https://github.com/${config.social.github.username}`}>
+      <NextLink href={`https://github.com/${social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
         <StarIcon className="mr-1 inline h-[22px] w-[22px] stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_starred_repos} Starred repos
        </a>
       </NextLink>
      </p>
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-      <NextLink href={`https://github.com/${config.social.github.username}`}>
+      <NextLink href={`https://github.com/${social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" viewBox="0 0 16 16">
          <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
@@ -147,7 +148,7 @@ export default function Main({ repositories, user }) {
       </NextLink>
      </p>
      <p className="font-semibold duration-200 motion-reduce:transition-none">
-      <NextLink href={`https://github.com/${config.social.github.username}`}>
+      <NextLink href={`https://github.com/${social.github.username}`}>
        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
         <UsersIcon className="mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_followers} Github Followers
        </a>
@@ -197,7 +198,7 @@ export default function Main({ repositories, user }) {
       <div>
        <div className="space-y-4 p-4">
         <p className="text-xl font-semibold">Or contact me with...</p>
-        {config.contact.links.map((element, index) => (
+        {contact.links.map((element, index) => (
          <NextLink href={element.href} key={index}>
           <a className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
            {element.icon} {element.title}
@@ -235,7 +236,7 @@ export async function getStaticProps() {
  const public_repos = await client.query({
   query: gql`
    {
-     user(login: \"${config.social.github.username}\") {
+     user(login: \"${social.github.username}\") {
       repositories(
         isFork: false
         isLocked: false
@@ -264,7 +265,7 @@ export async function getStaticProps() {
  const private_repos = await client.query({
   query: gql`
     {
-      user(login: \"${config.social.github.username}\") {
+      user(login: \"${social.github.username}\") {
        repositories(
          isFork: false
          isLocked: false
@@ -284,7 +285,7 @@ export async function getStaticProps() {
  const most_popular_repos = await client.query({
   query: gql`
   {
-    user(login: \"${config.social.github.username}\") {
+    user(login: \"${social.github.username}\") {
       topRepositories(first: 6, orderBy: {field: STARGAZERS, direction: DESC}) {
        edges {
           node {
