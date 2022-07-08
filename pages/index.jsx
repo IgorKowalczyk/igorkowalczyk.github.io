@@ -124,35 +124,35 @@ export default function Main({ repositories, user }) {
      <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <NextLink href={`https://github.com/${social.github.username}`}>
-        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-         <svg fill="currentColor" className="mr-1 inline h-[24px] w-[24px] fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white">
-          <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
+        <a target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
+         <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
          </svg>{" "}
-         {user.user_stars} Total stars
+         <span>{user.user_stars} Total stars</span>
         </a>
        </NextLink>
       </p>
       <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
        <NextLink href={`https://github.com/${social.github.username}`}>
-        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-         <StarIcon className="mr-1 inline h-[22px] w-[22px] stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_starred_repos} Starred repos
+        <a target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
+         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_starred_repos} Starred repos</span>
         </a>
        </NextLink>
       </p>
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <NextLink href={`https://github.com/${social.github.username}`}>
-        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-         <svg className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 32 32">
+        <a target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
+         <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
           <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
          </svg>{" "}
-         {user.user_forks} Repositories forks
+         <span>{user.user_forks} Repositories forks</span>
         </a>
        </NextLink>
       </p>
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <NextLink href={`https://github.com/${social.github.username}`}>
-        <a target="_blank" className="group inline-block text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-         <UsersIcon className="mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" /> {user.user_followers} Github Followers
+        <a target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
+         <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_followers} Github Followers</span>
         </a>
        </NextLink>
       </p>

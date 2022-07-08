@@ -43,24 +43,24 @@ export function RepoCard(repo) {
     <NextLink key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`}>
      <a target="_blank" aria-label={`${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"} search`}>
       <span className="flex w-max content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <span className="mr-1 block h-[12px] w-[12px] rounded-full bg-gray-400 dark:bg-white" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "" }}></span> {repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}
+       <span className="mr-1 block h-[12px] w-[12px] rounded-full bg-gray-400 dark:bg-white" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "" }}></span> <span>{repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}</span>
       </span>
      </a>
     </NextLink>
     <NextLink key="repo_stars" href={`${repo.url}/stargazers`}>
      <a target="_blank">
       <span className="flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <StarIcon className="mr-1 h-5 w-5 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" /> {repo.stargazerCount} Stars
+       <StarIcon className="mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{repo.stargazerCount} Stars</span>
       </span>
      </a>
     </NextLink>
     <NextLink key="repo_forks" href={`${repo.url}/network/members`}>
      <a target="_blank">
       <span className="flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" viewBox="0 0 16 16">
-        <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+       <svg className="mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
        </svg>{" "}
-       {repo.forkCount} Forks
+       <span>{repo.forkCount} Forks</span>
       </span>
      </a>
     </NextLink>
