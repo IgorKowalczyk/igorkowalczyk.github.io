@@ -13,7 +13,7 @@ Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
 
 export default function App({ Component, pageProps, router }) {
- //UseAnalytics();
+ process.env.NODE_ENV === "production" ? UseAnalytics() : null;
  return (
   <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
    <MotionConfig reducedMotion="user">
