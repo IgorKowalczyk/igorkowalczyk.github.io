@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+export const meta = {
+ title: "Igor Kowalczyk",
+ author: "Igor Kowalczyk",
+ description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
+ url: "https://igorkowalczyk.vercel.app",
+ theme_color: "#5485f2",
+ type: "website",
+};
+
 export const feautures = {
  smoothTransition: true,
 };
@@ -107,18 +116,16 @@ export const contact = {
 };
 
 export const social = {
- image: "/banner.png",
+ image: "/assets/banner.png",
  github: {
   username: "igorkowalczyk",
   repo: "igorkowalczyk.github.io",
  },
 };
 
-export const meta = {
- title: "Igor Kowalczyk",
- author: "Igor Kowalczyk",
- description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
- url: "https://igorkowalczyk.vercel.app",
- theme_color: "#5485f2",
- type: "website",
-};
+export const techs = [
+ {
+  name: "React",
+  icon: "/assets/techs/react.svg",
+  }
+]
