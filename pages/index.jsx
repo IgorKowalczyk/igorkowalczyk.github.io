@@ -123,7 +123,7 @@ export default function Main({ repositories, user }) {
       <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
        <NextLink href={`https://github.com/${social.github.username}`}>
         <a target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white">
-         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_starred_repos} Starred repos</span>
+         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_starred_repos} Starred repos</span>
         </a>
        </NextLink>
       </p>
