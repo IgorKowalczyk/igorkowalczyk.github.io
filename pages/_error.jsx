@@ -1,6 +1,7 @@
 import { meta } from "@/config";
 import { Container } from "@components/elements/Container";
-import { LinkButton } from "@components/elements/LinkButton";
+import dynamic from "next/dynamic";
+const LinkButton = dynamic(() => import("@components/elements/LinkButton"));
 
 export default function server_error() {
  return (

@@ -19,7 +19,7 @@ export default function Document({ props }) {
     <link rel="preconnect" href="https://twemoji.maxcdn.com" crossOrigin="anonymous" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <link rel="dns-prefetch" href="https://twemoji.maxcdn.com" />
-    <Arc />
+    { process.env.NEXT_PUBLIC_ARC_TOKEN && process.env.NODE_ENV === "production" && <Arc /> }
    </Head>
    <body className="bg-main-white dark:bg-main-dark">
     <Main {...props} />

@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import { SparklesIcon, StarIcon, ArchiveIcon, FolderIcon } from "@heroicons/react/outline";
+
 export function RepoCard(repo) {
  return (
   <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">

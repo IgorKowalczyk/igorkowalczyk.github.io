@@ -4,8 +4,8 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from "@apollo/client/link/context";
 import { Container } from "@components/elements/Container";
 import { RepoCard } from "@components/elements/RepoCard";
-import GitHubCalendar from "react-github-calendar";
 const Squares = dynamic(() => import("@components/decorations/Squares"));
+const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
 
 export default function gitub_repos({ repositories }) {
  return (
