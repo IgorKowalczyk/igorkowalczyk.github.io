@@ -1,5 +1,5 @@
-const technologies = (_, res) => {
- const techs = [
+export default async function handler(req, res) {
+ return res.json([
   {
    name: "React",
    icon: "/assets/tech/react.svg",
@@ -48,8 +48,9 @@ const technologies = (_, res) => {
    name: "MySQL",
    icon: "/assets/tech/mysql.svg",
   },
- ];
- res.status(200).json(techs);
+ ])
 };
 
-export default technologies;
+export const config = {
+ runtime: 'nodejs',
+};
