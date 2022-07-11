@@ -16,6 +16,9 @@ module.exports = withPWA({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
  },
+ experimental: {
+  runtime: 'experimental-edge',
+},
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
