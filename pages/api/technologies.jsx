@@ -1,5 +1,7 @@
+import { NextResponse } from 'next/server';
+
 export default async function handler(req, res) {
- return res.json([
+ return NextResponse.json([
   {
    name: "React",
    icon: "/assets/tech/react.svg",
@@ -52,5 +54,5 @@ export default async function handler(req, res) {
 };
 
 export const config = {
- runtime: 'nodejs',
+ runtime: 'experimental-edge',
 };
