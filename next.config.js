@@ -55,6 +55,16 @@ module.exports = withPWA({
     destination: "https://arc.io/arc-sw.js",
     permanent: true,
    },
+   {
+    source: "/r/:path*",
+    destination: "/:path*",
+    permanent: true,
+   },
+   {
+    source: "/discord-server",
+    destination: "/discord",
+    permanent: true,
+   },
   ];
  },
  async headers() {

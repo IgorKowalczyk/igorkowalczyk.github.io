@@ -4,7 +4,7 @@ import { social } from "@/config";
 
 // Type: [private, public]
 // Count: Number of repos to return [min 0, max 50]
-const info = async(req, res) => {
+const info = async (req, res) => {
  const { query } = req.query;
  const type = query[0].toLowerCase();
  const count = query[1].toLowerCase();

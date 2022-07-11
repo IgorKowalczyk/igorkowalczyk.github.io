@@ -57,12 +57,12 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
+  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.dev.git"
  },
  "author": "Igor Kowalczyk",
  "license": "MIT",
  "bugs": {
-  "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
+  "url": "https://github.com/igorkowalczyk/igorkowalczyk.dev/issues"
  },
  "homepage": "https://igorkowalczyk.vercel.app"
 }

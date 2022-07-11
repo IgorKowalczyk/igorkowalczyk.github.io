@@ -58,13 +58,32 @@ export function RepoCard(repo) {
     <NextLink key="repo_forks" href={`${repo.url}/network/members`}>
      <a target="_blank">
       <span className="flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[60%] duration-200 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%]">
-       <svg className="mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 32 32">
+       <svg className="mr-1 h-5 w-5 fill-black/[50%] duration-200 motion-reduce:transition-none dark:fill-white/[70%]" aria-hidden="true" role="img" viewBox="0 0 32 32">
         <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
        </svg>{" "}
        <span>{repo.forkCount} Forks</span>
       </span>
      </a>
     </NextLink>
+   </div>
+  </div>
+ );
+}
+
+export function RepoCardSkeleton() {
+ return (
+  <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
+   <div className="bg-zinc-200/[15%] w-2/4 animate-pulse h-6 rounded-md"/>
+   <div className="bg-zinc-200/[15%] mt-3 w-5/6 animate-pulse h-6 rounded-md"/>
+   <div className="text-left flex mt-3">
+    {Array.from({ length: 3 }).map((_, index) => (
+     <div className="bg-zinc-200/[15%] w-28 animate-pulse h-6 rounded-[2em] mr-2" key={index}/>
+    ))}
+   </div>
+   <div className=" mt-2 flex gap-1">
+   {Array.from({ length: 3 }).map((_, index) => (
+     <div className="bg-zinc-200/[15%] w-28 animate-pulse h-6 rounded-md mr-2" key={index}/>
+    ))}
    </div>
   </div>
  );

@@ -1,20 +1,28 @@
 import dynamic from "next/dynamic";
+import { SWR } from "@lib/swr";
 import { meta, social } from "@/config";
-import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
 import { Container } from "@components/elements/Container";
-import { RepoCard } from "@components/elements/RepoCard";
+import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
 const Squares = dynamic(() => import("@components/decorations/Squares"));
 const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
 
-export default function gitub_repos({ repositories }) {
+export default function gitub_repos({ props }) {
+ const { data: _repos } = SWR("/api/git/repo/public/50");
+ const repos = _repos ? _repos : null;
  return (
   <Container title={`${meta.title} - Github Repositories`}>
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
-   <h1 className="my-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
-    {meta.author} Repositories ({repositories.length})
+   <h1 className="my-6 flex items-center justify-center bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
+    {meta.author} Repositories{" "}
+    {_repos ? (
+     repos && <>({repos?.length})</>
+    ) : (
+     <div className="spinner ml-3" id="nprogress">
+      <div className="spinner-icon"></div>
+     </div>
+    )}
    </h1>
    <div className="mx-8">
     <div className="!m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
@@ -30,89 +38,25 @@ export default function gitub_repos({ repositories }) {
      ></GitHubCalendar>
     </div>
    </div>
-   <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
-    {repositories && repositories.map((repo) => <RepoCard key={repo.id} {...repo} />)}
-    <div className="fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">
-     <Squares w="404" h="404" />
-    </div>
+
+   {_repos ? (
+    repos && (
+     <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      {repos?.map((repo) => (
+        <RepoCard key={repo.id} {...repo} />
+      ))}
+     </div>
+    )
+   ) : (
+     <div key="random-key-420" className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      {Array.from({ length: 20 }).map((_, index) => (
+       <RepoCardSkeleton key={index}/>
+      ))}
+     </div>
+   )}
+   <div className="fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">
+    <Squares w="404" h="404" />
    </div>
   </Container>
  );
-}
-
-export async function getStaticProps() {
- const httpLink = createHttpLink({
-  uri: "https://api.github.com/graphql",
- });
-
- const authLink = setContext((_, { headers }) => {
-  return {
-   headers: {
-    ...headers,
-    authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-   },
-  };
- });
-
- const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
- });
-
- const { data } = await client.query({
-  query: gql`
-  {
-    user(login: \"${social.github.username}\") {
-      repositories(
-        first: 50
-        isFork: false
-        isLocked: false
-        privacy: PUBLIC
-        orderBy: {field: STARGAZERS, direction: DESC}
-        ownerAffiliations: OWNER
-      ) {
-        totalCount
-        edges {
-          node {
-            ... on Repository {
-              name
-              id
-              url
-              owner {
-                login
-              }
-              description
-              isArchived
-              forkCount
-              repositoryTopics(first: 4) {
-                edges {
-                  node {
-                    topic {
-                      name
-                    }
-                  }
-                }
-              }
-              stargazerCount
-              primaryLanguage {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  `,
- });
-
- const { user } = data;
- const repositories = user.repositories.edges.map((edge) => edge.node);
- return {
-  props: {
-   repositories,
-  },
-  revalidate: 60,
- };
 }
