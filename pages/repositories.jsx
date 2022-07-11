@@ -14,6 +14,9 @@ export default function gitub_repos({ props }) {
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
+   <div className="overflow-hidden fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">
+    <Squares w="404" h="404" />
+   </div>
    <h1 className="my-6 flex items-center justify-center bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
     {meta.author} Repositories{" "}
     {_repos ? (
@@ -48,15 +51,12 @@ export default function gitub_repos({ props }) {
      </div>
     )
    ) : (
-     <div key="random-key-420" className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+     <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
       {Array.from({ length: 20 }).map((_, index) => (
        <RepoCardSkeleton key={index}/>
       ))}
      </div>
    )}
-   <div className="fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">
-    <Squares w="404" h="404" />
-   </div>
   </Container>
  );
 }

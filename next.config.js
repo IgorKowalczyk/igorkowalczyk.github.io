@@ -124,6 +124,10 @@ const securityHeaders = [
   value: "max-age=31536000; includeSubDomains; preload",
  },
  {
+  key: "Cache-Control",
+  value: "public, max-age=300, must-revalidate",
+ },
+ {
   key: "X-XSS-Protection",
   value: "1; mode=block",
  },

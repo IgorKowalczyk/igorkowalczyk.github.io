@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 
 export default async function handler() {
- const headers = new Headers({'Cache-Control': 's-maxage=300'});
-
  return NextResponse.json([
   {
    name: "React",
@@ -52,7 +50,7 @@ export default async function handler() {
    name: "MySQL",
    icon: "/assets/tech/mysql.svg",
   },
- ], {headers})
+ ])
 };
 
 export const config = {
