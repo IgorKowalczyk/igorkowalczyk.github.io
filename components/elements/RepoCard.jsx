@@ -73,16 +73,16 @@ export function RepoCard(repo) {
 export function RepoCardSkeleton() {
  return (
   <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
-   <div className="bg-zinc-200/[15%] w-2/4 animate-pulse h-6 rounded-md"/>
-   <div className="bg-zinc-200/[15%] mt-3 w-5/6 animate-pulse h-6 rounded-md"/>
-   <div className="text-left flex mt-3">
+   <div className="h-6 w-2/4 animate-pulse rounded-md bg-zinc-200/[15%]" />
+   <div className="mt-3 h-6 w-5/6 animate-pulse rounded-md bg-zinc-200/[15%]" />
+   <div className="mt-3 flex text-left">
     {Array.from({ length: 3 }).map((_, index) => (
-     <div className="bg-zinc-200/[15%] w-28 animate-pulse h-6 rounded-[2em] mr-2" key={index}/>
+     <div className="mr-2 h-6 w-28 animate-pulse rounded-[2em] bg-zinc-200/[15%]" key={index} />
     ))}
    </div>
    <div className=" mt-2 flex gap-1">
-   {Array.from({ length: 3 }).map((_, index) => (
-     <div className="bg-zinc-200/[15%] w-28 animate-pulse h-6 rounded-md mr-2" key={index}/>
+    {Array.from({ length: 3 }).map((_, index) => (
+     <div className="mr-2 h-6 w-28 animate-pulse rounded-md bg-zinc-200/[15%]" key={index} />
     ))}
    </div>
   </div>

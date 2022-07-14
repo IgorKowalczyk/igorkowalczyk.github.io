@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export default async function handler() {
  return NextResponse.json([
@@ -50,9 +50,9 @@ export default async function handler() {
    name: "MySQL",
    icon: "/assets/tech/mysql.svg",
   },
- ])
-};
+ ]);
+}
 
 export const config = {
- runtime: 'experimental-edge',
+ runtime: "experimental-edge",
 };

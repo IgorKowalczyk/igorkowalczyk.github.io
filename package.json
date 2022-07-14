@@ -55,7 +55,12 @@
   "terser-webpack-plugin": "^5.3.3",
   "webpack": "^5.73.0"
  },
- "browserslist": [">0.3%", "not ie 11", "not dead", "not op_mini all"],
+ "browserslist": [
+  ">0.3%",
+  "not ie 11",
+  "not dead",
+  "not op_mini all"
+ ],
  "repository": {
   "type": "git",
   "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.dev.git"
