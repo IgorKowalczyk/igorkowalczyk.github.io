@@ -4,8 +4,8 @@
  "description": "My portfolio built on Next.js",
  "start_url": ".",
  "display": "standalone",
- "background_color": "#040d21",
- "theme_color": "#061228",
+ "background_color": "#050c21",
+ "theme_color": "#09152a",
  "icons": [
   {
    "src": "/favicons/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
    "type": "image/png"
   },
   {
-   "src": "/favicons/android-chrome-384x384.png",
-   "sizes": "384x384",
+   "src": "/favicons/android-chrome-512x512.png",
+   "sizes": "512x512",
    "type": "image/png"
   }
  ]
