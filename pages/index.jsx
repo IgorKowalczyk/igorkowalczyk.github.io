@@ -189,6 +189,7 @@ export default function Main({ repositories, user }) {
       );
      })}
     </div>
+    <p className="mt-9 text-center text-xl font-semibold">...and many others!</p>
    </section>
 
    <section id={"contact"}>
