@@ -39,7 +39,7 @@
   "ajv": "^8.11.0",
   "autoprefixer": "^10.4.7",
   "eslint": "8.20.0",
-  "eslint-config-next": "12.2.2",
+  "eslint-config-next": "12.2.3",
   "globby": "^13.1.2",
   "lodash": "^4.17.21",
   "lodash-webpack-plugin": "^0.11.6",
