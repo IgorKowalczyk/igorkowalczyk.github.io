@@ -4,7 +4,7 @@ export const meta = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
- url: "https://igorkowalczyk.vercel.app",
+ url: "https://igorkowalczyk.dev",
  theme_color: "#5485f2",
  type: "website",
 };
