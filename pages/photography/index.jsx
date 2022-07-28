@@ -40,7 +40,7 @@ export default function Photography({ props }) {
     ) : (
      <>
       {Array.from({ length: 2 }).map((_, index) => (
-       <div key={index} className="mb-4 h-[92px] w-full animate-pulse rounded-md bg-blue-100 dark:bg-white/[10%] dark:text-white" />
+       <div key={index} className="mb-4 h-[92px] w-full animate-pulse rounded-md bg-zinc-200 dark:bg-zinc-200/[15%] dark:text-white" />
       ))}
      </>
     )}
