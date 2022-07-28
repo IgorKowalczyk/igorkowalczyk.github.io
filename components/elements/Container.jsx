@@ -60,7 +60,7 @@ export function Container(props) {
     {meta.date && <meta property="article:published_time" content={meta.date} />}
    </Head>
    <Nav />
-   <main className="mt-24 flex flex-col justify-center antialiased">
+   <main className="mt-24 flex min-h-screen flex-col antialiased">
     <Twemoji options={{ className: "twemoji" }}>{feautures.smoothTransition ? <motion.div {...variants}>{children}</motion.div> : children}</Twemoji>
    </main>
    <Footer />

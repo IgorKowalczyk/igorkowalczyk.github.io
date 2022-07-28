@@ -14,15 +14,8 @@ export default function gitub_repos({ props }) {
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
-   <h1 className="my-6 flex items-center justify-center bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff]">
-    {meta.author} Repositories{" "}
-    {_repos ? (
-     repos && <>({repos?.length})</>
-    ) : (
-     <div className="spinner ml-3" id="nprogress">
-      <div className="spinner-icon"></div>
-     </div>
-    )}
+   <h1 className="mt-6 mb-2 flex items-center justify-center box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold motion-reduce:transition-none">
+    My work, from the beginning <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h1>
    <div className="mx-8">
     <div className="!m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">

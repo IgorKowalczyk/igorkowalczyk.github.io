@@ -35,25 +35,26 @@
   "use-delayed-render": "^0.0.7"
  },
  "devDependencies": {
+  "@igorkowalczyk/is-browser": "^1.0.1",
   "@next/bundle-analyzer": "^12.2.3",
+  "@tailwindcss/aspect-ratio": "^0.4.0",
   "ajv": "^8.11.0",
   "autoprefixer": "^10.4.7",
+  "compression-webpack-plugin": "^10.0.0",
   "eslint": "8.20.0",
   "eslint-config-next": "12.2.3",
   "globby": "^13.1.2",
   "lodash": "^4.17.21",
   "lodash-webpack-plugin": "^0.11.6",
+  "mini-svg-data-uri": "^1.4.4",
   "postcss": "^8.4.14",
   "prettier": "^2.7.1",
   "prettier-plugin-tailwindcss": "^0.1.12",
-  "tailwindcss": "^3.1.6",
-  "terser-webpack-plugin": "^5.3.3",
-  "webpack": "^5.73.0",
   "tailwind-gradient-mask-image": "^1.0.0",
+  "tailwindcss": "^3.1.6",
   "tailwindcss-text-fill": "^0.2.0",
-  "mini-svg-data-uri": "^1.4.4",
-  "compression-webpack-plugin": "^10.0.0",
-  "@igorkowalczyk/is-browser": "^1.0.1"
+  "terser-webpack-plugin": "^5.3.3",
+  "webpack": "^5.73.0"
  },
  "browserslist": [
   ">0.3%",

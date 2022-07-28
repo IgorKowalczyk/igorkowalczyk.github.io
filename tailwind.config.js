@@ -57,5 +57,6 @@ module.exports = {
   require("tailwind-gradient-mask-image"),
   require("@headlessui/tailwindcss"),
   require("@igorkowalczyk/is-browser"),
+  require("@tailwindcss/aspect-ratio"),
  ],
 };

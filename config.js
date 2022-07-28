@@ -50,7 +50,11 @@ export const nav = {
   },
   {
    href: "/repositories/",
-   title: "Repositories",
+   title: "My work",
+  },
+  {
+   href: "/photography/",
+   title: "Photography",
   },
  ],
  right: [
