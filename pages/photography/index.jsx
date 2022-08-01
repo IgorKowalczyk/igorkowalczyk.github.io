@@ -22,7 +22,7 @@ export default function Photography({ props }) {
        {categories?.map((category, index) => (
         <NextLink href={category.slug} key={`${index}-image`}>
          <a className="group mb-4 w-full cursor-pointer">
-          <article className="flex flex-col justify-between rounded-md bg-zinc-200/[35%] px-6 py-4 duration-200 hover:bg-zinc-200/90 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" key={category.id}>
+          <article className="group flex flex-col justify-between rounded-md bg-zinc-200/[35%] px-6 py-4 duration-200 hover:bg-zinc-200/90 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" key={category.id}>
            <div className="flex flex-row justify-between">
             <h4 className="relative flex w-full items-center text-lg font-medium text-gray-900 dark:text-gray-100 md:text-xl">
              {category.name}
@@ -31,6 +31,14 @@ export default function Photography({ props }) {
             <p className="w-2/4 text-left text-gray-500 duration-200 motion-reduce:transition-none md:mb-0 md:text-right">{category.date}</p>
            </div>
            <p className="mt-2 text-slate-600 duration-200 motion-reduce:transition-none dark:text-slate-400">{category.description || "Nothing to say..."}</p>
+           <div class="flex -space-x-4 pt-2 group-hover:-space-x-3">
+            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/1.jpg" alt="" />
+            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/2.jpg" alt="" />
+            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/3.jpg" alt="" />
+            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/1.jpg" alt="" />
+            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/2.jpg" alt="" />
+            <p class="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-poppins text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+21</p>
+           </div>
           </article>
          </a>
         </NextLink>

@@ -15,13 +15,13 @@ module.exports = withPWA({
  pwa: {
   dest: "public",
   disable: process.env.NODE_ENV === "development",
+  register: true,
  },
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
  trailingSlash: true,
  compress: true,
- optimizeCss: true,
  swcMinify: false,
  images: {
   domains: [
