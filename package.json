@@ -39,7 +39,7 @@
   "@next/bundle-analyzer": "^12.2.3",
   "@tailwindcss/aspect-ratio": "^0.4.0",
   "ajv": "^8.11.0",
-  "autoprefixer": "^10.4.7",
+  "autoprefixer": "^10.4.8",
   "compression-webpack-plugin": "^10.0.0",
   "eslint": "8.20.0",
   "eslint-config-next": "12.2.3",
