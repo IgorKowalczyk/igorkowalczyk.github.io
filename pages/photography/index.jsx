@@ -2,6 +2,7 @@ import NextLink from "next/link";
 import { meta } from "@/config";
 import { Container } from "@components/elements/Container";
 import { ChevronRightIcon } from "@heroicons/react/outline";
+import { BlurPreview } from "@components/elements/BlurImage";
 import { SWR } from "@lib/swr";
 
 export default function Photography({ props }) {
@@ -10,7 +11,7 @@ export default function Photography({ props }) {
 
  return (
   <Container title={`${meta.title} - Photography`}>
-   <h1 className="my-6 flex items-center justify-center box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold motion-reduce:transition-none">
+   <h1 className="my-6 flex flex-wrap items-center justify-center box-decoration-clone bg-clip-text text-center font-poppins text-[2rem] font-semibold motion-reduce:transition-none">
     My photography<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h1>
    <section id={"photography"} className="mx-auto flex max-w-3xl scroll-mt-20 flex-col items-start justify-center px-6">
@@ -31,14 +32,14 @@ export default function Photography({ props }) {
             <p className="w-2/4 text-left text-gray-500 duration-200 motion-reduce:transition-none md:mb-0 md:text-right">{category.date}</p>
            </div>
            <p className="mt-2 text-slate-600 duration-200 motion-reduce:transition-none dark:text-slate-400">{category.description || "Nothing to say..."}</p>
-           <div class="flex -space-x-4 pt-2 group-hover:-space-x-3">
-            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/1.jpg" alt="" />
-            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/2.jpg" alt="" />
-            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/3.jpg" alt="" />
-            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/1.jpg" alt="" />
-            <img class="z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:group-hover:border-[#474f63]" src="/photography/bologna/2.jpg" alt="" />
-            <p class="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-poppins text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+21</p>
-           </div>
+           {category.preview && category.preview.images.length > 0 && (
+            <div className="relative flex -space-x-4 pt-2 group-hover:-space-x-3">
+             {category.preview.images.map((image, index) => (
+              <BlurPreview key={`${index}-image-prev`} image={image} />
+             ))}
+             {category.count - category.preview.images.length > 0 && <p className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-poppins text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+{category.count - category.preview.images.length}</p>}
+            </div>
+           )}
           </article>
          </a>
         </NextLink>
@@ -47,8 +48,8 @@ export default function Photography({ props }) {
      )
     ) : (
      <>
-      {Array.from({ length: 2 }).map((_, index) => (
-       <div key={index} className="mb-4 h-[92px] w-full animate-pulse rounded-md bg-zinc-200 dark:bg-zinc-200/[15%] dark:text-white" />
+      {Array.from({ length: 1 }).map((_, index) => (
+       <div key={index} className="mb-4 h-[140px] w-full animate-pulse rounded-md bg-zinc-200 dark:bg-zinc-200/[15%] dark:text-white" />
       ))}
      </>
     )}

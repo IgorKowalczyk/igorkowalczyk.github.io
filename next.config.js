@@ -28,6 +28,7 @@ module.exports = withPWA({
    "github.githubassets.com", // GitHub assets
   ],
  },
+ experimental: { images: { allowFutureImage: true } },
  async redirects() {
   return [
    {

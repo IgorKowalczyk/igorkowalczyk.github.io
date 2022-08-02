@@ -8,6 +8,20 @@ export default async function handler() {
    description: "Pictures made during my night walks in Bologna",
    slug: "/photography/bologna",
    id: "bologna",
+   count: 3,
+   preview: {
+    images: [
+     {
+      src: "/photography/bologna/1.jpg",
+     },
+     {
+      src: "/photography/bologna/2.jpg",
+     },
+     {
+      src: "/photography/bologna/3.jpg",
+     },
+    ],
+   },
   },
  ]);
 }
