@@ -124,19 +124,121 @@ img.twemoji {
  @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
 }
 
-@media (min-width: 768px) {
- .card-rotate {
-  transition: transform 0.2s;
-  transform: perspective(1000px) rotateX(2deg) rotateY(-10deg) rotateZ(2deg);
- }
-
- .card-rotate:hover {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
- }
+.prose .anchor {
+ @apply invisible absolute -ml-[1em] w-4/5 max-w-2xl cursor-pointer pr-[0.5em] no-underline opacity-0 duration-200 motion-reduce:transition-none;
 }
 
-@media (max-width: 1024px) {
- .card-rotate {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
- }
+.anchor:hover {
+ @apply visible opacity-100;
+}
+
+.prose *:hover > .anchor {
+ @apply visible opacity-100;
+}
+
+.prose .anchor:after {
+ @apply text-gray-300 dark:text-gray-700;
+ content: "#";
+}
+
+.prose pre {
+ @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+}
+
+.prose code {
+ @apply rounded-lg border border-gray-100 px-1 py-0.5 text-gray-800 dark:border-gray-800 dark:text-gray-200;
+}
+
+.prose pre code {
+ @apply p-0 text-gray-800 dark:text-gray-200;
+ border: initial;
+}
+
+.prose img {
+ @apply m-0;
+}
+
+.prose > :first-child {
+ margin-top: 1rem !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+ @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+ @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+ @apply text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+ @apply text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+ @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+ @apply text-blue-500;
+}
+
+.token.function,
+.token.class-name {
+ @apply text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+ @apply text-yellow-500;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+ @apply text-gray-800 dark:text-gray-50;
+}
+
+pre::-webkit-scrollbar {
+ display: none;
+}
+
+pre {
+ -ms-overflow-style: none; /* IE and Edge */
+ scrollbar-width: none; /* Firefox */
+}
+
+.rehype-code-title {
+ @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-200 px-5 py-3 font-mono text-sm font-bold text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200;
+}
+
+.rehype-code-title + pre {
+ @apply mt-0 rounded-t-none;
+}
+
+.highlight-line {
+ @apply -mx-4 block border-l-4 border-blue-500 bg-gray-100 px-4 dark:bg-gray-800;
 }

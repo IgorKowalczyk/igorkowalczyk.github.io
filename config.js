@@ -61,7 +61,6 @@ export const nav = {
   {
    href: "/blog/",
    title: "Blog",
-   target: "_blank",
   },
   {
    href: "/discord/",

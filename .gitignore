@@ -45,3 +45,6 @@ yarn-error.log*
 **/public/worker-*.js.map
 **/public/fallback-*.js
 **/public/*.gz
+
+# Contentlayer
+.contentlayer

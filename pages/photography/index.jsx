@@ -23,7 +23,7 @@ export default function Photography({ props }) {
        {categories?.map((category, index) => (
         <NextLink href={category.slug} key={`${index}-image`}>
          <a className="group mb-4 w-full cursor-pointer">
-          <article className="group flex flex-col justify-between rounded-md bg-zinc-200/[35%] px-6 py-4 duration-200 hover:bg-zinc-200/90 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" key={category.id}>
+          <article className="group flex flex-col justify-between rounded-md bg-zinc-200/[25%] px-6 py-4 duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" key={category.id}>
            <div className="flex flex-row justify-between">
             <h4 className="relative flex w-full items-center text-lg font-medium text-gray-900 dark:text-gray-100 md:text-xl">
              {category.name}

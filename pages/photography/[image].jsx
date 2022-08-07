@@ -1,4 +1,4 @@
-import { Container } from "../../components/elements/Container";
+import { Container } from "@/components/elements/Container";
 import { meta } from "@/config";
 import { BlurImage } from "@/components/elements/BlurImage";
 import { SWR } from "@lib/swr";

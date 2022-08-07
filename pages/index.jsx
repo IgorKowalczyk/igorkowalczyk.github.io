@@ -182,7 +182,7 @@ export default function Main({ repositories, user }) {
     <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
      {techs.map((tech, index) => {
       return (
-       <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[35%] px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/90 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+       <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
         <div className="rounded-md">{tech.icon}</div>
         <span className="font-semibold">{tech.name}</span>
        </div>
