@@ -5,8 +5,10 @@
    "@components/*": ["components/*"],
    "@lib/*": ["lib/*"],
    "@styles/*": ["styles/*"],
-   "@/*": ["*"]
+   "@/*": ["*"],
+   "contentlayer/generated": ["./.contentlayer/generated"]
   }
  },
+ "include": ["**/*.js", "**/*.jsx", ".contentlayer/generated"],
  "exclude": ["node_modules"]
 }

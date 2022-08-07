@@ -1,3 +1,4 @@
+const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -7,8 +8,30 @@ module.exports = {
  theme: {
   extend: {
    fontFamily: {
-    poppins: ["Poppins", "sans-serif"],
+    poppins: ["Poppins", ...fontFamily.sans],
    },
+   typography: (theme) => ({
+    DEFAULT: {
+     css: {
+      "h1,h2,h3,h4,h5": {
+       "scroll-margin-top": spacing[28],
+      },
+     },
+    },
+    dark: {
+     css: {
+      color: theme("colors.slate.300"),
+      "h1,h2,h3,h4,h5": {
+       color: theme("colors.gray.100"),
+       "scroll-margin-top": spacing[28],
+      },
+      blockquote: {
+       borderLeftColor: theme("colors.gray.700"),
+       color: theme("colors.slate.300"),
+      },
+     },
+    },
+   }),
    backgroundImage: {
     "main-dark": "linear-gradient(180deg, rgb(4, 13, 33) 84%, rgb(13, 25, 48) 100%)",
     "main-white": "linear-gradient(180deg, rgb(255 255 255) 84%, rgb(233, 243, 255) 100%)",
@@ -45,6 +68,9 @@ module.exports = {
    },
   },
  },
+ variants: {
+  typography: ["dark"],
+ },
  plugins: [
   plugin(function ({ matchUtilities }) {
    matchUtilities({
@@ -57,6 +83,7 @@ module.exports = {
   require("tailwind-gradient-mask-image"),
   require("@headlessui/tailwindcss"),
   require("@igorkowalczyk/is-browser"),
+  require("@tailwindcss/typography"),
   require("@tailwindcss/aspect-ratio"),
  ],
 };
