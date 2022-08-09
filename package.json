@@ -20,7 +20,7 @@
   "@headlessui/tailwindcss": "^0.1.0",
   "@heroicons/react": "^1.0.6",
   "@tippyjs/react": "^4.2.6",
-  "contentlayer": "^0.2.6",
+  "contentlayer": "^0.2.7",
   "date-fns": "^2.29.1",
   "framer-motion": "^7.0.0",
   "graphql": "^16.5.0",
