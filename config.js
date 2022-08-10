@@ -127,7 +127,7 @@ export const social = {
 };
 
 export const ads = {
-  ca_pub: process.env.CA_PUB,
+  ca_pub: process.env.NEXT_PUBLIC_CA_PUB,
 }
 
 // Why svg elements instead of img elements? Because we have to change the color of the icons depending on the theme. We do not want to load the icons when we change the theme.
