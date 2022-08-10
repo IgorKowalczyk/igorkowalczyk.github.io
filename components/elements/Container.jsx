@@ -33,9 +33,6 @@ export function Container(props) {
     duration: reduceMotion ? 0 : 0.2,
    },
   },
-  transition: {
-   duration: reduceMotion ? 0 : 0.2,
-  },
  };
 
  return (
