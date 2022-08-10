@@ -102,10 +102,10 @@ font-src 'self' *.googleapis.com *.gstatic.com *.arc.io;
 `;
 
 const securityHeaders = [
- {
-  key: "Content-Security-Policy",
-  value: ContentSecurityPolicy.replace(/\n/g, ""),
- },
+ //{
+ // key: "Content-Security-Policy",
+ // value: ContentSecurityPolicy.replace(/\n/g, ""),
+// },
  {
   key: "Referrer-Policy",
   value: "no-referrer",
