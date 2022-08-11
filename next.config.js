@@ -105,7 +105,7 @@ const securityHeaders = [
  //{
  // key: "Content-Security-Policy",
  // value: ContentSecurityPolicy.replace(/\n/g, ""),
-// },
+ // },
  {
   key: "Referrer-Policy",
   value: "no-referrer",
