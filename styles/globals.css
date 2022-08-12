@@ -56,19 +56,19 @@ html {
 }
 
 ::-webkit-scrollbar-track {
- @apply bg-gray-50 dark:bg-[#040d21];
+ @apply bg-slate-50 dark:bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- @apply bg-gray-300 dark:bg-[#1f2532];
+ @apply bg-slate-300 dark:bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
- @apply bg-gray-400 dark:bg-[#292f3d];
+ @apply bg-slate-400 dark:bg-[#292f3d];
 }
 
 ::-webkit-scrollbar-thumb:active {
- @apply bg-gray-500 dark:bg-[#343b4a];
+ @apply bg-slate-500 dark:bg-[#343b4a];
 }
 
 ::selection {
@@ -137,21 +137,33 @@ img.twemoji {
 }
 
 .prose .anchor:after {
- @apply text-gray-300 dark:text-gray-700;
+ @apply text-slate-300 dark:text-slate-700;
  content: "#";
 }
 
 .prose pre {
- @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+ @apply border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-white/10;
 }
 
 .prose code {
- @apply rounded-lg border border-gray-100 px-1 py-0.5 text-gray-800 dark:border-gray-800 dark:text-gray-200;
+ @apply rounded-lg border border-slate-100 px-1 py-0.5 text-slate-800 dark:border-slate-800 dark:text-slate-200;
 }
 
 .prose pre code {
- @apply p-0 text-gray-800 dark:text-gray-200;
+ @apply p-0 text-slate-800 dark:text-slate-200;
  border: initial;
+}
+
+.prose strong {
+ @apply text-inherit
+}
+
+blockquote p::after, blockquote p::before {
+ @apply !content-none;
+}
+
+blockquote {
+ @apply !not-italic !border-l-slate-300 dark:!border-l-slate-600 !text-slate-500 dark:!text-slate-400;
 }
 
 .prose img {
@@ -166,11 +178,11 @@ img.twemoji {
 .token.prolog,
 .token.doctype,
 .token.cdata {
- @apply text-gray-700 dark:text-gray-300;
+ @apply text-slate-700 dark:text-slate-300;
 }
 
 .token.punctuation {
- @apply text-gray-700 dark:text-gray-300;
+ @apply text-slate-700 dark:text-slate-300;
 }
 
 .token.property,
@@ -217,9 +229,10 @@ img.twemoji {
  @apply text-yellow-500;
 }
 
+
 code[class*="language-"],
 pre[class*="language-"] {
- @apply text-gray-800 dark:text-gray-50;
+ @apply text-slate-800 dark:text-slate-50;
 }
 
 pre::-webkit-scrollbar {
@@ -227,12 +240,12 @@ pre::-webkit-scrollbar {
 }
 
 pre {
- -ms-overflow-style: none; /* IE and Edge */
- scrollbar-width: none; /* Firefox */
+ -ms-overflow-style: none;
+ scrollbar-width: none; 
 }
 
 .rehype-code-title {
- @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-200 px-5 py-3 font-mono text-sm font-bold text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200;
+ @apply rounded-t-lg border border-b-0 border-slate-200 bg-slate-200 px-5 py-3 font-mono text-sm font-bold text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200;
 }
 
 .rehype-code-title + pre {
@@ -240,5 +253,5 @@ pre {
 }
 
 .highlight-line {
- @apply -mx-4 block border-l-4 border-blue-500 bg-gray-100 px-4 dark:bg-gray-800;
+ @apply -mx-4 block border-l-4 border-blue-500 bg-slate-100 px-4 dark:bg-slate-800;
 }

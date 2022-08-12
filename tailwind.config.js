@@ -4,7 +4,7 @@ const svgToDataUri = require("mini-svg-data-uri");
 
 module.exports = {
  darkMode: "class",
- content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./config.js"],
+ content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./config.js", "./data/blog/*.mdx"],
  theme: {
   extend: {
    fontFamily: {
@@ -16,6 +16,17 @@ module.exports = {
       "h1,h2,h3,h4,h5": {
        "scroll-margin-top": spacing[28],
       },
+      a: {
+       "color": theme("colors.gray.600"),
+       "text-decoration-color": theme("colors.gray.600"),
+       "transition": "0.2s",
+       "text-decoration-thickness": "1.5px",
+       "text-underline-offset": "2px",
+       '&:hover': {
+        "color": theme("colors.black"),
+        "text-decoration-color": theme("colors.black"),
+      },
+      }
      },
     },
     dark: {
@@ -24,6 +35,14 @@ module.exports = {
       "h1,h2,h3,h4,h5": {
        color: theme("colors.gray.100"),
        "scroll-margin-top": spacing[28],
+      },
+      a: {
+       "color": theme("colors.slate.300"),
+       "text-decoration-color": theme("colors.gray.500"),
+       '&:hover': {
+        "color": theme("colors.slate.100"),
+        "text-decoration-color": theme("colors.slate.100"),
+      },
       },
       blockquote: {
        borderLeftColor: theme("colors.gray.700"),
