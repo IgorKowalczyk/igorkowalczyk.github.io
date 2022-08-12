@@ -22,7 +22,7 @@
   "@tippyjs/react": "^4.2.6",
   "contentlayer": "^0.2.7",
   "date-fns": "^2.29.1",
-  "framer-motion": "^7.0.3",
+  "framer-motion": "^7.1.0",
   "graphql": "^16.5.0",
   "next": "12.2.5",
   "next-composed-plugins": "^1.0.1",
