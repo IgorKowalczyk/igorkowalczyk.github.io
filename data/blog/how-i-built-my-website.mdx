@@ -9,6 +9,7 @@ I have put a lot of time and effort into rebuilding this site, as well as this b
 My old portfolio was built on Jekyll with the addition of a few plugins. It didn't look very nice, and it wasn't very usable either. So, I decided to change that.
 
 # The Idea
+
 In June 2022 I started learning Next.js, this framework seemed the easiest for me to understand and learn. As it turned out later - it turned out to be an excellent choice.
 
 I didn't learned from some tutorials or blogs. I just opened a code editor and started writing. I was motivated by the desire to create a new place on the Internet in which I could show my work, write blog posts, etc.
@@ -19,23 +20,25 @@ I was also motivated by the fact that I wasn't happy with my old portfolio. I ha
 As I mentioned earlier - I wanted to learn something new. I used frameworks that I didn't know before or knew about them but didn't use them
 
 ## Next.js
+
 <Link href="https://nextjs.org/">Next.js</Link> is a <Link href="https://reactjs.org/">React.js</Link> framework that I used to build my website. It is a framework that is ideal for production, it has many useful things like image optimization, API routes, Middleware
 
 Next.js has several options for rendering pages:
- - [**SSR (Server-side rendering)**](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) - it will pre-render this page on each request server-side.
- - [**SSG (Static-site generation)**](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) - it will pre-render this page at build time.
- - [**ISR (Incremental Static Regeneration)**](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) - it will pre-render this page at build time and then on-demand.
+
+- [**SSR (Server-side rendering)**](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) - it will pre-render this page on each request server-side.
+- [**SSG (Static-site generation)**](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) - it will pre-render this page at build time.
+- [**ISR (Incremental Static Regeneration)**](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) - it will pre-render this page at build time and then on-demand.
 
 ## Tailwind
+
 <Link href="https://tailwindcss.com/">Tailwind</Link> is a utility-first CSS framework. It provides multiple CSS classes like `flex`, `text-center` etc.
 
 With Tailwind, you don't have to leave the HTML file to add styles to elements. Tailwind will generate the corresponding CSS classes during production and optimize them - no duplicates and no worries about load time.
 
-
 ### Example
 
-<div className="bg-blue-500 mb-6 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded duration-200 inline-block cursor-pointer">
-<span>Tailwind</span>
+<div className="mb-6 inline-block cursor-pointer rounded bg-blue-500 py-2 px-4 font-semibold text-white duration-200 hover:bg-blue-700">
+ <span>Tailwind</span>
 </div>
 
 ```jsx:pages/index.jsx
@@ -56,17 +59,19 @@ With Tailwind, you don't have to leave the HTML file to add styles to elements. 
 
 // [...]
 ```
+
 > Note: I did not use `<Button>` because I did not build such a component for the blog. The blog is written in `MDX`, not in `JSX`.
 
-
 ## Contentlayer
+
 <Link href="https://www.contentlayer.dev/">Contentlayer</Link> is a content SDK that validates and transforms content into type-safe JSON data that you can use in your pages.
 
 The easiest solution to manage content is to use a <Link href="https://en.wikipedia.org/wiki/Content_management_system">CMS (content management system)</Link>, but the CMS does not give you control over all the elements you put on the site. You are limited by the elements that the CMS provides.
 
-What if you want to build something more? Contentlayer allows you to add your own React components, arrange the page however you want. Contentlayer is suitable for building documentation, blog or even regular pages. Contentlayer allows you to manage all your content, it also validates it. 
+What if you want to build something more? Contentlayer allows you to add your own React components, arrange the page however you want. Contentlayer is suitable for building documentation, blog or even regular pages. Contentlayer allows you to manage all your content, it also validates it.
 
 **I chosed Contentlayer for a few reasons:**
- - You can simply **import the content** as you would with any other library or component.
- - It comes with **built-in and configurable content validations**. You don't have to worry about checking every single content anymore
- - It works together with Next.js, **automatically checks the content directories** and renders the corresponding pages
+
+- You can simply **import the content** as you would with any other library or component.
+- It comes with **built-in and configurable content validations**. You don't have to worry about checking every single content anymore
+- It works together with Next.js, **automatically checks the content directories** and renders the corresponding pages

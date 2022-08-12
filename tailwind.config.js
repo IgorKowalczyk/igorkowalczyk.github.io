@@ -17,16 +17,16 @@ module.exports = {
        "scroll-margin-top": spacing[28],
       },
       a: {
-       "color": theme("colors.gray.600"),
+       color: theme("colors.gray.600"),
        "text-decoration-color": theme("colors.gray.600"),
-       "transition": "0.2s",
+       transition: "0.2s",
        "text-decoration-thickness": "1.5px",
        "text-underline-offset": "2px",
-       '&:hover': {
-        "color": theme("colors.black"),
+       "&:hover": {
+        color: theme("colors.black"),
         "text-decoration-color": theme("colors.black"),
+       },
       },
-      }
      },
     },
     dark: {
@@ -37,12 +37,12 @@ module.exports = {
        "scroll-margin-top": spacing[28],
       },
       a: {
-       "color": theme("colors.slate.300"),
+       color: theme("colors.slate.300"),
        "text-decoration-color": theme("colors.gray.500"),
-       '&:hover': {
-        "color": theme("colors.slate.100"),
+       "&:hover": {
+        color: theme("colors.slate.100"),
         "text-decoration-color": theme("colors.slate.100"),
-      },
+       },
       },
       blockquote: {
        borderLeftColor: theme("colors.gray.700"),

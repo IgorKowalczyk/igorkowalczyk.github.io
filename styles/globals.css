@@ -155,15 +155,16 @@ img.twemoji {
 }
 
 .prose strong {
- @apply text-inherit
+ @apply text-inherit;
 }
 
-blockquote p::after, blockquote p::before {
+blockquote p::after,
+blockquote p::before {
  @apply !content-none;
 }
 
 blockquote {
- @apply !not-italic !border-l-slate-300 dark:!border-l-slate-600 !text-slate-500 dark:!text-slate-400;
+ @apply !border-l-slate-300 !not-italic !text-slate-500 dark:!border-l-slate-600 dark:!text-slate-400;
 }
 
 .prose img {
@@ -229,7 +230,6 @@ blockquote {
  @apply text-yellow-500;
 }
 
-
 code[class*="language-"],
 pre[class*="language-"] {
  @apply text-slate-800 dark:text-slate-50;
@@ -241,7 +241,7 @@ pre::-webkit-scrollbar {
 
 pre {
  -ms-overflow-style: none;
- scrollbar-width: none; 
+ scrollbar-width: none;
 }
 
 .rehype-code-title {
