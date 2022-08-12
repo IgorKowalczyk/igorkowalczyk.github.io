@@ -24,7 +24,7 @@
   "date-fns": "^2.29.1",
   "framer-motion": "^7.0.3",
   "graphql": "^16.5.0",
-  "next": "12.2.4",
+  "next": "12.2.5",
   "next-composed-plugins": "^1.0.1",
   "next-contentlayer": "^0.2.7",
   "next-pwa": "^5.5.5",
