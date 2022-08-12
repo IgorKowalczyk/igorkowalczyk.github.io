@@ -14,17 +14,17 @@ export const feautures = {
 };
 
 export const header = {
- title: "Igor Kowalczyk",
+ title: "Yash Joshi",
  subtitle: "Full-stack developer",
- description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems.",
+ description: "I'm a full-stack developer based in India. I have a passion for building web applications and solving problems.",
  code: {
   default: {
-   user: "igorkowalczyk",
+   user: "YashJ-",
   },
   lines: [
    {
     command: "contact --discord",
-    user: "igorkowalczyk",
+    user: "YashJ-",
     response: (
      <>
       + <span className="font-semibold">User:</span>{" "}
@@ -32,7 +32,7 @@ export const header = {
        <a target="_blank">Majonez.exe#2495</a>
       </Link>
       <br />+ <span className="font-semibold">Link:</span>{" "}
-      <Link href="https://discord.gg/uxtSMtd2xZ">
+      <Link href="https://discord.gg/d5kKHRn53S">
        <a target="_blank">https://discord.gg/uxtSMtd2xZ</a>
       </Link>
      </>
@@ -73,7 +73,7 @@ export const nav = {
 export const contact = {
  links: [
   {
-   href: "mailto:majonezexe@protonmail.com",
+   href: "yash.joshi6224@gmail.com",
    title: "Email",
    icon: (
     <svg xmlns="http://www.w3.org/2000/svg" className="mt-[2px] mr-2 h-4 w-4 duration-200 motion-reduce:transition-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -121,7 +121,7 @@ export const contact = {
 export const social = {
  image: "/assets/banner.png",
  github: {
-  username: "igorkowalczyk",
+  username: "badassdc",
   repo: "igorkowalczyk.github.io",
  },
 };
