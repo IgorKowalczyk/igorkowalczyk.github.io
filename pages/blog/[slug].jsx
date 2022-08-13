@@ -13,23 +13,23 @@ export default function Post({ post }) {
   <Container title={`${meta.title} - ${post.title} `} description={post.summary} image={`${meta.url}${post.image}`} date={new Date(post.publishedAt).toISOString()} type="article">
    <article className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center">
     <header>
-    <h1 className="mt-6 mb-2 flex items-center justify-center box-decoration-clone bg-clip-text text-center font-poppins text-[2.5rem] font-semibold motion-reduce:transition-none">
-     {post.title}
-     <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-    </h1>
-    <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
-    <p>
-     <div className="flex items-center">
-      <Image alt={meta.title} height={24} width={24} src="/assets/avatar.png" className="rounded-full" />
-      <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
-       {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
-      </time>
+     <h1 className="mt-6 mb-2 flex items-center justify-center box-decoration-clone bg-clip-text text-center font-poppins text-[2.5rem] font-semibold motion-reduce:transition-none">
+      {post.title}
+      <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+     </h1>
+     <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
+      <p>
+       <div className="flex items-center">
+        <Image alt={meta.title} height={24} width={24} src="/assets/avatar.png" className="rounded-full" />
+        <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
+         {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
+        </time>
+       </div>
+      </p>
+      <p className="min-w-32 mt-2 text-sm text-gray-600 dark:text-gray-400 md:mt-0">
+       {post.wordCount} words • {post.readingTime.text}
+      </p>
      </div>
-     </p>
-     <p className="min-w-32 mt-2 text-sm text-gray-600 dark:text-gray-400 md:mt-0">
-      {post.wordCount} words • {post.readingTime.text}
-     </p>
-    </div>
     </header>
     <section className="prose mt-8 w-full max-w-none dark:prose-dark">
      <Component components={{ ...MDXComponents }} />
