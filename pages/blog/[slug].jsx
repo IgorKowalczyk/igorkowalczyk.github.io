@@ -20,7 +20,7 @@ export default function Post({ post }) {
     <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
      <div className="flex items-center">
       <Image alt={meta.title} height={24} width={24} src="/assets/avatar.png" className="rounded-full" />
-      <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" datetime={parseISO(post.publishedAt)}>
+      <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
        {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
       </time>
      </div>
