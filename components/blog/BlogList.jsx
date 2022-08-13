@@ -11,12 +11,12 @@ export function ListElement({ title, summary, slug, publishedAt, index }) {
       <CalendarIcon className="h-3 w-3 text-blue-700 dark:text-blue-400" />
      </span>
      <header>
-     <h3 className="mb-1 flex items-center text-lg font-semibold text-slate-900 dark:text-white">
-      {title} {index === 0 && <span className="mr-2 ml-3 rounded bg-blue-200 px-2.5 py-0.5 text-sm font-medium dark:bg-white/10">🔥 Latest</span>}
-     </h3>
-     <time className="mb-2 block text-sm font-normal leading-none text-slate-500 dark:text-slate-500" dateTime={parseISO(publishedAt)}>
-      {format(parseISO(publishedAt), "MMMM dd, yyyy")}
-     </time>
+      <h3 className="mb-1 flex items-center text-lg font-semibold text-slate-900 dark:text-white">
+       {title} {index === 0 && <span className="mr-2 ml-3 rounded bg-blue-200 px-2.5 py-0.5 text-sm font-medium dark:bg-white/10">🔥 Latest</span>}
+      </h3>
+      <time className="mb-2 block text-sm font-normal leading-none text-slate-500 dark:text-slate-500" dateTime={parseISO(publishedAt)}>
+       {format(parseISO(publishedAt), "MMMM dd, yyyy")}
+      </time>
      </header>
      <p className="mb-2 text-base font-normal text-slate-600 dark:text-slate-400">{summary}</p>
      <p className="inline-flex text-sm font-semibold text-[#1491ff]">Read more</p>
