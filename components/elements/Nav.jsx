@@ -40,13 +40,7 @@ export function Nav() {
     </div>
     <div className="ml-auto flex gap-1">
      {nav.right.map((item, index) => {
-      return (
-       <NextLink href={item.href} key={index}>
-        <a href={item.href} target={item.target || "_self"} className="hidden rounded-lg p-1 font-normal text-gray-600 transition-all hover:bg-gray-200 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 sm:px-3 sm:py-2 md:inline-block">
-         {item.title}
-        </a>
-       </NextLink>
-      );
+      return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
      <Settings className="text-right" />
     </div>
