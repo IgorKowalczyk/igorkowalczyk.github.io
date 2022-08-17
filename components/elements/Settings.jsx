@@ -4,8 +4,8 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { CogIcon, ExternalLinkIcon } from "@heroicons/react/outline";
 const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), {
-  loading: () => <div className="w-32 h-[38px]"/>
-})
+ loading: () => <div className="h-[38px] w-32" />,
+});
 
 export default function Settings(props) {
  const [isOpen, setIsOpen] = useState(false);
