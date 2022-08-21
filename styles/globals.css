@@ -33,8 +33,9 @@ body {
  @apply m-0 scroll-smooth p-0 font-poppins antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
 }
 
-html {
- @apply !overflow-auto !pr-0;
+html,
+body {
+ @apply !mr-0 !overflow-auto !pr-0;
 }
 
 * {
@@ -56,11 +57,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
- @apply bg-slate-50 dark:bg-[#040d21];
+ @apply rounded-xl bg-slate-50 dark:bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- @apply bg-slate-300 dark:bg-[#1f2532];
+ @apply rounded-xl bg-slate-300 dark:bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -254,4 +255,8 @@ pre {
 
 .highlight-line {
  @apply -mx-4 block border-l-4 border-blue-500 bg-slate-100 px-4 dark:bg-slate-800;
+}
+
+#kbar-listbox div {
+ @apply pr-2;
 }

@@ -9,7 +9,7 @@ export function Footer() {
  }, [appVersion]);
 
  return (
-  <footer className="mt-12 w-full py-6 md:text-center lg:px-12">
+  <footer className="mt-12 w-full py-6 md:text-center lg:px-16">
    <div className="flex w-full flex-col items-center gap-2 lg:flex-row lg:justify-between lg:gap-0">
     {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
     <NextLink href="/">

@@ -3,7 +3,7 @@ import { SparklesIcon, StarIcon, ArchiveIcon, FolderIcon } from "@heroicons/reac
 
 export function RepoCard(repo) {
  return (
-  <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
+  <div id={repo.name} className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:scale-105 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
    <div className="text-left">
     <NextLink href={repo.url} key={repo.id}>
      <a className="break-all text-left font-poppins font-semibold" target="_blank">
