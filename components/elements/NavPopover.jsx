@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import { social } from "@/config";
 import { Transition, Popover } from "@headlessui/react";
-import { CodeIcon, CollectionIcon, MailOpenIcon, ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/outline";
+import { CodeBracketIcon, RectangleStackIcon, EnvelopeOpenIcon, ChevronRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export default function NavPopover(props) {
  return (
@@ -19,7 +19,7 @@ export default function NavPopover(props) {
          <NextLink href={`https://github.com/${social.github.username}`} key="github">
           <a onClick={() => close()} key="solutions" className="flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
-            <CodeIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
+            <CodeBracketIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
            </div>
            <div className="ml-4">
             <p className="text-sm font-medium text-gray-900 dark:text-white">All my projects</p>
@@ -30,7 +30,7 @@ export default function NavPopover(props) {
          <NextLink href="/blog" key="blog">
           <a onClick={() => close()} key="blog_navbar" className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
-            <CollectionIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
+            <RectangleStackIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
            </div>
            <div className="ml-4">
             <p className="text-sm font-medium text-gray-900 dark:text-white">Developer Blog</p>
@@ -41,7 +41,7 @@ export default function NavPopover(props) {
          <NextLink href="/contact" key="contact_navbar">
           <a onClick={() => close()} key="contact" className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
-            <MailOpenIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
+            <EnvelopeOpenIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
            </div>
            <div className="ml-4">
             <p className="text-sm font-medium text-gray-900 dark:text-white">Contact me</p>
@@ -56,7 +56,7 @@ export default function NavPopover(props) {
            <span className="flex items-center">
             <span className="text-sm font-medium text-gray-900 dark:text-white">Github Profile</span>
             <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
-             <ExternalLinkIcon className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
+             <ArrowTopRightOnSquareIcon className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
             </div>
            </span>
            <span className="block text-sm text-gray-500 dark:text-gray-400">See all of my work</span>

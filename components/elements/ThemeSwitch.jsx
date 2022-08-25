@@ -1,6 +1,6 @@
 import { Listbox, Transition } from "@headlessui/react";
 import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon, DesktopComputerIcon, SelectorIcon } from "@heroicons/react/outline";
+import { SunIcon, MoonIcon, ComputerDesktopIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
 
 export default function ThemeSwitch(props) {
  const { resolvedTheme, setTheme } = useTheme();
@@ -22,13 +22,13 @@ export default function ThemeSwitch(props) {
       )}
      </span>
      <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 opacity-70">
-      <SelectorIcon className="h-5 w-5 duration-200 motion-reduce:transition-none" />
+      <ChevronUpDownIcon className="h-5 w-5 duration-200 motion-reduce:transition-none" />
      </span>
     </Listbox.Button>
     <Transition enter="transition duration-200 ease-out" enterFrom="transform scale-95 opacity-0" enterTo="transform scale-100 opacity-100" leave="transition duration-200 ease-out" leaveFrom="transform scale-100 opacity-100" leaveTo="transform scale-95 opacity-0">
      <Listbox.Options className="absolute z-[100] mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 py-1 text-base shadow-2xl backdrop-blur-[9px] duration-200 firefox:bg-opacity-100 motion-reduce:duration-200 dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-[85%] dark:firefox:bg-opacity-100 sm:text-sm">
       <Listbox.Option key="system" className="relative flex cursor-pointer select-none truncate py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"system"}>
-       <DesktopComputerIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:duration-200 dark:text-gray-200" />
+       <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:duration-200 dark:text-gray-200" />
        System
       </Listbox.Option>
       <Listbox.Option key="dark" className="relative flex cursor-pointer select-none truncate py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"dark"}>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as FutureImage from "next/future/image";
 import { useState } from "react";
-import { PlusIcon } from "@heroicons/react/outline";
+import { PlusIcon } from "@heroicons/react/24/outline";
 // Todo: wait for layout="raw" to be supported by Next.js
 
 export function BlurImage({ image }) {

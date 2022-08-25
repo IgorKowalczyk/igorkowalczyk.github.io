@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarIcon } from "@heroicons/react/solid";
+import { CalendarIcon } from "@heroicons/react/24/solid";
 import { parseISO, format } from "date-fns";
 
 export function ListElement({ title, summary, slug, publishedAt, index }) {
