@@ -6,7 +6,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from "@apollo/client/link/context";
 import { RepoCard } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
-import { UsersIcon, StarIcon } from "@heroicons/react/outline";
+import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "@components/elements/Contact";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 

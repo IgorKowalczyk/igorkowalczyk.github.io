@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { social } from "@/config";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { CogIcon, ExternalLinkIcon } from "@heroicons/react/outline";
+import { Cog8ToothIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), {
  loading: () => <div className="h-[38px] w-32" />,
 });
@@ -12,7 +12,7 @@ export default function Settings(props) {
  return (
   <div {...props}>
    <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "bg-blue-200 dark:bg-white/[15%]" : ""} group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/10 dark:hover:bg-white/[15%]`}>
-    <CogIcon className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:text-gray-200 dark:group-hover:text-white`} />
+    <Cog8ToothIcon className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:text-gray-200 dark:group-hover:text-white`} />
    </button>
    <Transition.Root appear show={isOpen} as={Fragment}>
     <Dialog as="div" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
@@ -39,7 +39,7 @@ export default function Settings(props) {
          </div>
          <div className="mt-4 flex">
           <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github.username}/${social.github.repo}`} className="full group flex items-center rounded-md px-2 py-3 text-sm text-black duration-200 motion-reduce:transition-none dark:text-white">
-           Source code <ExternalLinkIcon className="ml-2 h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
+           Source code <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
           </a>
           <button type="button" className="group mt-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>
            Close{" "}

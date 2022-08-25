@@ -1,7 +1,7 @@
 import { useKBar } from "kbar";
 import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarSearch } from "kbar";
 import { useRouter } from "next/router";
-import { ArrowSmRightIcon, HomeIcon, CollectionIcon, NewspaperIcon, CameraIcon, SearchIcon } from "@heroicons/react/outline";
+import { ArrowRightIcon, HomeIcon, RectangleStackIcon, NewspaperIcon, CameraIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { allBlogs } from "contentlayer/generated";
 
 export function CommandBarInvoker() {
@@ -33,7 +33,7 @@ export function KProvider({ children }) {
    name: "Projects",
    keywords: "projects creations apps repositories",
    section: "Pages",
-   icon: <CollectionIcon />,
+   icon: <RectangleStackIcon />,
   },
   {
    id: "projects-page",
@@ -70,7 +70,7 @@ export function KProvider({ children }) {
       <KBarAnimator className="mx-auto w-[32rem] overflow-hidden rounded-[10px] border-[1px] border-black/[15%] bg-white px-6 text-left shadow-xl transition-all dark:border-white/[15%] dark:bg-[#08152b]">
        <div className="mx-2 mt-2 flex items-center justify-between py-4">
         <span>
-         <SearchIcon className="mr-2 mb-0.5 h-5 w-5 text-gray-700 dark:text-gray-100" />
+         <MagnifyingGlassIcon className="mr-2 mb-0.5 h-5 w-5 text-gray-700 dark:text-gray-100" />
         </span>
         <KBarSearch className="w-full rounded-md border-b border-none border-gray-300 bg-transparent text-gray-700 outline-none dark:text-gray-100" />
         <Kbd>esc</Kbd>
@@ -125,7 +125,7 @@ export function KResults() {
         <>
          <span className="flex items-center opacity-60">
           {item.ancestors.find((ancestor) => ancestor.id === item.parent)?.name}
-          <ArrowSmRightIcon className="mx-2 h-4 w-4 " />{" "}
+          <ArrowRightIcon className="mx-2 h-4 w-4 " />{" "}
          </span>
         </>
        )}

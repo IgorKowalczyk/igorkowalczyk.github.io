@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { SparklesIcon, StarIcon, ArchiveIcon, FolderIcon } from "@heroicons/react/outline";
+import { SparklesIcon, StarIcon, ArchiveBoxIcon, FolderIcon } from "@heroicons/react/24/outline";
 
 export function RepoCard(repo) {
  return (
@@ -14,7 +14,7 @@ export function RepoCard(repo) {
     <span className="inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] py-[0.12em] px-[0.5em] align-middle text-[88%] text-black/[55%] duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:text-white/[50%]">
      {repo.isArchived ? (
       <>
-       <ArchiveIcon className="inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" /> Archived
+       <ArchiveBoxIcon className="inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" /> Archived
       </>
      ) : (
       <>

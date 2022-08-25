@@ -2,7 +2,7 @@ import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
 import { useState } from "react";
 import { nav } from "@/config";
-import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline";
+import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,8 +23,8 @@ export default function MobileNav() {
      isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
     }}
    >
-    <MenuAlt2Icon data-hide={isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
-    <XIcon data-hide={!isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+    <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+    <XMarkIcon data-hide={!isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
    </button>
    {isMounted && (
     <div className={`${isRendered ? "rendered !opacity-100" : ""} absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-[9px] duration-200 motion-reduce:transition-none md:hidden`}>

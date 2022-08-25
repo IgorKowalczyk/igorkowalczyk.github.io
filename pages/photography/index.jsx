@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import { meta } from "@/config";
 import { Container } from "@components/elements/Container";
-import { ChevronRightIcon } from "@heroicons/react/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { BlurPreview } from "@components/elements/BlurImage";
 import { SWR } from "@lib/swr";
 
