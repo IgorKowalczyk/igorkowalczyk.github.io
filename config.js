@@ -130,8 +130,64 @@ export const ads = {
  ca_pub: process.env.NEXT_PUBLIC_CA_PUB,
 };
 
-// Why svg elements instead of img elements? Because we have to change the color of the icons depending on the theme. We do not want to load the icons when we change the theme.
+export const footer = {
+ categories: [
+  {
+   title: "Important Links",
+   links: [
+    {
+     title: "Home",
+     href: "/",
+    },
+    {
+     title: "Projects",
+     href: "/repositories",
+    },
+    {
+     title: "Blog",
+     href: "/blog",
+    },
+    {
+     title: "Photography",
+     href: "/photography",
+    },
+   ],
+  },
+  {
+   title: "Social",
+   links: [
+    {
+     title: "Github",
+     href: "/github",
+    },
+    {
+     title: "Instagram",
+     href: "/instagram",
+    },
 
+    {
+     title: "Discord",
+     href: "/discord",
+    },
+   ],
+  },
+  {
+   title: "Other",
+   links: [
+    {
+     title: "What i use",
+     href: "/uses",
+    },
+    {
+     title: "Contact",
+     href: "/#contact",
+    },
+   ],
+  },
+ ],
+};
+
+// Why svg elements instead of img elements? Because we have to change the color of the icons depending on the theme. We do not want to load the icons when we change the theme.
 export const techs = [
  {
   name: "React",

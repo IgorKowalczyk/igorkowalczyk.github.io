@@ -47,6 +47,11 @@ module.exports = withPlugins(
      permanent: true,
     },
     {
+     source: "/github",
+     destination: "https://github.com/igorkowalczyk",
+     permanent: true,
+    },
+    {
      source: "/arc-sw.js",
      destination: "https://arc.io/arc-sw.js",
      permanent: true,

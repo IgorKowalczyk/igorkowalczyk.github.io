@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Lee Robinson]]></title>
-        <description><![CDATA[Lee Robinson]]></description>
+        <title><![CDATA[Igor Kowalczyk]]></title>
+        <description><![CDATA[Igor Kowalczyk]]></description>
         <link>https://igorkowalczyk.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 21 Aug 2022 16:23:06 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Sep 2022 17:56:02 GMT</lastBuildDate>
         <atom:link href="https://igorkowalczyk.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[How i built my website]]></title>
