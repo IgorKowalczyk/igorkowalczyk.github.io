@@ -36,7 +36,7 @@ export function Footer() {
         <div>
          {category.links.map((link, index) => (
           <NextLink key={index} href={link.href}>
-           <a className="mt-2 block hover:text-gray-600 hover:underline dark:hover:text-gray-300">{link.title}</a>
+           <a className="mt-2 block hover:text-gray-600 hover:underline dark:hover:text-gray-300 duration-100 motion-reduce:transition-none">{link.title}</a>
           </NextLink>
          ))}
         </div>
