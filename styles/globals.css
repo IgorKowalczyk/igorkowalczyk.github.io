@@ -260,3 +260,7 @@ pre {
 #kbar-listbox div {
  @apply pr-2;
 }
+
+.prose a {
+ @apply font-semibold !decoration-current !decoration-1;
+}
