@@ -126,9 +126,9 @@ export const social = {
  },
 };
 
-export const ads = {
+/*export const ads = {
  ca_pub: process.env.NEXT_PUBLIC_CA_PUB,
-};
+};*/
 
 export const footer = {
  categories: [
