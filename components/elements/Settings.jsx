@@ -16,7 +16,7 @@ export default function Settings(props) {
    </button>
    <Transition.Root appear show={isOpen} as={Fragment}>
     <Dialog as="div" unmount="true" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
-     <Transition.Child as={Fragment} enter="ease-out duration-200 motion-reduce:transition-none" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200 motion-reduce:transition-none" leaveFrom="opacity-100" leaveTo="opacity-0">
+     <Transition.Child as={Fragment} enter="ease-out duration-200 motion-reduce:transition-none" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
       <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-[4px] firefox:bg-opacity-50" />
      </Transition.Child>
      <div className="fixed inset-0 overflow-y-auto">
