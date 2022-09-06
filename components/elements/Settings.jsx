@@ -15,7 +15,7 @@ export default function Settings(props) {
     <Cog8ToothIcon className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:text-gray-200 dark:group-hover:text-white`} />
    </button>
    <Transition.Root appear show={isOpen} as={Fragment}>
-    <Dialog as="div" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
+    <Dialog as="div" unmount="true" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
      <Transition.Child as={Fragment} enter="ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
       <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-[4px] firefox:bg-opacity-50" />
      </Transition.Child>
