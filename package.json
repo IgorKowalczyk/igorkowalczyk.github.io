@@ -51,7 +51,7 @@
  "devDependencies": {
   "@igorkowalczyk/is-browser": "^1.0.1",
   "@next/bundle-analyzer": "^12.2.5",
-  "@tailwindcss/aspect-ratio": "^0.4.1",
+  "@tailwindcss/aspect-ratio": "^0.4.2",
   "@tailwindcss/typography": "^0.5.7",
   "ajv": "^8.11.0",
   "autoprefixer": "^10.4.8",
