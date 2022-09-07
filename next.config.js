@@ -77,6 +77,15 @@ const nextConfig = {
     source: "/(.*)",
     headers: securityHeaders,
    },
+   {
+    source: '/*.xml',
+    headers: [
+     {
+      key: "Content-Type",
+      value: "application/xml"
+     }
+    ],
+   },
   ];
  },
  webpack: (config, { isServer, dev }) => {
