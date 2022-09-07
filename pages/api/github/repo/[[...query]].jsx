@@ -7,8 +7,8 @@ import { social } from "@/config";
 
 const info = async (req, res) => {
  const { query } = req.query;
- const type = (query[0].toString() || "public").toLowerCase();
- const count = (query[1].toString() || "10").toLowerCase();
+ const type = query[0].toString().toLowerCase();
+ const count = query[1].toString().toLowerCase();
  if (type !== "private" && type !== "public") {
   return res.status(400).json({
    error: "Invalid type",
