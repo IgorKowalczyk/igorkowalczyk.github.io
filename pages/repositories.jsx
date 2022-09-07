@@ -7,7 +7,7 @@ const Squares = dynamic(() => import("@components/decorations/Squares"));
 const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
 
 export default function gitub_repos({ props }) {
- const { data: _repos } = SWR("/api/git/repo/public/50");
+ const { data: _repos } = SWR("/api/github/repo/public/50");
  const repos = _repos ? _repos : null;
  return (
   <Container title={`${meta.title} - Github Repositories`}>
