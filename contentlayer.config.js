@@ -5,6 +5,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
+import GitHubSlugger from "github-slugger";
 const headers_regex = /(#{1,6})\s+(.+)/g;
 
 const computedFields = {
@@ -30,7 +31,24 @@ const Blog = defineDocumentType(() => ({
   summary: { type: "string", required: true },
   image: { type: "string", required: false },
  },
- computedFields,
+ computedFields: {
+  ...computedFields,
+  headings: {
+   type: "list",
+   of: { type: "string" },
+   resolve: (doc) => {
+    const slugger = new GitHubSlugger();
+    const headings = Array.from(doc.body.raw.matchAll(headers_regex))
+     .map((value) => ({
+      size: value[1].length,
+      content: value[2],
+      slug: slugger.slug(value[2]),
+     }))
+     .filter(({ size }) => size <= 3);
+    return headings;
+   },
+  },
+ },
 }));
 
 const OtherPage = defineDocumentType(() => ({

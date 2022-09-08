@@ -78,12 +78,12 @@ const nextConfig = {
     headers: securityHeaders,
    },
    {
-    source: '/*.xml',
+    source: "/*.xml",
     headers: [
      {
       key: "Content-Type",
-      value: "application/xml"
-     }
+      value: "application/xml",
+     },
     ],
    },
   ];
