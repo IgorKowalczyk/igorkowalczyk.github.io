@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://igorkowalczyk.dev</loc>
+    <loc>https://igorkowalczyk.dev/</loc>
   </url>
   <url>
     <loc>https://igorkowalczyk.dev/repositories</loc>
+  </url>
+  <url>
+    <loc>https://igorkowalczyk.dev/uses</loc>
+  </url>
+  <url>
+    <loc>https://igorkowalczyk.dev/blog</loc>
+  </url>
+  <url>
+    <loc>https://igorkowalczyk.dev/photography</loc>
   </url>
 </urlset>
