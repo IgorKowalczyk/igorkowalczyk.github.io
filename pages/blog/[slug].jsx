@@ -36,7 +36,7 @@ export default function Post({ post }) {
       <Component components={{ ...MDXComponents }} />
      </div>
      <div className="sticky top-24 !col-start-3 mt-8 ml-3 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
-      <p class="mb-0 text-sm uppercase">On this page</p>
+      <p className="mb-0 text-sm uppercase">On this page</p>
       {post.headings.map((props) => (
        <TocItem key={props.slug} {...props} />
       ))}
