@@ -3,7 +3,6 @@ import { meta as head_meta, feautures, social } from "@/config";
 import { motion, useReducedMotion } from "framer-motion";
 import { Nav } from "@components/elements/Nav";
 import { Footer } from "@components/elements/Footer";
-import { CommandBarInvoker } from "@components/elements/CommandBar";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
 
@@ -60,7 +59,6 @@ export function Container(props) {
    <Nav />
    <main className="mt-24 flex min-h-screen flex-col antialiased">
     <Twemoji options={{ className: "twemoji" }}>{feautures.smoothTransition ? <motion.div {...variants}>{children}</motion.div> : children}</Twemoji>
-    <CommandBarInvoker />
    </main>
    <Footer />
   </>

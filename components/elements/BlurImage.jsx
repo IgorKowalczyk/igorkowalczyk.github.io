@@ -18,5 +18,5 @@ export function BlurImage({ image }) {
 
 export function BlurPreview({ image }) {
  const [isLoading, setLoading] = useState(true);
- return <FutureImage src={image.src} alt={image.src} className={`${isLoading ? "scale-110 blur-2xl grayscale" : "scale-100 blur-0 grayscale-0"}z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] bg-zinc-200 duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-zinc-200/[15%] dark:group-hover:border-[#474f63]`} onLoadingComplete={() => setLoading(false)} layout="raw" height="40" width="40" />;
+ return <FutureImage src={image.src} alt={image.src} className={`${isLoading ? "scale-110 blur-2xl grayscale" : "scale-100 blur-0 grayscale-0"} z-[5] h-10 w-10 rounded-full border-2 border-[#e6e6e9] bg-zinc-200 duration-200 group-hover:border-[#f6f6f7] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-zinc-200/[15%] dark:group-hover:border-[#474f63]`} onLoadingComplete={() => setLoading(false)} layout="raw" height="40" width="40" />;
 }

@@ -3,7 +3,6 @@ import { ThemeProvider } from "next-themes";
 import { UseAnalytics } from "@lib/analytics";
 import { Router } from "next/router";
 import { AnimatePresence, MotionConfig } from "framer-motion";
-import { KProvider } from "@components/elements/CommandBar";
 import "@styles/globals.css";
 import "@styles/progress.css";
 //import "@styles/tippy.css";
@@ -18,7 +17,6 @@ export default function App({ Component, pageProps, router }) {
 
  return (
   <>
-   <KProvider>
     <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
      <MotionConfig reducedMotion="user">
       <AnimatePresence mode="wait">
@@ -26,7 +24,6 @@ export default function App({ Component, pageProps, router }) {
       </AnimatePresence>
      </MotionConfig>
     </ThemeProvider>
-   </KProvider>
   </>
  );
 }

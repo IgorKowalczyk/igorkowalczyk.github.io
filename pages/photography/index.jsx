@@ -35,10 +35,7 @@ export default function Photography({ props }) {
            {category.preview && category.preview.images.length > 0 && (
             <div className="relative flex -space-x-4 pt-2 group-hover:-space-x-3">
              {category.preview.images.map((image, index) => (
-              <>
-               {/* <BlurPreview key={`${index}-image-prev`} image={image} /> */}
-               <div key={`${index}-image-prev`} />
-              </>
+               <BlurPreview key={`${index}-image-prev`} image={image} /> 
              ))}
              {category.count - category.preview.images.length > 0 && <p className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-poppins text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+{category.count - category.preview.images.length}</p>}
             </div>

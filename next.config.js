@@ -19,18 +19,30 @@ const nextConfig = {
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
- trailingSlash: true,
+ trailingSlash: false,
  compress: true,
- swcMinify: false,
+ swcMinify: true,
  images: {
   domains: [
    "github.githubassets.com", // GitHub assets
   ],
  },
- experimental: {
-  images: {
-   allowFutureImage: true,
-  },
+ async headers() {
+  return [
+   {
+    source: "/(.*)",
+    headers: securityHeaders,
+   },
+   {
+    source: "/*.xml",
+    headers: [
+     {
+      key: "Content-Type",
+      value: "application/xml",
+     },
+    ],
+   },
+  ];
  },
  async redirects() {
   return [
@@ -71,23 +83,6 @@ const nextConfig = {
    },
   ];
  },
- async headers() {
-  return [
-   {
-    source: "/(.*)",
-    headers: securityHeaders,
-   },
-   {
-    source: "/*.xml",
-    headers: [
-     {
-      key: "Content-Type",
-      value: "application/xml",
-     },
-    ],
-   },
-  ];
- },
  webpack: (config, { isServer, dev }) => {
   if (!dev && !isServer) {
    config.plugins.push(
@@ -104,8 +99,9 @@ const nextConfig = {
  },
 };
 
+
 module.exports = () => {
- const plugins = [withPWA, withBundleAnalyzer, withContentlayer];
+ const plugins = [withPWA, withContentlayer, withBundleAnalyzer];
  const config = plugins.reduce((acc, next) => next(acc), {
   ...nextConfig,
  });
