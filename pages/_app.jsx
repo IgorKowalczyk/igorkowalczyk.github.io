@@ -17,13 +17,13 @@ export default function App({ Component, pageProps, router }) {
 
  return (
   <>
-    <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
-     <MotionConfig reducedMotion="user">
-      <AnimatePresence mode="wait">
-       <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
-     </MotionConfig>
-    </ThemeProvider>
+   <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
+    <MotionConfig reducedMotion="user">
+     <AnimatePresence mode="wait">
+      <Component {...pageProps} key={router.route} />
+     </AnimatePresence>
+    </MotionConfig>
+   </ThemeProvider>
   </>
  );
 }
