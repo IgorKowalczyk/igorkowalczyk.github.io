@@ -35,7 +35,7 @@ body {
 
 html,
 body {
- @apply !mr-0 !overflow-auto !pr-0;
+ @apply !mr-0 !pr-0;
 }
 
 * {
