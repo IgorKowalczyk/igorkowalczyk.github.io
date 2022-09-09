@@ -23,7 +23,7 @@ export default function Document({ props }) {
     {process.env.NEXT_PUBLIC_ARC_TOKEN && process.env.NODE_ENV === "production" && <Arc />}
     {/*process.env.NEXT_PUBLIC_GOOGLE_ADSENSE && process.env.NODE_ENV === "production" && <Adsense />*/}
    </Head>
-   <body className="overflow-y-hidden bg-main-white dark:bg-main-dark">
+   <body className="bg-main-white dark:bg-main-dark">
     <Main {...props} />
     <NextScript />
    </body>
