@@ -8,6 +8,7 @@ import { RepoCard } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "@components/elements/Contact";
+import { SWR } from "@lib/swr";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 
 export default function Main({ repositories, user }) {
