@@ -19,7 +19,7 @@ export function Container(props) {
   initial: {
    scale: reduceMotion ? 1 : 0.96,
    y: reduceMotion ? 0 : 15,
-   opacity: 0,
+   opacity: 1,
   },
   animate: {
    y: 0,
@@ -28,7 +28,7 @@ export function Container(props) {
   },
   exit: {
    y: reduceMotion ? 0 : 15,
-   opacity: 0,
+   opacity: 1,
    transition: {
     duration: reduceMotion ? 0 : 0.2,
    },
