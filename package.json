@@ -57,7 +57,7 @@
   "@tailwindcss/aspect-ratio": "^0.4.2",
   "@tailwindcss/typography": "^0.5.7",
   "ajv": "^8.11.0",
-  "autoprefixer": "^10.4.8",
+  "autoprefixer": "^10.4.9",
   "compression-webpack-plugin": "^10.0.0",
   "eslint": "8.23.1",
   "eslint-config-next": "12.3.0",
