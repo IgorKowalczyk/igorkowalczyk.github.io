@@ -25,8 +25,8 @@ export default function ThemeSwitch(props) {
       <ChevronUpDownIcon className="h-5 w-5 duration-200 motion-reduce:transition-none" />
      </span>
     </Listbox.Button>
-    <Transition enter="transition duration-200 motion-reduce:transition-none ease-out" enterFrom="transform scale-95 opacity-0" enterTo="transform scale-100 opacity-100" leave="transition duration-200 motion-reduce:transition-none ease-out" leaveFrom="transform scale-100 opacity-100" leaveTo="transform scale-95 opacity-0">
-     <Listbox.Options className="absolute z-[100] mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 py-1 text-base shadow-2xl backdrop-blur-[9px] duration-200 firefox:bg-opacity-100 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-[85%] dark:firefox:bg-opacity-100 sm:text-sm">
+    <Transition enter="transition duration-200 motion-reduce:duration-[1ms] ease-out" enterFrom="transform scale-95 opacity-0" enterTo="transform scale-100 opacity-100" leave="transition duration-200 motion-reduce:duration-[1ms] ease-out" leaveFrom="transform scale-100 opacity-100" leaveTo="transform scale-95 opacity-0">
+     <Listbox.Options className="absolute z-[100] mt-1 max-h-60 w-full overflow-auto rounded-md border-[1px] border-black/[10%] bg-white bg-opacity-70 py-1 text-base shadow-2xl backdrop-blur-[9px] duration-200 firefox:bg-opacity-100 motion-reduce:duration-[1ms] dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-[85%] dark:firefox:bg-opacity-100 sm:text-sm">
       <Listbox.Option key="system" className="relative flex cursor-pointer select-none truncate py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"system"}>
        <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:transition-none dark:text-gray-200" />
        System
