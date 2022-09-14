@@ -14,99 +14,99 @@ const Dots = dynamic(() => import("@components/decorations/Dots"));
 export default function Main({ repositories, user }) {
  return (
   <Container title={`${meta.title} - Full-stack developer`}>
-    <div className="bg-cover bg-fixed bg-right">
-   <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] duration-200 will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
-   <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
-    <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
-     <div className="md:col-span-3">
-      <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
-      <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
-      <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
-      <div className="mt-4 flex justify-center md:block">
-       <NextLink href="/#about">
-        <a className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold" href="#about">
-         More about me
-         <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-          <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
-         </svg>
-        </a>
-       </NextLink>
+   <div className="bg-cover bg-fixed bg-right">
+    <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] duration-200 will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
+    <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
+     <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
+      <div className="md:col-span-3">
+       <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
+       <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
+       <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
+       <div className="mt-4 flex justify-center md:block">
+        <NextLink href="/#about">
+         <a className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold" href="#about">
+          More about me
+          <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
+           <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+           <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
+          </svg>
+         </a>
+        </NextLink>
+       </div>
       </div>
-     </div>
-     <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-      <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 backdrop-blur-md dark:shadow-codeDark">
-       <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
-        <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
-        <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
-        <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
-        <div className="absolute top-0 bottom-0 flex w-full items-center justify-center">
-         <span className="opacity-50" aria-hidden="true">
-          Console
+      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
+       <div className="border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
+        <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
+         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
+         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
+         <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
+         <div className="absolute top-0 bottom-0 flex w-full items-center justify-center">
+          <span className="opacity-50" aria-hidden="true">
+           Console
+          </span>
+         </div>
+        </div>
+        <div className="p-4">
+         <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+          →
+         </span>{" "}
+         <span className="font-semibold text-[#66e777]" aria-hidden="true">
+          ~/{header.code.default.user}
+         </span>{" "}
+         <span className="italic">
+          <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+           $
+          </span>{" "}
+          <span aria-label={`list github account ${social.github.username}`}>
+           list github --user=
+           <NextLink href={`https://github.com/${social.github.username}`}>
+            <a target="_blank" aria-label={`See ${social.github.user} github`}>
+             "{social.github.username}"
+            </a>
+           </NextLink>
+          </span>
+         </span>
+         <br />
+         <span className="leading-6">
+          <div>
+           <span aria-hidden="true"> + </span>
+           <span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})
+          </div>
+          <div>
+           <span aria-hidden="true"> - </span>
+           <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
+          </div>
+         </span>
+         {header.code.lines.map((line, index) => (
+          <div key={index}>
+           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+            →
+           </span>{" "}
+           <span className="font-semibold text-[#66e777]" aria-hidden="true">
+            ~/{line.user}
+           </span>{" "}
+           <span className="italic">
+            <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
+           </span>
+           <div className="leading-6">{line.response}</div>
+          </div>
+         ))}
+         <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+          →
+         </span>{" "}
+         <span className="font-semibold text-[#66e777]" aria-hidden="true">
+          ~/{header.code.default.user}
+         </span>{" "}
+         <span className="italic">
+          <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+           $
+          </span>
          </span>
         </div>
-       </div>
-       <div className="p-4">
-        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-         →
-        </span>{" "}
-        <span className="font-semibold text-[#66e777]" aria-hidden="true">
-         ~/{header.code.default.user}
-        </span>{" "}
-        <span className="italic">
-         <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-          $
-         </span>{" "}
-         <span aria-label={`list github account ${social.github.username}`}>
-          list github --user=
-          <NextLink href={`https://github.com/${social.github.username}`}>
-           <a target="_blank" aria-label={`See ${social.github.user} github`}>
-            "{social.github.username}"
-           </a>
-          </NextLink>
-         </span>
-        </span>
-        <br />
-        <span className="leading-6">
-         <div>
-          <span aria-hidden="true"> + </span>
-          <span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})
-         </div>
-         <div>
-          <span aria-hidden="true"> - </span>
-          <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
-         </div>
-        </span>
-        {header.code.lines.map((line, index) => (
-         <div key={index}>
-          <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-           →
-          </span>{" "}
-          <span className="font-semibold text-[#66e777]" aria-hidden="true">
-           ~/{line.user}
-          </span>{" "}
-          <span className="italic">
-           <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
-          </span>
-          <div className="leading-6">{line.response}</div>
-         </div>
-        ))}
-        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-         →
-        </span>{" "}
-        <span className="font-semibold text-[#66e777]" aria-hidden="true">
-         ~/{header.code.default.user}
-        </span>{" "}
-        <span className="italic">
-         <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-          $
-         </span>
-        </span>
        </div>
       </div>
      </div>
     </div>
-   </div>
    </div>
 
    <section id={"additional-info"}>
