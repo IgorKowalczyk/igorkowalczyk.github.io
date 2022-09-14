@@ -2,5 +2,42 @@
  "github": {
   "silent": true
  },
+ "redirects": [
+  {
+   "source": "/discord",
+   "destination": "https://discord.gg/uxtSMtd2xZ",
+   "permanent": true
+  },
+  {
+   "source": "/twitter",
+   "destination": "https://twitter.com/majonezexe",
+   "permanent": true
+  },
+  {
+   "source": "/instagram",
+   "destination": "https://www.instagram.com/majonezexe/",
+   "permanent": true
+  },
+  {
+   "source": "/github",
+   "destination": "https://github.com/igorkowalczyk",
+   "permanent": true
+  },
+  {
+   "source": "/arc-sw.js",
+   "destination": "https://arc.io/arc-sw.js",
+   "permanent": true
+  },
+  {
+   "source": "/r/:path*",
+   "destination": "/:path*",
+   "permanent": true
+  },
+  {
+   "source": "/discord-server",
+   "destination": "/discord",
+   "permanent": true
+  }
+ ],
  "cleanUrls": true
 }
