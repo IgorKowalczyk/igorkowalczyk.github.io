@@ -11,18 +11,18 @@ export default function ThemeSwitch(props) {
      <span className="flex truncate py-2 pl-2 pr-10">
       {resolvedTheme === "dark" ? (
        <>
-        <MoonIcon className="mr-1 h-5 w-5 duration-200 motion-reduce:transition-none" />
+        <MoonIcon className="mr-1 h-5 w-5" />
         <span>Dark</span>
        </>
       ) : (
        <>
-        <SunIcon className="mr-1 h-5 w-5 duration-200 motion-reduce:transition-none" />
+        <SunIcon className="mr-1 h-5 w-5" />
         <span>Light</span>
        </>
       )}
      </span>
-     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 opacity-70">
-      <ChevronUpDownIcon className="h-5 w-5 duration-200 motion-reduce:transition-none" />
+     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 opacity-70 duration-200 motion-reduce:transition-none">
+      <ChevronUpDownIcon className="h-5 w-5" />
      </span>
     </Listbox.Button>
     <Transition enter="transition duration-200 motion-reduce:duration-[1ms] ease-out" enterFrom="transform scale-95 opacity-0" enterTo="transform scale-100 opacity-100" leave="transition duration-200 motion-reduce:duration-[1ms] ease-out" leaveFrom="transform scale-100 opacity-100" leaveTo="transform scale-95 opacity-0">
@@ -31,12 +31,12 @@ export default function ThemeSwitch(props) {
        <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:transition-none dark:text-gray-200" />
        System
       </Listbox.Option>
-      <Listbox.Option key="dark" className="relative flex cursor-pointer select-none truncate py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"dark"}>
-       <MoonIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:transition-none dark:text-gray-200" />
+      <Listbox.Option key="dark" className={`${resolvedTheme === "dark" ? "pointer-events-none cursor-not-allowed opacity-50" : "cursor-pointer hover:bg-black/10 dark:hover:bg-white/10"} relative flex select-none truncate py-2 text-left text-black duration-200 motion-reduce:transition-none dark:text-white`} value={"dark"}>
+       <MoonIcon className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200" />
        Dark
       </Listbox.Option>
-      <Listbox.Option key="light" className="relative flex cursor-pointer select-none truncate  py-2 text-left text-black duration-200 hover:bg-black/10 motion-reduce:transition-none dark:text-white dark:hover:bg-white/10" value={"light"}>
-       <SunIcon className="mx-2 h-5 w-5 text-gray-800 duration-200  motion-reduce:transition-none dark:text-gray-200" />
+      <Listbox.Option key="light" className={`${resolvedTheme === "light" ? "pointer-events-none cursor-not-allowed opacity-50" : "cursor-pointer hover:bg-black/10 dark:hover:bg-white/10"} relative flex select-none truncate py-2 text-left text-black duration-200 motion-reduce:transition-none dark:text-white`} value={"light"}>
+       <SunIcon className="mx-2 h-5 w-5 text-gray-800 dark:text-gray-200" />
        Light
       </Listbox.Option>
      </Listbox.Options>

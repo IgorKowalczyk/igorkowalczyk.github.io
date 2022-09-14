@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Cog8ToothIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), {
- loading: () => <div className="h-[38px] w-32" />,
+ loading: () => <div className="h-[36px] w-[126px] animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-200/[15%]" />,
 });
 
 export default function Settings(props) {
