@@ -1,7 +1,5 @@
 {
- "github": {
-  "silent": true
- },
+ "framework": "nextjs",
  "redirects": [
   {
    "source": "/discord",
@@ -39,5 +37,8 @@
    "permanent": true
   }
  ],
+ "github": {
+  "silent": true
+ },
  "cleanUrls": true
 }
