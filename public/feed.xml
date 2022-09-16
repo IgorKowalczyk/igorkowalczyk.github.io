@@ -4,10 +4,10 @@
         <description><![CDATA[Igor Kowalczyk]]></description>
         <link>https://igorkowalczyk.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 09 Sep 2022 19:24:56 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Sep 2022 19:10:04 GMT</lastBuildDate>
         <atom:link href="https://igorkowalczyk.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[How i built my website]]></title>
+            <title><![CDATA[How I built my website]]></title>
             <description><![CDATA[A bit about how I built this site along with the blog and some new things and technologies I learned while rebuilding my portfolio.]]></description>
             <link>https://igorkowalczyk.dev/blog/how-i-built-my-website</link>
             <guid isPermaLink="true">https://igorkowalczyk.dev/blog/how-i-built-my-website</guid>
