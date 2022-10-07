@@ -154,6 +154,17 @@ export default function Main({ repositories, user }) {
    <section id={"about"} className="scroll-mt-20 px-8">
     <div className="relative mx-auto mb-7 text-center">
      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
+     <div className="prose m-auto text-center dark:prose-dark">
+      <span>I have been coding for more than 5 years. I started my journey at the end of 2018.</span>
+      <span>At first, I learned HTML, CSS and base Javascript to build websites</span>
+      <span>
+       {" "}
+       My first project was a simple music player made with Javascript (~January 2019).
+       <br />
+      </span>
+      <span> In March 2020, I started learning Node.js & Express.js, I also created my first major project - Majo.exe.</span>
+      <span> In April 2022, I started learning React.js, Next.js and Tailwind.css</span>
+     </div>
     </div>
    </section>
 
