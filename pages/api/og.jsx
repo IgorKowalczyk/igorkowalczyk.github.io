@@ -1,12 +1,14 @@
 import { ImageResponse } from "@vercel/og";
 import { parseISO, format } from "date-fns";
 
+const fontPoppinsMedium = fetch(new URL("../../public/fonts/medium.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+
 export default async function handler(req) {
  const { searchParams } = req.nextUrl;
  const title = searchParams.get("title");
  const author = searchParams.get("author");
  const date = searchParams.get("date");
-
+ const fontMedium = await fontPoppinsMedium;
 
  return new ImageResponse(
   (
@@ -44,7 +46,7 @@ export default async function handler(req) {
 
     <div tw="flex absolute flex-col items-center justify-center font-bold text-4xl text-white leading-[1.8]">
      <h1 tw="m-0 p-0 text-8xl font-semibold mb-9">
-      <span>{ title || "Title not found" }</span>
+      <span>{title || "Title not found"}</span>
       <span
        style={{
         backgroundImage: "linear-gradient(to right, #a2facf, #64acff)",
@@ -58,15 +60,24 @@ export default async function handler(req) {
      </h1>
      <div tw="flex items-center">
       <img src="https://igorkowalczyk.dev/assets/avatar.png" tw="h-[80px] w-[80px] rounded-full" />
-      <span tw="ml-5 text-5xl font-medium">By { author  || "John Doe"}</span>
+      <span tw="ml-5 text-5xl font-medium">By {author || "John Doe"}</span>
      </div>
-     <span tw="text-white italic opacity-50 text-3xl font-normal mt-2">{ format(parseISO(date), "MMMM dd, yyyy") || "January 01, 1970"}</span>
+     <span tw="text-white italic opacity-50 text-3xl font-normal mt-2">{ date ? format(parseISO(date), "MMMM dd, yyyy") : "January 01, 1970"}</span>
     </div>
    </div>
   ),
   {
    width: 1600,
    height: 800,
+   fonts: [
+    {
+     name: "Poppins",
+     data: fontMedium,
+     style: "normal",
+     weight: 700,
+   },
+   ],
+
   }
  );
 }
