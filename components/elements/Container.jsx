@@ -46,10 +46,10 @@ export function Container(props) {
     <meta property="og:site_name" content={meta.author} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:title" content={meta.title} />
-    <meta property="og:image" content={social.image} />
+    <meta property="og:image" content={meta.image || social.image} />
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
-    <meta name="twitter:image" content={social.image} />
+    <meta name="twitter:image" content={meta.image || social.image} />
     <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
     <meta name="theme-color" content={meta.theme_color} />
     <meta name="msapplication-TileColor" content={meta.theme_color} />

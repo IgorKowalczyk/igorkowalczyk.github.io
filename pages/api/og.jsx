@@ -1,32 +1,17 @@
 import { ImageResponse } from "@vercel/og";
+import { parseISO, format } from "date-fns";
 
-const font = fetch(new URL("../../fonts/Poppins-Medium.tff", import.meta.url)).then((res) => res.arrayBuffer());
+export default async function handler(req) {
+ const { searchParams } = req.nextUrl;
+ const title = searchParams.get("title");
+ const author = searchParams.get("author");
+ const date = searchParams.get("date");
 
-export default async function handler() {
- const fontData = await font;
+
  return new ImageResponse(
   (
-   <div
-    style={{
-     height: "100%",
-     width: "100%",
-     display: "flex",
-     textAlign: "center",
-     position: "relative",
-     alignItems: "center",
-     justifyContent: "center",
-     flexDirection: "column",
-     flexWrap: "nowrap",
-     fontFamily: "Poppins",
-     backgroundColor: "#08152b",
-    }}
-   >
-    <div
-     style={{
-      display: "flex",
-      zIndex: "-2",
-     }}
-    >
+   <div tw="h-full w-full flex text-center relative items-center justify-center flex-col bg-[#08152b]">
+    <div tw="flex">
      <svg width="1600" height="934" viewBox="0 0 1600 934">
       <g opacity="0.19" filter="url(#a)">
        <path d="M978 405C978 503.307 898.307 583 800 583C701.693 583 622 503.307 622 405C622 306.693 701.693 227 800 227C898.307 227 978 306.693 978 405Z" fill="#0086F5" fill-opacity="0.18" />
@@ -57,28 +42,9 @@ export default async function handler() {
      </svg>
     </div>
 
-    <div
-     style={{
-      display: "flex",
-      position: "absolute",
-      fontSize: 50,
-      fontStyle: "normal",
-      flexDirection: "column",
-      alignItems: "center",
-      color: "white",
-      lineHeight: 1.8,
-      whiteSpace: "pre-wrap",
-     }}
-    >
-     <h1
-      style={{
-       margin: 0,
-       padding: 0,
-       fontSize: 100,
-       fontWeight: 700,
-      }}
-     >
-      <span>How I bult my website</span>
+    <div tw="flex absolute flex-col items-center justify-center font-bold text-4xl text-white leading-[1.8]">
+     <h1 tw="m-0 p-0 text-8xl font-semibold mb-9">
+      <span>{ title || "Title not found" }</span>
       <span
        style={{
         backgroundImage: "linear-gradient(to right, #a2facf, #64acff)",
@@ -90,50 +56,17 @@ export default async function handler() {
        .
       </span>
      </h1>
-     <div
-      style={{
-       display: "flex",
-      }}
-     >
-      <img
-       src="https://igorkowalczyk.dev/assets/avatar.png"
-       style={{
-        width: "80px",
-        heigth: "80px",
-        borderRadius: 100,
-       }}
-      />
-      <b
-       style={{
-        marginLeft: "20px",
-       }}
-      >
-       By Igor Kowalczyk
-      </b>
+     <div tw="flex items-center">
+      <img src="https://igorkowalczyk.dev/assets/avatar.png" tw="h-[80px] w-[80px] rounded-full" />
+      <span tw="ml-5 text-5xl font-medium">By { author  || "John Doe"}</span>
      </div>
-     <span
-      style={{
-       fontSize: 30,
-       color: "white",
-       fontStyle: "italic",
-       opacity: 0.5,
-      }}
-     >
-      August 12, 2022
-     </span>
+     <span tw="text-white italic opacity-50 text-3xl font-normal mt-2">{ format(parseISO(date), "MMMM dd, yyyy") || "January 01, 1970"}</span>
     </div>
    </div>
   ),
   {
    width: 1600,
    height: 800,
-   fonts: [
-    {
-     file: fontData,
-     family: "Poppins",
-     weight: 700,
-    },
-   ],
   }
  );
 }

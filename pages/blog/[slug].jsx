@@ -9,6 +9,7 @@ import { TocItem } from "@components/blog/Toc";
 
 export default function Post({ post }) {
  const Component = useMDXComponent(post.body.code);
+ console.log(`${meta.url}${post.image}`)
  return (
   <Container title={`${meta.title} - ${post.title} `} description={post.summary} image={`${meta.url}${post.image}`} date={new Date(post.publishedAt).toISOString()} type="article">
    <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
