@@ -27,8 +27,8 @@
 5. In `.env` file set this values:
    - `GITHUB_ACCESS_TOKEN` - Your GitHub access token with public repositories permission
 6. In `.env` file set this **optional** values:
-   - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io](https://arc.io) website token
-   - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics](https://analytics.google.com) website ID
+   - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID
+   - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io CDN](https://arc.io) website token
 7. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
    > If you want to build and host the project you can use `npm run deploy`
 

@@ -10,7 +10,7 @@ export const meta = {
 };
 
 export const feautures = {
- smoothTransition: true,
+ smoothTransition: true, // Smooth transition between pages
 };
 
 export const header = {
