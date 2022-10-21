@@ -30,7 +30,7 @@ export default function Settings(props) {
           <p className="text-sm text-gray-500 dark:text-slate-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/20 dark:divide-white/20">
-          <div className="flex w-full cursor-auto select-text items-center py-3 text-sm text-black dark:text-white">
+          <div className="flex w-full cursor-auto select-none items-center py-3 text-sm text-black dark:text-white">
            Theme
            <div className="ml-auto w-32">
             <ThemeSwitch />
