@@ -49,15 +49,16 @@ export default async function handler(req) {
      }}
     >
 
-     <span style={{
+     <p style={{
       fontWeight: 900,
       fontSize: 32,
       backgroundColor: "rgba(255, 255, 255, 0.1)",
       borderRadius: "100px",
-      padding: "0px 20px 0px 20px",
+      padding: "0 20px 0 20px",
       marginBottom: 30,
+      whiteSpace: "pre-wrap",
       lineHeight: 2,
-    }}>Development:</span>
+    }}>Development:</p>
 
      <h1
       style={{
