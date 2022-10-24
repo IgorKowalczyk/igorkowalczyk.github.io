@@ -48,20 +48,22 @@ export default async function handler(req) {
       whiteSpace: "pre-wrap",
      }}
     >
-    <p style={{
-      paddingBottom: 12,
-      margin: 0,
-      textTransform: "uppercase",
+
+     <span style={{
       fontWeight: 900,
-      fontSize: 32
-    }}>
-     <span>Development:</span>
-    </p>
+      fontSize: 32,
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      borderRadius: "100px",
+      padding: "0px 20px 0px 20px",
+      marginBottom: 30,
+    }}>Development:</span>
+
      <h1
       style={{
        margin: 0,
        padding: 0,
        fontSize: 100,
+       fontWeight: 900,
        lineHeight: 1,
        letterSpacing: 0.2,
       }}
@@ -85,6 +87,9 @@ export default async function handler(req) {
        display: "flex",
        alignItems: "center",
        paddingTop: 15,
+       marginBottom: 15,
+       fontSize: 40,
+               fontWeight: 700,
       }}
      >
       <img
@@ -95,26 +100,32 @@ export default async function handler(req) {
         borderRadius: 100,
        }}
       />
-      <b
+      <p
        style={{
-        marginLeft: "20px",
+        margin: "15px 0px 15px 20px",
+        fontFamily: "Poppins",
+        padding: 0,
+        lineHeight: 1,
        }}
       >
        By {author || "John Doe"}
-      </b>
+      </p>
      </div>
      <span
       style={{
        fontSize: 30,
        color: "white",
-       fontStyle: "italic",
+
        opacity: 0.5,
+       fontWeight: 300,
       }}
      >
       {date ? format(parseISO(date), "MMMM dd, yyyy") : "January 01, 1970"}
      </span>
     </div>
    </div>
+
+
   ),
   {
    width: 1600,
