@@ -56,6 +56,7 @@ export default async function handler(req) {
       borderRadius: "100px",
       padding: "0px 20px 0px 20px",
       marginBottom: 30,
+      lineHeight: 2,
     }}>Development:</span>
 
      <h1
