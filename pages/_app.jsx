@@ -1,6 +1,7 @@
 import nProgress from "nprogress";
 import { ThemeProvider } from "next-themes";
 import { UseAnalytics } from "@lib/analytics";
+import { Analytics } from '@vercel/analytics/react';
 import { Router } from "next/router";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import "@styles/globals.css";
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps, router }) {
      </AnimatePresence>
     </MotionConfig>
    </ThemeProvider>
+   <Analytics />
   </>
  );
 }

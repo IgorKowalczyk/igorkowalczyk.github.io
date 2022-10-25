@@ -20,6 +20,7 @@
   "@headlessui/tailwindcss": "^0.1.1",
   "@heroicons/react": "^2.0.12",
   "@tippyjs/react": "^4.2.6",
+  "@vercel/analytics": "^0.1.1",
   "@vercel/og": "^0.0.20",
   "contentlayer": "^0.2.8",
   "date-fns": "^2.29.3",
