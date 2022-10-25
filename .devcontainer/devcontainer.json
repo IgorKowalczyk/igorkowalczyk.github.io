@@ -1,7 +1,23 @@
 {
- "features": {
-  "ghcr.io/devcontainers/features/node:1": {
-   "version": "latest"
+ "name": "Node.js",
+ "build": {
+  "dockerfile": "Dockerfile",
+  "args": {
+   "VARIANT": "16",
+   "USER": "node",
+   "GROUP": "node"
   }
- }
+ },
+ "settings": {
+  "search.exclude": {
+   "**/.yarn": true,
+   "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "editor.codeActionsOnSave": {
+   "source.eslint.fixAll": true
+  }
+ },
+ "remoteUser": "node",
+ "forwardPorts": [3000, 3001]
 }

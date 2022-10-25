@@ -128,7 +128,6 @@ export default async function handler(req) {
     </div>
    </div>
   ),
-
   {
    width: 1600,
    height: 800,
