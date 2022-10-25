@@ -9,6 +9,7 @@ export const meta = {
  type: "website",
 };
 
+// Work In Progress
 export const feautures = {
  smoothTransition: true, // Smooth transition between pages
 };
@@ -70,6 +71,7 @@ export const nav = {
  ],
 };
 
+// Work in progress
 export const contact = {
  links: [
   {
