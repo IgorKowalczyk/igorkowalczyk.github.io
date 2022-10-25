@@ -13,7 +13,7 @@ export default async function handler(req) {
 
  return new ImageResponse(
   (
-<div
+   <div
     style={{
      height: "100%",
      width: "100%",
@@ -33,9 +33,7 @@ export default async function handler(req) {
       display: "flex",
       zIndex: "-2",
      }}
-    >
-    
-    </div>
+    ></div>
     <div
      style={{
       display: "flex",
@@ -48,17 +46,20 @@ export default async function handler(req) {
       whiteSpace: "pre-wrap",
      }}
     >
-
-     <p style={{
-      fontWeight: 900,
-      fontSize: 32,
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      borderRadius: "100px",
-      padding: "0 20px 0 20px",
-      marginBottom: 30,
-      whiteSpace: "pre-wrap",
-      lineHeight: 2,
-    }}>Development:</p>
+     <p
+      style={{
+       fontWeight: 900,
+       fontSize: 32,
+       backgroundColor: "rgba(255, 255, 255, 0.1)",
+       borderRadius: "100px",
+       padding: "0 20px 0 20px",
+       marginBottom: 30,
+       whiteSpace: "pre-wrap",
+       lineHeight: 2,
+      }}
+     >
+      Development:
+     </p>
 
      <h1
       style={{
@@ -91,7 +92,7 @@ export default async function handler(req) {
        paddingTop: 15,
        marginBottom: 15,
        fontSize: 40,
-               fontWeight: 700,
+       fontWeight: 700,
       }}
      >
       <img
@@ -126,9 +127,8 @@ export default async function handler(req) {
      </span>
     </div>
    </div>
-
-
   ),
+
   {
    width: 1600,
    height: 800,
