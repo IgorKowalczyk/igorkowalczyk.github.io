@@ -1,6 +1,7 @@
 import MDXComponents from "@/components/MDX/Components";
 import Image from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
+import Avatar from "../../public/assets/avatar.png";
 import { Container } from "@components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
@@ -23,7 +24,7 @@ export default function Post({ post }) {
        <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
         <div>
          <div className="flex items-center">
-          <Image alt={meta.title} height={24} width={24} src="/assets/avatar.png" className="rounded-full" />
+          <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
           <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
            {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
           </time>
@@ -44,9 +45,9 @@ export default function Post({ post }) {
      </div>
     </div>
     <div className="flex w-full justify-end py-4 text-gray-700 dark:text-gray-300">
-     <NextLink href={`https://github.com/${social.github.username}/${social.github.repo}/edit/main/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
+     <Link href={`https://github.com/${social.github.username}/${social.github.repo}/edit/main/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
       Suggest a change
-     </NextLink>
+     </Link>
     </div>
    </article>
   </Container>

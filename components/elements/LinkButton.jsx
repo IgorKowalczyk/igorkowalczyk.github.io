@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import Link from "next/link";
 
 export default function LinkButton(props) {
  const themes = {
@@ -10,8 +10,8 @@ export default function LinkButton(props) {
  };
 
  return (
-  <NextLink href={props.href || "/"} className={themes[props.theme || "default"] + " mt-5 flex items-center justify-center rounded-[5px] border-[1px] p-2 text-center font-poppins font-semibold transition duration-200 ease-in-out"} legacyBehavior>
+  <Link href={props.href || "/"} className={themes[props.theme || "default"] + " mt-5 flex items-center justify-center rounded-[5px] border-[1px] p-2 text-center font-poppins font-semibold transition duration-200 ease-in-out"}>
    {props.text || "Button"}
-  </NextLink>
+  </Link>
  );
 }
