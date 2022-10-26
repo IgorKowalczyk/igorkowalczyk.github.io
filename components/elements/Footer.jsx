@@ -16,7 +16,7 @@ export function Footer() {
      <div className="col-span-3 flex flex-col justify-center">
       <div className="flex items-center space-x-5">
        {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
-       <NextLink href="/">
+       <NextLink href="/" legacyBehavior>
         <p className="flex cursor-pointer items-center text-2xl font-semibold">
          Igor Kowalczyk<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 mr-2 rounded-lg bg-black/[7%] px-2 py-1 text-xs dark:bg-white/10">v{appVersion}</span>
         </p>
@@ -24,10 +24,7 @@ export function Footer() {
       </div>
 
       <p className="mt-3 text-gray-700 dark:text-gray-400">
-       Created with ❤️ in Poland using{" "}
-       <NextLink href="https://reactjs.org">
-        <a>React.js v{version}</a>
-       </NextLink>
+       Created with ❤️ in Poland using <NextLink href="https://reactjs.org">React.js v{version}</NextLink>
       </p>
      </div>
      {footer.categories.map((category, index) => (
@@ -35,8 +32,8 @@ export function Footer() {
        <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mt-0 sm:mb-3">{category.title}</p>
        <div>
         {category.links.map((link, index) => (
-         <NextLink key={index} href={link.href}>
-          <a className="mt-2 block duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">{link.title}</a>
+         <NextLink key={index} href={link.href} className="mt-2 block duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
+          {link.title}
          </NextLink>
         ))}
        </div>
