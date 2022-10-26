@@ -33,16 +33,16 @@ export default function MobileNav() {
        {menuItems.map((item, index) => {
         return (
          <p key={index} className={`${isRendered ? "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-gray-700/75" : "w-0 border-transparent dark:border-transparent"} group translate-x-[-16px] whitespace-nowrap border-b text-sm font-semibold text-gray-900 opacity-0 duration-200 motion-reduce:transition-none dark:text-gray-100`} style={{ transitionDelay: `${150 * index - 50}ms` }}>
-          <Link href={item.href} key={index}>
-           <a
-            className="flex w-auto p-4 pb-4  duration-200 group-hover:pl-6 motion-reduce:transition-none"
-            onClick={() => {
-             isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
-            }}
-            target={item.target}
-           >
-            {item.title}
-           </a>
+          <Link
+           href={item.href}
+           key={index}
+           className="flex w-auto p-4 pb-4  duration-200 group-hover:pl-6 motion-reduce:transition-none"
+           onClick={() => {
+            isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
+           }}
+           target={item.target}
+          >
+           {item.title}
           </Link>
          </p>
         );

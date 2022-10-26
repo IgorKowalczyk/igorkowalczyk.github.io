@@ -1,11 +1,12 @@
 import MDXComponents from "@/components/MDX/Components";
+import Avatar from "../../public/assets/avatar.png";
+import Image from "next/image";
 import { Container } from "@components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allPhotographies } from "contentlayer/generated";
 import { parseISO, format } from "date-fns";
 import { meta } from "@/config";
 import { BlurImage } from "@components/elements/BlurImage";
-import Image from "next/image";
 
 export default function Post({ post }) {
  const Component = useMDXComponent(post.body.code);
@@ -20,7 +21,7 @@ export default function Post({ post }) {
         <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
        </h1>
        <div className="flex items-center">
-        <Image alt={meta.title} height={24} width={24} src="/assets/avatar.png" className="rounded-full" />
+        <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
         <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
          {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
         </time>

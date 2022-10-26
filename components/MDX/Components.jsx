@@ -1,12 +1,12 @@
-import * as FutureImage from "next/future/image";
+import Image from "next/image";
 import { CustomLink } from "@components/elements/CustomLink";
 
-function Image(props) {
- return <FutureImage alt={props.alt} {...props} />;
+function CustomImage(props) {
+ return <Image alt={props.alt} {...props} />;
 }
 
 function RoundedImage(props) {
- return <FutureImage alt={props.alt} className="rounded-lg" {...props} />;
+ return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
 function Callout(props) {
@@ -19,7 +19,7 @@ function Callout(props) {
 }
 
 const MDXComponents = {
- Image,
+ Image: CustomImage,
  RoundedImage,
  Link: CustomLink,
  Callout,

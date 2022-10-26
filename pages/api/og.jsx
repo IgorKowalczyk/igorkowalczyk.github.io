@@ -8,9 +8,9 @@ export default async function handler(req) {
  const title = searchParams.get("title");
  const author = searchParams.get("author");
  const date = searchParams.get("date");
-
  const fontMedium = await fontPoppinsMedium;
 
+ /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
  return new ImageResponse(
   (
    <div

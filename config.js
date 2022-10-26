@@ -29,12 +29,12 @@ export const header = {
     response: (
      <>
       + <span className="font-semibold">User:</span>{" "}
-      <Link href="https://discord.com/users/544164729354977282">
-       <a target="_blank">Majonez.exe#2495</a>
+      <Link href="https://discord.com/users/544164729354977282" target="_blank">
+       Majonez.exe#2495
       </Link>
       <br />+ <span className="font-semibold">Link:</span>{" "}
-      <Link href="https://discord.gg/uxtSMtd2xZ">
-       <a target="_blank">https://discord.gg/uxtSMtd2xZ</a>
+      <Link href="https://discord.gg/uxtSMtd2xZ" target="_blank">
+       https://discord.gg/uxtSMtd2xZ
       </Link>
      </>
     ),

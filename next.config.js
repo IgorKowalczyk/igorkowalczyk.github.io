@@ -22,6 +22,11 @@ const nextConfig = {
  trailingSlash: false,
  compress: true,
  swcMinify: true,
+ /*experimental: {
+  legacyBrowsers: false,
+  browsersListForSwc: true,
+  fontLoaders: [{ loader: "@next/font/google", options: { subsets: ["latin"] } }],
+ },*/
  images: {
   domains: [
    "github.githubassets.com", // GitHub assets

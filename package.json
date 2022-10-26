@@ -8,7 +8,7 @@
   "dev": "NODE_ENV=development next dev",
   "build": "next build && npm run postbuild",
   "postbuild": "node ./lib/scripts/generate-sitemap.mjs && node ./lib/scripts/generate-rss.mjs",
-  "deploy": "npm run build && npm run postbuild && npm run start",
+  "deploy": "npm run build && npm run start",
   "format": "prettier --write . --ignore-unknown",
   "format:check": "prettier --check .",
   "analyze": "ANALYZE=true next build",
@@ -19,15 +19,17 @@
   "@headlessui/react": "^1.7.3",
   "@headlessui/tailwindcss": "^0.1.1",
   "@heroicons/react": "^2.0.12",
+  "@next/font": "^13.0.0",
   "@tippyjs/react": "^4.2.6",
   "@vercel/analytics": "^0.1.1",
   "@vercel/og": "^0.0.20",
   "contentlayer": "^0.2.8",
   "date-fns": "^2.29.3",
+  "dotenv": "^16.0.3",
   "framer-motion": "^7.6.1",
   "github-slugger": "^1.5.0",
   "graphql": "^16.6.0",
-  "next": "12.3.1",
+  "next": "^13.0.0",
   "next-contentlayer": "^0.2.8",
   "next-pwa": "^5.6.0",
   "next-themes": "^0.2.1",
@@ -53,14 +55,15 @@
  },
  "devDependencies": {
   "@igorkowalczyk/is-browser": "^1.0.1",
-  "@next/bundle-analyzer": "^12.3.1",
+  "@next/bundle-analyzer": "^13.0.0",
   "@tailwindcss/aspect-ratio": "^0.4.2",
   "@tailwindcss/typography": "^0.5.7",
   "ajv": "^8.11.0",
   "autoprefixer": "^10.4.12",
   "compression-webpack-plugin": "^10.0.0",
   "eslint": "8.26.0",
-  "eslint-config-next": "12.3.1",
+  "eslint-config-next": "^13.0.0",
+  "eslint-config-prettier": "^8.5.0",
   "globby": "^13.1.2",
   "lodash": "^4.17.21",
   "lodash-webpack-plugin": "^0.11.6",
@@ -82,12 +85,12 @@
  ],
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.dev.git"
+  "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
  },
  "author": "Igor Kowalczyk",
  "license": "MIT",
  "bugs": {
-  "url": "https://github.com/igorkowalczyk/igorkowalczyk.dev/issues"
+  "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
  },
  "homepage": "https://igorkowalczyk.dev"
 }
