@@ -19,6 +19,7 @@
   "@headlessui/react": "^1.7.3",
   "@headlessui/tailwindcss": "^0.1.1",
   "@heroicons/react": "^2.0.12",
+  "@next/font": "^13.0.0",
   "@tippyjs/react": "^4.2.6",
   "@vercel/analytics": "^0.1.1",
   "@vercel/og": "^0.0.20",

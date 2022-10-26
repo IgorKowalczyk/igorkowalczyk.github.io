@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -246,7 +245,7 @@ pre {
 }
 
 .rehype-code-title {
- @apply rounded-t-lg border border-b-0 border-slate-200 bg-slate-200 px-5 py-3 font-mono text-sm font-bold text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200;
+ @apply rounded-t-lg border border-b-0 border-slate-200 bg-slate-200 px-5 py-3 font-mono text-sm font-semibold text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200;
 }
 
 .rehype-code-title + pre {
