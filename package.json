@@ -1,7 +1,7 @@
 {
  "name": "igorkowalczyk-portfolio",
  "description": "My portfolio built on Next.js",
- "version": "2.6.0",
+ "version": "2.7.0",
  "private": true,
  "scripts": {
   "start": "next start",
