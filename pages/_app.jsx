@@ -1,7 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { Router } from "next/router";
-
 import { GoogleAnalytics } from "@lib/analytics";
 import nProgress from "nprogress";
 import "@styles/globals.css";
