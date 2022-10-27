@@ -1,7 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { Router } from "next/router";
-import { AnimatePresence, MotionConfig } from "framer-motion";
 import { GoogleAnalytics } from "@lib/analytics";
 import nProgress from "nprogress";
 import "@styles/globals.css";
@@ -18,11 +17,7 @@ export default function App({ Component, pageProps, router }) {
  return (
   <>
    <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
-    <MotionConfig reducedMotion="user">
-     <AnimatePresence mode="wait">
-      <Component {...pageProps} key={router.route} />
-     </AnimatePresence>
-    </MotionConfig>
+    <Component {...pageProps} key={router.route} />
    </ThemeProvider>
    <Analytics />
   </>
