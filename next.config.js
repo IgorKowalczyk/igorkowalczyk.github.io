@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const { withContentlayer } = require("next-contentlayer");
 const withPWA = require("next-pwa");
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -22,21 +21,43 @@ const nextConfig = {
  trailingSlash: false,
  compress: true,
  swcMinify: true,
- /*experimental: {
-  legacyBrowsers: false,
-  browsersListForSwc: true,
-  fontLoaders: [{ loader: "@next/font/google", options: { subsets: ["latin"] } }],
- },*/
- images: {
-  domains: [
-   "github.githubassets.com", // GitHub assets
-  ],
+ experimental: {
+  appDir: true,
  },
  async headers() {
   return [
    {
     source: "/(.*)",
-    headers: securityHeaders,
+    headers: [
+     {
+      key: "Referrer-Policy",
+      value: "no-referrer",
+     },
+     {
+      key: "X-Content-Type-Options",
+      value: "nosniff",
+     },
+     {
+      key: "X-DNS-Prefetch-Control",
+      value: "on",
+     },
+     {
+      key: "Strict-Transport-Security",
+      value: "max-age=31536000; includeSubDomains; preload",
+     },
+     {
+      key: "Cache-Control",
+      value: "public, max-age=21600, must-revalidate",
+     },
+     {
+      key: "X-XSS-Protection",
+      value: "1; mode=block",
+     },
+     {
+      key: "Permissions-Policy",
+      value: "camera=(), microphone=(), geolocation=()",
+     },
+    ],
    },
    {
     source: "/*.xml",
@@ -89,7 +110,22 @@ const nextConfig = {
   ];
  },
  webpack: (config, { isServer, dev }) => {
+  // if (!dev && !isServer) {
+  //   Object.assign(config.resolve.alias, {
+  //     'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+  //     react: 'preact/compat',
+  //     'react-dom/test-utils': 'preact/test-utils',
+  //     'react-dom': 'preact/compat'
+  //   });
+  // }
+
   if (!dev && !isServer) {
+   Object.assign(config.resolve.alias, {
+    "react/jsx-runtime.js": "preact/compat/jsx-runtime",
+    react: "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat",
+   });
    config.plugins.push(
     new CompressionPlugin(),
     new LodashModuleReplacementPlugin(),
@@ -108,52 +144,9 @@ module.exports = () => {
  const plugins = [withPWA, withContentlayer, withBundleAnalyzer];
  const config = plugins.reduce((acc, next) => next(acc), {
   ...nextConfig,
+  experimental: {
+   appDir: true,
+  },
  });
  return config;
 };
-
-const ContentSecurityPolicy = `
-default-src 'self' *.googletagmanager.com *.arc.io;
-script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com arc.io *.arc.io *.sentry-cdn.com;
-child-src 'self' *.youtube.com *.google.com *.twitter.com *.arc.io;
-style-src 'self' 'unsafe-inline' *.googleapis.com *.arc.io *.cloudflare.com;
-img-src * blob: data:;
-media-src 'none';
-connect-src *;
-font-src 'self' *.googleapis.com *.gstatic.com *.arc.io;
-`;
-
-const securityHeaders = [
- //{
- // key: "Content-Security-Policy",
- // value: ContentSecurityPolicy.replace(/\n/g, ""),
- // },
- {
-  key: "Referrer-Policy",
-  value: "no-referrer",
- },
- {
-  key: "X-Content-Type-Options",
-  value: "nosniff",
- },
- {
-  key: "X-DNS-Prefetch-Control",
-  value: "on",
- },
- {
-  key: "Strict-Transport-Security",
-  value: "max-age=31536000; includeSubDomains; preload",
- },
- {
-  key: "Cache-Control",
-  value: "public, max-age=300, must-revalidate",
- },
- {
-  key: "X-XSS-Protection",
-  value: "1; mode=block",
- },
- {
-  key: "Permissions-Policy",
-  value: "camera=(), microphone=(), geolocation=()",
- },
-];
