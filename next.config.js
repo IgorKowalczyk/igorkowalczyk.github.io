@@ -135,9 +135,6 @@ module.exports = () => {
  const plugins = [withPWA, withContentlayer, withBundleAnalyzer];
  const config = plugins.reduce((acc, next) => next(acc), {
   ...nextConfig,
-  experimental: {
-   appDir: true,
-  },
  });
  return config;
 };
