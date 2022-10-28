@@ -26,7 +26,7 @@
   "contentlayer": "^0.2.8",
   "date-fns": "^2.29.3",
   "dotenv": "^16.0.3",
-  "framer-motion": "^7.6.1",
+  "framer-motion": "^7.6.2",
   "github-slugger": "^1.5.0",
   "graphql": "^16.6.0",
   "next": "^13.0.0",
