@@ -11,6 +11,8 @@ My old portfolio was built on Jekyll with the addition of a few plugins. It didn
 
 # The Idea
 
+I wanted to build a website that would be easy to maintain and update. I also wanted to make it look nice and be easy to use. I also wanted to learn some new technologies and tools, so I decided to build it using Next.js and Tailwind CSS.
+
 In June 2022 I started learning Next.js, this framework seemed the easiest for me to understand and learn. As it turned out later - it turned out to be an excellent choice.
 
 I didn't learn from some tutorials or blogs. I just opened a code editor and started writing. I was motivated by the desire to create a new place on the Internet in which I could show my work, write blog posts, etc.
@@ -30,7 +32,7 @@ Next.js has several options for rendering pages:
 - [**SSG (Static-site generation)**](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) - it will pre-render this page at build time.
 - [**ISR (Incremental Static Regeneration)**](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) - it will pre-render this page at build time and then on-demand.
 
-## Tailwind
+## Tailwind.css
 
 <Link href="https://tailwindcss.com/">Tailwind</Link> is a utility-first CSS framework. It provides multiple CSS classes like `flex`, `text-center` etc.
 
@@ -38,19 +40,19 @@ With Tailwind, you don't have to leave the HTML file to add styles to elements. 
 
 ### Example
 
-<div className="mb-6 inline-block cursor-pointer rounded bg-blue-500 py-2 px-4 font-semibold text-white duration-200 hover:bg-blue-700">
+<a href="https://tailwindcss.com/" className="mb-6 inline-block cursor-pointer rounded bg-blue-500 py-2 px-4 font-semibold text-white duration-200 hover:bg-blue-700">
  <span>Tailwind</span>
-</div>
+</a>
 
 ```jsx:pages/index.jsx
 [...]
-<div className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded duration-200 inline-block cursor-pointer">
+<a href="https://tailwindcss.com/" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded duration-200 inline-block cursor-pointer">
 <span>Tailwind</span>
-</div>
+</a>
 [...]
 ```
 
-### Tailwind output
+### Output
 
 ```css:output.css
 .bg-blue-500 {
@@ -60,8 +62,6 @@ With Tailwind, you don't have to leave the HTML file to add styles to elements. 
 
 // [...]
 ```
-
-> Note: I did not use `<Button>` because I did not build such a component for the blog. The blog is written in `MDX`, not in `JSX`.
 
 ## Contentlayer
 

@@ -45,7 +45,7 @@ export default function Post({ post }) {
      </div>
     </div>
     <div className="flex w-full justify-end py-4 text-gray-700 dark:text-gray-300">
-     <Link href={`https://github.com/${social.github.username}/${social.github.repo}/edit/main/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
+     <Link href={`https://github.com/${social.github.username}/${social.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
       Suggest a change
      </Link>
     </div>
