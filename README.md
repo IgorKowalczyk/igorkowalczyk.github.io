@@ -2,7 +2,7 @@
 
 ## Igor Kowalczyk - Next.js Portfolio
 
-> My personal portfolio written on Next.js<br>
+> My personal portfolio written on Next.js
 
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square&label=License)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/blob/master/license.md)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Version)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
@@ -29,8 +29,8 @@
 6. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
    > If you want to build and host the project you can use `npm run deploy`
 
-> **Note** <br/>In `.env` file you can set these **optional** values:
->
+
+> **Note**: In `.env` file you can set these **optional** values:
 > - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID
 > - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io CDN](https://arc.io) website token
 
