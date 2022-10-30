@@ -29,8 +29,8 @@
 6. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
    > If you want to build and host the project you can use `npm run deploy`
 
-
 > **Note**: In `.env` file you can set these **optional** values:
+>
 > - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID
 > - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io CDN](https://arc.io) website token
 
