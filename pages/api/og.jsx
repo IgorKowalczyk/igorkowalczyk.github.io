@@ -2,6 +2,8 @@ import { ImageResponse } from "@vercel/og";
 import { parseISO, format } from "date-fns";
 
 const fontPoppinsMedium = fetch(new URL("../../public/fonts/medium.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+const fontPoppinsBold = fetch(new URL("../../public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+const fontPoppinsLight = fetch(new URL("../../public/fonts/light.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
 export default async function handler(req) {
  const { searchParams } = new URL(req.url.replaceAll("&amp%3B", "&"));
@@ -9,6 +11,8 @@ export default async function handler(req) {
  const author = searchParams.get("author");
  const date = searchParams.get("date");
  const fontMedium = await fontPoppinsMedium;
+ const fontBold = await fontPoppinsBold;
+ const fontLight = await fontPoppinsLight;
 
  /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
  return new ImageResponse(
@@ -24,7 +28,7 @@ export default async function handler(req) {
      justifyContent: "center",
      flexDirection: "column",
      flexWrap: "nowrap",
-     fontFamily: "Poppins",
+     fontFamily: "Medium",
      backgroundColor: "#08152b",
     }}
    >
@@ -46,33 +50,43 @@ export default async function handler(req) {
       whiteSpace: "pre-wrap",
      }}
     >
-     <p
+     <div
       style={{
-       fontWeight: 900,
-       fontSize: 32,
        backgroundColor: "rgba(255, 255, 255, 0.1)",
        borderRadius: "100px",
-       padding: "0 20px 0 20px",
-       marginBottom: 30,
-       whiteSpace: "pre-wrap",
-       lineHeight: 2,
+       padding: "5px 20px 0px 20px",
+       display: "flex",
+       alignItems: "center",
+       justifyContent: "center",
+       flexDirection: "row",
+       height: "50px",
+       marginBottom: "30px",
       }}
      >
-      Development:
-     </p>
-
+      <p
+       style={{
+        fontWeight: 900,
+        fontSize: 32,
+        fontFamily: "Bold",
+        lineHeight: 1,
+        color: "white",
+       }}
+      >
+       Development:
+      </p>
+     </div>
      <h1
       style={{
        margin: 0,
        padding: 0,
        fontSize: 100,
        fontWeight: 900,
+       fontFamily: "Bold",
        lineHeight: 1,
        letterSpacing: 0.2,
       }}
      >
       <span>{decodeURI(title) || "Title not found"}</span>
-
       <span
        style={{
         backgroundImage: "linear-gradient(to right, #a2facf, #64acff)",
@@ -106,7 +120,7 @@ export default async function handler(req) {
       <p
        style={{
         margin: "15px 0px 15px 20px",
-        fontFamily: "Poppins",
+        fontFamily: "Medium",
         padding: 0,
         lineHeight: 1,
        }}
@@ -117,8 +131,8 @@ export default async function handler(req) {
      <span
       style={{
        fontSize: 30,
+       fontFamily: "Light",
        color: "white",
-
        opacity: 0.5,
        fontWeight: 300,
       }}
@@ -133,10 +147,22 @@ export default async function handler(req) {
    height: 800,
    fonts: [
     {
-     name: "Poppins",
+     name: "Medium",
      data: fontMedium,
      style: "normal",
      weight: 700,
+    },
+    {
+     name: "Bold",
+     data: fontBold,
+     style: "normal",
+     weight: 900,
+    },
+    {
+     name: "Light",
+     data: fontLight,
+     style: "normal",
+     weight: 400,
     },
    ],
   }
