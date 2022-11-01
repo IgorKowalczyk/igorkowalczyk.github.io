@@ -26,6 +26,7 @@
 4. Create new file named `.env` Remember - the file is super secret, better to not share it.
 5. In `.env` file set this values:
    - `GITHUB_ACCESS_TOKEN` - Your GitHub access token with public repositories permission
+   - `DISCORD_WEBHOOK_URL` - Discord Webhook URL for contact form
 6. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
    > If you want to build and host the project you can use `npm run deploy`
 
