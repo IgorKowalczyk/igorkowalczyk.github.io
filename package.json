@@ -44,7 +44,7 @@
   "rehype-autolink-headings": "^6.1.1",
   "rehype-code-titles": "^1.1.0",
   "rehype-prism-plus": "^1.5.0",
-  "rehype-slug": "^5.0.1",
+  "rehype-slug": "^5.1.0",
   "remark-gfm": "^3.0.1",
   "remark-mdx-toc": "^0.3.1",
   "remark-toc": "^8.0.1",
@@ -55,7 +55,7 @@
  },
  "devDependencies": {
   "@igorkowalczyk/is-browser": "^1.0.1",
-  "@next/bundle-analyzer": "^13.0.0",
+  "@next/bundle-analyzer": "^13.0.1",
   "@tailwindcss/aspect-ratio": "^0.4.2",
   "@tailwindcss/typography": "^0.5.7",
   "ajv": "^8.11.0",
