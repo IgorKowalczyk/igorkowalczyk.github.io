@@ -109,7 +109,7 @@ export default function Main({ repositories, user }) {
 
    <section id={"additional-info"}>
     <div>
-     <hr className="m-[0_auto] mb-8 border-[1px] border-gray-200 px-8 duration-300 motion-reduce:transition-none dark:border-gray-800" />
+     <hr className="m-[0_auto] mb-8 w-full h-[1px] bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)] border-none px-8 duration-300 motion-reduce:transition-none" />
      <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
