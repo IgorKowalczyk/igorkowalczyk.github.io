@@ -283,11 +283,9 @@ pre {
 }
 
 .card::before {
- @apply pointer-events-none z-[3];
- background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+ @apply pointer-events-none -z-[3] bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.6),_transparent_40%)] dark:bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.08),_transparent_40%)];
 }
 
 .card::after {
- @apply pointer-events-none z-[1];
- background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.02), transparent 40%);
+ @apply pointer-events-none -z-[1] bg-[radial-gradient(600px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.4),_transparent_40%)] dark:bg-[radial-gradient(600px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.05),_transparent_40%)];
 }

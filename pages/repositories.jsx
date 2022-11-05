@@ -33,7 +33,7 @@ export default function Gitub_Repos({ props }) {
    </h1>
    <div id="cards">
     <div className="mx-8">
-     <div className="card !m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
+     <div className="card z-10 !m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
       <GitHubCalendar
        username={social.github.username}
        theme={{
