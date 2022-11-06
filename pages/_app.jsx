@@ -7,6 +7,9 @@ import "@styles/globals.css";
 import "@styles/progress.css";
 //import "@styles/tippy.css";
 //import "tippy.js/dist/tippy.css";
+import { Inter } from "@next/font/google";
+
+const inter = Inter();
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -17,9 +20,11 @@ export default function App({ Component, pageProps, router }) {
  return (
   <>
    <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
-    <Component {...pageProps} key={router.route} />
+    <main className={inter.className}>
+     <Component {...pageProps} key={router.route} />
+     <Analytics />
+    </main>
    </ThemeProvider>
-   <Analytics />
   </>
  );
 }

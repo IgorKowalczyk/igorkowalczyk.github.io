@@ -33,11 +33,11 @@ export default function Main({ repositories, user }) {
      <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
       <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
        <div className="md:col-span-3">
-        <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-poppins text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
-        <h2 className="text-center font-poppins text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
-        <p className="mt-2 text-center font-poppins text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
+        <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-inter text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
+        <h2 className="text-center font-inter text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
+        <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
         <div className="mt-4 flex justify-center md:block">
-         <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold">
+         <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold">
           <>
            More about me
            <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -49,7 +49,7 @@ export default function Main({ repositories, user }) {
         </div>
        </div>
        <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-        <div className="card border-b-black/15 block w-full rounded-md border font-poppins text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
+        <div className="card border-b-black/15 block w-full rounded-md border font-inter text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
          <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
           <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
           <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
@@ -124,7 +124,7 @@ export default function Main({ repositories, user }) {
     <section id={"additional-info"}>
      <div>
       <hr className="m-[0_auto] mb-8 h-[1px] w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-      <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
+      <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-inter text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
@@ -171,10 +171,10 @@ export default function Main({ repositories, user }) {
       <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="70" w="134" />
       </span>
-      <Image src="/assets/svg/sparkles.svg" alt="sparkles" width={400} height={100} className="pointer-events-none m-[0_auto] animate-pulse" />
-      <h3 className="dark:color-black m-6 mt-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
+      <Image src="/assets/svg/sparkles.svg" alt="sparkles" width={400} height={100} className="pointer-events-none m-[0_auto] h-auto w-auto animate-pulse" />
+      <h3 className="dark:color-black m-6 mt-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
 
-      <div className="prose m-auto text-center dark:prose-dark">
+      <div className="prose m-auto px-6 text-center font-inter dark:prose-dark">
        <span>I have been coding for more than 5 years. I started my journey at the end of 2018.</span>
        <span>At first, I learned HTML, CSS and base Javascript to build websites</span>
        <span>
@@ -190,12 +190,12 @@ export default function Main({ repositories, user }) {
 
     <section id={"repositories"} className="scroll-mt-20 pt-12 lg:px-24">
      <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-6-1/2 before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
-      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
+      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
       <div className="relative">
-       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories.most_popular_repos_data && repositories.most_popular_repos_data.map((repo) => <RepoCard key={repo.id} {...repo} />)}</div>
+       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories.most_popular_repos_data && repositories.most_popular_repos_data.map((repo) => <RepoCard key={repo.id} {...repo} />)}</div>
        <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
         <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
-         <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
+         <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
           <>
            See more repositories
            <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -218,27 +218,27 @@ export default function Main({ repositories, user }) {
        <Dots h="70" w="134" />
       </span>
 
-      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Technologies I use</h3>
+      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Technologies I use</h3>
      </div>
      <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {techs.map((tech, index) => {
        return (
-        <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+        <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
          <div className="rounded-md">{tech.icon}</div>
          <span className="font-semibold">{tech.name}</span>
         </div>
        );
       })}
      </div>
-     <p className="mt-9 text-center text-xl font-semibold">...and many others!</p>
+     <p className="mt-9 text-center font-inter text-xl font-semibold ">...and many others!</p>
     </section>
 
     <section id={"contact"}>
      <div className="h-full scroll-mt-20 px-6 py-36 pt-24 lg:px-36">
       <header>
        <Image src="/assets/svg/sparkles.svg" alt="sparkles" width={400} height={100} className="pointer-events-none m-[0_auto] animate-pulse" />
-       <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-poppins text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
-       <p className="py-1 text-center text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
+       <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
+       <p className="py-1 text-center font-inter  text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
       </header>
       <div className="relative">
        <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none dark:divide-none md:grid-cols-2 md:divide-gray-200 md:dark:divide-white/20">
@@ -246,9 +246,9 @@ export default function Main({ repositories, user }) {
          <Contact />
         </div>
         <div className="space-y-4 p-4">
-         <p className="text-xl font-semibold">Or contact me with...</p>
+         <p className="font-inter text-xl font-semibold">Or contact me with...</p>
          {contact.links.map((element, index) => (
-          <Link className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-poppins text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index}>
+          <Link className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index}>
            <>
             {element.icon} {element.title}
            </>

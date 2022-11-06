@@ -16,19 +16,19 @@ export default function Post({ post }) {
     <header className="mb-6 w-full">
      <div className="mt-2 flex w-full flex-col items-center justify-center md:flex-row md:items-center">
       <div>
-       <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center font-poppins text-[2rem] font-semibold motion-reduce:transition-none">
+       <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center font-inter text-[2rem] font-semibold motion-reduce:transition-none">
         {post.title}
         <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
        </h1>
-       <div className="flex items-center">
+       <div className="flex items-center font-inter">
         <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
-        <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
+        <time className="ml-2 text-base text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
          {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
         </time>
        </div>
       </div>
      </div>
-     <p className="mt-4 pb-6 text-center font-poppins text-slate-600 dark:text-slate-400">{post.description}</p>
+     <p className="mt-4 pb-6 text-center font-inter text-lg text-slate-600 dark:text-slate-400">{post.description}</p>
     </header>
 
     <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">

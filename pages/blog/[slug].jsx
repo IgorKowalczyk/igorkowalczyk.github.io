@@ -14,10 +14,10 @@ export default function Post({ post }) {
  return (
   <Container title={`${meta.title} - ${post.title} `} description={post.summary} image={meta.url + post.image} date={new Date(post.publishedAt).toISOString()} type="article">
    <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
-    <div className="prose grid flex-1 grid-cols-1 gap-x-8 dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
+    <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
      <div>
-      <header className="w-full">
-       <h1 className="mt-6 mb-2 flex items-center box-decoration-clone bg-clip-text text-center font-poppins text-[2.5rem] font-semibold motion-reduce:transition-none">
+      <header className="w-full font-inter">
+       <h1 className="mt-6 mb-2 flex items-center box-decoration-clone bg-clip-text text-center font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
         {post.title}
         <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
        </h1>
@@ -44,7 +44,7 @@ export default function Post({ post }) {
       ))}
      </div>
     </div>
-    <div className="flex w-full justify-end py-4 text-gray-700 dark:text-gray-300">
+    <div className="flex w-full justify-end py-4 font-inter text-gray-700 dark:text-gray-300">
      <Link href={`https://github.com/${social.github.username}/${social.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
       Suggest a change
      </Link>

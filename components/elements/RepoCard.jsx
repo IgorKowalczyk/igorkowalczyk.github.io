@@ -6,7 +6,7 @@ export function RepoCard(repo) {
   <div id={repo.name} className="card z-10 rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:scale-100 dark:border-white/[15%] dark:bg-[#08152b]">
    <div>
     <div className="text-left">
-     <Link href={repo.url} key={repo.id} className="break-all text-left font-poppins font-semibold" target="_blank">
+     <Link href={repo.url} key={repo.id} className="break-all text-left font-inter font-semibold" target="_blank">
       <FolderIcon className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" /> {repo.owner.login}/{repo.name}
      </Link>
      {"  "}
