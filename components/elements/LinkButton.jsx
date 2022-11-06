@@ -10,7 +10,7 @@ export default function LinkButton(props) {
  };
 
  return (
-  <Link href={props.href || "/"} className={themes[props.theme || "default"] + " mt-5 flex items-center justify-center rounded-[5px] border-[1px] p-2 text-center font-poppins font-semibold transition duration-200 ease-in-out"}>
+  <Link href={props.href || "/"} className={themes[props.theme || "default"] + " mt-5 flex items-center justify-center rounded-[5px] border-[1px] p-2 text-center font-inter font-semibold transition duration-200 ease-in-out"}>
    {props.text || "Button"}
   </Link>
  );

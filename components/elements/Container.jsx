@@ -35,9 +35,9 @@ export function Container(props) {
     {meta.date && <meta property="article:published_time" content={meta.date} />}
    </Head>
    <Nav />
-   <main className="mt-24 flex min-h-screen flex-col antialiased">
+   <div className="mt-24 flex min-h-screen flex-col antialiased">
     <Twemoji options={{ className: "twemoji" }}>{children}</Twemoji>
-   </main>
+   </div>
    <Footer />
   </>
  );

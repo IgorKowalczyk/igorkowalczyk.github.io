@@ -28,12 +28,12 @@ export default function Gitub_Repos({ props }) {
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
-   <h1 className="mt-6 mb-2 flex items-center justify-center box-decoration-clone bg-clip-text px-8 text-center font-poppins text-[2rem] font-semibold motion-reduce:transition-none">
+   <h1 className="mt-6 mb-2 flex items-center justify-center box-decoration-clone bg-clip-text px-8 text-center font-inter text-[2rem] font-semibold motion-reduce:transition-none">
     My work, from the beginning <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h1>
    <div id="cards">
     <div className="mx-8">
-     <div className="card z-10 !m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-poppins duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
+     <div className="card z-10 !m-[0_auto] !my-9 mx-8 hidden w-fit rounded-[10px] border-[1px] border-black/[15%] bg-white p-4 font-inter duration-200 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] md:block">
       <GitHubCalendar
        username={social.github.username}
        theme={{
@@ -49,14 +49,14 @@ export default function Gitub_Repos({ props }) {
 
     {_Repos ? (
      repos && (
-      <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {repos?.map((repo) => (
         <RepoCard key={repo.id} {...repo} className="card" />
        ))}
       </div>
      )
     ) : (
-     <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-poppins text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+     <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 px-8 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
       {Array.from({ length: 20 }).map((_, index) => (
        <RepoCardSkeleton key={index} />
       ))}
