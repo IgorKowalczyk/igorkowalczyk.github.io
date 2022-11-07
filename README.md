@@ -14,9 +14,8 @@
 
 ## 🖥️ Hosting
 
-[![Deploy with Vercel](https://vercel.com/button)](<https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Figorkowalczyk.github.io&env=NEXT_PUBLIC_GA_WEBSITE_ID,NEXT_PUBLIC_ARC_TOKEN,GITHUB_ACCESS_TOKEN&envDescription=NEXT_PUBLIC_GA_WEBSITE_ID%20-%20Google%20Analytics%204%20website%20ID%20%7C%20NEXT_PUBLIC_ARC_TOKEN%20-%20Arc.io%20Website%20Token%20%7C%20GITHUB_ACCESS_TOKEN%20-%20Github%20Account%20Access%20token%20(REPO%2C%20USER%20Read%20perm)&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Figorkowalczyk.github.io%2F&project-name=portfolio&repo-name=portfolio&redirect-url=https%3A%2F%2Figorkowalczyk.dev&demo-title=Igor%20Kowalczyk%20-%20Demo&demo-description=A%20sample%20(static)%20demo%20of%20this%20project%20hosted%20on%20Github&demo-url=https%3A%2F%2Figorkowalczyk.dev&demo-image=https%3A%2F%2Fmedia.discordapp.net%2Fattachments%2F905722570286960650%2F975038194464743474%2Funknown.png>)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Figorkowalczyk.github.io&env=GITHUB_ACCESS_TOKEN,DISCORD_WEBHOOK_URL&envDescription=Environment%20Variables%20Docs&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Figorkowalczyk.github.io%23-self-hosting&project-name=portfolio&repo-name=igorkowalczyk-portfolio&demo-title=Example%20deploy&demo-description=Example%20production%20deploy%20from%20Github%20Repository&demo-url=https%3A%2F%2Figorkowalczyk.dev&demo-image=https%3A%2F%2Fi.imgur.com%2FT4VsRuy.png)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/igorkowalczyk/igorkowalczyk.github.io)
-<a href="https://repl.it/github/igorkowalczyk/igorkowalczyk.github.io"><img src="https://repl.it/badge/github/igorkowalczyk/igorkowalczyk.github.io" alt="Run on replit" height="32"/></a>
 
 ### 🔩 Self Hosting
 
