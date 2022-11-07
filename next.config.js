@@ -1,5 +1,4 @@
 const { withContentlayer } = require("next-contentlayer");
-const withPWA = require("next-pwa");
 const CompressionPlugin = require("compression-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -10,17 +9,11 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
- pwa: {
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-  register: true,
- },
  reactStrictMode: true,
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
  trailingSlash: false,
- compress: false,
- swcMinify: false,
+ compress: true,
  experimental: {
   fontLoaders: [{ loader: "@next/font/google", options: { subsets: ["latin"] } }],
  },
@@ -60,7 +53,7 @@ const nextConfig = {
     ],
    },
    {
-    source: "/*.xml",
+    source: "/(.*).xml",
     headers: [
      {
       key: "Content-Type",
@@ -121,7 +114,6 @@ const nextConfig = {
     new CompressionPlugin(),
     new LodashModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-     "process.env.ASSET_PATH": JSON.stringify("./public/"),
      "process.env.VERSION": JSON.stringify(process.env.npm_package_version),
     })
    ),
@@ -132,7 +124,7 @@ const nextConfig = {
 };
 
 module.exports = () => {
- const plugins = [withPWA, withContentlayer, withBundleAnalyzer];
+ const plugins = [withContentlayer, withBundleAnalyzer];
  const config = plugins.reduce((acc, next) => next(acc), {
   ...nextConfig,
  });
