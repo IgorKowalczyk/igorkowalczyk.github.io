@@ -19,7 +19,7 @@ const nextConfig = {
  pageExtensions: ["mdx", "md", "jsx", "js"],
  poweredByHeader: false,
  trailingSlash: false,
- compress: true,
+ compress: false,
  swcMinify: false,
  experimental: {
   fontLoaders: [{ loader: "@next/font/google", options: { subsets: ["latin"] } }],
