@@ -56,7 +56,7 @@
   "@igorkowalczyk/is-browser": "^1.0.1",
   "@next/bundle-analyzer": "^13.0.2",
   "@tailwindcss/aspect-ratio": "^0.4.2",
-  "@tailwindcss/typography": "^0.5.7",
+  "@tailwindcss/typography": "^0.5.8",
   "ajv": "^8.11.0",
   "autoprefixer": "^10.4.13",
   "compression-webpack-plugin": "^10.0.0",
