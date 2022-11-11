@@ -10,9 +10,13 @@ import { RepoCard } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "@components/elements/Contact";
+import { SWR } from "@lib/swr";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 
-export default function Main({ repositories, user }) {
+export default function Main({ repositories }) {
+ const { data: _User } = SWR("/api/github/user/info");
+ const user_data = _User ? _User : null;
+
  useEffect(() => {
   if (typeof window !== "undefined" && repositories && repositories.most_popular_repos_data) {
    document.getElementById("cards").onmousemove = (e) => {
@@ -48,6 +52,7 @@ export default function Main({ repositories, user }) {
          </Link>
         </div>
        </div>
+
        <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
         <div className="card border-b-black/15 block w-full rounded-md border font-inter text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
          <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
@@ -60,61 +65,73 @@ export default function Main({ repositories, user }) {
            </span>
           </div>
          </div>
-         <div className="p-4">
-          <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-           →
-          </span>{" "}
-          <span className="font-semibold text-[#66e777]" aria-hidden="true">
-           ~/{header.code.default.user}
-          </span>{" "}
-          <span className="italic">
-           <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-            $
-           </span>{" "}
-           <span aria-label={`list github account ${social.github.username}`}>
-            list github --user=
-            <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
-             <>"{social.github.username}"</>
-            </Link>
-           </span>
-          </span>
-          <br />
-          <span className="leading-6">
-           <div>
-            <span aria-hidden="true"> + </span>
-            <span className="font-semibold">{repositories.public_repos_data.totalCount} Open Source</span> {repositories.public_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.public_repos_data.totalDiskUsage * 1000)})
-           </div>
-           <div>
-            <span aria-hidden="true"> - </span>
-            <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
-           </div>
-          </span>
-          {header.code.lines.map((line, index) => (
-           <div key={index}>
+         {_User ? (
+          user_data && (
+           <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
             <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
              →
             </span>{" "}
             <span className="font-semibold text-[#66e777]" aria-hidden="true">
-             ~/{line.user}
+             ~/{header.code.default.user}
+            </span>{" "}
+            <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+             $
+            </span>{" "}
+            <span className="italic" aria-label={`list github account ${social.github.username}`}>
+             list github --user=
+             <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
+              <>"{social.github.username}"</>
+             </Link>
+            </span>
+            <span className="leading-6">
+             <div>
+              <span aria-hidden="true"> + </span>
+              <span className="font-semibold">{user_data.user_public_repositories_count} Open Source</span> {user_data.user_public_repositories_count > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(user_data.user_public_repositories_disk_usage * 1000)} )
+             </div>
+             <div>
+              <span aria-hidden="true"> - </span>
+              <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
+             </div>
+            </span>
+            {header.code.lines.map((line, index) => (
+             <div key={index}>
+              <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+               →
+              </span>{" "}
+              <span className="font-semibold text-[#66e777]" aria-hidden="true">
+               ~/{line.user}
+              </span>{" "}
+              <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
+              <div className="leading-6">{line.response}</div>
+             </div>
+            ))}
+            <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+             →
+            </span>{" "}
+            <span className="font-semibold text-[#66e777]" aria-hidden="true">
+             ~/{header.code.default.user}
             </span>{" "}
             <span className="italic">
-             <span className="font-semibold text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span>{line.command}</span>
+             <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+              $
+             </span>
             </span>
-            <div className="leading-6">{line.response}</div>
            </div>
-          ))}
-          <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-           →
-          </span>{" "}
-          <span className="font-semibold text-[#66e777]" aria-hidden="true">
-           ~/{header.code.default.user}
-          </span>{" "}
-          <span className="italic">
-           <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+          )
+         ) : (
+          <div className="min-h-[200px] p-4">
+           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+            →
+           </span>
+           <span className="font-semibold text-[#66e777]" aria-hidden="true">
+            {" "}
+            ~/{header.code.default.user}{" "}
+           </span>
+           <span className="font-semibold italic text-slate-700 duration-200 selection:relative after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
             $
            </span>
-          </span>
-         </div>
+          </div>
+         )}
         </div>
        </div>
       </div>
@@ -131,14 +148,14 @@ export default function Main({ repositories, user }) {
           <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
           </svg>{" "}
-          <span>{user.user_stars} Total stars</span>
+          <span>{_User ? user_data && user_data.user_stars : "NaN"} Total stars</span>
          </>
         </Link>
        </p>
        <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_starred_repos} Starred repos</span>
+          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? user_data && user_data.user_stars : "NaN"} Starred repos</span>
          </>
         </Link>
        </p>
@@ -148,14 +165,14 @@ export default function Main({ repositories, user }) {
           <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
           </svg>{" "}
-          <span>{user.user_forks} Repositories forks</span>
+          <span>{_User ? user_data && user_data.user_forks : "NaN"} Repositories forks</span>
          </>
         </Link>
        </p>
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{user.user_followers} Github Followers</span>
+          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? user_data && user_data.user_followers : "NaN"} Github Followers</span>
          </>
         </Link>
        </p>
@@ -286,7 +303,17 @@ export async function getStaticProps() {
 
  const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+   typePolicies: {
+    Query: {
+     fields: {
+      id: {
+       merge: true,
+      },
+     },
+    },
+   },
+  }),
  });
 
  const public_repos = await client.query({
@@ -364,14 +391,6 @@ export async function getStaticProps() {
           }
         }
       }
-      ... on User {
-        followers {
-          totalCount
-        }
-        starredRepositories {
-          totalCount
-        }
-      }
     }
   }
 `,
@@ -379,22 +398,13 @@ export async function getStaticProps() {
  const public_repos_data = public_repos.data.user.repositories;
  const private_repos_data = private_repos.data.user.repositories;
  const most_popular_repos_data = most_popular_repos.data.user.topRepositories.edges.map((edge) => edge.node);
- const user_followers = most_popular_repos.data.user.followers.totalCount;
- const user_starred_repos = most_popular_repos.data.user.starredRepositories.totalCount;
- const user_stars = public_repos.data.user.repositories.edges.map((edge) => edge.node.stargazerCount).reduce((a, b) => a + b, 0);
- const user_forks = public_repos.data.user.repositories.edges.map((edge) => edge.node.forkCount).reduce((a, b) => a + b, 0);
+
  return {
   props: {
    repositories: {
     public_repos_data,
     private_repos_data,
     most_popular_repos_data,
-   },
-   user: {
-    user_followers,
-    user_starred_repos,
-    user_stars,
-    user_forks,
    },
   },
   revalidate: 60,
