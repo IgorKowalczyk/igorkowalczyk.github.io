@@ -67,55 +67,18 @@ export default function Main({ repositories }) {
          </div>
          {_User ? (
           user_data && (
-           <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
+           <div className="min-h-[200px] p-4">
             <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
              →
-            </span>{" "}
+            </span>
             <span className="font-semibold text-[#66e777]" aria-hidden="true">
-             ~/{header.code.default.user}
-            </span>{" "}
+             {" "}
+             ~/{header.code.default.user}{" "}
+            </span>
             <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
              $
-            </span>{" "}
-            <span className="italic" aria-label={`list github account ${social.github.username}`}>
-             list github --user=
-             <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
-              <>"{social.github.username}"</>
-             </Link>
             </span>
-            <span className="leading-6">
-             <div>
-              <span aria-hidden="true"> + </span>
-              <span className="font-semibold">{user_data.user_public_repositories_count} Open Source</span> {user_data.user_public_repositories_count > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(user_data.user_public_repositories_disk_usage * 1000)} )
-             </div>
-             <div>
-              <span aria-hidden="true"> - </span>
-              <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
-             </div>
-            </span>
-            {header.code.lines.map((line, index) => (
-             <div key={index}>
-              <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-               →
-              </span>{" "}
-              <span className="font-semibold text-[#66e777]" aria-hidden="true">
-               ~/{line.user}
-              </span>{" "}
-              <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
-              <div className="leading-6">{line.response}</div>
-             </div>
-            ))}
-            <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-             →
-            </span>{" "}
-            <span className="font-semibold text-[#66e777]" aria-hidden="true">
-             ~/{header.code.default.user}
-            </span>{" "}
-            <span className="italic">
-             <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-              $
-             </span>
-            </span>
+            <span className="italic">Loading...</span>
            </div>
           )
          ) : (
@@ -127,9 +90,10 @@ export default function Main({ repositories }) {
             {" "}
             ~/{header.code.default.user}{" "}
            </span>
-           <span className="font-semibold italic text-slate-700 duration-200 selection:relative after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+           <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
             $
-           </span>
+           </span>{" "}
+           <span className="italic">Loading data...</span>
           </div>
          )}
         </div>
