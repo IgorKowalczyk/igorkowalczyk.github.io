@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export function Contact(props) {
- const [email, setEmail] = useState(String);
- const [name, setName] = useState(String);
- const [message, setMessage] = useState(String);
- const [success, setSuccess] = useState(String);
- const [error, setError] = useState(String);
+ const [email, setEmail] = useState("");
+ const [name, setName] = useState("");
+ const [message, setMessage] = useState("");
+ const [success, setSuccess] = useState("");
+ const [error, setError] = useState("");
 
  const handleSubmit = async (e) => {
   e.preventDefault();
