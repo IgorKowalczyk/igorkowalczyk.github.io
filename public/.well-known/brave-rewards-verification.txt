@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: igorkowalczyk.dev
-Token: c981f53b4b23abdb429c7ffe3e1ea1e4f7235f928425171b5f494be0fa49f1f5
+Token: f701a9c65480470e70ae03da6f694413328f67efd32468f787be0f01f0c63e46

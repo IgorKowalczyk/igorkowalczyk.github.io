@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { version } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, version } from "react";
 import { footer } from "@/config";
+import Link from "next/link";
 
 export function Footer() {
  const [appVersion, setAppVersion] = useState();
