@@ -35,3 +35,7 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# Other files
+sitemap.xml
+feed.xml
