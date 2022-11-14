@@ -54,6 +54,7 @@ module.exports = {
    backgroundImage: {
     "main-dark": "linear-gradient(180deg, rgb(4, 13, 33) 84%, rgb(13, 25, 48) 100%)",
     "main-white": "linear-gradient(180deg, rgb(255 255 255) 84%, rgb(233, 243, 255) 100%)",
+    "main-gradient": "radial-gradient(25% 90% at 50% 100%, #0086f51c 0%, transparent 100%),radial-gradient(25% 25% at 20% 70%, #0086f533 0%, transparent 97%)",
    },
    backgroundSize: {
     6: "24px",

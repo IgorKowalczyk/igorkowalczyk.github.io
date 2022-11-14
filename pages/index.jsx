@@ -33,7 +33,7 @@ export default function Main({ repositories }) {
   <Container title={`${meta.title} - Full-stack developer`}>
    <div id="cards">
     <div className="bg-cover bg-fixed bg-right">
-     <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#336FEF40_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#336FEF2B_301.88deg,transparent_1turn)] blur-[160px] duration-200 will-change-contents dark:bg-[conic-gradient(from_230.29deg_at_51.63%_52.16%,#0086F526_0deg,transparent_67.5deg,transparent_198.75deg,transparent_251.25deg,#0086F517_301.88deg,transparent_1turn)]"></div>
+     <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
      <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
       <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
        <div className="md:col-span-3">
