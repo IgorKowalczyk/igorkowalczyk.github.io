@@ -24,6 +24,6 @@ jobs:
       node-version: 16
       cache: "npm"
    - name: 🚀 Install dependencies
-     run: npm i --legacy-peer-deps
+     run: npm ci --legacy-peer-deps
    - name: 🚀 Check formatting
      run: "npm run format:check"
