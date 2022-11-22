@@ -10,6 +10,9 @@ module.exports = {
    fontFamily: {
     inter: ["Inter", ...fontFamily.sans],
    },
+   fontWeight: {
+    semibold: 700,
+   },
    typography: (theme) => ({
     DEFAULT: {
      css: {
