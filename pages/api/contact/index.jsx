@@ -6,7 +6,7 @@ export default async function handler(req, res) {
  if (!email) {
   return res.status(400).json({ error: true, message: "Please enter your email address!" });
  }
- if(typeof email != "string") {
+ if (typeof email != "string") {
   return res.status(400).json({ error: true, message: "Email have invaild format!" });
  }
  if (!email.includes("@") || !email.includes(".")) {
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
  if (!name) {
   return res.status(400).json({ error: true, message: "Please enter your name!" });
  }
- if(typeof name != "string") {
+ if (typeof name != "string") {
   return res.status(400).json({ error: true, message: "Name have invaild format!" });
  }
  if (!name.trim() || name.trim().length < 3 || name.trim().length > 20) {
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
  if (!message) {
   return res.status(400).json({ error: true, message: "Please enter a message!" });
  }
- if(typeof message != "string") {
+ if (typeof message != "string") {
   return res.status(400).json({ error: true, message: "Message have invaild format!" });
  }
  if (!message.trim() || message.trim().length < 10 || message.trim().length > 500) {
