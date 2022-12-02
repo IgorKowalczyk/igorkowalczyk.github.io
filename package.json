@@ -6,7 +6,7 @@
  "scripts": {
   "start": "next start",
   "dev": "NODE_ENV=development next dev",
-  "build": "next build",
+  "build": "next build && pnpm run postbuild",
   "postbuild": "node ./lib/scripts/generate-sitemap.mjs && node ./lib/scripts/generate-rss.mjs",
   "deploy": "npm run build && npm run start",
   "format": "prettier --write . --ignore-unknown",
