@@ -1,8 +1,9 @@
 # Modules
 node_modules
 
-# Package lock
+# Packages
 pnpm-lock.yaml
+package.json
 
 # Build
 .next
