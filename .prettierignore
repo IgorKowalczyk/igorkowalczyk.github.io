@@ -1,6 +1,9 @@
 # Modules
 node_modules
 
+# Package lock
+pnpm-lock.yaml
+
 # Build
 .next
 .vercel
