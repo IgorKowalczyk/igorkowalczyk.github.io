@@ -20,7 +20,7 @@ export default function NavPopover(props) {
            <CodeBracketIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
           </div>
           <div className="ml-4">
-           <p className="text-sm font-medium text-gray-900 dark:text-white">All my projects</p>
+           <p className="text-sm font-medium text-gray-900 dark:text-white">My Github profile</p>
            <p className="text-sm text-gray-500 dark:text-gray-400">Web development, Discord Bots, and more</p>
           </div>
          </Link>

@@ -54,14 +54,14 @@ export const nav = {
    title: "My work",
   },
   {
-   href: "/photography/",
-   title: "Photography",
+   href: "/blog/",
+   title: "Blog",
   },
  ],
  right: [
   {
-   href: "/blog/",
-   title: "Blog",
+   href: "/photography/",
+   title: "Photography",
   },
   {
    href: "/discord/",
