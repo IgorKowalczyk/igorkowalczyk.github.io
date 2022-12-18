@@ -18,7 +18,7 @@ export default function Main() {
  const { data: _Repos } = SWR("/api/github/repo/popular");
  const repos_data = _Repos ? _Repos : null;
 
- useEffect(() => {
+ /*useEffect(() => {
   if (typeof window !== "undefined" && repos_data) {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
@@ -28,7 +28,7 @@ export default function Main() {
     }
    };
   }
- }, [repos_data]);
+ }, [repos_data]);*/
 
  return (
   <Container title={`${meta.title} - Full-stack developer`}>

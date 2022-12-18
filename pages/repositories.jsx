@@ -11,7 +11,7 @@ export default function Gitub_Repos({ props }) {
  const { data: _Repos } = SWR("/api/github/repo/public/50");
  const repos = _Repos ? _Repos : null;
 
- useEffect(() => {
+ /*useEffect(() => {
   if (typeof window !== "undefined" && _Repos) {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
@@ -21,7 +21,7 @@ export default function Gitub_Repos({ props }) {
     }
    };
   }
- }, [_Repos]);
+ }, [_Repos]);*/
 
  return (
   <Container title={`${meta.title} - Github Repositories`}>
