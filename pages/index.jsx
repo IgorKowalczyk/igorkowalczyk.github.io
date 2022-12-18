@@ -4,8 +4,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { meta, header, contact, social, techs } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
-import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
 import { RepoCard } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
@@ -13,12 +11,15 @@ import { Contact } from "@components/elements/Contact";
 import { SWR } from "@lib/swr";
 const Dots = dynamic(() => import("@components/decorations/Dots"));
 
-export default function Main({ repositories }) {
+export default function Main() {
  const { data: _User } = SWR("/api/github/user/info");
  const user_data = _User ? _User : null;
 
+ const { data: _Repos } = SWR("/api/github/repo/popular");
+ const repos_data = _Repos ? _Repos : null;
+
  useEffect(() => {
-  if (typeof window !== "undefined" && repositories && repositories.most_popular_repos_data) {
+  if (typeof window !== "undefined" && repos_data) {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
      const rect = card.getBoundingClientRect();
@@ -27,7 +28,7 @@ export default function Main({ repositories }) {
     }
    };
   }
- }, [repositories]);
+ }, [repos_data]);
 
  return (
   <Container title={`${meta.title} - Full-stack developer`}>
@@ -87,10 +88,6 @@ export default function Main({ repositories }) {
              <div>
               <span aria-hidden="true"> + </span>
               <span className="font-semibold">{user_data.user_public_repositories_count} Open Source</span> {user_data.user_public_repositories_count > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(user_data.user_public_repositories_disk_usage * 1000)} )
-             </div>
-             <div>
-              <span aria-hidden="true"> - </span>
-              <span className="font-semibold">{repositories.private_repos_data.totalCount} Closed Source</span> {repositories.private_repos_data.totalCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(repositories.private_repos_data.totalDiskUsage * 1000)})
              </div>
             </span>
             {header.code.lines.map((line, index) => (
@@ -210,7 +207,12 @@ export default function Main({ repositories }) {
      <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-6-1/2 before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
       <div className="relative">
-       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">{repositories.most_popular_repos_data && repositories.most_popular_repos_data.map((repo) => <RepoCard key={repo.id} {...repo} />)}</div>
+       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+        {repos_data &&
+         repos_data.data.user.repositories.edges.map((repo, index) => {
+          return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
+         })}
+       </div>
        <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
         <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
          <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
@@ -286,128 +288,4 @@ export default function Main({ repositories }) {
    </div>
   </Container>
  );
-}
-
-export async function getStaticProps() {
- const httpLink = createHttpLink({
-  uri: "https://api.github.com/graphql",
- });
-
- const authLink = setContext((_, { headers }) => {
-  return {
-   headers: {
-    ...headers,
-    authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-   },
-  };
- });
-
- const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache({
-   typePolicies: {
-    Query: {
-     fields: {
-      id: {
-       merge: true,
-      },
-     },
-    },
-   },
-  }),
- });
-
- const public_repos = await client.query({
-  query: gql`
-   {
-     user(login: \"${social.github.username}\") {
-      repositories(
-        isFork: false
-        isLocked: false
-        privacy: PUBLIC
-        first: 100
-        orderBy: {field: STARGAZERS, direction: DESC}
-        ownerAffiliations: OWNER
-      ) {
-        totalCount
-        totalDiskUsage
-        edges {
-          node {
-            ... on Repository {
-              stargazerCount
-              id
-              forkCount
-            }
-          }
-        }
-      }
-     }
-   }
-   `,
- });
-
- const private_repos = await client.query({
-  query: gql`
-    {
-      user(login: \"${social.github.username}\") {
-       repositories(
-         isFork: false
-         isLocked: false
-         privacy: PRIVATE
-         first: 100
-         orderBy: {field: STARGAZERS, direction: DESC}
-         ownerAffiliations: OWNER
-       ) {
-         totalCount
-         totalDiskUsage
-       }
-      }
-    }
-    `,
- });
-
- const most_popular_repos = await client.query({
-  query: gql`
-  {
-    user(login: \"${social.github.username}\") {
-      topRepositories(first: 6, orderBy: {field: STARGAZERS, direction: DESC}) {
-       edges {
-          node {
-            ... on Repository {
-              name
-              id
-              url
-              owner {
-                login
-              }
-              description
-              isArchived
-              forkCount
-              stargazerCount
-              primaryLanguage {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`,
- });
- const public_repos_data = public_repos.data.user.repositories;
- const private_repos_data = private_repos.data.user.repositories;
- const most_popular_repos_data = most_popular_repos.data.user.topRepositories.edges.map((edge) => edge.node);
-
- return {
-  props: {
-   repositories: {
-    public_repos_data,
-    private_repos_data,
-    most_popular_repos_data,
-   },
-  },
-  revalidate: 60,
- };
 }

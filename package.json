@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.2",
-    "@headlessui/react": "^1.7.5",
+    "@headlessui/react": "^1.7.7",
     "@headlessui/tailwindcss": "^0.1.2",
     "@heroicons/react": "^2.0.13",
     "@next/font": "13.0.7",
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@igorkowalczyk/is-browser": "^1.0.1",
-    "@next/bundle-analyzer": "^13.0.6",
+    "@next/bundle-analyzer": "^13.0.7",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "ajv": "^8.11.2",
@@ -60,7 +60,7 @@
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
     "eslint-config-prettier": "^8.5.0",
-    "globby": "^13.1.2",
+    "globby": "^13.1.3",
     "lodash": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.6",
     "mini-svg-data-uri": "^1.4.4",
@@ -71,6 +71,7 @@
     "tailwindcss": "^3.2.4",
     "tailwindcss-text-fill": "^0.2.0",
     "terser-webpack-plugin": "^5.3.6",
+    "typescript": "^4.9.4",
     "webpack": "^5.75.0"
   },
   "browserslist": [

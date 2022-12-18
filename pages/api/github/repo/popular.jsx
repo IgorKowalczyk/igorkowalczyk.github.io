@@ -23,40 +23,38 @@ const info = async (req, res) => {
 
  const most_popular_repos = await client.query({
   query: gql`
-  {
-    user(login: \"${social.github.username}\") {
-      topRepositories(first: 6, orderBy: {field: STARGAZERS, direction: DESC}) {
-       edges {
-          node {
-            ... on Repository {
-              name
-              id
-              url
-              owner {
-                login
-              }
-              description
-              isArchived
-              forkCount
-              stargazerCount
-              primaryLanguage {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-      ... on User {
-        followers {
-          totalCount
-        }
-        starredRepositories {
-          totalCount
-        }
-      }
-    }
-  }
+    {
+     user(login: \"${social.github.username}\") {
+       repositories(
+         isFork: false
+         isLocked: false
+         privacy: PUBLIC
+         first: 6
+         orderBy: {field: STARGAZERS, direction: DESC}
+         ownerAffiliations: OWNER
+       ) {
+         edges {
+           node {
+             ... on Repository {
+               name
+               url
+               owner {
+                 login
+               }
+               description
+               isArchived
+               forkCount
+               stargazerCount
+               primaryLanguage {
+                 name
+                 color
+               }
+             }
+           }
+         }
+       }
+     }
+   }
 `,
  });
 
