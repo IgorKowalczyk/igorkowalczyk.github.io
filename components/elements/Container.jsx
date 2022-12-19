@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { meta as head_meta, social } from "@/config";
+import { meta as headMeta, social } from "@/config";
 import { Nav } from "@components/elements/Nav";
 import { Footer } from "@components/elements/Footer";
 import Head from "next/head";
@@ -9,7 +9,7 @@ export function Container(props) {
  const { children, ...customMeta } = props;
  const router = useRouter();
  const meta = {
-  ...head_meta,
+  ...headMeta,
   ...customMeta,
  };
 

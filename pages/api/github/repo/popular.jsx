@@ -21,7 +21,7 @@ const info = async (req, res) => {
   cache: new InMemoryCache(),
  });
 
- const most_popular_repos = await client.query({
+ const mostPopularRepos = await client.query({
   query: gql`
     {
      user(login: \"${social.github.username}\") {
@@ -58,7 +58,7 @@ const info = async (req, res) => {
 `,
  });
 
- res.status(200).json(most_popular_repos);
+ res.status(200).json(mostPopularRepos);
 };
 
 export default info;
