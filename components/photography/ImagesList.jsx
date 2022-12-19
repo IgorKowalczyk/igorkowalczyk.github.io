@@ -4,7 +4,7 @@ import { parseISO, format } from "date-fns";
 import { BlurPreview } from "@components/elements/BlurImage";
 
 export function ListElement({ title, description, slug, publishedAt, index, preview, count }) {
- const prepared_preview = JSON.parse(preview.replaceAll("'", '"'));
+ const preparedPreview = JSON.parse(preview.replaceAll("'", '"'));
 
  return (
   <Link href={`/photography/${slug}`} className="w-full">
@@ -21,12 +21,12 @@ export function ListElement({ title, description, slug, publishedAt, index, prev
      </time>
     </header>
     <p className=" font-inter text-base font-normal text-slate-600 dark:text-slate-400">{description}</p>
-    {preview && prepared_preview.length > 0 && (
+    {preview && preparedPreview.length > 0 && (
      <div className="relative mb-2 flex -space-x-4 pt-2 group-hover:-space-x-3">
-      {prepared_preview.map((image, index) => (
+      {preparedPreview.map((image, index) => (
        <BlurPreview key={`${index}-image-prev`} image={image} />
       ))}
-      {count - prepared_preview.length > 0 && <p className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-inter text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+{count - prepared_preview.length}</p>}
+      {count - preparedPreview.length > 0 && <p className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#edeeef] bg-[#edeeef] font-inter text-xs font-medium text-gray-600 duration-200 group-hover:border-[#f6f6f7] group-hover:bg-[#f0eff0] motion-reduce:transition-none dark:border-[#343c4d] dark:bg-[#2b3342] dark:text-gray-300 dark:group-hover:border-[#4a5367] dark:group-hover:bg-[#343c4d]">+{count - preparedPreview.length}</p>}
      </div>
     )}
     <p className="inline-flex font-inter  text-sm font-semibold text-[#1491ff]">Show more</p>

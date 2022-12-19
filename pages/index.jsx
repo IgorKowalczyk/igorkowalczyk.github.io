@@ -1,7 +1,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { meta, header, contact, social, techs } from "@/config";
 import { ConvertBytes } from "@lib/convertBytes";
 import { RepoCard } from "@components/elements/RepoCard";
@@ -13,13 +13,13 @@ const Dots = dynamic(() => import("@components/decorations/Dots"));
 
 export default function Main() {
  const { data: _User } = SWR("/api/github/user/info");
- const user_data = _User ? _User : null;
+ const userData = _User ? _User : null;
 
  const { data: _Repos } = SWR("/api/github/repo/popular");
- const repos_data = _Repos ? _Repos : null;
+ const reposData = _Repos ? _Repos : null;
 
  /*useEffect(() => {
-  if (typeof window !== "undefined" && repos_data) {
+  if (typeof window !== "undefined" && reposData) {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
      const rect = card.getBoundingClientRect();
@@ -28,7 +28,7 @@ export default function Main() {
     }
    };
   }
- }, [repos_data]);*/
+ }, [reposData]);*/
 
  return (
   <Container title={`${meta.title} - Full-stack developer`}>
@@ -67,7 +67,7 @@ export default function Main() {
           </div>
          </div>
          {_User ? (
-          user_data && (
+          userData && (
            <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
             <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
              →
@@ -87,7 +87,7 @@ export default function Main() {
             <span className="leading-6">
              <div>
               <span aria-hidden="true"> + </span>
-              <span className="font-semibold">{user_data.user_public_repositories_count} Open Source</span> {user_data.user_public_repositories_count > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(user_data.user_public_repositories_disk_usage * 1000)} )
+              <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)} )
              </div>
             </span>
             {header.code.lines.map((line, index) => (
@@ -146,14 +146,14 @@ export default function Main() {
           <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
           </svg>{" "}
-          <span>{_User ? user_data && user_data.user_stars : "NaN"} Stars on repositories</span>
+          <span>{_User ? userData && userData.userStars : "NaN"} Stars on repositories</span>
          </>
         </Link>
        </p>
        <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? user_data && user_data.user_starred_repos : "NaN"} Starred repositories</span>
+          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && userData.userStarredRepos : "NaN"} Starred repositories</span>
          </>
         </Link>
        </p>
@@ -163,14 +163,14 @@ export default function Main() {
           <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
           </svg>{" "}
-          <span>{_User ? user_data && user_data.user_forks : "NaN"} Repositories forks</span>
+          <span>{_User ? userData && userData.userForks : "NaN"} Repositories forks</span>
          </>
         </Link>
        </p>
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? user_data && user_data.user_followers : "NaN"} Github Followers</span>
+          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && userData.userFollowers : "NaN"} Github Followers</span>
          </>
         </Link>
        </p>
@@ -208,8 +208,8 @@ export default function Main() {
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
       <div className="relative">
        <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
-        {repos_data &&
-         repos_data.data.user.repositories.edges.map((repo, index) => {
+        {reposData &&
+         reposData.data.user.repositories.edges.map((repo) => {
           return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
          })}
        </div>

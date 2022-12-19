@@ -21,7 +21,7 @@ const info = async (req, res) => {
   cache: new InMemoryCache(),
  });
 
- const public_data = await client.query({
+ const publicData = await client.query({
   query: gql`
   {
    user(login: \"${social.github.username}\") {
@@ -58,20 +58,20 @@ const info = async (req, res) => {
     `,
  });
 
- const user_followers = public_data.data.user.followers.totalCount;
- const user_starred_repos = public_data.data.user.starredRepositories.totalCount;
- const user_stars = public_data.data.user.repositories.edges.map((edge) => edge.node.stargazerCount).reduce((a, b) => a + b, 0);
- const user_forks = public_data.data.user.repositories.edges.map((edge) => edge.node.forkCount).reduce((a, b) => a + b, 0);
- const user_public_repositories_count = public_data.data.user.repositories.totalCount;
- const user_public_repositories_disk_usage = public_data.data.user.repositories.totalDiskUsage;
+ const userFollowers = publicData.data.user.followers.totalCount;
+ const userStarredRepos = publicData.data.user.starredRepositories.totalCount;
+ const userStars = publicData.data.user.repositories.edges.map((edge) => edge.node.stargazerCount).reduce((a, b) => a + b, 0);
+ const userForks = publicData.data.user.repositories.edges.map((edge) => edge.node.forkCount).reduce((a, b) => a + b, 0);
+ const userPublicRepositoriesCount = publicData.data.user.repositories.totalCount;
+ const userPublicRepositoriesDiskUsage = publicData.data.user.repositories.totalDiskUsage;
 
  const result = {
-  user_followers,
-  user_starred_repos,
-  user_stars,
-  user_forks,
-  user_public_repositories_count,
-  user_public_repositories_disk_usage,
+  userFollowers,
+  userStarredRepos,
+  userStars,
+  userForks,
+  userPublicRepositoriesCount,
+  userPublicRepositoriesDiskUsage,
  };
 
  res.status(200).json(result);

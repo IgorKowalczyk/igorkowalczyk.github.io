@@ -3,7 +3,7 @@ import { meta } from "@/config";
 import { Container } from "@components/elements/Container";
 const LinkButton = dynamic(() => import("@components/elements/LinkButton"));
 
-export default function not_found() {
+export default function notFound() {
  return (
   <Container title={`${meta.title} - 404`}>
    <div className="-mt-24 flex min-h-screen flex-1 flex-col items-center justify-center px-8">
