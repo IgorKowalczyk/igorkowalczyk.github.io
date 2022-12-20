@@ -90,11 +90,6 @@ const nextConfig = {
     permanent: true,
    },
    {
-    source: "/arc-sw.js",
-    destination: "https://arc.io/arc-sw.js",
-    permanent: true,
-   },
-   {
     source: "/r/:path*",
     destination: "/:path*",
     permanent: true,
