@@ -2,12 +2,12 @@ import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { Router } from "next/router";
 import { GoogleAnalytics } from "@lib/analytics";
+import { Inter } from "@next/font/google";
 import nProgress from "nprogress";
 import "@styles/globals.css";
 import "@styles/progress.css";
 //import "@styles/tippy.css";
 //import "tippy.js/dist/tippy.css";
-import { Inter } from "@next/font/google";
 
 const inter = Inter();
 
