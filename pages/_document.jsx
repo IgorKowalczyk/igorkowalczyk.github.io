@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Arc } from "@components/scripts/Arc";
 // import { Adsense } from "@components/scripts/Adsense";
 
 export default function Document({ props }) {
@@ -16,11 +15,8 @@ export default function Document({ props }) {
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
     <link rel="preconnect" href="https://twemoji.maxcdn.com" crossOrigin="anonymous" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <link rel="dns-prefetch" href="https://twemoji.maxcdn.com" />
-    {process.env.NEXT_PUBLIC_ARC_TOKEN && process.env.NODE_ENV === "production" && <Arc />}
     {/*process.env.NEXT_PUBLIC_GOOGLE_ADSENSE && process.env.NODE_ENV === "production" && <Adsense />*/}
    </Head>
    <body className="bg-main-white dark:bg-main-dark">

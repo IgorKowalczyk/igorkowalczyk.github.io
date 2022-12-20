@@ -12,10 +12,9 @@
 
 ---
 
-## 🖥️ Hosting
+## 🖥️ Hosting with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Figorkowalczyk.github.io&env=GITHUB_ACCESS_TOKEN,DISCORD_WEBHOOK_URL&envDescription=Environment%20Variables%20Docs&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Figorkowalczyk.github.io%23-self-hosting&project-name=portfolio&repo-name=igorkowalczyk-portfolio&demo-title=Example%20deploy&demo-description=Example%20production%20deploy%20from%20Github%20Repository&demo-url=https%3A%2F%2Figorkowalczyk.dev&demo-image=https%3A%2F%2Fi.imgur.com%2FT4VsRuy.png)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/igorkowalczyk/igorkowalczyk.github.io)
 
 ### 🔩 Self Hosting
 
@@ -31,8 +30,8 @@
 
 > **Note**: In `.env` file you can set these **optional** values:
 >
-> - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID
-> - `NEXT_PUBLIC_ARC_TOKEN` - Your [Arc.io CDN](https://arc.io) website token
+> - `HOTJAR_ID` - Your [Hotjar](https://www.hotjar.com) website ID (for analytics)
+> - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID [Not recommended! Use Hotjar instead]
 
 ## ⁉️ Issues
 
