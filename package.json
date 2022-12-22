@@ -50,7 +50,7 @@
     "use-delayed-render": "0.1.0-beta.0"
   },
   "devDependencies": {
-    "@igorkowalczyk/is-browser": "^1.0.1",
+    "@igorkowalczyk/is-browser": "^2.1.2",
     "@next/bundle-analyzer": "^13.0.7",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
