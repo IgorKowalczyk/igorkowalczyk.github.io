@@ -44,6 +44,7 @@ const info = async (req, res) => {
                description
                isArchived
                forkCount
+               id
                stargazerCount
                primaryLanguage {
                  name

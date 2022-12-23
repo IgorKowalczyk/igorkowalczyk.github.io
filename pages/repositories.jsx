@@ -2,7 +2,7 @@ import { SWR } from "@lib/swr";
 import { meta, social } from "@/config";
 import { Container } from "@components/elements/Container";
 import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
-//import { useEffect } from "react";
+import { useEffect } from "react";
 import dynamic from "next/dynamic";
 const Squares = dynamic(() => import("@components/decorations/Squares"));
 const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
@@ -11,8 +11,8 @@ export default function GithubRepositories({ props }) {
  const { data: _Repos } = SWR("/api/github/repo/public/50");
  const repos = _Repos ? _Repos : null;
 
- /*useEffect(() => {
-  if (typeof window !== "undefined" && _Repos) {
+ useEffect(() => {
+  if (typeof window !== "undefined") {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
      const rect = card.getBoundingClientRect();
@@ -21,7 +21,7 @@ export default function GithubRepositories({ props }) {
     }
    };
   }
- }, [_Repos]);*/
+ });
 
  return (
   <Container title={`${meta.title} - Github Repositories`}>

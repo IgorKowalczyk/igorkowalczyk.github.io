@@ -1,9 +1,9 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { meta, header, contact, social, techs } from "@/config";
-import { ConvertBytes } from "@lib/convertBytes";
+import { ConvertBytes, ConvertNumber } from "@lib/utils";
 import { RepoCard } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
@@ -18,7 +18,7 @@ export default function Main() {
  const { data: _Repos } = SWR("/api/github/repo/popular");
  const reposData = _Repos ? _Repos : null;
 
- /*useEffect(() => {
+ useEffect(() => {
   if (typeof window !== "undefined" && reposData) {
    document.getElementById("cards").onmousemove = (e) => {
     for (const card of document.getElementsByClassName("card")) {
@@ -28,7 +28,7 @@ export default function Main() {
     }
    };
   }
- }, [reposData]);*/
+ }, [reposData]);
 
  return (
   <Container title={`${meta.title} - Full-stack developer`}>
@@ -146,14 +146,14 @@ export default function Main() {
           <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
           </svg>{" "}
-          <span>{_User ? userData && userData.userStars : "NaN"} Stars on repositories</span>
+          <span>{_User ? userData && ConvertNumber(userData.userStars) : "NaN"} Stars on repositories</span>
          </>
         </Link>
        </p>
        <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && userData.userStarredRepos : "NaN"} Starred repositories</span>
+          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData &&  ConvertNumber(userData.userStarredRepos) : "NaN"} Starred repositories</span>
          </>
         </Link>
        </p>
@@ -163,14 +163,14 @@ export default function Main() {
           <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
           </svg>{" "}
-          <span>{_User ? userData && userData.userForks : "NaN"} Repositories forks</span>
+          <span>{_User ? userData &&  ConvertNumber(userData.userForks) : "NaN"} Repositories forks</span>
          </>
         </Link>
        </p>
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && userData.userFollowers : "NaN"} Github Followers</span>
+          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData &&  ConvertNumber(userData.userFollowers) : "NaN"} Github Followers</span>
          </>
         </Link>
        </p>
