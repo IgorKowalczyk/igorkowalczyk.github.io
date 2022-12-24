@@ -216,7 +216,7 @@ export default function Main() {
            reposData?.data.user.repositories.edges.map((repo) => {
             return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
            })
-         : Array.from({ length: 20 }).map((_, index) => <RepoCardSkeleton key={index} />)}
+         : Array.from({ length: 6 }).map((_, index) => <RepoCardSkeleton key={index} />)}
        </div>
        <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
         <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
