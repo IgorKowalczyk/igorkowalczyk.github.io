@@ -1,15 +1,15 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useEffect } from "react";
-import { meta, header, contact, social, techs } from "@/config";
+import { meta, header, contact, social } from "@/config";
 import { ConvertBytes, ConvertNumber } from "@lib/utils";
-import { RepoCard } from "@components/elements/RepoCard";
+import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
 import { Container } from "@components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "@components/elements/Contact";
 import { SWR } from "@lib/swr";
-const Dots = dynamic(() => import("@components/decorations/Dots"));
+import sparkles from "/public/assets/svg/sparkles.svg";
+import Dots from "@components/decorations/Dots";
 
 export default function Main() {
  const { data: _User } = SWR("/api/github/user/info");
@@ -17,6 +17,9 @@ export default function Main() {
 
  const { data: _Repos } = SWR("/api/github/repo/popular");
  const reposData = _Repos ? _Repos : null;
+
+ const { data: _Technologies } = SWR("/api/technologies");
+ const technologiesData = _Technologies ? _Technologies : null;
 
  useEffect(() => {
   if (typeof window !== "undefined" && reposData) {
@@ -153,7 +156,7 @@ export default function Main() {
        <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData &&  ConvertNumber(userData.userStarredRepos) : "NaN"} Starred repositories</span>
+          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && ConvertNumber(userData.userStarredRepos) : "NaN"} Starred repositories</span>
          </>
         </Link>
        </p>
@@ -163,14 +166,14 @@ export default function Main() {
           <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
           </svg>{" "}
-          <span>{_User ? userData &&  ConvertNumber(userData.userForks) : "NaN"} Repositories forks</span>
+          <span>{_User ? userData && ConvertNumber(userData.userForks) : "NaN"} Repositories forks</span>
          </>
         </Link>
        </p>
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData &&  ConvertNumber(userData.userFollowers) : "NaN"} Github Followers</span>
+          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && ConvertNumber(userData.userFollowers) : "NaN"} Github Followers</span>
          </>
         </Link>
        </p>
@@ -186,7 +189,7 @@ export default function Main() {
       <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="70" w="134" />
       </span>
-      <Image src="/assets/svg/sparkles.svg" alt="sparkles" width={400} height={100} className="pointer-events-none m-[0_auto] h-auto w-auto animate-pulse" />
+      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="pointer-events-none m-[0_auto] animate-pulse" />
       <h3 className="dark:color-black m-6 mt-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
 
       <div className="prose m-auto px-6 text-center font-inter dark:prose-dark">
@@ -208,10 +211,12 @@ export default function Main() {
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
       <div className="relative">
        <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
-        {reposData &&
-         reposData.data.user.repositories.edges.map((repo) => {
-          return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
-         })}
+        {_Repos
+         ? reposData &&
+           reposData?.data.user.repositories.edges.map((repo) => {
+            return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
+           })
+         : Array.from({ length: 20 }).map((_, index) => <RepoCardSkeleton key={index} />)}
        </div>
        <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
         <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
@@ -240,15 +245,18 @@ export default function Main() {
 
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Technologies I use</h3>
      </div>
-     <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {techs.map((tech, index) => {
-       return (
-        <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
-         <div className="rounded-md">{tech.icon}</div>
-         <span className="font-semibold">{tech.name}</span>
-        </div>
-       );
-      })}
+     <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      {_Technologies
+       ? technologiesData &&
+         technologiesData?.map((tech, index) => {
+          return (
+           <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+            <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
+            <span className="font-semibold">{tech.name}</span>
+           </div>
+          );
+         })
+       : Array.from({ length: 16 }).map((_, index) => <div className="relative mx-auto flex h-12 w-full animate-pulse cursor-pointer rounded-xl bg-zinc-200/[25%] px-4 py-2 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" key={index} />)}
      </div>
      <p className="mt-9 text-center font-inter text-xl font-semibold ">...and many others!</p>
     </section>
@@ -256,7 +264,7 @@ export default function Main() {
     <section id={"contact"}>
      <div className="h-full scroll-mt-20 px-6 py-36 pt-24 lg:px-36">
       <header>
-       <Image src="/assets/svg/sparkles.svg" alt="sparkles" width={400} height={100} className="pointer-events-none m-[0_auto] animate-pulse" />
+       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="pointer-events-none m-[0_auto] animate-pulse" />
        <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
        <p className="py-1 text-center font-inter  text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
       </header>

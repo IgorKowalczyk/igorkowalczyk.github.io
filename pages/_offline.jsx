@@ -1,7 +1,6 @@
-import dynamic from "next/dynamic";
 import { meta } from "@/config";
 import { Container } from "@components/elements/Container";
-const LinkButton = dynamic(() => import("@components/elements/LinkButton"));
+import LinkButton from "@components/elements/LinkButton";
 
 export default function offline() {
  return (

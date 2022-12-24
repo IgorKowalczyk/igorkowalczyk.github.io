@@ -3,11 +3,10 @@ import { meta, social } from "@/config";
 import { Container } from "@components/elements/Container";
 import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
-const Squares = dynamic(() => import("@components/decorations/Squares"));
-const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
+import Squares from "@components/decorations/Squares";
+import GitHubCalendar from "react-github-calendar";
 
-export default function GithubRepositories({ props }) {
+export default function GithubRepositories() {
  const { data: _Repos } = SWR("/api/github/repo/public/50");
  const repos = _Repos ? _Repos : null;
 
