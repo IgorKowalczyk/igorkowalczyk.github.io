@@ -9,6 +9,7 @@ export default async function handler() {
   {
    name: "Next.js",
    icon: "/assets/tech/next.svg",
+   class: "invert-0 dark:invert",
   },
   {
    name: "TailwindCSS",
