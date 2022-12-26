@@ -1,6 +1,6 @@
-import { meta } from "@/config";
-import { Container } from "@components/elements/Container";
-import { Contact } from "@components/elements/Contact";
+import { meta } from "/config";
+import { Container } from "components/elements/Container";
+import { Contact } from "components/elements/Contact";
 
 export default function ContactPage() {
  return (

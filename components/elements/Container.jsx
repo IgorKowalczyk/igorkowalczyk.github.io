@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import { meta as headMeta, social } from "@/config";
-import { Nav } from "@components/elements/Nav";
-import { Footer } from "@components/elements/Footer";
+import { meta as headMeta, social } from "/config";
+import { Nav } from "components/elements/Nav";
+import { Footer } from "components/elements/Footer";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
 

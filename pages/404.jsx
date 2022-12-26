@@ -1,6 +1,6 @@
-import { meta } from "@/config";
-import { Container } from "@components/elements/Container";
-import LinkButton from "@components/elements/LinkButton";
+import { meta } from "/config";
+import { Container } from "components/elements/Container";
+import LinkButton from "components/elements/LinkButton";
 
 export default function notFound() {
  return (

@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { social } from "@/config";
+import { social } from "/config";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Cog8ToothIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";

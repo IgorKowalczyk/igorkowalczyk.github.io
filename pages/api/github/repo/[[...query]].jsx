@@ -1,6 +1,6 @@
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { social } from "@/config";
+import { social } from "/config";
 
 // Type: [private, public]
 // Count: Number of repos to return [min 0, max 50]

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
 import { useState } from "react";
-import { nav } from "@/config";
+import { nav } from "/config";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function MobileNav() {

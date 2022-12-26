@@ -1,9 +1,9 @@
-import { SWR } from "@lib/swr";
-import { meta, social } from "@/config";
-import { Container } from "@components/elements/Container";
-import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
+import { SWR } from "lib/swr";
+import { meta, social } from "/config";
+import { Container } from "components/elements/Container";
+import { RepoCard, RepoCardSkeleton } from "components/elements/RepoCard";
 import { useEffect } from "react";
-import Squares from "@components/decorations/Squares";
+import Squares from "components/decorations/Squares";
 import GitHubCalendar from "react-github-calendar";
 
 export default function GithubRepositories() {

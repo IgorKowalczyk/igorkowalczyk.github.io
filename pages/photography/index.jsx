@@ -1,8 +1,8 @@
-import { Container } from "@components/elements/Container";
-import { ListElement } from "@components/photography/ImagesList";
+import { Container } from "components/elements/Container";
+import { ListElement } from "components/photography/ImagesList";
 import { pick } from "contentlayer/client";
 import { allPhotographies } from "contentlayer/generated";
-import { meta } from "@/config";
+import { meta } from "/config";
 import { useState } from "react";
 
 export default function Photography({ photos }) {

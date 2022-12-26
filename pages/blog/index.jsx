@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Container } from "@components/elements/Container";
-import { ListElement } from "@components/blog/BlogList";
+import { Container } from "components/elements/Container";
+import { ListElement } from "components/blog/BlogList";
 import { pick } from "contentlayer/client";
 import { allBlogs } from "contentlayer/generated";
-import { meta } from "@/config";
+import { meta } from "/config";
 
 export default function Blog({ posts }) {
  const [searchValue, setSearchValue] = useState("");

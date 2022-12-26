@@ -1,13 +1,13 @@
-import MDXComponents from "@/components/MDX/Components";
+import MDXComponents from "components/MDX/Components";
 import Image from "next/image";
 import Link from "next/link";
 import Avatar from "../../public/assets/avatar.png";
-import { Container } from "@components/elements/Container";
+import { Container } from "components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO, format } from "date-fns";
-import { meta, social } from "@/config";
-import { TocItem } from "@components/blog/Toc";
+import { meta, social } from "/config";
+import { TocItem } from "components/blog/Toc";
 
 export default function Post({ post }) {
  const Component = useMDXComponent(post.body.code);

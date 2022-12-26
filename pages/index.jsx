@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
-import { meta, header, contact, social } from "@/config";
-import { ConvertBytes, ConvertNumber } from "@lib/utils";
-import { RepoCard, RepoCardSkeleton } from "@components/elements/RepoCard";
-import { Container } from "@components/elements/Container";
+import { meta, header, contact, social } from "/config";
+import { ConvertBytes, ConvertNumber } from "lib/utils";
+import { RepoCard, RepoCardSkeleton } from "components/elements/RepoCard";
+import { Container } from "components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
-import { Contact } from "@components/elements/Contact";
-import { SWR } from "@lib/swr";
+import { Contact } from "components/elements/Contact";
+import { SWR } from "lib/swr";
 import sparkles from "/public/assets/svg/sparkles.svg";
-import Dots from "@components/decorations/Dots";
+import Dots from "components/decorations/Dots";
 
 export default function Main() {
  const { data: _User } = SWR("/api/github/user/info");

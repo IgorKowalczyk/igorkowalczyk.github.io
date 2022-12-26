@@ -1,6 +1,6 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
-import MDXComponents from "@/components/MDX/Components";
-import { Container } from "@components/elements/Container";
+import MDXComponents from "components/MDX/Components";
+import { Container } from "components/elements/Container";
 import { allOtherPages } from "contentlayer/generated";
 
 export default function Uses({ uses }) {

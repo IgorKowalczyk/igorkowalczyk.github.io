@@ -1,12 +1,12 @@
-import MDXComponents from "@/components/MDX/Components";
+import MDXComponents from "components/MDX/Components";
 import Avatar from "../../public/assets/avatar.png";
 import Image from "next/image";
-import { Container } from "@components/elements/Container";
+import { Container } from "components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allPhotographies } from "contentlayer/generated";
 import { parseISO, format } from "date-fns";
-import { meta } from "@/config";
-import { BlurImage } from "@components/elements/BlurImage";
+import { meta } from "/config";
+import { BlurImage } from "components/elements/BlurImage";
 
 export default function Post({ post }) {
  const Component = useMDXComponent(post.body.code);

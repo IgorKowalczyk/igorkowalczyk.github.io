@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CameraIcon } from "@heroicons/react/24/solid";
 import { parseISO, format } from "date-fns";
-import { BlurPreview } from "@components/elements/BlurImage";
+import { BlurPreview } from "components/elements/BlurImage";
 
 export function ListElement({ title, description, slug, publishedAt, index, preview, count }) {
  const preparedPreview = JSON.parse(preview.replaceAll("'", '"'));

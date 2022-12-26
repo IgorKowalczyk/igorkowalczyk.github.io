@@ -1,5 +1,5 @@
 import { useState, useEffect, version } from "react";
-import { footer } from "@/config";
+import { footer } from "/config";
 import Link from "next/link";
 
 export function Footer() {
