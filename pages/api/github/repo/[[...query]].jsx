@@ -5,7 +5,7 @@ import { social } from "/config";
 // Type: [private, public]
 // Count: Number of repos to return [min 0, max 50]
 
-const info = async (req, res) => {
+export default async function handler(req, res) {
  const { query } = req.query;
  const type = typeof query[0] === "string" ? query[0].toLowerCase() : "";
  const count = typeof query[1] === "string" ? query[1].toLowerCase() : "";
@@ -95,5 +95,3 @@ const info = async (req, res) => {
  const repositories = user.repositories.edges.map((edge) => edge.node);
  res.status(200).json(repositories);
 };
-
-export default info;

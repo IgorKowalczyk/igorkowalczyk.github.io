@@ -2,7 +2,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from "@apollo/client/link/context";
 import { social } from "/config";
 
-const info = async (req, res) => {
+export default async function handler(req, res) {
  const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
  });
@@ -61,5 +61,3 @@ const info = async (req, res) => {
 
  res.status(200).json(mostPopularRepos);
 };
-
-export default info;

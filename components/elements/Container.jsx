@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { meta as headMeta, social } from "/config";
 import { Nav } from "components/elements/Nav";
 import { Footer } from "components/elements/Footer";
+import Script from "next/script";
 import Head from "next/head";
 import Twemoji from "react-twemoji";
 
@@ -34,7 +35,8 @@ export function Container(props) {
     {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
     {meta.date && <meta property="article:published_time" content={meta.date} />}
     {process.env.HOTJAR_ID && (
-     <script
+     <Script
+      id="hotjar"
       dangerouslySetInnerHTML={{
        __html: `
     (function(h,o,t,j,a,r){
