@@ -94,4 +94,4 @@ export default async function handler(req, res) {
  const { user } = data;
  const repositories = user.repositories.edges.map((edge) => edge.node);
  res.status(200).json(repositories);
-};
+}
