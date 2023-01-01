@@ -10,6 +10,7 @@ export default async function handler(req) {
  const title = searchParams.get("title");
  const author = searchParams.get("author");
  const date = searchParams.get("date");
+ const tag = searchParams.get("tag");
  const fontMedium = await fontPoppinsMedium;
  const fontBold = await fontPoppinsBold;
  const fontLight = await fontPoppinsLight;
@@ -72,7 +73,7 @@ export default async function handler(req) {
         color: "white",
        }}
       >
-       Development:
+       {tag || "Development"}:
       </p>
      </div>
      <h1
