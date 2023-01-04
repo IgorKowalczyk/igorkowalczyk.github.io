@@ -1,5 +1,5 @@
 import { ImageResponse } from "@vercel/og";
-import { parseISO } from "../../lib/utils";
+import { parseISO, format } from "date-fns";
 
 const fontPoppinsMedium = fetch(new URL("../../public/fonts/medium.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 const fontPoppinsBold = fetch(new URL("../../public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
@@ -138,7 +138,7 @@ export default async function handler(req) {
        fontWeight: 300,
       }}
      >
-      {date ? parseISO(date) : "January 01, 1970"}
+      {date ? format(parseISO(date), "MMMM dd, yyyy") : "January 01, 1970"}
      </span>
     </div>
    </div>

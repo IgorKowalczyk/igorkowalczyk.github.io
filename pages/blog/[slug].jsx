@@ -5,7 +5,7 @@ import Avatar from "../../public/assets/avatar.png";
 import { Container } from "components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
-import { parseISO } from "../../lib/utils";
+import { parseISO, format } from "date-fns";
 import { meta, social } from "/config";
 import { TocItem } from "components/blog/Toc";
 
@@ -25,8 +25,8 @@ export default function Post({ post }) {
         <div>
          <div className="flex items-center">
           <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
-          <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={new Date(post.publishedAt).toUTCString()}>
-           {post.author} / {parseISO(post.publishedAt)}
+          <time className="ml-2 text-sm text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
+           {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
           </time>
          </div>
         </div>
