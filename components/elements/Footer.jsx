@@ -1,12 +1,8 @@
-import { useState, useEffect, version } from "react";
+import { version } from "react";
 import { footer } from "/config";
 import Link from "next/link";
 
 export function Footer() {
- const [appVersion, setAppVersion] = useState();
- useEffect(() => {
-  setAppVersion(process.env.VERSION);
- }, [appVersion]);
 
  return (
   <footer className="mt-12 w-full py-10 px-4 md:px-8 lg:px-16">
@@ -17,7 +13,7 @@ export function Footer() {
        {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
        <Link href="/" legacyBehavior>
         <p className="flex cursor-pointer items-center font-inter text-2xl font-semibold">
-         Igor Kowalczyk<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 mr-2 rounded-lg bg-black/[7%] px-2 py-1 text-xs dark:bg-white/10">v{appVersion}</span>
+         Igor Kowalczyk<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 mr-2 rounded-lg bg-black/[7%] px-2 py-1 text-xs dark:bg-white/10">v{process.env.VERSION}</span>
         </p>
        </Link>
       </div>
