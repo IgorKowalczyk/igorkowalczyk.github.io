@@ -24,7 +24,6 @@
     "@vercel/analytics": "0.1.6",
     "@vercel/og": "0.0.21",
     "contentlayer": "0.2.9",
-    "date-fns": "2.29.3",
     "dotenv": "16.0.3",
     "github-slugger": "2.0.0",
     "graphql": "16.6.0",

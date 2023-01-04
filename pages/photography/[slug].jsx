@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Container } from "components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allPhotographies } from "contentlayer/generated";
-import { parseISO, format } from "date-fns";
+import { parseISO } from "../../lib/utils";
 import { meta } from "/config";
 import { BlurImage } from "components/elements/BlurImage";
 
@@ -22,8 +22,8 @@ export default function Post({ post }) {
        </h1>
        <div className="flex items-center font-inter">
         <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
-        <time className="ml-2 text-base text-gray-700 dark:text-gray-300" dateTime={parseISO(post.publishedAt)}>
-         {post.author} / {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
+        <time className="ml-2 text-base text-gray-700 dark:text-gray-300" dateTime={new Date(post.publishedAt).toUTCString()}>
+         {post.author} / {parseISO(post.publishedAt)}
         </time>
        </div>
       </div>
