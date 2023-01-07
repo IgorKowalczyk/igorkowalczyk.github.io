@@ -12,7 +12,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.8
   '@tippyjs/react': 4.2.6
   '@vercel/analytics': 0.1.6
-  '@vercel/og': 0.0.21
+  '@vercel/og': 0.0.22
   ajv: 8.12.0
   autoprefixer: 10.4.13
   compression-webpack-plugin: 10.0.0
@@ -65,7 +65,7 @@ dependencies:
   '@next/font': 13.1.1
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@vercel/analytics': 0.1.6_react@18.2.0
-  '@vercel/og': 0.0.21
+  '@vercel/og': 0.0.22
   contentlayer: 0.2.9
   dotenv: 16.0.3
   github-slugger: 2.0.0
@@ -1168,12 +1168,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vercel/og/0.0.21:
-    resolution: {integrity: sha512-WgMahG5c8UM7xtn/mT+ljUpDMSDnSlu8AXL52JtTwxb1odrd0GWqZg2N1X38wulPj+sCccNpDdFmmAuw0GLc+Q==}
+  /@vercel/og/0.0.22:
+    resolution: {integrity: sha512-HJjYfjpuNVnxwH7GnEv5QxzdIV4xytjY2RkVmhaOAKlms4X071WSPR9Jp6vjZ3Zmjz0tKSiRnrT5uN/PkW/q9Q==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.0.0-alpha.4
-      satori: 0.0.44
+      satori: 0.0.45
       yoga-wasm-web: 0.1.2
     dev: false
 
@@ -4968,8 +4968,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /satori/0.0.44:
-    resolution: {integrity: sha512-WKUxXC2qeyno6J3ucwwLozPL6j1HXOZiN5wIUf7iqAhlx1RUC/6ePIKHi7iPc3Cy6DYuZcJriZXxXkSdo2FQHg==}
+  /satori/0.0.45:
+    resolution: {integrity: sha512-jF7AAK5ddZQVE6r6gTG07YxOvhldev0wBrFqBXRNbPH/mEy15gfIqA4xjGfVHczcGYZvY/VWmKri6DzRJF8cgQ==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
