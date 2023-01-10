@@ -12,7 +12,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.8
   '@tippyjs/react': 4.2.6
   '@vercel/analytics': 0.1.6
-  '@vercel/og': 0.0.24
+  '@vercel/og': 0.0.25
   ajv: 8.12.0
   autoprefixer: 10.4.13
   compression-webpack-plugin: 10.0.0
@@ -65,7 +65,7 @@ dependencies:
   '@next/font': 13.1.1
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@vercel/analytics': 0.1.6_react@18.2.0
-  '@vercel/og': 0.0.24
+  '@vercel/og': 0.0.25
   contentlayer: 0.2.9
   dotenv: 16.0.3
   github-slugger: 2.0.0
@@ -1164,8 +1164,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vercel/og/0.0.24:
-    resolution: {integrity: sha512-iFyX0wuHIAjfrZfbCOWj9zSVI1SjwbTc0C8lBE2t/Dg5Zys7JP/NIt5g9cxvOuOII3PjTdPI/jB4rgJLyVRLiA==}
+  /@vercel/og/0.0.25:
+    resolution: {integrity: sha512-Zirui1w0CjiOqHrMTOIDptghiEyxhiyVEdgUnJAeQYaXYrtQPUWLDWBIh5J+xHxIstWhT0C6DIw0iMGfHSXTNQ==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.0.0-alpha.4
