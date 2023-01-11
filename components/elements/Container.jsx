@@ -50,9 +50,7 @@ export function Container(props) {
     )}
    </Head>
    <Nav />
-   <div className="mt-24 flex min-h-screen flex-col antialiased">
-    {children}
-   </div>
+   <div className="mt-24 flex min-h-screen flex-col antialiased">{children}</div>
    <Footer />
   </>
  );
