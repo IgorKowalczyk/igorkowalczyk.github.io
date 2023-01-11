@@ -3,7 +3,6 @@ import { meta as headMeta, social } from "/config";
 import { Nav } from "components/elements/Nav";
 import { Footer } from "components/elements/Footer";
 import Head from "next/head";
-import Twemoji from "react-twemoji";
 
 export function Container(props) {
  const { children, ...customMeta } = props;
@@ -51,9 +50,7 @@ export function Container(props) {
     )}
    </Head>
    <Nav />
-   <div className="mt-24 flex min-h-screen flex-col antialiased">
-    <Twemoji options={{ className: "twemoji" }}>{children}</Twemoji>
-   </div>
+   <div className="mt-24 flex min-h-screen flex-col antialiased">{children}</div>
    <Footer />
   </>
  );
