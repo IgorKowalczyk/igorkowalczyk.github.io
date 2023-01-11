@@ -31,7 +31,6 @@
 > **Note**: In `.env` file you can set these **optional** values:
 >
 > - `HOTJAR_ID` - Your [Hotjar](https://www.hotjar.com) website ID (for analytics)
-> - `NEXT_PUBLIC_GA_WEBSITE_ID` - Your [Google Analytics 4](https://analytics.google.com) website ID [Not recommended! Use Hotjar instead]
 
 ## ⁉️ Issues
 
