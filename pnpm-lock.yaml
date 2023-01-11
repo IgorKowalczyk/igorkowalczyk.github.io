@@ -37,7 +37,6 @@ specifiers:
   prettier-plugin-tailwindcss: 0.2.1
   react: 18.2.0
   react-dom: 18.2.0
-  react-ga4: 1.4.1
   react-github-calendar: 3.4.0
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
@@ -76,7 +75,6 @@ dependencies:
   preact: 10.11.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-ga4: 1.4.1
   react-github-calendar: 3.4.0_biqbaboplfbrettd7655fr4n2y
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
@@ -4643,10 +4641,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-ga4/1.4.1:
-    resolution: {integrity: sha512-ioBMEIxd4ePw4YtaloTUgqhQGqz5ebDdC4slEpLgy2sLx1LuZBC9iYCwDymTXzcntw6K1dHX183ulP32nNdG7w==}
     dev: false
 
   /react-github-calendar/3.4.0_biqbaboplfbrettd7655fr4n2y:

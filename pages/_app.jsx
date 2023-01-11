@@ -1,7 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { Router } from "next/router";
-import { GoogleAnalytics } from "lib/analytics";
 import { Inter } from "@next/font/google";
 import nProgress from "nprogress";
 import "styles/globals.css";
@@ -16,7 +15,6 @@ Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
 
 export default function App({ Component, pageProps, router }) {
- process.env.NODE_ENV === "production" ? GoogleAnalytics() : null;
  return (
   <>
    <ThemeProvider attribute="class" themes={["light", "dark"]} defaultTheme="system">
