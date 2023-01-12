@@ -2,7 +2,6 @@ const { withContentlayer } = require("next-contentlayer");
 const CompressionPlugin = require("compression-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const { withPlaiceholder } = require("@plaiceholder/next");
 const webpack = require("webpack");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -66,19 +65,6 @@ const nextConfig = {
      },
     ],
    },
-   {
-    source: "/(.*).json",
-    headers: [
-     {
-      key: "Content-Type",
-      value: "application/json",
-     },
-     {
-      key: "Cache-Control",
-      value: "public, max-age=604800, must-revalidate",
-     },
-    ],
-   },
   ];
  },
  async redirects() {
@@ -137,7 +123,7 @@ const nextConfig = {
 };
 
 module.exports = () => {
- const plugins = [withContentlayer, withPlaiceholder, withBundleAnalyzer];
+ const plugins = [withContentlayer, withBundleAnalyzer];
  const config = plugins.reduce((acc, next) => next(acc), {
   ...nextConfig,
  });
