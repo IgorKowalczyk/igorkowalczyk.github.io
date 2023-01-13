@@ -49,7 +49,3 @@ export default function GithubRepositories() {
   </Container>
  );
 }
-
-//<div className="overflow-hidden fixed top-full left-full z-[-1] -translate-x-1/2 -translate-y-full transform">
-//<Squares w="404" h="404" />
-//</div>
