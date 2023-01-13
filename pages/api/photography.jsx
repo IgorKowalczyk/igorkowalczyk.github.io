@@ -10,7 +10,7 @@ export default async function handler(req, res) {
    path: "/" + path,
   };
  });
-
+ photos.sort((a, b) => a.id - b.id);
  res.setHeader("Cache-Control", "s-maxage=604800, stale-while-revalidate");
  res.status(200).json(photos);
 }

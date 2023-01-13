@@ -1,10 +1,10 @@
 import { Container } from "components/elements/Container";
 import { meta } from "/config";
-import Image from "next/image";
 import Link from "next/link";
 import { BlurImage } from "components/elements/BlurImage";
+import { globby } from "globby";
 
-export default function Photography({ results }) {
+export default function Photography({ photos }) {
  return (
   <Container title={`${meta.title} - Photography`}>
    <div className="mx-auto mb-16 flex flex-col items-start justify-center px-8">
@@ -15,11 +15,15 @@ export default function Photography({ results }) {
     <p className="pb-6 font-inter text-slate-600 dark:text-slate-400">I love traveling, I love taking pictures, from every trip I bring back hundreds of different photos. Here you can browse through the best ones</p>
 
     <div className="w-full columns-2xs gap-6 pt-2">
-     {results.map((result, id) => (
-      <Link key={id} href={`${result.path}`} className="after:content after:shadow-highlight group relative mb-5 block w-full cursor-zoom-in rounded-lg bg-slate-100 bg-cover after:pointer-events-none after:absolute after:inset-0 after:rounded-lg dark:bg-slate-800">
-       <BlurImage src={result.path} />
-      </Link>
-     ))}
+     {!photos || photos.length === 0 ? (
+      <p className="mb-4 font-inter text-rose-500">No posts found!</p>
+     ) : (
+      photos.map((result, id) => (
+       <Link key={id} href={`${result.path}`} className="after:content after:shadow-highlight group relative mb-5 block w-full cursor-zoom-in rounded-lg bg-slate-100 bg-cover after:pointer-events-none after:absolute after:inset-0 after:rounded-lg dark:bg-slate-800">
+        <BlurImage src={result.path} alt={result.id + "image"} />
+       </Link>
+      ))
+     )}
     </div>
    </div>
   </Container>
@@ -27,13 +31,26 @@ export default function Photography({ results }) {
 }
 
 export async function getStaticProps() {
- const results = await fetch("http://localhost:3000/api/photography").then((res) => res.json());
+ const files = await globby("public/photography/*.{jpg,png,jpeg}");
+ const photos = files.map((file) => {
+  const name = parseInt(file.split("/").slice(-1)[0].split(".")[0]);
+  const path = file.split("/").slice(1).join("/");
+  return {
+   id: name,
+   path: "/" + path,
+  };
+ });
+ photos.sort((a, b) => a.id - b.id);
 
- results.sort((a, b) => b.id - a.id).reverse();
+ if (!photos) {
+  return {
+   photos: [],
+  };
+ }
 
  return {
   props: {
-   results,
+   photos,
   },
  };
 }
