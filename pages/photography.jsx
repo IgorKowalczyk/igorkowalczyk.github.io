@@ -2,7 +2,7 @@ import { Container } from "components/elements/Container";
 import { meta } from "/config";
 import Link from "next/link";
 import { BlurImage } from "components/elements/BlurImage";
-import { globby } from "globby";
+import { getPhotography } from "lib/functions";
 
 export default function Photography({ photos }) {
  return (
@@ -31,16 +31,7 @@ export default function Photography({ photos }) {
 }
 
 export async function getStaticProps() {
- const files = await globby("public/photography/*.{jpg,png,jpeg}");
- const photos = files.map((file) => {
-  const name = parseInt(file.split("/").slice(-1)[0].split(".")[0]);
-  const path = file.split("/").slice(1).join("/");
-  return {
-   id: name,
-   path: "/" + path,
-  };
- });
- photos.sort((a, b) => a.id - b.id);
+ const photos = await getPhotography();
 
  if (!photos) {
   return {
