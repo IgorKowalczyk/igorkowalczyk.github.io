@@ -1,4 +1,4 @@
-import { getPhotography } from "lib/utils";
+import { getPhotography } from "lib/functions";
 
 export default async function handler(req, res) {
  const photos = await getPhotography();

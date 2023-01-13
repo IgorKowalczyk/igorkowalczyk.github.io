@@ -2,7 +2,7 @@ import { Container } from "components/elements/Container";
 import { meta } from "/config";
 import Link from "next/link";
 import { BlurImage } from "components/elements/BlurImage";
-import { getPhotography } from "lib/utils";
+import { getPhotography } from "lib/functions";
 
 export default function Photography({ photos }) {
  return (
@@ -32,7 +32,7 @@ export default function Photography({ photos }) {
 
 export async function getStaticProps() {
  const photos = await getPhotography();
- 
+
  if (!photos) {
   return {
    photos: [],

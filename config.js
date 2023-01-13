@@ -179,7 +179,8 @@ export const footer = {
  ],
 };
 
-export const technologies = [{
+export const technologies = [
+ {
   name: "React",
   icon: "/assets/tech/react.svg",
  },
@@ -283,4 +284,4 @@ export const technologies = [{
   name: "Eslint",
   icon: "/assets/tech/eslint.svg",
  },
-]
+];

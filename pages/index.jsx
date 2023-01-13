@@ -246,16 +246,14 @@ export default function Main() {
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Technologies I use</h3>
      </div>
      <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-
-         { technologies.map((tech, index) => {
-          return (
-           <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
-            <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
-            <span className="font-semibold">{tech.name}</span>
-           </div>
-          );
-         })
-          }
+      {technologies.map((tech, index) => {
+       return (
+        <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+         <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
+         <span className="font-semibold">{tech.name}</span>
+        </div>
+       );
+      })}
      </div>
      <p className="mt-9 text-center font-inter text-xl font-semibold ">...and many others!</p>
     </section>
