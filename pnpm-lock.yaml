@@ -46,7 +46,7 @@ specifiers:
   remark-gfm: 3.0.1
   rss: 1.2.2
   sharp: 0.31.3
-  swr: 2.0.0
+  swr: 2.0.1
   tailwind-gradient-mask-image: 1.0.0
   tailwindcss: 3.2.4
   tailwindcss-text-fill: 0.2.0
@@ -84,7 +84,7 @@ dependencies:
   remark-gfm: 3.0.1
   rss: 1.2.2
   sharp: 0.31.3
-  swr: 2.0.0_react@18.2.0
+  swr: 2.0.1_react@18.2.0
   use-delayed-render: 0.1.0-beta.0_react@18.2.0
 
 devDependencies:
@@ -5388,8 +5388,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /swr/2.0.0_react@18.2.0:
-    resolution: {integrity: sha512-IhUx5yPkX+Fut3h0SqZycnaNLXLXsb2ECFq0Y29cxnK7d8r7auY2JWNbCW3IX+EqXUg3rwNJFlhrw5Ye/b6k7w==}
+  /swr/2.0.1_react@18.2.0:
+    resolution: {integrity: sha512-6z4FpS9dKAay7axedlStsPahEw25nuMlVh4GHkuPpGptbmEEP8v/+kr0GkAE/7ErUs25U2VFOnZQz3AWfkmXdw==}
     engines: {pnpm: '7'}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
