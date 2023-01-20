@@ -7,6 +7,31 @@ export default async function handler(req) {
  const { searchParams } = new URL(req.url.replaceAll("&amp%3B", "&"));
  const title = searchParams.get("title");
  const date = searchParams.get("date");
+
+ if (title && title.length > 50)
+  return new Response("Title is too long. Please keep it under 50 characters.", {
+   status: 400,
+   headers: {
+    "Content-Type": "text/json",
+   },
+  });
+
+ if (date && !new Date(date).getTime())
+  return new Response("Date is invalid. Please use a valid date.", {
+   status: 400,
+   headers: {
+    "Content-Type": "text/json",
+   },
+  });
+
+ if (date && new Date(date).getTime() > new Date().getTime())
+  return new Response("Date is invalid. Please use a date in the past.", {
+   status: 400,
+   headers: {
+    "Content-Type": "text/json",
+   },
+  });
+
  const fontBold = await fontPoppinsBold;
 
  return new ImageResponse(
