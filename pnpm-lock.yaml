@@ -5,7 +5,7 @@ specifiers:
   '@headlessui/react': 1.7.7
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.13
-  '@igorkowalczyk/is-browser': 2.1.2
+  '@igorkowalczyk/is-browser': 3.0.0
   '@next/bundle-analyzer': 13.1.4
   '@next/font': 13.1.4
   '@tailwindcss/aspect-ratio': 0.4.2
@@ -88,7 +88,7 @@ dependencies:
   use-delayed-render: 0.1.0-beta.0_react@18.2.0
 
 devDependencies:
-  '@igorkowalczyk/is-browser': 2.1.2_tailwindcss@3.2.4
+  '@igorkowalczyk/is-browser': 3.0.0_tailwindcss@3.2.4
   '@next/bundle-analyzer': 13.1.4
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -651,11 +651,11 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@igorkowalczyk/is-browser/2.1.2_tailwindcss@3.2.4:
-    resolution: {integrity: sha512-qbBae9oj2x/wy10Hq+XRmt/n9pPdFpNSQBxtrldV+1hCLNav6uSO83ug3fkhbEJnM79EiNVjWaNktesZMxDWkQ==}
+  /@igorkowalczyk/is-browser/3.0.0_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-90HHmYxNg4S9zR8COlc56mtFxG8Q5qdPJ1mWmWx2xvtySZdOUnSS/UycvvEDC3bZJiRLvGfzmpsW+DRATDWIkg==}
     engines: {node: '>=10'}
     peerDependencies:
-      tailwindcss: ^3.0
+      tailwindcss: 3.0 || 3.2
     dependencies:
       tailwindcss: 3.2.4_postcss@8.4.21
     dev: true
