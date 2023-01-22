@@ -18,12 +18,11 @@ export default function Main() {
  const { data: _Repos } = SWR("/api/github/repo/popular");
  const reposData = _Repos ? _Repos : null;
 
- const { data: _Technologies } = SWR("/api/technologies");
- const technologiesData = _Technologies ? _Technologies : null;
-
  useEffect(() => {
   if (typeof window !== "undefined" && reposData) {
    document.getElementById("cards").onmousemove = (e) => {
+    const settings = localStorage.getItem("glow");
+    if (settings === "false") return;
     for (const card of document.getElementsByClassName("card")) {
      const rect = card.getBoundingClientRect();
      card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
