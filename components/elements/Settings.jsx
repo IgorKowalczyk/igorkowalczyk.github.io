@@ -1,14 +1,32 @@
 import dynamic from "next/dynamic";
 import { social } from "/config";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Cog8ToothIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), {
+import { Cog8ToothIcon, ArrowTopRightOnSquareIcon, SwatchIcon, CubeTransparentIcon, CursorArrowRaysIcon, SunIcon, MoonIcon, ComputerDesktopIcon } from "@heroicons/react/24/outline";
+import { useTheme } from "next-themes";
+const Select = dynamic(() => import("./Select"), {
+ loading: () => <div className="h-[36px] w-[126px] animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-200/[15%]" />,
+});
+
+const Switch = dynamic(() => import("./Switch"), {
  loading: () => <div className="h-[36px] w-[126px] animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-200/[15%]" />,
 });
 
 export default function Settings(props) {
  const [isOpen, setIsOpen] = useState(false);
+ const [glowEnabled, setGlowEnabled] = useState(true);
+ const [decorationsEnabled, setDecorationsEnabled] = useState(true);
+ const { resolvedTheme, setTheme } = useTheme();
+
+ useEffect(() => {
+  if (localStorage.getItem("glow") === "false") setGlowEnabled(false);
+ }, []);
+
+ function changeGlow() {
+  localStorage.setItem("glow", !glowEnabled);
+  setGlowEnabled(!glowEnabled);
+ }
+
  return (
   <div {...props}>
    <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "bg-blue-200 dark:bg-white/[15%]" : ""} group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/10 dark:hover:bg-white/[15%]`}>
@@ -29,11 +47,79 @@ export default function Settings(props) {
          <div className="mt-2">
           <p className="text-base text-gray-500 dark:text-slate-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
-         <div className="mt-2 divide-y divide-black/20 dark:divide-white/20">
+         <div className="mt-2 divide-y divide-black/10 dark:divide-white/10">
           <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-black dark:text-white">
+           <SwatchIcon className="mr-2 h-5 w-5 text-black/80 dark:text-slate-300/50" />
            Theme
            <div className="ml-auto w-32">
-            <ThemeSwitch />
+            <Select
+             text={
+              <>
+               {resolvedTheme === "dark" ? (
+                <>
+                 <MoonIcon className="mr-1 h-5 w-5" />
+                 <span>Dark</span>
+                </>
+               ) : (
+                <>
+                 <SunIcon className="mr-1 h-5 w-5" />
+                 <span>Light</span>
+                </>
+               )}
+              </>
+             }
+             value={resolvedTheme}
+             onChange={(e) => setTheme(e)}
+             options={[
+              {
+               value: "system",
+               text: (
+                <>
+                 <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <span>System</span>
+                </>
+               ),
+              },
+              {
+               value: "dark",
+               disabled: resolvedTheme === "dark",
+               text: (
+                <>
+                 <MoonIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <span>Dark</span>
+                </>
+               ),
+              },
+              {
+               value: "light",
+               disabled: resolvedTheme === "light",
+               text: (
+                <>
+                 <SunIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <span>Light</span>
+                </>
+               ),
+              },
+             ]}
+            />
+           </div>
+          </div>
+          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-black dark:text-white">
+           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-black/80 dark:text-slate-300/50" />
+           Glow effect
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-black/50 dark:text-slate-300/50">
+            <span className="mt-1">Off</span>
+            <Switch enabled={glowEnabled} onChange={(e) => changeGlow()} />
+            <span className="mt-1">On</span>
+           </div>
+          </div>
+          <div className="pointer-events-none flex w-full cursor-not-allowed select-none items-center py-3 text-base text-black opacity-40 dark:text-white">
+           <CubeTransparentIcon className="mr-2 h-5 w-5 text-black/80 dark:text-slate-300/50" />
+           Display Decorations
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-black/50 dark:text-slate-300/50">
+            <span className="mt-1">Off</span>
+            <Switch enabled={false} onChange={new Function()} />
+            <span className="mt-1">On</span>
            </div>
           </div>
          </div>
