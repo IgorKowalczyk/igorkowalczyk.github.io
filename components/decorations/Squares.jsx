@@ -1,6 +1,6 @@
 export default function Squares({ h, w }) {
  return (
-  <svg width={w} height={h} fill="none" viewBox={`0 0 ${w} ${h}`} role="img">
+  <svg width={w} height={h} fill="none" viewBox={`0 0 ${w} ${h}`} role="img" className="hide">
    <defs>
     <pattern id="patt" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
      <rect x="0" y="0" width="4" height="4" className="text-blue-200 dark:text-slate-700" fill="currentColor"></rect>
