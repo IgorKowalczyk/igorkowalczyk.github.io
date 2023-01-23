@@ -188,7 +188,7 @@ export default function Main() {
       <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="70" w="134" />
       </span>
-      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="pointer-events-none m-[0_auto] animate-pulse" />
+      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
       <h3 className="dark:color-black m-6 mt-0 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
 
       <div className="prose m-auto px-6 text-center font-inter dark:prose-dark">
@@ -260,7 +260,7 @@ export default function Main() {
     <section id={"contact"}>
      <div className="h-full scroll-mt-20 px-6 py-36 pt-24 lg:px-36">
       <header>
-       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="pointer-events-none m-[0_auto] animate-pulse" />
+       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
        <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
        <p className="py-1 text-center font-inter  text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
       </header>

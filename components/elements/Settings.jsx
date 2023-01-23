@@ -20,11 +20,18 @@ export default function Settings(props) {
 
  useEffect(() => {
   if (localStorage.getItem("glow") === "false") setGlowEnabled(false);
+  if (localStorage.getItem("decorations") === "false") setDecorationsEnabled(false);
  }, []);
 
  function changeGlow() {
   localStorage.setItem("glow", !glowEnabled);
   setGlowEnabled(!glowEnabled);
+ }
+
+ function changeDecorations() {
+  localStorage.setItem("decorations", !decorationsEnabled);
+  setDecorationsEnabled(!decorationsEnabled);
+  window.dispatchEvent(new Event("decorations"));
  }
 
  return (
@@ -113,12 +120,12 @@ export default function Settings(props) {
             <span className="mt-1">On</span>
            </div>
           </div>
-          <div className="pointer-events-none flex w-full cursor-not-allowed select-none items-center py-3 text-base text-black opacity-40 dark:text-white">
+          <div className="flex w-full select-none items-center py-3 text-base text-black dark:text-white">
            <CubeTransparentIcon className="mr-2 h-5 w-5 text-black/80 dark:text-slate-300/50" />
            Display Decorations
            <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-black/50 dark:text-slate-300/50">
             <span className="mt-1">Off</span>
-            <Switch enabled={false} onChange={new Function()} />
+            <Switch enabled={decorationsEnabled} onChange={(e) => changeDecorations()} />
             <span className="mt-1">On</span>
            </div>
           </div>

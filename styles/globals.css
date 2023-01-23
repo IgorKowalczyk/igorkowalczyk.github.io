@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+ --hidden: false;
+}
+
 html.light {
  --calendar-default: rgba(235, 237, 240, 1);
 }
@@ -30,6 +34,10 @@ rect {
 html,
 body {
  @apply m-0 scroll-smooth p-0 font-inter antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
+}
+
+.hide {
+ display: var(--hidden);
 }
 
 html,

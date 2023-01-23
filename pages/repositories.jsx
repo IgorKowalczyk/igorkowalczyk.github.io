@@ -1,5 +1,5 @@
 import { SWR } from "lib/swr";
-import { meta, social } from "/config";
+import { meta } from "/config";
 import { Container } from "components/elements/Container";
 import { RepoCard, RepoCardSkeleton } from "components/elements/RepoCard";
 import { useEffect } from "react";

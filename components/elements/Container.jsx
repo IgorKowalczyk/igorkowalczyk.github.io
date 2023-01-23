@@ -2,9 +2,18 @@ import { useRouter } from "next/router";
 import { meta as headMeta, social } from "/config";
 import { Nav } from "components/elements/Nav";
 import { Footer } from "components/elements/Footer";
+import { changeDecorations } from "lib/utils";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export function Container(props) {
+ useEffect(() => {
+  changeDecorations(localStorage.getItem("decorations"));
+  window.addEventListener("decorations", () => {
+   changeDecorations(localStorage.getItem("decorations"));
+  });
+ }, []);
+
  const { children, ...customMeta } = props;
  const router = useRouter();
  const meta = {
