@@ -247,9 +247,18 @@ export default function Main() {
      <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {technologies.map((tech, index) => {
        return (
-        <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
-         <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
-         <span className="font-semibold">{tech.name}</span>
+        <div  key={index}>
+         {tech.link ? (
+          <Link href={tech.link} target="_blank" className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+           <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
+           <span className="font-semibold">{tech.name}</span>
+          </Link>
+         ) : (
+          <div key={index} className="relative mx-auto flex w-full items-center justify-between rounded-xl bg-zinc-200/[25%] px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-zinc-200/60 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]">
+           <Image className={`${tech.class ?? ""} h-8 w-8 rounded-md`} width={32} height={32} src={tech.icon} alt={tech.name} />
+           <span className="font-semibold">{tech.name}</span>
+          </div>
+         )}
         </div>
        );
       })}

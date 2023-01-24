@@ -183,15 +183,18 @@ export const technologies = [
  {
   name: "React",
   icon: "/assets/tech/react.svg",
+  link: "https://reactjs.org/",
  },
  {
   name: "Next.js",
   icon: "/assets/tech/next.svg",
   class: "invert-0 dark:invert",
+  link: "https://nextjs.org/",
  },
  {
   name: "TailwindCSS",
   icon: "/assets/tech/tailwindcss.svg",
+  link: "https://tailwindcss.com/",
  },
  {
   name: "Javascript",
@@ -200,48 +203,59 @@ export const technologies = [
  {
   name: "Node.js",
   icon: "/assets/tech/nodejs.svg",
+  link: "https://nodejs.org/",
  },
  {
   name: "Express.js",
   icon: "/assets/tech/express.svg",
   class: "invert-0 dark:invert",
+  link: "https://expressjs.com/",
  },
  {
   name: "NPM",
   icon: "/assets/tech/npm.svg",
+  link: "https://www.npmjs.com/",
  },
  {
   name: "PNPM",
   icon: "/assets/tech/pnpm.svg",
+  link: "https://pnpm.io/",
  },
  {
   name: "Git",
   icon: "/assets/tech/git.svg",
+  link: "https://git-scm.com/",
  },
  {
   name: "Github",
   icon: "/assets/tech/github.svg",
   class: "dark:invert-0 invert",
+  link: "https://github.com",
  },
  {
   name: "GraphQL",
   icon: "/assets/tech/graphql.svg",
+  link: "https://graphql.org/",
  },
  {
   name: "Figma",
   icon: "/assets/tech/figma.svg",
+  link: "https://figma.com/",
  },
  {
   name: "Webpack",
   icon: "/assets/tech/webpack.svg",
+  link: "https://webpack.js.org/",
  },
  {
   name: "Turborepo",
   icon: "/assets/tech/turborepo.svg",
+  link: "https://turbo.build/",
  },
  {
   name: "Framer Motion",
   icon: "/assets/tech/framer.svg",
+  link: "https://www.framer.com/motion/",
  },
  {
   name: "C++",
@@ -250,31 +264,38 @@ export const technologies = [
  {
   name: "MySQL",
   icon: "/assets/tech/mysql.svg",
+  link: "https://www.mysql.com/",
  },
  {
   name: "MongoDB",
   icon: "/assets/tech/mongodb.svg",
+  link: "https://www.mongodb.com/",
  },
  {
   name: "Discord.js",
   icon: "/assets/tech/discordjs.svg",
+  link: "https://discord.js.org/",
  },
  {
   name: "Heroicons",
   icon: "/assets/tech/heroicons.svg",
+  link: "https://heroicons.com/",
  },
  {
   name: "Headless UI",
   icon: "/assets/tech/headlessui.svg",
+  link: "https://headlessui.dev/",
  },
  {
   name: "Docker",
   icon: "/assets/tech/docker.svg",
+  link: "https://www.docker.com/",
  },
  {
   name: "Vercel",
   icon: "/assets/tech/vercel.svg",
   class: "invert-0 dark:invert",
+  link: "https://vercel.com/",
  },
  {
   name: "CSS",
@@ -283,5 +304,6 @@ export const technologies = [
  {
   name: "Eslint",
   icon: "/assets/tech/eslint.svg",
+  link: "https://eslint.org/",
  },
 ];
