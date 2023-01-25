@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@apollo/client': 3.7.4
+  '@apollo/client': 3.7.5
   '@headlessui/react': 1.7.7
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.13
@@ -56,7 +56,7 @@ specifiers:
   webpack: 5.75.0
 
 dependencies:
-  '@apollo/client': 3.7.4_gdcq4dv6opitr3wbfwyjmanyra
+  '@apollo/client': 3.7.5_gdcq4dv6opitr3wbfwyjmanyra
   '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
   '@headlessui/tailwindcss': 0.1.2_tailwindcss@3.2.4
   '@heroicons/react': 2.0.13_react@18.2.0
@@ -114,8 +114,8 @@ devDependencies:
 
 packages:
 
-  /@apollo/client/3.7.4_gdcq4dv6opitr3wbfwyjmanyra:
-    resolution: {integrity: sha512-bgiCKRmLSBImX4JRrw8NjqGo0AQE/mowCdHX1PJp2r5zIXrJx0UeaAYmx1qJY69Oz/KR7SKlLt4xK+bOP1jx7A==}
+  /@apollo/client/3.7.5_gdcq4dv6opitr3wbfwyjmanyra:
+    resolution: {integrity: sha512-HEAhX2n2Y8Y2BwRr0UdteT94OTM7pn64K5/rTk/oLIdg/h7R2d83LdsCGDxSH5sBiqDqlv9vou4xdyTxxRWj/g==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
