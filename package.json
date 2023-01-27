@@ -43,7 +43,7 @@
     "rehype-slug": "5.1.0",
     "remark-gfm": "3.0.1",
     "sharp": "0.31.3",
-    "swr": "2.0.1",
+    "swr": "2.0.2",
     "use-delayed-render": "0.1.0-beta.0"
   },
   "devDependencies": {
