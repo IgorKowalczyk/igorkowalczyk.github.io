@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@apollo/client': 3.7.5
-  '@headlessui/react': 1.7.7
+  '@headlessui/react': 1.7.8
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.14
   '@igorkowalczyk/is-browser': 3.0.0
@@ -57,7 +57,7 @@ specifiers:
 
 dependencies:
   '@apollo/client': 3.7.5_gdcq4dv6opitr3wbfwyjmanyra
-  '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.8_biqbaboplfbrettd7655fr4n2y
   '@headlessui/tailwindcss': 0.1.2_tailwindcss@3.2.4
   '@heroicons/react': 2.0.14_react@18.2.0
   '@next/font': 13.1.5
@@ -602,8 +602,8 @@ packages:
       yargs: 16.2.0
     dev: false
 
-  /@headlessui/react/1.7.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-BqDOd/tB9u2tA0T3Z0fn18ktw+KbVwMnkxxsGPIH2hzssrQhKB5n/6StZOyvLYP/FsYtvuXfi9I0YowKPv2c1w==}
+  /@headlessui/react/1.7.8_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-zcwb0kd7L05hxmoAMIioEaOn235Dg0fUO+iGbLPgLVSjzl/l39V6DTpC2Df49PE5aG5/f5q0PZ9ZHZ78ENNV+A==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
