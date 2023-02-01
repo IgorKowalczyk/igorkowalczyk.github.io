@@ -1,5 +1,5 @@
 {
- "extends": ["next", "prettier"],
+ "extends": ["eslint:recommended", "next", "prettier"],
  "rules": {
   "react/prop-types": "off",
   "camelcase": "warn",

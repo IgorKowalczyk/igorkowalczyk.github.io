@@ -116,7 +116,7 @@ export default function Settings(props) {
            Glow effect
            <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-black/50 dark:text-slate-300/50">
             <span className="mt-1">Off</span>
-            <Switch enabled={glowEnabled} onChange={(e) => changeGlow()} />
+            <Switch enabled={glowEnabled} onChange={() => changeGlow()} />
             <span className="mt-1">On</span>
            </div>
           </div>
@@ -125,7 +125,7 @@ export default function Settings(props) {
            Display Decorations
            <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-black/50 dark:text-slate-300/50">
             <span className="mt-1">Off</span>
-            <Switch enabled={decorationsEnabled} onChange={(e) => changeDecorations()} />
+            <Switch enabled={decorationsEnabled} onChange={() => changeDecorations()} />
             <span className="mt-1">On</span>
            </div>
           </div>

@@ -3,7 +3,6 @@
  "bracketSpacing": true,
  "embeddedLanguageFormatting": "auto",
  "htmlWhitespaceSensitivity": "css",
- "insertPragma": false,
  "jsxSingleQuote": false,
  "printWidth": 200000,
  "proseWrap": "preserve",
@@ -14,6 +13,5 @@
  "tabWidth": 1,
  "trailingComma": "es5",
  "useTabs": false,
- "vueIndentScriptAndStyle": false,
  "plugins": ["prettier-plugin-tailwindcss"]
 }
