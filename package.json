@@ -15,7 +15,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "3.7.6",
+    "@apollo/client": "3.7.7",
     "@headlessui/react": "1.7.9",
     "@headlessui/tailwindcss": "0.1.2",
     "@heroicons/react": "2.0.14",
