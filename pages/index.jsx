@@ -89,7 +89,7 @@ export default function Main() {
             <span className="leading-6">
              <div>
               <span aria-hidden="true"> + </span>
-              <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)} )
+              <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
              </div>
             </span>
             {header.code.lines.map((line, index) => (
