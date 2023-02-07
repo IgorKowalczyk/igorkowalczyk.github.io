@@ -33,7 +33,7 @@ specifiers:
   next-themes: 0.2.1
   nprogress: 0.2.0
   postcss: 8.4.21
-  preact: 10.11.3
+  preact: 10.12.0
   prettier: 2.8.3
   prettier-plugin-tailwindcss: 0.2.2
   react: 18.2.0
@@ -73,7 +73,7 @@ dependencies:
   next-contentlayer: 0.3.0_3vryta7zmbcsw4rrqf4axjqggm
   next-themes: 0.2.1_3vryta7zmbcsw4rrqf4axjqggm
   nprogress: 0.2.0
-  preact: 10.11.3
+  preact: 10.12.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-github-calendar: 3.4.0_biqbaboplfbrettd7655fr4n2y
@@ -4655,8 +4655,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact/10.11.3:
-    resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
+  /preact/10.12.0:
+    resolution: {integrity: sha512-+w8ix+huD8CNZemheC53IPjMUFk921i02o30u0K6h53spMX41y/QhVDnG/nU2k42/69tvqWmVsgNLIiwRAcmxg==}
     dev: false
 
   /prebuild-install/7.1.1:
