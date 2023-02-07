@@ -1,25 +1,26 @@
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect } from "react";
 import { meta, header, contact, social, technologies } from "/config";
 import { ConvertBytes, ConvertNumber } from "lib/utils";
-import { RepoCard, RepoCardSkeleton } from "components/elements/RepoCard";
+import { RepoCard } from "components/elements/RepoCard";
 import { Container } from "components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "components/elements/Contact";
 import { SWR } from "lib/swr";
+import { GetPopular, GetUserData } from "lib/graphQl";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Main() {
+export default function Main({ data }) {
  const { data: _User } = SWR("/api/github/user/info");
- const userData = _User ? _User : null;
+ const userData = _User ? _User : data.user;
 
  const { data: _Repos } = SWR("/api/github/repo/popular");
- const reposData = _Repos ? _Repos : null;
+ const reposData = _Repos ? _Repos : data.repositories;
 
  useEffect(() => {
-  if (typeof window !== "undefined" && reposData) {
+  if (typeof window !== "undefined") {
    document.getElementById("cards").onmousemove = (e) => {
     const settings = localStorage.getItem("glow");
     if (settings === "false") return;
@@ -30,7 +31,7 @@ export default function Main() {
     }
    };
   }
- }, [reposData]);
+ }, []);
 
  return (
   <Container title={`${meta.title} - Full-stack developer`}>
@@ -68,68 +69,52 @@ export default function Main() {
            </span>
           </div>
          </div>
-         {_User ? (
-          userData && (
-           <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
-            <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-             →
-            </span>{" "}
-            <span className="font-semibold text-[#66e777]" aria-hidden="true">
-             ~/{header.code.default.user}
-            </span>{" "}
-            <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-             $
-            </span>{" "}
-            <span className="italic" aria-label={`list github account ${social.github.username}`}>
-             list github --user=
-             <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
-              <>"{social.github.username}"</>
-             </Link>
-            </span>
-            <span className="leading-6">
-             <div>
-              <span aria-hidden="true"> + </span>
-              <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
-             </div>
-            </span>
-            {header.code.lines.map((line, index) => (
-             <div key={index}>
-              <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-               →
-              </span>{" "}
-              <span className="font-semibold text-[#66e777]" aria-hidden="true">
-               ~/{line.user}
-              </span>{" "}
-              <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
-              <div className="leading-6">{line.response}</div>
-             </div>
-            ))}
-            <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-             →
-            </span>{" "}
-            <span className="font-semibold text-[#66e777]" aria-hidden="true">
-             ~/{header.code.default.user}
-            </span>{" "}
-            <span className="italic">
-             <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-              $
-             </span>
-            </span>
-           </div>
-          )
-         ) : (
-          <div className="min-h-[200px] p-4">
+         {userData && (
+          <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
            <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
             →
-           </span>
+           </span>{" "}
            <span className="font-semibold text-[#66e777]" aria-hidden="true">
-            {" "}
-            ~/{header.code.default.user}{" "}
-           </span>
+            ~/{header.code.default.user}
+           </span>{" "}
            <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
             $
            </span>{" "}
-           <span className="italic">Loading data...</span>
+           <span className="italic" aria-label={`list github account ${social.github.username}`}>
+            list github --user=
+            <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
+             <>"{social.github.username}"</>
+            </Link>
+           </span>
+           <span className="leading-6">
+            <div>
+             <span aria-hidden="true"> + </span>
+             <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
+            </div>
+           </span>
+           {header.code.lines.map((line, index) => (
+            <div key={index}>
+             <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+              →
+             </span>{" "}
+             <span className="font-semibold text-[#66e777]" aria-hidden="true">
+              ~/{line.user}
+             </span>{" "}
+             <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
+             <div className="leading-6">{line.response}</div>
+            </div>
+           ))}
+           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
+            →
+           </span>{" "}
+           <span className="font-semibold text-[#66e777]" aria-hidden="true">
+            ~/{header.code.default.user}
+           </span>{" "}
+           <span className="italic">
+            <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+             $
+            </span>
+           </span>
           </div>
          )}
         </div>
@@ -148,14 +133,14 @@ export default function Main() {
           <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
           </svg>{" "}
-          <span>{_User ? userData && ConvertNumber(userData.userStars) : "NaN"} Stars on repositories</span>
+          <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
          </>
         </Link>
        </p>
        <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && ConvertNumber(userData.userStarredRepos) : "NaN"} Starred repositories</span>
+          <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStarredRepos)} Starred repositories</span>
          </>
         </Link>
        </p>
@@ -165,14 +150,14 @@ export default function Main() {
           <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
            <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
           </svg>{" "}
-          <span>{_User ? userData && ConvertNumber(userData.userForks) : "NaN"} Repositories forks</span>
+          <span>{userData && ConvertNumber(userData.userForks)} Repositories forks</span>
          </>
         </Link>
        </p>
        <p className="font-semibold duration-200 motion-reduce:transition-none">
         <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${social.github.username}`}>
          <>
-          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{_User ? userData && ConvertNumber(userData.userFollowers) : "NaN"} Github Followers</span>
+          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userFollowers)} Github Followers</span>
          </>
         </Link>
        </p>
@@ -210,12 +195,10 @@ export default function Main() {
       <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
       <div className="relative">
        <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
-        {_Repos
-         ? reposData &&
-           reposData?.data.user.repositories.edges.map((repo) => {
-            return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
-           })
-         : Array.from({ length: 6 }).map((_, index) => <RepoCardSkeleton key={index} />)}
+        {reposData &&
+         reposData.map((repo) => {
+          return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
+         })}
        </div>
        <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
         <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
@@ -223,7 +206,7 @@ export default function Main() {
           <>
            See more repositories
            <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+            <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.512592678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
             <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
            </svg>
           </>
@@ -301,4 +284,16 @@ export default function Main() {
    </div>
   </Container>
  );
+}
+
+export async function getServerSideProps() {
+ const edges = await GetPopular();
+ const repositories = edges.repositories.edges;
+ const user = await GetUserData();
+
+ return {
+  props: {
+   data: { repositories, user },
+  },
+ };
 }
