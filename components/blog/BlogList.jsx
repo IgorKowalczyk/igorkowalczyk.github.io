@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/24/solid";
-import { parseISO } from "../../lib/utils";
+import { parseISO } from "/lib/utils";
 
 export function ListElement({ title, summary, slug, publishedAt, index }) {
  return (

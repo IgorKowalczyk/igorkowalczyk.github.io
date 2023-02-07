@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import { meta as headMeta, social } from "/config";
 import { Nav } from "components/elements/Nav";
 import { Footer } from "components/elements/Footer";
-import { changeDecorations } from "lib/utils";
-import Head from "next/head";
+import { changeDecorations } from "/lib/utils";
 import { useEffect } from "react";
+import Head from "next/head";
 
 export function Container(props) {
  useEffect(() => {

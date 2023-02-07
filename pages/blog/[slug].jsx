@@ -5,7 +5,7 @@ import Avatar from "../../public/assets/avatar.png";
 import { Container } from "components/elements/Container";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
-import { parseISO } from "../../lib/utils";
+import { parseISO } from "/lib/utils";
 import { meta, social } from "/config";
 import { TocItem } from "components/blog/Toc";
 

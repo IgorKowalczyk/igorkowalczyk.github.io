@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { meta, header, contact, social, technologies } from "/config";
-import { ConvertBytes, ConvertNumber } from "lib/utils";
+import { ConvertBytes, ConvertNumber } from "/lib/utils";
 import { RepoCard } from "components/elements/RepoCard";
 import { Container } from "components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";

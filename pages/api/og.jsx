@@ -1,5 +1,5 @@
 import { ImageResponse } from "@vercel/og";
-import { parseISO } from "../../lib/utils";
+import { parseISO } from "/lib/utils";
 
 const fontPoppinsBold = fetch(new URL("../../public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
