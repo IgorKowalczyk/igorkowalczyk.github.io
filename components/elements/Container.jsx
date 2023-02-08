@@ -27,6 +27,7 @@ export function Container(props) {
    <Head>
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
+    <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots" />
     <meta name="author" content={meta.author} />
     <meta property="og:url" content={meta.url + router.asPath} />
     <meta property="og:type" content={meta.type || "website"} />
@@ -35,13 +36,6 @@ export function Container(props) {
     <meta property="og:description" content={meta.description} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:image" content={meta.image || social.image} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="twitter:url" content={meta.url + router.asPath} />
-    <meta property="twitter:title" content={meta.title} />
-    <meta property="twitter:description" content={meta.description} />
-    <meta property="twitter:image" content={meta.image || social.image} />
     <meta property="twitter:site" content={social.twitter} />
     <meta property="twitter:creator" content={social.twitter} />
     <meta property="twitter:card" content="summary_large_image" />
@@ -53,7 +47,6 @@ export function Container(props) {
     <link rel="canonical" href={meta.url + router.asPath} />
     <meta name="theme-color" content={meta.themeColor} />
     <meta name="msapplication-TileColor" content={meta.themeColor} />
-    <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots" />
 
     {process.env.HOTJAR_ID && (
      <script
