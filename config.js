@@ -11,7 +11,7 @@ export const meta = {
 };
 
 export const social = {
- image: "/assets/banner.png",
+ image: meta?.url + "/assets/banner.png",
  github: {
   username: "igorkowalczyk",
   repo: "igorkowalczyk.github.io",
