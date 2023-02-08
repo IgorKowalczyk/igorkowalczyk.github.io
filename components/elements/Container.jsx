@@ -38,15 +38,15 @@ export function Container(props) {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     {meta.date && <meta property="article:published_time" content={meta.date} />}
-    <meta name="twitter:url" content={meta.url + router.asPath} />
-    <meta name="twitter:title" content={meta.title} />
-    <meta name="twitter:description" content={meta.description} />
-    <meta name="twitter:image" content={meta.image || social.image} />
-    <meta name="twitter:site" content={social.twitter} />
-    <meta name="twitter:creator" content={social.twitter} />
-    <meta name="twitter:card" content="summary_large_image" />
-    {meta.readingTime && <meta name="twitter:label1" value="Est. reading time" />}
-    {meta.readingTime && <meta name="twitter:data1" value={readingTime} />}
+    <meta property="twitter:url" content={meta.url + router.asPath} />
+    <meta property="twitter:title" content={meta.title} />
+    <meta property="twitter:description" content={meta.description} />
+    <meta property="twitter:image" content={meta.image || social.image} />
+    <meta property="twitter:site" content={social.twitter} />
+    <meta property="twitter:creator" content={social.twitter} />
+    <meta property="twitter:card" content="summary_large_image" />
+    {meta.readingTime && <meta property="twitter:label1" value="Est. reading time" />}
+    {meta.readingTime && <meta property="twitter:data1" value={readingTime} />}
     <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
 
     <meta name="theme-color" content={meta.theme_color} />
