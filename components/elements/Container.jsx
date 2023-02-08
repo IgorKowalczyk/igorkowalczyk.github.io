@@ -26,7 +26,7 @@ export function Container(props) {
   <>
    <Head>
     <title>{meta.title}</title>
-    <meta content={meta.description} name="description" />
+    <meta name="description" content={meta.description} />
     <link rel="canonical" href={meta.url + router.asPath} />
     <meta property="og:url" content={meta.url + router.asPath} />
     <meta property="og:type" content={meta.type} />
@@ -35,18 +35,22 @@ export function Container(props) {
     <meta property="og:description" content={meta.description} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:image" content={meta.image || social.image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {meta.date && <meta property="article:published_time" content={meta.date} />}
+    <meta name="twitter:url" content={meta.url + router.asPath} />
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
     <meta name="twitter:image" content={meta.image || social.image} />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content={social.twitter} />
     <meta name="twitter:creator" content={social.twitter} />
-    <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
-    <meta name="theme-color" content={meta.theme_color} />
-    <meta name="msapplication-TileColor" content={meta.theme_color} />
-    {meta.date && <meta property="article:published_time" content={meta.date} />}
+    <meta name="twitter:card" content="summary_large_image" />
     {meta.readingTime && <meta name="twitter:label1" value="Est. reading time" />}
     {meta.readingTime && <meta name="twitter:data1" value={readingTime} />}
+    <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
+
+    <meta name="theme-color" content={meta.theme_color} />
+    <meta name="msapplication-TileColor" content={meta.theme_color} />
 
     {process.env.HOTJAR_ID && (
      <script
