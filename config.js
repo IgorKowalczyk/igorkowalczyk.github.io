@@ -5,9 +5,9 @@ export const meta = {
  author: "Igor Kowalczyk",
  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
  url: "https://igorkowalczyk.dev",
- theme_color: "#091430",
- type: "website",
+ themeColor: "#091430",
  locale: "en_US",
+ siteName: "Igor Kowalczyk Portfolio",
 };
 
 export const social = {
