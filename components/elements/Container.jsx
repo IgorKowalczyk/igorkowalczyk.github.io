@@ -26,27 +26,31 @@ export function Container(props) {
   <>
    <Head>
     <title>{meta.title}</title>
-    <meta name="description" content={meta.description} />
+    <meta content={meta.description} name="description" />
     <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots" />
-    <meta name="author" content={meta.author} />
-    <meta property="og:url" content={meta.url + router.asPath} />
-    <meta property="og:type" content={meta.type || "website"} />
-    <meta property="og:locale" content={meta.locale} />
-    <meta property="og:site_name" content={meta.siteName} />
-    <meta property="og:description" content={meta.description} />
-    <meta property="og:title" content={meta.title} />
-    <meta property="og:image" content={meta.image || social.image} />
-    <meta property="twitter:site" content={social.twitter} />
-    <meta property="twitter:creator" content={social.twitter} />
-    <meta property="twitter:card" content="summary_large_image" />
-    {meta.date && <meta property="article:published_time" content={meta.date} />}
-    {meta.readingTime && <meta property="twitter:label1" value="Est. reading time" />}
-    {meta.readingTime && <meta property="twitter:data1" value={readingTime} />}
-    <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
+    <meta content={meta.author} name="author" />
+    <meta content={meta.url + router.asPath} property="og:url" />
+    <meta content={meta.type || "website"} property="og:type" />
+    <meta content={meta.locale} property="og:locale" />
+    <meta content={meta.siteName} property="og:site_name" />
+    <meta content={meta.description} property="og:description" />
+    <meta content={meta.title} property="og:title" />
+    <meta content={meta.image || social.image} property="og:image" />
+    <meta content={social.twitter} property="twitter:site" />
+    <meta content={social.twitter} property="twitter:creator" />
+    <meta content="summary_large_image" property="twitter:card" />
+    {meta.date && <meta content={meta.date} property="article:published_time" />}
+    {meta.readingTime > 0 && (
+     <>
+      <meta value="Est. reading time" property="twitter:label1" />
+      <meta value={readingTime} property="twitter:data1" />
+     </>
+    )}
+    <meta content={`Copyright ${meta.author} ${new Date().getFullYear()}`} name="copyright" />
     <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots" />
+    <meta content={meta.themeColor} name="theme-color" />
+    <meta content={meta.themeColor} name="msapplication-TileColor" />
     <link rel="canonical" href={meta.url + router.asPath} />
-    <meta name="theme-color" content={meta.themeColor} />
-    <meta name="msapplication-TileColor" content={meta.themeColor} />
 
     {process.env.HOTJAR_ID && (
      <script
