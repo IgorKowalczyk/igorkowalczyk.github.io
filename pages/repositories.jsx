@@ -48,7 +48,7 @@ export default function GithubRepositories({ repositories }) {
 export async function getServerSideProps() {
  const { user } = await GetRepos("public", 50);
  const repositories = user.repositories.edges.map((edge) => edge.node);
- repositories.sort((a) => (a.isArchived ? 1 : -1));
+ repositories.sort((a, b) => b.stars - a.stars || a.isArchived - b.isArchived);
 
  return {
   props: {

@@ -26,6 +26,6 @@ export default async function handler(req, res) {
 
  const { user } = await GetRepos(type, count);
  const repositories = user.repositories.edges.map((edge) => edge.node);
- repositories.sort((a) => (a.isArchived ? 1 : -1));
+ repositories.sort((a, b) => b.stars - a.stars || a.isArchived - b.isArchived);
  res.status(200).json(repositories);
 }
