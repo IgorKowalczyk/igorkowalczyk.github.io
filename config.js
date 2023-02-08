@@ -7,6 +7,16 @@ export const meta = {
  url: "https://igorkowalczyk.dev",
  theme_color: "#091430",
  type: "website",
+ locale: "en_US",
+};
+
+export const social = {
+ image: "/assets/banner.png",
+ github: {
+  username: "igorkowalczyk",
+  repo: "igorkowalczyk.github.io",
+ },
+ twitter: "@majonezexe",
 };
 
 export const header = {
@@ -112,14 +122,6 @@ export const contact = {
    ),
   },
  ],
-};
-
-export const social = {
- image: "/assets/banner.png",
- github: {
-  username: "igorkowalczyk",
-  repo: "igorkowalczyk.github.io",
- },
 };
 
 export const footer = {

@@ -13,7 +13,6 @@ export default function Document({ props }) {
     <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000" />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
-    <meta name="twitter:card" content="summary_large_image" />
    </Head>
    <body className="bg-main-white dark:bg-main-dark">
     <Main {...props} />

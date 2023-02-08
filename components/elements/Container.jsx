@@ -21,14 +21,16 @@ export function Container(props) {
   ...customMeta,
  };
 
+ const readingTime = meta.readingTime > 1 ? (meta.readingTime = `${Math.round(meta.readingTime)} minutes`) : (meta.readingTime = `${Math.round(meta.readingTime)} minute`);
  return (
   <>
    <Head>
     <title>{meta.title}</title>
     <meta content={meta.description} name="description" />
-    <meta property="og:url" content={meta.url + router.asPath} />
     <link rel="canonical" href={meta.url + router.asPath} />
+    <meta property="og:url" content={meta.url + router.asPath} />
     <meta property="og:type" content={meta.type} />
+    <meta property="og:locale" content={meta.locale} />
     <meta property="og:site_name" content={meta.author} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:title" content={meta.title} />
@@ -36,11 +38,16 @@ export function Container(props) {
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
     <meta name="twitter:image" content={meta.image || social.image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={social.twitter} />
+    <meta name="twitter:creator" content={social.twitter} />
     <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
     <meta name="theme-color" content={meta.theme_color} />
     <meta name="msapplication-TileColor" content={meta.theme_color} />
-    {meta.twitter && <meta property="article:published_time" content={meta.twitter} />}
     {meta.date && <meta property="article:published_time" content={meta.date} />}
+    {meta.readingTime && <meta name="twitter:label1" value="Est. reading time" />}
+    {meta.readingTime && <meta name="twitter:data1" value={readingTime} />}
+
     {process.env.HOTJAR_ID && (
      <script
       dangerouslySetInnerHTML={{
