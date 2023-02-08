@@ -37,6 +37,7 @@ export function Container(props) {
     <meta property="og:image" content={meta.image || social.image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     {meta.date && <meta property="article:published_time" content={meta.date} />}
     <meta property="twitter:url" content={meta.url + router.asPath} />
     <meta property="twitter:title" content={meta.title} />
@@ -45,6 +46,7 @@ export function Container(props) {
     <meta property="twitter:site" content={social.twitter} />
     <meta property="twitter:creator" content={social.twitter} />
     <meta property="twitter:card" content="summary_large_image" />
+
     {meta.readingTime && <meta property="twitter:label1" value="Est. reading time" />}
     {meta.readingTime && <meta property="twitter:data1" value={readingTime} />}
     <meta name="copyright" content={`Copyright ${meta.author} ${new Date().getFullYear()}`}></meta>
