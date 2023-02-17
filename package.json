@@ -18,7 +18,7 @@
     "@apollo/client": "3.7.8",
     "@headlessui/react": "1.7.11",
     "@headlessui/tailwindcss": "0.1.2",
-    "@heroicons/react": "2.0.15",
+    "@heroicons/react": "2.0.16",
     "@next/font": "13.1.6",
     "@tippyjs/react": "4.2.6",
     "@vercel/analytics": "0.1.10",
