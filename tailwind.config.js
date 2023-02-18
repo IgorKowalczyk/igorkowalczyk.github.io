@@ -4,7 +4,14 @@ const svgToDataUri = require("mini-svg-data-uri");
 
 module.exports = {
  darkMode: "class",
- content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./config.js", "./data/blog/*.mdx"],
+ content: [
+  // Prettier
+  "./pages/**/*.{js,ts,jsx,tsx}",
+  "./app/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}",
+  "./config.js",
+  "./data/blog/*.mdx",
+ ],
  theme: {
   extend: {
    fontFamily: {

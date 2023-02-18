@@ -1,10 +1,9 @@
-import { version } from "react";
 import { footer } from "/config";
 import Link from "next/link";
 
 export function Footer() {
  return (
-  <footer className="mt-12 w-full py-10 px-4 md:px-8 lg:px-16">
+  <footer className="w-full py-10 px-4 md:px-8 lg:px-16">
    <div className="mx-auto pt-10">
     <div className="grid grid-cols-2 gap-9 md:grid-cols-6">
      <div className="col-span-3 flex flex-col justify-center">
@@ -18,7 +17,7 @@ export function Footer() {
       </div>
 
       <p className="mt-3 font-inter text-gray-700 dark:text-gray-400">
-       Created with ❤️ in Poland using <Link href="https://reactjs.org">React.js v{version}</Link>
+       Created with ❤️ in Poland using <Link href="https://nextjs.org">Next.js</Link>
       </p>
      </div>
      {footer.categories.map((category, index) => (

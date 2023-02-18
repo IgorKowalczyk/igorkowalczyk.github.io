@@ -1,14 +1,16 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { nav, meta } from "/config";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 const MobileNav = dynamic(() => import("components/elements/MobileNav"));
 const Settings = dynamic(() => import("components/elements/Settings"));
 const Popover = dynamic(() => import("components/elements/NavPopover"));
 
 function NavItem({ href, text, target }) {
- const router = useRouter();
- const isActive = router.asPath.split("/")[1].trim() === href.split("/")[1].trim();
+ const path = usePathname();
+ const isActive = path.split("/")[1].trim() === href.split("/")[1].trim();
  return (
   <Link href={href} key={href} target={target} className={`${isActive ? "active text-gray-800 dark:text-gray-200" : "text-gray-600 dark:text-gray-400"} nav-border relative hidden rounded-lg p-1 transition-all duration-200 before:w-[calc(100%_-_1.5em)] after:w-[calc(100%_-_1.5em)] hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block`}>
    {text}

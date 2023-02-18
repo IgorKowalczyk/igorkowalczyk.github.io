@@ -1,24 +1,29 @@
 import MDXComponents from "components/MDX/Components";
 import Image from "next/image";
 import Link from "next/link";
-import Avatar from "../../public/assets/avatar.png";
-import { Container } from "components/elements/Container";
+import Avatar from "/public/assets/avatar.png";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO } from "/lib/utils";
 import { meta, social } from "/config";
 import { TocItem } from "components/blog/Toc";
 
-export default function Post({ post }) {
+export async function generateStaticParams() {
+ return allBlogs.map((post) => ({
+   slug: post.slug,
+ }));
+}
+
+export default function Post({ params }) {
+ const post = allBlogs.find((post) => post.slug === params.slug);
  const Component = useMDXComponent(post.body.code);
 
  return (
-  <Container title={`${meta.title} - ${post.title} `} description={post.summary} readingTime={post.readingTime.minutes} image={meta.url + post.image} date={new Date(post.publishedAt).toISOString()} type="article">
    <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
     <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
      <div>
       <header className="w-full font-inter">
-       <h1 className="mt-6 mb-2 flex items-center box-decoration-clone bg-clip-text text-center font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
+       <h1 className="mt-6 mb-2 flex items-center box-decoration-clone bg-clip-text font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
         {post.title}
         <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
        </h1>
@@ -51,19 +56,5 @@ export default function Post({ post }) {
      </Link>
     </div>
    </article>
-  </Container>
  );
-}
-
-export async function getStaticPaths() {
- return {
-  paths: allBlogs.map((p) => ({ params: { slug: p.slug } })),
-  fallback: false,
- };
-}
-
-export async function getStaticProps({ params }) {
- const post = allBlogs.find((post) => post.slug === params.slug);
-
- return { props: { post } };
 }

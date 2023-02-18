@@ -1,49 +1,37 @@
-import { useEffect } from "react";
-import { meta, header, contact, social, technologies } from "/config";
-import { ConvertBytes, ConvertNumber } from "/lib/utils";
+import { GetUserData, GetPopular } from "lib/graphQl";
+import { header, contact, social, technologies } from "/config";
+import { ConvertNumber } from "/lib/utils";
 import { RepoCard } from "components/elements/RepoCard";
-import { Container } from "components/elements/Container";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "components/elements/Contact";
-import { SWR } from "lib/swr";
-import { GetPopular, GetUserData } from "lib/graphQl";
+import { GlowEffect } from "components/elements/GlowEffect";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
 import Link from "next/link";
 import Image from "next/image";
+import { CodeCard } from "components/elements/CodeCard";
+import Balancer from "react-wrap-balancer";
 
-export default function Main({ data }) {
- const { data: _User } = SWR("/api/github/user/info");
- const userData = _User ? _User : data.user;
+export const metadata = {
+ title: "Igor Kowalczyk",
+};
 
- const { data: _Repos } = SWR("/api/github/repo/popular");
- const reposData = _Repos ? _Repos : data.repositories;
-
- useEffect(() => {
-  if (typeof window !== "undefined") {
-   document.getElementById("cards").onmousemove = (e) => {
-    const settings = localStorage.getItem("glow");
-    if (settings === "false") return;
-    for (const card of document.getElementsByClassName("card")) {
-     const rect = card.getBoundingClientRect();
-     card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
-     card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
-    }
-   };
-  }
- }, []);
+export default async function HomePage() {
+ const repos = await GetPopular();
+ const reposData = repos.repositories.edges;
+ const userData = await GetUserData();
 
  return (
-  <Container title={`${meta.title} - Full-stack developer`}>
-   <div id="cards">
+  <div id="cards">
+    <GlowEffect />
     <div className="bg-cover bg-fixed bg-right">
      <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
      <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
-      <div className="md:grid-cols-0 grid px-8 lg:grid-cols-5">
+      <div className="md:grid-cols-0 grid lg:grid-cols-5">
        <div className="md:col-span-3">
         <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-inter text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
-        <h2 className="text-center font-inter text-[1.5rem]  font-semibold md:text-left">{header.subtitle}</h2>
-        <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
+        <h2 className="text-center font-inter text-[1.5rem] font-semibold md:text-left">{header.subtitle}</h2>
+        <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left"><Balancer>{header.description}</Balancer></p>
         <div className="mt-4 flex justify-center md:block">
          <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold">
           <>
@@ -58,66 +46,7 @@ export default function Main({ data }) {
        </div>
 
        <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-        <div className="card border-b-black/15 block w-full rounded-md border font-inter text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
-         <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
-          <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
-          <div className="absolute top-0 bottom-0 flex w-full items-center justify-center">
-           <span className="opacity-50" aria-hidden="true">
-            Console
-           </span>
-          </div>
-         </div>
-         {userData && (
-          <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
-           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-            →
-           </span>{" "}
-           <span className="font-semibold text-[#66e777]" aria-hidden="true">
-            ~/{header.code.default.user}
-           </span>{" "}
-           <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-            $
-           </span>{" "}
-           <span className="italic" aria-label={`list github account ${social.github.username}`}>
-            list github --user=
-            <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
-             <>"{social.github.username}"</>
-            </Link>
-           </span>
-           <span className="leading-6">
-            <div>
-             <span aria-hidden="true"> + </span>
-             <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
-            </div>
-           </span>
-           {header.code.lines.map((line, index) => (
-            <div key={index}>
-             <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-              →
-             </span>{" "}
-             <span className="font-semibold text-[#66e777]" aria-hidden="true">
-              ~/{line.user}
-             </span>{" "}
-             <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
-             <div className="leading-6">{line.response}</div>
-            </div>
-           ))}
-           <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
-            →
-           </span>{" "}
-           <span className="font-semibold text-[#66e777]" aria-hidden="true">
-            ~/{header.code.default.user}
-           </span>{" "}
-           <span className="italic">
-            <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-cursor after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
-             $
-            </span>
-           </span>
-          </div>
-         )}
-        </div>
+        <CodeCard userData={userData} />
        </div>
       </div>
      </div>
@@ -167,10 +96,10 @@ export default function Main({ data }) {
 
     <section id={"about"} className="scroll-mt-20 pt-12 lg:px-24">
      <div className="relative mx-auto mb-7 text-center">
-      <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+      <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="107" w="134" />
       </span>
-      <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+      <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="70" w="134" />
       </span>
       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
@@ -216,12 +145,12 @@ export default function Main({ data }) {
       </div>
      </div>
     </section>
-    <section id={"techs"} className="scroll-mt-20 px-6 pt-12 lg:px-24">
+    <section id={"techs"} className="scroll-mt-20 pt-12 lg:px-24">
      <div className="relative mx-auto mb-7 text-center">
-      <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+      <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="107" w="134" />
       </span>
-      <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+      <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
        <Dots h="70" w="134" />
       </span>
 
@@ -250,7 +179,7 @@ export default function Main({ data }) {
     </section>
 
     <section id={"contact"}>
-     <div className="h-full scroll-mt-20 px-6 py-36 pt-24 lg:px-36">
+     <div className="h-full scroll-mt-20 py-36 pt-24 lg:px-36">
       <header>
        <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
        <h3 className="dark:color-black mb-2 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-4xl font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] lg:text-5xl ">Contact me.</h3>
@@ -271,10 +200,10 @@ export default function Main({ data }) {
           </Link>
          ))}
         </div>
-        <span className="absolute -right-10 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
+        <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
          <Dots h="107" w="134" />
         </span>
-        <span className="absolute -left-7 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+        <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
          <Dots h="70" w="134" />
         </span>
        </div>
@@ -282,18 +211,5 @@ export default function Main({ data }) {
      </div>
     </section>
    </div>
-  </Container>
  );
-}
-
-export async function getServerSideProps() {
- const edges = await GetPopular();
- const repositories = edges.repositories.edges;
- const user = await GetUserData();
-
- return {
-  props: {
-   data: { repositories, user },
-  },
- };
 }

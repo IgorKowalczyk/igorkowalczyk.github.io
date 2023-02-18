@@ -1,7 +1,8 @@
 import dynamic from "next/dynamic";
 import { social } from "/config";
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { useEffect } from "react";
 import { Cog8ToothIcon, ArrowTopRightOnSquareIcon, SwatchIcon, CubeTransparentIcon, CursorArrowRaysIcon, SunIcon, MoonIcon, ComputerDesktopIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";
 const Select = dynamic(() => import("./Select"), {
@@ -18,15 +19,15 @@ export default function Settings(props) {
  const [decorationsEnabled, setDecorationsEnabled] = useState(true);
  const { resolvedTheme, setTheme } = useTheme();
 
- useEffect(() => {
-  if (localStorage.getItem("glow") === "false") setGlowEnabled(false);
-  if (localStorage.getItem("decorations") === "false") setDecorationsEnabled(false);
- }, []);
-
  function changeGlow() {
   localStorage.setItem("glow", !glowEnabled);
   setGlowEnabled(!glowEnabled);
  }
+
+ useEffect(() => {
+  if (localStorage.getItem("glow") === "false") setGlowEnabled(false);
+  if (localStorage.getItem("decorations") === "false") setDecorationsEnabled(false);
+ }, []);
 
  function changeDecorations() {
   localStorage.setItem("decorations", !decorationsEnabled);
