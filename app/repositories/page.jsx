@@ -26,6 +26,6 @@ export default async function GithubRepositories() {
      </div>
     )}
    </div>
-   </>
+  </>
  );
 }

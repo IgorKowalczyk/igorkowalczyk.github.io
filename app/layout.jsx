@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
    <html lang="en">
     <body className="bg-main-white dark:bg-main-dark">
      <Nav />
-     <main className="mt-24 px-6 flex min-h-screen flex-col antialiased">
+     <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
       <ClientProviders>
        <>{children}</>
       </ClientProviders>
