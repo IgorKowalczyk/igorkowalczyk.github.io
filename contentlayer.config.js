@@ -48,6 +48,23 @@ const Blog = defineDocumentType(() => ({
     return headings;
    },
   },
+  structuredData: {
+   type: "object",
+   resolve: (doc) => ({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: doc.title,
+    datePublished: doc.publishedAt,
+    dateModified: doc.publishedAt,
+    description: doc.summary,
+    image: doc.image ? "https://igorkowalczyk.dev/${doc.image}" : "https://igorkowalczyk.dev/assets/banner.png",
+    url: `https://igorkowalczyk.dev/blog/${doc._raw.flattenedPath}`,
+    author: {
+     "@type": "Person",
+     name: doc.author,
+    },
+   }),
+  },
  },
 }));
 
