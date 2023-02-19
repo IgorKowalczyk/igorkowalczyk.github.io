@@ -17,8 +17,10 @@ export function Footer() {
       </div>
 
       <p className="mt-3 font-inter text-gray-700 dark:text-gray-400">
-       Created with ❤️ in Poland using <Link href="https://nextjs.org">Next.js</Link>
+       Created with ❤️ and ☕ in Poland using <Link href="https://nextjs.org">Next.js</Link>
       </p>
+      <br />
+      <p className="mb-4 font-inter text-slate-600 opacity-50 dark:text-slate-400">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
      </div>
      {footer.categories.map((category, index) => (
       <div key={index} className="col-span-1 text-gray-700 dark:text-gray-400">
