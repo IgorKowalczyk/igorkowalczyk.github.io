@@ -11,7 +11,7 @@ specifiers:
   '@tailwindcss/aspect-ratio': 0.4.2
   '@tailwindcss/typography': 0.5.9
   '@tippyjs/react': 4.2.6
-  '@vercel/analytics': 0.1.10
+  '@vercel/analytics': 0.1.11
   '@vercel/og': 0.1.0
   ajv: 8.12.0
   autoprefixer: 10.4.13
@@ -60,7 +60,7 @@ dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
   '@next/font': 13.1.6
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
-  '@vercel/analytics': 0.1.10_react@18.2.0
+  '@vercel/analytics': 0.1.11_react@18.2.0
   '@vercel/og': 0.1.0
   contentlayer: 0.3.0
   dotenv: 16.0.3
@@ -1333,8 +1333,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/analytics/0.1.10_react@18.2.0:
-    resolution: {integrity: sha512-jjJ8GzcPnQp0cMxpfYoUycMRBtDiaIeyVjZPiEPe99Dj1PdjMzAFYEASiV/hpNsXHkpcNYCveDFh6jnmh0YSDQ==}
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
     peerDependencies:
       react: ^16.8||^17||^18
     dependencies:
