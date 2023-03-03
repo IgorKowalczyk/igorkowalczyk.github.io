@@ -9,8 +9,8 @@
     "build": "next build && pnpm run postbuild",
     "postbuild": "node ./lib/scripts/generate-sitemap.mjs && node ./lib/scripts/generate-rss.mjs",
     "deploy": "npm run build && npm run start",
-    "format": "prettier --write . --ignore-unknown",
-    "format:check": "prettier --check .",
+    "format": "prettier --write . --cache --ignore-unknown",
+    "format:check": "prettier --check --cache .",
     "analyze": "ANALYZE=true next build",
     "lint": "next lint"
   },
