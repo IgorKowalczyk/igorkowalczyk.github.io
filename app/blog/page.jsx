@@ -25,3 +25,7 @@ export default function Blog() {
   </div>
  );
 }
+
+export const config = {
+ runtime: "edge",
+};
