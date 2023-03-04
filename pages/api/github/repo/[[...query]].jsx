@@ -4,6 +4,7 @@ import { GetRepos } from "lib/graphQl";
 // Count: Number of repos to return [min 0, max 50]
 
 export default async function handler(req, res) {
+ const start = Date.now();
  const { query } = req.query;
  const type = typeof query[0] === "string" ? query[0].toLowerCase() : "";
  const count = typeof query[1] === "string" ? query[1].toLowerCase() : "";
@@ -27,5 +28,6 @@ export default async function handler(req, res) {
  const { user } = await GetRepos(type, count);
  const repositories = user.repositories.edges.map((edge) => edge.node);
  repositories.sort((a, b) => b.stars - a.stars || a.isArchived - b.isArchived);
+ res.setHeader("Server-Timing", `response;dur=${Date.now() - start}ms`);
  res.status(200).json(repositories);
 }

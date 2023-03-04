@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@apollo/client': 3.7.9
-  '@headlessui/react': 1.7.12
+  '@headlessui/react': 1.7.13
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.16
   '@igorkowalczyk/is-browser': 3.0.0
@@ -12,7 +12,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.9
   '@tippyjs/react': 4.2.6
   '@vercel/analytics': 0.1.11
-  '@vercel/og': 0.2.0
+  '@vercel/og': 0.3.0
   ajv: 8.12.0
   autoprefixer: 10.4.13
   compression-webpack-plugin: 10.0.0
@@ -57,13 +57,13 @@ specifiers:
 
 dependencies:
   '@apollo/client': 3.7.9_gdcq4dv6opitr3wbfwyjmanyra
-  '@headlessui/react': 1.7.12_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@headlessui/tailwindcss': 0.1.2_tailwindcss@3.2.7
   '@heroicons/react': 2.0.16_react@18.2.0
   '@next/font': 13.2.3
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@vercel/analytics': 0.1.11_react@18.2.0
-  '@vercel/og': 0.2.0
+  '@vercel/og': 0.3.0
   contentlayer: 0.3.0
   dotenv: 16.0.3
   feed: 4.2.2
@@ -607,8 +607,8 @@ packages:
       yargs: 16.2.0
     dev: false
 
-  /@headlessui/react/1.7.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-FhSx5V+Qp0GvbTpaxyS+ymGDDNntCacClWsk/d8Upbr19g3AsPbjfPk4+m2CgJGcuCB5Dz7LpUIOAbvQTyjL2g==}
+  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
@@ -1350,12 +1350,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vercel/og/0.2.0:
-    resolution: {integrity: sha512-nBxtwJpxeK52XQjzNKOlbT0XF6oTyrMHd1/heSUI2pdgjBf5rGS3nWpjlIurWoLGTHhtxwS7zxTgP45sX6Q29Q==}
+  /@vercel/og/0.3.0:
+    resolution: {integrity: sha512-0L7tAgyLJWv2jdCg7NQtoWOs+ZK+pYeJBev3r1Y8apHjcu7Qj/OfR65JlAPfTMH8b6iUpVtBeHWVUo5KAhaC2A==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
-      satori: 0.4.0
+      satori: 0.4.1
       yoga-wasm-web: 0.3.0
     dev: false
 
@@ -5163,8 +5163,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /satori/0.4.0:
-    resolution: {integrity: sha512-ROtZJkBErgJ2HVMk5jDUrJ8B+FuOTFlHYjcNCfSHjwgEavkaZsDvxPwl/1VCa4XpdkHrPcMuUDF+36w+lUECUg==}
+  /satori/0.4.1:
+    resolution: {integrity: sha512-uQm4+vQj57E9PO/ASAlxsRb+78fHkRUmkNLBBmfuEeGNLGqJ9ufYU7TzYP4XH60PLHYt9Wz1jSsgcAe2cz7+ng==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0

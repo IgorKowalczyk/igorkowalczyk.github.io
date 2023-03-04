@@ -4,9 +4,7 @@ import { parseISO } from "/lib/utils";
 const fontPoppinsBold = fetch(new URL("../../public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
 export default async function handler(req) {
- const { searchParams } = new URL(req.url.replaceAll("&amp%3B", "&"));
- const title = searchParams.get("title");
- const date = searchParams.get("date");
+ const { title, date } = Object.fromEntries(new URL(req.url.replaceAll("&amp%3B", "&")).searchParams.entries());
 
  if (title && title.length > 50)
   return new Response("Title is too long. Please keep it under 50 characters.", {

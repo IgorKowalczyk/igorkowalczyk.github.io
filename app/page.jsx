@@ -5,12 +5,11 @@ import { RepoCard } from "components/elements/RepoCard";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import { Contact } from "components/elements/Contact";
 import { GlowEffect } from "components/elements/GlowEffect";
+import { CodeCard } from "components/elements/CodeCard";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
 import Link from "next/link";
 import Image from "next/image";
-import { CodeCard } from "components/elements/CodeCard";
-import Balancer from "react-wrap-balancer";
 
 export const metadata = {
  title: "Igor Kowalczyk",
@@ -31,9 +30,7 @@ export default async function HomePage() {
       <div className="md:col-span-3">
        <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-inter text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
        <h2 className="text-center font-inter text-[1.5rem] font-semibold md:text-left">{header.subtitle}</h2>
-       <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">
-        <Balancer>{header.description}</Balancer>
-       </p>
+       <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
         <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold">
          <>
