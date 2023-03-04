@@ -7,7 +7,6 @@ specifiers:
   '@heroicons/react': 2.0.16
   '@igorkowalczyk/is-browser': 3.0.0
   '@next/bundle-analyzer': 13.2.3
-  '@next/font': 13.2.3
   '@tailwindcss/aspect-ratio': 0.4.2
   '@tailwindcss/typography': 0.5.9
   '@tippyjs/react': 4.2.6
@@ -60,7 +59,6 @@ dependencies:
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@headlessui/tailwindcss': 0.1.2_tailwindcss@3.2.7
   '@heroicons/react': 2.0.16_react@18.2.0
-  '@next/font': 13.2.3
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@vercel/analytics': 0.1.11_react@18.2.0
   '@vercel/og': 0.3.0
@@ -765,10 +763,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font/13.2.3:
-    resolution: {integrity: sha512-7EHzk0f7FVYICLUZTpyPk93IfcTUao++Xt1Sgb+Zk5dVOCYHabqLtlF5ywSoXIqyFlo0qlshEBxsrzHAGTWkDw==}
-    dev: false
 
   /@next/swc-android-arm-eabi/13.2.3:
     resolution: {integrity: sha512-mykdVaAXX/gm+eFO2kPeVjnOCKwanJ9mV2U0lsUGLrEdMUifPUjiXKc6qFAIs08PvmTMOLMNnUxqhGsJlWGKSw==}
