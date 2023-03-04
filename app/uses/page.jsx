@@ -2,6 +2,10 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { allOtherPages } from "contentlayer/generated";
 import MDXComponents from "components/MDX/Components";
 
+export const metadata = {
+ title: "What I use",
+};
+
 export default function Uses() {
  const uses = allOtherPages.find((page) => page.slug === "uses");
  const Component = useMDXComponent(uses.body.code);

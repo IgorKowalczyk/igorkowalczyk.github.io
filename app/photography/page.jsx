@@ -2,6 +2,10 @@ import Link from "next/link";
 import { BlurImage } from "components/elements/BlurImage";
 import { getPhotography } from "lib/functions";
 
+export const metadata = {
+ title: "Photography",
+};
+
 export default async function Photography() {
  const photos = await getPhotography();
 

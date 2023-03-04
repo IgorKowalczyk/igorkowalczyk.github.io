@@ -3,6 +3,10 @@ import { RepoCard } from "components/elements/RepoCard";
 import { GetRepos } from "lib/graphQl";
 import Squares from "components/decorations/Squares";
 
+export const metadata = {
+ title: "Github Repositories",
+};
+
 export default async function GithubRepositories() {
  const { user } = await GetRepos("public", 50);
  const repositories = user.repositories.edges.map((edge) => edge.node);
