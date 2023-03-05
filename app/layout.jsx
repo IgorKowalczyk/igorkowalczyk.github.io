@@ -8,7 +8,7 @@ import { Inter } from "next/font/google";
 import "styles/globals.css";
 import "styles/progress.css";
 
-const inter = Inter();
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
  title: {
