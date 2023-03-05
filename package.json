@@ -6,6 +6,7 @@
   "scripts": {
     "start": "next start",
     "dev": "NODE_ENV=development next dev",
+    "dev:turbo": "NODE_ENV=development next dev --turbo",
     "build": "next build && pnpm run postbuild",
     "postbuild": "NODE_NO_WARNINGS=1 node ./lib/scripts/generate-sitemap.mjs && NODE_NO_WARNINGS=1 node ./lib/scripts/generate-rss.mjs",
     "deploy": "npm run build && npm run start",
