@@ -16,6 +16,7 @@ specifiers:
   autoprefixer: 10.4.13
   compression-webpack-plugin: 10.0.0
   contentlayer: 0.3.0
+  dotenv: ^16.0.3
   eslint: 8.35.0
   eslint-config-next: 13.2.3
   eslint-config-prettier: 8.6.0
@@ -62,6 +63,7 @@ dependencies:
   '@vercel/analytics': 0.1.11_react@18.2.0
   '@vercel/og': 0.3.0
   contentlayer: 0.3.0
+  dotenv: 16.0.3
   feed: 4.2.2
   github-slugger: 2.0.0
   graphql: 16.6.0
@@ -2139,6 +2141,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
