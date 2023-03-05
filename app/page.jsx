@@ -192,7 +192,7 @@ export default async function HomePage() {
        <div className="space-y-4 p-4">
         <p className="font-inter text-xl font-semibold">Or contact me with...</p>
         {contact.links.map((element, index) => (
-         <Link className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index}>
+         <Link className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index} target="_blank">
           <>
            {element.icon} {element.title}
           </>

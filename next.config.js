@@ -25,6 +25,18 @@ const nextConfig = {
     source: "/(.*)",
     headers: [
      {
+      key: "Access-Control-Allow-Origin",
+      value: "https://igorkowalczyk.dev",
+     },
+     {
+      key: "Access-Control-Allow-Methods",
+      value: "GET,OPTIONS",
+     },
+     {
+      key: "Access-Control-Allow-Headers",
+      value: "Content-Type",
+     },
+     {
       key: "Referrer-Policy",
       value: "no-referrer",
      },
