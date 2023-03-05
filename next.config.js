@@ -15,7 +15,9 @@ const nextConfig = {
  trailingSlash: false,
  compress: true,
  experimental: {
-  fontLoaders: [{ loader: "@next/font/google", options: { subsets: ["latin"] } }],
+  appDir: true,
+  serverComponentsExternalPackages: ["@apollo/client"],
+  fontLoaders: [{ loader: "next/font/google", options: { subsets: ["latin"] } }],
  },
  async headers() {
   return [

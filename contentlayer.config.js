@@ -6,7 +6,7 @@ import rehypeCodeTitles from "rehype-code-titles";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
 import GitHubSlugger from "github-slugger";
-const headers_regex = /(#{1,6})\s+(.+)/g;
+const headersRegex = /(#{1,6})\s+(.+)/g;
 
 const computedFields = {
  readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
@@ -38,7 +38,7 @@ const Blog = defineDocumentType(() => ({
    of: { type: "string" },
    resolve: (doc) => {
     const slugger = new GitHubSlugger();
-    const headings = Array.from(doc.body.raw.matchAll(headers_regex))
+    const headings = Array.from(doc.body.raw.matchAll(headersRegex))
      .map((value) => ({
       size: value[1].length,
       content: value[2],
@@ -47,6 +47,23 @@ const Blog = defineDocumentType(() => ({
      .filter(({ size }) => size <= 3);
     return headings;
    },
+  },
+  structuredData: {
+   type: "object",
+   resolve: (doc) => ({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: doc.title,
+    datePublished: doc.publishedAt,
+    dateModified: doc.publishedAt,
+    description: doc.summary,
+    image: doc.image ? "https://igorkowalczyk.dev/${doc.image}" : "https://igorkowalczyk.dev/assets/banner.png",
+    url: `https://igorkowalczyk.dev/blog/${doc._raw.flattenedPath}`,
+    author: {
+     "@type": "Person",
+     name: doc.author,
+    },
+   }),
   },
  },
 }));
