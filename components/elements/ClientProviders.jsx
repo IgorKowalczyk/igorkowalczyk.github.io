@@ -2,8 +2,8 @@
 
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
-import { useEffect } from "react";
 import { changeDecorations } from "lib/utils";
+import { useEffect } from "react";
 
 export function ClientProviders({ children }) {
  useEffect(() => {

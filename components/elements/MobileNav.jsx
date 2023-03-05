@@ -5,7 +5,6 @@ import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
  const menuItems = [...nav.left, ...nav.right];
 
  return (

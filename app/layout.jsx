@@ -1,13 +1,14 @@
+import { meta } from "config";
 import { Footer } from "components/elements/Footer";
 import { Nav } from "components/elements/Nav";
-import { meta } from "config";
-import { ClientProviders } from "components/elements/ClientProviders";
 import { ServerThemeProvider } from "next-themes";
+import { ClientProviders } from "components/elements/ClientProviders";
 import { Inter } from "next/font/google";
 import "styles/globals.css";
 import "styles/progress.css";
 
 const inter = Inter();
+
 export const metadata = {
  title: {
   default: meta.title,

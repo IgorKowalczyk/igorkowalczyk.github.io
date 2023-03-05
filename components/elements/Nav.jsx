@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { nav, meta } from "/config";
 import { usePathname } from "next/navigation";
+
 const MobileNav = dynamic(() => import("components/elements/MobileNav"));
 const Settings = dynamic(() => import("components/elements/Settings"));
 const Popover = dynamic(() => import("components/elements/NavPopover"));

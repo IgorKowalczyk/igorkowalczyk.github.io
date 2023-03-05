@@ -14,12 +14,49 @@ export async function generateStaticParams() {
  }));
 }
 
+export async function generateMetadata({ params }) {
+ const post = allBlogs.find((post) => post.slug === params.slug);
+ if (!post) {
+  return;
+ }
+
+ const { title, publishedAt: publishedTime, summary: description, image, slug } = post;
+ const ogImage = image ? `${meta.url}${image}` : `${meta.url}/api/og?title=${title}&date=${publishedTime}`;
+
+ return {
+  title,
+  description,
+  openGraph: {
+   title,
+   description,
+   type: "article",
+   publishedTime,
+   url: `${meta.url}/blog/${slug}`,
+   images: [
+    {
+     url: ogImage,
+     width: 1920,
+     height: 1080,
+    },
+   ],
+  },
+  twitter: {
+   card: "summary_large_image",
+   title,
+   description,
+   images: [ogImage],
+  },
+ };
+}
+
 export default function Post({ params }) {
  const post = allBlogs.find((post) => post.slug === params.slug);
+
  const Component = useMDXComponent(post.body.code);
 
  return (
   <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
+   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(post.structuredData) }} />
    <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
      <header className="w-full font-inter">
