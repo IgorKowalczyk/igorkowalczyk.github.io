@@ -43,7 +43,8 @@
     "remark-gfm": "3.0.1",
     "server-only": "^0.0.1",
     "sharp": "0.31.3",
-    "swr": "2.0.4"
+    "swr": "2.0.4",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "@igorkowalczyk/is-browser": "3.0.0",
