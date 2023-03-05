@@ -4,6 +4,7 @@ import { Nav } from "components/elements/Nav";
 import { ServerThemeProvider } from "next-themes";
 import { ClientProviders } from "components/elements/ClientProviders";
 import { Inter } from "next/font/google";
+//import ProgressBar from "components/elements/Progress";
 import "styles/globals.css";
 import "styles/progress.css";
 
@@ -48,10 +49,6 @@ export const metadata = {
  },
  icons: {
   shortcut: "/favicon.ico",
- },
- verification: {
-  google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
-  yandex: "14d2e73487fa6c71",
  },
 };
 
