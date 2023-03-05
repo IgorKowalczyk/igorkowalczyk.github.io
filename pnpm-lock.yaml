@@ -16,7 +16,6 @@ specifiers:
   autoprefixer: 10.4.13
   compression-webpack-plugin: 10.0.0
   contentlayer: 0.3.0
-  dotenv: 16.0.3
   eslint: 8.35.0
   eslint-config-next: 13.2.3
   eslint-config-prettier: 8.6.0
@@ -30,7 +29,6 @@ specifiers:
   next: 13.2.3
   next-contentlayer: 0.3.0
   next-themes: npm:@wits/next-themes@^0.2.16
-  nextjs-progressbar: ^0.0.16
   nprogress: 0.2.0
   postcss: 8.4.21
   prettier: 2.8.4
@@ -64,14 +62,12 @@ dependencies:
   '@vercel/analytics': 0.1.11_react@18.2.0
   '@vercel/og': 0.3.0
   contentlayer: 0.3.0
-  dotenv: 16.0.3
   feed: 4.2.2
   github-slugger: 2.0.0
   graphql: 16.6.0
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.3.0_nvzgbose6yf6w7ijjprgspqefi
   next-themes: /@wits/next-themes/0.2.16_nvzgbose6yf6w7ijjprgspqefi
-  nextjs-progressbar: 0.0.16_next@13.2.3+react@18.2.0
   nprogress: 0.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1256,10 +1252,6 @@ packages:
   /@types/node/18.14.4:
     resolution: {integrity: sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g==}
 
-  /@types/nprogress/0.2.0:
-    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
-    dev: false
-
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
@@ -2147,11 +2139,6 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
-
-  /dotenv/16.0.3:
-    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
-    engines: {node: '>=12'}
-    dev: false
 
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
@@ -4350,19 +4337,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
-    dev: false
-
-  /nextjs-progressbar/0.0.16_next@13.2.3+react@18.2.0:
-    resolution: {integrity: sha512-GV0fD38EMD3vSDCmkq+tObmoup6QA91a6a9MxGuhJZuRk/9TNsrHGnIQQQ/sggkMkXuT4fBgF6jRjFwScDT3zA==}
-    peerDependencies:
-      next: '>= 6.0.0'
-      react: '>= 16.0.0'
-    dependencies:
-      '@types/nprogress': 0.2.0
-      next: 13.2.3_biqbaboplfbrettd7655fr4n2y
-      nprogress: 0.2.0
-      prop-types: 15.8.1
-      react: 18.2.0
     dev: false
 
   /no-case/3.0.4:
