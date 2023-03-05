@@ -7,14 +7,16 @@ export const meta = {
  url: "https://igorkowalczyk.dev",
  themeColor: "#091430",
  locale: "en_US",
- siteName: "Igor Kowalczyk Portfolio",
-};
-
-export const social = {
- image: meta?.url + "/assets/banner.png",
- github: {
-  username: "igorkowalczyk",
-  repo: "igorkowalczyk.github.io",
+ siteName: "Igor Kowalczyk",
+ image: "https://igorkowalczyk.dev/assets/banner.png",
+ accounts: {
+  github: {
+   username: "igorkowalczyk",
+   repo: "igorkowalczyk.github.io",
+  },
+  twitter: {
+   username: "@majonezexe",
+  },
  },
  twitter: "@majonezexe",
 };
@@ -22,7 +24,7 @@ export const social = {
 export const header = {
  title: "Igor Kowalczyk",
  subtitle: "Full-stack developer",
- description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems.",
+ description: meta.description,
  code: {
   default: {
    user: "igorkowalczyk",

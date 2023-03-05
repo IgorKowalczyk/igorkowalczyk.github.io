@@ -5,7 +5,7 @@ import Avatar from "/public/assets/avatar.png";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO } from "/lib/utils";
-import { meta, social } from "/config";
+import { meta } from "/config";
 import { TocItem } from "components/blog/Toc";
 
 export async function generateStaticParams() {
@@ -51,7 +51,7 @@ export default function Post({ params }) {
     </div>
    </div>
    <div className="flex w-full justify-end py-4 font-inter text-gray-700 dark:text-gray-300">
-    <Link href={`https://github.com/${social.github.username}/${social.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
+    <Link href={`https://github.com/${meta.accounts.github.username}/${meta.accounts.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
      Suggest a change
     </Link>
    </div>

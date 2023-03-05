@@ -1,4 +1,4 @@
-import { header, social } from "/config";
+import { header, meta } from "/config";
 import { ConvertBytes } from "/lib/utils";
 import Link from "next/link";
 
@@ -26,10 +26,10 @@ export function CodeCard(userData) {
      <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
       $
      </span>{" "}
-     <span className="italic" aria-label={`list github account ${social.github.username}`}>
+     <span className="italic" aria-label={`list github account ${meta.accounts.github.username}`}>
       list github --user=
-      <Link href={`https://github.com/${social.github.username}`} target="_blank" aria-label={`See ${social.github.user} github`}>
-       <>"{social.github.username}"</>
+      <Link href={`https://github.com/${meta.accounts.github.username}`} target="_blank" aria-label={`See ${meta.accounts.github.user} github`}>
+       <>"{meta.accounts.github.username}"</>
       </Link>
      </span>
      <span className="leading-6">
