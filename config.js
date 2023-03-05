@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const meta = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
@@ -17,8 +15,12 @@ export const meta = {
   twitter: {
    username: "@majonezexe",
   },
+  discord: {
+   username: "Majonez.exe#2495",
+   invite: "https://discord.gg/uxtSMtd2xZ",
+   id: "544164729354977282",
+  },
  },
- twitter: "@majonezexe",
 };
 
 export const header = {
@@ -29,24 +31,6 @@ export const header = {
   default: {
    user: "igorkowalczyk",
   },
-  lines: [
-   {
-    command: "contact --discord",
-    user: "igorkowalczyk",
-    response: (
-     <>
-      + <span className="font-semibold">User:</span>{" "}
-      <Link href="https://discord.com/users/544164729354977282" target="_blank">
-       Majonez.exe#2495
-      </Link>
-      <br />+ <span className="font-semibold">Link:</span>{" "}
-      <Link href="https://discord.gg/uxtSMtd2xZ" target="_blank">
-       https://discord.gg/uxtSMtd2xZ
-      </Link>
-     </>
-    ),
-   },
-  ],
  },
 };
 

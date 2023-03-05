@@ -38,18 +38,27 @@ export function CodeCard(userData) {
        <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
       </div>
      </span>
-     {header.code.lines.map((line, index) => (
-      <div key={index}>
+     {meta.accounts.discord && (
+      <div>
        <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
         →
        </span>{" "}
        <span className="font-semibold text-[#66e777]" aria-hidden="true">
-        ~/{line.user}
+        ~/{header.code.default.user}
        </span>{" "}
-       <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">{line.command}</span>
-       <div className="leading-6">{line.response}</div>
+       <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">contact --discord</span>
+       <div className="leading-6">
+        + <span className="font-semibold">User:</span>{" "}
+        <Link href={`https://discord.com/users/${meta.accounts.discord.id}`} target="_blank">
+         {meta.accounts.discord.username}
+        </Link>
+        <br />+ <span className="font-semibold">Link:</span>{" "}
+        <Link href={meta.accounts.discord.invite} target="_blank">
+         {meta.accounts.discord.invite}
+        </Link>
+       </div>
       </div>
-     ))}
+     )}
      <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
       →
      </span>{" "}
