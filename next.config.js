@@ -12,6 +12,7 @@ const nextConfig = {
  pageExtensions: ["mdx", "md", "jsx", "js"],
  experimental: {
   appDir: true,
+  typedRoutes: true,
  },
  async headers() {
   return [
