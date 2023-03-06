@@ -19,3 +19,7 @@ export default function ContactPage() {
   </div>
  );
 }
+
+export const config = {
+ runtime: "edge",
+};
