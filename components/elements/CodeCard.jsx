@@ -2,7 +2,7 @@ import { header, meta } from "/config";
 import { ConvertBytes } from "/lib/utils";
 import Link from "next/link";
 
-export function CodeCard(userData) {
+export function CodeCard({ userData }) {
  return (
   <div className="card border-b-black/15 block w-full rounded-md border font-inter text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
    <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
