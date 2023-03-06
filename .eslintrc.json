@@ -1,5 +1,5 @@
 {
- "extends": ["eslint:recommended", "next", "prettier"],
+ "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
  "rules": {
   "react/prop-types": "off",
   "camelcase": "warn",
