@@ -6,7 +6,7 @@ specifiers:
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.16
   '@igorkowalczyk/is-browser': 3.0.0
-  '@next/bundle-analyzer': 13.2.3
+  '@next/bundle-analyzer': 13.2.4-canary.4
   '@tailwindcss/aspect-ratio': 0.4.2
   '@tailwindcss/typography': 0.5.9
   '@tippyjs/react': 4.2.6
@@ -16,7 +16,7 @@ specifiers:
   contentlayer: 0.3.0
   dotenv: 16.0.3
   eslint: 8.35.0
-  eslint-config-next: 13.2.3
+  eslint-config-next: 13.2.4-canary.4
   eslint-config-prettier: 8.7.0
   feed: 4.2.2
   github-slugger: 2.0.0
@@ -84,12 +84,12 @@ dependencies:
 
 devDependencies:
   '@igorkowalczyk/is-browser': 3.0.0_tailwindcss@3.2.7
-  '@next/bundle-analyzer': 13.2.3
+  '@next/bundle-analyzer': 13.2.4-canary.4
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.35.0
-  eslint-config-next: 13.2.3_ycpbpc6yetojsgtrx3mwntkhsu
+  eslint-config-next: 13.2.4-canary.4_ycpbpc6yetojsgtrx3mwntkhsu
   eslint-config-prettier: 8.7.0_eslint@8.35.0
   globby: 13.1.3
   lodash: 4.17.21
@@ -700,8 +700,8 @@ packages:
       - supports-color
     dev: false
 
-  /@next/bundle-analyzer/13.2.3:
-    resolution: {integrity: sha512-hPAT0ja6zHmEIrLYAWmdtpS07FCuUL8TxKP5ekzel+NoP4cNOykBS2Y265ciJwurpisd8Ux29g3QgeyBBSBnLA==}
+  /@next/bundle-analyzer/13.2.4-canary.4:
+    resolution: {integrity: sha512-1iplZcl7/83MOFgEVRYqjavr+vgzd1DXWT88fXexzt9Cxj3r3FDWvs7NE/1cUWPUnDxgnOBILjguGRWeaQO7pg==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:
@@ -713,8 +713,8 @@ packages:
     resolution: {integrity: sha512-CaKgyMxpRIfeWg82M7Lmy6NFkIlomycEBg/+LRhHSrf/euWHZmiwFbcSvgIzSRa9dL9/eVf1LPTQmb3qESPz7g==}
     dev: false
 
-  /@next/eslint-plugin-next/13.2.3:
-    resolution: {integrity: sha512-QmMPItnU7VeojI1KnuwL9SLFWEwmaNHNlnOGpoTwdLoSiP9sc8KYiAHWEc4/44L+cAdCxcZYvn7frcRNP5l84Q==}
+  /@next/eslint-plugin-next/13.2.4-canary.4:
+    resolution: {integrity: sha512-5ERY6SZDMfnesrRSaGeKfEzIufMGgxkTC2Rn157/BHWYdJG0jxlJrJPy5BTicpCavsBt+2ZkKPMxB8fpJS5mDA==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -2063,8 +2063,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /eslint-config-next/13.2.3_ycpbpc6yetojsgtrx3mwntkhsu:
-    resolution: {integrity: sha512-kPulHiQEHGei9hIaaNGygHRc0UzlWM+3euOmYbxNkd2Nbhci5rrCDeMBMPSV8xgUssphDGmwDHWbk4VZz3rlZQ==}
+  /eslint-config-next/13.2.4-canary.4_ycpbpc6yetojsgtrx3mwntkhsu:
+    resolution: {integrity: sha512-nhmnaF/Lf25lRZTDMQJ0AZELJhtu0X+EYQDuY8e0drsUGhp4dce/krcizTyL1nahJxD7WZR0dsfgu4kmR6R/ZQ==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -2072,7 +2072,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.2.3
+      '@next/eslint-plugin-next': 13.2.4-canary.4
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.54.0_ycpbpc6yetojsgtrx3mwntkhsu
       eslint: 8.35.0
