@@ -17,7 +17,10 @@ export function Footer() {
       </div>
 
       <p className="mt-3 font-inter text-gray-700 dark:text-gray-400">
-       Created with ❤️ and ☕ in Poland using <Link href="https://nextjs.org">Next.js</Link>
+       Created with ❤️ and ☕ in Poland using{" "}
+       <Link href="https://nextjs.org" target={"_blank"}>
+        Next.js
+       </Link>
       </p>
       <br />
       <p className="mb-4 font-inter text-slate-600 opacity-50 dark:text-slate-400">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
@@ -27,7 +30,7 @@ export function Footer() {
        <p className="mt-3 font-inter font-semibold text-gray-800 dark:text-white sm:mt-0 sm:mb-3 ">{category.title}</p>
        <div>
         {category.links.map((link, index) => (
-         <Link key={index} href={link.href} className="mt-2 block font-inter duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
+         <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block font-inter duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
           {link.title}
          </Link>
         ))}

@@ -20,6 +20,9 @@ export const meta = {
    invite: "https://discord.gg/uxtSMtd2xZ",
    id: "544164729354977282",
   },
+  instagram: {
+   username: "majonezexe",
+  },
  },
 };
 
@@ -55,7 +58,7 @@ export const nav = {
    title: "Photography",
   },
   {
-   href: "/discord/",
+   href: meta.accounts.discord.invite,
    title: "Discord",
    target: "_blank",
   },
@@ -74,7 +77,7 @@ export const contact = {
    ),
   },
   {
-   href: "/discord",
+   href: meta.accounts.discord.invite,
    title: "Discord",
    icon: (
     <svg className="mt-[2px] mr-2 h-4 w-4 fill-blue-900 duration-200 motion-reduce:transition-none dark:fill-white" width="71" height="55" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +86,7 @@ export const contact = {
    ),
   },
   {
-   href: "/twitter",
+   href: `https://twitter.com/${meta.accounts.twitter.username}`,
    title: "Twitter",
    icon: (
     <svg className="mt-[2px] mr-2 h-4 w-4 fill-blue-900 duration-200 motion-reduce:transition-none dark:fill-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 248 204">
@@ -99,7 +102,7 @@ export const contact = {
    ),
   },
   {
-   href: "/instagram",
+   href: `https://www.instagram.com/${meta.accounts.instagram.username}/`,
    title: "Instagram",
    icon: (
     <svg className="mt-[2px] mr-2 h-4 w-4 fill-blue-900 duration-200 motion-reduce:transition-none dark:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
@@ -138,16 +141,19 @@ export const footer = {
    links: [
     {
      title: "Github",
-     href: "/github",
+     href: `https://github.com/${meta.accounts.github.username}`,
+     target: "_blank",
     },
     {
      title: "Instagram",
-     href: "/instagram",
+     href: `https://instagram.com/${meta.accounts.instagram.username}`,
+     target: "_blank",
     },
 
     {
      title: "Discord",
-     href: "/discord",
+     href: meta.accounts.discord.invite,
+     target: "_blank",
     },
    ],
   },

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Transition, Popover } from "@headlessui/react";
+import { meta } from "/config";
 import { CodeBracketIcon, RectangleStackIcon, EnvelopeOpenIcon, ChevronRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export default function NavPopover(props) {
@@ -7,7 +8,7 @@ export default function NavPopover(props) {
   <Popover {...props}>
    {({ open, close }) => (
     <>
-     <Popover.Button className={`${open ? "active bg-gray-200 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-inter text-gray-600 transition-all duration-200 hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
+     <Popover.Button className={`${open ? "active bg-black/10 text-gray-800 dark:bg-white/10 dark:text-gray-200" : ""} nav-border group relative hidden rounded-lg p-1 font-inter text-gray-600 transition-all duration-200 hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center`}>
       <span>More</span>
       <ChevronRightIcon className={`${open ? "rotate-90 text-gray-800 dark:text-gray-200" : ""} ml-1 h-4 w-4 text-gray-600 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200`} />
      </Popover.Button>
@@ -15,7 +16,7 @@ export default function NavPopover(props) {
       <Popover.Panel unmount={false} className="absolute left-1/2 z-10 w-screen max-w-sm -translate-x-1/2 transform px-4 pt-3 sm:px-0 ">
        <div className="overflow-hidden rounded-lg border-[1px] border-black/[10%] shadow-lg  dark:border-white/[15%]">
         <div className="relative bg-white p-3 dark:bg-[#08152b]">
-         <Link href={`/github`} key="github" onClick={() => close()} className="flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
+         <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} key="github" onClick={() => close()} className="flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-50/80 dark:hover:bg-white/5">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
            <CodeBracketIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
           </div>
@@ -44,9 +45,9 @@ export default function NavPopover(props) {
          </Link>
         </div>
         <div className="border-t-[1px] border-black/10 bg-white px-5 py-4 dark:border-white/10 dark:bg-[#08152b]">
-         <Link href={`/github`} key="github_external" onClick={() => close()} target="_blank" className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 dark:hover:bg-white/5 ">
+         <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}?tab=repositories`} key="github_external" onClick={() => close()} className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100 dark:hover:bg-white/5">
           <span className="flex items-center">
-           <span className="text-sm font-medium text-gray-900 dark:text-white">Github Profile</span>
+           <span className="text-sm font-medium text-gray-900 dark:text-white">Github Repositories</span>
            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg">
             <ArrowTopRightOnSquareIcon className="h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
            </div>

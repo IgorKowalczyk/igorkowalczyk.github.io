@@ -11,9 +11,15 @@ const Popover = dynamic(() => import("components/elements/NavPopover"));
 
 function NavItem({ href, text, target }) {
  const path = usePathname();
- const isActive = path.split("/")[1].trim() === href.split("/")[1].trim();
+ if (!href) return null;
+ if (!path) return null;
+ let isActive = path.split("/")[1].trim() === href.split("/")[1].trim();
+ if (href.startsWith("https://") || href.startsWith("http://")) {
+  isActive = false;
+  target = "_blank";
+ }
  return (
-  <Link href={href} key={href} target={target} className={`${isActive ? "active text-gray-800 dark:text-gray-200" : "text-gray-600 dark:text-gray-400"} nav-border relative hidden rounded-lg p-1 transition-all duration-200 before:w-[calc(100%_-_1.5em)] after:w-[calc(100%_-_1.5em)] hover:bg-gray-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block`}>
+  <Link href={href} key={href} target={target} className={`${isActive ? "active text-gray-800 dark:text-gray-200" : "text-gray-600 dark:text-gray-400"} nav-border relative hidden rounded-lg p-1 transition-all duration-200 before:w-[calc(100%_-_1.5em)] after:w-[calc(100%_-_1.5em)] hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block`}>
    {text}
   </Link>
  );
