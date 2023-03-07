@@ -4,7 +4,7 @@ import { Nav } from "components/elements/Nav";
 import { ServerThemeProvider } from "next-themes";
 import { ClientProviders } from "components/elements/ClientProviders";
 import { Inter } from "next/font/google";
-//import ProgressBar from "components/elements/Progress";
+import ProgressBar from "components/elements/Progress";
 import "styles/globals.css";
 import "styles/progress.css";
 
@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
      <Nav />
      <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
       <ClientProviders>
+       <ProgressBar />
        <>{children}</>
       </ClientProviders>
      </main>
