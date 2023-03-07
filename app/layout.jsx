@@ -57,10 +57,10 @@ export default function RootLayout({ children }) {
   <ServerThemeProvider attribute="class">
    <html lang="en">
     <head>
-    {process.env.HOTJAR_ID && (
-     <script
-      dangerouslySetInnerHTML={{
-       __html: `
+     {process.env.HOTJAR_ID && (
+      <script
+       dangerouslySetInnerHTML={{
+        __html: `
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};
@@ -70,10 +70,10 @@ export default function RootLayout({ children }) {
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 `,
-      }}
-     />
-    )}
-     </head>
+       }}
+      />
+     )}
+    </head>
     <body className={`bg-main-white dark:bg-main-dark ${inter.className}`}>
      <Nav />
      <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
