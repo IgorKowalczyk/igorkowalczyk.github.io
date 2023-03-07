@@ -3,7 +3,7 @@ import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 
 export default function Select({ value, onChange, options, text, ...props }) {
  return (
-  <Listbox name="Se;ect <emi" value={value} unmount={true} onChange={(t) => onChange(t)} {...props}>
+  <Listbox name="Select Menu" value={value} unmount={true} onChange={(t) => onChange(t)} {...props}>
    <div className="relative">
     <Listbox.Button aria-label="Change" className="relative w-full cursor-pointer rounded-lg border-[1px] border-black/[10%] text-left text-gray-700 duration-200 hover:border-black/30 hover:text-gray-800 motion-reduce:transition-none  dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200 sm:text-sm">
      <span className="flex truncate py-2 pl-2 pr-10">{text}</span>
