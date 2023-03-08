@@ -6,27 +6,6 @@
  --hidden: false;
 }
 
-html.light {
- --calendar-default: rgba(235, 237, 240, 1);
-}
-
-html.dark {
- --calendar-default: rgba(41, 49, 66, 0.8);
- --calendar-loader: ;
-}
-
-html.light .react-activity-calendar {
- --react-activity-calendar-loading-active: rgba(0, 0, 0, 0.35) !important;
-}
-
-html.dark .react-activity-calendar {
- --react-activity-calendar-loading-active: rgba(255, 255, 255, 0.2) !important;
-}
-
-.react-activity-calendar {
- @apply py-4 px-9 duration-200 motion-reduce:transition-none;
-}
-
 rect {
  @apply duration-200 motion-reduce:transition-none;
 }
@@ -281,11 +260,14 @@ pre {
 
 .card {
  @apply relative;
+ transition: transform 150ms;
+ transform-style: preserve-3d;
+ transform: perspective(700px) translate3d(0, 0, 0);
 }
 
 .card::before,
 .card::after {
- @apply absolute left-0 top-0 h-full w-full opacity-0 transition-opacity duration-500 ease-in-out content-[""];
+ @apply absolute left-0 top-0 h-full w-full opacity-0 transition-opacity duration-1000 ease-out content-[""];
  border-radius: inherit;
 }
 

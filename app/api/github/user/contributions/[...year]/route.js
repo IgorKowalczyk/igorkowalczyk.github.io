@@ -1,4 +1,4 @@
-import { getTotalYears } from "lib/graphQl";
+import { getTotalYears, getTotalContributionsForYear } from "lib/graphQl";
 
 export async function GET(request, { params }) {
  const start = Date.now();
@@ -6,10 +6,10 @@ export async function GET(request, { params }) {
  if (!year) {
   return new Response(
    JSON.stringify({
-    error: "Missing Year",
+    error: "No year provided",
    }),
    {
-    status: 200,
+    status: 400,
     headers: {
      "Content-Type": "application/json",
      "Server-Timing": `response;dur=${Date.now() - start}ms`,
@@ -18,13 +18,13 @@ export async function GET(request, { params }) {
   );
  }
  const years = await getTotalYears();
- if (!years) {
+ if (!years.includes(parseInt(year))) {
   return new Response(
    JSON.stringify({
-    error: "Missing Year",
+    error: "Invalid Year, year is out of range. For vaild range check /api/github/user/contributions/years!",
    }),
    {
-    status: 200,
+    status: 400,
     headers: {
      "Content-Type": "application/json",
      "Server-Timing": `response;dur=${Date.now() - start}ms`,
@@ -32,7 +32,9 @@ export async function GET(request, { params }) {
    }
   );
  }
- return new Response(JSON.stringify({ message: "Vaild year" }), {
+
+ const totalContributions = await getTotalContributionsForYear(year);
+ return new Response(JSON.stringify({ year, totalContributions }), {
   status: 200,
   headers: {
    "Content-Type": "application/json",
