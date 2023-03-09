@@ -1,4 +1,4 @@
-import { GetUserData, GetPopular } from "lib/graphQl";
+import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphQl";
 import { header, contact, meta, technologies } from "/config";
 import { ConvertNumber } from "/lib/utils";
 import { RepoCard } from "components/elements/RepoCard";
@@ -19,10 +19,10 @@ export default async function HomePage() {
  const repos = await GetPopular();
  const reposData = repos.repositories.edges;
  const userData = await GetUserData();
+ const contributions = await getTotalContributionsForYears();
 
  return (
   <div id="cards">
-   <GlowEffect />
    <div className="bg-cover bg-fixed bg-right">
     <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
@@ -45,7 +45,9 @@ export default async function HomePage() {
       </div>
 
       <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
-       <CodeCard userData={userData} />
+       <GlowEffect className="block w-full">
+        <CodeCard userData={userData} contributions={contributions} />
+       </GlowEffect>
       </div>
      </div>
     </div>
@@ -58,17 +60,17 @@ export default async function HomePage() {
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
         <>
-         <svg viewBox="0 0 16 16" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
-          <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1" />
-         </svg>{" "}
-         <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
+         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
         </>
        </Link>
       </p>
       <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
        <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
         <>
-         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStarredRepos)} Starred repositories</span>
+         <svg className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" viewBox="0 0 16 16">
+          <path fillRule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"></path>
+         </svg>
+         <span>{userData && ConvertNumber(contributions.total)} Commits</span>
         </>
        </Link>
       </p>
@@ -83,7 +85,7 @@ export default async function HomePage() {
        </Link>
       </p>
       <p className="font-semibold duration-200 motion-reduce:transition-none">
-       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
+       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}?tab=followers`}>
         <>
          <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userFollowers)} Github Followers</span>
         </>
@@ -122,12 +124,12 @@ export default async function HomePage() {
     <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-6-1/2 before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
      <div className="relative">
-      <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      <GlowEffect className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {reposData &&
         reposData.map((repo) => {
          return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
         })}
-      </div>
+      </GlowEffect>
       <div className="pointer-events-visible absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 shadow-fadeSectionLight  duration-300 dark:shadow-fadeSectionDark">
        <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
         <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold duration-200 motion-reduce:transition-none" href="/repositories">

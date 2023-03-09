@@ -67,13 +67,23 @@ export async function GET(request) {
  }
 
  const { user } = await GetRepos(type, count);
- const repositories = user.repositories.edges.map((edge) => edge.node);
- repositories.sort((a, b) => b.stars - a.stars || a.isArchived - b.isArchived);
- return new Response(JSON.stringify(repositories), {
-  status: 200,
-  headers: {
-   "Content-Type": "application/json",
-   "Server-Timing": `response;dur=${Date.now() - start}ms`,
-  },
- });
+ if (type === "private") {
+  return new Response(JSON.stringify(user), {
+   status: 200,
+   headers: {
+    "Content-Type": "application/json",
+    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+   },
+  });
+ } else {
+  const repositories = user.repositories.edges.map((edge) => edge.node);
+  repositories.sort((a, b) => b.stars - a.stars || a.isArchived - b.isArchived);
+  return new Response(JSON.stringify(repositories), {
+   status: 200,
+   headers: {
+    "Content-Type": "application/json",
+    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+   },
+  });
+ }
 }

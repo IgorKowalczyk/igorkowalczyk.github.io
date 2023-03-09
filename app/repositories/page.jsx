@@ -14,7 +14,6 @@ export default async function GithubRepositories() {
 
  return (
   <>
-   <GlowEffect />
    <div className="fixed top-full right-full z-[-1] translate-x-1/2 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2">
     <Squares w="404" h="404" />
    </div>
@@ -23,11 +22,11 @@ export default async function GithubRepositories() {
    </h1>
    <div id="cards">
     {repositories && (
-     <div className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+     <GlowEffect className="xl-grid-cols-4 grid grid-cols-1 gap-y-10 gap-x-6 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
       {repositories?.map((repo) => (
        <RepoCard key={repo.id} {...repo} className="card" />
       ))}
-     </div>
+     </GlowEffect>
     )}
    </div>
   </>

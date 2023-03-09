@@ -1,8 +1,8 @@
 import { header, meta } from "/config";
-import { ConvertBytes } from "/lib/utils";
+import { ConvertBytes, ConvertNumber } from "/lib/utils";
 import Link from "next/link";
 
-export function CodeCard({ userData }) {
+export function CodeCard({ userData, contributions }) {
  return (
   <div className="card border-b-black/15 block w-full rounded-md border font-inter text-[15px] text-sm shadow-codeLight backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30 dark:shadow-codeDark">
    <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
@@ -15,7 +15,7 @@ export function CodeCard({ userData }) {
      </span>
     </div>
    </div>
-   {userData && (
+   {userData && contributions && (
     <div className="min-h-[200px] overflow-x-hidden whitespace-nowrap p-4">
      <span className="font-semibold leading-6 text-[#ea4aaa]" aria-hidden="true">
       →
@@ -36,6 +36,10 @@ export function CodeCard({ userData }) {
       <div>
        <span aria-hidden="true"> + </span>
        <span className="font-semibold">{userData.userPublicRepositoriesCount} Open Source</span> {userData.userPublicRepositoriesCount > 1 ? "repositories" : "repository"} on Github (total size: {ConvertBytes(userData.userPublicRepositoriesDiskUsage * 1000)})
+      </div>
+      <div>
+       <span aria-hidden="true"> + </span>
+       <span className="font-semibold">{ConvertNumber(contributions.total)} Contributions</span> since {contributions.dates.since} ({ConvertNumber(contributions.results[0].totalContributions)} in last year)
       </div>
      </span>
      {meta.accounts.discord && (

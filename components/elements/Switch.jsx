@@ -6,7 +6,7 @@ export default function Switch({ enabled, onChange }) {
    checked={enabled}
    onChange={() => onChange()}
    className={`${enabled ? "" : ""}
-   relative inline-flex h-[30px] w-[50px] shrink-0 cursor-pointer items-center  rounded-lg border-[1px] border-black/[10%] text-left text-gray-700 ring-0 transition-colors duration-200 ease-in-out hover:border-black/30 hover:text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 motion-reduce:transition-none dark:border-white/[15%] dark:text-gray-200/75  dark:hover:border-white/25 dark:hover:text-gray-200`}
+   relative inline-flex h-[30px] w-[50px] shrink-0 cursor-pointer items-center  rounded-lg border-[1px] border-black/[10%] text-left text-gray-700 ring-0 transition-colors duration-200 ease-in-out hover:border-black/30 hover:text-gray-800 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 motion-reduce:transition-none dark:border-white/[15%] dark:text-gray-200/75 dark:hover:border-white/25 dark:hover:text-gray-200`}
   >
    <span className="sr-only">Use setting</span>
    <span
