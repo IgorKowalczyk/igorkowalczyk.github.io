@@ -78,14 +78,14 @@ export function Contact(props) {
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <input value={formData.name} name="name" onChange={handleChange} id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
+     <input value={formData.name} name="name" onChange={handleChange} id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
     </label>
     <label htmlFor="contact_email" className="w-full text-left font-inter text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
      Email
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <input value={formData.email} name="email" onChange={handleChange} id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="john@doe.com" />
+     <input value={formData.email} name="email" onChange={handleChange} id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="john@doe.com" />
     </label>
    </div>
    <div className="mt-2 flex w-full items-center justify-center gap-1.5">
@@ -94,12 +94,12 @@ export function Contact(props) {
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <textarea value={formData.message} name="message" onChange={handleChange} id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 text-black outline-none duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="Hello there!" />
+     <textarea value={formData.message} name="message" onChange={handleChange} id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 text-black duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="email" placeholder="Hello there!" />
     </label>
    </div>
    {success ? <p className="self-start text-sm font-semibold tracking-wide text-green-500 ">{success}</p> : <></>}
    {error ? <p className="self-start text-sm font-semibold tracking-wide text-red-500 ">{error}</p> : <></>}
-   <div className="w-full py-2 outline-none">
+   <div className="w-full py-2">
     <Button type="submit">Send</Button>
    </div>
   </form>

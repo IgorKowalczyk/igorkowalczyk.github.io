@@ -11,7 +11,6 @@ export function GlowEffect({ children, className }) {
 
   function handleMousemove(e) {
    const glowSetting = localStorage.getItem("glow");
-   if (glowSetting === "false") return;
    const cardElement = e.target.closest(".card");
    if (!cardElement) return;
 
@@ -21,6 +20,12 @@ export function GlowEffect({ children, className }) {
      currentCardElement.style.transform = "";
     }
     currentCardElement = cardElement;
+   }
+
+   if (glowSetting === "false") {
+    currentCardElement.style.setProperty("--mouse-x", null);
+    currentCardElement.style.setProperty("--mouse-y", null);
+    return;
    }
 
    const rect = cardElement.getBoundingClientRect();
@@ -58,13 +63,13 @@ export function GlowEffect({ children, className }) {
  function getTiltX(dy, height) {
   const halfHeight = height / 2;
   const normalizedDy = Math.min(Math.max(dy, -halfHeight), halfHeight);
-  return (-normalizedDy / halfHeight) * 2.5;
+  return (-normalizedDy / halfHeight) * 2;
  }
 
  function getTiltY(dx, width) {
   const halfWidth = width / 2;
   const normalizedDx = Math.min(Math.max(dx, -halfWidth), halfWidth);
-  return (normalizedDx / halfWidth) * -2.5;
+  return (normalizedDx / halfWidth) * -2;
  }
 
  return (

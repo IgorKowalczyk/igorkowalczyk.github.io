@@ -25,7 +25,7 @@ body {
 }
 
 * {
- @apply box-border;
+ @apply box-border outline-2 outline-offset-4 outline-[#4d67ff] dark:outline-[#1491ff];
  scrollbar-color: #08152b transparent;
  scrollbar-width: thin;
 }
@@ -260,14 +260,14 @@ pre {
 
 .card {
  @apply relative;
- transition: transform 150ms;
+ transition: transform 150ms ease-out, box-shadow 200ms ease-out;
  transform-style: preserve-3d;
  transform: perspective(700px) translate3d(0, 0, 0);
 }
 
 .card::before,
 .card::after {
- @apply absolute left-0 top-0 h-full w-full opacity-0 transition-opacity duration-1000 ease-out content-[""];
+ @apply absolute left-0 top-0 h-full w-full opacity-0 transition-opacity duration-1000 !ease-out content-[""];
  border-radius: inherit;
 }
 
