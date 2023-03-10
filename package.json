@@ -52,7 +52,7 @@
     "@next/bundle-analyzer": "13.2.4",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.9",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.14",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "8.7.0",
