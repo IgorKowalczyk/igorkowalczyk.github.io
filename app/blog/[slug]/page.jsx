@@ -35,8 +35,8 @@ export async function generateMetadata({ params }) {
    images: [
     {
      url: ogImage,
-     width: 1920,
-     height: 1080,
+     width: 1200,
+     height: 630,
     },
    ],
   },
