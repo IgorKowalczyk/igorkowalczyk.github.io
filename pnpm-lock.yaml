@@ -5,7 +5,7 @@ specifiers:
   '@headlessui/react': 1.7.13
   '@headlessui/tailwindcss': 0.1.2
   '@heroicons/react': 2.0.16
-  '@igorkowalczyk/eslint-config': 1.0.0
+  '@igorkowalczyk/eslint-config': 1.0.1
   '@igorkowalczyk/is-browser': 3.0.0
   '@igorkowalczyk/prettier-config': 1.0.0
   '@next/bundle-analyzer': 13.2.4
@@ -84,7 +84,7 @@ dependencies:
   validator: 13.9.0
 
 devDependencies:
-  '@igorkowalczyk/eslint-config': 1.0.0_prettier@2.8.4
+  '@igorkowalczyk/eslint-config': 1.0.1_prettier@2.8.4
   '@igorkowalczyk/is-browser': 3.0.0_tailwindcss@3.2.7
   '@igorkowalczyk/prettier-config': 1.0.0
   '@next/bundle-analyzer': 13.2.4
@@ -663,8 +663,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@igorkowalczyk/eslint-config/1.0.0_prettier@2.8.4:
-    resolution: {integrity: sha512-bA1T793797PsFlpEWI2pdwGnk8ERJHZKAHfgze56Sn01TcD6HiOW7uwHIeQmXxFUIA0ce+s0SH7hDaN8mPqB4w==}
+  /@igorkowalczyk/eslint-config/1.0.1_prettier@2.8.4:
+    resolution: {integrity: sha512-23rGWlGqXbDZnoDPdFsxUrCNWwxL9DrmUnXdNMjJs8oAC5/b9BUjdsxMOnXvhYTHJrs3Y9Ed55fhwaqu2XbQAQ==}
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
