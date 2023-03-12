@@ -1,6 +1,6 @@
 const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
 const svgToDataUri = require("mini-svg-data-uri");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
  darkMode: "class",
