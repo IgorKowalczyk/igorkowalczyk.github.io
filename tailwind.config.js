@@ -106,6 +106,7 @@ module.exports = {
   typography: ["dark"],
  },
  plugins: [
+  /* eslint-disable */
   plugin(function ({ matchUtilities }) {
    matchUtilities({
     "bg-grid": (value) => ({
@@ -119,5 +120,6 @@ module.exports = {
   require("@igorkowalczyk/is-browser"),
   require("@tailwindcss/typography"),
   require("@tailwindcss/aspect-ratio"),
+  /* eslint-enable */
  ],
 };
