@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import NProgress from "nprogress";
+import { useEffect } from "react";
 
 // Temporary fix for because new Next.js version do not support router events
 export default function ProgressBar() {

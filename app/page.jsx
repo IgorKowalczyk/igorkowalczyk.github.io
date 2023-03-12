@@ -1,15 +1,15 @@
-import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphQl";
 import { header, contact, meta, technologies } from "/config";
 import { ConvertNumber } from "/lib/utils";
-import { RepoCard } from "components/elements/RepoCard";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
-import { Contact } from "components/elements/Contact";
-import { GlowEffect } from "components/elements/GlowEffect";
-import { CodeCard } from "components/elements/CodeCard";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
-import Link from "next/link";
+import { CodeCard } from "components/elements/CodeCard";
+import { Contact } from "components/elements/Contact";
+import { GlowEffect } from "components/elements/GlowEffect";
+import { RepoCard } from "components/elements/RepoCard";
+import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphQl";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
  title: "Igor Kowalczyk",

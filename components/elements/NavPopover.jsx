@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Transition, Popover } from "@headlessui/react";
 import { meta } from "/config";
 import { CodeBracketIcon, RectangleStackIcon, EnvelopeOpenIcon, ChevronRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function NavPopover(props) {
  return (

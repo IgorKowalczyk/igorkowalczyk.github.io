@@ -29,7 +29,7 @@ export function CodeCard({ userData, contributions }) {
      <span className="italic" aria-label={`list github account ${meta.accounts.github.username}`}>
       list github --user=
       <Link href={`https://github.com/${meta.accounts.github.username}`} target="_blank" aria-label={`See ${meta.accounts.github.user} github`}>
-       <>"{meta.accounts.github.username}"</>
+       <>&quot;{meta.accounts.github.username}&quot;</>
       </Link>
      </span>
      <span className="leading-6">

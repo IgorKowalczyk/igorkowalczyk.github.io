@@ -1,12 +1,12 @@
-import MDXComponents from "components/MDX/Components";
-import Image from "next/image";
-import Link from "next/link";
 import Avatar from "/public/assets/avatar.png";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO } from "/lib/utils";
 import { meta } from "/config";
 import { TocItem } from "components/blog/Toc";
+import MDXComponents from "components/MDX/Components";
+import Image from "next/image";
+import Link from "next/link";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
@@ -56,7 +56,12 @@ export default function Post({ params }) {
 
  return (
   <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
-   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(post.structuredData) }} />
+   <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+     __html: JSON.stringify(post.structuredData),
+    }}
+   />
    <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
      <header className="w-full font-inter">

@@ -1,8 +1,0 @@
-{
- "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
- "rules": {
-  "react/prop-types": "off",
-  "camelcase": "warn",
-  "react/no-unescaped-entities": "off"
- }
-}

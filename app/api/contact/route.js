@@ -6,48 +6,78 @@ export async function POST(request) {
  const { email, name, message } = await clonedStream.json();
 
  if (!email) {
-  return new Response(JSON.stringify({ error: true, message: "Please enter your email address!" }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return new Response(
+   JSON.stringify({
+    error: true,
+    message: "Please enter your email address!",
+   }),
+   {
+    status: 400,
+    headers: {
+     "Content-Type": "application/json",
+    },
+   }
+  );
  }
 
  if (typeof email !== "string" || !isEmail(email)) {
-  return new Response(JSON.stringify({ error: true, message: "Please enter a valid email address!" }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return new Response(
+   JSON.stringify({
+    error: true,
+    message: "Please enter a valid email address!",
+   }),
+   {
+    status: 400,
+    headers: {
+     "Content-Type": "application/json",
+    },
+   }
+  );
  }
 
  if (email.trim().length < 5 || email.trim().length > 50) {
-  return new Response(JSON.stringify({ error: true, message: "Email must be between 5 and 50 characters!" }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return new Response(
+   JSON.stringify({
+    error: true,
+    message: "Email must be between 5 and 50 characters!",
+   }),
+   {
+    status: 400,
+    headers: {
+     "Content-Type": "application/json",
+    },
+   }
+  );
  }
 
  if (!name || typeof name !== "string" || !name.trim() || name.trim().length < 3 || name.trim().length > 20) {
-  return new Response(JSON.stringify({ error: true, message: "Name must be between 3 and 20 characters!" }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return new Response(
+   JSON.stringify({
+    error: true,
+    message: "Name must be between 3 and 20 characters!",
+   }),
+   {
+    status: 400,
+    headers: {
+     "Content-Type": "application/json",
+    },
+   }
+  );
  }
 
  if (!message || typeof message !== "string" || !message.trim() || message.trim().length < 10 || message.trim().length > 500) {
-  return new Response(JSON.stringify({ error: true, message: "Message must be between 10 and 500 characters!" }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return new Response(
+   JSON.stringify({
+    error: true,
+    message: "Message must be between 10 and 500 characters!",
+   }),
+   {
+    status: 400,
+    headers: {
+     "Content-Type": "application/json",
+    },
+   }
+  );
  }
 
  const embed = {

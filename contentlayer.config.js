@@ -1,11 +1,11 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
-import readingTime from "reading-time";
-import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
-import rehypeCodeTitles from "rehype-code-titles";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypePrism from "rehype-prism-plus";
 import GitHubSlugger from "github-slugger";
+import readingTime from "reading-time";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypePrism from "rehype-prism-plus";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 const headersRegex = /(#{1,6})\s+(.+)/g;
 
 const computedFields = {

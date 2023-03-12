@@ -14,7 +14,8 @@ export default function Blog() {
    </p>
 
    <h3 className="mt-8 flex items-center justify-center box-decoration-clone bg-clip-text text-center font-inter text-[1.7rem] font-semibold motion-reduce:transition-none">
-    All Posts<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+    All Posts
+    <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h3>
    {!posts.length && <p className="mb-4 font-inter text-rose-500">No posts found!</p>}
    <ol className="relative mt-8 border-l border-slate-200 dark:border-slate-700">

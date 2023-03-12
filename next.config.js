@@ -1,8 +1,7 @@
-const { withContentlayer } = require("next-contentlayer");
-
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
  enabled: process.env.ANALYZE === "true",
 });
+const { withContentlayer } = require("next-contentlayer");
 
 const nextConfig = {
  pageExtensions: ["jsx", "js"],
@@ -82,8 +81,24 @@ const nextConfig = {
      },
     ],
    },
-   { source: "/assets/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, must-revalidate" }] },
-   { source: "/favicon.ico", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, must-revalidate" }] },
+   {
+    source: "/assets/(.*)",
+    headers: [
+     {
+      key: "Cache-Control",
+      value: "public, max-age=31536000, must-revalidate",
+     },
+    ],
+   },
+   {
+    source: "/favicon.ico",
+    headers: [
+     {
+      key: "Cache-Control",
+      value: "public, max-age=31536000, must-revalidate",
+     },
+    ],
+   },
   ];
  },
  async redirects() {

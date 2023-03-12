@@ -1,10 +1,10 @@
-import { meta } from "config";
+import { ClientProviders } from "components/elements/ClientProviders";
 import { Footer } from "components/elements/Footer";
 import { Nav } from "components/elements/Nav";
-import { ServerThemeProvider } from "next-themes";
-import { ClientProviders } from "components/elements/ClientProviders";
-import { Inter } from "next/font/google";
 import ProgressBar from "components/elements/Progress";
+import { meta } from "config";
+import { Inter } from "next/font/google";
+import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
 import "styles/progress.css";
 

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { SparklesIcon, StarIcon, ArchiveBoxIcon, FolderIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export function RepoCard(repo) {
  return (
@@ -40,7 +40,13 @@ export function RepoCard(repo) {
     <div className="hide-scrollbar flex gap-1 overflow-hidden overflow-x-auto">
      <Link key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`} target="_blank" aria-label={`${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"} search`}>
       <span className="my-1 flex w-max content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] py-[0.12em] px-[0.5em] text-[88%] text-black/[60%] duration-200 hover:bg-black/10 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%] dark:hover:bg-white/20">
-       <span className="mr-1 block h-[12px] w-[12px] rounded-full bg-gray-400 dark:bg-white" style={{ backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "" }}></span> <span>{repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}</span>
+       <span
+        className="mr-1 block h-[12px] w-[12px] rounded-full bg-gray-400 dark:bg-white"
+        style={{
+         backgroundColor: repo.primaryLanguage ? repo.primaryLanguage.color : "",
+        }}
+       ></span>{" "}
+       <span>{repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}</span>
       </span>
      </Link>
      <Link key="repo_stars" href={`${repo.url}/stargazers`} target="_blank">

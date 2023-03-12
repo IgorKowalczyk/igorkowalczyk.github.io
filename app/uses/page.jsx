@@ -1,6 +1,6 @@
-import { useMDXComponent } from "next-contentlayer/hooks";
-import { allOtherPages } from "contentlayer/generated";
 import MDXComponents from "components/MDX/Components";
+import { allOtherPages } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
 export const metadata = {
  title: "What I use",

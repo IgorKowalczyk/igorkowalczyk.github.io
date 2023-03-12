@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { CustomLink } from "components/elements/CustomLink";
+import Image from "next/image";
 
 function CustomImage(props) {
  return <Image alt={props.alt} {...props} />;

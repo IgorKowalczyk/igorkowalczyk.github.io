@@ -1,7 +1,7 @@
+import Squares from "components/decorations/Squares";
 import { GlowEffect } from "components/elements/GlowEffect";
 import { RepoCard } from "components/elements/RepoCard";
 import { GetRepos } from "lib/graphQl";
-import Squares from "components/decorations/Squares";
 
 export const metadata = {
  title: "Github Repositories",

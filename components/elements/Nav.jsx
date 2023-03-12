@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { nav, meta } from "/config";
 import { usePathname } from "next/navigation";
 import MobileNav from "components/elements/MobileNav";
 import Settings from "components/elements/Settings";
 import Popover from "components/elements/NavPopover";
+import Link from "next/link";
 
 function NavItem({ href, text, target }) {
  const path = usePathname();

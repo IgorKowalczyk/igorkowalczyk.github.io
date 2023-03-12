@@ -50,7 +50,16 @@ export async function GET(request) {
     }}
    >
     <div style={{ color: "#fff", fontFamily: "Poppins" }}>{title ? title : ""}</div>
-    <div style={{ color: "rgba(255, 255, 255, 0.5)", fontFamily: "Popins", fontSize: 48, marginTop: "15px" }}>{date ? parseISO(date) : ""}</div>
+    <div
+     style={{
+      color: "rgba(255, 255, 255, 0.5)",
+      fontFamily: "Popins",
+      fontSize: 48,
+      marginTop: "15px",
+     }}
+    >
+     {date ? parseISO(date) : ""}
+    </div>
    </div>
   ),
   {
