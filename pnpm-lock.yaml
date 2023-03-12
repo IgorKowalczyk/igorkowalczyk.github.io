@@ -7,7 +7,7 @@ specifiers:
   '@heroicons/react': 2.0.16
   '@igorkowalczyk/eslint-config': 1.0.3
   '@igorkowalczyk/is-browser': 3.0.0
-  '@igorkowalczyk/prettier-config': 1.0.3
+  '@igorkowalczyk/prettier-config': 1.0.2
   '@next/bundle-analyzer': 13.2.4
   '@tailwindcss/aspect-ratio': 0.4.2
   '@tailwindcss/typography': 0.5.9
@@ -86,7 +86,7 @@ dependencies:
 devDependencies:
   '@igorkowalczyk/eslint-config': 1.0.3_prettier@2.8.4
   '@igorkowalczyk/is-browser': 3.0.0_tailwindcss@3.2.7
-  '@igorkowalczyk/prettier-config': 1.0.3
+  '@igorkowalczyk/prettier-config': 1.0.2
   '@next/bundle-analyzer': 13.2.4
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
@@ -687,8 +687,8 @@ packages:
       tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
-  /@igorkowalczyk/prettier-config/1.0.3:
-    resolution: {integrity: sha512-STNkpxGegsCkoi3v/g88OvzDTATONNhF/U/ZzyLLDnDaLTTFg3dil7Ab8rRe5RoLSQhBnLzcXVea6VBGGqArxg==}
+  /@igorkowalczyk/prettier-config/1.0.2:
+    resolution: {integrity: sha512-4c8td18eeHb99x3HouvPb911hnyZGvxOI+8h+DGCPA4uUbW9+r2doXH9epNHhDbjgnmmThZjiLrzMaCZ8IHIBA==}
     dependencies:
       prettier: 2.8.4
     dev: true
