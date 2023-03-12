@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import isEmail from "validator/lib/isEmail";
 
 export async function POST(request) {
