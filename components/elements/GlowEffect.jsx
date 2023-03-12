@@ -28,6 +28,18 @@ export function GlowEffect({ children, className }) {
     return;
    }
 
+   function getTiltX(dy, height) {
+    const halfHeight = height / 2;
+    const normalizedDy = Math.min(Math.max(dy, -halfHeight), halfHeight);
+    return (-normalizedDy / halfHeight) * 2;
+   }
+
+   function getTiltY(dx, width) {
+    const halfWidth = width / 2;
+    const normalizedDx = Math.min(Math.max(dx, -halfWidth), halfWidth);
+    return (normalizedDx / halfWidth) * -2;
+   }
+
    const rect = cardElement.getBoundingClientRect();
    const cardCenterX = rect.left + rect.width / 2;
    const cardCenterY = rect.top + rect.height / 2;
@@ -59,18 +71,6 @@ export function GlowEffect({ children, className }) {
    cardContainerElement.removeEventListener("mouseleave", handleMouseleave);
   };
  }, [cardContainerRef]);
-
- function getTiltX(dy, height) {
-  const halfHeight = height / 2;
-  const normalizedDy = Math.min(Math.max(dy, -halfHeight), halfHeight);
-  return (-normalizedDy / halfHeight) * 2;
- }
-
- function getTiltY(dx, width) {
-  const halfWidth = width / 2;
-  const normalizedDx = Math.min(Math.max(dx, -halfWidth), halfWidth);
-  return (normalizedDx / halfWidth) * -2;
- }
 
  return (
   <div ref={cardContainerRef} className={`${className} card-container`}>
