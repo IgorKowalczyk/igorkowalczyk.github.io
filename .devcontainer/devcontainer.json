@@ -10,10 +10,8 @@
  },
  "settings": {
   "search.exclude": {
-   "**/.yarn": true,
    "**/.pnp.*": true
   },
-  "eslint.nodePath": ".yarn/sdks",
   "editor.codeActionsOnSave": {
    "source.eslint.fixAll": true
   }
