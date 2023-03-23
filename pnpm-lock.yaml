@@ -13,7 +13,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.9
   '@tippyjs/react': 4.2.6
   '@vercel/analytics': 0.1.11
-  '@vercel/og': 0.4.0
+  '@vercel/og': 0.4.1
   autoprefixer: 10.4.14
   contentlayer: 0.3.0
   dotenv: 16.0.3
@@ -58,7 +58,7 @@ dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@vercel/analytics': 0.1.11_react@18.2.0
-  '@vercel/og': 0.4.0
+  '@vercel/og': 0.4.1
   contentlayer: 0.3.0
   dotenv: 16.0.3
   feed: 4.2.2
@@ -1312,8 +1312,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vercel/og/0.4.0:
-    resolution: {integrity: sha512-FFjXYCD5ZM0VotC9niy11qf4m6D99JVQ73P/uCLJl/r2PeOj0l26xwTEQ4HHJ/yZ6ncByCNoWAjk+S0fjMJmwg==}
+  /@vercel/og/0.4.1:
+    resolution: {integrity: sha512-N8SXkbmQQRK0iHpqwUe50Fe8JO3sx2ByV6hgPTi16ONiMdqOM9uzE4QMWoY1Oa0uYZuUVA30sEB84mVMn+gT3w==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
