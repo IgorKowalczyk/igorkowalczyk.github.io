@@ -100,7 +100,9 @@ export function Contact(props) {
    {success ? <p className="self-start text-sm font-semibold tracking-wide text-green-500 ">{success}</p> : <></>}
    {error ? <p className="self-start text-sm font-semibold tracking-wide text-red-500 ">{error}</p> : <></>}
    <div className="w-full py-2">
-    <Button type="submit">Send</Button>
+    <Button type="submit" className="ml-auto">
+     Send
+    </Button>
    </div>
   </form>
  );
