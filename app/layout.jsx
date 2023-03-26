@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
       />
      )}
     </head>
-    <body className={`bg-main-white dark:bg-main-dark ${inter.className}`}>
+    <body className={`bg-main ${inter.className}`}>
      <Nav />
      <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
       <ClientProviders>
