@@ -8,6 +8,9 @@ const nextConfig = {
  experimental: {
   appDir: true,
  },
+ env: {
+  VERSION: process.env.npm_package_version,
+ },
  async headers() {
   return [
    {
