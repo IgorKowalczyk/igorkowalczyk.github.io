@@ -280,7 +280,7 @@ pre {
 }
 
 .shadow-code {
- @apply shadow-[0_30px_100px_-4px_rgba(51,111,239,0.2)] dark:shadow-[0_30px_100px_-4px_rgba(0,134,245,0.1)]
+ @apply shadow-[0_30px_100px_-4px_rgba(51,111,239,0.2)] dark:shadow-[0_30px_100px_-4px_rgba(0,134,245,0.1)];
 }
 
 .section-fade {
