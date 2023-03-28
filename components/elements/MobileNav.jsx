@@ -17,8 +17,8 @@ export default function MobileNav() {
      isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
     }}
    >
-    <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
-    <XMarkIcon data-hide={!isMenuOpen} className="absolute top-1/2 left-1/2 h-5 w-5 -translate-y-1/2 -translate-x-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+    <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+    <XMarkIcon data-hide={!isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
    </button>
    <div className={`${isMenuOpen ? "rendered pointer-events-all !opacity-100" : "pointer-events-none"} absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-xl duration-200 motion-reduce:transition-none md:hidden`}>
     <div className="h-full border-r-[1px] border-black/[10%] bg-white bg-opacity-70 px-3.5 shadow duration-200 firefox:bg-opacity-100 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:shadow-2xl dark:firefox:bg-opacity-100">

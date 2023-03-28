@@ -3,5 +3,6 @@ module.exports = {
  rules: {
   "react/no-unescaped-entities": "off",
   "react/prop-types": "off",
+  "@next/next/no-html-link-for-pages": "off",
  },
 };

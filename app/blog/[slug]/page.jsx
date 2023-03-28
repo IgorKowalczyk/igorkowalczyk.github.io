@@ -65,7 +65,7 @@ export default function Post({ params }) {
    <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
      <header className="w-full font-inter">
-      <h1 className="mt-6 mb-2 flex items-center box-decoration-clone bg-clip-text font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
+      <h1 className="mb-2 mt-6 flex items-center box-decoration-clone bg-clip-text font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
        {post.title}
        <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
       </h1>
@@ -85,7 +85,7 @@ export default function Post({ params }) {
      </header>
      <Component components={{ ...MDXComponents }} />
     </div>
-    <div className="sticky top-24 !col-start-3 mt-8 ml-3 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
+    <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
      <p className="mb-0 text-sm uppercase">On this page</p>
      {post.headings.map((props) => (
       <TocItem key={props.slug} {...props} />

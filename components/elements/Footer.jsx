@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Footer() {
  return (
-  <footer className="w-full py-10 px-4 md:px-8 lg:px-16">
+  <footer className="w-full px-4 py-10 md:px-8 lg:px-16">
    <div className="mx-auto pt-10">
     <div className="grid grid-cols-2 gap-9 md:grid-cols-6">
      <div className="col-span-3 flex flex-col justify-center">
@@ -28,7 +28,7 @@ export function Footer() {
      </div>
      {footer.categories.map((category, index) => (
       <div key={index} className="col-span-1 text-gray-700 dark:text-gray-400">
-       <p className="mt-3 font-inter font-semibold text-gray-800 dark:text-white sm:mt-0 sm:mb-3 ">{category.title}</p>
+       <p className="mt-3 font-inter font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0 ">{category.title}</p>
        <div>
         {category.links.map((link, index) => (
          <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block font-inter duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">

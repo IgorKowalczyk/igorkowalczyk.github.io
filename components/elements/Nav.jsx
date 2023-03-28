@@ -26,7 +26,7 @@ function NavItem({ href, text, target }) {
 export function Nav() {
  return (
   <nav key="nav" className="fixed top-0 z-[100] mx-0 mt-0 w-full font-inter shadow dark:shadow-2xl">
-   <div className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pt-4 pb-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
+   <div className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-white/[15%] bg-white bg-opacity-70 pb-4 pt-4 duration-300 firefox:bg-opacity-100 motion-reduce:transition-none dark:bg-[#08152b] dark:bg-opacity-70 dark:firefox:bg-opacity-100">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full backdrop-blur-xl"></div>
     <Link href="/" key="main_page">
      <h3 className=" z-[1001] mx-8 font-inter text-xl font-semibold text-black duration-300 motion-reduce:transition-none dark:text-white">

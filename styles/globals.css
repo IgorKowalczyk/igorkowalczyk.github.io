@@ -87,7 +87,7 @@ body {
 
 .nav-border::after,
 .nav-border::before {
- @apply left-[12px] bottom-[8px] h-[1.3px] w-[calc(100%_-_1.9em)];
+ @apply bottom-[8px] left-[12px] h-[1.3px] w-[calc(100%_-_1.9em)];
 }
 
 .link::before {
@@ -108,7 +108,7 @@ img.twemoji {
 }
 
 .burger svg[data-hide="true"] {
- @apply -translate-y-1/2 -translate-x-1/2 scale-0 opacity-0;
+ @apply -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0;
 }
 
 .prose .anchor {
@@ -272,7 +272,7 @@ pre {
 }
 
 .card::before {
- @apply pointer-events-none -z-[3] bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.6),_transparent_40%)] dark:bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.08),_transparent_40%)];
+ @apply pointer-events-none -z-[3] bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.1),_transparent_40%)] dark:bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.08),_transparent_40%)];
 }
 
 .card::after {
