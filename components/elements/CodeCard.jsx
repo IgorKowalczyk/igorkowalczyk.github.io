@@ -9,7 +9,7 @@ export function CodeCard({ userData, contributions }) {
     <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
     <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
     <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
-    <div className="absolute top-0 bottom-0 flex w-full items-center justify-center">
+    <div className="absolute bottom-0 top-0 flex w-full items-center justify-center">
      <span className="opacity-50" aria-hidden="true">
       Console
      </span>
@@ -70,7 +70,7 @@ export function CodeCard({ userData, contributions }) {
       ~/{header.code.default.user}
      </span>{" "}
      <span className="italic">
-      <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:top-0 after:right-[-1.5em] after:bottom-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
+      <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:bottom-0 after:right-[-1.5em] after:top-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
        $
       </span>
      </span>

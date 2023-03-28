@@ -24,15 +24,15 @@ export default async function HomePage() {
  return (
   <div id="cards">
    <div className="bg-cover bg-fixed bg-right">
-    <div className="pointer-events-none absolute left-0 -top-1/2 bottom-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
+    <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
       <div className="md:col-span-3">
-       <h1 className="dark:color-black relative mx-0 mt-0 mb-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-inter text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
+       <h1 className="dark:color-black relative mx-0 mb-0 mt-0 bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-center font-inter text-[51px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff] md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
        <h2 className="text-center font-inter text-[1.5rem] font-semibold md:text-left">{header.subtitle}</h2>
        <p className="mt-2 text-center font-inter text-slate-600 dark:text-slate-400  md:w-3/4 md:text-left">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
-        <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold">
+        <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-inter font-semibold">
          <>
           More about me
           <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -44,7 +44,7 @@ export default async function HomePage() {
        </div>
       </div>
 
-      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:mt-7 md:-mb-7 md:flex lg:col-span-2 lg:mt-0 lg:mb-0">
+      <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:-mb-7 md:mt-7 md:flex lg:col-span-2 lg:mb-0 lg:mt-0">
        <GlowEffect className="block w-full">
         <CodeCard userData={userData} contributions={contributions} />
        </GlowEffect>
@@ -56,7 +56,7 @@ export default async function HomePage() {
    <section id={"additional-info"}>
     <div>
      <hr className="m-[0_auto] mb-8 h-[1px] w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-y-10 gap-x-6 px-8 text-center font-inter text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
+     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-x-6 gap-y-10 px-8 text-center font-inter text-black/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
       <p className="font-semibold duration-200 motion-reduce:transition-none">
        <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-black motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
         <>
@@ -100,7 +100,7 @@ export default async function HomePage() {
      <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="107" w="134" />
      </span>
-     <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+     <span className="absolute -bottom-7 left-0 z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="70" w="134" />
      </span>
      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
@@ -124,15 +124,15 @@ export default async function HomePage() {
     <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-[length:22px_22px] before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
      <h3 className="dark:color-black m-6 bg-gradient-to-r from-[#712af6] to-[#1a8aec] box-decoration-clone bg-clip-text text-center font-inter text-[35px] font-semibold tracking-[-0.03em] duration-300 text-fill-transparent motion-reduce:transition-none dark:from-[#a2facf] dark:to-[#64acff] md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
      <div className="relative">
-      <GlowEffect className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-y-10 gap-x-6 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      <GlowEffect className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {reposData &&
         reposData.map((repo) => {
          return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
         })}
       </GlowEffect>
-      <div className="pointer-events-visible section-fade absolute inset-x-0 bottom-0 z-20 flex pt-32 pb-8 duration-300">
+      <div className="pointer-events-visible section-fade absolute inset-x-0 bottom-0 z-20 flex pb-8 pt-32 duration-300">
        <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
-        <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pl-0 pr-0 pb-1 font-inter font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
+        <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-inter font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
          <>
           See more repositories
           <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -151,7 +151,7 @@ export default async function HomePage() {
      <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="107" w="134" />
      </span>
-     <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+     <span className="absolute -bottom-7 left-0 z-[-1] fill-black/40 dark:fill-white/40">
       <Dots h="70" w="134" />
      </span>
 
@@ -194,7 +194,7 @@ export default async function HomePage() {
        <div className="space-y-4 p-4">
         <p className="font-inter text-xl font-semibold">Or contact me with...</p>
         {contact.links.map((element, index) => (
-         <Link className="group mt-2 ml-auto flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index} target="_blank">
+         <Link className="group ml-auto mt-2 flex w-full rounded-md border border-transparent bg-blue-100 px-4 py-2 font-inter text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" href={element.href} key={index} target="_blank">
           <>
            {element.icon} {element.title}
           </>
@@ -204,7 +204,7 @@ export default async function HomePage() {
        <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-white/40">
         <Dots h="107" w="134" />
        </span>
-       <span className="absolute left-0 -bottom-7 z-[-1] fill-black/40 dark:fill-white/40">
+       <span className="absolute -bottom-7 left-0 z-[-1] fill-black/40 dark:fill-white/40">
         <Dots h="70" w="134" />
        </span>
       </div>

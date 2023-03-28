@@ -272,7 +272,7 @@ pre {
 }
 
 .card::before {
- @apply pointer-events-none -z-[3] bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.6),_transparent_40%)] dark:bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.08),_transparent_40%)];
+ @apply pointer-events-none -z-[3] bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(219,234,254,0.1),_transparent_40%)] dark:bg-[radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),_rgba(255,255,255,0.08),_transparent_40%)];
 }
 
 .card::after {

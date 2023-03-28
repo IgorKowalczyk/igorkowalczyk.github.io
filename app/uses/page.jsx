@@ -13,7 +13,7 @@ export default function Uses() {
  return (
   <article className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center font-inter">
    <header>
-    <h1 className="mt-6 mb-3 flex flex-wrap items-center justify-center box-decoration-clone bg-clip-text text-center font-inter text-[2rem] font-semibold motion-reduce:transition-none">
+    <h1 className="mb-3 mt-6 flex flex-wrap items-center justify-center box-decoration-clone bg-clip-text text-center font-inter text-[2rem] font-semibold motion-reduce:transition-none">
      {uses.title}
      <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
     </h1>
