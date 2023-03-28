@@ -26,7 +26,7 @@ specifiers:
   lodash: 4.17.21
   mini-svg-data-uri: 1.4.4
   next: 13.2.4
-  next-contentlayer: 0.3.0
+  next-contentlayer: 0.3.1
   next-themes: npm:@wits/next-themes@0.2.16
   nprogress: 0.2.0
   plaiceholder: 2.5.0
@@ -65,7 +65,7 @@ dependencies:
   github-slugger: 2.0.0
   graphql: 16.6.0
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
-  next-contentlayer: 0.3.0_ld2jel3hspngo3u5lti2kgl2sq
+  next-contentlayer: 0.3.1_ld2jel3hspngo3u5lti2kgl2sq
   next-themes: /@wits/next-themes/0.2.16_ld2jel3hspngo3u5lti2kgl2sq
   nprogress: 0.2.0
   plaiceholder: 2.5.0_sharp@0.32.0
@@ -199,6 +199,34 @@ packages:
       - supports-color
     dev: false
 
+  /@contentlayer/core/0.3.1:
+    resolution: {integrity: sha512-lQhYsC5xhrUX7bKxUHH5Dg3oxwqJvCC0FS2975ixd6vltodQ92HYwHEy/laTNlbudUoU1U/CEywNtR+ihs8Ewg==}
+    peerDependencies:
+      markdown-wasm: 1.x
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      markdown-wasm:
+        optional: true
+    dependencies:
+      '@contentlayer/utils': 0.3.1
+      camel-case: 4.1.2
+      comment-json: 4.2.3
+      esbuild: 0.17.11
+      gray-matter: 4.0.3
+      mdx-bundler: 9.2.1_esbuild@0.17.11
+      rehype-stringify: 9.0.3
+      remark-frontmatter: 4.0.1
+      remark-parse: 10.0.1
+      remark-rehype: 10.1.0
+      source-map-support: 0.5.21
+      type-fest: 3.7.1
+      unified: 10.1.2
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - supports-color
+    dev: false
+
   /@contentlayer/source-files/0.3.0:
     resolution: {integrity: sha512-6crNuRdWGYFec0Kn/DpbrzpOu8bttFmOmOpX1HIYQz4iPisg+8biybLBiNU7Y6aCUjEZLOnM7AaHpMFvhrYWsw==}
     dependencies:
@@ -261,6 +289,39 @@ packages:
       oo-ascii-tree: 1.77.0
       ts-pattern: 4.2.1
       type-fest: 3.6.1
+    dev: false
+
+  /@contentlayer/utils/0.3.1:
+    resolution: {integrity: sha512-DVI/lLn7ihyEJC7noaBtPydrF00Fjeex5FOdcfVLccP/HriJmsaqH9B/1q5KYFo8KAW4/nGygmN96IDUQusX8g==}
+    peerDependencies:
+      '@effect-ts/otel-node': '*'
+    peerDependenciesMeta:
+      '@effect-ts/core':
+        optional: true
+      '@effect-ts/otel':
+        optional: true
+      '@effect-ts/otel-node':
+        optional: true
+    dependencies:
+      '@effect-ts/core': 0.60.5
+      '@effect-ts/otel': 0.14.1_5u6uu645xsdgke5uan4tpxejte
+      '@effect-ts/otel-exporter-trace-otlp-grpc': 0.14.1_fmrvaem7w2f5ngmgqni7goprci
+      '@effect-ts/otel-sdk-trace-node': 0.14.1_hv2rnn6sth5zqevnyab6kulypq
+      '@js-temporal/polyfill': 0.4.3
+      '@opentelemetry/api': 1.1.0
+      '@opentelemetry/core': 1.5.0_@opentelemetry+api@1.1.0
+      '@opentelemetry/exporter-trace-otlp-grpc': 0.31.0_@opentelemetry+api@1.1.0
+      '@opentelemetry/resources': 1.5.0_@opentelemetry+api@1.1.0
+      '@opentelemetry/sdk-trace-base': 1.5.0_@opentelemetry+api@1.1.0
+      '@opentelemetry/sdk-trace-node': 1.5.0_@opentelemetry+api@1.1.0
+      '@opentelemetry/semantic-conventions': 1.5.0
+      chokidar: 3.5.3
+      hash-wasm: 4.9.0
+      inflection: 2.0.1
+      memfs: 3.4.13
+      oo-ascii-tree: 1.79.0
+      ts-pattern: 4.2.2
+      type-fest: 3.7.1
     dev: false
 
   /@effect-ts/core/0.60.5:
@@ -2657,6 +2718,10 @@ packages:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
     dev: false
 
+  /fs-monkey/1.0.3:
+    resolution: {integrity: sha512-cybjIfiiE+pTWicSCLFHSrXZ6EilF30oh91FDP9S2B051prEa7QWfrVTQm10/dDpswBDXZugPa1Ogu8Yh+HV0Q==}
+    dev: false
+
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
@@ -3688,6 +3753,13 @@ packages:
       - supports-color
     dev: false
 
+  /memfs/3.4.13:
+    resolution: {integrity: sha512-omTM41g3Skpvx5dSYeZIbXKcXoAVc/AoMNwn9TKx++L/gaen/+4TTttmu8ZSch5vfVJ8uJvGbroTsIlslRg6lg==}
+    engines: {node: '>= 4.0.0'}
+    dependencies:
+      fs-monkey: 1.0.3
+    dev: false
+
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -4093,15 +4165,15 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-contentlayer/0.3.0_ld2jel3hspngo3u5lti2kgl2sq:
-    resolution: {integrity: sha512-vt+RaD3nIgZ6oXadtZH19a1mpxvGEoiifdtmXqBSz4rHMRcMA1YZCuSWyj+P9uX7MDmIL6JT6QSp+hvTBMaxiw==}
+  /next-contentlayer/0.3.1_ld2jel3hspngo3u5lti2kgl2sq:
+    resolution: {integrity: sha512-wqt4H+yq7Hw8vEKpTux1l8zXd/1dyHLY5M9SICctxupn0Tvd1jDmUSTnhQxqUYK9XspL6UYuGqHL3qQ05tnjBQ==}
     peerDependencies:
       next: ^12 || ^13
       react: '*'
       react-dom: '*'
     dependencies:
-      '@contentlayer/core': 0.3.0
-      '@contentlayer/utils': 0.3.0
+      '@contentlayer/core': 0.3.1
+      '@contentlayer/utils': 0.3.1
       next: 13.2.4_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -4303,6 +4375,11 @@ packages:
 
   /oo-ascii-tree/1.77.0:
     resolution: {integrity: sha512-UQXPEVtecK9FDQxlp5WQ9nVBgS0sq96R9LWE1HBmlS3ZLJRqXh3+kdU7Bxs+qqF+cdWmE9uOggwihBffTpqLrA==}
+    engines: {node: '>= 14.6.0'}
+    dev: false
+
+  /oo-ascii-tree/1.79.0:
+    resolution: {integrity: sha512-IyZzDkdfoRLWi8KDcnUai+Yo+QQmdkUjbSB7F95lrYj5QhY/8D2+vbIJAQIZyFskAanmrnmKK++YBcq/nxgArg==}
     engines: {node: '>= 14.6.0'}
     dev: false
 
@@ -5405,6 +5482,10 @@ packages:
     resolution: {integrity: sha512-lXCmHZb01QOM9HdCLvisCGUH9ATdKPON9UaUvwe007gJAhuSBhRWIAIowys5QqNxEq6odWctfMIdI96vzjnOMQ==}
     dev: false
 
+  /ts-pattern/4.2.2:
+    resolution: {integrity: sha512-qzJMo2pbkUJWusRH5o8xR+xogn6RmvViyUgwBFTtRENLse470clCGjHDf6haWGZ1AOmk8XkEohUoBW8Uut6Scg==}
+    dev: false
+
   /tsconfig-paths/3.14.2:
     resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==}
     dependencies:
@@ -5455,6 +5536,11 @@ packages:
 
   /type-fest/3.6.1:
     resolution: {integrity: sha512-htXWckxlT6U4+ilVgweNliPqlsVSSucbxVexRYllyMVJDtf5rTjv6kF/s+qAd4QSL1BZcnJPEJavYBPQiWuZDA==}
+    engines: {node: '>=14.16'}
+    dev: false
+
+  /type-fest/3.7.1:
+    resolution: {integrity: sha512-8LZNdvuztgxCF4eYpEmPYUPS0lbbByM2qHcp2oMxHZhWLIQB9QE36EeQ1PKwsUIDZXEP8HCBEmkBbT1//kLU4Q==}
     engines: {node: '>=14.16'}
     dev: false
 
