@@ -20,8 +20,8 @@ dependencies:
     specifier: 0.1.11
     version: 0.1.11(react@18.2.0)
   '@vercel/og':
-    specifier: 0.4.1
-    version: 0.4.1
+    specifier: 0.4.2
+    version: 0.4.2
   contentlayer:
     specifier: 0.3.1
     version: 0.3.1(esbuild@0.17.11)
@@ -1365,13 +1365,13 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vercel/og@0.4.1:
-    resolution: {integrity: sha512-N8SXkbmQQRK0iHpqwUe50Fe8JO3sx2ByV6hgPTi16ONiMdqOM9uzE4QMWoY1Oa0uYZuUVA30sEB84mVMn+gT3w==}
+  /@vercel/og@0.4.2:
+    resolution: {integrity: sha512-4xKdui9JChatNwh/fAKk/pzoKHn4Cb6aAmXihVhyRKtPnTBZN7Z+eBtgFuvnV9IfvDqYB6BQmKg6G+CBmPU4ew==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
-      satori: 0.4.1
-      yoga-wasm-web: 0.3.0
+      satori: 0.4.4
+      yoga-wasm-web: 0.3.3
     dev: false
 
   /@wits/next-themes@0.2.16(next@13.2.4)(react-dom@18.2.0)(react@18.2.0):
@@ -4981,8 +4981,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /satori@0.4.1:
-    resolution: {integrity: sha512-uQm4+vQj57E9PO/ASAlxsRb+78fHkRUmkNLBBmfuEeGNLGqJ9ufYU7TzYP4XH60PLHYt9Wz1jSsgcAe2cz7+ng==}
+  /satori@0.4.4:
+    resolution: {integrity: sha512-UCgoY7CXibFQmgI4ay4QSWUOca07nI9pY56w8NKrBq+bkGgiMbcPXZWj9bxukyJkEl/cgAICGjjxvwlDF2NYRw==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
@@ -4992,7 +4992,7 @@ packages:
       emoji-regex: 10.2.1
       linebreak: 1.1.0
       postcss-value-parser: 4.2.0
-      yoga-wasm-web: 0.3.2
+      yoga-wasm-web: 0.3.3
     dev: false
 
   /sax@1.2.4:
@@ -5793,12 +5793,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /yoga-wasm-web@0.3.0:
-    resolution: {integrity: sha512-rD3L4jyMlO1m+RWU60lNwZQK5zmzglCV5fI1gTRikmpv3YzmNIZQbjyfE6cMNb9Xaly/C1SwemYGbsiOekMvnQ==}
-    dev: false
-
-  /yoga-wasm-web@0.3.2:
-    resolution: {integrity: sha512-X//8P6RHzkO4E1ba/wXwKOybeArNDQJI2vwzFLJxz5bfT9K8fB798ZVYvq+Z+hjRA0Wy2iUlOUch4n2+ddqbDQ==}
+  /yoga-wasm-web@0.3.3:
+    resolution: {integrity: sha512-N+d4UJSJbt/R3wqY7Coqs5pcV0aUj2j9IaQ3rNj9bVCLld8tTGKRa2USARjnvZJWVx1NDmQev8EknoczaOQDOA==}
     dev: false
 
   /zen-observable-ts@1.2.5:
