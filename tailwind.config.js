@@ -1,10 +1,9 @@
-import plugin from "tailwindcss/plugin";
-import colors from "tailwindcss/colors";
-import { spacing, fontFamily } from "tailwindcss/defaultTheme";
-import svgToDataUri from "mini-svg-data-uri";
+const svgToDataUri = require("mini-svg-data-uri");
+const colors = require("tailwindcss/colors");
+const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
  darkMode: "class",
  content: [
   // Prettier
@@ -103,4 +102,3 @@ export default {
   /* eslint-enable */
  ],
 };
-
