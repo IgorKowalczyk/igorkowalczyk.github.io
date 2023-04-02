@@ -1,5 +1,6 @@
 "use client";
 
+import "styles/cards.css";
 import { useEffect, useRef } from "react";
 
 export function GlowEffect({ children, className }) {

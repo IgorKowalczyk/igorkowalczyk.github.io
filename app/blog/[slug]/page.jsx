@@ -7,6 +7,7 @@ import { TocItem } from "components/blog/Toc";
 import MDXComponents from "components/MDX/Components";
 import Image from "next/image";
 import Link from "next/link";
+import "styles/blog.css";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
