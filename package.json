@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=development next dev",
     "dev:turbo": "NODE_ENV=development next dev --turbo",
     "build": "next build && pnpm run postbuild",
-    "postbuild": "NODE_NO_WARNINGS=1 node ./lib/scripts/generate-sitemap.mjs && NODE_NO_WARNINGS=1 node ./lib/scripts/generate-rss.mjs",
+    "postbuild": "NODE_NO_WARNINGS=1 node ./lib/scripts/generate-rss.mjs",
     "deploy": "pnpm run build && pnpm run start",
     "format": "prettier --write . --cache --ignore-unknown",
     "format:check": "prettier --check --cache --ignore-unknown .",

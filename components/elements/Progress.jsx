@@ -24,7 +24,6 @@ export default function ProgressBar() {
   const mutationObserver = new MutationObserver(handleMutation);
   mutationObserver.observe(document, { childList: true, subtree: true });
 
-  // eslint-disable-next-line no-undef
   window.history.pushState = new Proxy(window.history.pushState, {
    apply: (target, thisArg, argArray) => {
     NProgress.done();
