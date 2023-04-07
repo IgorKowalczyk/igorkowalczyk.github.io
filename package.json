@@ -6,7 +6,7 @@
   "scripts": {
     "start": "next start",
     "dev": "NODE_ENV=development next dev",
-    "dev:turbo": "NODE_ENV=development next dev --turbo",
+    "dev:turbo": "NODE_ENV=development next dev --turbo --show-all",
     "build": "next build && pnpm run postbuild",
     "postbuild": "NODE_NO_WARNINGS=1 node ./lib/scripts/generate-rss.mjs",
     "deploy": "pnpm run build && pnpm run start",
