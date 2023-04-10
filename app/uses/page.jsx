@@ -2,6 +2,8 @@ import MDXComponents from "components/MDX/Components";
 import { allOtherPages } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
+export const runtime = "edge";
+
 export const metadata = {
  title: "What I use",
 };
@@ -22,6 +24,7 @@ export default function Uses() {
    <section className="prose w-full max-w-none dark:prose-dark">
     <Component components={{ ...MDXComponents }} />
    </section>
+   <p></p>
   </article>
  );
 }

@@ -2,6 +2,8 @@ import Dots from "components/decorations/Dots";
 import Squares from "components/decorations/Squares";
 import { Contact } from "components/elements/Contact";
 
+export const runtime = "edge";
+
 export const metadata = {
  title: "Contact",
 };
@@ -27,7 +29,3 @@ export default function ContactPage() {
   </div>
  );
 }
-
-export const config = {
- runtime: "edge",
-};

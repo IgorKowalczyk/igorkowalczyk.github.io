@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "styles/blog.css";
 
+export const runtime = "edge";
+
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
   slug: post.slug,
