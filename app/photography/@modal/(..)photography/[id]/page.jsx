@@ -1,9 +1,13 @@
 import { BlurImage } from "components/elements/BlurImage";
 import Modal from "components/elements/Modal2";
 import { getPhotography } from "lib/functions";
+import { notFound } from "next/navigation";
 
 export default async function PhotoPage({ params: { id } }) {
  const photo = await getPhotography(id);
+ if (!photo) {
+  return notFound();
+ }
 
  return (
   <Modal>
