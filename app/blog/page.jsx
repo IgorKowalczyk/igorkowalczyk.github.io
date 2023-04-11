@@ -2,6 +2,8 @@ import { ListElement } from "components/blog/BlogList";
 import { pick } from "contentlayer/client";
 import { allBlogs } from "contentlayer/generated";
 
+export const runtime = "edge";
+
 export default function Blog() {
  const posts = allBlogs.map((post) => pick(post, ["slug", "title", "summary", "publishedAt"])).sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));
  return (
@@ -26,7 +28,3 @@ export default function Blog() {
   </div>
  );
 }
-
-export const config = {
- runtime: "edge",
-};
