@@ -9,8 +9,6 @@ import Link from "next/link";
 import "styles/blog.css";
 import { notFound } from "next/navigation";
 
-export const runtime = "edge";
-
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
   slug: post.slug,
