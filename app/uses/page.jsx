@@ -1,4 +1,4 @@
-import MDXComponents from "components/MDX/Components";
+import MDXComponents from "components/blog/Components";
 import { allOtherPages } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
