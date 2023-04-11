@@ -1,8 +1,6 @@
-import MDXComponents from "components/blog/Components";
+import { MDXComponent } from "components/blog/Components";
 import { allOtherPages } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
-
-export const runtime = "edge";
+import { notFound } from "next/navigation";
 
 export const metadata = {
  title: "What I use",
@@ -10,7 +8,10 @@ export const metadata = {
 
 export default function Uses() {
  const uses = allOtherPages.find((page) => page.slug === "uses");
- const Component = useMDXComponent(uses.body.code);
+
+ if (!uses) {
+  return notFound();
+ }
 
  return (
   <article className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center font-inter">
@@ -22,9 +23,8 @@ export default function Uses() {
    </header>
    <p className="pb-2 font-inter text-slate-600 dark:text-slate-400">{uses.description}</p>
    <section className="prose w-full max-w-none dark:prose-dark">
-    <Component components={{ ...MDXComponents }} />
+    <MDXComponent code={uses.body.code} />
    </section>
-   <p></p>
   </article>
  );
 }
