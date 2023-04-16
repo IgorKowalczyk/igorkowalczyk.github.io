@@ -60,7 +60,7 @@
     "globby": "13.1.4",
     "lodash": "4.17.21",
     "mini-svg-data-uri": "1.4.4",
-    "postcss": "8.4.21",
+    "postcss": "8.4.22",
     "prettier": "2.8.7",
     "prettier-plugin-tailwindcss": "0.2.7",
     "tailwind-gradient-mask-image": "1.0.0",
