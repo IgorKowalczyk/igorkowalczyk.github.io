@@ -11,6 +11,8 @@ import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/grap
 import Image from "next/image";
 import Link from "next/link";
 
+export const runtime = "edge";
+
 export const metadata = {
  title: "Igor Kowalczyk",
 };
