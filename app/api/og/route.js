@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/server";
 import { parseISO } from "/lib/utils";
 
+export const runtime = "edge";
+
 const fontPoppinsBold = fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
 export async function GET(request) {
@@ -76,7 +78,3 @@ export async function GET(request) {
   }
  );
 }
-
-export const config = {
- runtime: "edge",
-};

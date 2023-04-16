@@ -1,5 +1,7 @@
 import isEmail from "validator/lib/isEmail";
 
+export const runtime = "edge";
+
 export async function POST(request) {
  const clonedStream = request.clone();
  const { email, name, message } = await clonedStream.json();

@@ -166,7 +166,7 @@ export const footer = {
     },
     {
      title: "Contact",
-     href: "/#contact",
+     href: "/contact",
     },
    ],
   },

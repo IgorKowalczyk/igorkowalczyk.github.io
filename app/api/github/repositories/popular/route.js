@@ -1,5 +1,7 @@
 import { GetPopular } from "lib/graphQl";
 
+export const runtime = "edge";
+
 export async function GET() {
  const start = Date.now();
  const data = await GetPopular();

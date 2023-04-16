@@ -1,7 +1,8 @@
 import Squares from "components/decorations/Squares";
-import { GlowEffect } from "components/elements/GlowEffect";
 import { RepoCard } from "components/elements/RepoCard";
 import { GetRepos } from "lib/graphQl";
+
+export const runtime = "edge";
 
 export const metadata = {
  title: "Github Repositories",
@@ -22,11 +23,11 @@ export default async function GithubRepositories() {
    </h1>
    <div id="cards">
     {repositories && (
-     <GlowEffect className="xl-grid-cols-4 grid grid-cols-1 gap-x-6 gap-y-10 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+     <div className="xl-grid-cols-4 grid grid-cols-1 gap-x-6 gap-y-10 text-center font-inter text-black dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
       {repositories?.map((repo) => (
-       <RepoCard key={repo.id} {...repo} className="card" />
+       <RepoCard key={repo.id} {...repo} />
       ))}
-     </GlowEffect>
+     </div>
     )}
    </div>
   </>

@@ -1,5 +1,7 @@
 import { getTotalYears, getTotalContributionsForYear } from "lib/graphQl";
 
+export const runtime = "edge";
+
 export async function GET(request, { params }) {
  const start = Date.now();
  const year = params.year;

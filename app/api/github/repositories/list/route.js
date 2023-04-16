@@ -3,6 +3,8 @@ import { GetRepos } from "lib/graphQl";
 // Type: [private, public]
 // Count: Number of repos to return [min 0, max 50]
 
+export const runtime = "edge";
+
 export async function GET(request) {
  const start = Date.now();
  let { type, count } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries());
