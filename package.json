@@ -34,7 +34,7 @@
     "plaiceholder": "2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-parallax-tilt": "^1.7.128",
+    "react-parallax-tilt": "1.7.130",
     "react-wrap-balancer": "0.4.0",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "6.1.1",
