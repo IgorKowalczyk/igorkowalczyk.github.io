@@ -6,6 +6,7 @@ import { Cog8ToothIcon, ArrowTopRightOnSquareIcon, SwatchIcon, CubeTransparentIc
 import { useTheme } from "next-themes";
 import Select from "./Select";
 import Switch from "./Switch";
+import clsx from "clsx";
 
 export default function Settings(props) {
  const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +32,27 @@ export default function Settings(props) {
 
  return (
   <div {...props}>
-   <button aria-label="Open settings" type="button" onClick={() => setIsOpen(true)} className={`${isOpen ? "bg-blue-200 dark:bg-white/[15%]" : ""} group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/10 dark:hover:bg-white/[15%]`}>
-    <Cog8ToothIcon className={`${isOpen ? "rotate-90 text-blue-800 dark:text-white" : ""} h-5 w-5 text-gray-800 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:text-gray-200 dark:group-hover:text-white`} />
+   <button
+    aria-label="Open settings"
+    type="button"
+    onClick={() => setIsOpen(true)}
+    className={clsx(
+     {
+      "bg-blue-200 dark:bg-white/[15%]": isOpen,
+      "bg-gray-200 dark:bg-white/10": !isOpen,
+     },
+     "group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:hover:bg-white/[15%]"
+    )}
+   >
+    <Cog8ToothIcon
+     className={clsx(
+      {
+       "rotate-90 text-blue-800 dark:text-white": isOpen,
+       "text-gray-800 dark:text-gray-200": !isOpen,
+      },
+      "h-5 w-5 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:group-hover:text-white"
+     )}
+    />
    </button>
    <Transition.Root appear show={isOpen} as={Fragment}>
     <Dialog as="div" unmount="true" className="relative z-[99999]" onClose={() => setIsOpen(false)}>

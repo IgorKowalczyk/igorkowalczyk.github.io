@@ -2,6 +2,7 @@ import { nav } from "/config";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,12 +21,30 @@ export default function MobileNav() {
     <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
     <XMarkIcon data-hide={!isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
    </button>
-   <div className={`${isMenuOpen ? "rendered pointer-events-all !opacity-100" : "pointer-events-none"} absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-xl duration-200 motion-reduce:transition-none md:hidden`}>
+   <div
+    className={clsx(
+     {
+      "rendered pointer-events-all !opacity-100": isMenuOpen,
+      "pointer-events-none": !isMenuOpen,
+     },
+     "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-xl duration-200 motion-reduce:transition-none md:hidden"
+    )}
+   >
     <div className="h-full border-r-[1px] border-black/[10%] bg-white bg-opacity-70 px-3.5 shadow duration-200 firefox:bg-opacity-100 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:shadow-2xl dark:firefox:bg-opacity-100">
      <div className="mt-3">
       {menuItems.map((item, index) => {
        return (
-        <p key={index} className={`${isMenuOpen ? "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-gray-700/75" : "w-0 border-transparent dark:border-transparent"} group translate-x-[-16px] whitespace-nowrap border-b text-sm font-semibold text-gray-900 opacity-0 duration-200 motion-reduce:transition-none dark:text-gray-100`} style={{ transitionDelay: `${150 * index - 50}ms` }}>
+        <p
+         key={index}
+         className={clsx(
+          {
+           "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-gray-700/75": isMenuOpen,
+           "w-0 border-transparent dark:border-transparent": !isMenuOpen,
+          },
+          "group translate-x-[-16px] whitespace-nowrap border-b text-sm font-semibold text-gray-900 opacity-0 duration-200 motion-reduce:transition-none dark:text-gray-100"
+         )}
+         style={{ transitionDelay: `${150 * index - 50}ms` }}
+        >
          <Link
           href={item.href}
           key={index}

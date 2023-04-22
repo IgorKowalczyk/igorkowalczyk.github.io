@@ -19,6 +19,9 @@ dependencies:
   '@vercel/og':
     specifier: 0.5.3
     version: 0.5.3
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   contentlayer:
     specifier: 0.3.1
     version: 0.3.1(esbuild@0.17.14)
@@ -1637,6 +1640,11 @@ packages:
   /clone@2.1.2:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@2.0.1:
