@@ -6,9 +6,9 @@ export function CodeCard({ userData, contributions }) {
  return (
   <div className="card border-b-black/15 shadow-code block w-full rounded-md border font-inter text-[15px] text-sm backdrop-blur-md transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-white/[15%] dark:bg-[#08152b]/30">
    <div className="w-fill border-b-dark/5 relative flex h-8 items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]"></div>
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]"></div>
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]"></div>
+    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]" />
+    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]" />
+    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]" />
     <div className="absolute bottom-0 top-0 flex w-full items-center justify-center">
      <span className="opacity-50" aria-hidden="true">
       Console
