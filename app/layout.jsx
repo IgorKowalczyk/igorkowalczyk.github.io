@@ -44,7 +44,9 @@ export const metadata = {
  },
  twitter: {
   title: meta.title,
+  description: meta.description,
   author: meta.accounts.twitter.username,
+  image: meta.image,
   card: "summary_large_image",
  },
  icons: {
