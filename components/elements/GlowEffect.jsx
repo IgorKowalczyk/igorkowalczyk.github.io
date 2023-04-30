@@ -7,6 +7,7 @@ export function GlowEffect({ children, className }) {
  let [enabled, setEnabled] = useState(true);
  useEffect(() => {
   localStorage.getItem("glow") === "true" ? setEnabled(true) : setEnabled(false);
+  if (!localStorage.getItem("glow")) localStorage.setItem("glow", true);
   window.addEventListener("glowEffect", () => {
    localStorage.getItem("glow") === "true" ? setEnabled(true) : setEnabled(false);
   });
