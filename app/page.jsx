@@ -24,7 +24,7 @@ export default async function HomePage() {
  const contributions = await getTotalContributionsForYears();
 
  return (
-  <div id="cards">
+  <>
    <div className="bg-cover bg-fixed bg-right">
     <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
@@ -213,6 +213,6 @@ export default async function HomePage() {
      </div>
     </div>
    </section>
-  </div>
+  </>
  );
 }

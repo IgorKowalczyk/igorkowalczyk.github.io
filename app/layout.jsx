@@ -1,7 +1,10 @@
-import { ClientProviders } from "components/elements/ClientProviders";
+import { Analytics } from "@vercel/analytics/react";
+import clsx from "clsx";
 import { Footer } from "components/elements/Footer";
+import { Hotjar } from "components/elements/Hotjar";
 import { Nav } from "components/elements/Nav";
 import ProgressBar from "components/elements/Progress";
+import { Theme } from "components/elements/Theme";
 import { meta } from "config";
 import { Inter } from "next/font/google";
 import { ServerThemeProvider } from "next-themes";
@@ -54,37 +57,22 @@ export const metadata = {
  },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal }) {
  return (
   <ServerThemeProvider attribute="class">
    <html lang="en">
-    <head>
-     {process.env.HOTJAR_ID && (
-      <script
-       dangerouslySetInnerHTML={{
-        __html: `
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-`,
-       }}
-      />
-     )}
-    </head>
-    <body className={`bg-main ${inter.className}`}>
-     <Nav />
-     <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
-      <ClientProviders>
+    <head>{process.env.HOTJAR_ID && <Hotjar id={process.env.HOTJAR_ID} />}</head>
+    <body className={clsx("bg-main", inter.className)}>
+     <Theme>
+      <Nav />
+      <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
        <ProgressBar />
-       <>{children}</>
-      </ClientProviders>
-     </main>
-     <Footer />
+       <Analytics />
+       {children}
+       {modal}
+      </main>
+      <Footer />
+     </Theme>
     </body>
    </html>
   </ServerThemeProvider>
