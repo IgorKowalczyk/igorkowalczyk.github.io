@@ -48,7 +48,7 @@ dependencies:
     version: 0.2.0
   plaiceholder:
     specifier: 2.5.0
-    version: 2.5.0(sharp@0.32.0)
+    version: 2.5.0(sharp@0.32.1)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -83,8 +83,8 @@ dependencies:
     specifier: 0.0.1
     version: 0.0.1
   sharp:
-    specifier: 0.32.0
-    version: 0.32.0
+    specifier: 0.32.1
+    version: 0.32.1
   swr:
     specifier: 2.1.3
     version: 2.1.3(react@18.2.0)
@@ -1066,7 +1066,7 @@ packages:
       '@opentelemetry/propagator-b3': 1.5.0(@opentelemetry/api@1.1.0)
       '@opentelemetry/propagator-jaeger': 1.5.0(@opentelemetry/api@1.1.0)
       '@opentelemetry/sdk-trace-base': 1.5.0(@opentelemetry/api@1.1.0)
-      semver: 7.3.8
+      semver: 7.5.0
     dev: false
 
   /@opentelemetry/semantic-conventions@1.5.0:
@@ -4166,11 +4166,11 @@ packages:
     resolution: {integrity: sha512-7GGVawqyHF4pfd0YFybhv/eM9JwTtPqx0mAanQ146O3FlSh3pA24zf9IRQTOsfTSqXTNzPSP5iagAJ94jjuVog==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.0
     dev: false
 
-  /node-addon-api@6.0.0:
-    resolution: {integrity: sha512-GyHvgPvUXBvAkXa0YvYnhilSB1A+FRYMpIVggKzPZqdaZfevZOuzfWzyvgzOwRLHBeo/MMswmJFsrNF4Nw1pmA==}
+  /node-addon-api@6.1.0:
+    resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
     dev: false
 
   /node-cache@5.1.2:
@@ -4427,7 +4427,7 @@ packages:
     resolution: {integrity: sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==}
     engines: {node: '>= 6'}
 
-  /plaiceholder@2.5.0(sharp@0.32.0):
+  /plaiceholder@2.5.0(sharp@0.32.1):
     resolution: {integrity: sha512-rygdNSWuYzs1GxxGjq2FiJdJB1AUaKhUHP/M7PIrSjAAGuoJC5ACiJx+cZZ+hDmMalxsxOMw0Sbbx3LF8jemGg==}
     peerDependencies:
       sharp: '>= 0.30.6'
@@ -4437,7 +4437,7 @@ packages:
       image-size: 1.0.2
       node-cache: 5.1.2
       node-fetch: 2.6.7(encoding@0.1.13)
-      sharp: 0.32.0
+      sharp: 0.32.1
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.23):
@@ -5020,21 +5020,30 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: true
+
+  /semver@7.5.0:
+    resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: false
 
   /server-only@0.0.1:
     resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
     dev: false
 
-  /sharp@0.32.0:
-    resolution: {integrity: sha512-yLAypVcqj1toSAqRSwbs86nEzfyZVDYqjuUX8grhFpeij0DDNagKJXELS/auegDBRDg1XBtELdOGfo2X1cCpeA==}
+  /sharp@0.32.1:
+    resolution: {integrity: sha512-kQTFtj7ldpUqSe8kDxoGLZc1rnMFU0AO2pqbX6pLy3b7Oj8ivJIdoKNwxHVQG2HN6XpHPJqCSM2nsma2gOXvOg==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.1
-      node-addon-api: 6.0.0
+      node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.3.8
+      semver: 7.5.0
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
