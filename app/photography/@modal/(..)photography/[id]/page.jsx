@@ -1,5 +1,5 @@
 import { BlurImage } from "components/elements/BlurImage";
-import Modal from "components/elements/Modal2";
+import Modal from "components/elements/Modal";
 import { getPhotography } from "lib/functions";
 import { notFound } from "next/navigation";
 

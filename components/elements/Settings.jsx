@@ -14,20 +14,21 @@ export default function Settings(props) {
  const [decorationsEnabled, setDecorationsEnabled] = useState(true);
  const { resolvedTheme, setTheme } = useTheme();
 
- function changeGlow() {
-  localStorage.setItem("glow", !glowEnabled);
-  setGlowEnabled(!glowEnabled);
- }
-
  useEffect(() => {
   if (localStorage.getItem("glow") === "false") setGlowEnabled(false);
   if (localStorage.getItem("decorations") === "false") setDecorationsEnabled(false);
  }, []);
 
+ function changeGlow() {
+  localStorage.setItem("glow", !glowEnabled);
+  window.dispatchEvent(new Event("glowEffect"));
+  setGlowEnabled(!glowEnabled);
+ }
+
  function changeDecorations() {
   localStorage.setItem("decorations", !decorationsEnabled);
-  setDecorationsEnabled(!decorationsEnabled);
   window.dispatchEvent(new Event("decorations"));
+  setDecorationsEnabled(!decorationsEnabled);
  }
 
  return (
