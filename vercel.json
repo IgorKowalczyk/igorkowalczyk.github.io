@@ -1,37 +1,5 @@
 {
  "framework": "nextjs",
- "redirects": [
-  {
-   "source": "/discord",
-   "destination": "https://discord.gg/uxtSMtd2xZ",
-   "permanent": true
-  },
-  {
-   "source": "/twitter",
-   "destination": "https://twitter.com/majonezexe",
-   "permanent": true
-  },
-  {
-   "source": "/instagram",
-   "destination": "https://www.instagram.com/majonezexe/",
-   "permanent": true
-  },
-  {
-   "source": "/github",
-   "destination": "https://github.com/igorkowalczyk",
-   "permanent": true
-  },
-  {
-   "source": "/r/:path*",
-   "destination": "/:path*",
-   "permanent": true
-  },
-  {
-   "source": "/discord-server",
-   "destination": "/discord",
-   "permanent": true
-  }
- ],
  "github": {
   "silent": true
  },

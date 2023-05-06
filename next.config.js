@@ -133,6 +133,11 @@ const nextConfig = {
     destination: "/discord",
     permanent: true,
    },
+   {
+    source: "/feed.xml",
+    destination: "/feed",
+    permanent: true,
+   },
   ];
  },
 };
