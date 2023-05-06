@@ -14,9 +14,6 @@ module.exports = {
  ],
  theme: {
   extend: {
-   fontFamily: {
-    inter: ["Inter", ...fontFamily.sans],
-   },
    fontWeight: {
     semibold: 700,
    },

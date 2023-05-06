@@ -12,7 +12,7 @@ export default async function PhotoPage({ params: { id } }) {
 
  return (
   <div className="mx-auto mb-16 flex flex-col items-start justify-center">
-   <h1 className="mb-4 flex w-full items-center justify-center box-decoration-clone bg-clip-text text-center font-inter text-[2rem] font-semibold motion-reduce:transition-none">
+   <h1 className="mb-4 flex w-full items-center justify-center box-decoration-clone bg-clip-text text-center  text-[2rem] font-semibold motion-reduce:transition-none">
     Photo nr {id}
     <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h1>

@@ -66,10 +66,10 @@ export default function Post({ params }) {
      __html: JSON.stringify(post?.structuredData),
     }}
    />
-   <div className="prose grid flex-1 grid-cols-1 gap-x-8 font-inter dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
+   <div className="prose grid flex-1 grid-cols-1 gap-x-8  dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
-     <header className="w-full font-inter">
-      <h1 className="mb-2 mt-6 flex items-center box-decoration-clone bg-clip-text font-inter text-[2.5rem] font-semibold motion-reduce:transition-none">
+     <header className="w-full ">
+      <h1 className="mb-2 mt-6 flex items-center box-decoration-clone bg-clip-text  text-[2.5rem] font-semibold motion-reduce:transition-none">
        {post?.title}
        <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
       </h1>
@@ -96,7 +96,7 @@ export default function Post({ params }) {
      ))}
     </div>
    </div>
-   <div className="flex w-full justify-end py-4 font-inter text-gray-700 dark:text-gray-300">
+   <div className="flex w-full justify-end py-4  text-gray-700 dark:text-gray-300">
     <Link href={`https://github.com/${meta.accounts.github.username}/${meta.accounts.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
      Suggest a change
     </Link>

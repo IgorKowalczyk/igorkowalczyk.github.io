@@ -73,14 +73,14 @@ export function Contact(props) {
  return (
   <form {...props} onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
    <div className="z-[2] block w-full items-center justify-center gap-1.5 text-left md:flex">
-    <label htmlFor="contact_name" className="w-full text-left font-inter text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_name" className="w-full text-left  text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
      <input value={formData.name} name="name" onChange={handleChange} id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300  p-2 text-black duration-200 focus:border-blue-700 dark:border-white/20 dark:bg-transparent  dark:text-white focus:dark:border-blue-500 " type="text" placeholder="John Doe" />
     </label>
-    <label htmlFor="contact_email" className="w-full text-left font-inter text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_email" className="w-full text-left  text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
      Email
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -89,7 +89,7 @@ export function Contact(props) {
     </label>
    </div>
    <div className="mt-2 flex w-full items-center justify-center gap-1.5">
-    <label htmlFor="contact_message" className="w-full text-left font-inter text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_message" className="w-full text-left  text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
      Message
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
