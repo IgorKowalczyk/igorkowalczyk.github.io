@@ -54,7 +54,7 @@
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.9",
     "autoprefixer": "10.4.14",
-    "eslint": "8.40.0",
+    "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "globby": "13.1.4",
     "lodash": "4.17.21",
