@@ -21,7 +21,7 @@
     "@heroicons/react": "2.0.18",
     "@tippyjs/react": "4.2.6",
     "@vercel/analytics": "1.0.1",
-    "@vercel/og": "0.5.4",
+    "@vercel/og": "0.5.5",
     "clsx": "1.2.1",
     "contentlayer": "0.3.2",
     "dotenv": "16.0.3",
