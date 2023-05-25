@@ -1,5 +1,5 @@
-import { BlurImage } from "components/elements/BlurImage";
 import { getPhotography } from "lib/functions";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default async function Photography() {
     ) : (
      photos.map((result, id) => (
       <Link key={id} href={`/photography/${result.id}`} className="after:content after:shadow-highlight group relative mb-5 block w-full rounded-lg bg-slate-100 bg-cover after:pointer-events-none after:absolute after:inset-0 after:rounded-lg dark:bg-slate-800">
-       <BlurImage src={result.path} blur={result.blur} alt={result.id + "image"} />
+       <Image className="scale-100 transform rounded-lg bg-zinc-200 blur-0 duration-200 will-change-auto hover:brightness-90  dark:bg-zinc-200/[15%]" src={result.path} alt={result.alt} width={720} height={480} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw" />
       </Link>
      ))
     )}
