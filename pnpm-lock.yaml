@@ -43,9 +43,6 @@ dependencies:
   nprogress:
     specifier: 0.2.0
     version: 0.2.0
-  plaiceholder:
-    specifier: 3.0.0
-    version: 3.0.0(sharp@0.32.1)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -4370,14 +4367,6 @@ packages:
   /pirates@4.0.5:
     resolution: {integrity: sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==}
     engines: {node: '>= 6'}
-
-  /plaiceholder@3.0.0(sharp@0.32.1):
-    resolution: {integrity: sha512-jwHxxHPnr1BwRzPCeZgEK2BMsEy2327sWynw3qb6XC/oGgGDUTPtR8pFxFQmNArhMBwhkUbUr5OPhhIJpCa8eQ==}
-    peerDependencies:
-      sharp: '>= 0.30.6'
-    dependencies:
-      sharp: 0.32.1
-    dev: false
 
   /postcss-import@15.1.0(postcss@8.4.23):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
