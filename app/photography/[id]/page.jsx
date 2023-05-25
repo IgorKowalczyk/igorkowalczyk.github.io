@@ -1,7 +1,7 @@
 import Button from "components/elements/Button";
 import { getPhotography } from "lib/functions";
-import { notFound } from "next/navigation";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 export default async function PhotoPage({ params: { id } }) {
  const photo = await getPhotography(id);
