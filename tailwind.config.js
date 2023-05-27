@@ -1,6 +1,6 @@
 const svgToDataUri = require("mini-svg-data-uri");
 const colors = require("tailwindcss/colors");
-const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
+const { spacing } = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
