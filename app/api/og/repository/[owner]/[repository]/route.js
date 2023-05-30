@@ -1,4 +1,4 @@
-import { GetOGImage } from "lib/graphQl";
+import { GetOGImage } from "lib/graphql";
 import { NextResponse } from "next/server";
 import { ImageResponse } from "next/server";
 

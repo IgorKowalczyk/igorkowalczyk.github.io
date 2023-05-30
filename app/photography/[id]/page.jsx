@@ -1,5 +1,5 @@
 import Button from "components/elements/Button";
-import { getPhotography } from "lib/functions";
+import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 

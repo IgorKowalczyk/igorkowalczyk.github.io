@@ -1,4 +1,4 @@
-import { getPhotography } from "lib/functions";
+import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 import Link from "next/link";
 

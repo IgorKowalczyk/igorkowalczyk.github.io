@@ -7,7 +7,7 @@ import { CodeCard } from "components/elements/CodeCard";
 import { Contact } from "components/elements/Contact";
 import { GlowEffect } from "components/elements/GlowEffect";
 import { RepoCard } from "components/elements/RepoCard";
-import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphQl";
+import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphql";
 import Image from "next/image";
 import Link from "next/link";
 

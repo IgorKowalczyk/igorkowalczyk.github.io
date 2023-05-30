@@ -1,4 +1,4 @@
-import { GetRepos } from "lib/graphQl";
+import { GetRepos } from "lib/graphql";
 
 // Type: [private, public]
 // Count: Number of repos to return [min 0, max 50]

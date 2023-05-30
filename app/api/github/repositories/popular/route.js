@@ -1,4 +1,4 @@
-import { GetPopular } from "lib/graphQl";
+import { GetPopular } from "lib/graphql";
 
 export const runtime = "edge";
 

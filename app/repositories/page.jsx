@@ -1,6 +1,6 @@
 import Squares from "components/decorations/Squares";
 import { RepoCard } from "components/elements/RepoCard";
-import { GetRepos } from "lib/graphQl";
+import { GetRepos } from "lib/graphql";
 
 export const runtime = "edge";
 

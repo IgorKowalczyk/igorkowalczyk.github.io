@@ -1,4 +1,4 @@
-import { GetUserData } from "/lib/graphQl";
+import { GetUserData } from "/lib/graphql";
 
 export const runtime = "edge";
 

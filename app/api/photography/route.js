@@ -1,4 +1,4 @@
-import { getPhotography } from "lib/functions";
+import { getPhotography } from "lib/getPhotography";
 
 export async function GET() {
  const start = Date.now();

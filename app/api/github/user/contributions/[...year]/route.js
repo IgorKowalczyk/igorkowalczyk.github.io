@@ -1,4 +1,4 @@
-import { getTotalYears, getTotalContributionsForYear } from "lib/graphQl";
+import { getTotalYears, getTotalContributionsForYear } from "lib/graphql";
 
 export const runtime = "edge";
 
