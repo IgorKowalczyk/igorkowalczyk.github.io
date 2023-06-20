@@ -3,7 +3,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
-import Button from "./Button";
+import Button from "../Button";
 
 export default function Modal(props) {
  let [isOpen, setIsOpen] = useState(true);

@@ -20,7 +20,7 @@ export default function Blog() {
     <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h3>
    {!posts.length && <p className="mb-4  text-rose-500">No posts found!</p>}
-   <ol className="relative mt-8 border-l border-slate-200 dark:border-slate-700">
+   <ol className="relative mt-8 border-l border-slate-200 dark:border-neutral-800">
     {posts.map((post, index) => (
      <ListElement {...post} index={index} key={index} />
     ))}

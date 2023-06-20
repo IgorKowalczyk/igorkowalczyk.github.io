@@ -1,10 +1,10 @@
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
+import { Nav } from "components/elements/client/Nav";
+import ProgressBar from "components/elements/client/Progress";
+import { Theme } from "components/elements/client/Theme";
 import { Footer } from "components/elements/Footer";
 import { Hotjar } from "components/elements/Hotjar";
-import { Nav } from "components/elements/Nav";
-import ProgressBar from "components/elements/Progress";
-import { Theme } from "components/elements/Theme";
 import { meta } from "config";
 import { Inter } from "next/font/google";
 import { ServerThemeProvider } from "next-themes";
