@@ -69,8 +69,8 @@ dependencies:
     specifier: 1.2.0
     version: 1.2.0
   rehype-prism-plus:
-    specifier: 1.6.0
-    version: 1.6.0
+    specifier: 1.6.1
+    version: 1.6.1
   rehype-slug:
     specifier: 5.1.0
     version: 5.1.0
@@ -4649,8 +4649,8 @@ packages:
       unified: 10.1.2
     dev: false
 
-  /rehype-prism-plus@1.6.0:
-    resolution: {integrity: sha512-VxFC0cSWkCRhSGmYY5FZ7X7kb5BeoN8gVdpLQaOFyn0Brmf/bHFzJEFqZyhUyVyE+1oRIpsOT1dYgQmr8JmrjA==}
+  /rehype-prism-plus@1.6.1:
+    resolution: {integrity: sha512-HCLGvrbn9J1FSvsHo3/mJstToVJGe8czeUULpgPZhc3X21XJHCjYlZSBL4dH784WPUz/sW4PCATf8J1o7fgblA==}
     dependencies:
       hast-util-to-string: 2.0.0
       parse-numeric-range: 1.3.0
