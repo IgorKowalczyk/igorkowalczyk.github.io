@@ -25,7 +25,7 @@ export default async function HomePage() {
 
  return (
   <>
-   <div className="bg-cover bg-fixed bg-right">
+   <div className="bg-cover bg-fixed bg-right before:absolute before:inset-0 before:z-[-1] before:bg-[length:30px_30px] before:bg-center before:opacity-5 before:bg-grid-[#000] dark:before:bg-grid-[#fff]">
     <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
@@ -47,7 +47,7 @@ export default async function HomePage() {
       </div>
 
       <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:-mb-7 md:mt-7 md:flex lg:col-span-2 lg:mb-0 lg:mt-0">
-       <GlowEffect className="block w-full">
+       <GlowEffect className="z-10 block w-full">
         <CodeCard userData={userData} contributions={contributions} />
        </GlowEffect>
       </div>
@@ -106,7 +106,9 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">About me.</h3>
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+      About me<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+     </h3>
 
      <div className="prose m-auto px-6 text-center  dark:prose-dark">
       <span>I have been coding for more than 5 years. I started my journey at the end of 2018.</span>
@@ -124,7 +126,9 @@ export default async function HomePage() {
 
    <section id={"repositories"} className="scroll-mt-20 pt-12 lg:px-24">
     <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-[length:22px_22px] before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">Most Popular Projects.</h3>
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+      Most Popular Projects<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+     </h3>
      <div className="relative">
       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center  text-zinc-800 dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {reposData &&
@@ -157,7 +161,9 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
 
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">Technologies I use</h3>
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+      Technologies I use<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+     </h3>
     </div>
     <div className="mt-6 grid h-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
      {technologies.map((tech, index) => {
@@ -185,7 +191,9 @@ export default async function HomePage() {
     <div className="h-full scroll-mt-20 py-36 pt-24 lg:px-36">
      <header>
       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-      <h3 className="m-6 mb-2 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">Contact me.</h3>
+      <h3 className="m-6 mb-2 text-center text-[35px] font-semibold tracking-[-0.03em] text-zinc-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+       Contact me<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+      </h3>
       <p className="pb-1 text-center text-base text-gray-600 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
      </header>
      <div className="relative">
