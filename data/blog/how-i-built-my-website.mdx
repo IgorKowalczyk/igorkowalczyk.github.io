@@ -44,17 +44,15 @@ With Tailwind, you don't have to leave the HTML file to add styles to elements. 
  <span>Tailwind</span>
 </a>
 
-```jsx:pages/index.jsx
-[...]
+```js title="pages/index.jsx" {1} showLineNumbers
 <a href="https://tailwindcss.com/" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded duration-200 inline-block cursor-pointer">
 <span>Tailwind</span>
 </a>
-[...]
 ```
 
 ### Output
 
-```css:output.css
+```css title="styles.css" showLineNumbers
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));

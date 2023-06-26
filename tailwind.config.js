@@ -59,7 +59,7 @@ module.exports = {
     },
    },
    backgroundImage: {
-    "main-gradient": "radial-gradient(25% 90% at 50% 100%, #0086f51c 0%, transparent 100%),radial-gradient(25% 25% at 20% 70%, #0086f533 0%, transparent 97%)",
+    "main-gradient": "radial-gradient(25% 90% at 50% 100%, #16161700 0%, transparent 100%),radial-gradient(25% 25% at 20% 70%, #1616175e 0%, transparent 97%)",
    },
    keyframes: {
     cursor: {

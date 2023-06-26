@@ -1,3 +1,5 @@
+"use client";
+
 import { nav } from "/config";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -30,7 +32,7 @@ export default function MobileNav() {
      "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 backdrop-blur-xl duration-200 motion-reduce:transition-none md:hidden"
     )}
    >
-    <div className="h-full border-r-[1px] border-black/[10%] bg-white bg-opacity-70 px-3.5 shadow duration-200 firefox:bg-opacity-100 motion-reduce:transition-none dark:border-white/[15%] dark:bg-[#08152b] dark:bg-opacity-70 dark:shadow-2xl dark:firefox:bg-opacity-100">
+    <div className="h-full border-r-[1px] border-black/[10%] bg-white bg-opacity-70 px-3.5 shadow duration-200 firefox:bg-opacity-100 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:bg-opacity-70 dark:shadow-2xl dark:firefox:bg-opacity-100">
      <div className="mt-3">
       {menuItems.map((item, index) => {
        return (

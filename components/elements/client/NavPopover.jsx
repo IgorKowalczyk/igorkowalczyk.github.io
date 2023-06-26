@@ -1,3 +1,5 @@
+"use client";
+
 import { Transition, Popover } from "@headlessui/react";
 import { meta } from "/config";
 import { CodeBracketIcon, RectangleStackIcon, EnvelopeOpenIcon, ChevronRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
@@ -30,10 +32,10 @@ export default function NavPopover(props) {
       />
      </Popover.Button>
      <Transition enter="transition ease-out duration-100 motion-reduce:transition-none" enterFrom="transform opacity-0 duration-100 scale-95 motion-reduce:transition-none" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:transition-none" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-      <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform rounded-lg border-[1px] border-black/[10%] bg-white/70 px-4 pt-3 opacity-100 shadow-lg backdrop-blur-xl duration-100 dark:border-white/[15%] dark:bg-[#08152b]/60 sm:px-0 ">
+      <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform rounded-lg border-[1px] border-black/[10%] bg-white/70 px-4 pt-3 opacity-100 shadow-lg backdrop-blur-xl duration-100 dark:border-neutral-800 dark:bg-[#161617]/60 sm:px-0 ">
        <div className="relative p-3">
         <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} key="github" onClick={() => close()} className="flex items-center rounded-lg p-3 transition hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
           <CodeBracketIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">
@@ -42,7 +44,7 @@ export default function NavPopover(props) {
          </div>
         </Link>
         <Link href="/blog" key="blog" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
           <RectangleStackIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">
@@ -51,7 +53,7 @@ export default function NavPopover(props) {
          </div>
         </Link>
         <Link href="/contact" key="contact_navbar" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-black sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
           <EnvelopeOpenIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">
@@ -60,7 +62,7 @@ export default function NavPopover(props) {
          </div>
         </Link>
        </div>
-       <div className="border-t-[1px] border-black/10 px-5 py-4 dark:border-white/10">
+       <div className="border-t-[1px] border-black/10 px-5 py-4 dark:border-neutral-800">
         <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}?tab=repositories`} key="github_external" onClick={() => close()} className="group flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
          <span className="flex items-center">
           <span className="text-sm font-medium text-gray-900 dark:text-white">Github Repositories</span>
