@@ -66,7 +66,7 @@ dependencies:
     specifier: 6.1.1
     version: 6.1.1
   rehype-pretty-code:
-    specifier: ^0.10.0
+    specifier: 0.10.0
     version: 0.10.0(shiki@0.14.2)
   rehype-slug:
     specifier: 5.1.0
