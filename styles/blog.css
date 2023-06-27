@@ -73,15 +73,11 @@ pre {
  color: gray;
 }
 
-[data-rehype-pretty-code-fragment] .line--highlighted {
- @apply rounded-md bg-slate-500 bg-opacity-10;
+[data-highlighted-line] {
+ @apply right-0 rounded-md bg-slate-500/10 py-1;
 }
 
-[data-rehype-pretty-code-fragment] .line-highlighted span {
- @apply relative;
-}
-
-[data-rehype-pretty-code-fragment] .word--highlighted {
+[data-highlighted-chars] {
  @apply rounded-md bg-slate-500 bg-opacity-10 p-1;
 }
 
