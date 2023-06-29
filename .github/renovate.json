@@ -1,9 +1,3 @@
 {
- "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"],
- "packageRules": [
-  {
-   "matchPackagePatterns": ["contentlayer"],
-   "groupName": "contentlayer"
-  }
- ]
+ "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"]
 }
