@@ -9,7 +9,7 @@
     "dev:turbo": "NODE_ENV=development next dev --turbo --show-all",
     "build": "next build",
     "deploy": "pnpm run build && pnpm run start",
-    "format": "prettier --write . --cache --ignore-unknown",
+    "format": "prettier --write . --cache --ignore-unknown --plugin=prettier-plugin-tailwindcss",
     "format:check": "prettier --check --cache --ignore-unknown .",
     "analyze": "ANALYZE=true next build",
     "lint": "next lint",
