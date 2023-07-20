@@ -6,7 +6,6 @@
 
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square&label=License)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/blob/master/license.md)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Version)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
-[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Vulnerabilities)](https://github.com/igorkowalczyk/igorkowalczyk.github.io)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=fff&label=Discord)](https://igorkowalczyk.dev/discord)
 <br><br><br>
 
