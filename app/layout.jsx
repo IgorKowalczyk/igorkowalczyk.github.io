@@ -24,13 +24,6 @@ export const metadata = {
   description: meta.description,
   url: meta.url,
   siteName: meta.title,
-  images: [
-   {
-    url: meta.image,
-    width: 1200,
-    height: 630,
-   },
-  ],
   locale: meta.locale,
   type: "website",
  },
@@ -49,7 +42,6 @@ export const metadata = {
   title: meta.title,
   description: meta.description,
   author: meta.accounts.twitter.username,
-  image: meta.image,
   card: "summary_large_image",
  },
  icons: {

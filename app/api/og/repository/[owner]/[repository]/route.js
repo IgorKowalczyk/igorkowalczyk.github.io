@@ -1,5 +1,5 @@
 import { GetOGImage } from "lib/graphql";
-import { NextResponse } from "next/server";
+import { redirect } from "next/navigation";
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
@@ -9,58 +9,25 @@ const fontPoppinsRegular = fetch(new URL("/public/fonts/regular.ttf", import.met
 
 export async function GET(request, { params }) {
  const start = Date.now();
- let repo = params.repository;
- let owner = params.owner;
 
- if (!repo || !typeof repo === "string") {
-  return new NextResponse(
-   JSON.stringify({
-    error: "Invalid repository name. Repository name must be a string",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
-    },
-   }
-  );
+ if (!params) return redirect("/opengraph-image");
+
+ const repo = params.repository;
+ const owner = params.owner;
+
+ if (!repo || !typeof repo === "string" || !owner || !typeof owner === "string") {
+  console.log(repo, owner);
+  return redirect("/opengraph-image");
  }
 
- if (!owner || !typeof owner === "string") {
-  return new NextResponse(
-   JSON.stringify({
-    error: "Invalid owner name. Owner name must be a string",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
-    },
-   }
-  );
- }
-
- const og = await GetOGImage(repo, owner);
+ const og = await GetOGImage(repo, owner.toLowerCase());
 
  if (!og || og.private) {
-  return new NextResponse(
-   JSON.stringify({
-    error: "Invalid repository or owner",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
-    },
-   }
-  );
+  return redirect("/opengraph-image");
  }
 
  if (og && og.og && og.domain === "repository-images.githubusercontent.com") {
-  return NextResponse.redirect(og.og);
+  return redirect(og.og);
  }
 
  const fontBold = await fontPoppinsBold;
@@ -77,10 +44,11 @@ export async function GET(request, { params }) {
      flexDirection: "column",
      padding: "0 10%",
      justifyContent: "center",
-     backgroundColor: "rgb(4, 13, 33)",
+     backgroundColor: "#101110",
      fontSize: 64,
      fontWeight: 900,
-     background: "linear-gradient(278.7deg, rgba(0, 0, 0, 0) 21.11%, rgba(0, 134, 245, 0.15) 137.25%), linear-gradient(98.7deg, rgba(4, 13, 33, 0.1) 60%, rgba(160, 68, 255, 0.1) 100%)",
+     boxShadow: "inset 0px 0px 277px 3px #101110",
+     backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255,255,255,0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")",
     }}
    >
     <div

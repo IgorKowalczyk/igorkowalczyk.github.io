@@ -6,7 +6,6 @@ export const meta = {
  themeColor: "#091430",
  locale: "en_US",
  siteName: "Igor Kowalczyk",
- image: "https://igorkowalczyk.dev/assets/banner.png",
  accounts: {
   github: {
    username: "igorkowalczyk",
