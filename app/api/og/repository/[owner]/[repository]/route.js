@@ -4,9 +4,6 @@ import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
 
-const fontPoppinsBold = fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
-const fontPoppinsRegular = fetch(new URL("/public/fonts/regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
-
 export async function GET(request, { params }) {
  const start = Date.now();
 
@@ -30,8 +27,8 @@ export async function GET(request, { params }) {
   return redirect(og.og);
  }
 
- const fontBold = await fontPoppinsBold;
- const fontRegular = await fontPoppinsRegular;
+ const fontBold = await fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontRegular = await fetch(new URL("/public/fonts/regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
  /* eslint-disable @next/next/no-img-element */
  return new ImageResponse(

@@ -21,7 +21,7 @@ export function CodeCard({ userData, contributions }) {
       →
      </span>{" "}
      <span className="font-semibold text-[#66e777]" aria-hidden="true">
-      ~/{header.code.default.user}
+      ~/{header.code.user}
      </span>{" "}
      <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">
       $
@@ -48,7 +48,7 @@ export function CodeCard({ userData, contributions }) {
         →
        </span>{" "}
        <span className="font-semibold text-[#66e777]" aria-hidden="true">
-        ~/{header.code.default.user}
+        ~/{header.code.user}
        </span>{" "}
        <span className="font-semibold italic text-slate-700 duration-200 motion-reduce:transition-none dark:text-slate-300">$</span> <span className="italic">contact --discord</span>
        <div className="leading-6">
@@ -67,7 +67,7 @@ export function CodeCard({ userData, contributions }) {
       →
      </span>{" "}
      <span className="font-semibold text-[#66e777]" aria-hidden="true">
-      ~/{header.code.default.user}
+      ~/{header.code.user}
      </span>{" "}
      <span className="italic">
       <span className="relative font-semibold text-slate-700 duration-200 after:absolute after:bottom-0 after:right-[-1.5em] after:top-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-slate-300" aria-hidden="true">

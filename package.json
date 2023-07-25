@@ -28,6 +28,7 @@
     "github-slugger": "2.0.0",
     "next": "13.4.12",
     "next-contentlayer": "0.3.4",
+    "next-nprogress-bar": "2.0.3",
     "next-themes": "npm:@wits/next-themes@0.2.16",
     "nprogress": "0.2.0",
     "react": "18.2.0",

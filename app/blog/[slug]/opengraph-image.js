@@ -15,15 +15,12 @@ export const size = {
 
 export const contentType = "image/png";
 
-const fontPoppinsBold = fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
-const fontPoppinsRegular = fetch(new URL("/public/fonts/regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
-
 export default async function Image({ params }) {
  const { slug } = params;
  const post = allBlogs.find((post) => post.slug === slug);
 
- const fontBold = await fontPoppinsBold;
- const fontRegular = await fontPoppinsRegular;
+ const fontBold = await fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontRegular = await fetch(new URL("/public/fonts/regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
 
  if (!post) {
   return redirect("/opengraph-image");

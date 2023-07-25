@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import { Nav } from "components/elements/client/Nav";
-import ProgressBar from "components/elements/client/Progress";
+import { ProgressBar } from "components/elements/client/Progress";
 import { Theme } from "components/elements/client/Theme";
 import { Footer } from "components/elements/Footer";
 import { Hotjar } from "components/elements/Hotjar";
@@ -14,6 +14,7 @@ import "styles/progress.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+ metadataBase: new URL(meta.url),
  title: {
   default: meta.title,
   template: `%s | ${meta.title}`,

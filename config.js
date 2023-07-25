@@ -2,7 +2,7 @@ export const meta = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
  description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
- url: "https://igorkowalczyk.dev",
+ url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`,
  themeColor: "#091430",
  locale: "en_US",
  siteName: "Igor Kowalczyk",
@@ -30,9 +30,7 @@ export const header = {
  subtitle: "Full-stack developer",
  description: meta.description,
  code: {
-  default: {
    user: "igorkowalczyk",
-  },
  },
 };
 
@@ -194,6 +192,11 @@ export const technologies = [
   icon: "/assets/tech/javascript.svg",
  },
  {
+  name: "Typescript",
+  icon: "/assets/tech/typescript.svg",
+  link: "https://www.typescriptlang.org/",
+ },
+ {
   name: "Node.js",
   icon: "/assets/tech/nodejs.svg",
   link: "https://nodejs.org/",
@@ -246,9 +249,9 @@ export const technologies = [
   link: "https://turbo.build/",
  },
  {
-  name: "Framer Motion",
-  icon: "/assets/tech/framer.svg",
-  link: "https://www.framer.com/motion/",
+  name: "Deno",
+  icon: "/assets/tech/deno.svg",
+  link: "https://deno.land/",
  },
  {
   name: "C++",
@@ -270,14 +273,9 @@ export const technologies = [
   link: "https://discord.js.org/",
  },
  {
-  name: "Heroicons",
-  icon: "/assets/tech/heroicons.svg",
-  link: "https://heroicons.com/",
- },
- {
-  name: "Headless UI",
-  icon: "/assets/tech/headlessui.svg",
-  link: "https://headlessui.dev/",
+  name: "Rollup",
+  icon: "/assets/tech/rollup.svg",
+  link: "https://rollupjs.org/",
  },
  {
   name: "Docker",
@@ -291,11 +289,13 @@ export const technologies = [
   link: "https://vercel.com/",
  },
  {
-  name: "CSS",
-  icon: "/assets/tech/css.svg",
+  name: "Astro",
+  icon: "/assets/tech/astro.svg",
+  class: "invert-0 dark:invert",
+  link: "https://astro.build/",
  },
  {
-  name: "Eslint",
+  name: "ESlint",
   icon: "/assets/tech/eslint.svg",
   link: "https://eslint.org/",
  },

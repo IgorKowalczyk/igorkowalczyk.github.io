@@ -31,6 +31,11 @@ function NavItem({ href, text, target }) {
    )}
   >
    {text}
+   {target && (target === "_blank" || target === "_external") ? (
+    <svg aria-hidden="true" className="absolute right-0 top-2 fill-black opacity-50 dark:fill-white" height="7" viewBox="0 0 6 6" width="7">
+     <path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" fill="var(--accents-3)"></path>
+    </svg>
+   ) : null}
   </Link>
  );
 }
@@ -57,7 +62,7 @@ export function Nav() {
      {nav.right.map((item, index) => {
       return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
-     <Settings className="text-right" />
+     <Settings className="ml-4 text-right" />
     </div>
    </div>
   </nav>
