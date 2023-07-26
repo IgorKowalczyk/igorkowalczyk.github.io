@@ -30,7 +30,7 @@ export const header = {
  subtitle: "Full-stack developer",
  description: meta.description,
  code: {
-   user: "igorkowalczyk",
+  user: "igorkowalczyk",
  },
 };
 
