@@ -8,7 +8,6 @@ export function Footer() {
     <div className="grid grid-cols-2 gap-9 md:grid-cols-6">
      <div className="col-span-3 flex flex-col justify-center">
       <div className="flex items-center space-x-5">
-       {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
        <Link href="/" legacyBehavior>
         <p className="flex cursor-pointer items-center  text-2xl font-semibold">
          Igor Kowalczyk
@@ -40,6 +39,7 @@ export function Footer() {
      ))}
     </div>
     <div className="mt-5 flex justify-end text-center  text-gray-700 dark:text-gray-400">
+     {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
      <p className="font-semibold">&copy; 2019 - {new Date().getFullYear()} Igor Kowalczyk, All rights reserved.</p>
     </div>
    </div>
