@@ -24,7 +24,17 @@ export async function GET(request, { params }) {
  }
 
  if (og && og.og && og.domain === "repository-images.githubusercontent.com") {
-  return redirect(og.og);
+  const image = await fetch(og.og);
+  const buffer = await image.arrayBuffer();
+  const type = image.headers.get("Content-Type");
+
+  return new Response(buffer, {
+   headers: {
+    "Content-Type": type,
+    "Cache-Control": "public, max-age=31536000, immutable",
+    "X-Response-Time": `${Date.now() - start}ms`,
+   },
+  });
  }
 
  const fontBold = await fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
