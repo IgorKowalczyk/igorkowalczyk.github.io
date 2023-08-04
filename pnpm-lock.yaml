@@ -87,8 +87,8 @@ dependencies:
     specifier: 2.2.0
     version: 2.2.0(react@18.2.0)
   validator:
-    specifier: 13.9.0
-    version: 13.9.0
+    specifier: 13.11.0
+    version: 13.11.0
 
 devDependencies:
   '@igorkowalczyk/eslint-config':
@@ -5603,8 +5603,8 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /validator@13.9.0:
-    resolution: {integrity: sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==}
+  /validator@13.11.0:
+    resolution: {integrity: sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==}
     engines: {node: '>= 0.10'}
     dev: false
 
