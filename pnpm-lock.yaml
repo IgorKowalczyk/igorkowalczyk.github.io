@@ -42,8 +42,8 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(contentlayer@0.3.4)(esbuild@0.17.14)(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
   next-nprogress-bar:
-    specifier: 2.0.3
-    version: 2.0.3
+    specifier: 2.1.0
+    version: 2.1.0
   next-themes:
     specifier: npm:@wits/next-themes@0.2.16
     version: /@wits/next-themes@0.2.16(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
@@ -4040,8 +4040,8 @@ packages:
       - supports-color
     dev: false
 
-  /next-nprogress-bar@2.0.3:
-    resolution: {integrity: sha512-G2K+76ZT56sZeEGrxaS5AU40s4OzqYy0NUU971Hs3uz77kkArd/GhOLkq5TYcIGBznMHXvKyrCDYdyJPZV2S7A==}
+  /next-nprogress-bar@2.1.0:
+    resolution: {integrity: sha512-3bdFBGZVHJ9JSZlTYqMW4GpsINIVz/FHfaGJf6vddUqUkH+36FNtGdGY0tVAdMk6ft14Wmy9C+o+VOH9MXCv0g==}
     dependencies:
       nprogress: 0.2.0
     dev: false
