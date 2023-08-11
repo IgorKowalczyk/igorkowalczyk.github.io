@@ -92,8 +92,8 @@ dependencies:
 
 devDependencies:
   '@igorkowalczyk/eslint-config':
-    specifier: 1.5.4
-    version: 1.5.4(eslint@8.47.0)(prettier@3.0.1)
+    specifier: 1.5.5
+    version: 1.5.5(eslint@8.47.0)(prettier@3.0.1)
   '@igorkowalczyk/is-browser':
     specifier: 5.0.0
     version: 5.0.0(tailwindcss@3.3.3)
@@ -667,10 +667,10 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@igorkowalczyk/eslint-config@1.5.4(eslint@8.47.0)(prettier@3.0.1):
-    resolution: {integrity: sha512-CzQRZVtx3tk6gkWrA2zcUQcWNY5Rh1LoMe5hiSaR8NIFtxEFy76PJ2+f3OWu4BnfCQBx6p3AX+9xil0EJCYAfA==}
+  /@igorkowalczyk/eslint-config@1.5.5(eslint@8.47.0)(prettier@3.0.1):
+    resolution: {integrity: sha512-S1r7d3gjBP0MmXZGs2P86CiNCUYpN2Cdatr+Xf6kPAg+Ff1PbgNBSo0/wD9v957wvuuMPHf2pRGbpRPs5FdCOA==}
     peerDependencies:
-      eslint: '>=7.0.0'
+      eslint: '>=8.0.0'
     dependencies:
       eslint: 8.47.0
       eslint-plugin-import: 2.28.0(@typescript-eslint/parser@5.57.0)(eslint-import-resolver-typescript@3.5.4)(eslint@8.47.0)
