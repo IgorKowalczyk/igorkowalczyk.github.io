@@ -48,7 +48,7 @@
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "1.5.5",
     "@igorkowalczyk/is-browser": "5.0.0",
-    "@igorkowalczyk/prettier-config": "1.5.4",
+    "@igorkowalczyk/prettier-config": "1.5.5",
     "@next/bundle-analyzer": "13.4.13",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.9",
