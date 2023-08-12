@@ -95,8 +95,8 @@ devDependencies:
     specifier: 1.5.5
     version: 1.5.5(eslint@8.47.0)(prettier@3.0.1)
   '@igorkowalczyk/is-browser':
-    specifier: 5.0.0
-    version: 5.0.0(tailwindcss@3.3.3)
+    specifier: 5.0.1
+    version: 5.0.1(tailwindcss@3.3.3)
   '@igorkowalczyk/prettier-config':
     specifier: 1.5.5
     version: 1.5.5(prettier@3.0.1)
@@ -685,8 +685,8 @@ packages:
       - supports-color
     dev: true
 
-  /@igorkowalczyk/is-browser@5.0.0(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-QRf/z4Jd+MO0coL4Rs39OFBe4H3dMQ01HqtIKmPqde6wX+ycGBKfpDd2Qgu2b+y/bFgiBhrUEAi05wqUBkmJcQ==}
+  /@igorkowalczyk/is-browser@5.0.1(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-f9xiKC6boHQzhqpqH0xmpJuN+P+2CKuytQgo+x0rDn633INkDxITJOUcIUFnuMzfjlCGJTSd6FsEZ6fauJfD9Q==}
     engines: {node: '>=16'}
     peerDependencies:
       tailwindcss: '>=3.0.0'
