@@ -41,9 +41,9 @@ export default function MobileNav() {
          className={clsx(
           {
            "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-gray-700/75": isMenuOpen,
-           "w-0 border-transparent dark:border-transparent": !isMenuOpen,
+           "w-0 translate-x-[-16px] border-transparent opacity-0 dark:border-transparent": !isMenuOpen,
           },
-          "group translate-x-[-16px] whitespace-nowrap border-b text-sm font-semibold text-gray-900 opacity-0 duration-200 motion-reduce:transition-none dark:text-gray-100"
+          "group whitespace-nowrap border-b text-sm font-semibold text-gray-900 duration-200 motion-reduce:transition-none dark:text-gray-100"
          )}
          style={{ transitionDelay: `${150 * index - 50}ms` }}
         >
