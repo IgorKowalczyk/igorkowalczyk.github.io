@@ -1,13 +1,16 @@
-<img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" src="https://media.discordapp.net/attachments/710425657003212810/933327129305821184/circle.png">
+![Portfolio header](https://github.com/IgorKowalczyk/igorkowalczyk.github.io/assets/49127376/59642eac-4ac5-4d03-931c-2513d46655d3)
 
-## Igor Kowalczyk - Next.js Portfolio
-
-> My personal portfolio written on Next.js
-
-[![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square&label=License)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/blob/master/license.md)
-[![Version](https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Version)](https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=fff&label=Discord)](https://igorkowalczyk.dev/discord)
-<br/><br/>
+<div align="center">
+  <a aria-label="GitHub License" href="https://github.com/igorkowalczyk/igorkowalczyk.github.io/blob/master/license.md">
+    <img src="https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=github&style=flat-square&label=License">
+  </a>
+  <a aria-label="Version" href="https://github.com/igorkowalczyk/igorkowalczyk.github.io/releases">
+    <img src="https://img.shields.io/github/v/release/igorkowalczyk/igorkowalczyk.github.io?color=%2334D058&logo=github&style=flat-square&label=Version">
+  </a>
+  <a aria-label="Discord" href="https://igorkowalczyk.dev/discord">
+    <img src="https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=fff&label=Discord">
+  </a>
+</div>
 
 ---
 
@@ -27,7 +30,8 @@
 6. Run `npm run build` to build the project or `npm run dev` to run the project in development mode.
    > If you want to build and host the project you can use `npm run deploy`
 
-> **Note**: In `.env` file you can set these **optional** values:
+> [!NOTE]
+> In `.env` file you can set these **optional** values:
 >
 > - `HOTJAR_ID` - Your [Hotjar](https://www.hotjar.com) website ID (for analytics)
 
