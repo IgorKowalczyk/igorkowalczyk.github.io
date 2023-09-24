@@ -98,8 +98,8 @@ devDependencies:
     specifier: 5.0.2
     version: 5.0.2(tailwindcss@3.3.3)
   '@igorkowalczyk/prettier-config':
-    specifier: 1.5.5
-    version: 1.5.5(prettier@3.0.3)
+    specifier: 1.5.6
+    version: 1.5.6(prettier@3.0.3)
   '@next/bundle-analyzer':
     specifier: 13.5.2
     version: 13.5.2
@@ -694,8 +694,8 @@ packages:
       tailwindcss: 3.3.3
     dev: true
 
-  /@igorkowalczyk/prettier-config@1.5.5(prettier@3.0.3):
-    resolution: {integrity: sha512-uKjxa7mWYz9ixIq9OWYSAohVf0Rm5qEl/JaiKCWbv9WJ5kq4h8R+E/ICkdN9HWemwPwgECRveyCHUNnrtXmB/g==}
+  /@igorkowalczyk/prettier-config@1.5.6(prettier@3.0.3):
+    resolution: {integrity: sha512-VzMT3xDiULmSurvZy1bxeGM818fcaHfy6VcaPYMLCdUmkm9uQ3ecKymtFYnf/BVAACeAurlRum1ACVRJQ4BU9w==}
     peerDependencies:
       prettier: ^3.0
     dependencies:
