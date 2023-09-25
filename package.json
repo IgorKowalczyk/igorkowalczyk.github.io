@@ -46,7 +46,7 @@
     "validator": "13.11.0"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "1.5.5",
+    "@igorkowalczyk/eslint-config": "1.5.6",
     "@igorkowalczyk/is-browser": "5.0.2",
     "@igorkowalczyk/prettier-config": "1.5.6",
     "@next/bundle-analyzer": "13.5.2",
