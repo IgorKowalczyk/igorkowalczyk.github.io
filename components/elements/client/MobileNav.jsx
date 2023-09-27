@@ -40,7 +40,7 @@ export default function MobileNav() {
          key={index}
          className={clsx(
           {
-           "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-gray-700/75": isMenuOpen,
+           "w-full translate-x-0 border-gray-200 !opacity-100 dark:border-neutral-800": isMenuOpen,
            "w-0 translate-x-[-16px] border-transparent opacity-0 dark:border-transparent": !isMenuOpen,
           },
           "group whitespace-nowrap border-b text-sm font-semibold text-gray-900 duration-200 motion-reduce:transition-none dark:text-gray-100"
