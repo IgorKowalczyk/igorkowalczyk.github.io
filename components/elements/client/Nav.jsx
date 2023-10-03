@@ -25,7 +25,7 @@ function NavItem({ href, text, target }) {
    className={clsx(
     {
      "active text-gray-800 dark:text-gray-200": isActive,
-     "text-gray-700 dark:text-neutral-300": !isActive,
+     "text-gray-700 dark:text-neutral-400": !isActive,
     },
     "nav-border relative hidden rounded-lg p-1 transition-all duration-200 before:w-[calc(100%_-_1.5em)] after:w-[calc(100%_-_1.5em)] hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block"
    )}

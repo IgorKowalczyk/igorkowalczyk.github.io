@@ -15,7 +15,7 @@ export default function NavPopover(props) {
       className={clsx(
        {
         "active bg-black/10 text-gray-800 dark:bg-white/10 dark:text-gray-200": open,
-        "text-gray-700 dark:text-neutral-300": !open,
+        "text-gray-700 dark:text-neutral-400": !open,
        },
        "nav-border group relative hidden rounded-lg p-1 transition-all duration-200 hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center"
       )}
@@ -25,9 +25,9 @@ export default function NavPopover(props) {
        className={clsx(
         {
          "rotate-90 text-gray-800 dark:text-gray-200": open,
-         "text-gray-700 dark:text-neutral-300": !open,
+         "text-gray-700 dark:text-neutral-400": !open,
         },
-        "ml-1 h-4 w-4 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200"
+        "ml-1 h-4 w-4 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-400"
        )}
       />
      </Popover.Button>
@@ -40,7 +40,7 @@ export default function NavPopover(props) {
          </div>
          <div className="ml-4">
           <p className="text-sm font-medium text-gray-900 dark:text-white">My Github profile</p>
-          <p className="text-sm text-gray-500 dark:text-neutral-300">Web development, Discord Bots, and more</p>
+          <p className="text-sm text-gray-500 dark:text-neutral-400">Web development, Discord Bots, and more</p>
          </div>
         </Link>
         <Link href="/blog" key="blog" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
@@ -49,7 +49,7 @@ export default function NavPopover(props) {
          </div>
          <div className="ml-4">
           <p className="text-sm font-medium text-gray-900 dark:text-white">Developer Blog</p>
-          <p className="text-sm text-gray-500 dark:text-neutral-300">About my projects, web security and design</p>
+          <p className="text-sm text-gray-500 dark:text-neutral-400">About my projects, web security and design</p>
          </div>
         </Link>
         <Link href="/contact" key="contact_navbar" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
@@ -58,7 +58,7 @@ export default function NavPopover(props) {
          </div>
          <div className="ml-4">
           <p className="text-sm font-medium text-gray-900 dark:text-white">Contact me</p>
-          <p className="text-sm text-gray-500 dark:text-neutral-300">Do you have any questions? I always answer</p>
+          <p className="text-sm text-gray-500 dark:text-neutral-400">Do you have any questions? I always answer</p>
          </div>
         </Link>
        </div>
