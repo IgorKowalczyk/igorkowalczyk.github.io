@@ -12,6 +12,8 @@ export async function GET(request, { params }) {
  const repo = params.repository;
  const owner = params.owner;
 
+ let { theme } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries()) || "dark";
+
  if (!repo || !typeof repo === "string" || !owner || !typeof owner === "string") {
   console.log(repo, owner);
   return redirect("/opengraph-image");
@@ -51,11 +53,11 @@ export async function GET(request, { params }) {
      flexDirection: "column",
      padding: "0 10%",
      justifyContent: "center",
-     backgroundColor: "#101110",
+     backgroundColor: theme === "light" ? "#fff" : "#101110",
      fontSize: 64,
      fontWeight: 900,
-     boxShadow: "inset 0px 0px 277px 3px #101110",
-     backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255,255,255,0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")",
+     boxShadow: `inset 0px 0px 277px 3px ${theme === "light" ? "#fff" : "#101110"}`,
+     backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='${theme === "light" ? "rgb(0,0,0,0.05)" : "rgb(255,255,255,0.05)"}'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
     }}
    >
     <div
@@ -85,7 +87,7 @@ export async function GET(request, { params }) {
        justifyContent: "center",
       }}
      >
-      <h1 style={{ color: "#fff", fontFamily: "PoppinsBold", fontSize: 32, margin: "0 0 15px 0" }}>
+      <h1 style={{ color: theme === "light" ? "#000" : "#fff", fontFamily: "PoppinsBold", fontSize: 32, margin: "0 0 15px 0" }}>
        {owner}
        <span style={{ color: "#c1c1c1", fontFamily: "PoppinsRegular" }}>/</span>
        {repo}

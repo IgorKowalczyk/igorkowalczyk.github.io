@@ -6,7 +6,7 @@ I hereby claim:
 
   * I am an admin of https://igorkowalczyk.vercel.app
   * I am igorkowalczyk (https://keybase.io/igorkowalczyk) on keybase.
-  * I have a public key with fingerprint 7212 C8A2 6091 9C81 39C4  1AC5 8F4A D8CB ECBC 3B60
+  * I have a public key with fingerprint 7212 C8A2 6091 9C81 39C4 1AC5 8F4A D8CB ECBC 3B60
 
 To do so, I am signing this object:
 

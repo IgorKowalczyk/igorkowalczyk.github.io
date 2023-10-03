@@ -14,7 +14,7 @@ export default function Switch({ enabled, onChange }) {
       "translate-x-[25px] bg-gray-700": enabled,
       "translate-x-[5px]": !enabled,
      },
-     "pointer-events-none mb-[1px] inline-block h-[20px] w-[20px] transform rounded-lg bg-gray-400 !ring-0 transition ease-in-out dark:bg-gray-200"
+     "pointer-events-none mb-px inline-block h-[20px] w-[20px] transform rounded-lg bg-gray-400 !ring-0 transition ease-in-out dark:bg-gray-200"
     )}
    />
   </HeadlessSwitch>

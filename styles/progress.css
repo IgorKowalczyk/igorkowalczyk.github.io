@@ -3,11 +3,11 @@
 }
 
 #nprogress .bar {
- @apply fixed left-0 top-0 z-[10000] h-[2px]  w-full bg-gradient-to-r from-[#6310ff] to-[#1491ff];
+ @apply fixed left-0 top-0 z-[10000] h-[2px] w-full bg-gradient-to-r from-[#6310ff] to-[#1491ff];
 }
 
 #nprogress .spinner {
- @apply fixed bottom-4 right-4 z-[9999] flex h-9 w-9 animate-[fade_200ms_linear] items-center justify-center rounded-lg bg-black/[40%] backdrop-blur-[5px] firefox:bg-gray-800 motion-reduce:animate-none motion-reduce:transition-none dark:bg-white/10 firefox:dark:bg-slate-800;
+ @apply fixed bottom-4 right-4 z-[9999] flex h-9 w-9 animate-[fade_200ms_linear] items-center justify-center rounded-lg bg-black/[40%] backdrop-blur-[5px] firefox:bg-gray-800 motion-reduce:animate-none motion-reduce:transition-none dark:bg-white/10 firefox:dark:bg-gray-800;
 }
 
 #nprogress .spinner-icon {

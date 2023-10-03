@@ -70,11 +70,11 @@ export default function Settings(props) {
           Settings
          </Dialog.Title>
          <div className="mt-2">
-          <p className="text-base text-gray-500 dark:text-slate-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
+          <p className="text-base text-gray-500 dark:text-gray-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/10 dark:divide-white/10">
-          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-zinc-800 dark:text-white">
-           <SwatchIcon className="mr-2 h-5 w-5 text-zinc-800/80 dark:text-slate-300/50" />
+          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
+           <SwatchIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
            Theme
            <div className="ml-auto w-32">
             <Select
@@ -129,19 +129,19 @@ export default function Settings(props) {
             />
            </div>
           </div>
-          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-zinc-800 dark:text-white">
-           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-zinc-800/80 dark:text-slate-300/50" />
+          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
+           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
            Glow effect
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-zinc-800/50 dark:text-slate-300/50">
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-gray-300/50">
             <span className="mt-1">Off</span>
             <Switch enabled={glowEnabled} onChange={() => changeGlow()} />
             <span className="mt-1">On</span>
            </div>
           </div>
-          <div className="flex w-full select-none items-center py-3 text-base text-zinc-800 dark:text-white">
-           <CubeTransparentIcon className="mr-2 h-5 w-5 text-zinc-800/80 dark:text-slate-300/50" />
+          <div className="flex w-full select-none items-center py-3 text-base text-gray-800 dark:text-white">
+           <CubeTransparentIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
            Display Decorations
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-zinc-800/50 dark:text-slate-300/50">
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-gray-300/50">
             <span className="mt-1">Off</span>
             <Switch enabled={decorationsEnabled} onChange={() => changeDecorations()} />
             <span className="mt-1">On</span>
@@ -149,10 +149,10 @@ export default function Settings(props) {
           </div>
          </div>
          <div className="mt-4 flex items-center">
-          <a target="_blank" rel="noreferrer" href={`https://github.com/${meta.accounts.github.username}/${meta.accounts.github.repo}`} className="full group flex items-start rounded-md px-2 py-3 text-sm text-zinc-800 duration-200 motion-reduce:transition-none dark:text-white">
+          <a target="_blank" rel="noreferrer" href={`https://github.com/${meta.accounts.github.username}/${meta.accounts.github.repo}`} className="full group flex items-start rounded-md px-2 py-3 text-sm text-gray-800 duration-200 motion-reduce:transition-none dark:text-white">
            Source code <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
           </a>
-          <button type="button" className="group my-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2  text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>
+          <button type="button" className="group my-2 ml-auto flex rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" onClick={() => setIsOpen(false)}>
            Close{" "}
            <svg className="ml-2 mt-[2px] h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />

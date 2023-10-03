@@ -35,7 +35,7 @@ export default function NavPopover(props) {
       <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform rounded-lg border-[1px] border-black/[10%] bg-white/90 px-4 pt-3 opacity-100 shadow-lg backdrop-blur-xl duration-100 dark:border-neutral-800 dark:bg-[#161617]/90 sm:px-0 ">
        <div className="relative p-3">
         <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} key="github" onClick={() => close()} className="flex items-center rounded-lg p-3 transition hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-gray-800 sm:h-12 sm:w-12">
           <CodeBracketIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">
@@ -44,7 +44,7 @@ export default function NavPopover(props) {
          </div>
         </Link>
         <Link href="/blog" key="blog" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-gray-800 sm:h-12 sm:w-12">
           <RectangleStackIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">
@@ -53,7 +53,7 @@ export default function NavPopover(props) {
          </div>
         </Link>
         <Link href="/contact" key="contact_navbar" onClick={() => close()} className="mt-1 flex items-center rounded-lg p-3 transition duration-150 ease-in-out hover:bg-blue-400/20 dark:hover:bg-white/5">
-         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-zinc-800 sm:h-12 sm:w-12">
+         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 text-white dark:bg-white/10 dark:text-gray-800 sm:h-12 sm:w-12">
           <EnvelopeOpenIcon className="inline h-[24px] w-[24px] stroke-black duration-200 motion-reduce:transition-none dark:stroke-white/[70%]" />
          </div>
          <div className="ml-4">

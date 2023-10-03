@@ -50,7 +50,7 @@ export default function MobileNav() {
          <Link
           href={item.href}
           key={index}
-          className="flex w-auto p-4 pb-4  duration-200 group-hover:pl-6 motion-reduce:transition-none"
+          className="flex w-auto p-4 pb-4 duration-200 group-hover:pl-6 motion-reduce:transition-none"
           onClick={() => {
            isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
           }}
