@@ -1,4 +1,8 @@
+"use client";
+
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import Button from "components/elements/Button";
+import Balancer from "react-wrap-balancer";
 
 export default function NotFound() {
  return (
@@ -8,7 +12,12 @@ export default function NotFound() {
      <ExclamationTriangleIcon className="h-10 w-10 text-red-500" />
     </div>
     <h1 className="mx-0 mt-0 bg-gradient-to-r from-[#ff7170] to-[#ffe57f] box-decoration-clone bg-clip-text text-center text-3xl font-semibold text-fill-transparent">404 - Page not found</h1>
-    <p className="mt-3 text-center text-neutral-700">We're sorry — we can't find the page you're looking for.</p>
+    <p className="mt-3 text-center text-neutral-800 dark:text-neutral-200">
+     <Balancer ratio={0.5}>We're sorry — we can't find the page you're looking for.</Balancer>
+    </p>
+    <div className="mt-3 flex justify-center">
+     <Button href="/">Go home</Button>
+    </div>
    </div>
   </div>
  );
