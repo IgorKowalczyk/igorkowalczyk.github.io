@@ -11,7 +11,7 @@ export default function Blog() {
    <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[2rem] font-semibold motion-reduce:transition-none">
     Tech Blog <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </h1>
-   <p className="mb-4 text-gray-700 dark:text-gray-400">
+   <p className="mb-4 text-gray-700 dark:text-neutral-300">
     A blog about technology, programming and many other interesting things. There {posts.length > 1 ? "are" : "is"} currently {posts.length} {posts.length > 1 ? "posts" : "post"} on the blog, use the search below to filter posts.
    </p>
 

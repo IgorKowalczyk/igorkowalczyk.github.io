@@ -70,11 +70,11 @@ export default function Settings(props) {
           Settings
          </Dialog.Title>
          <div className="mt-2">
-          <p className="text-base text-gray-500 dark:text-gray-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
+          <p className="text-base text-gray-500 dark:text-neutral-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/10 dark:divide-white/10">
           <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
-           <SwatchIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
+           <SwatchIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
            Theme
            <div className="ml-auto w-32">
             <Select
@@ -130,18 +130,18 @@ export default function Settings(props) {
            </div>
           </div>
           <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
-           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
+           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
            Glow effect
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-gray-300/50">
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
             <span className="mt-1">Off</span>
             <Switch enabled={glowEnabled} onChange={() => changeGlow()} />
             <span className="mt-1">On</span>
            </div>
           </div>
           <div className="flex w-full select-none items-center py-3 text-base text-gray-800 dark:text-white">
-           <CubeTransparentIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-gray-300/50" />
+           <CubeTransparentIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
            Display Decorations
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-gray-300/50">
+           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
             <span className="mt-1">Off</span>
             <Switch enabled={decorationsEnabled} onChange={() => changeDecorations()} />
             <span className="mt-1">On</span>

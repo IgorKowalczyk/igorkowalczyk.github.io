@@ -13,11 +13,11 @@ export function ListElement({ title, summary, slug, publishedAt, index }) {
      <h3 className="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
       {title} {index === 0 && <span className="ml-3 mr-2 hidden rounded bg-blue-200 py-0.5 pl-1.5 pr-2.5 text-sm font-medium dark:bg-white/10 sm:block">🔥 Latest</span>}
      </h3>
-     <time className="mb-2 block text-sm font-normal leading-none text-gray-500 dark:text-gray-500" dateTime={new Date(publishedAt).toUTCString()}>
+     <time className="mb-2 block text-sm font-normal leading-none text-gray-500 dark:text-neutral-500" dateTime={new Date(publishedAt).toUTCString()}>
       {parseISO(publishedAt)}
      </time>
     </header>
-    <p className="mb-2 text-base font-normal text-gray-700 dark:text-gray-400">{summary}</p>
+    <p className="mb-2 text-base font-normal text-gray-700 dark:text-neutral-300">{summary}</p>
     <p className="inline-flex text-sm font-semibold text-[#1491ff]">Read more</p>
    </li>
   </Link>

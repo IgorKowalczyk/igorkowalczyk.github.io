@@ -33,7 +33,7 @@ export default async function HomePage() {
       <div className="md:col-span-3">
        <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
        <h2 className="text-center text-[1.5rem] font-semibold opacity-80 md:text-left">{header.subtitle}</h2>
-       <p className="mt-2 text-center text-gray-700 dark:text-gray-400 md:w-3/4 md:text-left">{header.description}</p>
+       <p className="mt-2 text-center text-gray-700 dark:text-neutral-400 md:w-3/4 md:text-left">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
         <Link href="/#about" scroll={false} className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
          <>
@@ -195,7 +195,7 @@ export default async function HomePage() {
       <h3 className="m-6 mb-2 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
        Contact me<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
       </h3>
-      <p className="pb-1 text-center text-base text-gray-700 dark:text-gray-300">Want to order a project? Or do you just want to stay in touch?</p>
+      <p className="pb-1 text-center text-base text-gray-700 dark:text-neutral-300">Want to order a project? Or do you just want to stay in touch?</p>
      </header>
      <div className="relative">
       <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none dark:divide-none md:grid-cols-2 md:divide-gray-200 md:dark:divide-white/20">

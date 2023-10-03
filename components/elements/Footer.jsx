@@ -16,17 +16,17 @@ export function Footer() {
        </Link>
       </div>
 
-      <p className="mt-3 text-gray-700 dark:text-gray-400">
+      <p className="mt-3 text-gray-700 dark:text-neutral-300">
        Created with ❤️ and ☕ in Poland using{" "}
        <Link href="https://nextjs.org" target={"_blank"}>
         Next.js
        </Link>
       </p>
       <br />
-      <p className="mb-4 text-gray-700 opacity-50 dark:text-gray-400">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
+      <p className="mb-4 text-gray-700 opacity-50 dark:text-neutral-300">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
      </div>
      {footer.categories.map((category, index) => (
-      <div key={index} className="col-span-1 text-gray-700 dark:text-gray-400">
+      <div key={index} className="col-span-1 text-gray-700 dark:text-neutral-300">
        <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0 ">{category.title}</p>
        <div>
         {category.links.map((link, index) => (
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
      ))}
     </div>
-    <div className="mt-5 flex justify-end text-center text-gray-700 dark:text-gray-400">
+    <div className="mt-5 flex justify-end text-center text-gray-700 dark:text-neutral-300">
      {/* DO NOT TOUCH THE CODE BELOW! REMEMBER: YOU CAN ADD YOUR NAME AFTER MY NAME */}
      <p className="font-semibold">&copy; 2019 - {new Date().getFullYear()} Igor Kowalczyk, All rights reserved.</p>
     </div>

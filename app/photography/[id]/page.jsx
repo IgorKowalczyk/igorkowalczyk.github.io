@@ -19,7 +19,7 @@ export default async function PhotoPage({ params: { id } }) {
    <div className="mb-6 flex w-full flex-col items-center justify-center">
     <Button href="/photography">Back to photography</Button>
    </div>
-   <Image className="scale-100 transform rounded-lg bg-gray-200 blur-0 duration-200 will-change-auto hover:brightness-90 dark:bg-gray-200/[15%]" src={photo.path} alt={photo.path} width={720} height={480} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw" />
+   <Image className="scale-100 transform rounded-lg bg-gray-200 blur-0 duration-200 will-change-auto hover:brightness-90 dark:bg-neutral-200/[15%]" src={photo.path} alt={photo.path} width={720} height={480} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw" />
   </div>
  );
 }

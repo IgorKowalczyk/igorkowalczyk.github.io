@@ -8,7 +8,7 @@ export default function NotFound() {
      <ExclamationTriangleIcon className="h-10 w-10 text-red-500" />
     </div>
     <h1 className="mx-0 mt-0 bg-gradient-to-r from-[#ff7170] to-[#ffe57f] box-decoration-clone bg-clip-text text-center text-3xl font-semibold text-fill-transparent">404 - Page not found</h1>
-    <p className="text-neural-700 mt-3 text-center">We're sorry — we can't find the page you're looking for.</p>
+    <p className="mt-3 text-center text-neutral-700">We're sorry — we can't find the page you're looking for.</p>
    </div>
   </div>
  );

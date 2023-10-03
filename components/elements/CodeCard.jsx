@@ -23,7 +23,7 @@ export function CodeCard({ userData, contributions }) {
      <span className="font-semibold text-[#66e777]" aria-hidden="true">
       ~/{header.code.user}
      </span>{" "}
-     <span className="font-semibold italic text-gray-700 duration-200 motion-reduce:transition-none dark:text-gray-300" aria-hidden="true">
+     <span className="font-semibold italic text-gray-700 duration-200 motion-reduce:transition-none dark:text-neutral-300" aria-hidden="true">
       $
      </span>{" "}
      <span className="italic" aria-label={`list github account ${meta.accounts.github.username}`}>
@@ -50,7 +50,7 @@ export function CodeCard({ userData, contributions }) {
        <span className="font-semibold text-[#66e777]" aria-hidden="true">
         ~/{header.code.user}
        </span>{" "}
-       <span className="font-semibold italic text-gray-700 duration-200 motion-reduce:transition-none dark:text-gray-300">$</span> <span className="italic">contact --discord</span>
+       <span className="font-semibold italic text-gray-700 duration-200 motion-reduce:transition-none dark:text-neutral-300">$</span> <span className="italic">contact --discord</span>
        <div className="leading-6">
         + <span className="font-semibold">User:</span>{" "}
         <Link href={`https://discord.com/users/${meta.accounts.discord.id}`} target="_blank">
@@ -70,7 +70,7 @@ export function CodeCard({ userData, contributions }) {
       ~/{header.code.user}
      </span>{" "}
      <span className="italic">
-      <span className="relative font-semibold text-gray-700 duration-200 after:absolute after:bottom-0 after:right-[-1.5em] after:top-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-gray-300" aria-hidden="true">
+      <span className="relative font-semibold text-gray-700 duration-200 after:absolute after:bottom-0 after:right-[-1.5em] after:top-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-neutral-300" aria-hidden="true">
        $
       </span>
      </span>
