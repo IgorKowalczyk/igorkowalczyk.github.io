@@ -23,14 +23,14 @@ export function Footer() {
        </Link>
       </p>
       <br />
-      <p className="mb-4 text-gray-600 opacity-50 dark:text-gray-400">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
+      <p className="mb-4 text-gray-700 opacity-50 dark:text-gray-400">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
      </div>
      {footer.categories.map((category, index) => (
       <div key={index} className="col-span-1 text-gray-700 dark:text-gray-400">
        <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0 ">{category.title}</p>
        <div>
         {category.links.map((link, index) => (
-         <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-600 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
+         <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-700 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
           {link.title}
          </Link>
         ))}

@@ -15,7 +15,7 @@ export default function NavPopover(props) {
       className={clsx(
        {
         "active bg-black/10 text-gray-800 dark:bg-white/10 dark:text-gray-200": open,
-        "text-gray-600 dark:text-gray-400": !open,
+        "text-gray-700 dark:text-gray-400": !open,
        },
        "nav-border group relative hidden rounded-lg p-1 transition-all duration-200 hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:flex md:items-center"
       )}
@@ -25,7 +25,7 @@ export default function NavPopover(props) {
        className={clsx(
         {
          "rotate-90 text-gray-800 dark:text-gray-200": open,
-         "text-gray-600 dark:text-gray-400": !open,
+         "text-gray-700 dark:text-gray-400": !open,
         },
         "ml-1 h-4 w-4 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-gray-800 dark:group-hover:text-gray-200"
        )}

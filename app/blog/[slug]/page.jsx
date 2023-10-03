@@ -73,7 +73,7 @@ export default function Post({ params }) {
          </time>
         </div>
        </div>
-       <p className="min-w-32 mt-2 text-sm text-gray-600 dark:text-gray-400 md:mt-0">
+       <p className="min-w-32 mt-2 text-sm text-gray-700 dark:text-gray-400 md:mt-0">
         {post?.wordCount} words • {post?.readingTime?.text}
        </p>
       </div>

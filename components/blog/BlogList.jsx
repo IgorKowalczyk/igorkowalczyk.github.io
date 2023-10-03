@@ -17,7 +17,7 @@ export function ListElement({ title, summary, slug, publishedAt, index }) {
       {parseISO(publishedAt)}
      </time>
     </header>
-    <p className="mb-2 text-base font-normal text-gray-600 dark:text-gray-400">{summary}</p>
+    <p className="mb-2 text-base font-normal text-gray-700 dark:text-gray-400">{summary}</p>
     <p className="inline-flex text-sm font-semibold text-[#1491ff]">Read more</p>
    </li>
   </Link>
