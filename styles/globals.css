@@ -12,7 +12,7 @@ rect {
 
 html,
 body {
- @apply m-0 scroll-smooth p-0  antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
+ @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
 }
 
 .hide {
@@ -43,19 +43,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
- @apply rounded-xl bg-slate-50 dark:bg-[#040d21];
+ @apply rounded-xl bg-gray-50 dark:bg-[#040d21];
 }
 
 ::-webkit-scrollbar-thumb {
- @apply rounded-xl bg-slate-300 dark:bg-[#1f2532];
+ @apply rounded-xl bg-gray-300 dark:bg-[#1f2532];
 }
 
 ::-webkit-scrollbar-thumb:hover {
- @apply bg-slate-400 dark:bg-[#292f3d];
+ @apply bg-gray-400 dark:bg-[#292f3d];
 }
 
 ::-webkit-scrollbar-thumb:active {
- @apply bg-slate-500 dark:bg-[#343b4a];
+ @apply bg-gray-500 dark:bg-[#343b4a];
 }
 
 ::selection {

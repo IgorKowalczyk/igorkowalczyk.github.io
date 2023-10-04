@@ -73,28 +73,28 @@ export function Contact(props) {
  return (
   <form {...props} onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
    <div className="z-[2] block w-full items-center justify-center gap-1.5 text-left md:flex">
-    <label htmlFor="contact_name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <input value={formData.name} name="name" onChange={handleChange} id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-zinc-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white focus:dark:border-blue-500" type="text" placeholder="John Doe" />
+     <input value={formData.name} name="name" onChange={handleChange} id="contact_name" className="my-2 w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-gray-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white focus:dark:border-neutral-700" type="text" placeholder="John Doe" />
     </label>
-    <label htmlFor="contact_email" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_email" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
      Email
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <input value={formData.email} name="email" onChange={handleChange} id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-zinc-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white  focus:dark:border-blue-500" type="email" placeholder="john@doe.com" />
+     <input value={formData.email} name="email" onChange={handleChange} id="contact_email" className="my-2 w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-gray-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white focus:dark:border-neutral-700" type="email" placeholder="john@doe.com" />
     </label>
    </div>
    <div className="mt-2 flex w-full items-center justify-center gap-1.5">
-    <label htmlFor="contact_message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-600 dark:text-gray-400">
+    <label htmlFor="contact_message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
      Message
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
      </span>
-     <textarea value={formData.message} name="message" onChange={handleChange} id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-zinc-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white focus:dark:border-blue-500" type="email" placeholder="Hello there!" />
+     <textarea value={formData.message} name="message" onChange={handleChange} id="contact_message" className="my-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] border-gray-300 p-2 font-normal text-gray-800 outline-0 duration-200 focus:border-blue-700 dark:border-neutral-800 dark:bg-transparent dark:text-white focus:dark:border-neutral-700" type="email" placeholder="Hello there!" />
     </label>
    </div>
    {success ? <p className="self-start text-sm font-semibold tracking-wide text-green-500 ">{success}</p> : <></>}

@@ -38,22 +38,22 @@ module.exports = {
     },
     dark: {
      css: {
-      color: colors.slate[300],
+      color: colors.gray[300],
       "h1,h2,h3,h4,h5": {
        color: colors.gray[100],
        "scroll-margin-top": spacing[28],
       },
       a: {
-       color: colors.slate[100],
+       color: colors.gray[100],
        "text-decoration-color": colors.gray[500],
        "&:hover": {
-        color: colors.slate[100],
-        "text-decoration-color": colors.slate[100],
+        color: colors.gray[100],
+        "text-decoration-color": colors.gray[100],
        },
       },
       blockquote: {
        borderLeftColor: colors.gray[700],
-       color: colors.slate[300],
+       color: colors.gray[300],
       },
      },
     },
