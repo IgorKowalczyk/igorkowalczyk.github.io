@@ -3,13 +3,13 @@ import isEmail from "validator/lib/isEmail";
 export const runtime = "edge";
 
 export async function POST(request) {
- const clonedStream = request.clone();
- const { email, name, message } = await clonedStream.json();
+ const { email, name, message } = await request.clone().json();
 
  if (!email) {
   return new Response(
    JSON.stringify({
     error: true,
+    type: "email",
     message: "Please enter your email address!",
    }),
    {
@@ -25,6 +25,7 @@ export async function POST(request) {
   return new Response(
    JSON.stringify({
     error: true,
+    type: "email",
     message: "Please enter a valid email address!",
    }),
    {
@@ -40,6 +41,7 @@ export async function POST(request) {
   return new Response(
    JSON.stringify({
     error: true,
+    type: "email",
     message: "Email must be between 5 and 50 characters!",
    }),
    {
@@ -55,6 +57,7 @@ export async function POST(request) {
   return new Response(
    JSON.stringify({
     error: true,
+    type: "name",
     message: "Name must be between 3 and 20 characters!",
    }),
    {
@@ -70,6 +73,7 @@ export async function POST(request) {
   return new Response(
    JSON.stringify({
     error: true,
+    type: "message",
     message: "Message must be between 10 and 500 characters!",
    }),
    {
@@ -83,7 +87,7 @@ export async function POST(request) {
 
  const embed = {
   title: "📩 New message from igorkowalczyk.dev",
-  description: `> ${message.toString().trim()}`,
+  description: `>>> ${message.toString().trim()}`,
   color: 5759645,
   fields: [
    {
@@ -120,7 +124,7 @@ export async function POST(request) {
     },
    });
   } else {
-   return new Response(JSON.stringify({ error: false, message: "Message sent!" }), {
+   return new Response(JSON.stringify({ error: false, message: "Message sent successfully! Thank you for contacting me!" }), {
     status: 200,
     headers: {
      "Content-Type": "application/json",
