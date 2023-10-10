@@ -6,7 +6,7 @@ export function RepoCard(repo) {
  return (
   <div id={repo.name} className="card z-10 rounded-[10px] border-[1px] border-black/[15%] p-5 backdrop-blur-md duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
    <div>
-    <Image unoptimized src={`/api/og/repository/${repo.owner.login}/${repo.name}`} width={1200} height={630} alt={`Preview of ${repo.name}`} className="mb-4 rounded-[10px]" />
+    <Image src={`/api/og/repository/${repo.owner.login}/${repo.name}`} width={1200} height={630} alt={`Preview of ${repo.name}`} className="mb-4 rounded-[10px]" />
     <div className="text-left">
      <Link href={repo.url} key={repo.id} className="break-all text-left font-semibold" target="_blank">
       <FolderIcon className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" /> {repo.owner.login}/{repo.name}
