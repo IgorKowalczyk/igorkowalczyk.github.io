@@ -45,9 +45,9 @@
     "validator": "13.11.0"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "1.5.6",
+    "@igorkowalczyk/eslint-config": "2.0.2",
     "@igorkowalczyk/is-browser": "5.0.2",
-    "@igorkowalczyk/prettier-config": "1.5.6",
+    "@igorkowalczyk/prettier-config": "2.0.2",
     "@next/bundle-analyzer": "13.5.6",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.10",
