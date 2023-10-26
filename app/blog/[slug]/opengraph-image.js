@@ -2,7 +2,7 @@ import { meta } from "config";
 import { parseISO } from "/lib/utils";
 import { allBlogs } from "contentlayer/generated";
 import { redirect } from "next/navigation";
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
