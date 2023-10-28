@@ -38,7 +38,7 @@ export async function GET(request, { params }) {
    },
   });
  }
- 
+
  const fontBold = await fetch(new URL("/public/fonts/Geist-Black.otf", import.meta.url)).then((res) => res.arrayBuffer());
  const fontRegular = await fetch(new URL("/public/fonts/Geist-Regular.otf", import.meta.url)).then((res) => res.arrayBuffer());
 
