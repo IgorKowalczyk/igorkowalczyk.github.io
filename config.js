@@ -16,7 +16,7 @@ export const meta = {
   },
   discord: {
    username: "Majonez.exe#2495",
-   invite: "https://discord.gg/uxtSMtd2xZ",
+   invite: "https://discord.gg/sgt4QEyDxK",
    id: "544164729354977282",
   },
   instagram: {
