@@ -6,12 +6,15 @@ import { Theme } from "components/elements/client/Theme";
 import { Footer } from "components/elements/Footer";
 import { Hotjar } from "components/elements/Hotjar";
 import { meta } from "config";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font";
 import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
 import "styles/progress.css";
 
+/*
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+*/
 
 export const metadata = {
  metadataBase: new URL(meta.url),
@@ -55,7 +58,7 @@ export default function RootLayout({ children, modal }) {
   <ServerThemeProvider attribute="class">
    <html lang="en">
     <head>{process.env.HOTJAR_ID && <Hotjar id={process.env.HOTJAR_ID} />}</head>
-    <body className={clsx("bg-main", inter.className)}>
+    <body className={clsx("bg-main", GeistSans.className)}>
      <Theme>
       <Nav />
       <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">

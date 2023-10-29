@@ -39,8 +39,8 @@ export async function GET(request, { params }) {
   });
  }
 
- const fontBold = await fetch(new URL("/public/fonts/bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
- const fontRegular = await fetch(new URL("/public/fonts/regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontBold = await fetch(new URL("/public/fonts/Geist-Black.otf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontRegular = await fetch(new URL("/public/fonts/Geist-Regular.otf", import.meta.url)).then((res) => res.arrayBuffer());
 
  /* eslint-disable @next/next/no-img-element */
  return new ImageResponse(
@@ -87,12 +87,12 @@ export async function GET(request, { params }) {
        justifyContent: "center",
       }}
      >
-      <h1 style={{ color: theme === "light" ? "#000" : "#fff", fontFamily: "PoppinsBold", fontSize: 32, margin: "0 0 15px 0" }}>
+      <h1 style={{ color: theme === "light" ? "#000" : "#fff", fontFamily: "Geist-Black", fontSize: 32, margin: "0 0 15px 0" }}>
        {owner}
-       <span style={{ color: "#c1c1c1", fontFamily: "PoppinsRegular" }}>/</span>
+       <span style={{ color: "#c1c1c1", fontFamily: "Geist-Black" }}>/</span>
        {repo}
       </h1>
-      <p style={{ color: "#c1c1c1", fontFamily: "PoppinsRegular", fontSize: 24, maxWidth: "90%", margin: 0, padding: 0 }}>{og.description}</p>
+      <p style={{ color: "#c1c1c1", fontFamily: "Geist-Regular", fontSize: 24, maxWidth: "90%", margin: 0, padding: 0 }}>{og.description}</p>
      </div>
     </div>
     {og.languages && og.languages.length > 0 && (
@@ -131,13 +131,13 @@ export async function GET(request, { params }) {
    },
    fonts: [
     {
-     name: "PoppinsBold",
+     name: "Geist-Black",
      data: fontBold,
      style: "normal",
      weight: 900,
     },
     {
-     name: "PoppinsRegular",
+     name: "Geist-Regular",
      data: fontRegular,
      style: "normal",
      weight: 400,
