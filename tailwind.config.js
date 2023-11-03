@@ -1,9 +1,15 @@
-const svgToDataUri = require("mini-svg-data-uri");
-const colors = require("tailwindcss/colors");
-const { spacing } = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
+import tailwindHeadlessui from "@headlessui/tailwindcss";
+import tailwindIsBrowser from "@igorkowalczyk/is-browser";
+import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
+import tailwindTypography from "@tailwindcss/typography";
+import svgToDataUri from "mini-svg-data-uri";
+import tailwindGradientMaskImage from "tailwind-gradient-mask-image";
+import colors from "tailwindcss/colors";
+import { spacing } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import tailwindTextFill from "tailwindcss-text-fill";
 
-module.exports = {
+export default {
  darkMode: "class",
  content: [
   // Prettier
@@ -82,7 +88,7 @@ module.exports = {
   typography: ["dark"],
  },
  plugins: [
-  /* eslint-disable */
+  /* eslint-disable-next-line */
   plugin(function ({ matchUtilities }) {
    matchUtilities({
     "bg-grid": (value) => ({
@@ -90,12 +96,11 @@ module.exports = {
     }),
    });
   }),
-  require("tailwindcss-text-fill"),
-  require("tailwind-gradient-mask-image"),
-  require("@headlessui/tailwindcss"),
-  require("@igorkowalczyk/is-browser"),
-  require("@tailwindcss/typography"),
-  require("@tailwindcss/aspect-ratio"),
-  /* eslint-enable */
+  tailwindTextFill,
+  tailwindGradientMaskImage,
+  tailwindHeadlessui,
+  tailwindIsBrowser,
+  tailwindTypography,
+  tailwindAspectRatio,
  ],
 };
