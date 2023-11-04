@@ -1,14 +1,11 @@
 import Modal from "components/elements/client/Modal";
 import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
-import { notFound } from "next/navigation";
 
 export default async function PhotoPage({ params: { id } }) {
  const photo = await getPhotography(id);
 
- if (!photo) {
-  return notFound();
- }
+ if (!photo) return <></>;
 
  return (
   <Modal>

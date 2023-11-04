@@ -6,19 +6,20 @@ import { Fragment, useState } from "react";
 import Button from "../Button";
 
 export default function Modal(props) {
- let [isOpen, setIsOpen] = useState(true);
+ console.log("Modal", props);
+ const [isOpen, setIsOpen] = useState(true);
  const router = useRouter();
 
  function closeModal() {
-  router.push("/photography/");
+  router.back();
   setIsOpen(false);
  }
 
  return (
   <Transition appear show={isOpen} as={Fragment}>
    <Dialog as="div" className="relative z-10" onClose={() => closeModal()}>
-    <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
-     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur firefox:bg-opacity-50" />
+    <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0" enterTo="" leave="ease-in duration-200" leaveFrom="opacity-50" leaveTo="opacity-0">
+     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur firefox:bg-opacity-50" />
     </Transition.Child>
 
     <div className="fixed inset-0 overflow-y-auto">

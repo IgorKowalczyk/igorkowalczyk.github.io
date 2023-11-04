@@ -53,7 +53,7 @@ export const metadata = {
  },
 };
 
-export default function RootLayout({ children, modal }) {
+export default function RootLayout({ children }) {
  return (
   <ServerThemeProvider attribute="class">
    <html lang="en">
@@ -65,7 +65,6 @@ export default function RootLayout({ children, modal }) {
        <ProgressBar />
        <Analytics />
        {children}
-       {modal}
       </main>
       <Footer />
      </Theme>
