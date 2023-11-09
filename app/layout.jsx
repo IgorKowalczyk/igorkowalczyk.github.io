@@ -6,7 +6,7 @@ import { Theme } from "components/elements/client/Theme";
 import { Footer } from "components/elements/Footer";
 import { Hotjar } from "components/elements/Hotjar";
 import { meta } from "config";
-import { GeistSans } from "geist/font";
+import { GeistSans } from "geist/font/sans";
 import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
 import "styles/progress.css";
