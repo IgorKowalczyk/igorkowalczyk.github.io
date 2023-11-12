@@ -6,6 +6,7 @@ import { Theme } from "components/elements/client/Theme";
 import { Footer } from "components/elements/Footer";
 import { Hotjar } from "components/elements/Hotjar";
 import { meta } from "config";
+import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
@@ -58,10 +59,10 @@ export default function RootLayout({ children }) {
   <ServerThemeProvider attribute="class">
    <html lang="en">
     <head>{process.env.HOTJAR_ID && <Hotjar id={process.env.HOTJAR_ID} />}</head>
-    <body className={clsx("bg-main", GeistSans.className)}>
+    <body className={clsx("bg-main", GeistMono.variable, GeistSans.variable)}>
      <Theme>
       <Nav />
-      <main className="mt-24 flex min-h-screen flex-col px-6 antialiased">
+      <main className="mt-24 flex min-h-screen flex-col px-6 font-sans antialiased">
        <ProgressBar />
        <Analytics />
        {children}

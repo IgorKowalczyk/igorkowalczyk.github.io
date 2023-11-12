@@ -38,7 +38,7 @@ export function RepoCard(repo) {
     ) : (
      ""
     )}
-    <div className="hide-scrollbar flex gap-1 overflow-hidden overflow-x-auto">
+    <div className="hide-scrollbar mt-1 flex gap-1 overflow-hidden overflow-x-auto">
      <Link key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`} target="_blank" aria-label={`${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"} search`}>
       <span className="my-1 flex w-max content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] px-[0.5em] py-[0.12em] text-[88%] text-gray-800/[60%] duration-200 hover:bg-black/10 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%] dark:hover:bg-white/20">
        <span
