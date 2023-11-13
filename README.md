@@ -14,7 +14,10 @@
 
 ---
 
-> [!IMPORTANT] > **Remember to change pre-defined values in `config.js`** file (like `name`, `description`, `socials` etc.) before deploying your website! Change them in your forked repository.
+<!-- prettier-ignore-start -->
+> [!IMPORTANT]
+> **Remember to change pre-defined values in `config.js`** file (like `name`, `description`, `socials` etc.) before deploying your website! Change them in your forked repository.
+<!-- prettier-ignore-end -->
 
 ## 🖥️ Hosting
 
