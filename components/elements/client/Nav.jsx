@@ -62,7 +62,7 @@ export function Nav() {
      {nav.right.map((item, index) => {
       return <NavItem href={item.href} text={item.title} target={item.target} key={index} />;
      })}
-     <Settings className="ml-4 text-right" />
+     <Settings />
     </div>
    </div>
   </nav>

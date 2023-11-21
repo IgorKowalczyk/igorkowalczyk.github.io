@@ -10,7 +10,7 @@ import Select from "./Select";
 import Switch from "./Switch";
 import clsx from "clsx";
 
-export default function Settings(props) {
+export default function Settings() {
  const [isOpen, setIsOpen] = useState(false);
  const [glowEnabled, setGlowEnabled] = useState(true);
  const [decorationsEnabled, setDecorationsEnabled] = useState(true);
@@ -34,7 +34,7 @@ export default function Settings(props) {
  }
 
  return (
-  <div {...props}>
+  <div className="ml-4 text-right font-sans">
    <button
     aria-label="Open settings"
     type="button"
@@ -65,12 +65,12 @@ export default function Settings(props) {
      <div className="fixed inset-0 overflow-y-auto">
       <div className="flex min-h-full items-center justify-center p-4 text-center ">
        <Transition.Child as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:duration-[1ms]" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-        <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border-[1px] border-black/[15%] bg-white p-6 text-left align-middle shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
+        <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border-[1px] border-black/[15%] bg-white p-6 text-left align-middle font-sans shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
          <Dialog.Title as="h3" className="text-xl/6 font-medium text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
           Settings
          </Dialog.Title>
          <div className="mt-2">
-          <p className="text-base text-gray-500 dark:text-neutral-300">Here you can change your settings, e.g. website theme. Changes will be saved automatically.</p>
+          <p className="text-base text-gray-500 dark:text-neutral-300">Here you can change your settings, like website theme or decorations. Changes will be saved automatically.</p>
          </div>
          <div className="mt-2 divide-y divide-black/10 dark:divide-white/10">
           <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">

@@ -11,7 +11,7 @@ export function RepoCard(repo) {
      <Link href={repo.url} key={repo.id} className="break-all text-left font-semibold" target="_blank">
       <FolderIcon className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" /> {repo.owner.login}/{repo.name}
      </Link>{" "}
-     <span className="ml-1 inline-flex content-center items-center rounded-lg border-[1px] border-black/[15%] px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/[55%] duration-200 hover:bg-black/[5%] motion-reduce:transition-none dark:border-neutral-800 dark:text-white/[50%] dark:hover:bg-white/[5%]">
+     <span className="ml-1 inline-flex content-center items-center rounded-lg border-[1px] border-black/[15%] px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/[55%] duration-200 hover:bg-black/[5%] motion-reduce:transition-none dark:border-neutral-800 dark:text-white/[50%] dark:hover:border-neutral-700 dark:hover:bg-white/[5%]">
       {repo.isArchived ? (
        <>
         <ArchiveBoxIcon className="mr-1 inline-block h-4 w-4 stroke-black/[50%] duration-200 motion-reduce:transition-none dark:stroke-white/[50%]" /> Archived
@@ -23,22 +23,20 @@ export function RepoCard(repo) {
       )}
      </span>
     </div>
-    <p className="text-left">
+    <p className="my-2 text-left">
      {repo.description ? repo.description.substring(0, 90) : "No description"}
      {repo.description && repo.description.length > 90 ? "..." : ""}
     </p>
-    {repo.repositoryTopics ? (
-     <div className="text-left">
+    {repo.repositoryTopics && (
+     <div className="mb-1 text-left font-mono">
       {repo.repositoryTopics.edges.map((topic) => (
        <Link key={topic.node.topic.name} href={`https://github.com/topics/${topic.node.topic.name}`} target="_blank">
-        <span className="mr-[10px] mt-1 inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/[60%] duration-200 hover:bg-black/[5%] motion-reduce:transition-none dark:border-neutral-800 dark:text-white/[50%] dark:hover:bg-white/[5%]">#{topic.node.topic.name}</span>
+        <span className="mr-[10px] inline-flex content-center items-center rounded-[2em] border-[1px] border-black/[15%] px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/[60%] duration-200 hover:bg-black/[5%] motion-reduce:transition-none dark:border-neutral-800 dark:text-white/[50%] dark:hover:border-neutral-700 dark:hover:bg-white/[5%]">#{topic.node.topic.name}</span>
        </Link>
       ))}
      </div>
-    ) : (
-     ""
     )}
-    <div className="hide-scrollbar mt-1 flex gap-1 overflow-hidden overflow-x-auto">
+    <div className="hide-scrollbar flex gap-1 overflow-hidden overflow-x-auto">
      <Link key="repo_lang" href={`${repo.url}/search?l=${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"}`} target="_blank" aria-label={`${repo.primaryLanguage ? repo.primaryLanguage.name : "Markdown"} search`}>
       <span className="my-1 flex w-max content-center items-center rounded-lg border-2 border-transparent bg-black/[5%] px-[0.5em] py-[0.12em] text-[88%] text-gray-800/[60%] duration-200 hover:bg-black/10 motion-reduce:transition-none dark:bg-white/10 dark:text-white/[70%] dark:hover:bg-white/20">
        <span
