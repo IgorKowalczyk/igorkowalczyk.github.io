@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 import { GetRepos } from "lib/graphql";
 
 // Type: [private, public]
@@ -22,7 +23,9 @@ export async function GET(request) {
     status: 400,
     headers: {
      "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     ...(process.env.NODE_ENV !== "production" && {
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     }),
     },
    }
   );
@@ -36,7 +39,9 @@ export async function GET(request) {
     status: 400,
     headers: {
      "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     ...(process.env.NODE_ENV !== "production" && {
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     }),
     },
    }
   );
@@ -49,7 +54,9 @@ export async function GET(request) {
     status: 400,
     headers: {
      "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     ...(process.env.NODE_ENV !== "production" && {
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     }),
     },
    }
   );
@@ -62,7 +69,9 @@ export async function GET(request) {
     status: 400,
     headers: {
      "Content-Type": "application/json",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     ...(process.env.NODE_ENV !== "production" && {
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     }),
     },
    }
   );
@@ -74,7 +83,9 @@ export async function GET(request) {
    status: 200,
    headers: {
     "Content-Type": "application/json",
-    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    ...(process.env.NODE_ENV !== "production" && {
+     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    }),
    },
   });
  } else {
@@ -84,7 +95,9 @@ export async function GET(request) {
    status: 200,
    headers: {
     "Content-Type": "application/json",
-    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    ...(process.env.NODE_ENV !== "production" && {
+     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    }),
    },
   });
  }

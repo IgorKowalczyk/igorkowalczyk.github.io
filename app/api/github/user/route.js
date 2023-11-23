@@ -9,7 +9,9 @@ export async function GET() {
   status: 200,
   headers: {
    "Content-Type": "application/json",
-   "Server-Timing": `response;dur=${Date.now() - start}ms`,
+   ...(process.env.NODE_ENV !== "production" && {
+    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+   }),
   },
  });
 }

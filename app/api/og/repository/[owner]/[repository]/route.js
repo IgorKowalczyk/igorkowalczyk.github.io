@@ -127,7 +127,9 @@ export async function GET(request, { params }) {
    height: 630,
    debug: false,
    headers: {
-    "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    ...(process.env.NODE_ENV !== "production" && {
+     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+    }),
    },
    fonts: [
     {
