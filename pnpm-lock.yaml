@@ -14,9 +14,6 @@ dependencies:
   '@heroicons/react':
     specifier: 2.0.18
     version: 2.0.18(react@18.2.0)
-  '@tippyjs/react':
-    specifier: 4.2.6
-    version: 4.2.6(react-dom@18.2.0)(react@18.2.0)
   '@vercel/analytics':
     specifier: 1.1.1
     version: 1.1.1
@@ -121,9 +118,6 @@ devDependencies:
   globby:
     specifier: 14.0.0
     version: 14.0.0
-  lodash:
-    specifier: 4.17.21
-    version: 4.17.21
   mini-svg-data-uri:
     specifier: 1.4.4
     version: 1.4.4
@@ -145,9 +139,6 @@ devDependencies:
   tailwindcss-text-fill:
     specifier: 0.2.0
     version: 0.2.0(tailwindcss@3.3.5)
-  typescript:
-    specifier: 5.3.2
-    version: 5.3.2
 
 packages:
 
@@ -1088,10 +1079,6 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@popperjs/core@2.11.7:
-    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
-    dev: false
-
   /@protobufjs/aspromise@1.1.2:
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
     dev: false
@@ -1169,17 +1156,6 @@ packages:
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.3.5
     dev: true
-
-  /@tippyjs/react@4.2.6(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-91RicDR+H7oDSyPycI13q3b7o4O60wa2oRbjlz2fyRLmHImc4vyDwuUP8NtZaN0VARJY5hybvDYrFzhY9+Lbyw==}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      tippy.js: 6.3.7
-    dev: false
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -5355,12 +5331,6 @@ packages:
       globalyzer: 0.1.0
       globrex: 0.1.2
     dev: true
-
-  /tippy.js@6.3.7:
-    resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
-    dependencies:
-      '@popperjs/core': 2.11.7
-    dev: false
 
   /to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}

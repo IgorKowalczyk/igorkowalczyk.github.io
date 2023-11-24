@@ -3,7 +3,7 @@ import { ConvertNumber } from "/lib/utils";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
-import { CodeCard } from "components/elements/CodeCard";
+import { Terminal } from "components/elements/Terminal";
 import { Contact } from "components/elements/client/Contact";
 import { GlowEffect } from "components/elements/client/GlowEffect";
 import { RepoCard } from "components/elements/RepoCard";
@@ -49,7 +49,7 @@ export default async function HomePage() {
 
       <div className="hidden items-center motion-reduce:transition-none md:col-span-3 md:-mb-7 md:mt-7 md:flex lg:col-span-2 lg:mb-0 lg:mt-0">
        <GlowEffect className="z-10 block w-full">
-        <CodeCard userData={userData} contributions={contributions} />
+        <Terminal userData={userData} contributions={contributions} />
        </GlowEffect>
       </div>
      </div>
@@ -171,12 +171,12 @@ export default async function HomePage() {
       return (
        <div key={index}>
         {tech.link ? (
-         <Link href={tech.link} target="_blank" className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-gray-200/[25%] px-4 py-2 text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+         <Link href={tech.link} target="_blank" className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
           <Image className={clsx(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
           <span className="font-semibold">{tech.name}</span>
          </Link>
         ) : (
-         <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-gray-200/[25%] px-4 py-2 text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+         <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
           <Image className={clsx(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
           <span className="font-semibold">{tech.name}</span>
          </div>
@@ -205,7 +205,7 @@ export default async function HomePage() {
        <div className="space-y-4 p-4">
         <p className=" text-xl font-semibold">Or contact me with...</p>
         {contact.links.map((element, index) => (
-         <Link className="group ml-auto mt-2 flex h-12 w-full items-center gap-3 rounded-md border bg-gray-200/[25%] px-4 py-2 text-sm font-semibold text-blue-900 backdrop-blur-[9px] duration-200 hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]" href={element.href} key={index} target="_blank">
+         <Link className="group ml-auto mt-2 flex h-12 w-full items-center gap-3 rounded-md border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]" href={element.href} key={index} target="_blank">
           <>
            {element.icon} {element.title}
           </>

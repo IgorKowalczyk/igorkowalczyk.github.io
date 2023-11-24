@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function RepoCard(repo) {
  return (
-  <div id={repo.name} className="card z-10 rounded-[10px] border-[1px] border-black/[15%] p-5 backdrop-blur-md duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+  <div id={repo.name} className="card z-10 rounded-[10px] border-[1px] border-black/[15%] p-5 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
    <div>
     <Image unoptimized={true} src={`/api/og/repository/${repo.owner.login}/${repo.name}`} alt={`Preview of ${repo.name}`} className="mb-4 rounded-[10px]" width={720} height={480} />
     <div className="text-left">
@@ -62,25 +62,6 @@ export function RepoCard(repo) {
       </span>
      </Link>
     </div>
-   </div>
-  </div>
- );
-}
-
-export function RepoCardSkeleton() {
- return (
-  <div className="rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 duration-200 hover:shadow-xl motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
-   <div className="h-6 w-2/4 animate-pulse rounded-md bg-gray-200/[15%]" />
-   <div className="mt-3 h-6 w-5/6 animate-pulse rounded-md bg-gray-200/[15%]" />
-   <div className="mt-3 flex text-left">
-    {Array.from({ length: 3 }).map((_, index) => (
-     <div className="mr-2 h-6 w-28 animate-pulse rounded-[2em] bg-gray-200/[15%]" key={index} />
-    ))}
-   </div>
-   <div className=" mt-2 flex gap-1">
-    {Array.from({ length: 3 }).map((_, index) => (
-     <div className="mr-2 h-6 w-28 animate-pulse rounded-md bg-gray-200/[15%]" key={index} />
-    ))}
    </div>
   </div>
  );

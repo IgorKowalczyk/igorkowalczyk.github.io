@@ -2,27 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-const CustomLink = (props) => {
- const href = props.href;
+const CustomLink = ({ href, content }) => {
+ const isInternalLink = href?.startsWith("/");
+ const isAnchorLink = href?.startsWith("#");
 
- if (href.startsWith("/")) {
-  return (
-   <Link href={href} {...props}>
-    {props.children}
-   </Link>
-  );
+ if (isInternalLink) {
+  return <Link href={href} {...content} />;
+ } else {
+  <a href={href} {...(isAnchorLink ? {} : { target: "_blank", rel: "noopener noreferrer" })} {...content} />;
  }
-
- if (href.startsWith("#")) {
-  return <a {...props} />;
- }
-
- return <Link target="_blank" rel="noopener noreferrer" {...props} />;
 };
-
-function RoundedImage(props) {
- return <Image alt={props.alt} className="rounded-lg" {...props} />;
-}
 
 function Callout(props) {
  return (
@@ -34,10 +23,10 @@ function Callout(props) {
 }
 
 const components = {
- Image: RoundedImage,
+ Image: (props) => <Image alt={props.alt} className="rounded-lg" {...props} />,
  a: CustomLink,
  Link: CustomLink,
- Callout,
+ Callout: Callout,
 };
 
 export function MDXComponent({ code }) {

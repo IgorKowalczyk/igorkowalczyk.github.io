@@ -6,28 +6,19 @@
  --hidden: false;
 }
 
-rect {
- @apply duration-200 motion-reduce:transition-none;
-}
-
-html,
-body {
- @apply m-0 scroll-smooth p-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
-}
-
-.hide {
- display: var(--hidden);
-}
-
-html,
-body {
- @apply !mr-0 !pr-0;
-}
-
 * {
  @apply box-border outline-2 outline-offset-4 outline-[#4d67ff] dark:outline-[#1491ff];
  scrollbar-color: #161617 transparent;
  scrollbar-width: thin;
+}
+
+html,
+body {
+ @apply m-0 !mr-0 scroll-smooth p-0 !pr-0 antialiased transition-[background-color] duration-300 motion-reduce:transition-none;
+}
+
+.hide {
+ display: var(--hidden);
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -101,10 +92,6 @@ body {
 .nav-border.active::after,
 .nav-border.active::before {
  @apply scale-x-100 motion-reduce:transition-none;
-}
-
-img.twemoji {
- @apply relative top-[-0.1rem] inline-block h-[1em] w-[1em] align-middle;
 }
 
 .burger svg[data-hide="true"] {

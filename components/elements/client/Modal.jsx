@@ -19,7 +19,7 @@ export default function Modal(props) {
   <Transition appear show={isOpen} as={Fragment}>
    <Dialog as="div" className="relative z-10 font-sans" onClose={() => closeModal()}>
     <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0" enterTo="" leave="ease-in duration-200" leaveFrom="opacity-50" leaveTo="opacity-0">
-     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur firefox:bg-opacity-50" />
+     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur" />
     </Transition.Child>
 
     <div className="fixed inset-0 overflow-y-auto">
