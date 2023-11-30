@@ -12,11 +12,6 @@ import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
 import "styles/progress.css";
 
-/*
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
-*/
-
 export const metadata = {
  metadataBase: new URL(meta.url),
  title: {
