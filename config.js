@@ -205,6 +205,27 @@ export const footer = {
  ],
 };
 
+export const browserManifestShortcuts = [
+ {
+  name: "See all repositories",
+  short_name: "Repositories",
+  description: "View my past work and projects",
+  url: "/repositories?source=pwa",
+ },
+ {
+  name: "Contact me",
+  short_name: "Contact me",
+  description: "Drop me a message or contact me on social media",
+  url: "/contact?source=pwa",
+ },
+ {
+  name: "Discord",
+  short_name: "Discord",
+  description: "Contact me on Discord",
+  url: "/discord?source=pwa",
+ },
+];
+
 export const technologies = [
  {
   name: "React",
