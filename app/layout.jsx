@@ -10,7 +10,6 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { ServerThemeProvider } from "next-themes";
 import "styles/globals.css";
-import "styles/progress.css";
 
 export const metadata = {
  metadataBase: new URL(meta.url),

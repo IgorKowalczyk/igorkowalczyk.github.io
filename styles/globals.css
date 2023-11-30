@@ -98,6 +98,18 @@ body {
  @apply -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0;
 }
 
+#nprogress {
+ @apply pointer-events-none;
+}
+
+#nprogress .bar {
+ @apply fixed left-0 top-0 z-[10000] h-[2px] w-full bg-gradient-to-r from-[#6310ff] to-[#1491ff];
+}
+
+.nprogress-custom-parent {
+ @apply relative overflow-hidden;
+}
+
 .shadow-code {
  @apply shadow-[0_30px_100px_-4px_rgba(51,111,239,0.2)] dark:shadow-[0_30px_100px_-4px_rgba(22,22,23,0.1)];
 }
