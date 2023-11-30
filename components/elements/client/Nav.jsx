@@ -10,13 +10,14 @@ import clsx from "clsx";
 
 function NavItem({ href, text, target }) {
  const path = usePathname();
- if (!href) return null;
- if (!path) return null;
+ if (!href || !path) return null;
  let isActive = path.split("/")[1].trim() === href.split("/")[1].trim();
+
  if (href.startsWith("https://") || href.startsWith("http://")) {
   isActive = false;
   target = "_blank";
  }
+
  return (
   <Link
    href={href}
