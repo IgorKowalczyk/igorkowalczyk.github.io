@@ -15,9 +15,9 @@ export default function Error({ error, reset }) {
     <p className="mt-3 text-center text-neutral-800 dark:text-neutral-200">
      <Balancer ratio={0.5}>{error.message.toString() || "Oh no, something went wrong... maybe refresh?"}</Balancer>
     </p>
-    <div className="mt-3 flex justify-center">
-     <Button onClick={() => reset()}>Reset app</Button>
-    </div>
+    <Button onClick={() => reset()} className="mx-auto">
+     Reset app
+    </Button>
    </div>
   </div>
  );

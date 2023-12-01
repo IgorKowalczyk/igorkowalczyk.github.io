@@ -25,16 +25,16 @@ function NavItem({ href, text, target }) {
    target={target}
    className={clsx(
     {
-     "active text-gray-800 dark:text-gray-200": isActive,
+     "active bg-black/10 text-gray-800 dark:bg-white/10 dark:text-gray-200": isActive,
      "text-gray-700 dark:text-neutral-400": !isActive,
     },
-    "nav-border relative hidden rounded-lg p-1 transition-all duration-200 before:w-[calc(100%_-_1.5em)] after:w-[calc(100%_-_1.5em)] hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block"
+    "relative hidden rounded-lg p-1 transition-all duration-200 hover:bg-black/10 hover:text-gray-800 motion-reduce:transition-none dark:hover:bg-white/10 dark:hover:text-gray-200 sm:px-3 sm:py-2 md:inline-block"
    )}
   >
    {text}
    {target && (target === "_blank" || target === "_external") ? (
     <svg aria-hidden="true" className="absolute right-0 top-2 fill-black opacity-50 dark:fill-white" height="7" viewBox="0 0 6 6" width="7">
-     <path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" fill="var(--accents-3)"></path>
+     <path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" fill="var(--accents-3)" />
     </svg>
    ) : null}
   </Link>

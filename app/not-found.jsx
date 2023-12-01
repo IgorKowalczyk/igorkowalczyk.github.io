@@ -15,9 +15,9 @@ export default function NotFound() {
     <p className="mt-3 text-center text-neutral-800 dark:text-neutral-200">
      <Balancer ratio={0.5}>We're sorry — we can't find the page you're looking for.</Balancer>
     </p>
-    <div className="mt-3 flex justify-center">
-     <Button href="/">Go home</Button>
-    </div>
+    <Button href="/" className="mx-auto">
+     Go home
+    </Button>
    </div>
   </div>
  );

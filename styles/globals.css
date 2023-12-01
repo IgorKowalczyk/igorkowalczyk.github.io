@@ -65,35 +65,6 @@ body {
  stroke-dashoffset: 20;
 }
 
-.link {
- @apply relative inline-block;
-}
-
-.link::after,
-.link::before,
-.nav-border::after,
-.nav-border::before {
- @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
-}
-
-.nav-border::after,
-.nav-border::before {
- @apply bottom-[8px] left-[12px] h-[1.3px] w-[calc(100%_-_1.9em)];
-}
-
-.link::before {
- @apply scale-x-100 opacity-20;
-}
-
-.link:hover::after,
-.link:active::after,
-.nav-border:hover::after,
-.nav-border:hover::before,
-.nav-border.active::after,
-.nav-border.active::before {
- @apply scale-x-100 motion-reduce:transition-none;
-}
-
 .burger svg[data-hide="true"] {
  @apply -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0;
 }

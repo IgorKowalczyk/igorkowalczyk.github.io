@@ -6,7 +6,6 @@ import { Fragment, useState } from "react";
 import Button from "../Button";
 
 export default function Modal(props) {
- console.log("Modal", props);
  const [isOpen, setIsOpen] = useState(true);
  const router = useRouter();
 

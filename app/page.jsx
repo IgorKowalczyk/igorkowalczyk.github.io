@@ -27,7 +27,7 @@ export default async function HomePage() {
  return (
   <>
    <div className="bg-cover bg-fixed bg-right before:absolute before:inset-0 before:z-[-1] before:bg-[length:30px_30px] before:bg-center before:opacity-5 before:bg-grid-[#000] dark:before:bg-grid-[#fff]">
-    <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents"></div>
+    <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents" />
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
       <div className="md:col-span-3">
@@ -57,44 +57,37 @@ export default async function HomePage() {
    </div>
 
    <section id={"additional-info"}>
-    <div>
-     <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-     <div className="m-[0_auto] mb-8 grid grid-cols-3 gap-x-6 gap-y-10 px-8 text-center text-gray-800/70 dark:text-white/70 md:grid-cols-4 md:gap-x-10 lg:grid-cols-4">
-      <p className="font-semibold duration-200 motion-reduce:transition-none">
-       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
-        <>
-         <StarIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
-        </>
-       </Link>
-      </p>
-      <p className="hidden font-semibold duration-200 motion-reduce:transition-none md:block">
-       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
-        <>
-         <svg className="mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" viewBox="0 0 16 16">
-          <path fillRule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"></path>
-         </svg>
-         <span>{userData && ConvertNumber(contributions.total)} Commits</span>
-        </>
-       </Link>
-      </p>
-      <p className="font-semibold duration-200 motion-reduce:transition-none">
-       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}`}>
-        <>
-         <svg viewBox="0 0 32 32" className="-mt-[2px] mr-1 inline h-5 w-5 fill-black/[50%] duration-200 group-hover:fill-black motion-reduce:transition-none dark:fill-white/[70%] dark:group-hover:fill-white" aria-hidden="true" role="img">
-          <path fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
-         </svg>{" "}
-         <span>{userData && ConvertNumber(userData.userForks)} Repositories forks</span>
-        </>
-       </Link>
-      </p>
-      <p className="font-semibold duration-200 motion-reduce:transition-none">
-       <Link target="_blank" className="group flex items-center justify-center text-center duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white" href={`https://github.com/${meta.accounts.github.username}?tab=followers`}>
-        <>
-         <UsersIcon className="-mt-[2px] mr-1 inline h-5 w-5 stroke-black/[50%] duration-200 group-hover:stroke-black motion-reduce:transition-none dark:stroke-white/[70%] dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userFollowers)} Github Followers</span>
-        </>
-       </Link>
-      </p>
-     </div>
+    <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
+    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
+     <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+      <>
+       <StarIcon className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
+      </>
+     </Link>
+
+     <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+      <>
+       <svg className="h-5 w-5 stroke-2" aria-hidden="true" strokeWidth={"1.5"} viewBox="0 0 16 16" role="img">
+        <path strokeLinejoin="round" fill="currentColor" fillRule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z" />
+       </svg>
+       <span>{userData && ConvertNumber(contributions.total)} Commits</span>
+      </>
+     </Link>
+
+     <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+      <>
+       <svg className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" strokeWidth={"1.5"} viewBox="0 0 32 32" role="img">
+        <path strokeLinejoin="round" strokeLinecap="round" fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
+       </svg>{" "}
+       <span>{userData && ConvertNumber(userData.userForks)} Repositories forks</span>
+      </>
+     </Link>
+
+     <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}?tab=followers`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+      <>
+       <UsersIcon className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userFollowers)} Github Followers</span>
+      </>
+     </Link>
     </div>
    </section>
 
@@ -126,7 +119,7 @@ export default async function HomePage() {
    </section>
 
    <section id={"repositories"} className="scroll-mt-20 pt-12 lg:px-24">
-    <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-[length:22px_22px] before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]" id={"repositories"}>
+    <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-[length:22px_22px] before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]">
      <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
       Most Popular Projects<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
      </h3>
@@ -134,17 +127,17 @@ export default async function HomePage() {
       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center text-gray-800 dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {reposData &&
         reposData.map((repo) => {
-         return repo.node.owner.login == "IgorKowalczyk" ? <RepositoryCard key={repo.node.id} {...repo.node} /> : null;
+         return repo.node.owner.login.toLowerCase() == meta.accounts.github.username.toLowerCase() ? <RepositoryCard key={repo.node.id} {...repo.node} /> : null;
         })}
       </div>
       <div className="pointer-events-visible section-fade absolute inset-x-0 bottom-0 z-20 flex pb-8 pt-32 duration-300">
        <div className="flex flex-1 flex-col items-center justify-center duration-200 motion-reduce:transition-none">
-        <Link className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold duration-200 motion-reduce:transition-none" href="/repositories">
+        <Link href="/repositories" className="arrow link group pointer-events-auto relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold duration-200 motion-reduce:transition-none">
          <>
           See more repositories
           <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
-           <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-           <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
+           <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" />
+           <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round" />
           </svg>
          </>
         </Link>
@@ -205,7 +198,7 @@ export default async function HomePage() {
        <div className="space-y-4 p-4">
         <p className=" text-xl font-semibold">Or contact me with...</p>
         {contact.links.map((element, index) => (
-         <Link className="group ml-auto mt-2 flex h-12 w-full items-center gap-3 rounded-md border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]" href={element.href} key={index} target="_blank">
+         <Link href={element.href} key={index} target="_blank" className="group ml-auto mt-2 flex h-12 w-full items-center gap-3 rounded-md border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
           <>
            {element.icon} {element.title}
           </>
