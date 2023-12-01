@@ -1,7 +1,7 @@
 "use client";
 
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import Button from "components/elements/Button";
+import Button from "components/Button";
 import Balancer from "react-wrap-balancer";
 
 export default function NotFound() {

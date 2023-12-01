@@ -1,5 +1,5 @@
 import Squares from "components/decorations/Squares";
-import { RepoCard } from "components/elements/RepoCard";
+import { RepositoryCard } from "components/RepositoryCard";
 import { GetRepos } from "lib/graphql";
 
 export const runtime = "edge";
@@ -25,7 +25,7 @@ export default async function GithubRepositories() {
     {repositories && (
      <div className="xl-grid-cols-4 grid grid-cols-1 gap-x-6 gap-y-10 text-center text-gray-800 dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
       {repositories?.map((repo) => (
-       <RepoCard key={repo.id} {...repo} />
+       <RepositoryCard key={repo.id} {...repo} />
       ))}
      </div>
     )}

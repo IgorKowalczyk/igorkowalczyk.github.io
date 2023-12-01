@@ -2,11 +2,11 @@ import { SparklesIcon, StarIcon, ArchiveBoxIcon, FolderIcon } from "@heroicons/r
 import Image from "next/image";
 import Link from "next/link";
 
-export function RepoCard(repo) {
+export function RepositoryCard(repo) {
  return (
-  <div id={repo.name} className="card z-10 rounded-[10px] border-[1px] border-black/[15%] p-5 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
-   <div>
-    <Image unoptimized={true} src={`/api/og/repository/${repo.owner.login}/${repo.name}`} alt={`Preview of ${repo.name}`} className="mb-4 rounded-[10px]" width={720} height={480} />
+  <div id={repo.name} className="card z-10 overflow-hidden rounded-[10px] border-[1px] border-black/[15%] duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+   <Image unoptimized={true} src={`/api/og/repository/${repo.owner.login}/${repo.name}`} alt={`Preview of ${repo.name}`} width={720} height={480} />
+   <div className="p-5">
     <div className="text-left">
      <Link href={repo.url} key={repo.id} className="break-all text-left font-semibold" target="_blank">
       <FolderIcon className="inline h-6 w-6 fill-black/[10%] stroke-black/[70%] duration-200 motion-reduce:transition-none dark:fill-white/[10%] dark:stroke-white/[70%]" /> {repo.owner.login}/{repo.name}

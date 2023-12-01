@@ -2,9 +2,9 @@
 
 import { nav, meta } from "/config";
 import { usePathname } from "next/navigation";
-import MobileNav from "components/elements/client/MobileNav";
-import Settings from "components/elements/client/Settings";
-import Popover from "components/elements/client/NavPopover";
+import MobileNav from "components/client/MobileNav";
+import Settings from "components/client/Settings";
+import Popover from "components/client/NavPopover";
 import Link from "next/link";
 import clsx from "clsx";
 

@@ -3,10 +3,10 @@ import { ConvertNumber } from "/lib/utils";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import sparkles from "/public/assets/svg/sparkles.svg";
 import Dots from "components/decorations/Dots";
-import { Terminal } from "components/elements/Terminal";
-import { Contact } from "components/elements/client/Contact";
-import { GlowEffect } from "components/elements/client/GlowEffect";
-import { RepoCard } from "components/elements/RepoCard";
+import { Terminal } from "components/Terminal";
+import { Contact } from "components/client/Contact";
+import { GlowEffect } from "components/client/GlowEffect";
+import { RepositoryCard } from "components/RepositoryCard";
 import { GetUserData, GetPopular, getTotalContributionsForYears } from "lib/graphql";
 import Image from "next/image";
 import Link from "next/link";
@@ -134,7 +134,7 @@ export default async function HomePage() {
       <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center text-gray-800 dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
        {reposData &&
         reposData.map((repo) => {
-         return repo.node.owner.login == "IgorKowalczyk" ? <RepoCard key={repo.node.id} {...repo.node} /> : null;
+         return repo.node.owner.login == "IgorKowalczyk" ? <RepositoryCard key={repo.node.id} {...repo.node} /> : null;
         })}
       </div>
       <div className="pointer-events-visible section-fade absolute inset-x-0 bottom-0 z-20 flex pb-8 pt-32 duration-300">

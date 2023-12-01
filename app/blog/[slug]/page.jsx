@@ -2,12 +2,12 @@ import Avatar from "/public/assets/avatar.png";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO } from "/lib/utils";
 import { meta } from "/config";
-import { TocItem } from "components/blog/Toc";
-import { MDXComponent } from "components/blog/Components";
+import { MDXComponent } from "components/MDXComponents";
 import Image from "next/image";
 import Link from "next/link";
 import "styles/blog.css";
 import { notFound } from "next/navigation";
+import clsx from "clsx";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
@@ -83,7 +83,19 @@ export default function Post({ params }) {
     <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
      <p className="mb-0 text-sm uppercase">On this page</p>
      {post?.headings?.map((props) => (
-      <TocItem key={props?.slug} {...props} />
+      <Link
+       key={props.slug}
+       href={`#${props.slug}`}
+       className={clsx(
+        {
+         "ml-2": props.size === 2,
+         "ml-4": props.size === 3,
+        },
+        "!font-normal no-underline opacity-50 duration-200 hover:underline hover:opacity-100 motion-reduce:transition-none"
+       )}
+      >
+       {props.content}
+      </Link>
      ))}
     </div>
    </div>

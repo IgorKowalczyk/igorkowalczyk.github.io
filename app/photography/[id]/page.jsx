@@ -1,4 +1,4 @@
-import Button from "components/elements/Button";
+import Button from "components/Button";
 import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 import { notFound } from "next/navigation";

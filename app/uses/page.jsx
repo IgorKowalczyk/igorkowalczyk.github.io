@@ -1,4 +1,4 @@
-import { MDXComponent } from "components/blog/Components";
+import { MDXComponent } from "components/MDXComponents";
 import { allOtherPages } from "contentlayer/generated";
 import Image from "next/image";
 import setup from "/public/assets/setup.jpg";

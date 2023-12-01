@@ -1,10 +1,10 @@
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
-import { Nav } from "components/elements/client/Nav";
-import { ProgressBar } from "components/elements/client/Progress";
-import { Theme } from "components/elements/client/Theme";
-import { Footer } from "components/elements/Footer";
-import { Hotjar } from "components/elements/Hotjar";
+import { Nav } from "components/client/Nav";
+import { ProgressBar } from "components/client/Progress";
+import { Theme } from "components/client/Theme";
+import { Footer } from "components/Footer";
+import { Hotjar } from "components/Hotjar";
 import { meta } from "config";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";

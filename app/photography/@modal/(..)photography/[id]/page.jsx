@@ -1,4 +1,4 @@
-import Modal from "components/elements/client/Modal";
+import Modal from "components/client/Modal";
 import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 import { notFound } from "next/navigation";
