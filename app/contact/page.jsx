@@ -1,6 +1,5 @@
 import { Contact } from "components/client/Contact";
-import Dots from "components/decorations/Dots";
-import Squares from "components/decorations/Squares";
+import { Dots, Squares } from "components/Decorations";
 
 export const runtime = "edge";
 

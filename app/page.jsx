@@ -2,7 +2,7 @@ import { header, contact, meta, technologies } from "/config";
 import { ConvertNumber } from "/lib/utils";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import sparkles from "/public/assets/svg/sparkles.svg";
-import Dots from "components/decorations/Dots";
+import { Dots } from "components/Decorations";
 import { Terminal } from "components/Terminal";
 import { Contact } from "components/client/Contact";
 import { GlowEffect } from "components/client/GlowEffect";

@@ -1,4 +1,4 @@
-import Squares from "components/decorations/Squares";
+import { Squares } from "components/Decorations";
 import { RepositoryCard } from "components/RepositoryCard";
 import { GetRepos } from "lib/graphql";
 
