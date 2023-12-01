@@ -1,8 +1,11 @@
+/* eslint-disable complexity */
+
 import { GetOGImage } from "lib/graphql";
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+export const contentType = "image/png";
 
 export async function GET(request, { params }) {
  const start = Date.now();
@@ -41,6 +44,8 @@ export async function GET(request, { params }) {
 
  const fontBold = await fetch(new URL("/public/fonts/Geist-Black.otf", import.meta.url)).then((res) => res.arrayBuffer());
  const fontRegular = await fetch(new URL("/public/fonts/Geist-Regular.otf", import.meta.url)).then((res) => res.arrayBuffer());
+
+ const mostUsedLanguage = og.languages && og.languages.length > 0 ? og.languages.reduce((a, b) => (a.size > b.size ? a : b)) : { node: { name: "Unknown", color: "#c1c1c1" }, size: 0 };
 
  /* eslint-disable @next/next/no-img-element */
  return new ImageResponse(
@@ -99,25 +104,40 @@ export async function GET(request, { params }) {
      <div
       style={{
        display: "flex",
+       flexDirection: "column",
        width: "100%",
-       alignItems: "center",
-       borderRadius: "10px",
-       paddingTop: "20px",
+       alignItems: "flex-start",
       }}
      >
-      {og.languages.map((lang, i) => (
-       <div
-        key={lang.node.name}
-        style={{
-         display: "flex",
-         alignItems: "center",
-         width: (lang.size / og.languages.reduce((a, b) => a + b.size, 0)) * 100 + "%",
-         height: "10px",
-         backgroundColor: lang.node.color,
-         borderRadius: og.languages.length === 1 ? "10px" : i === 0 ? "10px 0 0 10px" : i === og.languages.length - 1 ? "0 10px 10px 0" : 0,
-        }}
-       />
-      ))}
+      <div
+       style={{
+        display: "flex",
+        width: "100%",
+        alignItems: "center",
+        borderRadius: "10px",
+        paddingTop: "20px",
+       }}
+      >
+       {og.languages.map((lang, i) => (
+        <div
+         key={lang.node.name}
+         style={{
+          display: "flex",
+          alignItems: "center",
+          width: (lang.size / og.languages.reduce((a, b) => a + b.size, 0)) * 100 + "%",
+          height: "10px",
+          backgroundColor: lang.node.color,
+          borderRadius: og.languages.length === 1 ? "10px" : i === 0 ? "10px 0 0 10px" : i === og.languages.length - 1 ? "0 10px 10px 0" : 0,
+         }}
+        />
+       ))}
+      </div>
+
+      {mostUsedLanguage && (
+       <p style={{ color: mostUsedLanguage.node.color || "#c1c1c1", fontFamily: "Geist-Black", fontSize: 16, maxWidth: "90%", margin: 0, padding: 0, paddingTop: "10px" }}>
+        {mostUsedLanguage.node.name} {Math.floor((mostUsedLanguage.size / og.languages.reduce((a, b) => a + b.size, 0)) * 100) + "%"}
+       </p>
+      )}
      </div>
     )}
    </div>
