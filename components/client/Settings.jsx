@@ -53,7 +53,7 @@ export default function Settings() {
      className={clsx(
       {
        "rotate-90 text-blue-800 dark:text-white": isOpen,
-       "text-gray-800 dark:text-gray-200": !isOpen,
+       "text-gray-800 dark:text-neutral-200": !isOpen,
       },
       "h-5 w-5 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:group-hover:text-white"
      )}
@@ -101,7 +101,7 @@ export default function Settings() {
                value: "system",
                text: (
                 <>
-                 <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <ComputerDesktopIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-neutral-200" />
                  <span>System</span>
                 </>
                ),
@@ -111,7 +111,7 @@ export default function Settings() {
                disabled: resolvedTheme === "dark",
                text: (
                 <>
-                 <MoonIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <MoonIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-neutral-200" />
                  <span>Dark</span>
                 </>
                ),
@@ -121,7 +121,7 @@ export default function Settings() {
                disabled: resolvedTheme === "light",
                text: (
                 <>
-                 <SunIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-gray-200" />
+                 <SunIcon className="mx-2 h-5 w-5 text-gray-800 duration-200 motion-reduce:transition-none dark:text-neutral-200" />
                  <span>Light</span>
                 </>
                ),

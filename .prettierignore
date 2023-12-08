@@ -10,6 +10,10 @@ package.json
 .vercel
 out
 
+# Images
+*.png
+*.jpg
+
 # Contentlayer
 .contentlayer
 *.mdx
