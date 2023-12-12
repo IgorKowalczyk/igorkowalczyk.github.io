@@ -6,6 +6,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const contentType = "image/png";
+export const revalidate = 60 * 60 * 24 * 7 // 7 days
 
 export async function GET(request, { params }) {
  const start = Date.now();
