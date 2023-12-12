@@ -12,9 +12,7 @@ export const metadata = {
 export default function Uses() {
  const uses = allOtherPages.find((page) => page.slug === "uses");
 
- if (!uses) {
-  return notFound();
- }
+ if (!uses) return notFound();
 
  return (
   <article className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center ">

@@ -1,8 +1,6 @@
 import { Contact } from "components/client/Contact";
 import { Dots, Squares } from "components/Decorations";
 
-export const runtime = "edge";
-
 export const metadata = {
  title: "Contact",
 };

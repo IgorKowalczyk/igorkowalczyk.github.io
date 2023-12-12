@@ -1,7 +1,7 @@
 {
   "name": "igorkowalczyk-portfolio",
   "description": "My portfolio built on Next.js",
-  "version": "5.0.1",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "start": "next start",
@@ -28,7 +28,7 @@
     "next": "14.0.4",
     "next-contentlayer": "0.3.4",
     "next-nprogress-bar": "2.1.2",
-    "next-themes": "npm:@wits/next-themes@0.2.16",
+    "next-themes": "0.2.1",
     "nprogress": "0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

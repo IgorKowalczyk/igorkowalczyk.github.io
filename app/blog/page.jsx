@@ -4,10 +4,9 @@ import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/24/solid";
 import { parseISO } from "/lib/utils";
 
-export const runtime = "edge";
-
 export default function Blog() {
  const posts = allBlogs.map((post) => pick(post, ["slug", "title", "summary", "publishedAt"])).sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));
+
  return (
   <div className="mx-auto mb-16 flex max-w-2xl flex-col items-start justify-center">
    <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[2rem] font-semibold motion-reduce:transition-none">

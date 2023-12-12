@@ -21,8 +21,8 @@ function NavItem({ path, text, target }) {
   <Link
    key={path}
    href={path}
-   className={clsx("relative flex flex-wrap items-center rounded-md p-1 hover:bg-black/10 dark:hover:bg-white/10 align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
-    "dark:text-neutral-200 bg-black/10 dark:bg-white/10": isActive,
+   className={clsx("relative flex flex-wrap items-center rounded-md p-1 align-middle transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
+    "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
     "text-gray-700 dark:text-neutral-400": !isActive,
    })}
   >
@@ -51,15 +51,15 @@ export function Nav() {
     </Link>
     <MobileNav />
     <div className="mr-auto flex gap-2">
-       {nav.left.map((item, index) => {
-        return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
-       })}
+     {nav.left.map((item, index) => {
+      return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
+     })}
      <Popover className="relative" />
     </div>
     <div className="ml-auto flex gap-2">
-       {nav.right.map((item, index) => {
-        return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
-       })}
+     {nav.right.map((item, index) => {
+      return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
+     })}
      <Settings />
     </div>
    </div>
