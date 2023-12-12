@@ -1,8 +1,6 @@
 import { Contact } from "components/client/Contact";
 import { Dots, Squares } from "components/Decorations";
 
-export const runtime = "edge";
-
 export const metadata = {
  title: "Contact",
 };
@@ -23,7 +21,7 @@ export default function ContactPage() {
      </h1>
      <p className="py-1 text-center text-base text-gray-700 dark:text-neutral-300">Want to order a project? Or do you just want to stay in touch?</p>
     </header>
-    <Contact />
+     <Contact />
    </div>
   </div>
  );

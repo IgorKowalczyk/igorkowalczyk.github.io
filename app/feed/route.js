@@ -2,8 +2,6 @@ import { allBlogs } from "contentlayer/generated";
 import { NextResponse } from "next/server";
 import { meta } from "/config";
 
-export const runtime = "edge";
-
 export async function GET() {
  return new NextResponse(
   `<?xml version="1.0" encoding="utf-8"?>

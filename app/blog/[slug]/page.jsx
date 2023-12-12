@@ -45,9 +45,7 @@ export async function generateMetadata({ params }) {
 export default function Post({ params }) {
  const post = allBlogs.find((post) => post?.slug === params?.slug);
 
- if (!post) {
-  return notFound();
- }
+ if (!post) return notFound();
 
  return (
   <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">

@@ -5,15 +5,12 @@ import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-
+export const contentType = "image/png";
 export const alt = meta.title;
-
 export const size = {
  width: 1200,
  height: 630,
 };
-
-export const contentType = "image/png";
 
 export default async function Image({ params }) {
  const { slug } = params;
@@ -22,9 +19,7 @@ export default async function Image({ params }) {
  const fontBold = await fetch(new URL("/public/fonts/Geist-Black.otf", import.meta.url)).then((res) => res.arrayBuffer());
  const fontRegular = await fetch(new URL("/public/fonts/Geist-Regular.otf", import.meta.url)).then((res) => res.arrayBuffer());
 
- if (!post) {
-  return redirect("/opengraph-image");
- }
+ if (!post) return redirect("/opengraph-image");
 
  return new ImageResponse(
   (
