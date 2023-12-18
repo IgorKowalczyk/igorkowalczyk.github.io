@@ -40,7 +40,7 @@
     "rehype-slug": "6.0.0",
     "remark-gfm": "3.0.1",
     "server-only": "0.0.1",
-    "sharp": "0.33.0",
+    "sharp": "0.33.1",
     "swr": "2.2.4",
     "validator": "13.11.0"
   },
