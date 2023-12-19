@@ -31,9 +31,9 @@ export default async function HomePage() {
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
       <div className="md:col-span-3">
-       <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
+       <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px] dark:text-white">{header.title}</h1>
        <h2 className="text-center text-[1.5rem] font-semibold opacity-80 md:text-left">{header.subtitle}</h2>
-       <p className="mt-2 text-center text-gray-700 dark:text-neutral-400 md:w-3/4 md:text-left">{header.description}</p>
+       <p className="mt-2 text-center text-gray-700 md:w-3/4 md:text-left dark:text-neutral-400">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
         <Link href="/#about" scroll={false} className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
          <>
@@ -58,7 +58,7 @@ export default async function HomePage() {
 
    <section id={"additional-info"}>
     <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
+    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 md:gap-8 dark:text-white/70">
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
       <>
        <StarIcon className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
@@ -100,7 +100,7 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
      <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none md:text-[35px] lg:text-[37px] xl:text-[40px] dark:text-white">
       About me<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
      </h3>
 
@@ -120,11 +120,11 @@ export default async function HomePage() {
 
    <section id={"repositories"} className="scroll-mt-20 pt-12 lg:px-24">
     <div className="relative mx-auto before:absolute before:inset-0 before:z-[-1] before:bg-[length:22px_22px] before:bg-center before:bg-repeat-space before:opacity-10 before:bg-grid-[#000] before:gradient-mask-t-0 dark:before:opacity-20 dark:before:bg-grid-[#fff]">
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none md:text-[35px] lg:text-[37px] xl:text-[40px] dark:text-white">
       Most Popular Projects<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
      </h3>
      <div className="relative">
-      <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center text-gray-800 dark:text-white md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
+      <div className="xl-grid-cols-4 mb-8 grid grid-cols-1 gap-x-6 gap-y-10 pb-4 text-center text-gray-800 md:grid-cols-2 md:gap-x-10 lg:grid-cols-3 dark:text-white">
        {reposData &&
         reposData.map((repo) => {
          return repo.node.owner.login.toLowerCase() == meta.accounts.github.username.toLowerCase() ? <RepositoryCard key={repo.node.id} {...repo.node} /> : null;
@@ -155,7 +155,7 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
 
-     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+     <h3 className="m-6 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none md:text-[35px] lg:text-[37px] xl:text-[40px] dark:text-white">
       Technologies I use<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
      </h3>
     </div>
@@ -185,14 +185,14 @@ export default async function HomePage() {
     <div className="h-full scroll-mt-20 py-36 pt-24 lg:px-36">
      <header>
       <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-      <h3 className="m-6 mb-2 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none dark:text-white md:text-[35px] lg:text-[37px] xl:text-[40px]">
+      <h3 className="m-6 mb-2 text-center text-[35px] font-semibold tracking-[-0.03em] text-gray-800 duration-300 motion-reduce:transition-none md:text-[35px] lg:text-[37px] xl:text-[40px] dark:text-white">
        Contact me<span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
       </h3>
       <p className="pb-1 text-center text-base text-gray-700 dark:text-neutral-300">Want to order a project? Or do you just want to stay in touch?</p>
      </header>
      <div className="relative">
-      <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none dark:divide-none md:grid-cols-2 md:divide-gray-200 md:dark:divide-white/20">
-       <div className="border-black/15 relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+      <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none md:grid-cols-2 md:divide-gray-200 dark:divide-none md:dark:divide-white/20">
+       <div className="relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
         <Contact />
        </div>
        <div className="space-y-4 p-4">

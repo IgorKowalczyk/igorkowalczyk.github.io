@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export function RepositoryCard(repo) {
  return (
-  <div id={repo.name} className="border-black/15 overflow-hidden rounded-xl border-[1px] duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+  <div id={repo.name} className="overflow-hidden rounded-xl border-[1px] border-black/15 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
    <Image unoptimized={true} src={`/api/og/repository/${repo.owner.login}/${repo.name}`} alt={`Preview of ${repo.name}`} width={720} height={480} />
    <div className="p-5 text-left">
     <Link href={repo.url} key={repo.id} className="break-all text-left font-semibold" target="_blank">
@@ -30,7 +30,7 @@ export function RepositoryCard(repo) {
      <div className="mb-1 flex flex-wrap gap-2 text-left font-mono">
       {repo.repositoryTopics.edges.slice(0, 3).map((topic) => (
        <Link key={topic.node.topic.name} href={`https://github.com/topics/${topic.node.topic.name}`} target="_blank">
-        <span className="border-black/15 rounded-[2em] border-[1px] px-[0.5em] py-[0.12em] text-[88%] text-gray-800/60 duration-200 hover:bg-black/5 motion-reduce:transition-none dark:border-neutral-800 dark:text-white/50 dark:hover:border-neutral-700 dark:hover:bg-white/5">#{topic.node.topic.name}</span>
+        <span className="rounded-[2em] border-[1px] border-black/15 px-[0.5em] py-[0.12em] text-[88%] text-gray-800/60 duration-200 hover:bg-black/5 motion-reduce:transition-none dark:border-neutral-800 dark:text-white/50 dark:hover:border-neutral-700 dark:hover:bg-white/5">#{topic.node.topic.name}</span>
        </Link>
       ))}
      </div>

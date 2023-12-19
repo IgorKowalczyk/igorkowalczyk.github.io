@@ -43,10 +43,10 @@ export default function Settings() {
     onClick={() => setIsOpen(true)}
     className={clsx(
      {
-      "dark:bg-white/15 bg-blue-200": isOpen,
+      "bg-blue-200 dark:bg-white/15": isOpen,
       "bg-gray-200 dark:bg-white/10": !isOpen,
      },
-     "dark:hover:bg-white/15 group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none"
+     "group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:hover:bg-white/15"
     )}
    >
     <Cog8ToothIcon
@@ -67,7 +67,7 @@ export default function Settings() {
      <div className="fixed inset-0 overflow-y-auto">
       <div className="flex min-h-full items-center justify-center p-4 text-center ">
        <Transition.Child as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:duration-[1ms]" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-        <Dialog.Panel className="hide-scrollbar border-black/15 w-full max-w-md transform overflow-visible rounded-[10px] border-[1px] bg-white p-6 text-left align-middle font-sans shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
+        <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border-[1px] border-black/15 bg-white p-6 text-left align-middle font-sans shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
          <Dialog.Title as="h3" className="text-xl/6 font-medium text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
           Settings
          </Dialog.Title>
