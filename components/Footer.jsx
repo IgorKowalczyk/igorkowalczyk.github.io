@@ -9,7 +9,7 @@ export function Footer() {
      <Link href="/">
       <span className="flex cursor-pointer items-center text-2xl font-semibold">
        Igor Kowalczyk
-       <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 ml-2 rounded-lg bg-black/[7%] px-2 py-1 text-xs dark:bg-white/10">v{process.env.VERSION}</span>
+       <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 ml-2 rounded-lg bg-black/10 px-2 py-1 text-xs dark:bg-white/10">v{process.env.VERSION}</span>
       </span>
      </Link>
 

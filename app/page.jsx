@@ -192,7 +192,7 @@ export default async function HomePage() {
      </header>
      <div className="relative">
       <div className="relative mt-6 grid h-full w-full grid-cols-1 gap-6 divide-x divide-none dark:divide-none md:grid-cols-2 md:divide-gray-200 md:dark:divide-white/20">
-       <div className="relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+       <div className="border-black/15 relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
         <Contact />
        </div>
        <div className="space-y-4 p-4">

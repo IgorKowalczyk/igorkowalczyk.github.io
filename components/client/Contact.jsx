@@ -245,7 +245,7 @@ export function Contact() {
     </p>
    )}
    <div className="w-full py-2">
-    <button className="group ml-auto mt-2 flex w-fit rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none dark:bg-white/[10%] dark:text-white dark:hover:bg-white/[15%]" type="submit" disabled={loading}>
+    <button className="dark:hover:bg-white/15 group ml-auto mt-2 flex w-fit rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none dark:bg-white/10 dark:text-white" type="submit" disabled={loading}>
      {loading ? (
       <>
        Sending
