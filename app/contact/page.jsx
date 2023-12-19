@@ -14,7 +14,7 @@ export default function ContactPage() {
    <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-neutral-800">
     <Dots h="107" w="134" />
    </span>
-   <div className="shadow-code rounded-[10px] border-[1px] border-black/[15%] bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+   <div className="shadow-code rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
     <header className="pb-6">
      <h1 className="mb-2 mt-6 flex items-center justify-center box-decoration-clone bg-clip-text px-8 text-center text-4xl font-semibold motion-reduce:transition-none">
       Contact me <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>

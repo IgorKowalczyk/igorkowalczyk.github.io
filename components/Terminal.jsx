@@ -25,7 +25,7 @@ const TerminalResponse = ({ children }) => <div className="leading-6">{children}
 
 export function Terminal({ userData, contributions }) {
  return (
-  <div className="card border-b-black/15 shadow-code block w-full rounded-md border bg-[#fffffe] font-mono text-[15px] text-sm transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-neutral-800 dark:bg-[#121412]">
+  <div className="card shadow-code block w-full rounded-md border border-b-black/15 bg-[#fffffe] font-mono text-[15px] text-sm transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-neutral-800 dark:bg-[#121412]">
    <div className="w-fill border-b-dark/5 relative flex items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
     <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]" />
     <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]" />

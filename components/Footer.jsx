@@ -9,7 +9,7 @@ export function Footer() {
      <Link href="/">
       <span className="flex cursor-pointer items-center text-2xl font-semibold">
        Igor Kowalczyk
-       <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 ml-2 rounded-lg bg-black/[7%] px-2 py-1 text-xs dark:bg-white/10">v{process.env.VERSION}</span>
+       <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span> <span className="mx-1 ml-2 rounded-lg bg-black/10 px-2 py-1 text-xs dark:bg-white/10">v{process.env.VERSION}</span>
       </span>
      </Link>
 
@@ -24,7 +24,7 @@ export function Footer() {
     </div>
     {footer.categories.map((category, index) => (
      <div key={index} className="col-span-1 text-gray-700 dark:text-neutral-300">
-      <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0 ">{category.title}</p>
+      <p className="mt-3 font-semibold text-gray-800 sm:mb-3 sm:mt-0 dark:text-white ">{category.title}</p>
       <div>
        {category.links.map((link, index) => (
         <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-700 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
