@@ -34,6 +34,78 @@ export const header = {
  },
 };
 
+export const projects = [
+ {
+  name: "Majo.exe",
+  started: "2020-02-24T16:59:08Z",
+  description: "Discord bot for almost everything - Memes, Image editing, Giveaway, Moderation, Anime and even more! With over 150 slash commands!",
+  images: [
+   {
+    src: "/assets/projects/majoexe/1.png",
+    alt: "Majo.exe main page",
+    width: 1920,
+    height: 1080,
+   },
+  ],
+  technologies: [
+   {
+    name: "React",
+    icon: "/assets/tech/react.svg",
+   },
+   {
+    name: "TailwindCSS",
+    icon: "/assets/tech/tailwindcss.svg",
+   },
+   {
+    name: "JavaScript",
+    icon: "/assets/tech/javascript.svg",
+   },
+   {
+    name: "Next.js",
+    icon: "/assets/tech/next.svg",
+   },
+   {
+    name: "Prisma",
+    icon: "/assets/tech/prisma.svg",
+   },
+  ],
+  website: "https://majoexe.xyz",
+  github: "https://github.com/igorkowalczyk/majo.exe",
+ },
+ {
+  name: "Los Santos County",
+  description: "A fully customizable dashboard for FiveM communities with applications, administrator panel, payments, 2FA, permissions, Discord, Steam, CFX Forum integrations and more!",
+  images: [
+   {
+    src: "/assets/projects/ls-county/1.png",
+    alt: "Dashboard main page mockup",
+    width: 1920,
+    height: 1080,
+   },
+  ],
+  technologies: [
+   {
+    name: "React",
+    icon: "/assets/tech/react.svg",
+   },
+   {
+    name: "TailwindCSS",
+    icon: "/assets/tech/tailwindcss.svg",
+   },
+   {
+    name: "Next.js",
+    icon: "/assets/tech/next.svg",
+   },
+   {
+    name: "Prisma",
+    icon: "/assets/tech/prisma.svg",
+   },
+  ],
+  website: null,
+  github: null,
+ },
+];
+
 export const nav = {
  left: [
   {

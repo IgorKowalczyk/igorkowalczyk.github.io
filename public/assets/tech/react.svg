@@ -1,6 +1,6 @@
 <svg viewBox="-11.5 -10.232 23 20.463" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-<circle r="2.05" fill="#61dafb"/>
-<g fill="none" stroke="#61dafb">
+<circle r="2.05" fill="#159ecb"/>
+<g fill="none" stroke="#159ecb">
 <ellipse rx="11" ry="4.2"/>
 <ellipse transform="rotate(60)" rx="11" ry="4.2"/>
 <ellipse transform="rotate(120)" rx="11" ry="4.2"/>

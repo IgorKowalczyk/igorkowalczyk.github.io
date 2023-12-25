@@ -1,11 +1,12 @@
 import { StarIcon, FolderIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
 export function RepositoryCard(repo) {
  return (
-  <div id={repo.name} className="overflow-hidden rounded-xl border-[1px] border-black/15 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+  <div id={repo.name} className={clsx("overflow-hidden rounded-xl border-[1px] border-black/15 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]", repo.className)}>
    <Image unoptimized={true} src={`/api/og/repository/${repo.owner.login}/${repo.name}`} alt={`Preview of ${repo.name}`} width={720} height={480} />
    <div className="p-5 text-left">
     <Link href={repo.url} key={repo.id} className="break-all text-left font-semibold" target="_blank">
