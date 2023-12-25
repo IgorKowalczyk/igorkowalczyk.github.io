@@ -53,16 +53,12 @@ export const projects = [
     icon: "/assets/tech/react.svg",
    },
    {
-    name: "TailwindCSS",
-    icon: "/assets/tech/tailwindcss.svg",
-   },
-   {
-    name: "JavaScript",
-    icon: "/assets/tech/javascript.svg",
-   },
-   {
     name: "Next.js",
     icon: "/assets/tech/next.svg",
+   },
+   {
+    name: "Discord.js",
+    icon: "/assets/tech/discordjs.svg",
    },
    {
     name: "Prisma",
