@@ -1,5 +1,5 @@
 import { CalendarIcon } from "@heroicons/react/24/solid";
-import { Header1, Header2 } from "components/Headers";
+import { Description, Header1, Header2 } from "components/Headers";
 import { pick } from "contentlayer/client";
 import { allBlogs } from "contentlayer/generated";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function Blog() {
  return (
   <div className="mx-auto mb-16 flex max-w-2xl flex-col items-start justify-center">
    <Header1>Tech Blog</Header1>
-   <p className="mb-4 text-gray-700 dark:text-neutral-300">A blog about technology, programming and many other interesting things. I write about my experiences, my projects and my opinions.</p>
+   <Description className="mb-6">A blog about technology, programming and many other interesting things. I write about my experiences, my projects and my opinions.</Description>
 
    <Header2>All Posts</Header2>
    {!posts.length && <p className="mb-4 text-rose-500">No posts found!</p>}

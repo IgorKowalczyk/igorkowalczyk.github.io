@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Button from "components/Button";
 import { Squares } from "components/Decorations";
-import { Header1, Header2 } from "components/Headers";
+import { Description, Header1, Header2 } from "components/Headers";
 import { RepositoryCard } from "components/RepositoryCard";
 import { GetRepos } from "lib/graphql";
 import Image from "next/image";
@@ -28,14 +28,14 @@ export default async function GithubRepositories() {
 
    <div className="mx-auto mb-16 flex max-w-5xl flex-col items-start justify-center">
     <Header1>My Work</Header1>
-    <p className="mb-6 text-gray-700 dark:text-neutral-300">I have been programming for {new Date().getFullYear() - 2018} years, and I have worked on many projects. Here are some of my most recent projects, you can find more on my Github profile.</p>
+    <Description className="mb-6">I have been programming for {new Date().getFullYear() - 2018} years, and I have worked on many projects. Here are some of my most recent projects, you can find more on my Github profile.</Description>
 
     <Header2 className="mb-3">Recent Projects</Header2>
 
     {projects.map((project, index) => (
      <div key={index} className="mx-auto mb-6 flex flex-col gap-8 overflow-hidden rounded-xl border-[1px] border-black/15 p-8 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none md:flex-row dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
       <div className="min-w-[50%]">
-       <h3 className="text-left text-3xl font-black">{project.name}</h3>
+       <h3 className="text-left text-3xl font-semibold">{project.name}</h3>
        {project.started && (
         <time className="my-2 block text-sm font-normal leading-none text-gray-500 dark:text-neutral-500" dateTime={new Date(project.started).toUTCString()}>
          {parseISO(project.started)} - {project.ended ? parseISO(project.ended) : "Now"}

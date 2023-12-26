@@ -1,5 +1,13 @@
 import clsx from "clsx";
 
+export function Description({ children, ...props }) {
+ return (
+  <p {...props} className={clsx("text-gray-700 dark:text-neutral-300", props.className)}>
+   {children}
+  </p>
+ );
+}
+
 export function Header1({ children, ...props }) {
  return (
   <h1 {...props} className={clsx("mb-2 box-decoration-clone bg-clip-text text-3xl font-black motion-reduce:transition-none", props.className)}>

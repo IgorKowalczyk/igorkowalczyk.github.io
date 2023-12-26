@@ -12,17 +12,6 @@ export function RepositoryCard({ name, id, owner, description, url, homepageUrl,
     <Link href={url} key={id} className="break-all text-left font-semibold" target="_blank">
      <FolderIcon className="inline h-6 w-6 fill-black/10 stroke-black/70 duration-200 motion-reduce:transition-none dark:fill-white/10 dark:stroke-white/70" /> {owner.login}/{name}
     </Link>
-    {/* <span className="ml-2 inline-flex content-center items-center rounded-lg border-[1px] border-black/15 px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/50 duration-200 hover:bg-black/5 motion-reduce:transition-none dark:border-neutral-800 dark:text-white/50 dark:hover:border-neutral-700 dark:hover:bg-white/5">
-     {isArchived ? (
-      <>
-       <ArchiveBoxIcon className="mr-1 inline-block h-4 w-4 stroke-black/50 duration-200 motion-reduce:transition-none dark:stroke-white/50" /> Archived
-      </>
-     ) : (
-      <>
-       <SparklesIcon className="mr-1 inline-block h-4 w-4 stroke-black/50 duration-200 motion-reduce:transition-none dark:stroke-white/50" /> Active
-      </>
-     )}
-    </span> */}
     <p className="my-2 text-left">{description && description.length > 90 ? `${description.substring(0, 90)}...` : description}</p>
     {repositoryTopics && (
      <div className="mb-1 flex flex-wrap gap-2 text-left font-mono">

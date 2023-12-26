@@ -1,6 +1,6 @@
 import { Contact } from "components/client/Contact";
 import { Dots, Squares } from "components/Decorations";
-import { Header1 } from "components/Headers";
+import { Description, Header1 } from "components/Headers";
 
 export const metadata = {
  title: "Contact",
@@ -17,7 +17,7 @@ export default function ContactPage() {
    </span>
    <div className="shadow-code rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
     <Header1 className="text-center">Contact me</Header1>
-    <p className="py-1 text-center text-base text-gray-700 dark:text-neutral-300">Want to order a project? Or do you just want to stay in touch?</p>
+    <Description className="mb-5 text-center">I am always open to new opportunities and projects. Feel free to contact me!</Description>
     <Contact />
    </div>
   </div>
