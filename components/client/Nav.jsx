@@ -41,8 +41,8 @@ function NavItem({ path, text, target }) {
 export function Nav() {
  return (
   <nav key="nav" className="fixed top-0 z-[100] mx-0 mt-0 w-full font-sans shadow dark:shadow-2xl">
-   <div className="relative mx-auto flex h-[73px] w-full items-center justify-between border-b-[1px] border-gray-200/60 bg-white pb-4 pt-4 duration-300 motion-reduce:transition-none md:!bg-opacity-70 dark:border-neutral-800 dark:bg-[#161617]">
-    <div className="fixed inset-0 z-[-1] h-[inherit] w-full md:backdrop-blur-xl" />
+   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b-[1px] border-gray-200/60 bg-white pb-4 pt-4 duration-300 motion-reduce:transition-none lg:justify-between lg:!bg-opacity-70 dark:border-neutral-800 dark:bg-[#161617]">
+    <div className="fixed inset-0 z-[-1] h-[inherit] w-full lg:backdrop-blur-xl" />
     <Link href="/" key="main_page">
      <h3 className=" z-[1001] mx-8 text-xl font-semibold text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">
       {meta.title}
@@ -50,16 +50,18 @@ export function Nav() {
      </h3>
     </Link>
     <MobileNav />
-    <div className="mr-auto flex gap-2">
+    <div className="mr-auto hidden gap-2 lg:flex">
      {nav.left.map((item, index) => {
       return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
      })}
      <Popover className="relative" />
     </div>
-    <div className="ml-auto flex gap-2">
+    <div className="ml-auto hidden gap-2 lg:flex">
      {nav.right.map((item, index) => {
       return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
      })}
+    </div>
+    <div className="ml-auto lg:ml-0">
      <Settings />
     </div>
    </div>

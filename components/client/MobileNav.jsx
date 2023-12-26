@@ -13,7 +13,7 @@ export default function MobileNav() {
  return (
   <>
    <button
-    className="burger visible relative h-10 w-10 border-0 bg-transparent md:hidden"
+    className="burger visible relative h-10 w-10 border-0 bg-transparent lg:hidden"
     aria-label="Toggle menu"
     type="button"
     onClick={() => {
@@ -29,7 +29,7 @@ export default function MobileNav() {
       "rendered pointer-events-all !opacity-100": isMenuOpen,
       "pointer-events-none": !isMenuOpen,
      },
-     "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 duration-200 motion-reduce:transition-none md:hidden"
+     "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 duration-200 motion-reduce:transition-none lg:hidden"
     )}
    >
     <div className="h-full border-r-[1px] border-black/10 bg-white px-3.5 shadow duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:shadow-2xl">
