@@ -55,12 +55,12 @@ export default async function GithubRepositories() {
        </div>
        <div className="mt-4 flex flex-wrap gap-2">
         {project.website && (
-         <Button href={project.website} className="mt-4">
+         <Button href={project.website} className="mt-4" target="_blank" rel="noopener noreferrer">
           Visit Website
          </Button>
         )}
         {project.github && (
-         <Button href={project.github} className="mt-4">
+         <Button href={project.github} className="mt-4" target="_blank" rel="noopener noreferrer">
           View on Github
          </Button>
         )}
