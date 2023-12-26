@@ -109,6 +109,16 @@ const nextConfig = {
     permanent: true,
    },
    {
+    source: "/repositories",
+    destination: "/work",
+    permanent: true,
+   },
+   {
+    source: "/projects",
+    destination: "/work",
+    permanent: true,
+   },
+   {
     source: "/twitter",
     destination: "https://twitter.com/majonezexe",
     permanent: true,

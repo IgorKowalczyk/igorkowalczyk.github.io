@@ -11,7 +11,7 @@ import { parseISO } from "/lib/utils";
 export const runtime = "edge";
 
 export const metadata = {
- title: "Github Repositories",
+ title: "My Work",
 };
 
 export default async function GithubRepositories() {
