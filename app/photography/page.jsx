@@ -1,3 +1,4 @@
+import { Header1 } from "components/Headers";
 import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 
@@ -10,10 +11,7 @@ export default async function Photography() {
 
  return (
   <div className="mx-auto mb-16 flex flex-col items-start justify-center">
-   <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[2rem] font-semibold motion-reduce:transition-none">
-    My photography
-    <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-   </h1>
+   <Header1>My photography</Header1>
    <p className="pb-2 text-slate-600 dark:text-slate-400">I call this page my second Instagram, here I upload photos taken by me in various places around the world. From Poland (my home country) to even Italy.</p>
    <p className="pb-6 text-slate-600 dark:text-slate-400">I love traveling, I love taking pictures, from every trip I bring back hundreds of different photos. Here you can browse through the best ones</p>
 

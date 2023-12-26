@@ -1,7 +1,8 @@
+import { CalendarIcon } from "@heroicons/react/24/solid";
+import { Header1, Header2 } from "components/Headers";
 import { pick } from "contentlayer/client";
 import { allBlogs } from "contentlayer/generated";
 import Link from "next/link";
-import { CalendarIcon } from "@heroicons/react/24/solid";
 import { parseISO } from "/lib/utils";
 
 export default function Blog() {
@@ -9,17 +10,12 @@ export default function Blog() {
 
  return (
   <div className="mx-auto mb-16 flex max-w-2xl flex-col items-start justify-center">
-   <h1 className="mb-4 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[2rem] font-semibold motion-reduce:transition-none">
-    Tech Blog <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-   </h1>
+   <Header1>Tech Blog</Header1>
    <p className="mb-4 text-gray-700 dark:text-neutral-300">A blog about technology, programming and many other interesting things. I write about my experiences, my projects and my opinions.</p>
 
-   <h3 className="mt-8 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[1.7rem] font-semibold motion-reduce:transition-none">
-    All Posts
-    <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-   </h3>
+   <Header2>All Posts</Header2>
    {!posts.length && <p className="mb-4 text-rose-500">No posts found!</p>}
-   <ol className="relative mt-8 border-l border-gray-200 dark:border-neutral-800">
+   <ol className="relative mt-4 border-l border-gray-200 dark:border-neutral-800">
     {posts.map((post, index) => (
      <Link href={`/blog/${post.slug}`} className="w-full" key={index}>
       <li className="-mt-3 mb-10 ml-6 rounded-2xl border px-6 py-3 duration-200 hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">

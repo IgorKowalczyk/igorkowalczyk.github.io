@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Button from "components/Button";
 import { Squares } from "components/Decorations";
+import { Header1, Header2 } from "components/Headers";
 import { RepositoryCard } from "components/RepositoryCard";
 import { GetRepos } from "lib/graphql";
 import Image from "next/image";
@@ -26,15 +27,10 @@ export default async function GithubRepositories() {
    </div>
 
    <div className="mx-auto mb-16 flex max-w-5xl flex-col items-start justify-center">
-    <h1 className="mb-2 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[2rem] font-semibold motion-reduce:transition-none">
-     My work <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-    </h1>
+    <Header1>My Work</Header1>
     <p className="mb-6 text-gray-700 dark:text-neutral-300">I have been programming for {new Date().getFullYear() - 2018} years, and I have worked on many projects. Here are some of my most recent projects, you can find more on my Github profile.</p>
 
-    <h2 className="mb-3 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[1.7rem] font-semibold motion-reduce:transition-none">
-     Recent Projects
-     <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-    </h2>
+    <Header2 className="mb-3">Recent Projects</Header2>
 
     {projects.map((project, index) => (
      <div key={index} className="mx-auto mb-6 flex flex-col gap-8 overflow-hidden rounded-xl border-[1px] border-black/15 p-8 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none md:flex-row dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
@@ -82,10 +78,8 @@ export default async function GithubRepositories() {
       )}
      </div>
     ))}
-    <h3 className="mt-8 flex items-center justify-center box-decoration-clone bg-clip-text text-center text-[1.7rem] font-semibold motion-reduce:transition-none">
-     Github Repositories
-     <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-    </h3>
+
+    <Header2 className="mt-6">Github Repositories</Header2>
     {repositories && (
      <div className="mt-3 columns-2 gap-6 text-center text-gray-800 dark:text-white">
       {repositories?.map((repo) => (

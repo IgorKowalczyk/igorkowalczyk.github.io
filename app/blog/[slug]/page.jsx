@@ -8,6 +8,7 @@ import Link from "next/link";
 import "styles/blog.css";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
+import { Header1 } from "components/Headers";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
@@ -18,9 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
  const post = allBlogs.find((post) => post?.slug === params?.slug);
 
- if (!post) {
-  return;
- }
+ if (!post) return {};
 
  const { title, publishedAt: publishedTime, summary: description, slug } = post;
 
@@ -58,21 +57,16 @@ export default function Post({ params }) {
    <div className="prose grid flex-1 grid-cols-1 gap-x-8 dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
      <header className="w-full ">
-      <h1 className="mb-2 mt-6 flex items-center box-decoration-clone bg-clip-text text-[2.5rem] font-semibold motion-reduce:transition-none">
-       {post?.title}
-       <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-      </h1>
+      <Header1>{post.title}</Header1>
       <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
-       <div>
-        <div className="flex items-center">
-         <Image alt={meta?.title} height={24} width={24} src={Avatar} className="rounded-full" />
-         <time className="ml-2 text-sm text-gray-700 dark:text-neutral-300" dateTime={new Date(post?.publishedAt).toUTCString()}>
-          {post?.author} / {parseISO(post?.publishedAt)}
-         </time>
-        </div>
+       <div className="flex items-center">
+        <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
+        <time className="ml-2 text-sm text-gray-700 dark:text-neutral-300" dateTime={new Date(post.publishedAt).toUTCString()}>
+         {post.author} / {parseISO(post.publishedAt)}
+        </time>
        </div>
        <p className="mt-2 min-w-32 text-sm text-gray-700 md:mt-0 dark:text-neutral-300">
-        {post?.wordCount} words • {post?.readingTime?.text}
+        {post.wordCount} words • {post.readingTime?.text}
        </p>
       </div>
      </header>
@@ -80,7 +74,7 @@ export default function Post({ params }) {
     </div>
     <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
      <p className="mb-0 text-sm uppercase">On this page</p>
-     {post?.headings?.map((props) => (
+     {post.headings?.map((props) => (
       <Link
        key={props.slug}
        href={`#${props.slug}`}
