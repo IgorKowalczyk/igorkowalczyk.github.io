@@ -109,7 +109,7 @@ export const nav = {
    title: "Home",
   },
   {
-   href: "/repositories/",
+   href: "/work/",
    title: "My work",
   },
   {
@@ -223,8 +223,8 @@ export const footer = {
      href: "/",
     },
     {
-     title: "Projects",
-     href: "/repositories",
+     title: "My work",
+     href: "/work",
     },
     {
      title: "Blog",
@@ -340,11 +340,6 @@ export const technologies = [
   name: "Figma",
   icon: "/assets/tech/figma.svg",
   link: "https://figma.com/",
- },
- {
-  name: "Webpack",
-  icon: "/assets/tech/webpack.svg",
-  link: "https://webpack.js.org/",
  },
  {
   name: "Turborepo",
