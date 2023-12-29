@@ -14,7 +14,7 @@ export default function Blog() {
    <Description className="mb-6">A blog about technology, programming and many other interesting things. I write about my experiences, my projects and my opinions.</Description>
 
    <Header2>All Posts</Header2>
-   {!posts.length && <p className="mb-4 text-rose-500">No posts found!</p>}
+   {!posts.length && <p className="mb-4 text-red-400">No posts found!</p>}
    <ol className="relative mt-4 border-l border-gray-200 dark:border-neutral-800">
     {posts.map((post, index) => (
      <Link href={`/blog/${post.slug}`} className="w-full" key={index}>

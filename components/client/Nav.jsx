@@ -21,7 +21,7 @@ function NavItem({ path, text, target }) {
   <Link
    key={path}
    href={path}
-   className={clsx("relative flex flex-wrap items-center rounded-md p-1 align-middle transition-all hover:bg-black/10 hover:text-neutral-800 sm:px-3 sm:py-2 dark:hover:bg-white/10 dark:hover:text-neutral-200", {
+   className={clsx("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 sm:px-3 sm:py-2 dark:hover:bg-white/10 dark:hover:text-neutral-200", {
     "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
     "text-gray-700 dark:text-neutral-400": !isActive,
    })}
@@ -29,7 +29,7 @@ function NavItem({ path, text, target }) {
    <>
     {text}
     {target && (target === "_blank" || target === "_external") && (
-     <svg aria-hidden="true" className="ml-1 mt-1 fill-black opacity-50 dark:fill-white" height="7" viewBox="0 0 6 6" width="7">
+     <svg aria-hidden="true" className="ml-1 inline-block fill-black align-top opacity-50 dark:fill-white" height="7" viewBox="0 0 6 6" width="7">
       <path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" fill="var(--accents-3)" />
      </svg>
     )}

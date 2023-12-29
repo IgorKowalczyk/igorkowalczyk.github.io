@@ -84,3 +84,21 @@ body {
 .bg-main {
  @apply bg-[linear-gradient(180deg,_rgb(255,255,255)_84%,rgb(233,243,255)_100%)] dark:bg-[linear-gradient(180deg,_rgb(16,17,16)_84%,rgb(22,22,23)_100%)];
 }
+
+.link {
+ @apply relative inline-block;
+}
+
+.link::after,
+.link::before {
+ @apply pointer-events-none absolute bottom-[-0.15em] left-0 h-[2px] w-[calc(100%_-_1em)] origin-[0_0] scale-x-0 bg-current transition-[transform] duration-200 ease-in content-[""] motion-reduce:transition-none;
+}
+
+.link::before {
+ @apply scale-x-100 opacity-20;
+}
+
+.link:hover::after,
+.link:active::after {
+ @apply scale-x-100 motion-reduce:transition-none;
+}
