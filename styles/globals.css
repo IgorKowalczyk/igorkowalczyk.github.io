@@ -29,26 +29,6 @@ body {
  scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
- @apply w-[10px];
-}
-
-::-webkit-scrollbar-track {
- @apply rounded-xl bg-gray-50 dark:bg-[#040d21];
-}
-
-::-webkit-scrollbar-thumb {
- @apply rounded-xl bg-gray-300 dark:bg-[#1f2532];
-}
-
-::-webkit-scrollbar-thumb:hover {
- @apply bg-gray-400 dark:bg-[#292f3d];
-}
-
-::-webkit-scrollbar-thumb:active {
- @apply bg-gray-500 dark:bg-[#343b4a];
-}
-
 ::selection {
  @apply bg-neutral-800 !text-white;
 }
