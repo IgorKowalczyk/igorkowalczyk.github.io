@@ -41,8 +41,8 @@ export const projects = [
   description: "Discord bot for almost everything - Memes, Image editing, Giveaway, Moderation, Anime and even more! With over 150 slash commands!",
   images: [
    {
-    src: "/assets/projects/majoexe/1.png",
-    alt: "Majo.exe main page",
+    src: "/assets/projects/majoexe/image-01.png",
+    alt: "Majo.exe main page screenshot",
     width: 1920,
     height: 1080,
    },
@@ -73,8 +73,8 @@ export const projects = [
   description: "A fully customizable dashboard for FiveM communities with applications, administrator panel, payments, 2FA, permissions, Discord, Steam, CFX Forum integrations and more!",
   images: [
    {
-    src: "/assets/projects/ls-county/1.png",
-    alt: "Dashboard main page mockup",
+    src: "/assets/projects/ls-county/image-01.png",
+    alt: "Los Santos County main page MacBook Pro mockup",
     width: 1920,
     height: 1080,
    },
