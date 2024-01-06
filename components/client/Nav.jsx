@@ -21,7 +21,7 @@ function NavItem({ path, text, target }) {
   <Link
    key={path}
    href={path}
-   className={clsx("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 sm:px-3 sm:py-2 dark:hover:bg-white/10 dark:hover:text-neutral-200", {
+   className={clsx("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
     "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
     "text-gray-700 dark:text-neutral-400": !isActive,
    })}
@@ -41,7 +41,7 @@ function NavItem({ path, text, target }) {
 export function Nav() {
  return (
   <nav key="nav" className="fixed top-0 z-[100] mx-0 mt-0 w-full font-sans shadow dark:shadow-2xl">
-   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b-[1px] border-gray-200/60 bg-white pb-4 pt-4 duration-300 motion-reduce:transition-none lg:justify-between lg:!bg-opacity-70 dark:border-neutral-800 dark:bg-[#161617]">
+   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b-[1px] border-gray-200/60 bg-white pb-4 pt-4 duration-300 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] lg:justify-between lg:!bg-opacity-70">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full lg:backdrop-blur-xl" />
     <Link href="/" key="main_page">
      <h3 className=" z-[1001] mx-8 text-xl font-semibold text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">

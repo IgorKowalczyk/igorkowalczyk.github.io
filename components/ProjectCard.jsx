@@ -6,7 +6,7 @@ import Button from "./Button";
 
 export function ProjectCard({ project }) {
  return (
-  <div key={project.name} className="mx-auto mb-6 flex flex-col gap-8 overflow-hidden rounded-xl border-[1px] border-black/15 p-8 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none md:flex-row dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+  <div key={project.name} className="mx-auto mb-6 flex flex-col gap-8 overflow-hidden rounded-xl border-[1px] border-black/15 p-8 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021] md:flex-row">
    <div className="min-w-[50%]">
     <h3 className="text-left text-3xl font-semibold">{project.name}</h3>
     {project.started && (
@@ -14,7 +14,7 @@ export function ProjectCard({ project }) {
       {parseISO(project.started)} - {project.ended ? parseISO(project.ended) : "Now"}
      </time>
     )}
-    <p className="mt-2 text-left text-gray-700 md:w-3/4 dark:text-neutral-400">{project.description}</p>
+    <p className="mt-2 text-left text-gray-700 dark:text-neutral-400 md:w-3/4">{project.description}</p>
     <div className="mt-4 flex flex-wrap gap-2">
      {project.technologies.map((tech, index) => (
       <div key={index} className="flex cursor-pointer items-center gap-2 rounded-md border border-black/[15%] px-2 py-1 font-mono text-sm font-medium text-gray-800/[60%] duration-200 hover:bg-black/[5%] motion-reduce:transition-none dark:border-neutral-800 dark:text-white/[50%] dark:hover:border-neutral-700 dark:hover:bg-white/[5%]">

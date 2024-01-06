@@ -34,7 +34,7 @@ export default async function GithubRepositories() {
 
     <Header2 className="mt-6">Github Repositories</Header2>
     {repositories && (
-     <div className="mt-3 columns-1 gap-6 text-center text-gray-800 md:columns-2 dark:text-white">
+     <div className="mt-3 columns-1 gap-6 text-center text-gray-800 dark:text-white md:columns-2">
       {repositories?.map((repo) => (
        <RepositoryCard key={repo.id} {...repo} className="mb-6" />
       ))}

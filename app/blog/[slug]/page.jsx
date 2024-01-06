@@ -65,7 +65,7 @@ export default function Post({ params }) {
          {post.author} / {parseISO(post.publishedAt)}
         </time>
        </div>
-       <p className="mt-2 min-w-32 text-sm text-gray-700 md:mt-0 dark:text-neutral-300">
+       <p className="mt-2 min-w-32 text-sm text-gray-700 dark:text-neutral-300 md:mt-0">
         {post.wordCount} words • {post.readingTime?.text}
        </p>
       </div>

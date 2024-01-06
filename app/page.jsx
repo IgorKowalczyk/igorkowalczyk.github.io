@@ -31,9 +31,9 @@ export default async function HomePage() {
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
       <div className="md:col-span-3">
-       <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px] dark:text-white">{header.title}</h1>
+       <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
        <h2 className="text-center text-[1.5rem] font-semibold opacity-80 md:text-left">{header.subtitle}</h2>
-       <p className="mt-2 text-center text-gray-700 md:w-3/4 md:text-left dark:text-neutral-400">{header.description}</p>
+       <p className="mt-2 text-center text-gray-700 dark:text-neutral-400 md:w-3/4 md:text-left">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
         <Link href="/#about" scroll={false} className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
          <>
@@ -58,7 +58,7 @@ export default async function HomePage() {
 
    <section id={"additional-info"}>
     <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 md:gap-8 dark:text-white/70">
+    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
       <>
        <StarIcon className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
