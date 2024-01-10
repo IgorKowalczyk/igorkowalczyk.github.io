@@ -1,6 +1,6 @@
-import { Contact } from "components/client/Contact";
-import { Dots, Squares } from "components/Decorations";
-import { Description, Header1 } from "components/Headers";
+import { Contact } from "@/components/client/Contact";
+import { Dots, Squares } from "@/components/Decorations";
+import { Description, Header1 } from "@/components/Headers";
 
 export const metadata = {
  title: "Contact",

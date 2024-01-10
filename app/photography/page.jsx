@@ -1,7 +1,7 @@
-import { Description, Header1 } from "components/Headers";
-import { getPhotography } from "lib/getPhotography";
 import Image from "next/image";
 import Link from "next/link";
+import { Description, Header1 } from "@/components/Headers";
+import { getPhotography } from "@/lib/getPhotography";
 
 export const metadata = {
  title: "Photography",

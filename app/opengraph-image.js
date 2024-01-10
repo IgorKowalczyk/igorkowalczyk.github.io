@@ -1,5 +1,5 @@
-import { meta } from "config";
 import { ImageResponse } from "next/og";
+import { meta } from "@/config";
 
 export const runtime = "edge";
 export const contentType = "image/png";

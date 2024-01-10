@@ -2,7 +2,7 @@ import { StarIcon, FolderIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
+import Button from "@/components/Button";
 
 export function RepositoryCard({ name, id, owner, description, url, homepageUrl, repositoryTopics, stargazerCount, forkCount, primaryLanguage, className }) {
  return (

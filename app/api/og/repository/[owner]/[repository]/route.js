@@ -1,8 +1,8 @@
 /* eslint-disable complexity */
 
-import { GetOGImage } from "lib/graphql";
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
+import { GetOGImage } from "@/lib/graphql";
 
 export const runtime = "edge";
 export const contentType = "image/png";

@@ -1,16 +1,16 @@
 "use client";
 
-import { meta } from "/config";
-import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { useEffect } from "react";
 import { Cog8ToothIcon, ArrowTopRightOnSquareIcon, SwatchIcon, CubeTransparentIcon, CursorArrowRaysIcon, SunIcon, MoonIcon, ComputerDesktopIcon } from "@heroicons/react/24/outline";
-import { useTheme } from "next-themes";
-import Select from "./Select";
-import Switch from "./Switch";
 import clsx from "clsx";
-import Button from "components/Button";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { Fragment, useState } from "react";
+import { useEffect } from "react";
+import Button from "@/components/Button";
+import Select from "@/components/client/Select";
+import Switch from "@/components/client/Switch";
+import { meta } from "@/config";
 
 export default function Settings() {
  const [isOpen, setIsOpen] = useState(false);

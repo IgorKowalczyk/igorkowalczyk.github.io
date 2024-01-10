@@ -1,6 +1,6 @@
 import { allBlogs } from "contentlayer/generated";
 import { NextResponse } from "next/server";
-import { meta } from "/config";
+import { meta } from "@/config";
 
 export async function GET() {
  return new NextResponse(

@@ -1,6 +1,6 @@
-import { header, meta } from "/config";
-import { ConvertBytes, ConvertNumber } from "/lib/utils";
 import Link from "next/link";
+import { header, meta } from "@/config";
+import { ConvertBytes, ConvertNumber } from "@/lib/utils";
 
 const TerminalLine = ({ children, blinking = false }) => (
  <div>

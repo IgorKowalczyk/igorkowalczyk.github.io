@@ -1,4 +1,4 @@
-import { meta } from "config.js";
+import { meta } from "@/config.js";
 
 export default function robots() {
  return {

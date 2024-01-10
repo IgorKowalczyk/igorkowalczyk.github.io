@@ -1,9 +1,9 @@
 import { CalendarIcon } from "@heroicons/react/24/solid";
-import { Description, Header1, Header2 } from "components/Headers";
 import { pick } from "contentlayer/client";
 import { allBlogs } from "contentlayer/generated";
 import Link from "next/link";
-import { parseISO } from "/lib/utils";
+import { Description, Header1, Header2 } from "@/components/Headers";
+import { parseISO } from "@/lib/utils";
 
 export default function Blog() {
  const posts = allBlogs.map((post) => pick(post, ["slug", "title", "summary", "publishedAt"])).sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));

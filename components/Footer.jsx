@@ -1,5 +1,5 @@
-import { footer } from "/config";
 import Link from "next/link";
+import { footer } from "@/config";
 
 export function Footer() {
  return (
@@ -24,7 +24,7 @@ export function Footer() {
     </div>
     {footer.categories.map((category, index) => (
      <div key={index} className="col-span-1 text-gray-700 dark:text-neutral-300">
-      <p className="mt-3 font-semibold text-gray-800 sm:mb-3 sm:mt-0 dark:text-white ">{category.title}</p>
+      <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0 ">{category.title}</p>
       <div>
        {category.links.map((link, index) => (
         <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-700 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">

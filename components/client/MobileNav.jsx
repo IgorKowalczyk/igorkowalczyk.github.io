@@ -1,10 +1,10 @@
 "use client";
 
-import { nav } from "/config";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
+import { useState } from "react";
+import { nav } from "@/config";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);

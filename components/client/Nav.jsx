@@ -1,12 +1,12 @@
 "use client";
 
-import { nav, meta } from "/config";
-import { usePathname } from "next/navigation";
-import MobileNav from "components/client/MobileNav";
-import Settings from "components/client/Settings";
-import Popover from "components/client/NavPopover";
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import MobileNav from "@/components/client/MobileNav";
+import Popover from "@/components/client/NavPopover";
+import Settings from "@/components/client/Settings";
+import { nav, meta } from "@/config";
 
 function NavItem({ path, text, target }) {
  let pathname = usePathname() || "/";

@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { parseISO } from "lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
+import Button from "@/components/Button";
+import { parseISO } from "@/lib/utils";
 
 export function ProjectCard({ project }) {
  return (

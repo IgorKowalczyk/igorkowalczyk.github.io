@@ -1,8 +1,8 @@
-import { meta } from "config";
-import { parseISO } from "/lib/utils";
 import { allBlogs } from "contentlayer/generated";
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
+import { meta } from "@/config";
+import { parseISO } from "@/lib/utils";
 
 export const runtime = "edge";
 export const contentType = "image/png";

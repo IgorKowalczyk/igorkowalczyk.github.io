@@ -1,18 +1,18 @@
-import { header, contact, meta, technologies } from "/config";
-import { ConvertNumber } from "/lib/utils";
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import sparkles from "/public/assets/svg/sparkles.svg";
-import { Dots } from "components/Decorations";
-import { Terminal } from "components/Terminal";
-import { Contact } from "components/client/Contact";
-import { GlowEffect } from "components/client/GlowEffect";
-import { GetUserData, getTotalContributionsForYears } from "lib/graphql";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import clsx from "clsx";
-import { Description, Header2 } from "components/Headers";
-import { projects } from "config";
-import { ProjectCard } from "components/ProjectCard";
+import { Contact } from "@/components/client/Contact";
+import { GlowEffect } from "@/components/client/GlowEffect";
+import { Dots } from "@/components/Decorations";
+import { Description, Header2 } from "@/components/Headers";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Terminal } from "@/components/Terminal";
+import { projects } from "@/config";
+import { header, contact, meta, technologies } from "@/config";
+import { GetUserData, getTotalContributionsForYears } from "@/lib/graphql";
+import { ConvertNumber } from "@/lib/utils";
 
 export const runtime = "edge";
 

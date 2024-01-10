@@ -1,9 +1,9 @@
 "use client";
 
 import { Transition, Popover } from "@headlessui/react";
-import { meta } from "/config";
 import { CodeBracketIcon, RectangleStackIcon, EnvelopeOpenIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { meta } from "@/config";
 
 export default function NavPopover(props) {
  return (

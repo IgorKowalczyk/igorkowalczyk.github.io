@@ -1,4 +1,4 @@
-import { meta } from "config";
+import { meta } from "@/config";
 
 export default function manifest() {
  return {

@@ -1,9 +1,9 @@
-import { Squares } from "components/Decorations";
-import { Description, Header1, Header2 } from "components/Headers";
-import { ProjectCard } from "components/ProjectCard";
-import { RepositoryCard } from "components/RepositoryCard";
-import { projects } from "config";
-import { GetRepos } from "lib/graphql";
+import { Squares } from "@/components/Decorations";
+import { Description, Header1, Header2 } from "@/components/Headers";
+import { ProjectCard } from "@/components/ProjectCard";
+import { RepositoryCard } from "@/components/RepositoryCard";
+import { projects } from "@/config";
+import { GetRepos } from "@/lib/graphql";
 
 export const runtime = "edge";
 

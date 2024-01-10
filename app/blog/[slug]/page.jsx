@@ -1,14 +1,14 @@
 import Avatar from "/public/assets/avatar.png";
 import { allBlogs } from "contentlayer/generated";
-import { parseISO } from "/lib/utils";
-import { meta } from "/config";
-import { MDXComponent } from "components/MDXComponents";
+import { parseISO } from "@/lib/utils";
+import { meta } from "@/config";
+import { MDXComponent } from "@/components/MDXComponents";
 import Image from "next/image";
 import Link from "next/link";
 import "styles/blog.css";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
-import { Header1 } from "components/Headers";
+import { Header1 } from "@/components/Headers";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({

@@ -1,12 +1,12 @@
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
-import { Nav } from "components/client/Nav";
-import { Providers } from "components/client/Providers";
-import { Footer } from "components/Footer";
-import { Hotjar } from "components/Hotjar";
-import { meta } from "config";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { Nav } from "@/components/client/Nav";
+import { Providers } from "@/components/client/Providers";
+import { Footer } from "@/components/Footer";
+import { Hotjar } from "@/components/Hotjar";
+import { meta } from "@/config";
 import "styles/globals.css";
 
 export const metadata = {
