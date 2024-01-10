@@ -78,7 +78,7 @@ const OtherPage = defineDocumentType(() => ({
 }));
 
 const contentLayerConfig = makeSource({
- contentDirPath: "data",
+ contentDirPath: "content",
  documentTypes: [Blog, OtherPage],
  mdx: {
   remarkPlugins: [remarkGfm],

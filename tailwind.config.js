@@ -16,7 +16,7 @@ export default {
   "./app/**/*.{js,ts,jsx,tsx}",
   "./components/**/*.{js,ts,jsx,tsx}",
   "./config.js",
-  "./data/blog/*.mdx",
+  "./content/blog/*.mdx",
  ],
  theme: {
   extend: {
