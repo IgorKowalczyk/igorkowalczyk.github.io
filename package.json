@@ -23,7 +23,7 @@
     "clsx": "2.1.0",
     "contentlayer": "0.3.4",
     "dotenv": "16.3.1",
-    "geist": "1.2.0",
+    "geist": "1.2.1",
     "github-slugger": "2.0.0",
     "next": "14.0.4",
     "next-contentlayer": "0.3.4",
