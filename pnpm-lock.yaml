@@ -66,8 +66,8 @@ dependencies:
     specifier: 7.1.0
     version: 7.1.0
   rehype-pretty-code:
-    specifier: 0.12.4
-    version: 0.12.4(shikiji@0.8.0)
+    specifier: 0.12.5
+    version: 0.12.5(shikiji@0.8.0)
   rehype-slug:
     specifier: 6.0.0
     version: 6.0.0
@@ -5046,8 +5046,8 @@ packages:
       unified: 11.0.4
     dev: false
 
-  /rehype-pretty-code@0.12.4(shikiji@0.8.0):
-    resolution: {integrity: sha512-J9QHfaG4dVKI1DPwdj8p0yfu5Kg6dh6/LWPFTJUh5D4PkZjYnMQATzmVj1CE3LVV6lqDyVT30iqz3n89m1MRUw==}
+  /rehype-pretty-code@0.12.5(shikiji@0.8.0):
+    resolution: {integrity: sha512-EnLi5MrL9PROc2jfEnp6bAT+ui/k/uixg6dAT35LA1V2xq0RCpgZYD8bWbpaAUnyAgVfgsmKgXbjCqAJejFc+w==}
     engines: {node: '>=18'}
     peerDependencies:
       shikiji: ^0.7.0 || ^0.8.0 || ^0.9.0
