@@ -5,17 +5,17 @@
   "args": {
    "VARIANT": "16",
    "USER": "node",
-   "GROUP": "node"
-  }
+   "GROUP": "node",
+  },
  },
  "settings": {
   "search.exclude": {
-   "**/.pnp.*": true
+   "**/.pnp.*": true,
   },
   "editor.codeActionsOnSave": {
-   "source.eslint.fixAll": true
-  }
+   "source.eslint.fixAll": true,
+  },
  },
  "remoteUser": "node",
- "forwardPorts": [3000, 3001]
+ "forwardPorts": [3000, 3001],
 }
