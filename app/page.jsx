@@ -57,8 +57,8 @@ export default async function HomePage() {
    </div>
 
    <section id="additional-info">
-    <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
-    <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
+    <hr className="mx-auto mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
+    <div className="mx-auto mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
       <>
        <StarIcon className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" role="img" /> <span>{userData && ConvertNumber(userData.userStars)} Stars on repositories</span>
@@ -98,7 +98,7 @@ export default async function HomePage() {
     <span className="absolute -bottom-7 left-0 z-[-1] fill-black/40 dark:fill-neutral-800">
      <Dots h="70" w="134" />
     </span>
-    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
+    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
     <Header2 id="about" className="!my-6 text-center text-4xl">
      About me
     </Header2>
@@ -147,7 +147,7 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
 
-     <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
+     <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
 
      <Header2 id="tech" className="!my-6 text-center text-4xl">
       Technologies I use
@@ -176,14 +176,14 @@ export default async function HomePage() {
    </section>
 
    <section className="mb-12">
-    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
+    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
     <Header2 id="contact" className="mt-6 text-center text-4xl">
      Contact me
     </Header2>
     <Description className="text-center">I'm always open to new opportunities and projects.</Description>
     <div className="relative">
      <div className="relative mx-auto mt-6 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
-      <div className="relative m-[0_auto] mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+      <div className="relative mx-auto mb-4 flex w-full max-w-screen-sm rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
        <Contact />
       </div>
       <div className="space-y-4 p-4">
