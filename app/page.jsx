@@ -35,7 +35,7 @@ export default async function HomePage() {
        <h2 className="text-center text-[1.5rem] font-semibold opacity-80 md:text-left">{header.subtitle}</h2>
        <p className="mt-2 text-center text-gray-700 dark:text-neutral-400 md:w-3/4 md:text-left">{header.description}</p>
        <div className="mt-4 flex justify-center md:block">
-        <Link href="/#about" scroll={false} className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
+        <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
          <>
           More about me
           <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -56,7 +56,7 @@ export default async function HomePage() {
     </div>
    </div>
 
-   <section id={"additional-info"}>
+   <section id="additional-info">
     <hr className="m-[0_auto] mb-8 h-px w-full border-none bg-[linear-gradient(to_right,transparent,rgba(0,0,0,0.2)_50%,transparent)] px-8 duration-300 motion-reduce:transition-none dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
     <div className="m-[0_auto] mb-8 flex flex-wrap justify-around gap-4 px-8 text-center text-gray-800/70 dark:text-white/70 md:gap-8">
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
@@ -67,7 +67,7 @@ export default async function HomePage() {
 
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
       <>
-       <svg className="h-5 w-5 stroke-2" aria-hidden="true" strokeWidth={"1.5"} viewBox="0 0 16 16" role="img">
+       <svg className="h-5 w-5 stroke-2" aria-hidden="true" strokeWidth="1.5" viewBox="0 0 16 16" role="img">
         <path strokeLinejoin="round" fill="currentColor" fillRule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z" />
        </svg>
        <span>{userData && ConvertNumber(contributions.total)} Commits</span>
@@ -76,7 +76,7 @@ export default async function HomePage() {
 
      <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center justify-center gap-2 text-center font-semibold duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
       <>
-       <svg className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" strokeWidth={"1.5"} viewBox="0 0 32 32" role="img">
+       <svg className="-mt-[2px] h-5 w-5 stroke-2" aria-hidden="true" strokeWidth="1.5" viewBox="0 0 32 32" role="img">
         <path strokeLinejoin="round" strokeLinecap="round" fill="currentColor" d="M9 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm1 1.9A5.002 5.002 0 0 0 9 2a5 5 0 0 0-1 9.9v8.2A5.002 5.002 0 0 0 9 30a5 5 0 0 0 1-9.9V18h9a5 5 0 0 0 5-5v-1.1A5.002 5.002 0 0 0 23 2a5 5 0 0 0-1 9.9V13a3 3 0 0 1-3 3h-9v-4.1ZM23 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6ZM12 25a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
        </svg>{" "}
        <span>{userData && ConvertNumber(userData.userForks)} Repositories forks</span>
@@ -98,8 +98,8 @@ export default async function HomePage() {
     <span className="absolute -bottom-7 left-0 z-[-1] fill-black/40 dark:fill-neutral-800">
      <Dots h="70" w="134" />
     </span>
-    <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-    <Header2 id={"about"} className="!my-6 text-center text-4xl">
+    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
+    <Header2 id="about" className="!my-6 text-center text-4xl">
      About me
     </Header2>
 
@@ -117,7 +117,7 @@ export default async function HomePage() {
    </section>
 
    <section className="relative mx-auto max-w-5xl">
-    <Header2 id={"projects"} className="!my-6 text-center text-4xl">
+    <Header2 id="projects" className="!my-6 text-center text-4xl">
      Recent Projects
     </Header2>
     {projects.slice(0, 2).map((project, index) => (
@@ -147,9 +147,9 @@ export default async function HomePage() {
       <Dots h="70" w="134" />
      </span>
 
-     <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
+     <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
 
-     <Header2 id={"tech"} className="!my-6 text-center text-4xl">
+     <Header2 id="tech" className="!my-6 text-center text-4xl">
       Technologies I use
      </Header2>
     </div>
@@ -176,8 +176,8 @@ export default async function HomePage() {
    </section>
 
    <section className="mb-12">
-    <Image src={sparkles} alt="sparkles" width={"auto"} height={"auto"} className="hide pointer-events-none m-[0_auto] animate-pulse" />
-    <Header2 id={"contact"} className="mt-6 text-center text-4xl">
+    <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none m-[0_auto] animate-pulse" />
+    <Header2 id="contact" className="mt-6 text-center text-4xl">
      Contact me
     </Header2>
     <Description className="text-center">I'm always open to new opportunities and projects.</Description>

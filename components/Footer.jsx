@@ -15,7 +15,7 @@ export function Footer() {
 
      <p className="my-3 text-gray-700 dark:text-neutral-300">
       Created with ❤️ and ☕ in Poland using{" "}
-      <Link href="https://nextjs.org" target={"_blank"}>
+      <Link href="https://nextjs.org" target="_blank">
        Next.js
       </Link>
      </p>

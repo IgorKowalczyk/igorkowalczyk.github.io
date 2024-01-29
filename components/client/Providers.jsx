@@ -15,7 +15,7 @@ export function Providers({ children }) {
  return (
   <>
    <Suspense fallback={<></>}>
-    <AppProgressBar color="#6310ff" height="2px" options={{ showSpinner: false }} shallowRouting style={"#nprogress .bar { background: linear-gradient(to right, #6310ff, #1491ff); }"} />
+    <AppProgressBar color="#6310ff" height="2px" options={{ showSpinner: false }} shallowRouting />
    </Suspense>
    <Theme attribute="class">{children}</Theme>
   </>
