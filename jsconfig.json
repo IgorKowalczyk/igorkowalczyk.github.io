@@ -3,9 +3,9 @@
   "baseUrl": ".",
   "paths": {
    "@/*": ["./*"],
-   "contentlayer/generated": ["./.contentlayer/generated"],
-  },
+   "contentlayer/generated": ["./.contentlayer/generated"]
+  }
  },
  "include": [".contentlayer/generated"],
- "exclude": ["node_modules"],
+ "exclude": ["node_modules"]
 }
