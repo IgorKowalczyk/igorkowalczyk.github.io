@@ -54,7 +54,7 @@
     "autoprefixer": "10.4.17",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
-    "globby": "14.0.0",
+    "globby": "14.0.1",
     "mini-svg-data-uri": "1.4.4",
     "postcss": "8.4.35",
     "prettier": "3.2.5",
