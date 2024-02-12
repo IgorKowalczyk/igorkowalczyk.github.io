@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(esbuild@0.19.8)
   dotenv:
-    specifier: 16.4.2
-    version: 16.4.2
+    specifier: 16.4.3
+    version: 16.4.3
   geist:
     specifier: 1.2.2
     version: 1.2.2(next@14.1.0)
@@ -2171,8 +2171,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dotenv@16.4.2:
-    resolution: {integrity: sha512-rZSSFxke7d9nYQ5NeMIwp5PP+f8wXgKNljpOb7KtH6SKW1cEqcXAz9VSJYVLKe7Jhup/gUYOkaeSVyK8GJ+nBg==}
+  /dotenv@16.4.3:
+    resolution: {integrity: sha512-II98GFrje5psQTSve0E7bnwMFybNLqT8Vu8JIFWRjsE3khyNUm/loZupuy5DVzG2IXf/ysxvrixYOQnM6mjD3A==}
     engines: {node: '>=12'}
     dev: false
 
