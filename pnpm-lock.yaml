@@ -39,8 +39,8 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(contentlayer@0.3.4)(esbuild@0.19.8)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
   next-nprogress-bar:
-    specifier: 2.3.1
-    version: 2.3.1
+    specifier: 2.3.2
+    version: 2.3.2
   next-themes:
     specifier: 0.2.1
     version: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
@@ -4423,8 +4423,8 @@ packages:
       - supports-color
     dev: false
 
-  /next-nprogress-bar@2.3.1:
-    resolution: {integrity: sha512-fg0kY6vfndoBbCFJ5O1GnVj7UQ4Xc0h1ePSQ7HoUY5Iu2GL5fZJlSlGklf5ozcPpYQWC7roQ/GdP7OXm2KvCcQ==}
+  /next-nprogress-bar@2.3.2:
+    resolution: {integrity: sha512-D2XjnjnuJ4kOYgtJPgu/naBqEsFxHoKa0cDQJRwbkMzTNVtEng7TgAqaFCjeSCNMTeReWj8wge0EIRdqPWu2sw==}
     dependencies:
       nprogress: 0.2.0
     dev: false
