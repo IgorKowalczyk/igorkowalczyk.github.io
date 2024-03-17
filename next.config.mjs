@@ -1,7 +1,14 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
- enabled: process.env.ANALYZE === "true",
+import bundleAnalyzer from '@next/bundle-analyzer';
+import million from 'million/compiler';
+import { withContentlayer } from 'next-contentlayer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
 });
-const { withContentlayer } = require("next-contentlayer");
+
+const millionConfig = {
+  auto: { rsc: true },
+};
 
 const nextConfig = {
  pageExtensions: ["jsx", "js"],
@@ -152,10 +159,10 @@ const nextConfig = {
  },
 };
 
-module.exports = () => {
- const plugins = [withContentlayer, withBundleAnalyzer];
- const config = plugins.reduce((acc, next) => next(acc), {
-  ...nextConfig,
- });
- return config;
-};
+export default million.next(
+  withContentlayer(
+    withBundleAnalyzer(nextConfig)
+  ),
+  millionConfig
+);
+
