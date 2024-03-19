@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "next-themes";
 import { Nav } from "@/components/client/Nav";
 import { Providers } from "@/components/client/Providers";
 import { Footer } from "@/components/Footer";
@@ -58,12 +59,14 @@ export default function RootLayout({ children }) {
   <html lang="en" suppressHydrationWarning>
    <head>{process.env.HOTJAR_ID && <Hotjar id={process.env.HOTJAR_ID} />}</head>
    <body className={cn("", GeistMono.variable, GeistSans.variable)}>
-    <Providers>
-     <Nav />
-     <main className="mt-24 flex min-h-screen flex-col px-6 font-sans antialiased">{children}</main>
-     <Footer />
-     <Analytics />
-    </Providers>
+    <ThemeProvider attribute="class" disableTransitionOnChange>
+     <Providers>
+      <Nav />
+      <main className="mt-24 flex min-h-screen flex-col px-6 font-sans antialiased">{children}</main>
+      <Footer />
+      <Analytics />
+     </Providers>
+    </ThemeProvider>
    </body>
   </html>
  );
