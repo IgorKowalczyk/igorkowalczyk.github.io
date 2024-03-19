@@ -49,10 +49,6 @@ body {
  @apply -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0;
 }
 
-#nprogress .bar {
- @apply fixed left-0 top-0 z-[10000] h-[2px] w-full bg-gradient-to-r from-[#6310ff] to-[#1491ff];
-}
-
 .shadow-code {
  @apply shadow-[0_30px_100px_-4px_rgba(51,111,239,0.2)] dark:shadow-[0_30px_100px_-4px_rgba(22,22,23,0.1)];
 }
@@ -64,6 +60,12 @@ body {
 .bg-main {
  @apply bg-[linear-gradient(180deg,_rgb(255,255,255)_84%,rgb(233,243,255)_100%)] dark:bg-[linear-gradient(180deg,_rgb(16,17,16)_84%,rgb(22,22,23)_100%)];
 }
+
+/*
+.main-gradient {
+ @apply bg-[radial-gradient(25%_90%_at_50%_100%,_#16161700_0%,_transparent_100%),radial-gradient(25%_25%_at_20%_70%,_#1616175e_0%,_transparent_97%)];
+}
+*/
 
 .link {
  @apply relative inline-block;

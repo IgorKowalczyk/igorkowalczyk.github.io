@@ -2,15 +2,15 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 import { Cog8ToothIcon, ArrowTopRightOnSquareIcon, SwatchIcon, CubeTransparentIcon, CursorArrowRaysIcon, SunIcon, MoonIcon, ComputerDesktopIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Fragment, useState } from "react";
 import { useEffect } from "react";
-import Button from "@/components/Button";
+import { ButtonSecondary } from "@/components/Button";
 import Select from "@/components/client/Select";
 import Switch from "@/components/client/Switch";
 import { meta } from "@/config";
+import { cn } from "@/lib/utils";
 
 export default function Settings() {
  const [isOpen, setIsOpen] = useState(false);
@@ -36,29 +36,30 @@ export default function Settings() {
  }
 
  return (
-  <div className="ml-4 text-right font-sans">
-   <button
+  <>
+   <ButtonSecondary
     aria-label="Open settings"
     type="button"
+    icon={false}
     onClick={() => setIsOpen(true)}
-    className={clsx(
+    className={cn(
      {
       "bg-blue-200 dark:bg-white/15": isOpen,
       "bg-gray-200 dark:bg-white/10": !isOpen,
      },
-     "group mr-[1rem] flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-300 hover:bg-blue-200 motion-reduce:transition-none dark:hover:bg-white/15"
+     "group mx-[1rem] !mt-0 flex h-10 w-10 items-center justify-center px-2"
     )}
    >
     <Cog8ToothIcon
-     className={clsx(
+     className={cn(
       {
        "rotate-90 text-blue-800 dark:text-white": isOpen,
        "text-gray-800 dark:text-neutral-200": !isOpen,
       },
-      "h-5 w-5 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:group-hover:text-white"
+      "h-5 w-5 shrink-0 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:group-hover:text-white"
      )}
     />
-   </button>
+   </ButtonSecondary>
    <Transition.Root appear show={isOpen} as={Fragment}>
     <Dialog as="div" unmount="true" className="relative z-[99999]" onClose={() => setIsOpen(false)}>
      <Transition.Child as={Fragment} enter="ease-out duration-200 motion-reduce:transition-none" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200 motion-reduce:duration-[1ms]" leaveFrom="opacity-100" leaveTo="opacity-0">
@@ -130,22 +131,20 @@ export default function Settings() {
             />
            </div>
           </div>
-          <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
-           <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
-           Glow effect
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
-            <span className="mt-1">Off</span>
-            <Switch enabled={glowEnabled} onChange={() => changeGlow()} />
-            <span className="mt-1">On</span>
+          <div className="mt-2">
+           <div className="flex w-full cursor-auto select-none items-center py-3 text-base text-gray-800 dark:text-white">
+            <CursorArrowRaysIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
+            Glow effect
+            <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
+             <Switch enabled={glowEnabled} onChange={() => changeGlow()} />
+            </div>
            </div>
-          </div>
-          <div className="flex w-full select-none items-center py-3 text-base text-gray-800 dark:text-white">
-           <CubeTransparentIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
-           Display Decorations
-           <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
-            <span className="mt-1">Off</span>
-            <Switch enabled={decorationsEnabled} onChange={() => changeDecorations()} />
-            <span className="mt-1">On</span>
+           <div className="flex w-full select-none items-center py-3 text-base text-gray-800 dark:text-white">
+            <CubeTransparentIcon className="mr-2 h-5 w-5 text-gray-800/80 dark:text-neutral-300/50" />
+            Display Decorations
+            <div className="ml-auto flex w-32 items-center justify-end gap-2 text-sm italic text-gray-800/50 dark:text-neutral-300/50">
+             <Switch enabled={decorationsEnabled} onChange={() => changeDecorations()} />
+            </div>
            </div>
           </div>
          </div>
@@ -154,9 +153,9 @@ export default function Settings() {
            Source code <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
           </Link>
 
-          <Button className="!ml-auto mt-0" onClick={() => setIsOpen(false)}>
+          <ButtonSecondary className="ml-auto mt-0" onClick={() => setIsOpen(false)}>
            Close
-          </Button>
+          </ButtonSecondary>
          </div>
         </Dialog.Panel>
        </Transition.Child>
@@ -164,6 +163,6 @@ export default function Settings() {
      </div>
     </Dialog>
    </Transition.Root>
-  </div>
+  </>
  );
 }

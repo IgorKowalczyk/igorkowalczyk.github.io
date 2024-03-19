@@ -1,12 +1,13 @@
 "use client";
 
-import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ButtonPrimary } from "@/components/Button";
 import MobileNav from "@/components/client/MobileNav";
 import Popover from "@/components/client/NavPopover";
 import Settings from "@/components/client/Settings";
 import { nav, meta } from "@/config";
+import { cn } from "@/lib/utils";
 
 function NavItem({ path, text, target }) {
  let pathname = usePathname() || "/";
@@ -21,7 +22,7 @@ function NavItem({ path, text, target }) {
   <Link
    key={path}
    href={path}
-   className={clsx("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
+   className={cn("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
     "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
     "text-gray-700 dark:text-neutral-400": !isActive,
    })}
@@ -60,10 +61,11 @@ export function Nav() {
      {nav.right.map((item, index) => {
       return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
      })}
-    </div>
-    <div className="ml-auto lg:ml-0">
-     <Settings />
-    </div>
+    </div>{" "}
+    <ButtonPrimary href="/contact" className="!mt-0 ml-[1rem]">
+     Contact me
+    </ButtonPrimary>
+    <Settings />
    </div>
   </nav>
  );

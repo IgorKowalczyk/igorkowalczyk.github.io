@@ -1,7 +1,7 @@
-import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
+import { ButtonSecondary } from "@/components/Button";
+import { cn } from "@/lib/utils";
 import { parseISO } from "@/lib/utils";
 
 export function ProjectCard({ project }) {
@@ -24,20 +24,20 @@ export function ProjectCard({ project }) {
     </div>
     <div className="mt-4 flex flex-wrap gap-2">
      {project.website && (
-      <Button href={project.website} className="mt-4" target="_blank" rel="noopener noreferrer">
+      <ButtonSecondary href={project.website} className="mt-4" target="_blank" rel="noopener noreferrer">
        Visit Website
-      </Button>
+      </ButtonSecondary>
      )}
      {project.github && (
-      <Button href={project.github} className="mt-4" target="_blank" rel="noopener noreferrer">
+      <ButtonSecondary href={project.github} className="mt-4" target="_blank" rel="noopener noreferrer">
        View on Github
-      </Button>
+      </ButtonSecondary>
      )}
     </div>
    </div>
    {project.images && project.images.length > 0 && (
     <div
-     className={clsx({
+     className={cn({
       "columns-1": project.images.length < 2,
       "columns-2": project.images.length >= 2,
      })}

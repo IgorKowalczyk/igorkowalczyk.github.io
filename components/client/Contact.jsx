@@ -1,9 +1,10 @@
 "use client";
 
 import { ArrowPathIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
+import { ButtonSecondary } from "@/components/Button";
+import { cn } from "@/lib/utils";
 
 export function Contact() {
  const [formData, setFormData] = useState({
@@ -164,7 +165,7 @@ export function Contact() {
       name="name"
       onChange={(e) => handleChange(e, "name")}
       id="name"
-      className={clsx(
+      className={cn(
        {
         "border-red-400 text-red-400": invalid.name,
         "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.name,
@@ -185,7 +186,7 @@ export function Contact() {
       name="email"
       onChange={(e) => handleChange(e, "email")}
       id="email"
-      className={clsx(
+      className={cn(
        {
         "border-red-400 text-red-400": invalid.email,
         "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.email,
@@ -208,7 +209,7 @@ export function Contact() {
       name="message"
       onChange={(e) => handleChange(e, "message")}
       id="message"
-      className={clsx(
+      className={cn(
        {
         "border-red-400 text-red-400": invalid.message,
         "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
@@ -220,7 +221,7 @@ export function Contact() {
      />
     </label>
     <span
-     className={clsx(
+     className={cn(
       {
        "text-red-400": formData.message.trim().length >= 500,
        "text-gray-700 dark:text-neutral-300": formData.message.trim().length >= 10 && formData.message.trim().length < 500,
@@ -245,7 +246,7 @@ export function Contact() {
     </p>
    )}
    <div className="w-full py-2">
-    <button className="group ml-auto mt-2 flex w-fit rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 duration-200 hover:bg-blue-200 disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none dark:bg-white/10 dark:text-white dark:hover:bg-white/15" type="submit" disabled={loading}>
+    <ButtonSecondary className="group ml-auto" type="submit" icon={false} disabled={loading}>
      {loading ? (
       <>
        Sending
@@ -254,12 +255,12 @@ export function Contact() {
      ) : (
       <>
        Send
-       <svg className="ml-2 mt-[2px] h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+       <svg className="ml-2 h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
        </svg>
       </>
      )}
-    </button>
+    </ButtonSecondary>
    </div>
   </form>
  );

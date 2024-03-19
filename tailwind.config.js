@@ -19,6 +19,13 @@ export default {
   "./content/blog/*.mdx",
  ],
  theme: {
+  container: {
+   center: true,
+   padding: "2rem",
+   screens: {
+    "2xl": "1400px",
+   },
+  },
   extend: {
    fontWeight: {
     semibold: 700,
@@ -67,9 +74,6 @@ export default {
       },
      },
     },
-   },
-   backgroundImage: {
-    "main-gradient": "radial-gradient(25% 90% at 50% 100%, #16161700 0%, transparent 100%),radial-gradient(25% 25% at 20% 70%, #1616175e 0%, transparent 97%)",
    },
    keyframes: {
     cursor: {

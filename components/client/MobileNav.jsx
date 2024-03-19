@@ -1,10 +1,11 @@
 "use client";
 
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
+import { ButtonSecondary } from "../Button";
 import { nav } from "@/config";
+import { cn } from "@/lib/utils";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function MobileNav() {
 
  return (
   <>
-   <button
+   <ButtonSecondary
     className="burger visible relative h-10 w-10 border-0 bg-transparent lg:hidden"
     aria-label="Toggle menu"
     type="button"
@@ -22,9 +23,9 @@ export default function MobileNav() {
    >
     <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
     <XMarkIcon data-hide={!isMenuOpen} className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
-   </button>
+   </ButtonSecondary>
    <div
-    className={clsx(
+    className={cn(
      {
       "rendered pointer-events-all !opacity-100": isMenuOpen,
       "pointer-events-none": !isMenuOpen,
@@ -38,7 +39,7 @@ export default function MobileNav() {
        return (
         <p
          key={index}
-         className={clsx(
+         className={cn(
           {
            "w-0 -translate-x-4 border-transparent opacity-0 dark:border-transparent": !isMenuOpen,
            "w-full translate-x-0 border-gray-200 opacity-100 dark:border-neutral-800": isMenuOpen,

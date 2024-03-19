@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "styles/blog.css";
 import { notFound } from "next/navigation";
-import clsx from "clsx";
 import { Header1 } from "@/components/Headers";
+import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
  return allBlogs.map((post) => ({
@@ -78,7 +78,7 @@ export default function Post({ params }) {
       <Link
        key={props.slug}
        href={`#${props.slug}`}
-       className={clsx(
+       className={cn(
         {
          "ml-2": props.size === 2,
          "ml-4": props.size === 3,

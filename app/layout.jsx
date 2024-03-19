@@ -1,5 +1,4 @@
 import { Analytics } from "@vercel/analytics/react";
-import clsx from "clsx";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { Nav } from "@/components/client/Nav";
@@ -8,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Hotjar } from "@/components/Hotjar";
 import { meta } from "@/config";
 import "styles/globals.css";
+import { cn } from "@/lib/utils";
 
 export const metadata = {
  metadataBase: new URL(meta.url),
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
  return (
   <html lang="en" suppressHydrationWarning>
    <head>{process.env.HOTJAR_ID && <Hotjar id={process.env.HOTJAR_ID} />}</head>
-   <body className={clsx("bg-main", GeistMono.variable, GeistSans.variable)}>
+   <body className={cn("", GeistMono.variable, GeistSans.variable)}>
     <Providers>
      <Nav />
      <main className="mt-24 flex min-h-screen flex-col px-6 font-sans antialiased">{children}</main>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Switch as HeadlessSwitch } from "@headlessui/react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 export default function Switch({ enabled, onChange }) {
  return (
@@ -9,7 +9,7 @@ export default function Switch({ enabled, onChange }) {
    <span className="sr-only">Use setting</span>
    <span
     aria-hidden="true"
-    className={clsx(
+    className={cn(
      {
       "translate-x-[25px] bg-gray-700": enabled,
       "translate-x-[5px]": !enabled,

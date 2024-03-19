@@ -1,12 +1,12 @@
 import { StarIcon, FolderIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
+import { ButtonSecondary } from "@/components/Button";
+import { cn } from "@/lib/utils";
 
 export function RepositoryCard({ name, id, owner, description, url, homepageUrl, repositoryTopics, stargazerCount, forkCount, primaryLanguage, className }) {
  return (
-  <div id={name} className={clsx("overflow-hidden rounded-xl border-[1px] border-black/15 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]", className)}>
+  <div id={name} className={cn("overflow-hidden rounded-xl border-[1px] border-black/15 duration-200 ease-in-out hover:bg-gray-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]", className)}>
    <Image unoptimized={true} src={`/api/og/repository/${owner.login}/${name}`} alt={`Preview of ${name}`} width={720} height={480} />
    <div className="p-5 text-left">
     <Link href={url} key={id} className="break-all text-left font-semibold" target="_blank">
@@ -44,14 +44,14 @@ export function RepositoryCard({ name, id, owner, description, url, homepageUrl,
     </div>
     <div className="mt-2 flex flex-wrap gap-2">
      {homepageUrl && (
-      <Button href={homepageUrl} target="_blank" className="mt-2" aria-label="View homepage">
+      <ButtonSecondary href={homepageUrl} target="_blank" className="mt-2" aria-label="View homepage">
        View project
-      </Button>
+      </ButtonSecondary>
      )}
      {url && (
-      <Button href={url} target="_blank" className="mt-2" aria-label="View on GitHub">
+      <ButtonSecondary href={url} target="_blank" className="mt-2" aria-label="View on GitHub">
        GitHub
-      </Button>
+      </ButtonSecondary>
      )}
     </div>
    </div>

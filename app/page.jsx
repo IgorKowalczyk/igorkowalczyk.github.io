@@ -1,8 +1,8 @@
 import { UsersIcon, StarIcon } from "@heroicons/react/24/outline";
 import sparkles from "/public/assets/svg/sparkles.svg";
-import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
+import { ButtonPrimary, ButtonSecondary } from "../components/Button";
 import { Contact } from "@/components/client/Contact";
 import { GlowEffect } from "@/components/client/GlowEffect";
 import { Dots } from "@/components/Decorations";
@@ -13,6 +13,7 @@ import { projects } from "@/config";
 import { header, contact, meta, technologies } from "@/config";
 import { GetUserData, getTotalContributionsForYears } from "@/lib/graphql";
 import { ConvertNumber } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -26,24 +27,20 @@ export default async function HomePage() {
 
  return (
   <>
-   <div className="bg-cover bg-fixed bg-right before:absolute before:inset-0 before:z-[-1] before:bg-[length:30px_30px] before:bg-center before:opacity-5 before:bg-grid-[#000] dark:before:bg-grid-[#fff]">
-    <div className="pointer-events-none absolute -top-1/2 bottom-0 left-0 right-0 z-[-1] bg-main-gradient bg-contain blur-[160px] will-change-contents" />
+   <div className="bg-cover bg-fixed bg-right before:absolute before:inset-0 before:z-[-1] before:bg-[length:50px_50px] before:bg-center before:opacity-20 before:bg-grid-[#cbd5e1] dark:before:bg-grid-[#1e293b]">
     <div className="move-area mx-auto -mt-24 flex min-h-screen flex-1 flex-col justify-center duration-300 motion-reduce:transition-none md:w-[90%] xl:w-4/5">
      <div className="md:grid-cols-0 grid lg:grid-cols-5">
       <div className="md:col-span-3">
        <h1 className="dark:color-black relative mx-0 mb-0 mt-0 text-center text-[51px] font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left md:text-[55px] lg:text-[67px] xl:text-[75px]">{header.title}</h1>
        <h2 className="text-center text-[1.5rem] font-semibold opacity-80 md:text-left">{header.subtitle}</h2>
        <p className="mt-2 text-center text-gray-700 dark:text-neutral-400 md:w-3/4 md:text-left">{header.description}</p>
-       <div className="mt-4 flex justify-center md:block">
-        <Link href="/#about" className="arrow link group relative mt-5 inline-block items-center justify-center p-2 pb-1 pl-0 pr-0 font-semibold">
-         <>
-          More about me
-          <svg className="arrowSymbol inline-block translate-x-[5px] duration-200 group-hover:translate-x-[10px] motion-reduce:transition-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
-           <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-           <path stroke="currentColor" d="M1.75 8H11" strokeWidth={2} strokeLinecap="round"></path>
-          </svg>
-         </>
-        </Link>
+       <div className="mt-4 flex flex-row gap-5">
+        <ButtonPrimary href="/contact" className="mt-4 md:mt-6">
+         Contact me
+        </ButtonPrimary>
+        <ButtonSecondary href="/#about" className="mt-4 md:mt-6">
+         More about me
+        </ButtonSecondary>
        </div>
       </div>
 
@@ -99,7 +96,7 @@ export default async function HomePage() {
      <Dots h="70" w="134" />
     </span>
     <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
-    <Header2 id="about" className="!my-6 text-center text-4xl">
+    <Header2 id="about" className="my-6 text-center text-5xl">
      About me
     </Header2>
 
@@ -117,7 +114,7 @@ export default async function HomePage() {
    </section>
 
    <section className="relative mx-auto max-w-5xl">
-    <Header2 id="projects" className="!my-6 text-center text-4xl">
+    <Header2 id="projects" className="my-6 text-center text-5xl">
      Recent Projects
     </Header2>
     {projects.slice(0, 2).map((project, index) => (
@@ -149,22 +146,22 @@ export default async function HomePage() {
 
      <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
 
-     <Header2 id="tech" className="!my-6 text-center text-4xl">
+     <Header2 id="tech" className="my-6 text-center text-5xl">
       Technologies I use
      </Header2>
     </div>
-    <div className="mx-auto mt-6 grid h-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid h-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
      {technologies.map((tech, index) => {
       return (
        <div key={index}>
         {tech.link ? (
-         <Link href={tech.link} target="_blank" className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
-          <Image className={clsx(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
+         <Link href={tech.link} target="_blank" className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+          <Image className={cn(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
           <span className="font-semibold">{tech.name}</span>
          </Link>
         ) : (
-         <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
-          <Image className={clsx(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
+         <div key={index} className="relative mx-auto flex w-full cursor-pointer items-center justify-between rounded-xl border bg-[#f8f9fa] px-4 py-2 font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
+          <Image className={cn(tech.class, "h-8 w-8 rounded-md")} loading="lazy" width={32} height={32} src={tech.icon} alt={tech.name} />
           <span className="font-semibold">{tech.name}</span>
          </div>
         )}
@@ -177,7 +174,7 @@ export default async function HomePage() {
 
    <section className="mb-12">
     <Image src={sparkles} alt="sparkles" width="auto" height="auto" className="hide pointer-events-none mx-auto animate-pulse" />
-    <Header2 id="contact" className="mt-6 text-center text-4xl">
+    <Header2 id="contact" className="my-6 text-center text-5xl">
      Contact me
     </Header2>
     <Description className="text-center">I'm always open to new opportunities and projects.</Description>
