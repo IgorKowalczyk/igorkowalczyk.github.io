@@ -57,8 +57,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-parallax-tilt:
-    specifier: 1.7.218
-    version: 1.7.218(react-dom@18.2.0)(react@18.2.0)
+    specifier: 1.7.219
+    version: 1.7.219(react-dom@18.2.0)(react@18.2.0)
   react-wrap-balancer:
     specifier: 1.1.0
     version: 1.1.0(react@18.2.0)
@@ -5222,8 +5222,8 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react-parallax-tilt@1.7.218(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-dl7vJ2AsHBACts/osX2UReE3zj48NmMiVhYim3HL8Jl3thUVzw05ByLW9J5R1Vku8OmrSX42ySPKMhjGG0STZg==}
+  /react-parallax-tilt@1.7.219(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-UtiUZdRpxpySjb8kKDaAeCyBQ0QI4RU6MGaqyKgf64rt/qMwjLHERls0saREuaJrUumoHR5CedTQic+OVJta7g==}
     peerDependencies:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
