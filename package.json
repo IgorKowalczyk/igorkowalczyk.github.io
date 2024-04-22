@@ -75,7 +75,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "pnpm": "9"
+    "pnpm": "8 || 9"
   },
   "repository": {
     "type": "git",
