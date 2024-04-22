@@ -74,9 +74,6 @@
     "not dead",
     "not op_mini all"
   ],
-  "engines": {
-    "pnpm": "8 || 9"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
