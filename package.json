@@ -2,6 +2,9 @@
   "name": "igorkowalczyk-portfolio",
   "description": "My portfolio built on Next.js",
   "version": "5.0.0",
+  "author": "Igor Kowalczyk",
+  "homepage": "https://igorkowalczyk.dev",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "next start",
@@ -71,15 +74,14 @@
     "not dead",
     "not op_mini all"
   ],
+  "engines": {
+    "pnpm": "9"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igorkowalczyk/igorkowalczyk.github.io.git"
   },
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
-  },
-  "homepage": "https://igorkowalczyk.dev",
-  "packageManager": "pnpm@9.0.5"
+  }
 }
