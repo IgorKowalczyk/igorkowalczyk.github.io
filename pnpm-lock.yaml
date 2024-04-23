@@ -24,8 +24,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       contentlayer2:
-        specifier: 0.4.4
-        version: 0.4.4(esbuild@0.20.2)
+        specifier: 0.4.5
+        version: 0.4.5(esbuild@0.20.2)
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
@@ -42,8 +42,8 @@ importers:
         specifier: 14.2.2
         version: 14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-contentlayer2:
-        specifier: 0.4.4
-        version: 0.4.4(contentlayer2@0.4.4(esbuild@0.20.2))(esbuild@0.20.2)(next@14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.4.5
+        version: 0.4.5(contentlayer2@0.4.5(esbuild@0.20.2))(esbuild@0.20.2)(next@14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-nprogress-bar:
         specifier: 2.3.11
         version: 2.3.11
@@ -257,14 +257,14 @@ packages:
     resolution: {integrity: sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==}
     engines: {node: '>=6.9.0'}
 
-  '@contentlayer2/cli@0.4.1':
-    resolution: {integrity: sha512-LJRwfpwrke+T/KyBebw3we4fsOWsOUjD3qQxfKHi6eMln2Va4YftvuCckbGsiSrBK0BMfdQLBrhtAaHejJB8iQ==}
+  '@contentlayer2/cli@0.4.2':
+    resolution: {integrity: sha512-lc7ENmbBxl2kTJK3ubduu/qUJXW5f6XKwnAx33Bl7Mvt5syALVm0vhx3g1ZWtz9JXyIDYsybVgSGQNtMr3Cs3g==}
 
-  '@contentlayer2/client@0.4.1':
-    resolution: {integrity: sha512-pNIDmcixMhnzb3Epd++uxfHRaxw+vZPcmDBe/W8un5QzGpiLR5IlnKuYHM/3c6pxmOuUJPUIkVjNPCKHfccuuQ==}
+  '@contentlayer2/client@0.4.2':
+    resolution: {integrity: sha512-aumGNIvJZXzB2/YIzE277GmJplJfCCLAHynzi6/87oiq/Ky9hf/0cd2R2w0HMPtGmlm1O2UiroD2TjyzsFTQUQ==}
 
-  '@contentlayer2/core@0.4.1':
-    resolution: {integrity: sha512-VQ1bWtLTCPpM8n/DXiKxYvtaVNpVEDlgOCHvXxj5507iAfM1qw5VcCHv9VSo1KZpajdnl7Abkju03ZomwCtpYg==}
+  '@contentlayer2/core@0.4.2':
+    resolution: {integrity: sha512-CjX5oFpR3YfgB4djy2PjWoGROH9WGIOFuHL7633vIKw1Eem5XeuhxzFsEEjhkarLbBpp6BJS27ffIEJbWK3HWA==}
     peerDependencies:
       esbuild: 0.17.x || 0.18.x || 0.19.x || 0.20.x
       markdown-wasm: 1.x
@@ -274,14 +274,14 @@ packages:
       markdown-wasm:
         optional: true
 
-  '@contentlayer2/source-files@0.4.1':
-    resolution: {integrity: sha512-j088FXgSSSNEh/jg/4DkkS0fYtrW80OAZ/JVBQR5NTe+125HOKoCVzvyF42MNJJ3KizueSrhEaTNqQ1pZ76cJg==}
+  '@contentlayer2/source-files@0.4.2':
+    resolution: {integrity: sha512-r4m7+262ITf4SZFGrK9P6ogyVCa4Bmt3OU8+0gDgFBFZD3aNYTcHZSyXQV+EyoMfduM/F7Sg9RSFJ18bxa9Yxw==}
 
-  '@contentlayer2/source-remote-files@0.4.1':
-    resolution: {integrity: sha512-7JIGyi0PN7pK4zyjv22jGLTAMX5kuO7zn/WH/VmfbJETNHgEMHul0yY7xXtKe6GPklz7VEUmbMbGCnfw+JAPJw==}
+  '@contentlayer2/source-remote-files@0.4.2':
+    resolution: {integrity: sha512-gzIZynlSMYa175leiyof66nGyXZGp+H9WoDpYRacQDfIiU0pRLy3YfqFbFf2GZM845+r3c5luO7kaPjv88Xvtw==}
 
-  '@contentlayer2/utils@0.4.1':
-    resolution: {integrity: sha512-9K2fbbk3+MJg3HPzqQNjrp9fxL4vb/uzwaPHUH4cCTTldd1fJvm2n66Ec9CNrYvfs0bejw3+wzzvQFTvxFBI7g==}
+  '@contentlayer2/utils@0.4.2':
+    resolution: {integrity: sha512-CajH0ICW7bPz66ixE3Wf8QYMGPP3ZiEVxmpoyOt6wgJS59XZOAp2StKecUioElZHuXFtBV2MYW5Cq24bjHKhAQ==}
     peerDependencies:
       '@effect-ts/otel-node': '*'
     peerDependenciesMeta:
@@ -1308,8 +1308,8 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  contentlayer2@0.4.4:
-    resolution: {integrity: sha512-5icYlVn6+yp6o2r2z4xOyr1YZI3s/ox5I+InQwKFIN2kSzs7OQbghsD0m5ZC2LE8w9Msfdv8+niCOwCv6V/HqQ==}
+  contentlayer2@0.4.5:
+    resolution: {integrity: sha512-2aZym6MRX1v31ASkBLog4Aodhus/DwMvMcq3JHjPpnwYn7KHNV2gZ7U6RmVNs1OIg9IQWdkhSajzuL5pNaZgHw==}
     engines: {node: '>=14.18'}
     hasBin: true
 
@@ -2418,10 +2418,10 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-contentlayer2@0.4.4:
-    resolution: {integrity: sha512-wpmYxTUNf2nIb3X2ej3+E1spUFIuHqvTJq07KE9Pcn4v62NT17jdNUCSDbep3Dt7jU+6gu8oWxzS2+3DoKzuLQ==}
+  next-contentlayer2@0.4.5:
+    resolution: {integrity: sha512-QvsmQ/ETfnYOoSLvr2TU9hoRHwMZVQgnyB65Wzg+3SAWUqFBtIPTmn3CXsPAvbUKWvoYP7FQaMim5CJKJHseNg==}
     peerDependencies:
-      contentlayer2: 0.4.4
+      contentlayer2: 0.4.5
       next: ^12 || ^13 || ^14
       react: '*'
       react-dom: '*'
@@ -3447,10 +3447,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  '@contentlayer2/cli@0.4.1(esbuild@0.20.2)':
+  '@contentlayer2/cli@0.4.2(esbuild@0.20.2)':
     dependencies:
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/utils': 0.4.1
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/utils': 0.4.2
       clipanion: 3.2.1(typanion@3.14.0)
       typanion: 3.14.0
     transitivePeerDependencies:
@@ -3459,18 +3459,18 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/client@0.4.1(esbuild@0.20.2)':
+  '@contentlayer2/client@0.4.2(esbuild@0.20.2)':
     dependencies:
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/core@0.4.1(esbuild@0.20.2)':
+  '@contentlayer2/core@0.4.2(esbuild@0.20.2)':
     dependencies:
-      '@contentlayer2/utils': 0.4.1
+      '@contentlayer2/utils': 0.4.2
       camel-case: 4.1.2
       comment-json: 4.2.3
       gray-matter: 4.0.3
@@ -3488,10 +3488,10 @@ snapshots:
       - '@effect-ts/otel-node'
       - supports-color
 
-  '@contentlayer2/source-files@0.4.1(esbuild@0.20.2)':
+  '@contentlayer2/source-files@0.4.2(esbuild@0.20.2)':
     dependencies:
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/utils': 0.4.1
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/utils': 0.4.2
       chokidar: 3.6.0
       fast-glob: 3.3.2
       gray-matter: 4.0.3
@@ -3507,18 +3507,18 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/source-remote-files@0.4.1(esbuild@0.20.2)':
+  '@contentlayer2/source-remote-files@0.4.2(esbuild@0.20.2)':
     dependencies:
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/source-files': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/utils': 0.4.1
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/source-files': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/utils': 0.4.2
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/utils@0.4.1':
+  '@contentlayer2/utils@0.4.2':
     dependencies:
       '@effect-ts/core': 0.60.5
       '@effect-ts/otel': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.8.0)(@opentelemetry/core@1.22.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.22.0(@opentelemetry/api@1.8.0))
@@ -4499,14 +4499,14 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  contentlayer2@0.4.4(esbuild@0.20.2):
+  contentlayer2@0.4.5(esbuild@0.20.2):
     dependencies:
-      '@contentlayer2/cli': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/client': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/source-files': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/source-remote-files': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/utils': 0.4.1
+      '@contentlayer2/cli': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/client': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/source-files': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/source-remote-files': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/utils': 0.4.2
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -5817,7 +5817,7 @@ snapshots:
 
   mdx-bundler@10.0.2(esbuild@0.20.2):
     dependencies:
-      '@babel/runtime': 7.24.0
+      '@babel/runtime': 7.24.4
       '@esbuild-plugins/node-resolve': 0.2.2(esbuild@0.20.2)
       '@fal-works/esbuild-plugin-global-externals': 2.1.2
       '@mdx-js/esbuild': 3.0.1(esbuild@0.20.2)
@@ -6154,11 +6154,11 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-contentlayer2@0.4.4(contentlayer2@0.4.4(esbuild@0.20.2))(esbuild@0.20.2)(next@14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-contentlayer2@0.4.5(contentlayer2@0.4.5(esbuild@0.20.2))(esbuild@0.20.2)(next@14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      '@contentlayer2/core': 0.4.1(esbuild@0.20.2)
-      '@contentlayer2/utils': 0.4.1
-      contentlayer2: 0.4.4(esbuild@0.20.2)
+      '@contentlayer2/core': 0.4.2(esbuild@0.20.2)
+      '@contentlayer2/utils': 0.4.2
+      contentlayer2: 0.4.5(esbuild@0.20.2)
       next: 14.2.2(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
