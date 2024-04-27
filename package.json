@@ -55,7 +55,7 @@
     "@igorkowalczyk/prettier-config": "2.2.0",
     "@next/bundle-analyzer": "14.2.3",
     "@tailwindcss/aspect-ratio": "0.4.2",
-    "@tailwindcss/typography": "0.5.12",
+    "@tailwindcss/typography": "0.5.13",
     "autoprefixer": "10.4.19",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
