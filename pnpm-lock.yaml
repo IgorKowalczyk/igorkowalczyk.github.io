@@ -45,8 +45,8 @@ importers:
         specifier: 0.4.6
         version: 0.4.6(contentlayer2@0.4.6(esbuild@0.20.2))(esbuild@0.20.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-nprogress-bar:
-        specifier: 2.3.11
-        version: 2.3.11
+        specifier: 2.3.12
+        version: 2.3.12
       next-themes:
         specifier: 0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2483,8 +2483,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  next-nprogress-bar@2.3.11:
-    resolution: {integrity: sha512-OjSvsQwgSWa2qBMYO478QreGG9Jt82tr4wTQptmiyzNqqjzHCyKZNkhANnzPrjuFAoelIvmruJuakODofSnvTQ==}
+  next-nprogress-bar@2.3.12:
+    resolution: {integrity: sha512-BCsmNmssPY4QfYKux7cGYm/JmsM/n9TGMJJDyYPt7ckWyK8l43hMgi7g9d7u/IxCaEAx3pbzfg7Ity0zdlDnGA==}
 
   next-themes@0.3.0:
     resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
@@ -6313,7 +6313,7 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  next-nprogress-bar@2.3.11:
+  next-nprogress-bar@2.3.12:
     dependencies:
       nprogress: 0.2.0
 
