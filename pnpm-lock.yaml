@@ -36,8 +36,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       million:
-        specifier: 3.1.4
-        version: 3.1.4
+        specifier: 3.1.5
+        version: 3.1.5
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.5)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -737,8 +737,8 @@ packages:
   '@mdx-js/mdx@3.0.1':
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
 
-  '@million/install@0.0.5':
-    resolution: {integrity: sha512-9KYVwMT6yEX0k/DMo8cOQNxeFdZme/yTqncPwXgvoQ0qUAUkulvm0ivRHTYrsuPNrCA6lqsJD005D1hhuI2fGQ==}
+  '@million/install@0.0.6':
+    resolution: {integrity: sha512-XsBVyZZUBQ0fAAC6taX7jBuSdA3R9Q+cTWzZifZmHUCLyy+azgOQ8ZMHTClXPzPaI+yWLf6mr3l3UYcaJdCE4w==}
     hasBin: true
 
   '@next/bundle-analyzer@14.2.3':
@@ -2491,8 +2491,8 @@ packages:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
 
-  million@3.1.4:
-    resolution: {integrity: sha512-ZEg5EX8leO9TQK1S6Sxas7BTzo7CcNMZD9E/9VdqI3vJpgPxSMS7IEq6VO4i/hgZWC2m2b2mBTAx/Ms98hdjXg==}
+  million@3.1.5:
+    resolution: {integrity: sha512-EUNMtvdZdD3gN9+qxxzr4TRRIolb6ldy/HVQKCVMJlBWs0pF0i/GKA+zOipp//tqckBA0KMEEp3aWDlwZQFTjg==}
     hasBin: true
 
   mime-db@1.52.0:
@@ -4107,7 +4107,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@million/install@0.0.5':
+  '@million/install@0.0.6':
     dependencies:
       '@antfu/ni': 0.21.12
       '@axiomhq/js': 1.0.0-rc.3
@@ -6422,11 +6422,11 @@ snapshots:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  million@3.1.4:
+  million@3.1.5:
     dependencies:
       '@babel/core': 7.24.5
       '@babel/types': 7.24.5
-      '@million/install': 0.0.5
+      '@million/install': 0.0.6
       '@rollup/pluginutils': 5.1.0
       kleur: 4.1.5
       undici: 6.9.0
