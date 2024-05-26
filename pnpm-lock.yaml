@@ -36,8 +36,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       million:
-        specifier: 3.1.5
-        version: 3.1.5
+        specifier: 3.1.6
+        version: 3.1.6
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.5)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -737,8 +737,8 @@ packages:
   '@mdx-js/mdx@3.0.1':
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
 
-  '@million/install@0.0.6':
-    resolution: {integrity: sha512-XsBVyZZUBQ0fAAC6taX7jBuSdA3R9Q+cTWzZifZmHUCLyy+azgOQ8ZMHTClXPzPaI+yWLf6mr3l3UYcaJdCE4w==}
+  '@million/install@0.0.7':
+    resolution: {integrity: sha512-knhZwT8mi6jWfdPPzVuk9HfNWyhfOJsUmLmR1A7pQYxERiya8YKXdm3XZZXQF9An/5n1CjeLeyXPwk7Pc0utRQ==}
     hasBin: true
 
   '@next/bundle-analyzer@14.2.3':
@@ -1334,8 +1334,8 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
-  cli-high@0.4.1:
-    resolution: {integrity: sha512-fPbkILfCVG6mfxbsJbJZQsKE5JmfgJNlfBxap52XHXjLwPDhs/OMFVFrNR7bqiavZt2r5A80+wiRHzJyzWqwEQ==}
+  cli-high@0.4.2:
+    resolution: {integrity: sha512-q/CIxOggmzAw/67QYS4j1bMo72IpC+dAlswZl8xHxp8XvmWS97x3Q30pWNXq8mg0pZLSJwIFWZpUWTfcF119wA==}
     hasBin: true
 
   client-only@0.0.1:
@@ -2492,8 +2492,8 @@ packages:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
 
-  million@3.1.5:
-    resolution: {integrity: sha512-EUNMtvdZdD3gN9+qxxzr4TRRIolb6ldy/HVQKCVMJlBWs0pF0i/GKA+zOipp//tqckBA0KMEEp3aWDlwZQFTjg==}
+  million@3.1.6:
+    resolution: {integrity: sha512-GbI6S88EEwJKJ8wsFyqAG/Fuy9lrWjWJGDENONfGcGe1Pv0Cunk1oRliPY65ZpJ2AovViZEBjsAWIBXY6dA9sg==}
     hasBin: true
 
   mime-db@1.52.0:
@@ -4109,14 +4109,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@million/install@0.0.6':
+  '@million/install@0.0.7':
     dependencies:
       '@antfu/ni': 0.21.12
       '@axiomhq/js': 1.0.0-rc.3
       '@babel/core': 7.24.5
       '@babel/types': 7.24.5
       '@clack/prompts': 0.7.0
-      cli-high: 0.4.1
+      cli-high: 0.4.2
       diff: 5.2.0
       nanoid: 5.0.7
       posthog-node: 3.6.3
@@ -4729,7 +4729,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  cli-high@0.4.1:
+  cli-high@0.4.2:
     dependencies:
       '@clack/prompts': 0.7.0
       sugar-high: 0.6.1
@@ -6424,11 +6424,11 @@ snapshots:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  million@3.1.5:
+  million@3.1.6:
     dependencies:
       '@babel/core': 7.24.5
       '@babel/types': 7.24.5
-      '@million/install': 0.0.6
+      '@million/install': 0.0.7
       '@rollup/pluginutils': 5.1.0
       kleur: 4.1.5
       undici: 6.9.0
