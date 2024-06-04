@@ -169,7 +169,7 @@ export default async function HomePage() {
       );
      })}
     </div>
-    <p className="mt-9 text-center text-xl font-semibold ">...and many others!</p>
+    <p className="mt-9 text-center text-xl font-semibold">...and many others!</p>
    </section>
 
    <section className="mb-12">
@@ -184,7 +184,7 @@ export default async function HomePage() {
        <Contact />
       </div>
       <div className="space-y-4 p-4">
-       <p className=" text-xl font-semibold">Or contact me with...</p>
+       <p className="text-xl font-semibold">Or contact me with...</p>
        {contact.links.map((element, index) => (
         <Link href={element.href} key={index} target="_blank" className="group ml-auto mt-2 flex h-12 w-full items-center gap-3 rounded-md border bg-[#f8f9fa] px-4 py-2 text-sm font-semibold text-blue-900 duration-200 hover:bg-[#f2f3f5] motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:text-white dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
          <>

@@ -240,7 +240,7 @@ export function Contact() {
     </p>
    )}
    {error && (
-    <p className="flex items-center self-start text-red-400 ">
+    <p className="flex items-center self-start text-red-400">
      <ExclamationTriangleIcon className="mr-1 h-4 w-4" />
      {error}
     </p>

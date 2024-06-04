@@ -1,6 +1,6 @@
 import { CalendarIcon } from "@heroicons/react/24/solid";
-import { pick } from "contentlayer2/client";
 import { allBlogs } from "contentlayer/generated";
+import { pick } from "contentlayer2/client";
 import Link from "next/link";
 import { Description, Header1, Header2 } from "@/components/Headers";
 import { parseISO } from "@/lib/utils";

@@ -56,7 +56,7 @@ export default function Post({ params }) {
    />
    <div className="prose grid flex-1 grid-cols-1 gap-x-8 dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
-     <header className="w-full ">
+     <header className="w-full">
       <Header1>{post.title}</Header1>
       <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
        <div className="flex items-center">
