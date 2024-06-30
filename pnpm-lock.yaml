@@ -124,8 +124,8 @@ importers:
         specifier: 14.2.4
         version: 14.2.4(eslint@8.57.0)(typescript@5.4.2)
       globby:
-        specifier: 14.0.1
-        version: 14.0.1
+        specifier: 14.0.2
+        version: 14.0.2
       mini-svg-data-uri:
         specifier: 1.4.4
         version: 1.4.4
@@ -1839,8 +1839,8 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
-  globby@14.0.1:
-    resolution: {integrity: sha512-jOMLD2Z7MAhyG8aJpNOpmziMOP4rPLcc95oQPKXBazW82z+CEgPFBQvEpRUa1KeIMUJo4Wsm+q6uzO/Q/4BksQ==}
+  globby@14.0.2:
+    resolution: {integrity: sha512-s3Fq41ZVh7vbbe2PN3nrW7yC7U7MFVc5c98/iTl9c2GawNMKx/J648KQRW6WKkuU8GIbbh2IXfIRQjOZnXcTnw==}
     engines: {node: '>=18'}
 
   gopd@1.0.1:
@@ -5334,7 +5334,7 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
-  globby@14.0.1:
+  globby@14.0.2:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
       fast-glob: 3.3.2
