@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
 import { GetOGImage } from "@/lib/graphql";
@@ -18,9 +16,9 @@ export async function GET(request, { params }) {
  if (!params) return redirect("/opengraph-image");
 
  const repo = params.repository;
- const owner = params.owner;
+ const { owner } = params;
 
- let { theme } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries()) || "dark";
+ const { theme } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries()) || "dark";
 
  if (!repo || !typeof repo === "string" || !owner || !typeof owner === "string") {
   console.log(repo, owner);
@@ -52,7 +50,7 @@ export async function GET(request, { params }) {
 
  const mostUsedLanguage = og.languages && og.languages.length > 0 ? og.languages.reduce((a, b) => (a.size > b.size ? a : b)) : { node: { name: "Unknown", color: "#c1c1c1" }, size: 0 };
 
- /* eslint-disable @next/next/no-img-element */
+ /* eslint-disable next/no-img-element */
  return new ImageResponse(
   (
    <div

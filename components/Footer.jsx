@@ -3,7 +3,7 @@ import { footer } from "@/config";
 
 export function Footer() {
  return (
-  <footer className="mx-auto w-full px-4 py-10 pt-10 font-sans md:px-8 lg:px-16">
+  <footer className="mx-auto w-full px-4 py-10 font-sans md:px-8 lg:px-16">
    <div className="grid grid-cols-2 gap-9 md:grid-cols-6">
     <div className="col-span-3 flex flex-col justify-center">
      <Link href="/">
@@ -22,12 +22,12 @@ export function Footer() {
 
      <p className="mb-4 text-gray-700 opacity-50 dark:text-neutral-300">A programmer without coffee is like a web browser without the Internet - it seemingly works but is it useful?</p>
     </div>
-    {footer.categories.map((category, index) => (
-     <div key={index} className="col-span-1 text-gray-700 dark:text-neutral-300">
+    {footer.categories.map((category) => (
+     <div key={`footer-category-${category.title}`} className="col-span-1 text-gray-700 dark:text-neutral-300">
       <p className="mt-3 font-semibold text-gray-800 dark:text-white sm:mb-3 sm:mt-0">{category.title}</p>
       <div>
-       {category.links.map((link, index) => (
-        <Link key={index} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-700 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
+       {category.links.map((link) => (
+        <Link key={`footer-link-${link.href}`} href={link.href} target={link.target || "_self"} className="mt-2 block duration-100 hover:text-gray-700 hover:underline motion-reduce:transition-none dark:hover:text-gray-300">
          {link.title}
         </Link>
        ))}

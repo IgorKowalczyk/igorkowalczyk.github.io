@@ -123,15 +123,16 @@ export async function POST(request) {
      "Content-Type": "application/json",
     },
    });
-  } else {
-   return new Response(JSON.stringify({ error: false, message: "Message sent successfully! Thank you for contacting me!" }), {
-    status: 200,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   });
   }
+
+  return new Response(JSON.stringify({ error: false, message: "Message sent successfully! Thank you for contacting me!" }), {
+   status: 200,
+   headers: {
+    "Content-Type": "application/json",
+   },
+  });
  } catch (error) {
+  console.error(error);
   return new Response(JSON.stringify({ error: true, message: "Unable to send message" }), {
    status: 500,
    headers: {

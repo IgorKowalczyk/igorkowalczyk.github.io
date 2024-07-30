@@ -235,13 +235,13 @@ export function Contact() {
 
    {success && (
     <p className="flex items-center self-start text-green-500">
-     <CheckCircleIcon className="mr-1 h-4 w-4" />
+     <CheckCircleIcon className="mr-1 size-4" />
      {success}
     </p>
    )}
    {error && (
     <p className="flex items-center self-start text-red-400">
-     <ExclamationTriangleIcon className="mr-1 h-4 w-4" />
+     <ExclamationTriangleIcon className="mr-1 size-4" />
      {error}
     </p>
    )}
@@ -250,12 +250,12 @@ export function Contact() {
      {loading ? (
       <>
        Sending
-       <ArrowPathIcon className="ml-2 mt-[2px] h-4 w-4 animate-spin duration-200 motion-reduce:transition-none" />
+       <ArrowPathIcon className="ml-2 mt-[2px] size-4 animate-spin duration-200 motion-reduce:transition-none" />
       </>
      ) : (
       <>
        Send
-       <svg className="ml-2 h-4 w-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+       <svg className="ml-2 size-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
        </svg>
       </>

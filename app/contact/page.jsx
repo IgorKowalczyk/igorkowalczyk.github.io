@@ -15,7 +15,7 @@ export default function ContactPage() {
    <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-neutral-800">
     <Dots h="107" w="134" />
    </span>
-   <div className="shadow-code rounded-[10px] border-[1px] border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+   <div className="shadow-code rounded-[10px] border border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
     <Header1 className="text-center">Contact me</Header1>
     <Description className="mb-5 text-center">I am always open to new opportunities and projects. Feel free to contact me!</Description>
     <Contact />

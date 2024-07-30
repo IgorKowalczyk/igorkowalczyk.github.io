@@ -8,7 +8,7 @@ const nextConfig = {
  env: {
   VERSION: process.env.npm_package_version,
  },
- async headers() {
+ headers() {
   return [
    {
     source: "/(.*)",
@@ -101,7 +101,7 @@ const nextConfig = {
    },
   ];
  },
- async redirects() {
+ redirects() {
   return [
    {
     source: "/discord",

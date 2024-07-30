@@ -28,8 +28,8 @@ export default async function GithubRepositories() {
 
     <Header2 className="mb-3">Recent Projects</Header2>
 
-    {projects.map((project, index) => (
-     <ProjectCard key={index} project={project} className="mb-6" />
+    {projects.map((project) => (
+     <ProjectCard key={`project-${project.name}`} project={project} className="mb-6" />
     ))}
 
     <Header2 className="mt-6">Github Repositories</Header2>

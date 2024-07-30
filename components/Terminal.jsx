@@ -11,7 +11,7 @@ const TerminalLine = ({ children, blinking = false }) => (
    ~/{header.code.user}{" "}
   </span>
   {blinking ? (
-   <span className="relative font-semibold text-gray-700 duration-200 after:absolute after:bottom-0 after:right-[-1.5em] after:top-0 after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-neutral-300" aria-hidden="true">
+   <span className="relative font-semibold text-gray-700 duration-200 after:absolute after:inset-y-0 after:right-[-1.5em] after:my-auto after:animate-[cursor_750ms_infinite] after:text-[1em] after:not-italic after:content-['▌'] motion-reduce:transition-none dark:text-neutral-300" aria-hidden="true">
     ${" "}
    </span>
   ) : (
@@ -25,12 +25,12 @@ const TerminalResponse = ({ children }) => <div className="leading-6">{children}
 
 export function Terminal({ userData, contributions }) {
  return (
-  <div className="card shadow-code block w-full rounded-md border border-b-black/15 bg-[#fffffe] font-mono text-[15px] text-sm transition-colors motion-reduce:transition-none dark:border-[1px] dark:border-neutral-800 dark:bg-[#121412]">
+  <div className="card shadow-code block w-full rounded-md border border-b-black/15 bg-[#fffffe] font-mono text-sm transition-colors motion-reduce:transition-none dark:border dark:border-neutral-800 dark:bg-[#121412]">
    <div className="w-fill border-b-dark/5 relative flex items-center gap-[6px] border-b bg-white/[0.05%] p-2 dark:border-b-white/10">
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fb5f57]" />
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]" />
-    <div className="h-3.5 w-3.5 cursor-no-drop rounded-full bg-[#27cb3f]" />
-    <div className="absolute bottom-0 top-0 flex w-full items-center justify-center opacity-50" aria-hidden="true">
+    <div className="size-3.5 cursor-no-drop rounded-full bg-[#fb5f57]" />
+    <div className="size-3.5 cursor-no-drop rounded-full bg-[#fdbf2d]" />
+    <div className="size-3.5 cursor-no-drop rounded-full bg-[#27cb3f]" />
+    <div className="absolute inset-y-0 flex w-full items-center justify-center opacity-50" aria-hidden="true">
      Console
     </div>
    </div>

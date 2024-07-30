@@ -10,7 +10,7 @@ import { nav, meta } from "@/config";
 import { cn } from "@/lib/utils";
 
 function NavItem({ path, text, target }) {
- let pathname = usePathname() || "/";
+ const pathname = usePathname() || "/";
  let isActive = pathname.split("/")[1].trim() === path.split("/")[1].trim();
 
  if (path.startsWith("https://") || path.startsWith("http://")) {
@@ -42,7 +42,7 @@ function NavItem({ path, text, target }) {
 export function Nav() {
  return (
   <nav key="nav" className="fixed top-0 z-[100] mx-0 mt-0 w-full font-sans shadow dark:shadow-2xl">
-   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b-[1px] border-gray-200/60 bg-white pb-4 pt-4 duration-300 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] lg:justify-between lg:!bg-opacity-70">
+   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b border-gray-200/60 bg-white py-4 duration-300 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] lg:justify-between lg:!bg-opacity-70">
     <div className="fixed inset-0 z-[-1] h-[inherit] w-full lg:backdrop-blur-xl" />
     <Link href="/" key="main_page">
      <h3 className="z-[1001] mx-8 text-xl font-semibold text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">
@@ -52,17 +52,17 @@ export function Nav() {
     </Link>
     <MobileNav />
     <div className="mr-auto hidden gap-2 lg:flex">
-     {nav.left.map((item, index) => {
-      return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
+     {nav.left.map((item) => {
+      return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-left-${item.href}`} />;
      })}
      <Popover className="relative" />
     </div>
     <div className="ml-auto hidden gap-2 lg:flex">
-     {nav.right.map((item, index) => {
-      return <NavItem path={item.href} text={item.title} target={item.target} key={index} />;
+     {nav.right.map((item) => {
+      return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-right-${item.href}`} />;
      })}
     </div>{" "}
-    <ButtonPrimary href="/contact" className="!mt-0 ml-[1rem]">
+    <ButtonPrimary href="/contact" className="!mt-0 ml-4">
      Contact me
     </ButtonPrimary>
     <Settings />

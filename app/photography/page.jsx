@@ -19,8 +19,8 @@ export default async function Photography() {
     {!photos || photos.length === 0 ? (
      <p className="mb-4 text-red-400">No images found!</p>
     ) : (
-     photos.map((result, id) => (
-      <Link key={id} href={result.path} target="_blank" rel="noopener noreferrer">
+     photos.map((result) => (
+      <Link key={`photo-${result.path}`} href={result.path} target="_blank">
        <Image className="mb-5 cursor-zoom-in rounded-lg bg-gray-200 blur-0 duration-200 hover:opacity-70 dark:bg-neutral-200/15" src={result.path} alt={result.alt} width={720} height={480} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw" />
       </Link>
      ))

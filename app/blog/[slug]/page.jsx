@@ -10,13 +10,13 @@ import { notFound } from "next/navigation";
 import { Header1 } from "@/components/Headers";
 import { cn } from "@/lib/utils";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
  return allBlogs.map((post) => ({
   slug: post.slug,
  }));
 }
 
-export async function generateMetadata({ params }) {
+export function generateMetadata({ params }) {
  const post = allBlogs.find((post) => post?.slug === params?.slug);
 
  if (!post) return {};
@@ -50,6 +50,7 @@ export default function Post({ params }) {
   <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
    <script
     type="application/ld+json"
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: We trust the content of the JSON object
     dangerouslySetInnerHTML={{
      __html: JSON.stringify(post?.structuredData),
     }}
@@ -72,7 +73,7 @@ export default function Post({ params }) {
      </header>
      <MDXComponent code={post.body.code} />
     </div>
-    <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-[14rem] flex-col space-y-2 self-start text-base xl:flex">
+    <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-56 flex-col space-y-2 self-start text-base xl:flex">
      <p className="mb-0 text-sm uppercase">On this page</p>
      {post.headings?.map((props) => (
       <Link

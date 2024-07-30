@@ -1,7 +1,7 @@
 import { allBlogs } from "contentlayer/generated";
 import { meta } from "@/config.js";
 
-export default async function sitemap() {
+export default function sitemap() {
  const blogs = allBlogs.map((post) => ({
   url: `${meta.url}/blog/${post.slug}`,
   lastModified: post.publishedAt,
