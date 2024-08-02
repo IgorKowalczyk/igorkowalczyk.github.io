@@ -8,6 +8,9 @@ const nextConfig = {
  env: {
   VERSION: process.env.npm_package_version,
  },
+ eslint: {
+  ignoreDuringBuilds: true,
+ },
  headers() {
   return [
    {
