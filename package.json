@@ -60,7 +60,7 @@
     "eslint": "9.8.0",
     "globby": "14.0.2",
     "mini-svg-data-uri": "1.4.4",
-    "postcss": "8.4.40",
+    "postcss": "8.4.41",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5",
     "tailwind-gradient-mask-image": "1.2.0",
