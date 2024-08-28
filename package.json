@@ -55,7 +55,7 @@
     "@igorkowalczyk/is-browser": "5.0.4",
     "@next/bundle-analyzer": "14.2.7",
     "@tailwindcss/aspect-ratio": "0.4.2",
-    "@tailwindcss/typography": "0.5.14",
+    "@tailwindcss/typography": "0.5.15",
     "autoprefixer": "10.4.20",
     "eslint": "9.9.1",
     "globby": "14.0.2",
