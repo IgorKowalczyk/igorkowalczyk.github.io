@@ -19,7 +19,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@headlessui/react": "2.1.3",
+    "@headlessui/react": "2.1.4",
     "@headlessui/tailwindcss": "0.2.1",
     "@heroicons/react": "2.1.5",
     "@vercel/analytics": "1.3.1",
