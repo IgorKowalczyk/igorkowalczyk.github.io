@@ -57,7 +57,7 @@
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.15",
     "autoprefixer": "10.4.20",
-    "eslint": "9.9.1",
+    "eslint": "9.10.0",
     "globby": "14.0.2",
     "mini-svg-data-uri": "1.4.4",
     "postcss": "8.4.45",
