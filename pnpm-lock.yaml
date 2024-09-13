@@ -60,8 +60,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react-parallax-tilt:
-        specifier: 1.7.238
-        version: 1.7.238(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.7.239
+        version: 1.7.239(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-wrap-balancer:
         specifier: 1.1.1
         version: 1.1.1(react@18.3.1)
@@ -2979,8 +2979,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-parallax-tilt@1.7.238:
-    resolution: {integrity: sha512-BG1p812g8fdRQwZT9QujfA00O7f/tZkj0tV5ivF0BYsg7f42ryGXkj4P5zG8iFeR1cAAOcCcwuiSxvoVxHlAww==}
+  react-parallax-tilt@1.7.239:
+    resolution: {integrity: sha512-bQtI7s/PU+zcMpUNXS5hgOM+Zs7M1rzLxVkt1Ebx3OX4wR11CNWDYIR+5UmJVzKadRyWoYmIUB79hNMhH5TFxQ==}
     peerDependencies:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
@@ -7242,7 +7242,7 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-parallax-tilt@1.7.238(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-parallax-tilt@1.7.239(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
