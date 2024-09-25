@@ -10,8 +10,6 @@ import { header, contact, meta, technologies } from "@/config";
 import { GetUserData, getTotalContributionsForYears } from "@/lib/graphql";
 import { ConvertNumber } from "@/lib/utils";
 
-export const runtime = "edge";
-
 export const metadata = {
  title: "Igor Kowalczyk",
 };
