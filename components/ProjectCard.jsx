@@ -27,14 +27,14 @@ export function ProjectCard({ project }) {
      </div>
     ))}
    </div>
-   <div className="mt-4 flex flex-wrap gap-5">
+   <div className="mt-6 flex flex-wrap gap-5">
     {project.website && (
-     <ButtonPrimary href={project.website} className="mt-4" target="_blank" rel="noopener noreferrer">
+     <ButtonPrimary href={project.website} target="_blank" rel="noopener noreferrer">
       Visit website
      </ButtonPrimary>
     )}
     {project.github && (
-     <ButtonSecondary href={project.github} className="mt-4" target="_blank" rel="noopener noreferrer">
+     <ButtonSecondary href={project.github} target="_blank" rel="noopener noreferrer">
       View on Github
      </ButtonSecondary>
     )}

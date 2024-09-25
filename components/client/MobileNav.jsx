@@ -25,7 +25,7 @@ export default function MobileNav() {
 
  return (
   <>
-   <ButtonSecondary className="!mt-0 size-10 justify-center border-0 lg:hidden" icon={false} onClick={() => setIsMenuOpen(true)}>
+   <ButtonSecondary className="size-10 justify-center border-0 lg:hidden" icon={false} onClick={() => setIsMenuOpen(true)}>
     <Icons.AlignLeft className="size-5 shrink-0 text-gray-900 dark:text-gray-100" />
    </ButtonSecondary>
 
@@ -49,7 +49,7 @@ export default function MobileNav() {
      "dark:shadow-2x fixed left-0 top-0 z-50 flex h-screen w-full max-w-96 flex-col border-r border-black/10 bg-white/70 p-6 backdrop-blur-xl duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70 lg:hidden"
     )}
    >
-    <ButtonSecondary className="ml-auto mr-0 mt-0 size-10 justify-center border-0" icon={false} onClick={() => setIsMenuOpen(false)}>
+    <ButtonSecondary className="ml-auto mr-0 size-10 justify-center border-0" icon={false} onClick={() => setIsMenuOpen(false)}>
      <Icons.X className="size-5 shrink-0 text-gray-900 dark:text-gray-100" />
     </ButtonSecondary>
 

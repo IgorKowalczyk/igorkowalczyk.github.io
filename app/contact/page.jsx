@@ -20,7 +20,7 @@ export default function Page() {
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">
      {contact.links.map((element) => (
-      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} target="_blank" className="mt-0 gap-2">
+      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} target="_blank" className="gap-2">
        {element.icon} {element.title}
       </ButtonTertiary>
      ))}

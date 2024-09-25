@@ -47,7 +47,7 @@ export default function Settings() {
       "bg-blue-200 dark:bg-white/15": isOpen,
       "bg-gray-200 dark:bg-white/10": !isOpen,
      },
-     "group !mt-0 ml-auto flex h-10 w-10 items-center justify-center px-2"
+     "group ml-auto flex h-10 w-10 items-center justify-center px-2"
     )}
    >
     <Cog8ToothIcon
@@ -153,7 +153,7 @@ export default function Settings() {
            Source code <ArrowTopRightOnSquareIcon className="ml-2 size-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
           </Link>
 
-          <ButtonSecondary className="ml-auto mt-0" onClick={() => setIsOpen(false)}>
+          <ButtonSecondary className="ml-auto" onClick={() => setIsOpen(false)}>
            Close
           </ButtonSecondary>
          </div>

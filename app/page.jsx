@@ -23,11 +23,11 @@ export default async function HomePage() {
    <section className="mb-16 mt-20">
     <h1 className="dark:color-black relative m-0 text-4xl font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left">Hey, I’m {header.title}</h1>
     <p className="mt-2 text-lg text-gray-700 dark:text-neutral-400">{header.description}</p>
-    <div className="mt-4 flex flex-row gap-5">
-     <ButtonPrimary href="/#contact" className="mt-4 md:mt-6">
+    <div className="mt-9 flex flex-row flex-wrap gap-5">
+     <ButtonPrimary href="/#contact">
       Contact me
      </ButtonPrimary>
-     <ButtonSecondary href="/#about" className="mt-4 md:mt-6">
+     <ButtonSecondary href="/#about">
       More about me
      </ButtonSecondary>
     </div>
@@ -105,7 +105,7 @@ export default async function HomePage() {
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">
      {contact.links.map((element) => (
-      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} target="_blank" className="mt-0 gap-2">
+      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} target="_blank" className="gap-2">
        {element.icon} {element.title}
       </ButtonTertiary>
      ))}
