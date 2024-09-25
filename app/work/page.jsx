@@ -6,8 +6,6 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/config";
 import { meta } from "@/config";
 
-export const runtime = "edge";
-
 export const metadata = {
  title: "My Work",
 };
