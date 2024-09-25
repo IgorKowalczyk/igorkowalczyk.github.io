@@ -1,25 +1,31 @@
-import { Contact } from "@/components/client/Contact";
-import { Dots, Squares } from "@/components/Decorations";
-import { Description, Header1 } from "@/components/Headers";
+import { ButtonTertiary } from "@/components/Button";
+import { ContactForm } from "@/components/client/ContactForm";
+import { Description, Header2 } from "@/components/Headers";
+import { contact } from "@/config";
 
 export const metadata = {
  title: "Contact",
 };
 
-export default function ContactPage() {
+export default function Page() {
  return (
-  <div className="-mt-24 flex min-h-screen flex-1 flex-col items-center justify-center px-8">
-   <div className="absolute right-full top-full z-[-1] -translate-y-1/4 translate-x-1/2 transform lg:translate-x-1/2 xl:-translate-y-1/2">
-    <Squares w="404" h="404" />
-   </div>
-   <span className="absolute right-0 top-[90px] z-[-1] fill-black/40 dark:fill-neutral-800">
-    <Dots h="107" w="134" />
-   </span>
-   <div className="shadow-code rounded-[10px] border border-black/15 bg-white p-5 shadow-lg duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
-    <Header1 className="text-center">Contact me</Header1>
-    <Description className="mb-5 text-center">I am always open to new opportunities and projects. Feel free to contact me!</Description>
-    <Contact />
-   </div>
+  <div className="mb-16 mt-20">
+   <section className="mb-12">
+    <Header2 id="contact">Contact me</Header2>
+    <Description>I’m always eager to explore new opportunities and take on exciting projects. If you have a project in mind, or just want to say hi, feel free to send me a message.</Description>
+
+    <div className="my-6 flex w-full rounded-md border border-black/15 bg-white p-5 dark:border-neutral-800 dark:bg-[#161617]">
+     <ContactForm />
+    </div>
+    <Description>Or contact me with...</Description>
+    <div className="mt-4 flex flex-wrap gap-4">
+     {contact.links.map((element) => (
+      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} target="_blank" className="mt-0 gap-2">
+       {element.icon} {element.title}
+      </ButtonTertiary>
+     ))}
+    </div>
+   </section>
   </div>
  );
 }

@@ -41,13 +41,13 @@ export function generateMetadata({ params }) {
  };
 }
 
-export default function Post({ params }) {
+export default function Page({ params }) {
  const post = allBlogs.find((post) => post?.slug === params?.slug);
 
  if (!post) return notFound();
 
  return (
-  <article className="mx-auto mb-16 flex min-h-screen w-full max-w-2xl flex-col items-start justify-center">
+  <article className="mb-16 mt-20 flex min-h-screen flex-col items-start justify-center">
    <script
     type="application/ld+json"
     // biome-ignore lint/security/noDangerouslySetInnerHtml: We trust the content of the JSON object
@@ -55,7 +55,7 @@ export default function Post({ params }) {
      __html: JSON.stringify(post?.structuredData),
     }}
    />
-   <div className="prose grid flex-1 grid-cols-1 gap-x-8 dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
+   <div className="prose grid flex-1 grid-cols-1 dark:prose-dark md:grid-cols-[1fr,minmax(auto,640px),1fr] md:[&>*]:col-start-2">
     <div>
      <header className="w-full">
       <Header1>{post.title}</Header1>
@@ -73,7 +73,7 @@ export default function Post({ params }) {
      </header>
      <MDXComponent code={post.body.code} />
     </div>
-    <div className="sticky top-24 !col-start-3 ml-3 mt-8 hidden max-w-56 flex-col space-y-2 self-start text-base xl:flex">
+    <div className="sticky top-24 !col-start-3 ml-12 mt-8 hidden max-w-56 flex-col space-y-2 self-start text-base xl:flex">
      <p className="mb-0 text-sm uppercase">On this page</p>
      {post.headings?.map((props) => (
       <Link

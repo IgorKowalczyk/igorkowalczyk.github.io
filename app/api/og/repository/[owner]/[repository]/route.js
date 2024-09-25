@@ -10,6 +10,7 @@ export const size = {
  height: 630,
 };
 
+//export async function GET(request: Request, { params }: { params: { owner: string; repository: string } }) {
 export async function GET(request, { params }) {
  const start = Date.now();
 
@@ -20,8 +21,7 @@ export async function GET(request, { params }) {
 
  const { theme } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries()) || "dark";
 
- if (!repo || !typeof repo === "string" || !owner || !typeof owner === "string") {
-  console.log(repo, owner);
+ if (!repo || typeof repo !== "string" || !owner || typeof owner !== "string") {
   return redirect("/opengraph-image");
  }
 
@@ -34,7 +34,7 @@ export async function GET(request, { params }) {
  if (og && og.og && og.domain === "repository-images.githubusercontent.com") {
   const image = await fetch(og.og);
   const buffer = await image.arrayBuffer();
-  const type = image.headers.get("Content-Type");
+  const type = image.headers.get("Content-Type") || "image/png";
 
   return new Response(buffer, {
    headers: {

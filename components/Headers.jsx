@@ -10,7 +10,7 @@ export function Description({ children, ...props }) {
 
 export function Header1({ children, ...props }) {
  return (
-  <h1 {...props} className={cn("mb-2 scroll-mt-20 box-decoration-clone bg-clip-text text-3xl font-black motion-reduce:transition-none", props.className)}>
+  <h1 {...props} className={cn("dark:color-black mb-2 scroll-mt-20 box-decoration-clone bg-clip-text text-3xl font-black tracking-[-0.03em] text-gray-800 motion-reduce:transition-none dark:text-white", props.className)}>
    {children}
    <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
   </h1>

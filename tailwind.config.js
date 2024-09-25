@@ -31,7 +31,6 @@ export default {
     semibold: 700,
    },
    fontFamily: {
-    sans: ["var(--font-geist-sans)"],
     mono: ["var(--font-geist-mono)"],
    },
    typography: {

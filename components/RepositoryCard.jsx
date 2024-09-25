@@ -1,6 +1,6 @@
-import { StarIcon, FolderIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import { Icons } from "./Icons";
 import { ButtonSecondary } from "@/components/Button";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +10,7 @@ export function RepositoryCard({ name, id, owner, description, url, homepageUrl,
    <Image unoptimized={true} src={`/api/og/repository/${owner.login}/${name}`} alt={`Preview of ${name}`} width={720} height={480} />
    <div className="p-5 text-left">
     <Link href={url} key={id} className="break-all text-left font-semibold" target="_blank">
-     <FolderIcon className="inline size-6 fill-black/10 stroke-black/70 duration-200 motion-reduce:transition-none dark:fill-white/10 dark:stroke-white/70" /> {owner.login}/{name}
+     <Icons.FolderCode className="inline size-6 fill-black/10 stroke-black/70 duration-200 motion-reduce:transition-none dark:fill-white/10 dark:stroke-white/70" /> {owner.login}/{name}
     </Link>
     <p className="my-2 text-left">{description && description.length > 90 ? `${description.substring(0, 90)}...` : description}</p>
     {repositoryTopics && (
@@ -33,7 +33,7 @@ export function RepositoryCard({ name, id, owner, description, url, homepageUrl,
       {primaryLanguage ? primaryLanguage.name : "Markdown"}
      </Link>
      <Link key="repo_stars" href={`${url}/stargazers`} target="_blank" className="my-1 flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/5 px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/60 duration-200 hover:bg-black/10 motion-reduce:transition-none dark:bg-white/10 dark:text-white/70 dark:hover:bg-white/20">
-      <StarIcon className="mr-1 inline size-5 stroke-black/50 duration-200 motion-reduce:transition-none dark:stroke-white/70 dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{stargazerCount} Stars</span>
+      <Icons.Star className="mr-1 inline size-5 stroke-black/50 duration-200 motion-reduce:transition-none dark:stroke-white/70 dark:group-hover:stroke-white" aria-hidden="true" role="img" /> <span>{stargazerCount} Stars</span>
      </Link>
      <Link key="repo_forks" href={`${url}/network/members`} target="_blank" className="my-1 flex w-max snap-center snap-always content-center items-center rounded-lg border-2 border-transparent bg-black/5 px-[0.5em] py-[0.12em] align-middle text-[88%] text-gray-800/60 duration-200 hover:bg-black/10 motion-reduce:transition-none dark:bg-white/10 dark:text-white/70 dark:hover:bg-white/20">
       <svg className="mr-1 size-5 fill-black/50 duration-200 motion-reduce:transition-none dark:fill-white/70" aria-hidden="true" role="img" viewBox="0 0 32 32">

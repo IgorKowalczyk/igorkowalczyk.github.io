@@ -7,15 +7,15 @@ export const metadata = {
  title: "Photography",
 };
 
-export default async function Photography() {
+export default async function Page() {
  const photos = await getPhotography();
 
  return (
-  <div className="mx-auto mb-16 flex flex-col items-start justify-center">
+  <div className="mb-16 mt-20 flex flex-col items-start justify-center">
    <Header1>My photography</Header1>
-   <Description className="mb-6">I love taking pictures, I love traveling, I love capturing the most beautiful moments. Here you can see some of my best photos.</Description>
+   <Description> I have a passion for photography, travel, and capturing life's most beautiful moments. Here, you can explore some of my finest photos.</Description>
 
-   <div className="w-full columns-2 gap-6 pt-2 md:columns-2xs">
+   <div className="mt-12 w-full columns-2 gap-6 md:columns-2xs">
     {!photos || photos.length === 0 ? (
      <p className="mb-4 text-red-400">No images found!</p>
     ) : (

@@ -10,13 +10,13 @@ export const metadata = {
  title: "What I use",
 };
 
-export default function Uses() {
+export default function Page() {
  const uses = allOtherPages.find((page) => page.slug === "uses");
 
  if (!uses) return notFound();
 
  return (
-  <div className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center">
+  <div className="mb-16 mt-20 flex flex-col items-start justify-center">
    <Header1>{uses.title}</Header1>
    <p className="pb-2 text-gray-700 dark:text-neutral-300">{uses.description}</p>
    <Link href="/assets/setup.jpg" target="_blank" rel="noopener noreferrer">

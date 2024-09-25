@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ButtonPrimary } from "@/components/Button";
 import MobileNav from "@/components/client/MobileNav";
 import Popover from "@/components/client/NavPopover";
 import Settings from "@/components/client/Settings";
-import { nav, meta } from "@/config";
+import { nav } from "@/config";
 import { cn } from "@/lib/utils";
 
 function NavItem({ path, text, target }) {
@@ -22,7 +21,7 @@ function NavItem({ path, text, target }) {
   <Link
    key={path}
    href={path}
-   className={cn("relative rounded-md p-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
+   className={cn("relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
     "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
     "text-gray-700 dark:text-neutral-400": !isActive,
    })}
@@ -41,32 +40,19 @@ function NavItem({ path, text, target }) {
 
 export function Nav() {
  return (
-  <nav key="nav" className="fixed top-0 z-[100] mx-0 mt-0 w-full font-sans shadow dark:shadow-2xl">
-   <div className="relative mx-auto flex h-[73px] w-full items-center justify-start border-b border-gray-200/60 bg-white py-4 duration-300 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] lg:justify-between lg:!bg-opacity-70">
-    <div className="fixed inset-0 z-[-1] h-[inherit] w-full lg:backdrop-blur-xl" />
-    <Link href="/" key="main_page">
-     <h3 className="z-[1001] mx-8 text-xl font-semibold text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">
-      {meta.title}
-      <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
-     </h3>
-    </Link>
-    <MobileNav />
-    <div className="mr-auto hidden gap-2 lg:flex">
-     {nav.left.map((item) => {
-      return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-left-${item.href}`} />;
-     })}
-     <Popover className="relative" />
-    </div>
-    <div className="ml-auto hidden gap-2 lg:flex">
-     {nav.right.map((item) => {
-      return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-right-${item.href}`} />;
-     })}
-    </div>{" "}
-    <ButtonPrimary href="/contact" className="!mt-0 ml-4">
-     Contact me
-    </ButtonPrimary>
-    <Settings />
+  <nav className="z-50 mx-auto flex w-full max-w-2xl items-center gap-4 pt-9 font-mono">
+   <Link href="/" className="text-lg font-black text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">
+    IK
+    <span className="bg-gradient-to-r from-[#6310ff] to-[#14291ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
+   </Link>
+   <MobileNav />
+   <div className="mr-auto hidden gap-2 lg:inline-flex">
+    {nav.left.map((item) => {
+     return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-left-${item.href}`} />;
+    })}
+    <Popover className="relative" />
    </div>
+   <Settings />
   </nav>
  );
 }

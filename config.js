@@ -1,7 +1,7 @@
 export const meta = {
  title: "Igor Kowalczyk",
  author: "Igor Kowalczyk",
- description: "I'm a full-stack developer based in Poland. I have a passion for building web applications and solving problems",
+ description: "I’m a full-stack developer based in Poland 🇵🇱. I have a passion for building web applications and solving problems.",
  //url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`,
  url: "https://igorkowalczyk.dev",
  locale: "en_US",
@@ -230,10 +230,6 @@ export const footer = {
      title: "Blog",
      href: "/blog",
     },
-    {
-     title: "Photography",
-     href: "/photography",
-    },
    ],
   },
   {
@@ -267,6 +263,10 @@ export const footer = {
     {
      title: "Contact",
      href: "/contact",
+    },
+    {
+     title: "Photography",
+     href: "/photography",
     },
    ],
   },

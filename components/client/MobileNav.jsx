@@ -1,9 +1,8 @@
 "use client";
 
-import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ButtonSecondary } from "../Button";
+import { Icons } from "@/components/Icons";
 import { nav } from "@/config";
 import { cn } from "@/lib/utils";
 
@@ -11,58 +10,65 @@ export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
  const menuItems = [...nav.left, ...nav.right];
 
+ useEffect(() => {
+  const handleKeyDown = (event) => {
+   if (event.key === "Escape") {
+    setIsMenuOpen(false);
+   }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+  return () => {
+   window.removeEventListener("keydown", handleKeyDown);
+  };
+ }, []);
+
  return (
   <>
-   <ButtonSecondary
-    className="burger visible relative size-10 border-0 bg-transparent lg:hidden"
-    aria-label="Toggle menu"
-    type="button"
-    onClick={() => {
-     isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
-    }}
-   >
-    <Bars3BottomLeftIcon data-hide={isMenuOpen} className="absolute left-1/2 top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
-    <XMarkIcon data-hide={!isMenuOpen} className="absolute left-1/2 top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 scale-100 text-gray-900 !opacity-100 duration-200 motion-reduce:transition-none dark:text-gray-100" />
+   <ButtonSecondary className="!mt-0 size-10 justify-center border-0 lg:hidden" icon={false} onClick={() => setIsMenuOpen(true)}>
+    <Icons.AlignLeft className="size-5 shrink-0 text-gray-900 dark:text-gray-100" />
    </ButtonSecondary>
+
    <div
     className={cn(
      {
       "rendered pointer-events-all !opacity-100": isMenuOpen,
-      "pointer-events-none": !isMenuOpen,
+      "pointer-events-none opacity-0": !isMenuOpen,
      },
-     "absolute left-0 top-0 z-[1001] mt-[73px] flex h-screen w-3/4 flex-col opacity-0 duration-200 motion-reduce:transition-none lg:hidden"
+     "fixed left-0 top-0 z-40 h-full w-full bg-black/20 duration-200 motion-reduce:transition-none dark:bg-[#161617]/70 lg:hidden"
+    )}
+    onClick={() => setIsMenuOpen(false)}
+   />
+
+   <div
+    className={cn(
+     {
+      "rendered pointer-events-all !opacity-100": isMenuOpen,
+      "pointer-events-none opacity-0": !isMenuOpen,
+     },
+     "dark:shadow-2x fixed left-0 top-0 z-50 flex h-screen w-full max-w-96 flex-col border-r border-black/10 bg-white/70 p-6 backdrop-blur-xl duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70 lg:hidden"
     )}
    >
-    <div className="h-full border-r border-black/10 bg-white px-3.5 shadow duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:shadow-2xl">
-     <div className="mt-3">
-      {menuItems.map((item, index) => {
-       return (
-        <p
-         key={`mobile-nav-${item.href}`}
-         className={cn(
-          {
-           "w-0 -translate-x-4 border-transparent opacity-0 dark:border-transparent": !isMenuOpen,
-           "w-full translate-x-0 border-gray-200 opacity-100 dark:border-neutral-800": isMenuOpen,
-          },
-          "group whitespace-nowrap border-b text-sm font-semibold text-gray-900 duration-200 motion-reduce:transition-none dark:text-gray-100"
-         )}
-         style={{ transitionDelay: `${150 * index - 50}ms` }}
-        >
-         <Link
-          href={item.href}
-          key={`mobile-nav-link-${item.href}`}
-          className="flex w-auto p-4 duration-200 group-hover:pl-6 motion-reduce:transition-none"
-          onClick={() => {
-           isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
-          }}
-          target={item.target}
-         >
-          {item.title}
-         </Link>
-        </p>
-       );
-      })}
-     </div>
+    <ButtonSecondary className="ml-auto mr-0 mt-0 size-10 justify-center border-0" icon={false} onClick={() => setIsMenuOpen(false)}>
+     <Icons.X className="size-5 shrink-0 text-gray-900 dark:text-gray-100" />
+    </ButtonSecondary>
+
+    <div className="mt-3 flex flex-col gap-2 divide-y divide-gray-200 dark:divide-neutral-800">
+     {menuItems.map((item) => {
+      return (
+       <ButtonSecondary
+        key={item.href}
+        href={item.href}
+        className="w-full"
+        onClick={() => {
+         isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
+        }}
+        target={item.target}
+       >
+        {item.title}
+       </ButtonSecondary>
+      );
+     })}
     </div>
    </div>
   </>

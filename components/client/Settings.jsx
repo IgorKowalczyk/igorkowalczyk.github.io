@@ -47,7 +47,7 @@ export default function Settings() {
       "bg-blue-200 dark:bg-white/15": isOpen,
       "bg-gray-200 dark:bg-white/10": !isOpen,
      },
-     "group mx-[1rem] !mt-0 flex h-10 w-10 items-center justify-center px-2"
+     "group !mt-0 ml-auto flex h-10 w-10 items-center justify-center px-2"
     )}
    >
     <Cog8ToothIcon
@@ -68,7 +68,7 @@ export default function Settings() {
      <div className="fixed inset-0 overflow-y-auto">
       <div className="flex min-h-full items-center justify-center p-4 text-center">
        <Transition.Child as={Fragment} enter="transition ease-out duration-200 motion-reduce:transition-none" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-100 motion-reduce:duration-[1ms]" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-        <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border border-black/15 bg-white p-6 text-left align-middle font-sans shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
+        <Dialog.Panel className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border border-black/15 bg-white p-6 text-left align-middle shadow-xl transition-all dark:border-neutral-800 dark:bg-[#161617]">
          <Dialog.Title as="h3" className="text-xl/6 font-medium text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
           Settings
          </Dialog.Title>

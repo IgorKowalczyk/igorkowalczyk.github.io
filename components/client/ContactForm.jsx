@@ -1,12 +1,12 @@
 "use client";
 
-import { ArrowPathIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
+import { Icons } from "../Icons";
 import { ButtonSecondary } from "@/components/Button";
 import { cn } from "@/lib/utils";
 
-export function Contact() {
+export function ContactForm() {
  const [formData, setFormData] = useState({
   email: "",
   name: "",
@@ -235,13 +235,13 @@ export function Contact() {
 
    {success && (
     <p className="flex items-center self-start text-green-500">
-     <CheckCircleIcon className="mr-1 size-4" />
+     <Icons.MailCheck className="mr-1 size-4" />
      {success}
     </p>
    )}
    {error && (
     <p className="flex items-center self-start text-red-400">
-     <ExclamationTriangleIcon className="mr-1 size-4" />
+     <Icons.X className="mr-1 size-4" />
      {error}
     </p>
    )}
@@ -250,7 +250,7 @@ export function Contact() {
      {loading ? (
       <>
        Sending
-       <ArrowPathIcon className="ml-2 mt-[2px] size-4 animate-spin duration-200 motion-reduce:transition-none" />
+       <Icons.RefreshCw className="ml-2 mt-[2px] size-4 animate-spin duration-200 motion-reduce:transition-none" />
       </>
      ) : (
       <>
