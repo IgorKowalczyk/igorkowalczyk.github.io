@@ -16,6 +16,10 @@ html, body {
 @apply scroll-smooth;
 }
 
+html {
+ @apply !pr-0;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
  @apply hidden;
 }

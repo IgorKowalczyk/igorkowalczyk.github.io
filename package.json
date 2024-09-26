@@ -44,7 +44,8 @@
     "sharp": "0.33.5",
     "swr": "2.2.5",
     "tailwind-merge": "2.5.2",
-    "validator": "13.12.0"
+    "validator": "13.12.0",
+    "vaul": "0.9.3"
   },
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "3.0.0-beta.11",
