@@ -12,8 +12,8 @@
  scrollbar-width: thin;
 }
 
-.hide {
- display: var(--hidden);
+html, body {
+@apply scroll-smooth;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -26,18 +26,6 @@
 
 ::selection {
  @apply bg-neutral-800 !text-white;
-}
-
-.arrow .arrowSymbol path:last-child {
- @apply motion-reduce:transition-none motion-reduce:!duration-[0ms];
- stroke-dasharray: 10;
- stroke-dashoffset: 10;
- transition: stroke-dashoffset 200ms;
-}
-
-.arrow:hover .arrowSymbol path:last-child {
- @apply motion-reduce:transition-none;
- stroke-dashoffset: 20;
 }
 
 .noise {

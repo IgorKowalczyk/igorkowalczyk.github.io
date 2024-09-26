@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
      </Script>
     )}
    </head>
-   <body className={cn("antialiase relative px-6 font-mono", GeistMono.variable)}>
+   <body className={cn("antialiase relative px-6 font-mono scroll-smooth", GeistMono.variable)}>
     <ThemeProvider attribute="class" disableTransitionOnChange>
      <Providers>
       <Nav />
