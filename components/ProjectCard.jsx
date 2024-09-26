@@ -27,7 +27,7 @@ export function ProjectCard({ project }) {
      </div>
     ))}
    </div>
-   <div className="mt-6 flex flex-wrap gap-5">
+   <div className="mt-6 flex flex-wrap gap-4">
     {project.website && (
      <ButtonPrimary href={project.website} target="_blank" rel="noopener noreferrer">
       Visit website

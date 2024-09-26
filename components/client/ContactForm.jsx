@@ -154,7 +154,7 @@ export function ContactForm() {
 
  return (
   <form onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
-   <div className="z-[2] block w-full items-center justify-center gap-1.5 text-left md:flex">
+   <div className="block w-full items-center justify-center gap-1.5 text-left md:flex">
     <label htmlFor="name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">

@@ -23,13 +23,9 @@ export default async function HomePage() {
    <section className="mb-16 mt-20">
     <h1 className="dark:color-black relative m-0 text-4xl font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left">Hey, I’m {header.title}</h1>
     <p className="mt-2 text-lg text-gray-700 dark:text-neutral-400">{header.description}</p>
-    <div className="mt-9 flex flex-row flex-wrap gap-5">
-     <ButtonPrimary href="/#contact">
-      Contact me
-     </ButtonPrimary>
-     <ButtonSecondary href="/#about">
-      More about me
-     </ButtonSecondary>
+    <div className="mt-9 flex flex-row flex-wrap gap-4">
+     <ButtonPrimary href="/#contact">Contact me</ButtonPrimary>
+     <ButtonSecondary href="/#about">More about me</ButtonSecondary>
     </div>
    </section>
 
@@ -60,7 +56,7 @@ export default async function HomePage() {
      <span>In March 2020, I began learning Node.js and Express.js, and created my first major project, Majo.exe. In April 2022, I started learning React.js, Next.js, and Tailwind CSS.</span>
     </div>
 
-    <div className="mt-6 flex flex-row flex-wrap gap-5">
+    <div className="mt-6 flex flex-row flex-wrap gap-4">
      <ButtonPrimary href={meta.accounts.github.url} target="_blank" rel="noopener noreferrer">
       <Icons.Github className="mr-2 size-5 fill-white stroke-2" />
       View my Github

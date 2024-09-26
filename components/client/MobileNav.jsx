@@ -35,7 +35,7 @@ export default function MobileNav() {
       "rendered pointer-events-all !opacity-100": isMenuOpen,
       "pointer-events-none opacity-0": !isMenuOpen,
      },
-     "fixed left-0 top-0 z-40 h-full w-full bg-black/20 duration-200 motion-reduce:transition-none dark:bg-[#161617]/70 lg:hidden"
+     "fixed left-0 top-0 z-40 h-full w-full bg-black/50 duration-200 motion-reduce:transition-none dark:bg-[#161617]/70 lg:hidden"
     )}
     onClick={() => setIsMenuOpen(false)}
    />
@@ -46,7 +46,7 @@ export default function MobileNav() {
       "rendered pointer-events-all !opacity-100": isMenuOpen,
       "pointer-events-none opacity-0": !isMenuOpen,
      },
-     "dark:shadow-2x fixed left-0 top-0 z-50 flex h-screen w-full max-w-96 flex-col border-r border-black/10 bg-white/70 p-6 backdrop-blur-xl duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70 lg:hidden"
+     "fixed left-0 top-0 z-50 flex h-screen w-full max-w-96 flex-col border-r border-black/10 bg-white/70 p-6 backdrop-blur-xl duration-200 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70 lg:hidden"
     )}
    >
     <ButtonSecondary className="ml-auto mr-0 size-10 justify-center border-0" icon={false} onClick={() => setIsMenuOpen(false)}>
