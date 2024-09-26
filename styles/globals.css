@@ -12,7 +12,6 @@
  scrollbar-width: thin;
 }
 
-
 .hide {
  display: var(--hidden);
 }
@@ -40,7 +39,6 @@
  @apply motion-reduce:transition-none;
  stroke-dashoffset: 20;
 }
-
 
 .noise {
  background-image: url(/assets/noise.png);
@@ -71,11 +69,6 @@
 @keyframes rotate-hue {
  0% {
   filter: hue-rotate(540deg) saturate(7.3);
-  --accent-color: red;
- }
-
- 50% {
-  --accent-color: green;
  }
 
  to {

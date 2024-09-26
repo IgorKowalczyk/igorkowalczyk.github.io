@@ -245,19 +245,19 @@ export function ContactForm() {
      {error}
     </p>
    )}
-    <ButtonSecondary className="mt-4 ml-auto" type="submit" icon={false} disabled={loading} onClick={handleSubmit}>
-     {loading ? (
-      <>
+   <ButtonSecondary className="ml-auto mt-4" type="submit" icon={false} disabled={loading} onClick={handleSubmit}>
+    {loading ? (
+     <>
       <Icons.RefreshCw className="mr-2 size-4 animate-spin duration-200 motion-reduce:transition-none" />
-       Sending
-      </>
-     ) : (
-      <>
+      Sending
+     </>
+    ) : (
+     <>
       <Icons.Send className="mr-2 size-4" />
-       Send
-      </>
-     )}
-    </ButtonSecondary>
+      Send
+     </>
+    )}
+   </ButtonSecondary>
   </form>
  );
 }

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Icons } from "./Icons";
 import { ButtonSecondary, ButtonPrimary } from "@/components/Button";
 import { parseISO } from "@/lib/utils";
-import { Icons } from "./Icons";
 
 export function ProjectCard({ project }) {
  return (
@@ -37,7 +37,7 @@ export function ProjectCard({ project }) {
     )}
     {project.github && (
      <ButtonSecondary href={project.github} target="_blank" rel="noopener noreferrer">
-      <Icons.Github className="mr-2 size-5 dark:fill-white fill-neutral-700" />
+      <Icons.Github className="mr-2 size-5 fill-neutral-700 dark:fill-white" />
       View on Github
      </ButtonSecondary>
     )}
