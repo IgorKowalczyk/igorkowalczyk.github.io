@@ -154,7 +154,7 @@ export function ContactForm() {
 
  return (
   <form onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
-   <div className="block w-full items-center justify-center gap-1.5 text-left md:flex">
+   <div className="block w-full items-center justify-center gap-4 text-left md:flex">
     <label htmlFor="name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
@@ -214,10 +214,10 @@ export function ContactForm() {
         "border-red-400 text-red-400": invalid.message,
         "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
        },
-       "mt-2 max-h-40 min-h-[80px] w-full rounded-lg border-[1px] p-2 font-normal outline-0 duration-200 dark:bg-transparent"
+       "mt-2 max-h-40 min-h-24 w-full rounded-lg border-[1px] p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
       type="email"
-      placeholder="Hello there!"
+      placeholder="Hello there, I would like to ask you about..."
      />
     </label>
     <span
@@ -235,33 +235,29 @@ export function ContactForm() {
 
    {success && (
     <p className="flex items-center self-start text-green-500">
-     <Icons.MailCheck className="mr-1 size-4" />
+     <Icons.MailCheck className="mr-2 size-5" />
      {success}
     </p>
    )}
    {error && (
     <p className="flex items-center self-start text-red-400">
-     <Icons.X className="mr-1 size-4" />
+     <Icons.CircleAlert className="mr-2 size-5" />
      {error}
     </p>
    )}
-   <div className="w-full py-2">
-    <ButtonSecondary className="group ml-auto" type="submit" icon={false} disabled={loading}>
+    <ButtonSecondary className="mt-4 ml-auto" type="submit" icon={false} disabled={loading} onClick={handleSubmit}>
      {loading ? (
       <>
+      <Icons.RefreshCw className="mr-2 size-4 animate-spin duration-200 motion-reduce:transition-none" />
        Sending
-       <Icons.RefreshCw className="ml-2 mt-[2px] size-4 animate-spin duration-200 motion-reduce:transition-none" />
       </>
      ) : (
       <>
+      <Icons.Send className="mr-2 size-4" />
        Send
-       <svg className="ml-2 size-4 duration-200 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-       </svg>
       </>
      )}
     </ButtonSecondary>
-   </div>
   </form>
  );
 }
