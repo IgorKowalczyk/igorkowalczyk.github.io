@@ -8,6 +8,7 @@ import { MDXComponent } from "@/components/MDXComponents";
 
 export const metadata = {
  title: "What I use",
+ description: "A list of tools, software, and hardware that I use on a daily basis for work and personal projects.",
 };
 
 export default function Page() {

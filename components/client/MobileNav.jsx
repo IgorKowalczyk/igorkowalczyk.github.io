@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export default function MobileNav() {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
- const menuItems = [...nav.left, ...nav.right];
+ const menuItems = [...nav.main, ...nav.mobile];
 
  useEffect(() => {
   const handleKeyDown = (event) => {

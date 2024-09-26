@@ -1,12 +1,9 @@
 export const meta = {
  title: "Igor Kowalczyk",
- author: "Igor Kowalczyk",
  description: "I’m a full-stack developer based in Poland 🇵🇱. I have a passion for building web applications and solving problems.",
  shortDescription: "Full-stack developer, designer, and creator",
  //url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`,
  url: "https://igorkowalczyk.dev",
- locale: "en_US",
- siteName: "Igor Kowalczyk",
  accounts: {
   github: {
    username: "igorkowalczyk",
@@ -104,7 +101,7 @@ export const projects = [
 ];
 
 export const nav = {
- left: [
+ main: [
   {
    href: "/",
    title: "Home",
@@ -118,7 +115,8 @@ export const nav = {
    title: "Blog",
   },
  ],
- right: [
+ // Only for mobile navigation, will be merged with the main navigation
+ mobile: [
   {
    href: "/photography/",
    title: "Photography",

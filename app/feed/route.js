@@ -16,7 +16,7 @@ export function GET() {
      }, "")
     ).toISOString()}</updated>
     <author>
-      <name>${meta.author}</name>
+      <name>${meta.title}</name>
     </author>
     <id>${meta.url}/</id>
     ${allBlogs.reduce((acc, post) => {

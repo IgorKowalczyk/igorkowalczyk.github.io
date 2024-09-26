@@ -47,7 +47,7 @@ export function Nav() {
    </Link>
    <MobileNav />
    <div className="mr-auto hidden gap-2 lg:inline-flex">
-    {nav.left.map((item) => {
+    {nav.main.map((item) => {
      return <NavItem path={item.href} text={item.title} target={item.target} key={`nav-left-${item.href}`} />;
     })}
     <Popover className="relative" />

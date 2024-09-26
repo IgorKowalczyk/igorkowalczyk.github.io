@@ -11,7 +11,8 @@ import { GetUserData, getTotalContributionsForYears } from "@/lib/graphql";
 import { ConvertNumber } from "@/lib/utils";
 
 export const metadata = {
- title: "Igor Kowalczyk",
+ title: header.title,
+ description: meta.shortDescription,
 };
 
 export default async function HomePage() {

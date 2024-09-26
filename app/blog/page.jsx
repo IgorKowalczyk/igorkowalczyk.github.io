@@ -5,6 +5,11 @@ import { Icons } from "../../components/Icons";
 import { Description, Header1, Header2 } from "@/components/Headers";
 import { parseISO } from "@/lib/utils";
 
+export const metadata = {
+ title: "Tech Blog",
+ description: "A blog about technology, programming, and various intriguing topics. Here I share my experiences, projects and opinions.",
+};
+
 export default function Page() {
  const posts = allBlogs.map((post) => pick(post, ["slug", "title", "summary", "publishedAt"])).sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));
 

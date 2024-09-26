@@ -8,6 +8,7 @@ import { meta } from "@/config";
 
 export const metadata = {
  title: "My Work",
+ description: "Explore some of my latest projects and contributions, including open-source projects and personal projects.",
 };
 
 export default function Page() {

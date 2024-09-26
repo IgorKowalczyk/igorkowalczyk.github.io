@@ -5,6 +5,7 @@ import { contact } from "@/config";
 
 export const metadata = {
  title: "Contact",
+ description: "If you have a project in mind, or just want to say hi, feel free to send me a message.",
 };
 
 export default function Page() {

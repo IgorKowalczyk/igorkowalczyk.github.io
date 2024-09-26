@@ -5,6 +5,7 @@ import { getPhotography } from "@/lib/getPhotography";
 
 export const metadata = {
  title: "Photography",
+ description: "Explore some of my finest photos, captured during my travels and adventures.",
 };
 
 export default async function Page() {
