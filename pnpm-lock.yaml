@@ -77,9 +77,6 @@ importers:
       sharp:
         specifier: 0.33.5
         version: 0.33.5
-      swr:
-        specifier: 2.2.5
-        version: 2.2.5(react@18.3.1)
       tailwind-merge:
         specifier: 2.5.2
         version: 2.5.2
@@ -87,15 +84,12 @@ importers:
         specifier: 13.12.0
         version: 13.12.0
       vaul:
-        specifier: 0.9.3
-        version: 0.9.3(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.0.0
+        version: 1.0.0(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@igorkowalczyk/eslint-config':
         specifier: 3.0.0-beta.11
         version: 3.0.0-beta.11(@types/eslint@9.6.0)(eslint@9.11.1(jiti@1.21.0))(prettier@3.3.3)(tailwindcss@3.4.13)(typescript@5.4.2)
-      '@igorkowalczyk/is-browser':
-        specifier: 5.0.4
-        version: 5.0.4(tailwindcss@3.4.13)
       '@igorkowalczyk/prettier-config':
         specifier: 3.0.0-beta.11
         version: 3.0.0-beta.11(prettier@3.3.3)
@@ -120,9 +114,6 @@ importers:
       globby:
         specifier: 14.0.2
         version: 14.0.2
-      mini-svg-data-uri:
-        specifier: 1.4.4
-        version: 1.4.4
       postcss:
         specifier: 8.4.47
         version: 8.4.47
@@ -494,12 +485,6 @@ packages:
     resolution: {integrity: sha512-2g5TA+IJWj0Ti5DxjTsXF/Ont3aY0ZxozqO2kYCfPM03olPVM7ziYk8rQAlF3qukqiAYVYmZpsT/U0n655Lg5g==}
     peerDependencies:
       eslint: ^9
-
-  '@igorkowalczyk/is-browser@5.0.4':
-    resolution: {integrity: sha512-Zx7R3z+htZ+uUjROBmDSavGV3K7V50B8EgarJonHsFDWC9ELmA9KtlnLmWBKGImTzr0OgUgZcFeZ0DCVrstSSQ==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      tailwindcss: '>=3.0.0'
 
   '@igorkowalczyk/prettier-config@3.0.0-beta.11':
     resolution: {integrity: sha512-wK1wKDWzjfR6Wky68E+FnkLbpLmuFIuXSH2Fb9Cxql2GiuYUGUYXZQas8ITZVCcJngIUM5Js6X5v0qemaTgERw==}
@@ -2638,10 +2623,6 @@ packages:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
 
-  mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
-
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -3331,11 +3312,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  swr@2.2.5:
-    resolution: {integrity: sha512-QtxqyclFeAsxEUeZIYmsaQ0UjimSq1RZ9Un7I68/0ClKK/U3LoyQunwkQfJZr2fc22DfIXLNDc2wFyTEikCUpg==}
-    peerDependencies:
-      react: ^16.11.0 || ^17.0.0 || ^18.0.0
-
   synckit@0.9.1:
     resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3528,11 +3504,6 @@ packages:
       '@types/react':
         optional: true
 
-  use-sync-external-store@1.2.0:
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -3544,8 +3515,8 @@ packages:
     resolution: {integrity: sha512-c1Q0mCiPlgdTVVVIJIrBuxNicYE+t/7oKeI9MWLj3fh/uq2Pxh/3eeWbVZ4OcGW1TUf53At0njHw5SMdA3tmMg==}
     engines: {node: '>= 0.10'}
 
-  vaul@0.9.3:
-    resolution: {integrity: sha512-VNWuzw37fw6DWptl9PMUc9PH5NJpGqpetcxDMRiH/GzH2inJAEMwo/uZqaONlGseeOG8xDtrrp3nYoiZhyabpw==}
+  vaul@1.0.0:
+    resolution: {integrity: sha512-TegfMkwy86RSvSiIVREG6OqgRL7agqRsKYyWYacyVUAdpcIi34QoCOED476Mbf8J5d06e1hygSdvJhehlxEBhQ==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -4085,10 +4056,6 @@ snapshots:
       - supports-color
       - tailwindcss
       - typescript
-
-  '@igorkowalczyk/is-browser@5.0.4(tailwindcss@3.4.13)':
-    dependencies:
-      tailwindcss: 3.4.13
 
   '@igorkowalczyk/prettier-config@3.0.0-beta.11(prettier@3.3.3)':
     dependencies:
@@ -6923,8 +6890,6 @@ snapshots:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  mini-svg-data-uri@1.4.4: {}
-
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -7668,12 +7633,6 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swr@2.2.5(react@18.3.1):
-    dependencies:
-      client-only: 0.0.1
-      react: 18.3.1
-      use-sync-external-store: 1.2.0(react@18.3.1)
-
   synckit@0.9.1:
     dependencies:
       '@pkgr/core': 0.1.1
@@ -7910,17 +7869,13 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.9
 
-  use-sync-external-store@1.2.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
   util-deprecate@1.0.2: {}
 
   uuid@9.0.1: {}
 
   validator@13.12.0: {}
 
-  vaul@0.9.3(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  vaul@1.0.0(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@radix-ui/react-dialog': 1.1.1(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1

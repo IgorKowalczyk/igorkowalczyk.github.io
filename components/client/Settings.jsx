@@ -30,10 +30,10 @@ export default function Settings() {
     onClick={() => setIsOpen(true)}
     className={cn(
      {
-      "bg-blue-200 dark:bg-white/15": isOpen,
-      "bg-gray-200 dark:bg-white/10": !isOpen,
+      "!bg-gray-300 dark:!bg-white/15": isOpen,
+      "!bg-transparent hover:!bg-gray-300 dark:hover:!bg-white/15": !isOpen,
      },
-     "group ml-auto flex h-10 w-10 items-center justify-center px-2"
+     "group !outline-none ml-auto flex h-10 w-10 items-center justify-center px-2"
     )}
    >
     <Icons.Settings
@@ -50,7 +50,7 @@ export default function Settings() {
     <DialogBackdrop transition className="fixed inset-0 bg-black/50 duration-200 data-[closed]:opacity-0 motion-reduce:transition-none dark:bg-[#161617]/70" />
     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
      <div className="flex min-h-full items-center justify-center p-4">
-      <DialogPanel transition className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border border-black/15 bg-white p-6 text-left align-middle shadow-lg transition-all duration-200 data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]">
+      <DialogPanel transition className="backdrop-blur-xl hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border border-black/15 bg-white/70 p-6 text-left align-middle shadow-lg transition-all duration-200 data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70">
        <DialogTitle as="h3" className="text-xl/6 font-medium text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
         Settings
        </DialogTitle>

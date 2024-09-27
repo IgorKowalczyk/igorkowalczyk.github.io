@@ -1,12 +1,9 @@
 import tailwindHeadlessui from "@headlessui/tailwindcss";
-import tailwindIsBrowser from "@igorkowalczyk/is-browser";
 import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
 import tailwindTypography from "@tailwindcss/typography";
-import svgToDataUri from "mini-svg-data-uri";
 import tailwindGradientMaskImage from "tailwind-gradient-mask-image";
 import colors from "tailwindcss/colors";
 import { spacing } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
 import tailwindTextFill from "tailwindcss-text-fill";
 
 export default {
@@ -95,18 +92,9 @@ export default {
   typography: ["dark"],
  },
  plugins: [
-  /* eslint-disable-next-line */
-  plugin(function ({ matchUtilities }) {
-   matchUtilities({
-    "bg-grid": (value) => ({
-     backgroundImage: `url("${svgToDataUri(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`)}")`,
-    }),
-   });
-  }),
   tailwindTextFill,
   tailwindGradientMaskImage,
   tailwindHeadlessui,
-  tailwindIsBrowser,
   tailwindTypography,
   tailwindAspectRatio,
  ],
