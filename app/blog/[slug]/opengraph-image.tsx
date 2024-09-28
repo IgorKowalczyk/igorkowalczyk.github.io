@@ -32,9 +32,6 @@ export default async function Image({ params }) {
      flexDirection: "column",
      justifyContent: "flex-end",
      backgroundColor: "#101110",
-     fontFamily: "GeistMono-Black",
-     fontWeight: 900,
-     fontSize: "64px",
     }}
    >
     <div
@@ -59,7 +56,7 @@ export default async function Image({ params }) {
      style={{
       color: "rgba(255, 255, 255, 0.5)",
       fontFamily: "GeistMono-Regular",
-      fontSize: 24,
+      fontSize: 28,
       marginBottom: "15px",
      }}
     >
@@ -69,7 +66,7 @@ export default async function Image({ params }) {
      style={{
       color: "#fff",
       fontFamily: "GeistMono-Black",
-      fontSize: 48,
+      fontSize: 64,
      }}
     >
      {post.title}

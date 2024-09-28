@@ -24,9 +24,6 @@ export default async function Image() {
      flexDirection: "column",
      justifyContent: "flex-end",
      backgroundColor: "#101110",
-     fontFamily: "GeistMono-Black",
-     fontWeight: 900,
-     fontSize: "64px",
     }}
    >
     <div
@@ -51,7 +48,7 @@ export default async function Image() {
      style={{
       color: "#fff",
       fontFamily: "GeistMono-Black",
-      fontSize: 48,
+      fontSize: 64,
      }}
     >
      {meta.title}
