@@ -24,7 +24,7 @@ export default function Page() {
     {posts.map((post, index) => (
      <Link href={`/blog/${post.slug}`} className="w-full" key={`/blog/${post.slug}`}>
       <li className="-mt-3 mb-10 ml-6 rounded-2xl border px-6 py-3 duration-200 hover:bg-neutral-200/50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617] dark:hover:border-neutral-700 dark:hover:bg-[#202021]">
-       <span className="absolute -left-3 flex size-6 items-center justify-center rounded-full bg-black/10 ring-8 ring-white backdrop-blur dark:bg-neutral-800 dark:bg-white/10 dark:ring-[#101110]">
+       <span className="absolute -left-3 flex size-6 items-center justify-center rounded-full bg-black/10 ring-8 ring-white backdrop-blur dark:bg-white/10 dark:ring-[#101110]">
         <Icons.Calendar className="size-3 text-neutral-800 dark:text-white" />
        </span>
        <header>

@@ -1,6 +1,6 @@
 import { allBlogs } from "contentlayer/generated";
-import { meta } from "@/config";
 import type { MetadataRoute } from "next";
+import { meta } from "@/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
  const blogs = allBlogs.map((post) => ({

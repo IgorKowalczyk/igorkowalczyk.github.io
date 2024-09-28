@@ -40,7 +40,7 @@ interface GraphqlResponse {
  };
 }
 
-export async function GetPopular(): Promise<Object | null> {
+export async function GetPopular(): Promise<User | null> {
  const { data }: GraphqlResponse = await requestGraphql(
   `
     query($username: String!) {

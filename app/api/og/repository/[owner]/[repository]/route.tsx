@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
-import { GetOGImage } from "@/lib/graphql";
 import { NextRequest } from "next/server";
+import { GetOGImage } from "@/lib/graphql";
 
 export const runtime = "edge";
 
@@ -44,8 +44,8 @@ export async function GET(request: NextRequest, context: { params: Params }) {
   });
  }
 
- const fontBold = fetch(new URL(`public/fonts/geist-mono-900.otf`, import.meta.url)).then((res) => res.arrayBuffer());
- const fontRegular = fetch(new URL(`public/fonts/geist-mono-400.otf`, import.meta.url)).then((res) => res.arrayBuffer());
+ const fontBold = fetch(new URL("public/fonts/geist-mono-900.otf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontRegular = fetch(new URL("public/fonts/geist-mono-400.otf", import.meta.url)).then((res) => res.arrayBuffer());
 
  const mostUsedLanguage = og.languages && og.languages.length > 0 ? og.languages.reduce((a, b) => (a.size > b.size ? a : b)) : { node: { name: "Unknown", color: "#c1c1c1" }, size: 0 };
 

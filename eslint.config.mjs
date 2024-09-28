@@ -8,4 +8,10 @@ export default [
  ...eslintConfig.node,
  ...eslintConfig.tailwindcss,
  ...eslintConfig.typescript,
+ {
+  files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs"],
+  rules: {
+   "require-await": "off",
+  },
+ },
 ];

@@ -18,8 +18,8 @@ export default async function Image({ params }) {
 
  if (!post) return redirect("/opengraph-image");
 
- const fontBold = fetch(new URL(`public/fonts/geist-mono-900.otf`, import.meta.url)).then((res) => res.arrayBuffer());
- const fontRegular = fetch(new URL(`public/fonts/geist-mono-400.otf`, import.meta.url)).then((res) => res.arrayBuffer());
+ const fontBold = fetch(new URL("public/fonts/geist-mono-900.otf", import.meta.url)).then((res) => res.arrayBuffer());
+ const fontRegular = fetch(new URL("public/fonts/geist-mono-400.otf", import.meta.url)).then((res) => res.arrayBuffer());
 
  return new ImageResponse(
   (

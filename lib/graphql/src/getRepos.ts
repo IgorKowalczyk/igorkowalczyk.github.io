@@ -54,7 +54,7 @@ interface GraphqlResponse {
  };
 }
 
-export async function GetRepos(type: string, count: number): Promise<Object | null> {
+export async function GetRepos(type: string, count: number): Promise<GraphqlResponse> {
  if (type.toUpperCase() === "PRIVATE") {
   const { data }: GraphqlResponse = await requestGraphql(
    `
