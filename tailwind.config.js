@@ -6,14 +6,15 @@ import colors from "tailwindcss/colors";
 import { spacing } from "tailwindcss/defaultTheme";
 import tailwindTextFill from "tailwindcss-text-fill";
 
+/** @type {import('tailwindcss').Config} */
 export default {
  darkMode: "class",
  content: [
   // Prettier
   "./app/**/*.{js,ts,jsx,tsx}",
   "./components/**/*.{js,ts,jsx,tsx}",
-  "./config.js",
-  "./content/blog/*.mdx",
+  "./config.{js,ts,jsx,tsx}",
+  "./content/**/*.mdx",
  ],
  theme: {
   container: {
@@ -91,11 +92,5 @@ export default {
  variants: {
   typography: ["dark"],
  },
- plugins: [
-  tailwindTextFill,
-  tailwindGradientMaskImage,
-  tailwindHeadlessui,
-  tailwindTypography,
-  tailwindAspectRatio,
- ],
+ plugins: [tailwindTextFill, tailwindGradientMaskImage, tailwindHeadlessui, tailwindTypography, tailwindAspectRatio],
 };

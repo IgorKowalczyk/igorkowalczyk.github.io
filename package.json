@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "NODE_ENV=development next dev",
-    "dev:turbo": "NODE_ENV=development next dev --turbo --show-all",
+    "dev": "next dev",
+    "dev:turbo": " next dev --turbo --show-all",
     "build": "next build",
     "deploy": "pnpm run build && pnpm run start",
     "format": "prettier . --write --cache --ignore-unknown --plugin=prettier-plugin-tailwindcss",
@@ -52,7 +52,10 @@
     "@next/bundle-analyzer": "14.2.13",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.15",
-    "@types/react": "18.3.9",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.10",
+    "@types/react-dom": "18.3.0",
+    "@types/validator": "13.12.2",
     "autoprefixer": "10.4.20",
     "eslint": "9.11.1",
     "globby": "14.0.2",
@@ -61,7 +64,8 @@
     "prettier-plugin-tailwindcss": "0.6.8",
     "tailwind-gradient-mask-image": "1.2.0",
     "tailwindcss": "3.4.13",
-    "tailwindcss-text-fill": "0.2.0"
+    "tailwindcss-text-fill": "0.2.0",
+    "typescript": "5.6.2"
   },
   "browserslist": [
     ">0.3%",

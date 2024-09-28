@@ -78,7 +78,7 @@ pre {
 }
 
 [data-highlighted-chars] {
- @apply rounded-md bg-gray-500 bg-opacity-10 p-1;
+ @apply rounded-md bg-gray-500/10 p-1;
 }
 
 [data-rehype-pretty-code-title] {

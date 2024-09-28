@@ -16,7 +16,7 @@
 
 <!-- prettier-ignore-start -->
 > [!IMPORTANT]
-> **Remember to change pre-defined values in `config.js`** file (like `name`, `description`, `socials` etc.) before deploying your website! Change them in your forked repository.
+> **Remember to change pre-defined values in `config.tsx`** file (like `name`, `description`, `socials` etc.) before deploying your website! Change them in your forked repository.
 <!-- prettier-ignore-end -->
 
 ## 🖥️ Hosting
@@ -30,7 +30,7 @@
 3. Fill `DISCORD_WEBHOOK_URL` with your Discord Webhook URL for contact form
 4. Click on `Deploy` button and wait for deploy
 5. Click on `Visit` button to see your deployed website
-6. In your forked repository change pre-defined values in `config.js` file (like `name`, `description`, `socials` etc.)
+6. In your forked repository change pre-defined values in `config.tsx` file (like `name`, `description`, `socials` etc.)
 
 ### 🔩 Self Hosting
 
@@ -40,7 +40,7 @@
 4. In `.env` file set this values:
    - `GITHUB_ACCESS_TOKEN` - Your GitHub access token with public repositories permission
    - `DISCORD_WEBHOOK_URL` - Discord Webhook URL for contact form
-5. Edit pre-defined values in `config.js` file (like `name`, `description`, `socials` etc.)
+5. Edit pre-defined values in `config.tsx` file (like `name`, `description`, `socials` etc.)
 6. Run `pnpm build` to build the project or `pnpm dev` to run the project in development mode.
 
 > [!NOTE]

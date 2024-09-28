@@ -7,4 +7,5 @@ export default [
  ...eslintConfig.next,
  ...eslintConfig.node,
  ...eslintConfig.tailwindcss,
+ ...eslintConfig.typescript,
 ];
