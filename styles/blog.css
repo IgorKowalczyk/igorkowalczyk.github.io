@@ -11,12 +11,12 @@
 }
 
 .prose .anchor:after {
- @apply text-gray-300 dark:text-neutral-800;
+ @apply text-neutral-300 dark:text-neutral-800;
  content: "#";
 }
 
 .prose pre {
- @apply border border-gray-200 bg-gray-50 dark:border-neutral-800 dark:bg-[#161617];
+ @apply border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-[#161617];
 }
 
 .prose strong {
@@ -29,7 +29,7 @@ blockquote p::before {
 }
 
 blockquote {
- @apply !border-l-gray-300 !not-italic !text-gray-500 dark:!border-l-neutral-800 dark:!text-gray-400;
+ @apply !border-l-neutral-300 !not-italic !text-neutral-500 dark:!border-l-neutral-800 dark:!text-neutral-400;
 }
 
 .prose img {
@@ -70,19 +70,19 @@ pre {
  width: 1rem;
  margin-right: 1rem;
  text-align: right;
- color: gray;
+ color: neutral;
 }
 
 [data-highlighted-line] {
- @apply right-0 rounded-md bg-gray-500/10 py-1;
+ @apply right-0 rounded-md bg-neutral-500/10 py-1;
 }
 
 [data-highlighted-chars] {
- @apply rounded-md bg-gray-500 bg-opacity-10 p-1;
+ @apply rounded-md bg-neutral-500/10 p-1;
 }
 
 [data-rehype-pretty-code-title] {
- @apply rounded-t-lg border border-gray-200 bg-gray-100 px-4 py-1 font-mono font-semibold text-neutral-900 dark:border-neutral-800 dark:bg-[#1c1c1c] dark:text-neutral-200;
+ @apply rounded-t-lg border border-neutral-200 bg-neutral-100 px-4 py-1 font-mono font-semibold text-neutral-900 dark:border-neutral-800 dark:bg-[#1c1c1c] dark:text-neutral-200;
 }
 
 [data-rehype-pretty-code-title] + pre {
