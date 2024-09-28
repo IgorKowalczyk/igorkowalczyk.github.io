@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <main className="mx-auto min-h-screen max-w-2xl">{children}</main>
       <div className="noise pointer-events-none absolute inset-0" />
       <div className="amazing-rays" />
-      {/* <div className="amazing-rays pointer-events-none relative -mb-10 -ml-16 -mt-56 flex -rotate-45 justify-center overflow-hidden">
+      {/* <div className="amazing-rays pointer-events-none relative -mb-10 -ml-16 -mt-56 flex -rotate-12 justify-center overflow-hidden">
        <div className="h-56 w-16 bg-red-500"></div>
        <div className="h-64 w-16 bg-yellow-500"></div>
        <div className="h-72 w-16 bg-cyan-500"></div>
