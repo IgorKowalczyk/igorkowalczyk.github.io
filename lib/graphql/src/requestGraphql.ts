@@ -1,3 +1,4 @@
+/* eslint-disable typescript/no-explicit-any */
 export async function requestGraphql(query: string, variables: Record<string, any>): Promise<any> {
  const response = await fetch("https://api.github.com/graphql", {
   method: "POST",

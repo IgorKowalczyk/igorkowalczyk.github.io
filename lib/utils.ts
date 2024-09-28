@@ -23,6 +23,7 @@ export const parseISO = (date: string): string => {
  })} ${formatted.getUTCDate()}, ${formatted.getFullYear()}`;
 };
 
+/* eslint-disable typescript/no-explicit-any */
 export function stripTypenames(value: any): any {
  if (Array.isArray(value)) {
   return value.map(stripTypenames);

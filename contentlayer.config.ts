@@ -9,14 +9,14 @@ import remarkGfm from "remark-gfm";
 const headersRegex = /(#{1,6})\s+(.+)/g;
 
 const computedFields: ComputedFields = {
- readingTime: { type: "json", resolve: (doc: any) => readingTime(doc.body.raw) },
+ readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
  wordCount: {
   type: "number",
-  resolve: (doc: any) => doc.body.raw.split(/\s+/gu).length,
+  resolve: (doc) => doc.body.raw.split(/\s+/gu).length,
  },
  slug: {
   type: "string",
-  resolve: (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+  resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
  },
 };
 
@@ -35,7 +35,7 @@ const Blog = defineDocumentType(() => ({
   ...computedFields,
   headings: {
    type: "list",
-   resolve: (doc: any) => {
+   resolve: (doc) => {
     const slugger = new GitHubSlugger();
     const headings = Array.from(doc.body.raw.matchAll(headersRegex))
      .map((value: RegExpMatchArray) => ({
@@ -49,7 +49,7 @@ const Blog = defineDocumentType(() => ({
   },
   structuredData: {
    type: "json",
-   resolve: (doc: any) => ({
+   resolve: (doc) => ({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: doc.title,
@@ -89,7 +89,7 @@ const contentLayerConfig = makeSource({
     {
      theme: "one-dark-pro",
      keepBackground: false,
-     onVisitLine(node: any) {
+     onVisitLine(node) {
       // Prevent lines from collapsing in `display: grid` mode, and allow empty
       // lines to be copy/pasted
       if (node.children.length === 0) {
