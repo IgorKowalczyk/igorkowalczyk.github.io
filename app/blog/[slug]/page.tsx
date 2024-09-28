@@ -63,11 +63,11 @@ export default function Blog({ params }) {
       <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
        <div className="flex items-center">
         <Image alt={meta.title} height={24} width={24} src={Avatar} className="rounded-full" />
-        <time className="ml-2 text-sm text-gray-700 dark:text-neutral-300" dateTime={new Date(post.publishedAt).toUTCString()}>
+        <time className="ml-2 text-sm text-neutral-700 dark:text-neutral-300" dateTime={new Date(post.publishedAt).toUTCString()}>
          {post.author} / {parseISO(post.publishedAt)}
         </time>
        </div>
-       <p className="mt-2 min-w-32 text-sm text-gray-700 dark:text-neutral-300 md:mt-0">
+       <p className="mt-2 min-w-32 text-sm text-neutral-700 dark:text-neutral-300 md:mt-0">
         {post.wordCount} words • {post.readingTime?.text}
        </p>
       </div>
@@ -93,7 +93,7 @@ export default function Blog({ params }) {
      ))}
     </div>
    </div>
-   <div className="flex w-full justify-end py-4 text-gray-700 dark:text-neutral-300">
+   <div className="flex w-full justify-end py-4 text-neutral-700 dark:text-neutral-300">
     <Link href={`https://github.com/${meta.accounts.github.username}/${meta.accounts.github.repo}/blob/master/data/blog/${post.slug}.mdx`} target="_blank" rel="noopener noreferrer">
      Suggest a change
     </Link>

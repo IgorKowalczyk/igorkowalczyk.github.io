@@ -36,7 +36,7 @@ export function ButtonPrimary({ href, children, icon = true, ...props }: ButtonP
  );
 }
 
-export const buttonSecondaryStyles = "group flex w-fit items-center rounded-md bg-gray-200 px-4 py-2 font-medium text-neutral-700 duration-200 hover:bg-gray-300 disabled:cursor-not-allowed disabled:opacity-50  motion-reduce:transition-none dark:bg-white/10 dark:text-white dark:hover:bg-white/15";
+export const buttonSecondaryStyles = "group flex w-fit items-center rounded-md bg-neutral-200 px-4 py-2 font-medium text-neutral-700 duration-200 hover:bg-neutral-300 disabled:cursor-not-allowed disabled:opacity-50  motion-reduce:transition-none dark:bg-white/10 dark:text-white dark:hover:bg-white/15";
 
 export function ButtonSecondary({ href, children, icon = true, ...props }: ButtonProps) {
  if (href) {

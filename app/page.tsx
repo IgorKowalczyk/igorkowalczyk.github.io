@@ -22,28 +22,28 @@ export default async function HomePage() {
  return (
   <>
    <section className="mb-16 mt-20">
-    <h1 className="dark:color-black relative m-0 text-4xl font-black tracking-[-0.03em] text-gray-800 duration-300 dark:text-white md:text-left">Hey, I’m {header.title}</h1>
-    <p className="mt-2 text-lg text-gray-700 dark:text-neutral-400">{header.description}</p>
+    <h1 className="dark:color-black relative m-0 text-4xl font-black tracking-[-0.03em] text-neutral-800 duration-300 dark:text-white md:text-left">Hey, I’m {header.title}</h1>
+    <p className="mt-2 text-lg text-neutral-700 dark:text-neutral-400">{header.description}</p>
     <div className="mt-9 flex flex-row flex-wrap gap-4">
      <ButtonPrimary href="/#contact">Contact me</ButtonPrimary>
      <ButtonSecondary href="/#about">More about me</ButtonSecondary>
     </div>
    </section>
 
-   <section className="mb-16 flex flex-wrap justify-around gap-4 text-center text-xs font-semibold text-gray-800/70 dark:text-white/70">
-    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 text-center duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+   <section className="mb-16 flex flex-wrap justify-around gap-4 text-center text-xs font-semibold text-neutral-800/70 dark:text-white/70">
+    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 text-center duration-200 hover:text-neutral-800 motion-reduce:transition-none dark:hover:text-white">
      <Icons.Star className="size-4 stroke-2" /> <span>{userData && ConvertNumber(userData.userStars)} stars</span>
     </Link>
 
-    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 duration-200 hover:text-neutral-800 motion-reduce:transition-none dark:hover:text-white">
      <Icons.GitGraph className="size-4 stroke-2" /> <span>{userData && ConvertNumber(contributions.total)} commits</span>
     </Link>
 
-    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 duration-200 hover:text-neutral-800 motion-reduce:transition-none dark:hover:text-white">
      <Icons.GitFork className="size-4 stroke-2" /> <span>{userData && ConvertNumber(userData.userForks)} repositories forks</span>
     </Link>
 
-    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}?tab=followers`} className="flex items-center gap-2 duration-200 hover:text-gray-800 motion-reduce:transition-none dark:hover:text-white">
+    <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}?tab=followers`} className="flex items-center gap-2 duration-200 hover:text-neutral-800 motion-reduce:transition-none dark:hover:text-white">
      <Icons.Users className="size-4 stroke-2" /> <span>{userData && ConvertNumber(userData.userFollowers)} Github followers</span>
     </Link>
    </section>
@@ -89,7 +89,7 @@ export default async function HomePage() {
       );
      })}
     </div>
-    <p className="mt-4 text-center text-gray-700 dark:text-neutral-400">...and many more!</p>
+    <p className="mt-4 text-center text-neutral-700 dark:text-neutral-400">...and many more!</p>
    </section>
 
    <section className="mb-12">

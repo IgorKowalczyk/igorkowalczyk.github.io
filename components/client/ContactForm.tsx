@@ -172,7 +172,7 @@ export function ContactForm() {
  return (
   <form onSubmit={handleSubmit} className="relative flex w-full flex-col items-center justify-center">
    <div className="block w-full items-center justify-center gap-4 text-left md:flex">
-    <label htmlFor="name" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
+    <label htmlFor="name" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -185,7 +185,7 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.name,
-        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.name,
+        "border-neutral-300 text-neutral-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.name,
        },
        "my-2 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
@@ -193,7 +193,7 @@ export function ContactForm() {
       placeholder="John Doe"
      />
     </label>
-    <label htmlFor="email" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
+    <label htmlFor="email" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
      Email
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -206,7 +206,7 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.email,
-        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.email,
+        "border-neutral-300 text-neutral-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.email,
        },
        "my-2 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
@@ -216,7 +216,7 @@ export function ContactForm() {
     </label>
    </div>
    <div className="mt-2 flex w-full flex-col items-center justify-center gap-1.5">
-    <label htmlFor="message" className="w-full text-left text-sm font-semibold tracking-wide text-gray-700 dark:text-neutral-300">
+    <label htmlFor="message" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
      Message
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -229,7 +229,7 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.message,
-        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
+        "border-neutral-300 text-neutral-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
        },
        "mt-2 max-h-40 min-h-24 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
@@ -240,7 +240,7 @@ export function ContactForm() {
      className={cn(
       {
        "text-red-400": formData.message.trim().length >= 500,
-       "text-gray-700 dark:text-neutral-300": formData.message.trim().length >= 10 && formData.message.trim().length < 500,
+       "text-neutral-700 dark:text-neutral-300": formData.message.trim().length >= 10 && formData.message.trim().length < 500,
       },
       "ml-auto text-xs opacity-50"
      )}

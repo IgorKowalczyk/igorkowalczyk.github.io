@@ -38,8 +38,8 @@ export default {
        "scroll-margin-top": spacing[28],
       },
       a: {
-       color: colors.gray[500],
-       "text-decoration-color": colors.gray[600],
+       color: colors.neutral[500],
+       "text-decoration-color": colors.neutral[600],
        transition: "0.2s",
        "text-decoration-thickness": "1.5px",
        "text-underline-offset": "2px",
@@ -52,22 +52,22 @@ export default {
     },
     dark: {
      css: {
-      color: colors.gray[300],
+      color: colors.neutral[300],
       "h1,h2,h3,h4,h5": {
-       color: colors.gray[100],
+       color: colors.neutral[100],
        "scroll-margin-top": spacing[28],
       },
       a: {
-       color: colors.gray[100],
-       "text-decoration-color": colors.gray[500],
+       color: colors.neutral[100],
+       "text-decoration-color": colors.neutral[500],
        "&:hover": {
-        color: colors.gray[100],
-        "text-decoration-color": colors.gray[100],
+        color: colors.neutral[100],
+        "text-decoration-color": colors.neutral[100],
        },
       },
       blockquote: {
-       borderLeftColor: colors.gray[700],
-       color: colors.gray[300],
+       borderLeftColor: colors.neutral[700],
+       color: colors.neutral[300],
       },
      },
     },

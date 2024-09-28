@@ -29,7 +29,7 @@ function NavItem({ path, text, target }: NavItemProps) {
    href={path}
    className={cn("relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2", {
     "bg-black/10 dark:bg-white/10 dark:text-neutral-200": isActive,
-    "text-gray-700 dark:text-neutral-400": !isActive,
+    "text-neutral-700 dark:text-neutral-400": !isActive,
    })}
   >
    <>
@@ -47,7 +47,7 @@ function NavItem({ path, text, target }: NavItemProps) {
 export function Nav() {
  return (
   <nav className="z-50 mx-auto flex w-full max-w-2xl items-center gap-4 pt-9 font-mono">
-   <Link href="/" className="text-lg font-black text-gray-800 duration-300 motion-reduce:transition-none dark:text-white">
+   <Link href="/" className="text-lg font-black text-neutral-800 duration-300 motion-reduce:transition-none dark:text-white">
     IK
     <span className="bg-gradient-to-r from-[#6310ff] to-[#14291ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
    </Link>

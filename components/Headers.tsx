@@ -10,7 +10,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
 
 export function Description({ children, ...props }: DescroptionProps) {
  return (
-  <p {...props} className={cn("text-gray-700 dark:text-neutral-300", props.className)}>
+  <p {...props} className={cn("text-neutral-700 dark:text-neutral-300", props.className)}>
    {children}
   </p>
  );
@@ -18,7 +18,7 @@ export function Description({ children, ...props }: DescroptionProps) {
 
 export function Header1({ children, ...props }: HeaderProps) {
  return (
-  <h1 {...props} className={cn("dark:color-black mb-2 scroll-mt-20 box-decoration-clone bg-clip-text text-3xl font-black tracking-[-0.03em] text-gray-800 motion-reduce:transition-none dark:text-white", props.className)}>
+  <h1 {...props} className={cn("dark:color-black mb-2 scroll-mt-20 box-decoration-clone bg-clip-text text-3xl font-black tracking-[-0.03em] text-neutral-800 motion-reduce:transition-none dark:text-white", props.className)}>
    {children}
    <span className="bg-gradient-to-r from-[#6310ff] to-[#1491ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span>
   </h1>

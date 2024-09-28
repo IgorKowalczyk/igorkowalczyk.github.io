@@ -20,7 +20,7 @@ export default function Page() {
    {projects.map((project) => (
     <Fragment key={`project-${project.name}`}>
      <ProjectCard project={project} className="mb-6" />
-     {project !== projects[projects.length - 1] && <hr className="mx-auto mb-16 w-full max-w-56 border border-gray-200 dark:border-neutral-800" />}
+     {project !== projects[projects.length - 1] && <hr className="mx-auto mb-16 w-full max-w-56 border border-neutral-200 dark:border-neutral-800" />}
     </Fragment>
    ))}
 
