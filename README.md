@@ -19,6 +19,10 @@
 > **Remember to change pre-defined values in `config.tsx`** file (like `name`, `description`, `socials` etc.) before deploying your website! Change them in your forked repository.
 <!-- prettier-ignore-end -->
 
+## 📸 Screenshots
+
+![Home page](https://github.com/user-attachments/assets/ee4cc06b-432d-4e1a-8bd2-59a60d6ae31e)
+
 ## 🖥️ Hosting
 
 ### ▲ Vercel (recommended)

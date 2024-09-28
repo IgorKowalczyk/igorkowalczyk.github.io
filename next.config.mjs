@@ -1,5 +1,6 @@
 import { withContentlayer } from "next-contentlayer2";
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
  pageExtensions: ["jsx", "js", "ts", "tsx", "mdx"],
  env: {
@@ -83,6 +84,24 @@ const nextConfig = {
    },
    {
     source: "/assets/(.*)",
+    headers: [
+     {
+      key: "Cache-Control",
+      value: "public, max-age=31536000, must-revalidate",
+     },
+    ],
+   },
+   {
+    source: "/assets/projects/(.*)",
+    headers: [
+     {
+      key: "Cache-Control",
+      value: "public, max-age=31536000, must-revalidate",
+     },
+    ],
+   },
+   {
+    source: "/assets/photography/(.*)",
     headers: [
      {
       key: "Cache-Control",
