@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
    {project.images &&
     project.images.length > 0 &&
     project.images.map((image) => (
-     <Link key={`project-image-${image.alt}-${image.height}`} href={image.src} target="_blank" rel="noopener noreferrer">
+     <Link key={`project-image-${image.alt}-${image.height}`} href={`_next/image?url=${image.src}&w=${image.width}&q=100`} target="_blank" rel="noopener noreferrer">
       <Image src={image.src} alt={image.alt} width={image.width} height={image.height} className="aspect-video cursor-zoom-in rounded-xl border border-black/10 duration-200 hover:opacity-70 dark:border-neutral-800" />
      </Link>
     ))}
