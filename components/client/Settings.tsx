@@ -38,10 +38,10 @@ export default function Settings() {
     <Icons.Settings
      className={cn(
       {
-       "rotate-90 text-blue-800 dark:text-white": isOpen,
+       "rotate-90 dark:text-white": isOpen,
        "text-gray-800 dark:text-neutral-200": !isOpen,
       },
-      "h-5 w-5 shrink-0 duration-200 group-hover:rotate-90 group-hover:transform group-hover:text-blue-800 motion-reduce:transition-none dark:group-hover:text-white"
+      "h-5 w-5 shrink-0 duration-200 group-hover:rotate-90 group-hover:transform motion-reduce:transition-none dark:group-hover:text-white"
      )}
     />
    </ButtonSecondary>
@@ -49,7 +49,7 @@ export default function Settings() {
     <DialogBackdrop transition className="fixed inset-0 bg-black/50 duration-200 data-[closed]:opacity-0 motion-reduce:transition-none dark:bg-[#161617]/70" />
     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
      <div className="flex min-h-full items-center justify-center p-4">
-      <DialogPanel transition className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-[10px] border border-black/15 bg-white/90 p-6 text-left align-middle shadow-lg backdrop-blur-xl transition-all duration-200 data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70">
+      <DialogPanel transition className="hide-scrollbar w-full max-w-md transform overflow-visible rounded-lg border border-black/15 bg-white/90 p-6 text-left align-middle shadow-lg backdrop-blur-xl transition-all duration-200 data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/70">
        <DialogTitle as="h3" className="text-xl/6 font-medium text-gray-900 duration-200 motion-reduce:transition-none dark:text-white">
         Settings
        </DialogTitle>

@@ -18,7 +18,7 @@ export default function Select({ value, onChange, options, text, ...props }: Sel
      <Icons.ChevronsUpDown className="size-4 shrink-0" />
     </span>
    </ListboxButton>
-   <ListboxOptions className="absolute z-50 mt-1 max-h-60 w-[var(--button-width)] origin-top overflow-auto rounded-md border border-black/10 bg-white/90 py-1 text-base shadow-lg backdrop-blur-[9px] duration-100 ease-in data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:duration-[1ms] dark:border-neutral-800 dark:bg-[#161617]/90 sm:text-sm">
+   <ListboxOptions className="absolute z-50 mt-1 max-h-60 w-[var(--button-width)] origin-top overflow-auto rounded-md border border-black/10 bg-white/90 py-1 text-base shadow-lg backdrop-blur duration-100 ease-in data-[closed]:scale-95 data-[closed]:opacity-0 motion-reduce:transition-none dark:border-neutral-800 dark:bg-[#161617]/90 sm:text-sm">
     {options.map((option) => (
      <ListboxOption key={option.value} value={option.value} disabled={option.disabled} className="relative flex select-none truncate py-2 text-left text-gray-800 duration-200 data-[focus]:bg-black/10 data-[disabled]:opacity-50 motion-reduce:transition-none dark:text-white data-[focus]:dark:bg-white/10">
       {option.text}

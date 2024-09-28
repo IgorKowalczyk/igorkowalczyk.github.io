@@ -185,9 +185,9 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.name,
-        "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.name,
+        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.name,
        },
-       "my-2 w-full rounded-lg border-[1px] p-2 font-normal outline-0 duration-200 dark:bg-transparent"
+       "my-2 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
       type="text"
       placeholder="John Doe"
@@ -206,9 +206,9 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.email,
-        "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.email,
+        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.email,
        },
-       "my-2 w-full rounded-lg border-[1px] p-2 font-normal outline-0 duration-200 dark:bg-transparent"
+       "my-2 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
       type="email"
       placeholder="john@doe.com"
@@ -229,9 +229,9 @@ export function ContactForm() {
       className={cn(
        {
         "border-red-400 text-red-400": invalid.message,
-        "border-gray-300 text-gray-800 focus:border-blue-700 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
+        "border-gray-300 text-gray-800 focus:border-blue-600 dark:border-neutral-800 dark:text-white focus:dark:border-neutral-700": !invalid.message,
        },
-       "mt-2 max-h-40 min-h-24 w-full rounded-lg border-[1px] p-2 font-normal outline-0 duration-200 dark:bg-transparent"
+       "mt-2 max-h-40 min-h-24 w-full rounded-lg border p-2 font-normal outline-0 duration-200 dark:bg-transparent"
       )}
       placeholder="Hello there, I would like to ask you about..."
      />
