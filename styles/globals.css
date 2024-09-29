@@ -37,6 +37,10 @@ body[data-scroll-locked] {
  @apply bg-neutral-800 !text-white;
 }
 
+[data-vaul-handle] {
+ @apply !absolute right-0 top-1/2 -translate-y-1/2 rotate-90;
+}
+
 .noise {
  @apply bg-repeat;
  opacity: 0.02;
