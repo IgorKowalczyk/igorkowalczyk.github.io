@@ -28,7 +28,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     ))}
    <div className="mt-4 flex flex-wrap gap-2">
     {project.technologies.map((tech) => (
-     <div key={`project-tech-${tech.name}`} className="flex cursor-pointer items-center gap-2 rounded-md border border-black/10 px-2 py-1 font-mono text-sm font-medium text-neutral-500 duration-200 hover:bg-black/5 motion-reduce:transition-none dark:border-neutral-800 dark:text-white/50 dark:hover:border-neutral-700 dark:hover:bg-white/5">
+     <div key={`project-tech-${tech.name}`} className="flex cursor-default items-center gap-2 rounded-md border border-black/10 px-2 py-1 font-mono text-sm font-medium text-neutral-500 duration-200 hover:bg-black/5 motion-reduce:transition-none dark:border-neutral-800 dark:text-white/50 dark:hover:border-neutral-700 dark:hover:bg-white/5">
       <Image src={tech.icon} alt={tech.name} width={20} height={20} className="size-5" /> {tech.name}
      </div>
     ))}
