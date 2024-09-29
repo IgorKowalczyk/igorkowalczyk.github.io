@@ -16,19 +16,19 @@ const nextConfig = {
     headers: [
      {
       key: "Access-Control-Allow-Origin",
-      value: "https://igorkowalczyk.dev",
+      value: "*",
      },
      {
       key: "Access-Control-Allow-Methods",
-      value: "GET,OPTIONS",
+      value: "GET, POST, PUT, DELETE, OPTIONS",
      },
      {
       key: "Access-Control-Allow-Headers",
-      value: "Content-Type",
+      value: "X-Requested-With, Content-Type, Accept, Origin",
      },
      {
       key: "Referrer-Policy",
-      value: "no-referrer",
+      value: "strict-origin-when-cross-origin",
      },
      {
       key: "X-Content-Type-Options",
@@ -48,15 +48,11 @@ const nextConfig = {
      },
      {
       key: "Cache-Control",
-      value: "public, max-age=21600, must-revalidate",
+      value: "public, max-age=604800, must-revalidate",
      },
      {
       key: "X-XSS-Protection",
       value: "1; mode=block",
-     },
-     {
-      key: "Permissions-Policy",
-      value: "camera=(), microphone=(), geolocation=()",
      },
     ],
    },
@@ -79,33 +75,6 @@ const nextConfig = {
      {
       key: "Cache-Control",
       value: "public, max-age=604800, must-revalidate",
-     },
-    ],
-   },
-   {
-    source: "/images/(.*)",
-    headers: [
-     {
-      key: "Cache-Control",
-      value: "public, max-age=31536000, must-revalidate",
-     },
-    ],
-   },
-   {
-    source: "/images/projects/(.*)",
-    headers: [
-     {
-      key: "Cache-Control",
-      value: "public, max-age=31536000, must-revalidate",
-     },
-    ],
-   },
-   {
-    source: "/images/photography/(.*)",
-    headers: [
-     {
-      key: "Cache-Control",
-      value: "public, max-age=31536000, must-revalidate",
      },
     ],
    },
