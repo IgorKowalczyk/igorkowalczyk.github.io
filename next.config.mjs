@@ -83,7 +83,7 @@ const nextConfig = {
     ],
    },
    {
-    source: "/assets/(.*)",
+    source: "/images/(.*)",
     headers: [
      {
       key: "Cache-Control",
@@ -92,7 +92,7 @@ const nextConfig = {
     ],
    },
    {
-    source: "/assets/projects/(.*)",
+    source: "/images/projects/(.*)",
     headers: [
      {
       key: "Cache-Control",
@@ -101,7 +101,7 @@ const nextConfig = {
     ],
    },
    {
-    source: "/assets/photography/(.*)",
+    source: "/images/photography/(.*)",
     headers: [
      {
       key: "Cache-Control",

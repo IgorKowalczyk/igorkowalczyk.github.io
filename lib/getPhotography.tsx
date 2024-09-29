@@ -10,7 +10,7 @@ export const getPhoto = async (id: string): Promise<Photo | null> => {
   return cache.get(id) as Photo;
  }
 
- const file = await globby(`public/assets/photography/${id}.{jpg,png,jpeg}`);
+ const file = await globby(`public/images/photography/${id}.{jpg,png,jpeg}`);
  if (!file || !file[0]) return null;
  const name = parseInt(file[0].split("/").slice(-1)[0].split(".")[0]);
  const path = file[0].split("/").slice(1).join("/");
@@ -20,7 +20,7 @@ export const getPhoto = async (id: string): Promise<Photo | null> => {
 };
 
 export const getPhotography = async (): Promise<Photo[] | null> => {
- const files = await globby("public/assets/photography/*.{jpg,png,jpeg}");
+ const files = await globby("public/images/photography/*.{jpg,png,jpeg}");
  const photos: Photo[] = [];
  for (const file of files) {
   if (cache.has(file)) {
