@@ -44,7 +44,7 @@ body[data-scroll-locked] {
 .noise {
  @apply bg-repeat;
  opacity: 0.02;
- background-image: url(/images/noise.png);
+ background-image: url(/assets/noise.png);
  background-size: 182px;
  display: var(--hidden);
 }

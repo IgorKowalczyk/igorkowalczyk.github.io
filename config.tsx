@@ -58,7 +58,7 @@ export const projects = [
   description: "Discord bot for almost everything - Memes, Image editing, Giveaway, Moderation, Anime and even more! With over 150 slash commands!",
   images: [
    {
-    src: "/images/projects/majoexe/image-01.png",
+    src: "/assets/projects/majoexe/image-01.png",
     alt: "Majo.exe main page screenshot",
     width: 1920,
     height: 1080,
@@ -67,19 +67,19 @@ export const projects = [
   technologies: [
    {
     name: "React",
-    icon: "/images/tech/react.svg",
+    icon: "/assets/tech/react.svg",
    },
    {
     name: "Next.js",
-    icon: "/images/tech/next.svg",
+    icon: "/assets/tech/next.svg",
    },
    {
     name: "Discord.js",
-    icon: "/images/tech/discordjs.svg",
+    icon: "/assets/tech/discordjs.svg",
    },
    {
     name: "Prisma",
-    icon: "/images/tech/prisma.svg",
+    icon: "/assets/tech/prisma.svg",
    },
   ],
   website: "https://majoexe.xyz",
@@ -90,7 +90,7 @@ export const projects = [
   description: "A fully customizable dashboard for FiveM communities with applications, administrator panel, payments, 2FA, permissions, Discord, Steam, CFX Forum integrations and more!",
   images: [
    {
-    src: "/images/projects/ls-county/image-01.png",
+    src: "/assets/projects/ls-county/image-01.png",
     alt: "Los Santos County main page MacBook Pro mockup",
     width: 1920,
     height: 1080,
@@ -99,19 +99,19 @@ export const projects = [
   technologies: [
    {
     name: "React",
-    icon: "/images/tech/react.svg",
+    icon: "/assets/tech/react.svg",
    },
    {
     name: "TailwindCSS",
-    icon: "/images/tech/tailwindcss.svg",
+    icon: "/assets/tech/tailwindcss.svg",
    },
    {
     name: "Next.js",
-    icon: "/images/tech/next.svg",
+    icon: "/assets/tech/next.svg",
    },
    {
     name: "Prisma",
-    icon: "/images/tech/prisma.svg",
+    icon: "/assets/tech/prisma.svg",
    },
   ],
   website: null,
@@ -294,125 +294,125 @@ export const footer = {
 export const technologies = [
  {
   name: "React",
-  icon: "/images/tech/react.svg",
+  icon: "/assets/tech/react.svg",
   link: "https://reactjs.org/",
  },
  {
   name: "Next.js",
-  icon: "/images/tech/next.svg",
+  icon: "/assets/tech/next.svg",
   class: "invert-0 dark:invert",
   link: "https://nextjs.org/",
  },
  {
   name: "TailwindCSS",
-  icon: "/images/tech/tailwindcss.svg",
+  icon: "/assets/tech/tailwindcss.svg",
   link: "https://tailwindcss.com/",
  },
  {
   name: "Javascript",
-  icon: "/images/tech/javascript.svg",
+  icon: "/assets/tech/javascript.svg",
  },
  {
   name: "Typescript",
-  icon: "/images/tech/typescript.svg",
+  icon: "/assets/tech/typescript.svg",
   link: "https://www.typescriptlang.org/",
  },
  {
   name: "Node.js",
-  icon: "/images/tech/nodejs.svg",
+  icon: "/assets/tech/nodejs.svg",
   link: "https://nodejs.org/",
  },
  {
   name: "Express.js",
-  icon: "/images/tech/express.svg",
+  icon: "/assets/tech/express.svg",
   class: "invert-0 dark:invert",
   link: "https://expressjs.com/",
  },
  {
   name: "NPM",
-  icon: "/images/tech/npm.svg",
+  icon: "/assets/tech/npm.svg",
   link: "https://www.npmjs.com/",
  },
  {
   name: "PNPM",
-  icon: "/images/tech/pnpm.svg",
+  icon: "/assets/tech/pnpm.svg",
   link: "https://pnpm.io/",
  },
  {
   name: "Git",
-  icon: "/images/tech/git.svg",
+  icon: "/assets/tech/git.svg",
   link: "https://git-scm.com/",
  },
  {
   name: "Github",
-  icon: "/images/tech/github.svg",
+  icon: "/assets/tech/github.svg",
   class: "dark:invert-0 invert",
   link: "https://github.com",
  },
  {
   name: "GraphQL",
-  icon: "/images/tech/graphql.svg",
+  icon: "/assets/tech/graphql.svg",
   link: "https://graphql.org/",
  },
  {
   name: "Figma",
-  icon: "/images/tech/figma.svg",
+  icon: "/assets/tech/figma.svg",
   link: "https://figma.com/",
  },
  {
   name: "Turborepo",
-  icon: "/images/tech/turborepo.svg",
+  icon: "/assets/tech/turborepo.svg",
   link: "https://turbo.build/",
  },
  {
   name: "Deno",
-  icon: "/images/tech/deno.svg",
+  icon: "/assets/tech/deno.svg",
   link: "https://deno.land/",
  },
  {
   name: "C++",
-  icon: "/images/tech/cpp.svg",
+  icon: "/assets/tech/cpp.svg",
  },
  {
   name: "MySQL",
-  icon: "/images/tech/mysql.svg",
+  icon: "/assets/tech/mysql.svg",
   link: "https://www.mysql.com/",
  },
  {
   name: "MongoDB",
-  icon: "/images/tech/mongodb.svg",
+  icon: "/assets/tech/mongodb.svg",
   link: "https://www.mongodb.com/",
  },
  {
   name: "Discord.js",
-  icon: "/images/tech/discordjs.svg",
+  icon: "/assets/tech/discordjs.svg",
   link: "https://discord.js.org/",
  },
  {
   name: "Rollup",
-  icon: "/images/tech/rollup.svg",
+  icon: "/assets/tech/rollup.svg",
   link: "https://rollupjs.org/",
  },
  {
   name: "Docker",
-  icon: "/images/tech/docker.svg",
+  icon: "/assets/tech/docker.svg",
   link: "https://www.docker.com/",
  },
  {
   name: "Vercel",
-  icon: "/images/tech/vercel.svg",
+  icon: "/assets/tech/vercel.svg",
   class: "invert-0 dark:invert",
   link: "https://vercel.com/",
  },
  {
   name: "Astro",
-  icon: "/images/tech/astro.svg",
+  icon: "/assets/tech/astro.svg",
   class: "invert-0 dark:invert",
   link: "https://astro.build/",
  },
  {
   name: "ESlint",
-  icon: "/images/tech/eslint.svg",
+  icon: "/assets/tech/eslint.svg",
   link: "https://eslint.org/",
  },
 ];

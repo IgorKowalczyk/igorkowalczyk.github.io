@@ -1,4 +1,4 @@
-import Avatar from "/public/images/avatar.png";
+import Avatar from "/public/assets/avatar.png";
 import { allBlogs } from "contentlayer/generated";
 import { parseISO } from "@/lib/utils";
 import { meta } from "@/config";
