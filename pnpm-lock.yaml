@@ -78,8 +78,8 @@ importers:
         specifier: 0.33.5
         version: 0.33.5
       tailwind-merge:
-        specifier: 2.5.3
-        version: 2.5.3
+        specifier: 2.5.4
+        version: 2.5.4
       validator:
         specifier: 13.12.0
         version: 13.12.0
@@ -3362,8 +3362,8 @@ packages:
   tailwind-gradient-mask-image@1.2.0:
     resolution: {integrity: sha512-tUJaGhvqbJFiVKJu6EU5n//KvGdVvY3L3VOFNqjztk13+ifAk00pcSNHBTgHfUiBGOEzDn0gFRbSmsftUV1lXA==}
 
-  tailwind-merge@2.5.3:
-    resolution: {integrity: sha512-d9ZolCAIzom1nf/5p4LdD5zvjmgSxY0BGgdSvmXIoMYAiPdAW/dSpP7joCDYFY7r/HkEa2qmPtkgsu0xjQeQtw==}
+  tailwind-merge@2.5.4:
+    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
 
   tailwindcss-text-fill@0.2.0:
     resolution: {integrity: sha512-3lo6a/9jXSx4+24onFv7xnHO/1DZCk6qM+LoCsEUxn79sAeoc/ts74LSH0vRhLvWe4Yn+YglFfT+lxDv6wn2sQ==}
@@ -7637,7 +7637,7 @@ snapshots:
 
   tailwind-gradient-mask-image@1.2.0: {}
 
-  tailwind-merge@2.5.3: {}
+  tailwind-merge@2.5.4: {}
 
   tailwindcss-text-fill@0.2.0(tailwindcss@3.4.13):
     dependencies:
