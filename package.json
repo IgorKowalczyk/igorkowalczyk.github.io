@@ -80,5 +80,5 @@
   "bugs": {
     "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@9.12.2"
 }
