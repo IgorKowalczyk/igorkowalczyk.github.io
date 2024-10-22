@@ -1,15 +1,15 @@
-import Avatar from "/public/assets/avatar.png";
+import Avatar from "@/public/assets/avatar.png";
 import { allBlogs } from "contentlayer/generated";
-import { parseISO } from "@/lib/utils";
-import { meta } from "@/config";
 import { MDXComponent } from "@/components/MDXComponents";
 import Image from "next/image";
 import Link from "next/link";
 import "styles/blog.css";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Header1 } from "@/components/Headers";
+import { meta } from "@/config";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
+import { parseISO } from "@/lib/utils";
 
 export function generateStaticParams() {
  return allBlogs.map((post) => ({
@@ -17,7 +17,8 @@ export function generateStaticParams() {
  }));
 }
 
-export async function generateMetadata({ params }): Promise<Metadata | undefined> {
+export async function generateMetadata(props): Promise<Metadata | undefined> {
+ const params = await props.params;
  const post = allBlogs.find((post) => post?.slug === params?.slug);
 
  if (!post) return {};
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
  };
 }
 
-export default function Blog({ params }) {
+export default async function Blog(props0) {
+ const params = await props0.params;
  const post = allBlogs.find((post) => post.slug === params.slug);
 
  if (!post) return notFound();

@@ -10,13 +10,14 @@ interface Params {
  owner: string;
 }
 
-export async function GET(request: NextRequest, context: { params: Params }) {
+export async function GET(request: NextRequest, context: { params: Promise<Params> }) {
  const start = Date.now();
+ const params = await context.params;
 
- if (!context.params) return redirect("/opengraph-image");
+ if (!params) return redirect("/opengraph-image");
 
- const repo = context.params.repository;
- const { owner } = context.params;
+ const repo = params.repository;
+ const { owner } = params;
 
  const { theme } = Object.fromEntries(new URL(request.url.replaceAll("&amp%3B", "&")).searchParams.entries()) || "dark";
 

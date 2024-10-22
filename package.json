@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "dev:turbo": " next dev --turbo --show-all",
     "build": "next build",
     "deploy": "pnpm run build && pnpm run start",
@@ -28,13 +28,14 @@
     "geist": "1.3.1",
     "github-slugger": "2.0.0",
     "lucide-react": "0.453.0",
-    "next": "14.2.15",
+    "mdx-bundler": "10.0.3",
+    "next": "15.0.0",
     "next-contentlayer2": "0.5.1",
     "next-nprogress-bar": "2.3.14",
     "next-themes": "0.3.0",
     "nprogress": "0.2.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0-rc-65a56d0e-20241020",
+    "react-dom": "19.0.0-rc-65a56d0e-20241020",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "7.1.0",
     "rehype-pretty-code": "0.14.0",
@@ -49,12 +50,12 @@
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "3.0.0-beta.11",
     "@igorkowalczyk/prettier-config": "3.0.0-beta.11",
-    "@next/bundle-analyzer": "14.2.15",
+    "@next/bundle-analyzer": "15.0.0",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.15",
     "@types/node": "22.7.8",
-    "@types/react": "18.3.11",
-    "@types/react-dom": "18.3.1",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@types/validator": "13.12.2",
     "autoprefixer": "10.4.20",
     "eslint": "9.13.0",
@@ -80,5 +81,11 @@
   "bugs": {
     "url": "https://github.com/igorkowalczyk/igorkowalczyk.github.io/issues"
   },
-  "packageManager": "pnpm@9.12.2"
+  "packageManager": "pnpm@9.12.2",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }

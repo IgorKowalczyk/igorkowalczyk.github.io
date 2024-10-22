@@ -1,10 +1,10 @@
 import { allOtherPages } from "contentlayer/generated";
 import Image from "next/image";
-import setup from "/public/assets/setup.jpg";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header1 } from "@/components/Headers";
 import { MDXComponent } from "@/components/MDXComponents";
+import setup from "@/public/assets/setup.jpg";
 
 export const metadata = {
  title: "What I use",
