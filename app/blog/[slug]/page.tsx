@@ -1,15 +1,15 @@
-import Avatar from "@/public/assets/avatar.png";
 import { allBlogs } from "contentlayer/generated";
-import { MDXComponent } from "@/components/MDXComponents";
-import Image from "next/image";
-import Link from "next/link";
 import "styles/blog.css";
 import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header1 } from "@/components/Headers";
+import { MDXComponent } from "@/components/MDXComponents";
 import { meta } from "@/config";
 import { cn } from "@/lib/utils";
 import { parseISO } from "@/lib/utils";
+import Avatar from "@/public/assets/avatar.png";
 
 export function generateStaticParams() {
  return allBlogs.map((post) => ({

@@ -18,7 +18,8 @@ export default function Settings() {
  const { resolvedTheme, setTheme } = useTheme();
 
  useEffect(() => {
-  if (localStorage.getItem("decorations") === "false") setDecorationsEnabled(false);
+  /* eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect */
+  setDecorationsEnabled(() => localStorage.getItem("decorations") !== "false");
  }, []);
 
  return (
@@ -128,7 +129,7 @@ export default function Settings() {
             onChange={() => {
              localStorage.setItem("decorations", !decorationsEnabled ? "true" : "false");
              window.dispatchEvent(new Event("decorations"));
-             setDecorationsEnabled(!decorationsEnabled);
+             setDecorationsEnabled((prev) => !prev);
             }}
            />
           </div>

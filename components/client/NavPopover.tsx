@@ -5,9 +5,7 @@ import Link from "next/link";
 import { Icons } from "../Icons";
 import { meta } from "@/config";
 
-export interface NavPopoverProps extends PopoverProps {}
-
-export default function NavPopover(props: NavPopoverProps) {
+export default function NavPopover(props: PopoverProps) {
  return (
   <Popover {...props}>
    <>
