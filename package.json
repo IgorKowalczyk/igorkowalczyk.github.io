@@ -48,7 +48,7 @@
     "vaul": "1.1.1"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "3.0.0-beta.15",
+    "@igorkowalczyk/eslint-config": "3.0.0-beta.16",
     "@igorkowalczyk/prettier-config": "3.0.0-beta.15",
     "@next/bundle-analyzer": "15.0.3",
     "@tailwindcss/aspect-ratio": "0.4.2",
