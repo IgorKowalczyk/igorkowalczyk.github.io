@@ -96,10 +96,10 @@ importers:
     devDependencies:
       '@igorkowalczyk/eslint-config':
         specifier: 3.0.0-beta.16
-        version: 3.0.0-beta.16(eslint@9.15.0(jiti@2.0.0))(prettier@3.3.3)(tailwindcss@3.4.15)(typescript@5.7.2)
+        version: 3.0.0-beta.16(eslint@9.15.0(jiti@2.0.0))(prettier@3.4.0)(tailwindcss@3.4.15)(typescript@5.7.2)
       '@igorkowalczyk/prettier-config':
         specifier: 3.0.0-beta.16
-        version: 3.0.0-beta.16(prettier@3.3.3)(tslib@2.7.0)(typescript@5.7.2)
+        version: 3.0.0-beta.16(prettier@3.4.0)(tslib@2.7.0)(typescript@5.7.2)
       '@next/bundle-analyzer':
         specifier: 15.0.3
         version: 15.0.3
@@ -134,11 +134,11 @@ importers:
         specifier: 8.4.49
         version: 8.4.49
       prettier:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: 3.4.0
+        version: 3.4.0
       prettier-plugin-tailwindcss:
         specifier: 0.6.9
-        version: 0.6.9(prettier@3.3.3)
+        version: 0.6.9(prettier@3.4.0)
       tailwind-gradient-mask-image:
         specifier: 1.2.0
         version: 1.2.0
@@ -3070,8 +3070,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.0:
+    resolution: {integrity: sha512-/OXNZcLyWkfo13ofOW5M7SLh+k5pnIs07owXK2teFpnfaOEcycnSy7HQxldaVX1ZP/7Q8oO1eDuQJNwbomQq5Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4148,7 +4148,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@igorkowalczyk/eslint-config@3.0.0-beta.16(eslint@9.15.0(jiti@2.0.0))(prettier@3.3.3)(tailwindcss@3.4.15)(typescript@5.7.2)':
+  '@igorkowalczyk/eslint-config@3.0.0-beta.16(eslint@9.15.0(jiti@2.0.0))(prettier@3.4.0)(tailwindcss@3.4.15)(typescript@5.7.2)':
     dependencies:
       '@eslint-react/eslint-plugin': 1.16.2(eslint@9.15.0(jiti@2.0.0))(typescript@5.7.2)
       '@eslint/compat': 1.2.3(eslint@9.15.0(jiti@2.0.0))
@@ -4168,7 +4168,7 @@ snapshots:
       eslint-plugin-import-x: 4.4.3(eslint@9.15.0(jiti@2.0.0))(typescript@5.7.2)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.15.0(jiti@2.0.0))
       eslint-plugin-n: 17.13.2(eslint@9.15.0(jiti@2.0.0))
-      eslint-plugin-prettier: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.15.0(jiti@2.0.0)))(eslint@9.15.0(jiti@2.0.0))(prettier@3.3.3)
+      eslint-plugin-prettier: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.15.0(jiti@2.0.0)))(eslint@9.15.0(jiti@2.0.0))(prettier@3.4.0)
       eslint-plugin-react: 7.37.2(eslint@9.15.0(jiti@2.0.0))
       eslint-plugin-tailwindcss: 3.17.5(tailwindcss@3.4.15)
       globals: 15.12.0
@@ -4179,11 +4179,11 @@ snapshots:
       - tailwindcss
       - typescript
 
-  '@igorkowalczyk/prettier-config@3.0.0-beta.16(prettier@3.3.3)(tslib@2.7.0)(typescript@5.7.2)':
+  '@igorkowalczyk/prettier-config@3.0.0-beta.16(prettier@3.4.0)(tslib@2.7.0)(typescript@5.7.2)':
     dependencies:
       '@rollup/plugin-commonjs': 28.0.1
       '@rollup/plugin-typescript': 12.1.1(tslib@2.7.0)(typescript@5.7.2)
-      prettier: 3.3.3
+      prettier: 3.4.0
     transitivePeerDependencies:
       - rollup
       - tslib
@@ -5629,10 +5629,10 @@ snapshots:
       minimatch: 9.0.5
       semver: 7.6.3
 
-  eslint-plugin-prettier@5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.15.0(jiti@2.0.0)))(eslint@9.15.0(jiti@2.0.0))(prettier@3.3.3):
+  eslint-plugin-prettier@5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.15.0(jiti@2.0.0)))(eslint@9.15.0(jiti@2.0.0))(prettier@3.4.0):
     dependencies:
       eslint: 9.15.0(jiti@2.0.0)
-      prettier: 3.3.3
+      prettier: 3.4.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.1
     optionalDependencies:
@@ -7226,11 +7226,11 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.6.9(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.9(prettier@3.4.0):
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.4.0
 
-  prettier@3.3.3: {}
+  prettier@3.4.0: {}
 
   prop-types@15.8.1:
     dependencies:
