@@ -61,7 +61,7 @@
     "eslint": "9.16.0",
     "globby": "14.0.2",
     "postcss": "8.4.49",
-    "prettier": "3.4.1",
+    "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.9",
     "tailwind-gradient-mask-image": "1.2.0",
     "tailwindcss": "3.4.15",
