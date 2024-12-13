@@ -35,6 +35,11 @@ export async function POST(request: Request) {
     inline: true,
    },
   ],
+  footer: {
+   text: "Contact form",
+   icon_url: "https://igorkowalczyk.dev/assets/avatar.png",
+  },
+  timestamp: new Date().toISOString(),
  };
 
  try {
@@ -42,8 +47,8 @@ export async function POST(request: Request) {
    method: "POST",
    headers: { "Content-Type": "application/json" },
    body: JSON.stringify({
-    username: "igorkowalczykdev",
-    avatar_url: "https://igorkowalczyk.dev/favicon.ico",
+    username: "igorkowalczyk.dev",
+    avatar_url: "https://igorkowalczyk.dev/assets/avatar.png",
     embeds: [embed],
    }),
   });
