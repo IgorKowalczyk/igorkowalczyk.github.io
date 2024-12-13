@@ -1,18 +1,21 @@
-import { contactFormSchema } from "@/lib/validator";
-import { createHash } from "crypto";
+"use server";
 
-export async function POST(request: Request) {
- const body = await request.json();
- const result = contactFormSchema.safeParse(body);
+import "server-only";
+import { createHash } from "crypto";
+import { contactFormSchema } from "@/lib/validator";
+
+export async function submitContactForm(data: FormData) {
+ const formData = {
+  email: data.get("email"),
+  name: data.get("name"),
+  message: data.get("message"),
+ };
+
+ const result = contactFormSchema.safeParse(formData);
 
  if (!result.success) {
   const errors = result.error.flatten().fieldErrors;
-  return new Response(JSON.stringify({ error: true, message: Object.values(errors).flat().join(" ") }), {
-   status: 400,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+  return { error: Object.values(errors).flat().join(" ") };
  }
 
  const { name, email, message } = result.data;
@@ -56,27 +59,11 @@ export async function POST(request: Request) {
   const data = await response.json();
 
   if (!data.id) {
-   return new Response(JSON.stringify({ error: true, message: "Unable to send message" }), {
-    status: 500,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   });
+   return { error: "Unable to send message" };
   }
-
-  return new Response(JSON.stringify({ error: false, message: "Message sent successfully! Thank you for contacting me!" }), {
-   status: 200,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
- } catch (error) {
-  console.error(error);
-  return new Response(JSON.stringify({ error: true, message: "Unable to send message" }), {
-   status: 500,
-   headers: {
-    "Content-Type": "application/json",
-   },
-  });
+ } catch (_error) {
+  return { error: "Unable to send message" };
  }
+
+ return { message: "Your message has been sent successfully!" };
 }

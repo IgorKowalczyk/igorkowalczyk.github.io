@@ -2,17 +2,13 @@ import { Button } from "@/components/Button";
 import { ContactForm } from "@/components/client/ContactForm";
 import { Description, Header2 } from "@/components/Headers";
 import { contact } from "@/config";
-import { headers } from "next/headers";
 
 export const metadata = {
  title: "Contact",
  description: "If you have a project in mind, or just want to say hi, feel free to send me a message.",
 };
 
-export default async function Page() {
- const h = await headers();
- const csrfToken = h.get("X-CSRF-Token") || "missing";
-
+export default function Page() {
  return (
   <div className="mb-16 mt-20">
    <section className="mb-12">
@@ -20,7 +16,7 @@ export default async function Page() {
     <Description>I’m always eager to explore new opportunities and take on exciting projects. If you have a project in mind, or just want to say hi, feel free to send me a message.</Description>
 
     <div className="my-6 flex w-full rounded-md border border-black/15 bg-white p-5 dark:border-neutral-800 dark:bg-[#161617]">
-     <ContactForm csrfToken={csrfToken} />
+     <ContactForm  />
     </div>
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">

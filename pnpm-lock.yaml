@@ -12,9 +12,6 @@ importers:
 
   .:
     dependencies:
-      '@edge-csrf/nextjs':
-        specifier: 2.5.3-cloudflare-rc1
-        version: 2.5.3-cloudflare-rc1(next@15.1.0(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       '@headlessui/react':
         specifier: 2.2.0
         version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -208,11 +205,6 @@ packages:
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
-
-  '@edge-csrf/nextjs@2.5.3-cloudflare-rc1':
-    resolution: {integrity: sha512-sH8HKl2s/zFkIgXcVzODljHsBhKW7LN2gXeUNEQTSP31Chy40ryjR7iTf0MA/DtPhOpXUkd6IBUMMF820sK+rA==}
-    peerDependencies:
-      next: ^13.0.0 || ^14.0.0 || ^15.0.0
 
   '@effect-ts/core@0.60.5':
     resolution: {integrity: sha512-qi1WrtJA90XLMnj2hnUszW9Sx4dXP03ZJtCc5DiUBIOhF4Vw7plfb65/bdBySPoC9s7zy995TdUX1XBSxUkl5w==}
@@ -3834,10 +3826,6 @@ snapshots:
       type-fest: 4.26.1
 
   '@discoveryjs/json-ext@0.5.7': {}
-
-  '@edge-csrf/nextjs@2.5.3-cloudflare-rc1(next@15.1.0(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
-    dependencies:
-      next: 15.1.0(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
   '@effect-ts/core@0.60.5':
     dependencies:

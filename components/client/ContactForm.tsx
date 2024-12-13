@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import { submitContactForm } from "@/app/actions/contact";
 import { Button } from "@/components/Button";
 import { Icons } from "@/components/Icons";
 import { useDebounce } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 import { contactFormSchema, ContactFormSchema } from "@/lib/validator";
 
-export function ContactForm({ csrfToken }: { csrfToken: string }) {
+export function ContactForm() {
  const [formData, setFormData] = useState<ContactFormSchema>({
   email: "",
   name: "",
@@ -68,40 +69,15 @@ export function ContactForm({ csrfToken }: { csrfToken: string }) {
   setSuccess("");
   setError("");
 
-  const result = contactFormSchema.safeParse(formData);
-
-  if (!result.success) {
-   const errors = result.error.flatten().fieldErrors;
-   setInvalid({
-    email: !!errors.email && formData.email !== "",
-    name: !!errors.name && formData.name !== "",
-    message: !!errors.message && formData.message !== "",
-   });
-   return setError(Object.values(errors).flat().join(" "));
-  }
-
-  const { data } = result;
-
   setLoading(true);
 
-  const request = await fetch("/api/contact", {
-   method: "POST",
-   headers: {
-    "Content-Type": "application/json",
-    "X-CSRF-Token": csrfToken,
-   },
-   body: JSON.stringify(data),
-  });
-
-  const response = await request.json();
+  const formData = new FormData(e.currentTarget);
+  const response = await submitContactForm(formData);
+  console.log(response);
 
   setLoading(false);
   if (response.error) {
-   setInvalid({
-    ...invalid,
-    [response.error.field]: true,
-   });
-   setError(response.error.message);
+   setError(response.error);
   } else {
    setFormData({ email: "", name: "", message: "" });
    setInvalid({
@@ -109,7 +85,7 @@ export function ContactForm({ csrfToken }: { csrfToken: string }) {
     name: false,
     message: false,
    });
-   setSuccess(response.message);
+   setSuccess(response.message || "Message sent successfully!");
   }
  };
 

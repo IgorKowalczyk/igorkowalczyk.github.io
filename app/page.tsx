@@ -9,7 +9,6 @@ import { projects } from "@/config";
 import { header, contact, meta, technologies } from "@/config";
 import { GetUserData, getTotalContributionsForYears } from "@/lib/graphql";
 import { ConvertNumber } from "@/lib/utils";
-import { headers } from "next/headers";
 
 export const metadata = {
  title: header.title,
@@ -19,8 +18,6 @@ export const metadata = {
 export default async function HomePage() {
  const userData = await GetUserData();
  const contributions = await getTotalContributionsForYears();
- const h = await headers();
- const csrfToken = h.get("X-CSRF-Token") || "missing";
 
  return (
   <>
@@ -106,7 +103,7 @@ export default async function HomePage() {
     <Description>I’m always eager to explore new opportunities and take on exciting projects. If you have a project in mind, or just want to say hi, feel free to send me a message.</Description>
 
     <div className="my-6 flex w-full rounded-md border border-black/15 bg-white p-5 dark:border-neutral-800 dark:bg-[#161617]">
-     <ContactForm csrfToken={csrfToken} />
+     <ContactForm />
     </div>
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">
