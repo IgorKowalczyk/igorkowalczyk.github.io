@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import { useActionState } from "react";
 import { submitContactForm } from "@/app/actions/contact";
 import { Button } from "@/components/Button";
