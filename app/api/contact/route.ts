@@ -3,7 +3,6 @@ import { createHash } from "crypto";
 
 export async function POST(request: Request) {
  const body = await request.json();
-
  const result = contactFormSchema.safeParse(body);
 
  if (!result.success) {
@@ -17,7 +16,7 @@ export async function POST(request: Request) {
  }
 
  const { name, email, message } = result.data;
- const hash = createHash('sha256').update(email.trim()).digest('hex');
+ const hash = createHash("sha256").update(email.trim()).digest("hex");
 
  const embed = {
   title: "📩 New message from igorkowalczyk.dev",

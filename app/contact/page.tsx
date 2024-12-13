@@ -10,8 +10,8 @@ export const metadata = {
 };
 
 export default async function Page() {
-   const h = await headers();
-  const csrfToken = h.get('X-CSRF-Token') || 'missing';
+ const h = await headers();
+ const csrfToken = h.get("X-CSRF-Token") || "missing";
 
  return (
   <div className="mb-16 mt-20">

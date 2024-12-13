@@ -19,8 +19,8 @@ export const metadata = {
 export default async function HomePage() {
  const userData = await GetUserData();
  const contributions = await getTotalContributionsForYears();
-   const h = await headers();
-  const csrfToken = h.get('X-CSRF-Token') || 'missing';
+ const h = await headers();
+ const csrfToken = h.get("X-CSRF-Token") || "missing";
 
  return (
   <>
