@@ -1,6 +1,5 @@
 import { contactFormSchema } from "@/lib/validator";
-
-export const runtime = "edge";
+import { createHash } from "crypto";
 
 export async function POST(request: Request) {
  const body = await request.json();
@@ -18,26 +17,28 @@ export async function POST(request: Request) {
  }
 
  const { name, email, message } = result.data;
+ const hash = createHash('sha256').update(email.trim()).digest('hex');
 
  const embed = {
   title: "📩 New message from igorkowalczyk.dev",
-  description: `>>> ${message.toString().trim()}`,
+  url: "https://igorkowalczyk.dev",
+  description: `>>> ${message.trim()}`,
   color: 5759645,
   fields: [
    {
     name: "🧑‍🦱 Name",
-    value: `\`\`\`${name.toString().trim()}\`\`\``,
+    value: `\`\`\`${name.trim()}\`\`\``,
     inline: true,
    },
    {
     name: "📨 Email",
-    value: `\`\`\`${email.toString().trim()}\`\`\``,
+    value: `\`\`\`${email.trim()}\`\`\``,
     inline: true,
    },
   ],
   footer: {
-   text: "Contact form",
-   icon_url: "https://igorkowalczyk.dev/assets/avatar.png",
+   text: "igorkowalczyk.dev",
+   icon_url: `https://www.gravatar.com/avatar/${hash}?d=identicon`,
   },
   timestamp: new Date().toISOString(),
  };
