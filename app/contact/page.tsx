@@ -1,4 +1,4 @@
-import { ButtonTertiary } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { ContactForm } from "@/components/client/ContactForm";
 import { Description, Header2 } from "@/components/Headers";
 import { contact } from "@/config";
@@ -21,9 +21,9 @@ export default function Page() {
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">
      {contact.links.map((element) => (
-      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} className="gap-2">
+      <Button variant="tertiary" href={element.href} key={`contact-link-${element.href}`} className="gap-2">
        {element.icon} {element.title}
-      </ButtonTertiary>
+      </Button>
      ))}
     </div>
    </section>

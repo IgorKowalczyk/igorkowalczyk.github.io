@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "./Icons";
-import { ButtonSecondary, ButtonPrimary } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { type Project } from "@/config";
 import { parseISO } from "@/lib/utils";
 
@@ -35,16 +35,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
    </div>
    <div className="mt-6 flex flex-wrap gap-4">
     {project.website && (
-     <ButtonPrimary href={project.website} rel="noopener noreferrer">
+     <Button variant="primary" href={project.website} rel="noopener noreferrer">
       <Icons.Link className="mr-2 size-5 stroke-2" />
       Visit website
-     </ButtonPrimary>
+     </Button>
     )}
     {project.github && (
-     <ButtonSecondary href={project.github} rel="noopener noreferrer">
+     <Button variant="secondary" href={project.github} rel="noopener noreferrer">
       <Icons.Github className="mr-2 size-5 fill-neutral-700 dark:fill-white" />
       View on Github
-     </ButtonSecondary>
+     </Button>
     )}
    </div>
   </div>

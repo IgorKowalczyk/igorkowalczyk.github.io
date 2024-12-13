@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Icons } from "../Icons";
-import { ButtonSecondary } from "@/components/Button";
+import { Button } from "@/components/Button";
 import Select from "@/components/client/Select";
 import Switch from "@/components/client/Switch";
 import { meta } from "@/config";
@@ -24,7 +24,8 @@ export default function Settings() {
 
  return (
   <>
-   <ButtonSecondary
+   <Button
+    variant="secondary"
     aria-label="Open settings"
     icon={false}
     onClick={() => setIsOpen(true)}
@@ -45,7 +46,7 @@ export default function Settings() {
       "h-5 w-5 shrink-0 duration-200 group-hover:rotate-90 group-hover:transform motion-reduce:transition-none dark:group-hover:text-white"
      )}
     />
-   </ButtonSecondary>
+   </Button>
    <Dialog transition open={isOpen} as="div" className="fixed inset-0 z-50 ease-out focus:outline-none" onClose={() => setIsOpen(false)}>
     <DialogBackdrop transition className="fixed inset-0 bg-black/50 duration-200 data-[closed]:opacity-0 motion-reduce:transition-none dark:bg-[#161617]/70" />
     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -141,9 +142,9 @@ export default function Settings() {
          Source code <Icons.ExternalLink className="ml-2 size-4 opacity-50 duration-100 group-hover:opacity-90 motion-reduce:transition-none" />
         </Link>
 
-        <ButtonSecondary className="ml-auto" onClick={() => setIsOpen(false)}>
+        <Button variant="secondary" className="ml-auto" onClick={() => setIsOpen(false)}>
          Close
-        </ButtonSecondary>
+        </Button>
        </div>
       </DialogPanel>
      </div>

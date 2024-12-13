@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { ButtonPrimary } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { Description, Header1 } from "@/components/Headers";
 import { Icons } from "@/components/Icons";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -26,10 +26,10 @@ export default function Page() {
 
    <Description>Want to see more? Check out my GitHub profile for more projects and contributions.</Description>
 
-   <ButtonPrimary href={`https://github.com/${meta.accounts.github.username}`} rel="noopener noreferrer" className="mt-4">
+   <Button variant="primary" href={`https://github.com/${meta.accounts.github.username}`} rel="noopener noreferrer" className="mt-4">
     <Icons.Github className="mr-2 size-5 fill-white stroke-2" />
     View my Github
-   </ButtonPrimary>
+   </Button>
   </div>
  );
 }

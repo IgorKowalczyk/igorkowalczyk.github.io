@@ -1,89 +1,23 @@
-import isEmail from "validator/lib/isEmail";
+import { contactFormSchema } from "@/lib/validator";
 
 export const runtime = "edge";
 
 export async function POST(request: Request) {
- const { email, name, message } = await request.clone().json();
+ const body = await request.json();
 
- if (!email) {
-  return new Response(
-   JSON.stringify({
-    error: true,
-    type: "email",
-    message: "Please enter your email address!",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   }
-  );
+ const result = contactFormSchema.safeParse(body);
+
+ if (!result.success) {
+  const errors = result.error.flatten().fieldErrors;
+  return new Response(JSON.stringify({ error: true, message: Object.values(errors).flat().join(" ") }), {
+   status: 400,
+   headers: {
+    "Content-Type": "application/json",
+   },
+  });
  }
 
- if (typeof email !== "string" || !isEmail(email)) {
-  return new Response(
-   JSON.stringify({
-    error: true,
-    type: "email",
-    message: "Please enter a valid email address!",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   }
-  );
- }
-
- if (email.trim().length < 5 || email.trim().length > 50) {
-  return new Response(
-   JSON.stringify({
-    error: true,
-    type: "email",
-    message: "Email must be between 5 and 50 characters!",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   }
-  );
- }
-
- if (!name || typeof name !== "string" || !name.trim() || name.trim().length < 3 || name.trim().length > 20) {
-  return new Response(
-   JSON.stringify({
-    error: true,
-    type: "name",
-    message: "Name must be between 3 and 20 characters!",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   }
-  );
- }
-
- if (!message || typeof message !== "string" || !message.trim() || message.trim().length < 10 || message.trim().length > 500) {
-  return new Response(
-   JSON.stringify({
-    error: true,
-    type: "message",
-    message: "Message must be between 10 and 500 characters!",
-   }),
-   {
-    status: 400,
-    headers: {
-     "Content-Type": "application/json",
-    },
-   }
-  );
- }
+ const { name, email, message } = result.data;
 
  const embed = {
   title: "📩 New message from igorkowalczyk.dev",

@@ -1,31 +1,26 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent, MouseEvent } from "react";
-import isEmail from "validator/lib/isEmail";
-import { Icons } from "../Icons";
-import { ButtonSecondary } from "@/components/Button";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import { Button } from "@/components/Button";
+import { Icons } from "@/components/Icons";
+import { useDebounce } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
-
-interface FormData {
- email: string;
- name: string;
- message: string;
-}
-
-interface InvalidData {
- email: boolean;
- name: boolean;
- message: boolean;
-}
+import { contactFormSchema, ContactFormSchema } from "@/lib/validator";
 
 export function ContactForm() {
- const [formData, setFormData] = useState<FormData>({
+ const [formData, setFormData] = useState<ContactFormSchema>({
   email: "",
   name: "",
   message: "",
  });
 
- const [invalid, setInvalid] = useState<InvalidData>({
+ const [invalid, setInvalid] = useState({
+  email: false,
+  name: false,
+  message: false,
+ });
+
+ const [touched, setTouched] = useState({
   email: false,
   name: false,
   message: false,
@@ -35,137 +30,102 @@ export function ContactForm() {
  const [error, setError] = useState<string>("");
  const [loading, setLoading] = useState<boolean>(false);
 
+ const debouncedName = useDebounce(formData.name, 500);
+ const debouncedEmail = useDebounce(formData.email, 500);
+ const debouncedMessage = useDebounce(formData.message, 500);
+
+ const validateField = (field: string, value: string) => {
+  const result = contactFormSchema.safeParse({ ...formData, [field]: value });
+
+  if (!result.success) {
+   const errors = result.error.flatten().fieldErrors;
+   setInvalid((prev) => ({
+    ...prev,
+    [field]: !!errors[field] && value !== "",
+   }));
+  } else {
+   setInvalid((prev) => ({
+    ...prev,
+    [field]: false,
+   }));
+  }
+ };
+
+ useEffect(() => {
+  if (touched.name) validateField("name", debouncedName);
+ }, [debouncedName, touched.name]);
+
+ useEffect(() => {
+  if (touched.email) validateField("email", debouncedEmail);
+ }, [debouncedEmail, touched.email]);
+
+ useEffect(() => {
+  if (touched.message) validateField("message", debouncedMessage);
+ }, [debouncedMessage, touched.message]);
+
  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   setSuccess("");
   setError("");
 
-  const { email, name, message } = formData;
+  const result = contactFormSchema.safeParse(formData);
 
-  if (!email || !isEmail(email)) {
+  if (!result.success) {
+   const errors = result.error.flatten().fieldErrors;
    setInvalid({
-    ...invalid,
-    email: true,
+    email: !!errors.email && formData.email !== "",
+    name: !!errors.name && formData.name !== "",
+    message: !!errors.message && formData.message !== "",
    });
-
-   return setError("Please enter a valid email address!");
-  } else if (email.trim().length < 5 || email.trim().length > 50) {
-   setInvalid({
-    ...invalid,
-    email: true,
-   });
-   return setError("Email address must be between 5 and 50 characters!");
-  } else if (!name || name.trim().length === 0) {
-   setInvalid({
-    ...invalid,
-    name: true,
-   });
-   return setError("Please enter your name!");
-  } else if (!name.trim() || name.trim().length < 3 || name.trim().length > 20) {
-   setInvalid({
-    ...invalid,
-    name: true,
-   });
-   return setError("Name must be between 3 and 20 characters!");
-  } else if (!message || message.trim().length === 0) {
-   setInvalid({
-    ...invalid,
-    message: true,
-   });
-   return setError("Please enter a message!");
-  } else if (!message.trim() || message.trim().length < 10 || message.trim().length > 500) {
-   setInvalid({
-    ...invalid,
-    message: true,
-   });
-   return setError("Message must be between 10 and 500 characters!");
+   return setError(Object.values(errors).flat().join(" "));
   }
 
-  const data = { email, name, message };
+  const { data } = result;
 
   setLoading(true);
 
-  await fetch("/api/contact", {
+  const request = await fetch("/api/contact", {
    method: "POST",
    headers: {
     "Content-Type": "application/json",
    },
    body: JSON.stringify(data),
-  })
-   .then((res) => res.json())
-   .then((data) => {
-    setLoading(false);
-    if (data.error) {
-     setInvalid({
-      ...invalid,
-      [data.type]: true,
-     });
-     setError(data.message);
-    } else {
-     setFormData({ email: "", name: "", message: "" });
-     setInvalid({
-      email: false,
-      name: false,
-      message: false,
-     });
-     setSuccess(data.message);
-    }
+  });
+
+  const response = await request.json();
+
+  setLoading(false);
+  if (response.error) {
+   setInvalid({
+    ...invalid,
+    [response.error.field]: true,
    });
+   setError(response.error.message);
+  } else {
+   setFormData({ email: "", name: "", message: "" });
+   setInvalid({
+    email: false,
+    name: false,
+    message: false,
+   });
+   setSuccess(response.message);
+  }
  };
 
- const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
-  e.preventDefault();
-  handleSubmit(e as unknown as FormEvent<HTMLFormElement>);
- };
-
- const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, type: keyof FormData) => {
+ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   setSuccess("");
   setError("");
 
-  if (type === "email" && (e.target.value.trim().length === 0 || isEmail(e.target.value))) {
-   setInvalid({
-    ...invalid,
-    email: false,
-   });
-  } else if (type === "email" && (!isEmail(e.target.value) || e.target.value.trim().length < 5 || e.target.value.trim().length > 50)) {
-   setInvalid({
-    ...invalid,
-    email: true,
-   });
-  }
-
-  if ((type === "name" && e.target.value.trim().length === 0) || (e.target.value.trim().length >= 3 && e.target.value.trim().length <= 20)) {
-   setInvalid({
-    ...invalid,
-    name: false,
-   });
-  } else if (type === "name" && (e.target.value.trim().length < 3 || e.target.value.trim().length > 20)) {
-   setInvalid({
-    ...invalid,
-    name: true,
-   });
-  }
-
-  if (type === "message" && e.target.value.trim().length > 500) {
-   setInvalid({
-    ...invalid,
-    message: true,
-   });
-
-   return setFormData({
-    ...formData,
-    message: e.target.value.trim().slice(0, 500),
-   });
-  } else if (type === "message" && e.target.value.trim().length >= 10 && e.target.value.trim().length <= 500) {
-   setInvalid({
-    ...invalid,
-    message: false,
-   });
-  }
+  const { value } = e.target;
 
   setFormData({
    ...formData,
-   [e.target.name]: e.target.value,
+   [e.target.name]: value,
+  });
+
+  setTouched({
+   ...touched,
+   [e.target.name]: true,
   });
  };
 
@@ -180,7 +140,7 @@ export function ContactForm() {
      <input
       value={formData.name}
       name="name"
-      onChange={(e) => handleChange(e, "name")}
+      onChange={handleChange}
       id="name"
       className={cn(
        {
@@ -201,7 +161,7 @@ export function ContactForm() {
      <input
       value={formData.email}
       name="email"
-      onChange={(e) => handleChange(e, "email")}
+      onChange={handleChange}
       id="email"
       className={cn(
        {
@@ -224,7 +184,7 @@ export function ContactForm() {
      <textarea
       value={formData.message}
       name="message"
-      onChange={(e) => handleChange(e, "message")}
+      onChange={handleChange}
       id="message"
       className={cn(
        {
@@ -239,29 +199,29 @@ export function ContactForm() {
     <span
      className={cn(
       {
-       "text-red-400": formData.message.trim().length >= 500,
-       "text-neutral-700 dark:text-neutral-300": formData.message.trim().length >= 10 && formData.message.trim().length < 500,
+       "text-red-400": invalid.message,
+       "text-neutral-700 dark:text-neutral-300": !invalid.message,
       },
       "ml-auto text-xs opacity-50"
      )}
     >
-     {formData.message.trim().length}/500 {formData.message.trim().length >= 500 && invalid.message && " (max)"}
+     {formData.message.trim().length}/500 characters
     </span>
    </div>
 
    {success && (
-    <p className="flex items-center self-start text-green-500">
-     <Icons.MailCheck className="mr-2 size-5" />
+    <p className="mt-2 flex items-center self-start text-green-500">
+     <Icons.MailCheckIcon className="mr-2 size-5" />
      {success}
     </p>
    )}
    {error && (
-    <p className="flex items-center self-start text-red-400">
+    <p className="mt-2 flex items-center self-start text-red-400">
      <Icons.CircleAlert className="mr-2 size-5" />
      {error}
     </p>
    )}
-   <ButtonSecondary className="ml-auto mt-4" type="submit" icon={false} disabled={loading} onClick={handleClick}>
+   <Button variant="secondary" className="ml-auto mt-4" icon={false} type="submit" disabled={loading || invalid.email || invalid.name || invalid.message || !formData.email || !formData.name || !formData.message}>
     {loading ? (
      <>
       <Icons.RefreshCw className="mr-2 size-4 animate-spin duration-200 motion-reduce:transition-none" />
@@ -273,7 +233,7 @@ export function ContactForm() {
       Send
      </>
     )}
-   </ButtonSecondary>
+   </Button>
   </form>
  );
 }

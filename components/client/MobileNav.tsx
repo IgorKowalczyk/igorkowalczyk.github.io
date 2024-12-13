@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Drawer } from "vaul";
-import { ButtonSecondary, buttonSecondaryStyles } from "../Button";
+import { Button, buttonVariants } from "@/components/Button";
 import { Icons } from "@/components/Icons";
 import { nav } from "@/config";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ export default function MobileNav() {
 
  return (
   <Drawer.Root noBodyStyles={true} direction="left" open={isMenuOpen} onOpenChange={() => setIsMenuOpen(!isMenuOpen)}>
-   <Drawer.Trigger className={cn(buttonSecondaryStyles, "size-10 justify-center border-0 !bg-transparent !outline-none hover:!bg-neutral-300 dark:hover:!bg-white/15 lg:hidden")}>
+   <Drawer.Trigger className={cn(buttonVariants({ variant: "secondary" }), "size-10 justify-center border-0 !bg-transparent !outline-none hover:!bg-neutral-300 dark:hover:!bg-white/15 lg:hidden")}>
     <Icons.AlignLeft className="size-5 shrink-0 text-neutral-900 dark:text-neutral-100" />
    </Drawer.Trigger>
    <Drawer.Portal>
@@ -24,9 +24,9 @@ export default function MobileNav() {
       <Drawer.Description className="mt-3 flex flex-col gap-2 divide-y divide-neutral-200 dark:divide-neutral-800">
        {menuItems.map((item) => {
         return (
-         <ButtonSecondary key={item.href} href={item.href} className="w-full" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+         <Button variant="secondary" key={item.href} href={item.href} className="w-full" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {item.title}
-         </ButtonSecondary>
+         </Button>
         );
        })}
       </Drawer.Description>

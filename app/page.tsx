@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonPrimary, ButtonSecondary, ButtonTertiary } from "../components/Button";
+import { Button } from "../components/Button";
 import { Icons } from "../components/Icons";
 import { ContactForm } from "@/components/client/ContactForm";
 import { Description, Header2 } from "@/components/Headers";
@@ -25,8 +25,12 @@ export default async function HomePage() {
     <h1 className="dark:color-black relative m-0 text-4xl font-black tracking-[-0.03em] text-neutral-800 duration-300 dark:text-white md:text-left">Hey, I’m {header.title}</h1>
     <p className="mt-2 text-lg text-neutral-700 dark:text-neutral-400">{header.description}</p>
     <div className="mt-9 flex flex-row flex-wrap gap-4">
-     <ButtonPrimary href="/#contact">Contact me</ButtonPrimary>
-     <ButtonSecondary href="/#about">More about me</ButtonSecondary>
+     <Button variant="primary" href="/#contact">
+      Contact me
+     </Button>
+     <Button variant="secondary" href="/#about">
+      More about me
+     </Button>
     </div>
    </section>
 
@@ -58,11 +62,13 @@ export default async function HomePage() {
     </div>
 
     <div className="mt-6 flex flex-row flex-wrap gap-4">
-     <ButtonPrimary href={`https://github.com/${meta.accounts.github.username}`} rel="noopener noreferrer">
+     <Button variant="primary" href={`https://github.com/${meta.accounts.github.username}`} rel="noopener noreferrer">
       <Icons.Github className="mr-2 size-5 fill-white stroke-2" />
       View my Github
-     </ButtonPrimary>
-     <ButtonSecondary href="/#contact">Contact me</ButtonSecondary>
+     </Button>
+     <Button variant="secondary" href="/#contact">
+      Contact me
+     </Button>
     </div>
    </section>
 
@@ -102,9 +108,9 @@ export default async function HomePage() {
     <Description>Or contact me with...</Description>
     <div className="mt-4 flex flex-wrap gap-4">
      {contact.links.map((element) => (
-      <ButtonTertiary href={element.href} key={`contact-link-${element.href}`} className="gap-2">
+      <Button variant="tertiary" href={element.href} key={`contact-link-${element.href}`} className="gap-2">
        {element.icon} {element.title}
-      </ButtonTertiary>
+      </Button>
      ))}
     </div>
    </section>
