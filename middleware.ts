@@ -7,7 +7,3 @@ const csrfMiddleware = createCsrfMiddleware({
 });
 
 export const middleware = csrfMiddleware;
-
-export const config = {
-  matcher: ['/', '/contact', '/api/contact'],
-};
