@@ -7,7 +7,7 @@ import { useDebounce } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 import { contactFormSchema, ContactFormSchema } from "@/lib/validator";
 
-export function ContactForm() {
+export function ContactForm({ csrfToken }: { csrfToken: string }) {
  const [formData, setFormData] = useState<ContactFormSchema>({
   email: "",
   name: "",
@@ -88,6 +88,7 @@ export function ContactForm() {
    method: "POST",
    headers: {
     "Content-Type": "application/json",
+     "X-CSRF-Token": csrfToken,
    },
    body: JSON.stringify(data),
   });
