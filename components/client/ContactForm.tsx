@@ -18,7 +18,6 @@ export function ContactForm() {
   email: "",
   name: "",
   message: "",
-  token: "",
  });
 
  const [invalid, setInvalid] = useState({
@@ -166,7 +165,7 @@ export function ContactForm() {
 
    {process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY && (
     <div className="mt-2 flex w-full">
-     <Turnstile ref={turnstileRef} siteKey={process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY} onSuccess={(token) => setFormData((prev) => ({ ...prev, token }))} onExpire={() => setFormData((prev) => ({ ...prev, token: "" }))} />
+     <Turnstile ref={turnstileRef} siteKey={process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY} />
     </div>
    )}
 

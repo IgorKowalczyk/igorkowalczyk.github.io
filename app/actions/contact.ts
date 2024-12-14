@@ -12,10 +12,9 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   email: data.get("email"),
   name: data.get("name"),
   message: data.get("message"),
-  token: data.get("token"),
  };
 
- console.error(`[Contact]: ${formData.token}`);
+ console.error(`[Contact]: ${formData["cf-turnstile-response"]}`);
 
  try {
   const h = await headers();
