@@ -12,9 +12,10 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   email: data.get("email"),
   name: data.get("name"),
   message: data.get("message"),
+  token: data.get("token"),
  };
 
- if (formData.email === "igorkowalczyk@gmail.com") return { message: "Your message has been sent successfully!" };
+ console.error(`[Contact]: ${formData.token}`);
 
  try {
   const h = await headers();

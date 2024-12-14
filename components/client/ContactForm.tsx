@@ -1,6 +1,6 @@
 "use client";
-
-import { useState, ChangeEvent, useEffect } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { useState, ChangeEvent, useEffect, useRef } from "react";
 import { useActionState } from "react";
 import { submitContactForm } from "@/app/actions/contact";
 import { Button } from "@/components/Button";
@@ -18,6 +18,7 @@ export function ContactForm() {
   email: "",
   name: "",
   message: "",
+  token: "",
  });
 
  const [invalid, setInvalid] = useState({
@@ -31,6 +32,8 @@ export function ContactForm() {
   name: false,
   message: false,
  });
+
+ const turnstileRef = useRef(null);
 
  const debouncedName = useDebounce(formData.name, 500);
  const debouncedEmail = useDebounce(formData.email, 500);
@@ -161,6 +164,12 @@ export function ContactForm() {
     </span>
    </div>
 
+   {process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY && (
+    <div className="mt-2 flex w-full">
+     <Turnstile ref={turnstileRef} siteKey={process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY} onSuccess={(token) => setFormData((prev) => ({ ...prev, token }))} onExpire={() => setFormData((prev) => ({ ...prev, token: "" }))} />
+    </div>
+   )}
+
    {state.message && (
     <p className="mt-2 flex items-center self-start text-green-500">
      <Icons.MailCheckIcon className="mr-2 size-5" />
@@ -174,7 +183,7 @@ export function ContactForm() {
     </p>
    )}
 
-   <Button variant="secondary" className="ml-auto mt-4" icon={false} type="submit" disabled={pending || invalid.email || invalid.name || invalid.message || !formData.email || !formData.name || !formData.message}>
+   <Button variant="secondary" className="ml-auto mt-4" icon={false} type="submit" disabled={pending || invalid.email || invalid.name || invalid.message || !formData.email || !formData.name || !formData.message || !formData.token}>
     {pending ? (
      <>
       <Icons.RefreshCw className="mr-2 size-4 animate-spin duration-200 motion-reduce:transition-none" />
