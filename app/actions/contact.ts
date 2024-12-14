@@ -8,16 +8,19 @@ import { contactFormSchema } from "@/lib/validator";
 
 /* eslint-disable-next-line typescript/no-explicit-any */
 export async function submitContactForm(_prevState: any, data: FormData) {
+
  const formData = {
   email: data.get("email"),
   name: data.get("name"),
   message: data.get("message"),
  };
+
+   try {
    const h = await headers();
    const ip = h.get("x-forwarded-for") ?? "unknown";
   const isRateLimited = rateLimit(ip);
 
- if (isRateLimited) return { error: "You are sending messages too frequently. Please try again later." };
+ if (isRateLimited) return { error: "You are sending messages too frequently!" };
 
 
  const result = contactFormSchema.safeParse(formData);
@@ -54,7 +57,6 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   timestamp: new Date().toISOString(),
  };
 
- try {
   const response = await fetch(`${process.env.DISCORD_WEBHOOK_URL}?wait=true`, {
    method: "POST",
    headers: { "Content-Type": "application/json" },
@@ -68,9 +70,8 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   const data = await response.json();
 
   if (!data.id) return { error: "Unable to send message" };
- } catch (_error) {
+ return { message: "Your message has been sent successfully!" };
+  } catch (_error) {
   return { error: "Unable to send message" };
  }
-
- return { message: "Your message has been sent successfully!" };
 }
