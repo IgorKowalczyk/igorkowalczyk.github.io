@@ -14,7 +14,7 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   message: data.get("message"),
  };
 
- if(formData.email === "igorkowalczyk@gmail.com") return { message: "Your message has been sent successfully!" };
+ if (formData.email === "igorkowalczyk@gmail.com") return { message: "Your message has been sent successfully!" };
 
  try {
   const h = await headers();
