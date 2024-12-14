@@ -14,7 +14,7 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   message: data.get("message"),
  };
 
- console.error(`[Contact]: ${data["cf-turnstile-response"]}`);
+ console.error(`[Contact]: ${data}`);
 
  try {
   const h = await headers();
