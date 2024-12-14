@@ -34,7 +34,7 @@ export default async function HomePage() {
     </div>
    </section>
 
-   <section className="mb-16 flex flex-wrap justify-around gap-4 text-center text-xs font-semibold text-neutral-800/70 dark:text-white/70">
+   <section className="mb-16 flex flex-wrap justify-around gap-4 text-center text-xs font-bold text-neutral-800/70 dark:text-white/70">
     <Link target="_blank" href={`https://github.com/${meta.accounts.github.username}`} className="flex items-center gap-2 text-center duration-200 hover:text-neutral-800 motion-reduce:transition-none dark:hover:text-white">
      <Icons.Star className="size-4 stroke-2" /> <span>{userData && ConvertNumber(userData.userStars)} stars</span>
     </Link>

@@ -28,7 +28,7 @@ export default function Page() {
         <Icons.Calendar className="size-3 text-neutral-800 dark:text-white" />
        </span>
        <header>
-        <h3 className="mb-1 flex items-center text-lg font-semibold text-neutral-900 dark:text-white">
+        <h3 className="mb-1 flex items-center text-lg font-bold text-neutral-900 dark:text-white">
          {post.title} {index === 0 && <span className="ml-3 mr-2 hidden rounded bg-black/10 py-0.5 pl-1.5 pr-2.5 text-sm font-medium dark:bg-white/10 sm:block">🔥 Latest</span>}
         </h3>
         <time className="mb-2 block text-sm font-normal leading-none text-neutral-500 dark:text-neutral-500" dateTime={new Date(post.publishedAt).toUTCString()}>
@@ -36,7 +36,7 @@ export default function Page() {
         </time>
        </header>
        <p className="mb-2 text-base font-normal text-neutral-700 dark:text-neutral-300">{post.summary}</p>
-       <p className="inline-flex text-sm font-semibold text-blue-500">Read more</p>
+       <p className="inline-flex text-sm font-bold text-blue-500">Read more</p>
       </li>
      </Link>
     ))}

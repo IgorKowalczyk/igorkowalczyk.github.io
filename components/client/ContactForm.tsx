@@ -86,7 +86,7 @@ export function ContactForm() {
  return (
   <form action={formAction} className="relative flex w-full flex-col items-center justify-center">
    <div className="block w-full items-center justify-center gap-4 text-left md:flex">
-    <label htmlFor="name" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
+    <label htmlFor="name" className="w-full text-left text-sm font-bold tracking-wide text-neutral-700 dark:text-neutral-300">
      Name
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -107,7 +107,7 @@ export function ContactForm() {
       placeholder="John Doe"
      />
     </label>
-    <label htmlFor="email" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
+    <label htmlFor="email" className="w-full text-left text-sm font-bold tracking-wide text-neutral-700 dark:text-neutral-300">
      Email
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *
@@ -130,7 +130,7 @@ export function ContactForm() {
     </label>
    </div>
    <div className="mt-2 flex w-full flex-col items-center justify-center gap-1.5">
-    <label htmlFor="message" className="w-full text-left text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300">
+    <label htmlFor="message" className="w-full text-left text-sm font-bold tracking-wide text-neutral-700 dark:text-neutral-300">
      Message
      <span aria-hidden={true} className="cursor-help text-red-500" title="Required">
       *

@@ -50,7 +50,7 @@ pre {
 }
 
 .prose a {
- @apply font-semibold !decoration-current !decoration-1;
+ @apply font-bold !decoration-current !decoration-1;
 }
 
 [data-rehype-pretty-code-fragment] code {
@@ -82,7 +82,7 @@ pre {
 }
 
 [data-rehype-pretty-code-title] {
- @apply rounded-t-lg border border-neutral-200 bg-neutral-100 px-4 py-1 font-mono font-semibold text-neutral-900 dark:border-neutral-800 dark:bg-[#1c1c1c] dark:text-neutral-200;
+ @apply rounded-t-lg border border-neutral-200 bg-neutral-100 px-4 py-1 font-mono font-bold text-neutral-900 dark:border-neutral-800 dark:bg-[#1c1c1c] dark:text-neutral-200;
 }
 
 [data-rehype-pretty-code-title] + pre {
