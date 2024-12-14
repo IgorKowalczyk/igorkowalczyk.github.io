@@ -4,7 +4,7 @@ import "server-only";
 import { createHash } from "crypto";
 import { headers } from "next/headers";
 import { rateLimit } from "@/lib/utils";
-import { contactFormSchema } from "@/lib/validator";
+import { contactFormSchema, tokenSchema } from "@/lib/validator";
 
 /* eslint-disable-next-line typescript/no-explicit-any */
 export async function submitContactForm(_prevState: any, data: FormData) {
@@ -14,7 +14,7 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   message: data.get("message"),
  };
 
- console.error(`[Contact]: ${data.get("cf-turnstile-response")}`);
+ const token = data.get("cf-turnstile-response");
 
  try {
   const h = await headers();
@@ -22,6 +22,27 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   const isRateLimited = rateLimit(ip);
 
   if (isRateLimited) return { error: "You are sending messages too frequently!" };
+
+  if (process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY && process.env.CAPTCHA_SECRET) {
+   const tokenResult = tokenSchema.safeParse(token);
+   if (!tokenResult.success) return { error: "Invalid captcha! Please try again." };
+
+   const verifyCaptchaRequest = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    body: JSON.stringify({
+     secret: process.env.CAPTCHA_SECRET,
+     response: tokenResult.data,
+     remoteip: ip,
+    }),
+    method: "POST",
+    headers: {
+     "Content-Type": "application/json",
+    },
+   });
+
+   const outcome = await verifyCaptchaRequest.json();
+
+   if (!outcome.success) return { error: "Invalid captcha! Please try again." };
+  }
 
   const result = contactFormSchema.safeParse(formData);
 
