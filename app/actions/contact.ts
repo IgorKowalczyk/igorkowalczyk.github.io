@@ -2,6 +2,8 @@
 
 import "server-only";
 import { createHash } from "crypto";
+import { headers } from "next/headers";
+import { rateLimit } from "@/lib/utils";
 import { contactFormSchema } from "@/lib/validator";
 
 /* eslint-disable-next-line typescript/no-explicit-any */
@@ -11,6 +13,12 @@ export async function submitContactForm(_prevState: any, data: FormData) {
   name: data.get("name"),
   message: data.get("message"),
  };
+   const h = await headers();
+   const ip = h.get("x-forwarded-for") ?? "unknown";
+  const isRateLimited = rateLimit(ip);
+
+ if (isRateLimited) return { error: "You are sending messages too frequently. Please try again later." };
+
 
  const result = contactFormSchema.safeParse(formData);
 
@@ -59,9 +67,7 @@ export async function submitContactForm(_prevState: any, data: FormData) {
 
   const data = await response.json();
 
-  if (!data.id) {
-   return { error: "Unable to send message" };
-  }
+  if (!data.id) return { error: "Unable to send message" };
  } catch (_error) {
   return { error: "Unable to send message" };
  }
