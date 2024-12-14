@@ -50,7 +50,7 @@ body[data-scroll-locked] {
 }
 
 .color-rays {
- @apply animate-rays pointer-events-none absolute inset-0 bg-no-repeat opacity-30;
+ @apply pointer-events-none absolute inset-0 animate-rays bg-no-repeat opacity-30;
  background-size: 1589px 383px;
  background-position: calc(50% + 90px) top;
  filter: hue-rotate(540deg) saturate(7.3);
