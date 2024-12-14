@@ -4,7 +4,8 @@ import "server-only";
 import { createHash } from "crypto";
 import { contactFormSchema } from "@/lib/validator";
 
-export async function submitContactForm(prevState: any, data: FormData) {
+/* eslint-disable-next-line typescript/no-explicit-any */
+export async function submitContactForm(_prevState: any, data: FormData) {
  const formData = {
   email: data.get("email"),
   name: data.get("name"),
