@@ -182,7 +182,7 @@ export function ContactForm() {
     </p>
    )}
 
-   <Button variant="secondary" className="ml-auto mt-4" icon={false} type="submit" disabled={pending || invalid.email || invalid.name || invalid.message || !formData.email || !formData.name || !formData.message || !formData.token}>
+   <Button variant="secondary" className="ml-auto mt-4" icon={false} type="submit" disabled={pending || invalid.email || invalid.name || invalid.message || !formData.email || !formData.name || !formData.message}>
     {pending ? (
      <>
       <Icons.RefreshCw className="mr-2 size-4 animate-spin duration-200 motion-reduce:transition-none" />
