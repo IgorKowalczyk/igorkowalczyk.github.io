@@ -1,9 +1,10 @@
+import type { Config } from "tailwindcss";
 import tailwindHeadlessui from "@headlessui/tailwindcss";
 import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
 import tailwindTypography from "@tailwindcss/typography";
 import tailwindGradientMaskImage from "tailwind-gradient-mask-image";
 import colors from "tailwindcss/colors";
-import { spacing } from "tailwindcss/defaultTheme";
+import { spacing, fontFamily } from "tailwindcss/defaultTheme";
 import tailwindTextFill from "tailwindcss-text-fill";
 
 /** @type {import('tailwindcss').Config} */
@@ -26,10 +27,10 @@ export default {
   },
   extend: {
    fontWeight: {
-    semibold: 700,
+    semibold: "700",
    },
    fontFamily: {
-    mono: ["var(--font-geist-mono)"],
+    mono: ["var(--font-geist-mono)", ...fontFamily.mono],
    },
    typography: {
     DEFAULT: {
@@ -72,18 +73,16 @@ export default {
      },
     },
    },
+   animation: {
+    rays: "rotate-hue 20s ease-out infinite",
+   },
    keyframes: {
-    cursor: {
-     "0%, 45%": { opacity: 1 },
-     "50%, 100%": { opacity: 0 },
-    },
-    fade: {
-     "0%": { opacity: 0 },
-     "100%": { opacity: 1 },
-    },
-    shimmer: {
-     "100%": {
-      transform: "translateX(100%)",
+    "rotate-hue": {
+     "0%": {
+      filter: "hue-rotate(540deg) saturate(7.3)",
+     },
+     to: {
+      filter: "hue-rotate(180deg) saturate(7.3)",
      },
     },
    },
@@ -93,4 +92,4 @@ export default {
   typography: ["dark"],
  },
  plugins: [tailwindTextFill, tailwindGradientMaskImage, tailwindHeadlessui, tailwindTypography, tailwindAspectRatio],
-};
+} satisfies Config;
