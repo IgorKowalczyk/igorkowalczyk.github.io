@@ -9,7 +9,7 @@ export default function NavPopover(props: PopoverProps) {
  return (
   <Popover {...props}>
    <>
-    <PopoverButton className="group relative hidden rounded-lg p-1 text-neutral-700 transition-all duration-200 hover:bg-black/10 hover:text-neutral-800 ui-open:bg-black/10 ui-open:text-neutral-800 motion-reduce:transition-none dark:text-neutral-400 dark:hover:bg-white/10 dark:hover:text-neutral-200 dark:ui-open:bg-white/10 dark:ui-open:text-neutral-200 sm:px-3 sm:py-2 md:flex md:items-center">
+    <PopoverButton className="group relative hidden rounded-md p-1 text-neutral-700 transition-all duration-200 hover:bg-black/10 hover:text-neutral-800 ui-open:bg-black/10 ui-open:text-neutral-800 motion-reduce:transition-none dark:text-neutral-400 dark:hover:bg-white/10 dark:hover:text-neutral-200 dark:ui-open:bg-white/10 dark:ui-open:text-neutral-200 sm:px-3 sm:py-2 md:flex md:items-center">
      <span>More</span>
      <Icons.ChevronRight className="ml-1 size-4 text-neutral-700 duration-150 ease-in-out group-hover:rotate-90 group-hover:text-neutral-800 ui-open:rotate-90 ui-open:text-neutral-800 dark:text-neutral-400 dark:group-hover:text-neutral-400 dark:ui-open:text-neutral-200" />
     </PopoverButton>
