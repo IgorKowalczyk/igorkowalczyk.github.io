@@ -76,10 +76,10 @@ export default {
    keyframes: {
     "rotate-hue": {
      "0%": {
-      filter: "hue-rotate(540deg) saturate(7.3)",
+      filter: "hue-rotate(540deg) saturate(5)",
      },
      to: {
-      filter: "hue-rotate(180deg) saturate(7.3)",
+      filter: "hue-rotate(180deg) saturate(5)",
      },
     },
    },
