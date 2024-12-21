@@ -118,7 +118,7 @@ export const projects = [
   github: null,
  },
  {
-  name: "Discord activity",
+  name: "Discord activity watcher",
   started: "2023-10-05T00:00:00Z",
   description: "API for displaying Discord activity data in JSON or SVG",
   images: [
