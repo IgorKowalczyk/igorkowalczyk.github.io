@@ -81,6 +81,13 @@ export default async function HomePage() {
       <ProjectCard key={`project-${project.name}`} project={project} />
      ))}
     </div>
+
+    <div className="-mt-10 mb-10 flex flex-col items-center">
+     <p className="mb-2 text-neutral-700 dark:text-neutral-400">Want to see more?</p>
+     <Button variant="secondary" href="/work">
+      View all projects
+     </Button>
+    </div>
    </section>
 
    <section className="my-6 mb-16">

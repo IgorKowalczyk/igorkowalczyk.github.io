@@ -34,7 +34,7 @@ export const header = {
 
 export type Project = {
  name: string;
- started: string;
+ started?: string;
  ended?: string;
  description: string;
  images: {
@@ -117,7 +117,73 @@ export const projects = [
   website: null,
   github: null,
  },
-] as Project[];
+ {
+  name: "Discord activity",
+  started: "2023-10-05T00:00:00Z",
+  description: "API for displaying Discord activity data in JSON or SVG",
+  images: [
+   {
+    src: "/assets/projects/discord-activity/image-01.png",
+    alt: "Discord activity main page screenshot",
+    width: 1920,
+    height: 1080,
+   },
+  ],
+  technologies: [
+   {
+    name: "Deno",
+    icon: "/assets/tech/deno.svg",
+   },
+   {
+    name: "TypeScript",
+    icon: "/assets/tech/typescript.svg",
+   },
+   {
+    name: "TailwindCSS",
+    icon: "/assets/tech/tailwindcss.svg",
+   },
+  ],
+  website: "https://discord-activity.deno.dev",
+  github: "https://github.com/igorkowalczyk/discord-activity",
+ },
+ {
+  name: "Profile views",
+  started: "2023-01-27T00:00:00Z",
+  description: "Create your own badge that will count views anywhere you want!",
+  images: [
+   {
+    src: "/assets/projects/profile-views/image-01.png",
+    alt: "Profile views main page screenshot",
+    width: 1920,
+    height: 1080,
+   },
+  ],
+  technologies: [
+   {
+    name: "Astro",
+    icon: "/assets/tech/astro.svg",
+   },
+   {
+    name: "Deno",
+    icon: "/assets/tech/deno.svg",
+   },
+   {
+    name: "TypeScript",
+    icon: "/assets/tech/typescript.svg",
+   },
+   {
+    name: "React",
+    icon: "/assets/tech/react.svg",
+   },
+   {
+    name: "TailwindCSS",
+    icon: "/assets/tech/tailwindcss.svg",
+   },
+  ],
+  website: "https://views.igorkowalczyk.dev",
+  github: "https://github.com/igorkowalczyk/github-views",
+ },
+] satisfies Project[];
 
 export const nav = {
  main: [
